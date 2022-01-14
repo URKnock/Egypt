@@ -9,12 +9,12 @@ public class RequestMapping {
     public void initMapping() {
     	// 각 uri에 대응되는 controller 객체를 생성 및 저장
     	mappings.put("/", new ForwardController("index.jsp"));
+    	mappings.put("/chapter00", new ForwardController("/chapter00.jsp"));
+    	mappings.put("/chapter01", new ForwardController("/chapter01.jsp"));
     }
 
     public Controller findController(String uri) {
-    	if(mappings.get(uri) == null) {
-    		return new ForwardController(uri);
-    	}
+    	// if(mappings.get(uri) == null) { return new ForwardController(uri); }
         return mappings.get(uri);
     }
 }
