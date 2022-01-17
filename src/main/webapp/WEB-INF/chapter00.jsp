@@ -11,7 +11,7 @@
 </head>
 <body>
 <div>
-<img src = "<c:url value='/resources/background/ch00/0_2.png'/>"/>
+<img src="<c:url value='/resources/background/ch00/0_2.png'/>"/>
 </div>
 </body>
 </html>

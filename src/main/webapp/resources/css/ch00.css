@@ -1,7 +1,44 @@
+* {
+	margin:0px;
+	padding:0px;
+}
+
+body {
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 div {
 	width:100%;
+	height:100%;
 	background: no-repeat url("../background/ch00/0_1.png");
 	display: flex;
 	justify-content: center;	
 	align-items: center;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+img::-webkit-scrollbar {
+  display: none;
+}
+
+.fadeEffect {
+	-webkit-animation: fadeinout 3s linear infinite;
+    animation: fadeinout 3s linear infinite;
+}
+
+@-webkit-keyframes fadeinout {
+    0%      { opacity: 1; }
+    50%     { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+@keyframes fadeinout {
+    0%      { opacity: 1; }
+    50%     { opacity: 0; }
+    100%    { opacity: 1; }
 }

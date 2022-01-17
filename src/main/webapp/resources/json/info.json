@@ -1,0 +1,14 @@
+[
+{
+	"name":"정보 이름", "kind":"종류", "chapter":0,
+	"content":"정보 내용이 여기에 나와요",
+	"detail":"정보 내용이 여기에 나와요 좀 더 길고 디테일한 정보",
+	"image":"UI/Info/Image.png"
+},
+{
+	"name":"이시스", "kind":"신", "chapter":8,
+	"content":"대충 짱짱 쎈 신이라는 뜻",
+	"detail":"대충 아주 길고 길고 아주아주 긴 정보",
+	"image":"UI/Info/Image.png"
+}
+]
