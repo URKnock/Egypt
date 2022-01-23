@@ -37,14 +37,13 @@
 		<div id="choice">
 			<div>
 				<c:forEach var="c" items="${dialogue.choice}">
-					<button type="submit" value="${c.id}">${c.content}</button>
+					<button name="choice" type="submit" value="${c.id}">${c.content}</button>
 				</c:forEach>
 			</div>
 			<img src='<c:url value="${dialogue.player}"/>'/>
 		</div>
 	</c:if>
 </div>
-<input name="flag" type="hidden" value="${dialogue.flag}"/>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
 </form>

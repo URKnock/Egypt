@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,12 +13,14 @@ import util.JsonManager;
 
 public class ChapterController implements Controller {
     private String url;
+    private int chapter;
 
-    public ChapterController(String url) {
+    public ChapterController(String url, int chapter) {
         if (url == null) {
             throw new NullPointerException("forwardUrl is null. 이동할 URL을 입력하세요.");
         }
         this.url = url;
+        this.chapter = chapter;
     }
 
     @Override
@@ -29,7 +32,7 @@ public class ChapterController implements Controller {
     	if(session.getAttribute("data") == null) {
     		JsonManager jsonManager = new JsonManager();
     		String data = jsonManager.ReadJson("script.json");
-    		json = jsonManager.ParseJson(data);
+    		json = jsonManager.ParseJson(data, chapter);
     		session.setAttribute("data", json);
     	} else {
     		json = (Scene) session.getAttribute("data");
@@ -43,15 +46,35 @@ public class ChapterController implements Controller {
     		index = Integer.parseInt(request.getParameter("index"));
     	}
 
-    	List<Dialogue> list = json.get(scene);
-    	Dialogue dialogue = list.get(index);
+		if(json.getData().size() == scene) {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script> alert('끝!'); </script>");
+			out.flush();
+			return url;
+		}
     	
-    	index += 1;
-    	if(list.size() == index) {
-    		index = 0;
-    		scene += 1;
+		Dialogue dialogue = null;
+		List<Dialogue> list = null;
+    	if(request.getParameter("choice") != null) {
+    		int choice = Integer.parseInt(request.getParameter("choice"));
+    		if(choice == 0) {
+    			list = json.get(scene);
+    		} else {
+    			scene--;
+    			list = json.getFlag().get(scene).get(choice);
+    		}
+    	} else {	
+	    	list = json.get(scene);
     	}
-
+	    dialogue = list.get(index);
+	    
+	    index += 1;
+	    if(list.size() == index) {
+	    	index = 0;
+	    	scene += 1;
+	    }
+    	
     	request.setAttribute("scene", scene);
     	request.setAttribute("index", index);
     	session.setAttribute("list", list);

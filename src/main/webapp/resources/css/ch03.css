@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  overflow: hidden; /* Hide scrollbars */
+	font-family: 'Minguk-Regular';
+	overflow: hidden;
+  	overflow-y: hidden;
+  	overflow-x: hidden;
 }
 
 #background {
