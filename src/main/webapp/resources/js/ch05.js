@@ -14,7 +14,24 @@ function init() {
 		alert('눌렸습니다ㅋㅋ 어쩔티비저쩔티비~');
 	});
 	
-	$("#dialogue").click(function() {
-		$("form").submit();
+	$("#earth").click(function() {
+		 $(".modal").fadeIn();
 	});
+	
+
+
+	$(".menu1").click(function() {
+		 $(".modal2").fadeIn();
+	});
+	
+	//modal 닫힘
+	
+	$(".modal_content2").click(function(){
+    $(".modal2").fadeOut();
+  });
+
+		$(".modal_content").click(function(){
+    $(".modal").fadeOut();
+ 	 });
+	
 }
