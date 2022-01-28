@@ -29,13 +29,14 @@ public class ChapterController implements Controller {
     	Scene json = null;
     	HttpSession session = request.getSession(true);
     	
-    	if(session.getAttribute("data") == null) {
+    	String name = "data_" + chapter;
+    	if(session.getAttribute(name) == null) {
     		JsonManager jsonManager = new JsonManager();
     		String data = jsonManager.ReadJson("script.json");
     		json = jsonManager.ParseJson(data, chapter);
-    		session.setAttribute("data", json);
+    		session.setAttribute(name, json);
     	} else {
-    		json = (Scene) session.getAttribute("data");
+    		json = (Scene) session.getAttribute(name);
     	}
     	
     	if(request.getParameter("scene") == null) {

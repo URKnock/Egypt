@@ -51,8 +51,6 @@ public class JsonManager {
 			int flag = j.getInt("flag");
 			int ch = j.getInt("chapter");
 			
-			System.out.println(ch + ", " + chapter);
-			
 			if(ch < chapter) continue;
 			else if(ch > chapter) break;
 			
