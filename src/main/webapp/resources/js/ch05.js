@@ -10,17 +10,15 @@ function init() {
 	
 	$("#choice > img").height( $("#dialogue > img").height() );
 	
-	$("#menu1").click(function() {
+	$(".menu1").click(function() {
 		alert('눌렸습니다ㅋㅋ 어쩔티비저쩔티비~');
 	});
 	
 	$("#earth").click(function() {
 		 $(".modal").fadeIn();
 	});
-	
 
-
-	$(".menu1").click(function() {
+	$(".lab").click(function() {
 		 $(".modal2").fadeIn();
 	});
 	
