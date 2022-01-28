@@ -8,12 +8,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import model.Choice;
 import model.Dialogue;
+import model.Include;
 import model.Scene;
 
 public class JsonManager {
@@ -39,26 +41,31 @@ public class JsonManager {
 		return result;
 	}
 	
-	public Scene ParseJson(String json) {
+	public Include ParseInclude(String json, int chapter) {
+		return null;
+	}
+	
+	public Scene ParseScene(String json, int chapter) {
 		JSONArray data = new JSONArray(json);
 		Scene scene = new Scene();
+		
 		for(int i = 0; i < data.length(); i++) {
 			JSONObject j = data.getJSONObject(i);
 			
-			List<Dialogue> list;
-			if(scene.get(j.getInt("scene")) == null) {
-				list = new ArrayList<>();
-			} else {
-				list = scene.get(j.getInt("scene"));
-			}
+			int sc = j.getInt("scene");
+			int flag = j.getInt("flag");
+			int ch = j.getInt("chapter");
+			
+			if(ch < chapter) continue;
+			else if(ch > chapter) break;
 			
 			Dialogue dialogue = new Dialogue();
 			dialogue.setName(j.getString("name"));
 	    	dialogue.setNickname(j.getString("nickname"));
 	    	dialogue.setContent(j.getString("content"));
 	    	dialogue.setImage("/resources/" + j.getString("image"));
-	    	dialogue.setFlag(j.getInt("flag"));
-	    	dialogue.setScene(j.getInt("scene"));
+	    	dialogue.setFlag(flag);
+	    	dialogue.setScene(sc);
 	    	
 	    	if(!j.get("choice").toString().equals("없음")) {
 	    		List<Choice> choices = new ArrayList<>();
@@ -74,15 +81,21 @@ public class JsonManager {
 	    	} else {
 	    		dialogue.setChoice(null);
 	    	}
-	    	
-	    	list.add(dialogue);
-			if(scene.get(j.getInt("scene")) == null) {
-				scene.put(j.getInt("scene"), list);
+			
+			if(flag == 0) {
+				List<Dialogue> list = scene.get(sc);
+				if(list == null) list = new ArrayList<>();
+		    	list.add(dialogue);
+		    	scene.put(sc, list);
 			} else {
-				scene.replace(j.getInt("scene"), list);
+				List<Dialogue> list = null;
+				Map<Integer, List<Dialogue>> m = scene.getFlag().get(sc);
+				if(m != null) list = m.get(m.keySet().toArray()[0]);
+				if(list == null) list = new ArrayList<>();
+				list.add(dialogue);
+				scene.put(sc, flag, list);
 			}
 		}
-		
 		return scene;
 	}
 }

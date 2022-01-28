@@ -17,4 +17,12 @@ function init() {
 	$("#dialogue").click(function() {
 		$("form").submit();
 	});
-}
+	
+	var scene = $("input[name='scene']").value();
+	if(scene == 99) {
+		$("#dialogue").remove(click);
+		$("#test").click(function() {
+			$("form").submit();
+		});	
+	}
+} 

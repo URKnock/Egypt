@@ -13,12 +13,14 @@ import util.JsonManager;
 
 public class ChapterController implements Controller {
     private String url;
+    private int chapter;
 
-    public ChapterController(String url) {
+    public ChapterController(String url, int chapter) {
         if (url == null) {
             throw new NullPointerException("forwardUrl is null. 이동할 URL을 입력하세요.");
         }
         this.url = url;
+        this.chapter = chapter;
     }
 
     @Override
@@ -27,13 +29,14 @@ public class ChapterController implements Controller {
     	Scene json = null;
     	HttpSession session = request.getSession(true);
     	
-    	if(session.getAttribute("data") == null) {
+    	String name = "data_" + chapter;
+    	if(session.getAttribute(name) == null) {
     		JsonManager jsonManager = new JsonManager();
     		String data = jsonManager.ReadJson("script.json");
-    		json = jsonManager.ParseJson(data);
-    		session.setAttribute("data", json);
+    		json = jsonManager.ParseScene(data, chapter);
+    		session.setAttribute(name, json);
     	} else {
-    		json = (Scene) session.getAttribute("data");
+    		json = (Scene) session.getAttribute(name);
     	}
     	
     	if(request.getParameter("scene") == null) {
@@ -51,15 +54,28 @@ public class ChapterController implements Controller {
 			out.flush();
 			return url;
 		}
-    	
-    	List<Dialogue> list = json.get(scene);
-    	Dialogue dialogue = list.get(index);
-    	
-    	index += 1;
-    	if(list.size() == index) {
-    		index = 0;
-    		scene += 1;
+		
+		Dialogue dialogue = null;
+		List<Dialogue> list = null;
+    	if(request.getParameter("choice") != null) {
+    		int choice = Integer.parseInt(request.getParameter("choice"));
+    		if(choice == 0) {
+    			list = json.get(scene);
+    		} else {
+    			scene--;
+    			list = json.getFlag().get(scene).get(choice);
+    		}
+    	} else {	
+	    	list = json.get(scene);
     	}
+	    dialogue = list.get(index);
+	    
+	    index += 1;
+	    if(list.size() == index) {
+	    	index = 0;
+	    	scene += 1;
+	    }
+    	
     	request.setAttribute("scene", scene);
     	request.setAttribute("index", index);
     	session.setAttribute("list", list);

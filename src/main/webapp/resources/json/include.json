@@ -1,0 +1,22 @@
+[
+{
+	"chapter":3, "scene":0, "flag":0,
+	"page":"dragTest.jsp"
+},
+{
+	"chapter":3, "scene":2, "flag":0,
+	"page":"KaBaDrag.jsp"
+},
+{
+	"chapter":3, "scene":3, "flag":0,
+	"page":"organDrag.jsp"
+},
+{
+	"chapter":3, "scene":4, "flag":0,
+	"page":"peseshkafTest.jsp"
+},
+{
+	"chapter":3, "scene":5, "flag":0,
+	"page":"x_axisDrag.jsp"
+}
+]

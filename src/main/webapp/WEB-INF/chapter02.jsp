@@ -6,6 +6,6 @@
 <title>사자의 서</title>
 </head>
 <body>
-진주님이 만드실 홈 파트
+<a href="<c:url value='/chapter03'/>">진주님이 만드실 홈 파트</a>
 </body>
 </html>
