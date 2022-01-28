@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import model.Choice;
 import model.Dialogue;
+import model.Include;
 import model.Scene;
 
 public class JsonManager {
@@ -40,7 +41,11 @@ public class JsonManager {
 		return result;
 	}
 	
-	public Scene ParseJson(String json, int chapter) {
+	public Include ParseInclude(String json, int chapter) {
+		return null;
+	}
+	
+	public Scene ParseScene(String json, int chapter) {
 		JSONArray data = new JSONArray(json);
 		Scene scene = new Scene();
 		

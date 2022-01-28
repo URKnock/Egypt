@@ -33,7 +33,7 @@ public class ChapterController implements Controller {
     	if(session.getAttribute(name) == null) {
     		JsonManager jsonManager = new JsonManager();
     		String data = jsonManager.ReadJson("script.json");
-    		json = jsonManager.ParseJson(data, chapter);
+    		json = jsonManager.ParseScene(data, chapter);
     		session.setAttribute(name, json);
     	} else {
     		json = (Scene) session.getAttribute(name);

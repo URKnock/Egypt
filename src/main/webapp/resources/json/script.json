@@ -1,7 +1,7 @@
 [
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"사자여 어서와라, 나는 묘지의 신 아누비스이다.<br/>영생을 위한 준비 절차로 너의 육체 ‘사’와 심장 ‘이브’를 완전한 형태로 만들어주겠다.",
+	"content":"사자여 어서와라, 나는 묘지의 신 아누비스이다.<br/>영생을 위한 준비 절차로 너의 육체 '사'와 심장 '이브'를 완전한 형태로 만들어주겠다.",
 	"chapter":3, "scene":0, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
@@ -32,14 +32,14 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"지금 그대의 육신에는 ‘카’와 ‘바’ 두 개의 영혼이 있다.<br/>그 중 ‘카’는 어디에나 존재하지. <br/>영생에서도 함께 할 ‘카’가 잘 있는지 확인하거라.",
+	"content":"지금 그대의 육신에는 '카'와 '바' 두 개의 영혼이 있다.<br/>그 중 '카'는 어디에나 존재하지. <br/>영생에서도 함께 할 '카'가 잘 있는지 확인하거라.",
 	"chapter":3, "scene":2, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"좀 더 정확히 말하면 ‘바’는 단순히 영혼이 아니라 ‘영혼의 새’이지. <br/>미라를 만들기 전 ‘바’를 사자의 몸 밖으로 꺼내거라.",
+	"content":"좀 더 정확히 말하면 '바'는 단순히 영혼이 아니라 '영혼의 새'이지. <br/>미라를 만들기 전 '바'를 사자의 몸 밖으로 꺼내거라.",
 	"chapter":3, "scene":3, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
@@ -53,7 +53,7 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"이제 본격적으로 너의 육체 ‘사’를 완전하게 만들어 주겠다.<br/>위 도구를 코에 넣어 뇌를 꺼내거라.<br/>뇌는 그저 머리를 채우는 것일뿐 아무 쓸모가 없다.",
+	"content":"이제 본격적으로 너의 육체 '사'를 완전하게 만들어 주겠다.<br/>위 도구를 코에 넣어 뇌를 꺼내거라.<br/>뇌는 그저 머리를 채우는 것일뿐 아무 쓸모가 없다.",
 	"chapter":3, "scene":5, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
@@ -151,7 +151,7 @@
 },
     {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"사자여, 그대의 몸은 영생의 여정을 떠나기에 완벽한 상태가 되었다. ‘입을 여는 의식’을 치루고 영생으로의 여정을 떠나도록 하거라.",
+	"content":"사자여, 그대의 몸은 영생의 여정을 떠나기에 완벽한 상태가 되었다. '입을 여는 의식'을 치루고 영생으로의 여정을 떠나도록 하거라.",
 	"chapter":3, "scene":15, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
@@ -381,7 +381,7 @@
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"안내인의 이름은 ‘우넴하우우엔투페휘’, 문지기의 이름은 ‘세레셔’, 전령의 이름은 ‘아아’.",
+    "content":"안내인의 이름은 '우넴하우우엔투페휘', 문지기의 이름은 '세레셔', 전령의 이름은 '아아'.",
     "chapter":5, "scene":10, "flag":0,
 	"image":"UI/Dialogue/5_30_3.png",
 	"choice":"없음"
@@ -399,21 +399,21 @@
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
-    "content":"안내인의 이름은 ‘우넴하우우엔투페휘’. 정답이다.",
+    "content":"안내인의 이름은 '우넴하우우엔투페휘'. 정답이다.",
     "chapter":5, "scene":11, "flag":0,
 	"image":"UI/Dialogue/5_30_1.png",
         "choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
-    "content":"안내인의 이름은 ‘우넴하우우엔투페휘’. 오답이다.",
+    "content":"안내인의 이름은 '우넴하우우엔투페휘'. 오답이다.",
     "chapter":5, "scene":11, "flag":1,
 	"image":"UI/Dialogue/5_30_1.png",
         "choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
-    "content":"안내인의 이름은 ‘우넴하우우엔투페휘’. 오답이다.",
+    "content":"안내인의 이름은 '우넴하우우엔투페휘'. 오답이다.",
     "chapter":5, "scene":11, "flag":2,
 	"image":"UI/Dialogue/5_30_1.png",
         "choice":"없음"
@@ -431,21 +431,21 @@
 },
 {
     "name":"두 번째 신", "nickname":"없음",
-    "content":"문지기의 이름은 ‘세레셔’. 오답이다.",
+    "content":"문지기의 이름은 '세레셔'. 오답이다.",
     "chapter":5, "scene":12, "flag":0,
 	"image":"UI/Dialogue/5_30_2.png",
         "choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
-    "content":"문지기의 이름은 ‘세레셔’. 정답이다.",
+    "content":"문지기의 이름은 '세레셔'. 정답이다.",
     "chapter":5, "scene":12, "flag":1,
 	"image":"UI/Dialogue/5_30_2.png",
         "choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
-    "content":"문지기의 이름은 ‘세레셔’. 오답이다.",
+    "content":"문지기의 이름은 '세레셔'. 오답이다.",
     "chapter":5, "scene":12, "flag":2,
 	"image":"UI/Dialogue/5_30_2.png",
         "choice":"없음"
@@ -463,21 +463,21 @@
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"문지기의 이름은 ‘아아’. 오답이다.",
+    "content":"문지기의 이름은 '아아'. 오답이다.",
     "chapter":5, "scene":13, "flag":0,
 	"image":"UI/Dialogue/5_30_3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"문지기의 이름은 ‘아아’. 정답이다.",
+    "content":"문지기의 이름은 '아아'. 정답이다.",
     "chapter":5, "scene":13, "flag":1,
 	"image":"UI/Dialogue/5_30_3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"문지기의 이름은 ‘아아’. 오답이다.",
+    "content":"문지기의 이름은 '아아'. 오답이다.",
      "chapter":5, "scene":13, "flag":2,
 	"image":"UI/Dialogue/5_30_3.png",
         "choice":"없음"
@@ -705,7 +705,7 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 심판하는 자",
-	"content":"그럼 두 번째 관문을 시작하겠다.<br/>‘심장의 무게 달기’ 의식을 알고 있는가?",
+	"content":"그럼 두 번째 관문을 시작하겠다.<br/>'심장의 무게 달기' 의식을 알고 있는가?",
 	"chapter":7, "scene":16, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
 		"image":"UI/Dialogue/Player.png",
