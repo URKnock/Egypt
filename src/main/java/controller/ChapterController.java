@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -43,6 +44,14 @@ public class ChapterController implements Controller {
     		index = Integer.parseInt(request.getParameter("index"));
     	}
 
+		if(json.getData().size() == scene) {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script> alert('끝!'); </script>");
+			out.flush();
+			return url;
+		}
+    	
     	List<Dialogue> list = json.get(scene);
     	Dialogue dialogue = list.get(index);
     	
@@ -51,7 +60,6 @@ public class ChapterController implements Controller {
     		index = 0;
     		scene += 1;
     	}
-
     	request.setAttribute("scene", scene);
     	request.setAttribute("index", index);
     	session.setAttribute("list", list);

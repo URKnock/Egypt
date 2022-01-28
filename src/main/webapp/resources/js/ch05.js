@@ -10,11 +10,26 @@ function init() {
 	
 	$("#choice > img").height( $("#dialogue > img").height() );
 	
-	$("#menu1").click(function() {
+	$(".menu1").click(function() {
 		alert('눌렸습니다ㅋㅋ 어쩔티비저쩔티비~');
 	});
 	
-	$("#dialogue").click(function() {
-		$("form").submit();
+	$("#earth").click(function() {
+		 $(".modal").fadeIn();
 	});
+
+	$(".lab").click(function() {
+		 $(".modal2").fadeIn();
+	});
+	
+	//modal 닫힘
+	
+	$(".modal_content2").click(function(){
+    $(".modal2").fadeOut();
+  });
+
+		$(".modal_content").click(function(){
+    $(".modal").fadeOut();
+ 	 });
+	
 }

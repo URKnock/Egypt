@@ -13,6 +13,7 @@ public class RequestMapping {
     	mappings.put("/chapter01", new ForwardController("/chapter01.jsp"));
     	mappings.put("/chapter02", new ForwardController("/chapter02.jsp"));
     	mappings.put("/chapter03", new ChapterController("/chapter03.jsp"));
+    	mappings.put("/chapter05", new ChapterController("/chapter05.jsp"));
     }
 
     public Controller findController(String uri) {

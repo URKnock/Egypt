@@ -12,10 +12,10 @@
 <body>
 <div id="background">
 	<div id="menu">
-		<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-		<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-		<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 	</div>
 </div>
 <form method="post" action="<c:url value='/chapter03'/>">
