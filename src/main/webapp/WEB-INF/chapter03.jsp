@@ -11,7 +11,12 @@
 </head>
 <body>
 <div id="background">
-	<div id="menu">
+	<c:if test="${page ne null}">
+		<jsp:include page="./interaction/chapter03/${page}"/>
+	</c:if>
+</div>
+<div id="menu">
+	<div>
 		<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
 		<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
 		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>

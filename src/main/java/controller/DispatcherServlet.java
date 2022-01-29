@@ -31,6 +31,9 @@ public class DispatcherServlet extends HttpServlet {
     	String contextPath = request.getContextPath();
     	String servletPath = request.getServletPath();
     	
+    	System.out.println(contextPath);
+    	System.out.println(servletPath);
+    	
     	// URL 중 servletPath에 대응되는 controller를 구함
         Controller controller = rm.findController(servletPath);
         try {
@@ -44,6 +47,12 @@ public class DispatcherServlet extends HttpServlet {
             	// redirection 지시
             	String targetUri = contextPath + uri.substring("redirect:".length());
             	response.sendRedirect(targetUri);	// redirect to url            
+            }
+            else if(uri.startsWith("include:")) {
+            	String targetUri = "/WEB-INF" + uri.substring("include:".length());
+            	System.out.println(targetUri);
+            	RequestDispatcher rd = request.getRequestDispatcher(targetUri);
+                rd.include(request, response);
             }
             else {
             	// forwarding 수행

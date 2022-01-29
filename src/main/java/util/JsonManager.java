@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -36,13 +37,27 @@ public class JsonManager {
 			System.out.println(e);
 		} catch (IOException e) {
 			System.out.println(e);
-		}
-		
+		}	
 		return result;
 	}
 	
 	public Include ParseInclude(String json, int chapter) {
-		return null;
+		JSONArray data = new JSONArray(json);
+		Include include = new Include();
+		
+		for(int i = 0; i < data.length(); i++) {
+			JSONObject j = data.getJSONObject(i);
+			String page = j.getString("page");
+			int sc = j.getInt("scene");
+			int flag = j.getInt("flag");
+			int ch = j.getInt("chapter");
+
+			if(ch < chapter) continue;
+			else if(ch > chapter) break;
+			
+			include.put(sc, flag, page);
+		}
+		return include;
 	}
 	
 	public Scene ParseScene(String json, int chapter) {

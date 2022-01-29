@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.Dialogue;
+import model.Include;
 import model.Scene;
 import util.JsonManager;
 
@@ -27,16 +28,23 @@ public class ChapterController implements Controller {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
     	int scene, index;
     	Scene json = null;
+    	Include include = null;
     	HttpSession session = request.getSession(true);
     	
-    	String name = "data_" + chapter;
-    	if(session.getAttribute(name) == null) {
+    	String data = "data_" + chapter;
+    	String page = "include_" + chapter;
+    	if(session.getAttribute(data) == null) {
     		JsonManager jsonManager = new JsonManager();
-    		String data = jsonManager.ReadJson("script.json");
-    		json = jsonManager.ParseScene(data, chapter);
-    		session.setAttribute(name, json);
+    		String read = jsonManager.ReadJson("script.json");
+    		json = jsonManager.ParseScene(read, chapter);
+    		session.setAttribute(data, json);
+    		
+    		read = jsonManager.ReadJson("include.json");
+    		include = jsonManager.ParseInclude(read, chapter);
+    		session.setAttribute(page, include);
     	} else {
-    		json = (Scene) session.getAttribute(name);
+    		json = (Scene) session.getAttribute(data);
+    		include = (Include) session.getAttribute(page);
     	}
     	
     	if(request.getParameter("scene") == null) {
@@ -76,9 +84,14 @@ public class ChapterController implements Controller {
 	    	scene += 1;
 	    }
     	
+	    int flag = dialogue.getFlag();
+	    page = include.get(scene, flag);
+	    
+	    System.out.println("page: " + page);
+	    
     	request.setAttribute("scene", scene);
     	request.setAttribute("index", index);
-    	session.setAttribute("list", list);
+    	request.setAttribute("page", page);
     	session.setAttribute("dialogue", dialogue);
     	
     	return url;
