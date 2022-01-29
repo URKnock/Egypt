@@ -62,7 +62,7 @@ public class ChapterController implements Controller {
 			out.flush();
 			return url;
 		}
-    	
+		
 		Dialogue dialogue = null;
 		List<Dialogue> list = null;
     	if(request.getParameter("choice") != null) {

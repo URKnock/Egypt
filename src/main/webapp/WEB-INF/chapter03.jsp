@@ -11,6 +11,7 @@
 </head>
 <body>
 <div id="background">
+<<<<<<< HEAD
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter03/${page}"/>
 	</c:if>
@@ -21,6 +22,13 @@
 		<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
 		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
 		<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+=======
+	<div id="menu">
+		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+>>>>>>> 7bf7b73f3bc9079bf17a1df1f7677a46fb81dbf7
 	</div>
 </div>
 <form method="post" action="<c:url value='/chapter03'/>">
