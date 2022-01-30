@@ -66,8 +66,8 @@ public class JsonManager {
 		for(int i = 0; i < data.length(); i++) {
 			JSONObject j = data.getJSONObject(i);
 			
-			int sc = j.getInt("scene");
-			int flag = j.getInt("flag");
+			String sc = String.valueOf(j.getInt("scene"));
+			String flag = String.valueOf(j.getInt("flag"));
 			int ch = j.getInt("chapter");
 			
 			if(ch < chapter) continue;
@@ -96,15 +96,15 @@ public class JsonManager {
 	    		dialogue.setChoice(null);
 	    	}
 			
-			if(flag == 0) {
+			if(flag.equals("0")) {
 				List<Dialogue> list = scene.get(sc);
 				if(list == null) list = new ArrayList<>();
 		    	list.add(dialogue);
 		    	scene.put(sc, list);
 			} else {
 				List<Dialogue> list = null;
-				Map<Integer, List<Dialogue>> m = scene.getFlag().get(sc);
-				if(m != null) list = m.get(m.keySet().toArray()[0]);
+				Map<String, List<Dialogue>> m = scene.getFlag().get(sc);
+				if(m != null) list = m.get(flag);
 				if(list == null) list = new ArrayList<>();
 				list.add(dialogue);
 				scene.put(sc, flag, list);

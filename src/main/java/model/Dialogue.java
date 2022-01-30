@@ -6,7 +6,7 @@ import java.util.List;
 public class Dialogue implements Serializable {
 	private String name, nickname, content;
 	private String image, player;
-	private int scene, flag;
+	private String scene, flag;
 	private List<Choice> choice;
 	
 	public Dialogue() {
@@ -50,16 +50,19 @@ public class Dialogue implements Serializable {
 		this.choice = choice;
 	}
 
-	public int getScene() {
+	public String getScene() {
 		return scene;
 	}
-	public void setScene(int scene) {
+
+	public void setScene(String scene) {
 		this.scene = scene;
 	}
-	public int getFlag() {
+
+	public String getFlag() {
 		return flag;
 	}
-	public void setFlag(int flag) {
+
+	public void setFlag(String flag) {
 		this.flag = flag;
 	}
 }

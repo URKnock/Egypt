@@ -391,7 +391,7 @@
     "content":"기억했는가 사자여, 안내인의 이름은?",
     "chapter":5, "scene":11, "flag":0,
 	"image":"UI/Dialogue/5_30_1.png","choice":{
-        "image":"UI/Dialogue/5_30_4",
+        "image":"UI/Dialogue/5_30_4.png",
         "0":"우넴하우우엔투페휘",
         "1":"우루호루페휘",
         "2":"우넴하우에엔투페휘"
@@ -423,7 +423,7 @@
     "content":"기억했는가 사자여, 문지기의 이름은?",
     "chapter":5, "scene":12, "flag":0,
 	"image":"UI/Dialogue/5_30_2.png","choice":{
-        "image":"UI/Dialogue/5_30_4",
+        "image":"UI/Dialogue/5_30_4.png",
         "0":"세래셔",
         "1":"세레셔",
         "2":"사레셔"
@@ -455,7 +455,7 @@
     "content":"기억했는가 사자여, 정령의 이름은?",
 "chapter":5, "scene":13, "flag":0,
 	"image":"UI/Dialogue/5_30_3.png","choice":{
-        "image":"UI/Dialogue/5_30_4",
+        "image":"UI/Dialogue/5_30_4.png",
         "0":"아이",
         "1":"아아",
         "2":"아야"

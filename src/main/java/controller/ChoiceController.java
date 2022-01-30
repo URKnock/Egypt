@@ -12,16 +12,13 @@ import model.Include;
 import model.Scene;
 import util.JsonManager;
 
-public class ChapterController implements Controller {
+public class ChoiceController implements Controller {
     private String url;
     private int chapter;
 
-    public ChapterController(String url, int chapter) {
-        if (url == null) {
-            throw new NullPointerException("forwardUrl is null. 이동할 URL을 입력하세요.");
-        }
-        this.url = url;
-        this.chapter = chapter;
+    public ChoiceController() {
+        this.url = "/chapter03.jsp";
+        this.chapter = 5;
     }
 
     @Override
@@ -68,24 +65,43 @@ public class ChapterController implements Controller {
 		
 		Dialogue dialogue = null;
 		List<Dialogue> list = null;
-    	if(request.getParameter("choice") != null) {
-    		String choice = request.getParameter("choice");
+		
+		int score = session.getAttribute("score") == null ? 0 : (int) session.getAttribute("score");
+		String choice = request.getParameter("choice") == null ? "null" : request.getParameter("choice");
+    	if(!choice.equals("null")) {
     		if(choice.equals("0")) {
     			list = json.get(scene);
     		} else {
-    			s--;
     			list = json.get(scene, choice);
+    			i = 0;
     		}
+    		s += 1;
     	} else {	
 	    	list = json.get(scene);
     	}
-	    dialogue = list.get(i);
-	    
-	    i += 1;
-	    if(list.size() == i) {
-	    	i = 0;
-	    	s += 1;
-	    }
+    	dialogue = list.get(i);
+    	
+    	switch(scene) {
+	    	case "11":
+	    		if(choice.equals("0")) score += 1;
+	    		break;
+	    	case "12":
+	    	case "13":
+	    		if(choice.equals("1")) score += 1;
+	    		break;
+	    	case "14":
+	    		String result = String.valueOf(3 - score);
+	    		list = json.get(scene, result);
+	    		dialogue = list.get(i);
+	    		score = 0;
+	    	default:
+		    	i += 1;
+			    if(list.size() >= i) {
+			    	i = 0;
+			    	s += 1;
+			    }
+			    break;
+    	}
     	
 	    int flag = Integer.parseInt(dialogue.getFlag());
 	    page = include.get(s, flag);
@@ -93,6 +109,7 @@ public class ChapterController implements Controller {
     	request.setAttribute("scene", s);
     	request.setAttribute("index", i);
     	request.setAttribute("page", page);
+    	session.setAttribute("score", score);
     	session.setAttribute("dialogue", dialogue);
     	
     	return url;
