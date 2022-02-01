@@ -69,42 +69,38 @@ public class ChoiceController implements Controller {
 		int score = session.getAttribute("score") == null ? 0 : (int) session.getAttribute("score");
 		String choice = request.getParameter("choice") == null ? "null" : request.getParameter("choice");
     	if(!choice.equals("null")) {
+        	switch(scene) {
+	    		case "11":
+		    		if(choice.equals("0")) score += 1;
+		    		break;
+		    	case "12":
+		    	case "13":
+		    		if(choice.equals("1")) score += 1;
+		    		break;
+		    	case "14":
+		    		choice = String.valueOf(3 - score);
+		    		score = 0;
+		    		break;
+        	}    		
     		if(choice.equals("0")) {
     			list = json.get(scene);
     		} else {
     			list = json.get(scene, choice);
     			i = 0;
     		}
-    		s += 1;
     	} else {	
 	    	list = json.get(scene);
     	}
     	dialogue = list.get(i);
     	
-    	switch(scene) {
-	    	case "11":
-	    		if(choice.equals("0")) score += 1;
-	    		break;
-	    	case "12":
-	    	case "13":
-	    		if(choice.equals("1")) score += 1;
-	    		break;
-	    	case "14":
-	    		String result = String.valueOf(3 - score);
-	    		list = json.get(scene, result);
-	    		dialogue = list.get(i);
-	    		score = 0;
-	    	default:
-		    	i += 1;
-			    if(list.size() >= i) {
-			    	i = 0;
-			    	s += 1;
-			    }
-			    break;
-    	}
-    	
 	    int flag = Integer.parseInt(dialogue.getFlag());
 	    page = include.get(s, flag);
+	    
+		i += 1;
+	    if(list.size() <= i) {
+	    	i = 0;
+	    	s += 1;
+	    }
 	    
     	request.setAttribute("scene", s);
     	request.setAttribute("index", i);

@@ -38,7 +38,6 @@ public class ChapterController implements Controller {
     		String read = jsonManager.ReadJson("script.json");
     		json = jsonManager.ParseScene(read, chapter);
     		session.setAttribute(data, json);
-    		
     		read = jsonManager.ReadJson("include.json");
     		include = jsonManager.ParseInclude(read, chapter);
     		session.setAttribute(page, include);
@@ -73,7 +72,7 @@ public class ChapterController implements Controller {
     		if(choice.equals("0")) {
     			list = json.get(scene);
     		} else {
-    			s--;
+    			scene = String.valueOf(--s);
     			list = json.get(scene, choice);
     		}
     	} else {	
@@ -81,14 +80,14 @@ public class ChapterController implements Controller {
     	}
 	    dialogue = list.get(i);
 	    
+	    int flag = Integer.parseInt(dialogue.getFlag());
+	    page = include.get(s, flag);
+	    
 	    i += 1;
-	    if(list.size() == i) {
+	    if(list.size() <= i) {
 	    	i = 0;
 	    	s += 1;
 	    }
-    	
-	    int flag = Integer.parseInt(dialogue.getFlag());
-	    page = include.get(s, flag);
 	    
     	request.setAttribute("scene", s);
     	request.setAttribute("index", i);
