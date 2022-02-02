@@ -14,7 +14,7 @@ function init() {
 		$("form").submit();
 	});
 	
-	var scene = $("input[name='scene']").value();
+	var scene = $("input[name='scene']").val();
 	if(scene == 99) {
 		$("#dialogue").remove(click);
 		$("#test").click(function() {

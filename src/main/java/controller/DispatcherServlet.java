@@ -45,6 +45,12 @@ public class DispatcherServlet extends HttpServlet {
             	String targetUri = contextPath + uri.substring("redirect:".length());
             	response.sendRedirect(targetUri);	// redirect to url            
             }
+            else if(uri.startsWith("include:")) {
+            	String targetUri = "/WEB-INF" + uri.substring("include:".length());
+            	System.out.println(targetUri);
+            	RequestDispatcher rd = request.getRequestDispatcher(targetUri);
+                rd.include(request, response);
+            }
             else {
             	// forwarding 수행
             	String targetUri = "/WEB-INF" + uri;

@@ -37,13 +37,27 @@ public class JsonManager {
 			System.out.println(e);
 		} catch (IOException e) {
 			System.out.println(e);
-		}
-		
+		}	
 		return result;
 	}
 	
 	public Include ParseInclude(String json, int chapter) {
-		return null;
+		JSONArray data = new JSONArray(json);
+		Include include = new Include();
+		
+		for(int i = 0; i < data.length(); i++) {
+			JSONObject j = data.getJSONObject(i);
+			String page = j.getString("page");
+			int sc = j.getInt("scene");
+			int flag = j.getInt("flag");
+			int ch = j.getInt("chapter");
+
+			if(ch < chapter) continue;
+			else if(ch > chapter) break;
+			
+			include.put(sc, flag, page);
+		}
+		return include;
 	}
 	
 	public List<Info> ParseInfo(String json, int chapter) {
@@ -76,8 +90,8 @@ public class JsonManager {
 		for(int i = 0; i < data.length(); i++) {
 			JSONObject j = data.getJSONObject(i);
 			
-			int sc = j.getInt("scene");
-			int flag = j.getInt("flag");
+			String sc = String.valueOf(j.getInt("scene"));
+			String flag = String.valueOf(j.getInt("flag"));
 			int ch = j.getInt("chapter");
 			
 			if(ch < chapter) continue;
@@ -106,15 +120,15 @@ public class JsonManager {
 	    		dialogue.setChoice(null);
 	    	}
 			
-			if(flag == 0) {
+			if(flag.equals("0")) {
 				List<Dialogue> list = scene.get(sc);
 				if(list == null) list = new ArrayList<>();
 		    	list.add(dialogue);
 		    	scene.put(sc, list);
 			} else {
 				List<Dialogue> list = null;
-				Map<Integer, List<Dialogue>> m = scene.getFlag().get(sc);
-				if(m != null) list = m.get(m.keySet().toArray()[0]);
+				Map<String, List<Dialogue>> m = scene.getFlag().get(sc);
+				if(m != null) list = m.get(flag);
 				if(list == null) list = new ArrayList<>();
 				list.add(dialogue);
 				scene.put(sc, flag, list);
