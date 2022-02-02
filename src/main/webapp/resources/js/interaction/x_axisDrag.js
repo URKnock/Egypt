@@ -27,8 +27,7 @@ kettle.onmousedown = function(event) {
 		moveAt(event.pageX); //마우스 포인터 아래로 사물을 이동시킵니다.
 
 		kettle.hidden = true;
-		let elemBelow = document.elementFromPoint(event.clientX,
-				event.clientY); //elemBelow는 드롭 할 수 있는 객체의 아래 요소입니다.
+		let elemBelow = document.elementFromPoint(event.clientX, event.clientY); //elemBelow는 드롭 할 수 있는 객체의 아래 요소입니다.
 		kettle.hidden = false;
 
 		// 마우스 이벤트는 윈도우 밖으로 트리거 될 수 없습니다.(클릭한 객체를 윈도우 밖으로 드래그 했을 때)
