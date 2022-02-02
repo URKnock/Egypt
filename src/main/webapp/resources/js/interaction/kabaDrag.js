@@ -44,12 +44,10 @@ dragSpot.onmousedown = function(event) {
 
 		// 마우스 이벤트는 윈도우 밖으로 트리거 될 수 없습니다.(클릭한 객체를 윈도우 밖으로 드래그 했을 때)
 		// 따라서 clientX∙clientY가 화면 밖에 있으면, elementFromPoint는 null을 반환합니다.
-		if (!elemBelow)
-			return;
+		if (!elemBelow) return;
 
 		// 'droppable' 클래스로 미리 지정되어 있는 객체를 잠재적으로 드롭 할 수 있는 요소로 가져옵니다.
 		let droppableBelow = elemBelow.closest('.droppable');
-		
 		if (currentDroppable != droppableBelow) {
 			//currentDroppable=null 이벤트 전에 놓을 수 있는 요소 위에 있지 않다면(예: 빈 공간)
 			//droppableBelow=null 이벤트 동안 놓을 수 있는 요소 위에 있지 않다면

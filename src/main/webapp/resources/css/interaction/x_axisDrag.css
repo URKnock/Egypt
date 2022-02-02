@@ -2,8 +2,8 @@
 	position: absolute;
 	transform:rotate(40deg);
 	cursor: pointer;
-	top: 700;
-	left: 800;
+	top: 500;
+	left: 700;
 	width: 78px;
 	height: 101px;
 	z-index: 3;
@@ -11,8 +11,8 @@
 
 hr{
 	position: absolute;
-	top: 750; 
-	left: 830;
+	top: 375; 
+	left: 581;
     border: none;
     border-top: 5px dotted red;
     height: 1px;
@@ -21,8 +21,8 @@ hr{
 
 .soda{
 	position: absolute;
-	top: 800;
-	left: 1000;
+	top: 500;
+	left: 700;
 	width: 827px;
 	height: 177px;
 	opacity: 1;
@@ -31,8 +31,8 @@ hr{
 
 .human {
 	position: absolute;
-	top: 800;
-	left: 1000;
+	top: 500;
+	left: 700;
 	width: 827px;
 	height: 177px;
 	z-index: 1;

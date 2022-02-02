@@ -14,7 +14,6 @@ kettle.onmousedown = function(event) {
 	// 현재 위치한 부모에서 body로 직접 이동하여
 	// body를 기준으로 위치를 지정합니다.
 	document.body.append(kettle);
-
 	moveAt(event.pageX);
 
 	// 초기 이동을 고려한 좌표 (pageX, pageY)에서
