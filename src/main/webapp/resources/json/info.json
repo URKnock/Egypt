@@ -1,7 +1,4 @@
-[
-    
-/* 영생의 준비 */
-    
+[   
 {
 	"name":"두아무테프", "kind":"카노푸스 단지", "chapter":3,
 	"content":"호루스의 네 아들 중 자칼 머리를 가진 두아무테프. 두아무테프는 사자의 위를 보호한다.",
@@ -83,7 +80,7 @@
 	"image":"UI/Info/Image.png"
 },
 
-/* 입을 여는 의식 */
+
 {
 	"name":"셈 신관", "kind":"신관", "chapter":4,
 	"content":"표범 가죽을 입고 입을 여는 의식을<br/>집전하는 보조신관이다.<br/>향유를 들고있다.",
@@ -121,7 +118,7 @@
 	"image":"UI/Info/Image.png"
 },
     
-/* 두아트 */
+
 {
     "name":"케메트의 검은 흙", "kind":"두아트", "chapter":5,
 	"content":"케메트의 검은 흙은 살아있는 자들을 부양해주는 이승이라는 의미를 가지고 있다.",
@@ -141,7 +138,7 @@
 	"image":"UI/Info/3_1_2.png" 
 },
     
-/* 오시리스 법정 */
+
 {
 	"name":"진리의 저울", "kind":"도구", "chapter":7,
 	"content":"사자의 심장과 깃털의 무게를 재서,<br/>사자의 죄를 측정한다.",
@@ -215,53 +212,53 @@
 	"image":"UI/Info/Image.png"
 },   
     
-/* 천국 */
+
 {
 	"name":"공물", "kind":"천국", "chapter":9,
 	"content":"신을 향해 공물을 바치고 있는 천국의 사자",
 	"detail":"신을 향해 공물을 바치고 있는 천국의 사자",
-	"image":"UI/Info/9_5_1.png",
+	"image":"UI/Info/9_5_1.png"
 },
 {
 	"name":"새", "kind":"천국", "chapter":9,
 	"content":"사자의 자유로운 영혼 ‘바’가 새의 형태로 변해있다",
 	"detail":"사자의 자유로운 영혼 ‘바’가 새의 형태로 변해있다",
-	"image":"UI/Info/9_5_2.png",
+	"image":"UI/Info/9_5_2.png"
 },
 {
 	"name":"카무트", "kind":"천국", "chapter":9,
 	"content":"고대 이집트 밀, 영양소가 많아 왕의 밀, 생명의 씨앗으로 불렸다.",
 	"detail":"고대 이집트 밀, 영양소가 많아 왕의 밀, 생명의 씨앗으로 불렸다.",
-	"image":"UI/Info/9_5_3.png",
+	"image":"UI/Info/9_5_3.png"
 },
 {
 	"name":"수확과 탈곡", "kind":"천국", "chapter":9,
 	"content":"곡물을 수확하고, 탈곡하고 있는 천국의 노예",
 	"detail":"곡물을 수확하고, 탈곡하고 있는 천국의 노예",
-	"image":"UI/Info/9_5_4.png",
+	"image":"UI/Info/9_5_4.png"
 },
 {
 	"name":"왜가리", "kind":"천국", "chapter":9,
 	"content":"음식을 먹기 위해 왜가리로 변신한 사자, 왜가리는 매일 밤 위대한 신을 보호하고 대지를 지키기 위해 강물을 항해한다",
 	"detail":"음식을 먹기 위해 왜가리로 변신한 사자, 왜가리는 매일 밤 위대한 신을 보호하고 대지를 지키기 위해 강물을 항해한다",
-	"image":"UI/Info/9_5_5.png",
+	"image":"UI/Info/9_5_5.png"
 },
 {
 	"name":"영혼의 양식", "kind":"천국", "chapter":9,
 	"content":"천국에서 밀과 보리는 영혼의 양식을 상징한다",
 	"detail":"천국에서 밀과 보리는 영혼의 양식을 상징한다",
-	"image":"UI/Info/9_5_6.png",
+	"image":"UI/Info/9_5_6.png"
 },
 {
 	"name":"밭", "kind":"천국", "chapter":9,
 	"content":"맑은 물로 밭을 갈고 있는 소와 천국의 노예",
 	"detail":"맑은 물로 밭을 갈고 있는 소와 천국의 노예",
-	"image":"UI/Info/9_5_7.png",
+	"image":"UI/Info/9_5_7.png"
 },
 {
 	"name":"배", "kind":"천국", "chapter":9,
 	"content":"어디로든 갈 수 있는 배다. 배를 타면 천국을 떠나, 언제든지 부모와 생전 사람들을 만날 수 있다.",
 	"detail":"어디로든 갈 수 있는 배다. 배를 타면 천국을 떠나, 언제든지 부모와 생전 사람들을 만날 수 있다.",
-	"image":"UI/Info/9_5_8.png",
-},
+	"image":"UI/Info/9_5_8.png"
+}
 ]

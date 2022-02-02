@@ -17,16 +17,17 @@ import model.Choice;
 import model.Dialogue;
 import model.Include;
 import model.Scene;
+import model.Info;
 
-public class JsonManager {
-	public String ReadJson(String filename) {
+public class JsonManager { 
+	public String ReadJson(String filename) { 
 		String result = "";
 		String path = this.getClass().getResource("/").getPath();
 		
 		try {
 			File file = new File(path + "../../resources/json/" + filename);
 			BufferedReader bufReader = new BufferedReader(new InputStreamReader(new FileInputStream(file),"UTF-8"));
-			
+			System.out.println(path + "../../resources/json/" + filename);
 			String line = "";
 			while((line = bufReader.readLine()) != null){
 				result += line;
@@ -45,9 +46,32 @@ public class JsonManager {
 		return null;
 	}
 	
+	public List<Info> ParseInfo(String json, int chapter) {
+		JSONArray data = new JSONArray(json);
+		List<Info> infos = new ArrayList<>();
+		
+	for(int i = 0; i < data.length(); i++) {
+		JSONObject j = data.getJSONObject(i);
+		//다넣음
+		int ch = j.getInt("chapter"); //j에서 챕터꺼내서
+		
+		Info info = new Info(); 
+		
+		info.setName(j.getString("name"));
+		info.setContent(j.getString("content"));
+		info.setDetail(j.getString("detail"));
+		info.setImg("/resources/" + j.getString("image"));
+		info.setKind(j.getString("kind"));
+		info.setChapter(ch);	
+		infos.add(info);
+		}
+		
+		return infos; 
+	}
+	
 	public Scene ParseScene(String json, int chapter) {
 		JSONArray data = new JSONArray(json);
-		Scene scene = new Scene();
+		Scene scene = new Scene(); 
 		
 		for(int i = 0; i < data.length(); i++) {
 			JSONObject j = data.getJSONObject(i);
@@ -71,7 +95,7 @@ public class JsonManager {
 	    		List<Choice> choices = new ArrayList<>();
 	    		JSONObject c = j.getJSONObject("choice");
 	    		dialogue.setPlayer("/resources/" + c.getString("image"));
-	    		for(int k = 0; k < c.length() - 1; k++) {
+	    		for(int k = 0; k  < c.length() - 1; k++) {
 	    			Choice choice = new Choice();
 	    			choice.setId(String.valueOf(k));
 	    			choice.setContent(c.getString(String.valueOf(k)));

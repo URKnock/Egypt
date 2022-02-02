@@ -30,10 +30,9 @@ public class ChapterController implements Controller {
     	HttpSession session = request.getSession(true);
     	
     	String name = "data_" + chapter;
-    	if(session.getAttribute(name) == null) {
+    	if(session.getAttribute(name) == null) { //여기를 참고하자.
     		JsonManager jsonManager = new JsonManager();
     		String data = jsonManager.ReadJson("script.json");
-    		json = jsonManager.ParseScene(data, chapter);
     		session.setAttribute(name, json);
     	} else {
     		json = (Scene) session.getAttribute(name);
@@ -57,7 +56,7 @@ public class ChapterController implements Controller {
 		
 		Dialogue dialogue = null;
 		List<Dialogue> list = null;
-    	if(request.getParameter("choice") != null) {
+    	if(request.getParameter("choice") != null) { //부터수정 
     		int choice = Integer.parseInt(request.getParameter("choice"));
     		if(choice == 0) {
     			list = json.get(scene);

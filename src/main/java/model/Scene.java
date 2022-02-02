@@ -47,6 +47,7 @@ public class Scene implements Serializable {
 	}
 
 	public List<Dialogue> get(int scene, int index) {
+		System.out.println(scene);
 		return flag.get(scene).get(index);
 	}
 	
