@@ -50,10 +50,10 @@ organ.onmousedown = function(event) {
 
 		// 'droppable' 클래스로 미리 지정되어 있는 객체를 잠재적으로 드롭 할 수 있는 요소로 가져옵니다.
 		let droppableBelow = elemBelow.closest('.droppable');
-		//if($(droppableBelow).attr('id') == "pot") { //단지가 droppable로 설정되었다면
-		//	console.log("pot이 인식됨")
-		//	$('.head').addClass("droppable"); //head도 같이 droppable로 설정한다.
-		//} //==> 꼭 필요할까?
+		if($(droppableBelow).attr('id') == "pot") { //단지가 droppable로 설정되었다면
+			console.log("pot이 인식됨")
+			$('.head').addClass("droppable"); //head도 같이 droppable로 설정한다.
+		} //==> 꼭 필요할까?
 		
 		if (currentDroppable != droppableBelow) {
 			//currentDroppable=null 이벤트 전에 놓을 수 있는 요소 위에 있지 않다면(예: 빈 공간)
