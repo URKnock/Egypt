@@ -4,13 +4,23 @@
 <head>
 <meta charset="UTF-8">
 <title>사자의 서</title>
-<link href="<c:url value='/resources/css/ch03.css'/>" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/info_window.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch03.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch03.js'/>"></script>
-<script> $(function(){ init(); }); </script>
+<script src="<c:url value='/resources/js/info_window.js'/>"></script>
 </head>
-<body>
+<body onload="init();">
 <div id="background">
+	<c:forEach var="i" begin="1" end="3">
+		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
+	</c:forEach>
+	<c:forEach var="i" begin="1" end="4">
+		<div class="canopic">
+			<img id="ca${i}_0" src="<c:url value='/resources/background/ch03/k_00.png'/>"/>
+			<img id="ca${i}_1" src="<c:url value='/resources/background/ch03/k_0${i}.png'/>"/>
+		</div>
+	</c:forEach>
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter03/${page}"/>
 	</c:if>
@@ -22,6 +32,14 @@
 		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
 		<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 	</div>
+</div>
+<div id="window">
+	<div class="infoImg"></div>
+	<div class="infoText">
+		<h3 class="name"></h3>
+		<p class="content"></p>
+	</div>
+	<div class="close">X</div>
 </div>
 <form method="post" action="<c:url value='/chapter03'/>">
 <div id="dialogue">

@@ -26,5 +26,13 @@
 {
 	"chapter":3, "scene":14, "flag":0,
 	"page":"peseshkafTest.jsp"
+},
+{
+	"chapter":4, "scene":0, "flag":0,
+	"page":"ch04_01.jsp"
+},
+{
+	"chapter":4, "scene":1, "flag":0,
+	"page":"ch04_01.jsp"
 }
 ]

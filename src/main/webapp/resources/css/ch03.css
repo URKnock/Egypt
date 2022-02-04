@@ -12,21 +12,42 @@ body {
   	overflow-x: hidden;
 }
 
+.pikachu {
+  -webkit-filter: drop-shadow(5px 5px 1px yellow)
+                  drop-shadow(-5px -5px 1px yellow);
+  filter: drop-shadow(5px 5px 1px yellow) 
+          drop-shadow(-5px -5px 1px yellow);
+}
+
 #background {
 	width:100%;
 	height:100%;
-	background: no-repeat url("../background/ch03/3_2.jpg") center center;
+	background: no-repeat url("../background/ch03/3_2.png") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;  
-	display: flex;
-	justify-content: flex-end;
+    background-size: cover;
 }
+
+#background > img {
+	width:initial;
+	height:initial;
+	position:absolute;
+}
+.canopic > img:first-child {
+	position:absolute;
+	z-index:2;	
+}
+.canopic > img:last-child {
+	position:absolute;
+	z-index:3;	
+}
+
 #menu {
 	position:fixed;
 	top:10px;
 	right:10px;
+	z-index:999;
 }
 
 #menu > div {

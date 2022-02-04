@@ -15,8 +15,8 @@ public class RequestMapping {
     	mappings.put("/test", new ForwardController("/interaction/Dooribeon.jsp"));
     	mappings.put("/testd", new ForwardController("/interaction/DuatInfo.jsp"));
     	mappings.put("/chapter03", new ChapterController("/chapter03.jsp", 3));
-    	mappings.put("/chapter05", new ChoiceController());
-
+    	mappings.put("/chapter04", new ChapterController("/chapter04.jsp", 4));
+		mappings.put("/chapter05", new ChoiceController());
     }
 
     public Controller findController(String uri) {
