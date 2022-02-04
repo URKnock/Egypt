@@ -12,10 +12,17 @@ body {
   	overflow-x: hidden;
 }
 
+.pikachu {
+  -webkit-filter: drop-shadow(5px 5px 1px yellow)
+                  drop-shadow(-5px -5px 1px yellow);
+  filter: drop-shadow(5px 5px 1px yellow) 
+          drop-shadow(-5px -5px 1px yellow);
+}
+
 #background {
 	width:100%;
 	height:100%;
-	background: no-repeat url("../background/ch03/3_1.png") center center;
+	background: no-repeat url("../background/ch03/3_2.png") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -26,13 +33,6 @@ body {
 	width:initial;
 	height:initial;
 	position:absolute;
-}
-
-#background > img:nth-child(2) {
-	z-index:1;
-}
-#background > img:nth-child(3) {
-	z-index:2;
 }
 .canopic > img:first-child {
 	position:absolute;

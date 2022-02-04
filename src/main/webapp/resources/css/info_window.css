@@ -1,0 +1,66 @@
+@charset "UTF-8";
+	
+#window {
+	display: none;
+	position: absolute;
+
+	background: white;
+	width: 50vw;
+	height: 25vw;
+	
+	left: 25vw;
+	top: 15vw;
+	
+	z-index: 999;
+}
+
+#window .infoImg {
+	position: absolute;
+	width: 15vw;
+	height: 15vw;
+	
+	background-position: center center;
+	background-attachment: scale-down;
+	
+	left: 5%;
+	top: 50%;
+	
+	transform: translate(0%, -50%);
+	
+	border: 5px solid yellow;
+}
+#window .infoText {
+	position: absolute;
+	
+	width: 60%;
+	
+	left: 40%;
+	top: 50%;
+	
+	transform: translate(0%, -50%);
+	
+	border: 1px soild blue;
+}
+#window .infoText .name{
+	font-size: 2vw;
+	text-align: left;
+}
+#window .infoText .content{
+	margin-top: 10%;
+	
+	font-size: 1.5vw;
+	text-align: left;
+}
+
+#window .close {
+	position: absolute;
+	font-size: 1.5vw;
+	
+	left: 90%;
+	top: 5%;
+	
+	width: 3vw;
+	height: 3vw;
+	
+	background: grey;
+}
