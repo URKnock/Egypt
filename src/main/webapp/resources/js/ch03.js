@@ -23,23 +23,16 @@ function init() {
 	var bg2 = $("#background > img:nth-child(2)");
 	bg2.width($("#background").width());
 	bg2.height($("#background").height());
-	bg2.css("top", -5);
 	
-	var bg3 = $("#background > img:nth-child(3)");
-	bg3.width($("#background").width() * 0.85);
-	bg3.height($("#background").height() * 0.85);
-	bg3.css("left", x - (bg3.width() / 2.0) + 10);
-	bg3.css("top", 	y - (bg3.height() / 2.0) + 40);
-	
-	var bg4 = $("#background > img:nth-child(4)");
+	var bg4 = $("#background > img:nth-child(3)");
 	bg4.width(bg4.prop("naturalWidth") * w);
-	bg4.height(bg4.prop("naturalHeight") * h);
+	bg4.height(bg4.prop("naturalHeight") * w);
 	bg4.css("left", x - 550);
 	bg4.css("bottom", $("#dialogue").height() + 15);
 	
-	var bg5 = $("#background > img:nth-child(5)");
+	var bg5 = $("#background > img:nth-child(4)");
 	bg5.width(bg5.prop("naturalWidth") * w);
-	bg5.height(bg5.prop("naturalHeight") * h);
+	bg5.height(bg5.prop("naturalHeight") * w);
 	bg5.css("left", x + 450);
 	bg5.css("bottom", $("#dialogue").height() + 15);
 	
@@ -67,7 +60,7 @@ function init() {
 		$("#ca" + i + "_1").css("bottom", ca_bottom_1);
 		$("#ca" + i + "_1").css("left", x - 312 + (125 * i) - 50);
 	}
-	bg1.css("left", x - (bg1.width() / 2.0));
+	bg1.css("left", x - (bg1.width() / 2.0) + 10);
 	bg1.css("bottom", $("#dialogue").height() + ($("#ca1_0").height() / 3 * 2));
 	
 	$("#dialogue").click(function() {

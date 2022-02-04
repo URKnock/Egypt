@@ -11,7 +11,9 @@
 <body onload="init();">
 <div id="background">
 	<c:forEach var="i" begin="1" end="5">
-		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
+		<c:if test="${i ne 3}">
+			<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
+		</c:if>
 	</c:forEach>
 	<c:forEach var="i" begin="1" end="4">
 		<div class="canopic">
