@@ -31,8 +31,9 @@ public class ChapterController implements Controller {
     	Include include = null;
     	HttpSession session = request.getSession(true);
 
-    	String data = "data_" + chapter;
+    	String data = "data_" + chapter; 
     	String page = "include_" + chapter;
+    	
     	if(session.getAttribute(data) == null) {
     		JsonManager jsonManager = new JsonManager();
     		String read = jsonManager.ReadJson("script.json");

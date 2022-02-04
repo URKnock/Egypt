@@ -60,7 +60,7 @@ public class JsonManager {
 		return include;
 	}
 	
-	public List<Info> ParseInfo(String json, int chapter) {
+	public List<Info> ParseInfo(String json) {
 		JSONArray data = new JSONArray(json);
 		List<Info> infos = new ArrayList<>();
 		

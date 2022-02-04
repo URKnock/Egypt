@@ -39,7 +39,7 @@
 <div class="modal">
   <div class="modal_content" 
        title="클릭하면 창이 닫힙니다.">
-    <img class="info1" id="info1" src="<c:url value='/resources/UI/Info/3_1_1.png'/>"/> 
+    <img class="info1" id="info1" src='<c:url value="${info.image}"/>'/> 
   </div>
   </div>
 </body>
