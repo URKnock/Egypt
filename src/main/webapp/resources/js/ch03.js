@@ -1,6 +1,12 @@
-var clicked = [1, 2, 3, 4, 5];
+var clicked = [1, 2, 3, 4, 5, 6];
 
 $(document).ready(function(){
+	$(".close").on("click", function() { 
+		hide_info();
+		if(clicked.length == 0) {
+			$("form").submit();
+		}
+	});
 	var scene = $("input[name='scene']").val();
 	var index = $("input[name='index']").val();
 	switch(scene) {
@@ -8,26 +14,32 @@ $(document).ready(function(){
 			if(index == 0) {
 				$("#background > img:nth-child(2)").addClass("pikachu");
 				$("#background > img:nth-child(3)").addClass("pikachu");
+				$("#background > img:nth-child(2)").on("click", function() { 
+					object("#background > img:nth-child(2)", 6, 5); 
+				});
+				$("#background > img:nth-child(3)").on("click", function() { 
+					object("#background > img:nth-child(3)", 5, 6); 
+				});
 				for(var i = 1; i < 5; i++) {
 					$("#ca" + i + "_0").addClass("pikachu");
 					$("#ca" + i + "_1").addClass("pikachu");
 				}
-				$("#ca1_0").on("click", function() { canopic(4, 1) });
-				$("#ca1_1").on("click", function() { canopic(4, 1) });
-				$("#ca2_0").on("click", function() { canopic(5, 2) });
-				$("#ca2_1").on("click", function() { canopic(5, 2) });
-				$("#ca3_0").on("click", function() { canopic(1, 3) });
-				$("#ca3_1").on("click", function() { canopic(1, 3) });
-				$("#ca4_0").on("click", function() { canopic(3, 4) });
-				$("#ca4_1").on("click", function() { canopic(3, 4) });
+				$("#ca1_0").on("click", function() { canopic(3, 1) });
+				$("#ca1_1").on("click", function() { canopic(3, 1) });
+				$("#ca2_0").on("click", function() { canopic(4, 2) });
+				$("#ca2_1").on("click", function() { canopic(4, 2) });
+				$("#ca3_0").on("click", function() { canopic(0, 3) });
+				$("#ca3_1").on("click", function() { canopic(0, 3) });
+				$("#ca4_0").on("click", function() { canopic(2, 4) });
+				$("#ca4_1").on("click", function() { canopic(2, 4) });
 			} else {
-				$("#dialogue").click(function() {
+				$("#dialogue").on("click", function() {
 					$("form").submit();
 				});
 			}
 			break;
 		default:
-			$("#dialogue").click(function() {
+			$("#dialogue").on("click", function() {
 				$("form").submit();
 			});	
 			break;
@@ -93,7 +105,7 @@ function init() {
 		$("#ca" + i + "_1").css("left", x - 312 + (125 * i) - 50);
 	}
 	bg1.css("left", x - (bg1.width() / 2.0) + 10);
-	bg1.css("bottom", ca_bottom_0 + ($("#ca1_0").height() / 3 * 2));
+	bg1.css("bottom", ca_bottom_0 + ($("#ca1_0").height() / 3 * 2 - 10));
 }
 
 function canopic(index, arrIndex) {
@@ -105,14 +117,15 @@ function canopic(index, arrIndex) {
 		$("#ca" + arrIndex + "_1").off("click");
 		$("#ca" + arrIndex + "_0").off("click");
 	}
-	if(clicked.length == 0) {
+}
+
+function object(select, index, arrIndex) {
+	show_info(index);
+	if(clicked.indexOf(arrIndex) != -1) {
+		clicked.splice(clicked.indexOf(arrIndex), 1);
+		$(select).removeClass("pikachu");
+		$(select).off("click");
 	}
-	
-	var str = ""
-	clicked.forEach(function(e, i) {
-		str += e + " ";
-	});
-	console.log(str);
 }
 
 jQuery.fn.center = function () {

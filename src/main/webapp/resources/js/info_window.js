@@ -34,7 +34,6 @@ function show_info(num) {
 	
 	infoContent[0].innerHTML = info[num].name;
 	infoContent[1].innerHTML = info[num].content;
-	$(".close").click(hide_info);
 }
 
 function hide_info() {
