@@ -7,10 +7,18 @@
 <link href="<c:url value='/resources/css/ch03.css'/>" rel="stylesheet" type="text/css"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch03.js'/>"></script>
-<script> $(function(){ init(); }); </script>
 </head>
-<body>
+<body onload="init();">
 <div id="background">
+	<c:forEach var="i" begin="1" end="5">
+		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
+	</c:forEach>
+	<c:forEach var="i" begin="1" end="4">
+		<div class="canopic">
+			<img id="ca${i}_0" src="<c:url value='/resources/background/ch03/k_00.png'/>"/>
+			<img id="ca${i}_1" src="<c:url value='/resources/background/ch03/k_0${i}.png'/>"/>
+		</div>
+	</c:forEach>
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter03/${page}"/>
 	</c:if>
