@@ -12,15 +12,26 @@
 </head>
 <body onload="init();">
 <div id="background">
-	<c:forEach var="i" begin="1" end="3">
+	<c:forEach var="i" begin="1" end="4">
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
 	</c:forEach>
-	<c:forEach var="i" begin="1" end="4">
-		<div class="canopic">
-			<img id="ca${i}_0" src="<c:url value='/resources/background/ch03/k_00.png'/>"/>
-			<img id="ca${i}_1" src="<c:url value='/resources/background/ch03/k_0${i}.png'/>"/>
-		</div>
-	</c:forEach>
+	<c:choose>
+		<c:when test="${scene eq 8}">
+			<c:forEach var="i" begin="1" end="4">
+				<div class="canopic">
+					<img id="ca${i}_0" src="<c:url value='/resources/background/ch03/k_00.png'/>"/>
+					<img id="ca${i}_1" src="<c:url value='/resources/background/ch03/k_0${i}.png'/>"/>
+				</div>
+			</c:forEach>
+		</c:when>
+		<c:otherwise>
+			<div class="canopic">
+				<c:forEach var="i" begin="1" end="4">
+					<img id="ca${i}" src="<c:url value='/resources/background/ch03/k_${i}.png'/>"/>
+				</c:forEach>
+			</div>
+		</c:otherwise>
+	</c:choose>
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter03/${page}"/>
 	</c:if>
