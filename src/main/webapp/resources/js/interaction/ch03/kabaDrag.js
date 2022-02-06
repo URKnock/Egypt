@@ -1,4 +1,13 @@
-$(function() {});
+$(function() {
+	if(scene == 4) {
+		$('#dragSpot').hide(); //대상을 숨김
+		$('#ka').css("opacity", 1);
+		$('#ka').width(96);
+		$('#ka').height(107);
+		isKaShowed = 1;
+		nextSpotInit();
+	}
+});
 
 function nextSpotInit()
 {   //만약 카를 꺼냈다면 바를 꺼낼 circle을 만들어준다. 
@@ -75,13 +84,38 @@ dragSpot.onmousedown = function(event) {
 				$('#ka').addClass("fade-in");
 				$('#dragSpot').hide(); //대상을 숨김
 				isKaShowed = 1;
-				nextSpotInit();
+				
+				setTimeout(function(){
+					var left = $('#ka').offset().left;
+					var top = $('#ka').offset().top;
+					$('#ka').removeClass("fade-in");
+					$('#ka').css("opacity", 1);
+					$('#ka').css("left", left);
+					$('#ka').css("top", top);
+					$('#ka').width(96);
+					$('#ka').height(107);
+					$('#ka').addClass("pikachu");
+ 				}, 1000);
+				$('#ka').on("click", function(){ object("#ka", 8); });
 			}
 			else {
 				$('#ba').addClass("fade-in");
 				$('#dragSpot').hide(); //대상을 숨김
 				$('#dragDest').hide();
 				$('#dragLine').hide();
+				
+				setTimeout(function(){
+					var left = $('#ba').offset().left;
+					var top = $('#ba').offset().top;
+					$('#ba').removeClass("fade-in");
+					$('#ba').css("opacity", 1);
+					$('#ba').css("left", left);
+					$('#ba').css("top", top);
+					$('#ba').width(326);
+					$('#ba').height(232);
+					$('#ba').addClass("pikachu");
+ 				}, 1000);
+ 				$('#ba').on("click", function(){ object("#ba", 9); });
 			}
 		}
 	};

@@ -9,7 +9,7 @@
 },
 {
 	"chapter":3, "scene":4, "flag":0,
-	"page":"x_axisDrag.jsp"
+	"page":"washTest1.jsp"
 },
 {
 	"chapter":3, "scene":7, "flag":0,
@@ -17,11 +17,15 @@
 },
 {
 	"chapter":3, "scene":8, "flag":0,
-	"page":"dragTest.jsp"
+	"page":"organDrag.jsp"
+},
+{
+	"chapter":3, "scene":8, "flag":1,
+	"page":"organDrag.jsp"
 },
 {
 	"chapter":3, "scene":10, "flag":0,
-	"page":"organDrag.jsp"
+	"page":"washTest2.jsp"
 },
 {
 	"chapter":3, "scene":14, "flag":0,
