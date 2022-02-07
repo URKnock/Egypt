@@ -1,6 +1,6 @@
 var w, h, x, y;
-var scene, index;
-var clicked = [1, 2, 3, 4, 5, 6];
+var scene, index, flag;
+var clicked = [];
 
 $(document).ready(function(){
 	$(".close").on("click", function() { 
@@ -11,10 +11,12 @@ $(document).ready(function(){
 	});
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
+	flag = $("input[name='flag']").val();
 
 	switch(scene) {
 		case '1':
 			if(index == 0) {
+				clicked = [1, 2, 3, 4, 5, 6];
 				$("#background > img:nth-child(2)").addClass("pikachu");
 				$("#background > img:nth-child(3)").addClass("pikachu");
 				$("#background > img:nth-child(2)").on("click", function() { 
@@ -37,7 +39,16 @@ $(document).ready(function(){
 			}
 			break;
 		case '2':
-			
+			if(flag == 1) {
+				$("#background > img:nth-child(4)").addClass("pikachu");
+				$("#background > img:nth-child(4)").on("click", function() {
+					objectSubmit("#background > img:nth-child(4)");
+				});
+			}
+			break;
+		case '3':
+		case '4':
+			break;
 		default:
 			$("#dialogue").on("click", function() {
 				$("form").submit();
@@ -103,6 +114,18 @@ function object(select, index, arrIndex) {
 		$(select).removeClass("pikachu");
 		$(select).off("click");
 	}
+}
+
+function object(select, index) {
+	show_info(index);
+	$(select).removeClass("pikachu");
+	$(select).off("click");
+}
+
+function objectSubmit(select) {
+	$(select).removeClass("pikachu");
+	$(select).off("click");
+	$("form").submit();
 }
 
 function canopic_one() {

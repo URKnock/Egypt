@@ -13,10 +13,10 @@ body {
 }
 
 .pikachu {
-  -webkit-filter: drop-shadow(5px 5px 1px yellow)
-                  drop-shadow(-5px -5px 1px yellow);
-  filter: drop-shadow(5px 5px 1px yellow) 
-          drop-shadow(-5px -5px 1px yellow);
+	-webkit-filter: drop-shadow(5px 5px 1px yellow)
+					drop-shadow(-5px -5px 1px yellow);
+	filter: drop-shadow(5px 5px 1px yellow)
+			drop-shadow(-5px -5px 1px yellow);
 }
 
 #background {

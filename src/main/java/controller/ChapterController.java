@@ -89,6 +89,7 @@ public class ChapterController implements Controller {
 	    	s += 1;
 	    }
 	    
+	    request.setAttribute("flag", flag);
     	request.setAttribute("scene", s);
     	request.setAttribute("index", i);
     	request.setAttribute("page", page);
