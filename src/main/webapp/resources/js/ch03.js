@@ -1,6 +1,6 @@
 var w, h, x, y;
 var scene, index, flag;
-var clicked = [];
+var clicked = [1, 2, 3, 4, 5, 6];
 
 $(document).ready(function(){
 	$(".close").on("click", function() { 
@@ -16,7 +16,6 @@ $(document).ready(function(){
 	switch(scene) {
 		case '1':
 			if(index == 0) {
-				clicked = [1, 2, 3, 4, 5, 6];
 				$("#background > img:nth-child(2)").addClass("pikachu");
 				$("#background > img:nth-child(3)").addClass("pikachu");
 				$("#background > img:nth-child(2)").on("click", function() { 
@@ -48,6 +47,7 @@ $(document).ready(function(){
 			break;
 		case '3':
 		case '4':
+			clicked = [];
 			break;
 		default:
 			$("#dialogue").on("click", function() {
@@ -109,17 +109,16 @@ function init() {
 
 function object(select, index, arrIndex) {
 	show_info(index);
-	if(clicked.indexOf(arrIndex) != -1) {
-		clicked.splice(clicked.indexOf(arrIndex), 1);
+	if(arguments.length == 3) {
+		if(clicked.indexOf(arrIndex) != -1) {
+			clicked.splice(clicked.indexOf(arrIndex), 1);
+			$(select).removeClass("pikachu");
+			$(select).off("click");
+		}
+	} else {
 		$(select).removeClass("pikachu");
 		$(select).off("click");
 	}
-}
-
-function object(select, index) {
-	show_info(index);
-	$(select).removeClass("pikachu");
-	$(select).off("click");
 }
 
 function objectSubmit(select) {

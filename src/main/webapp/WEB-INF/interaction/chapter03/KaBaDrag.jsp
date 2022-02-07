@@ -8,6 +8,6 @@
 	<img src="../resources/character/ch03/3_1.png" id="human" class="human"/>	
 	<img src="../resources/object/ch03/카.png" id="ka"/>
 	<img src="../resources/object/ch03/바.png" id="ba"/>
-	<hr id="dragLine" style="transform: rotate(45deg);"/>
+	<c:if test="${scene eq 4}"><hr id="dragLine" style="transform: rotate(45deg);"/></c:if>
 </div>
 <script src="<c:url value='/resources/js/interaction/ch03/kabaDrag.js'/>"></script>
