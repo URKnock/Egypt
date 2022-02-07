@@ -5,7 +5,7 @@ $(function() { // 런타임 동작
 		$('#head').addClass("head-hover")
 	});
 	
-	$('.head').mouseleave(function() {
+	$('#head').mouseleave(function() {
 		console.log("마우스 포인터가 떠남")
 		$('#head').removeClass("head-hover")
 		$('#head').addClass("head-leave")
