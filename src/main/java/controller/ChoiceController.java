@@ -17,7 +17,7 @@ public class ChoiceController implements Controller {
     private int chapter;
 
     public ChoiceController() {
-        this.url = "/chapter03.jsp";
+        this.url = "/chapter05.jsp";
         this.chapter = 5;
     }
 

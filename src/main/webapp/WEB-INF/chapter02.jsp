@@ -9,7 +9,6 @@
 
 </head>
 <body>
-	<a style="position: absolute;" href="<c:url value='/chapter03'/>">진주님이 만드실 홈 파트</a>
 	<div id="menu">
 		<div>
 			<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
@@ -20,7 +19,7 @@
 	</div>
 	<div>
 		<img class="chapters" style="top: 340; left: 300; z-index: 1;" src="<c:url value='/resources/object/ch02/2_5.png'/>"/>
-		<img id="chap1" class="chapters island-move" src="<c:url value='/resources/object/ch02/2_1.png'/>"/>
+		<a href="<c:url value='/chapter03'/>"><img id="chap1" class="chapters island-move" src="<c:url value='/resources/object/ch02/2_1.png'/>"/></a>
 		<img id="chap2" class="chapters island-move" src="<c:url value='/resources/object/ch02/2_2.png'/>"/>
 		<img id="chap3" class="chapters island-move" src="<c:url value='/resources/object/ch02/2_3.png'/>"/>
 		<img id="chap4" class="chapters island-move" src="<c:url value='/resources/object/ch02/2_4.png'/>"/>
