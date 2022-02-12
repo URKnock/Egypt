@@ -4,23 +4,34 @@
 <head>
 <meta charset="UTF-8">
 <title>사자의 서</title>
-<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/info_window.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch03.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch03.js'/>"></script>
-<script src="<c:url value='/resources/js/info_window.js'/>"></script>
+<script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 </head>
 <body onload="init();">
 <div id="background">
-	<c:forEach var="i" begin="1" end="3">
+	<c:forEach var="i" begin="1" end="4">
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
 	</c:forEach>
-	<c:forEach var="i" begin="1" end="4">
-		<div class="canopic">
-			<img id="ca${i}_0" src="<c:url value='/resources/background/ch03/k_00.png'/>"/>
-			<img id="ca${i}_1" src="<c:url value='/resources/background/ch03/k_0${i}.png'/>"/>
-		</div>
-	</c:forEach>
+	<c:choose>
+		<c:when test="${scene eq 8}">
+			<c:forEach var="i" begin="1" end="4">
+				<div class="canopic">
+					<img id="ca${i}_0" src="<c:url value='/resources/background/ch03/k_00.png'/>" class="droppable"/>
+					<img id="ca${i}_1" src="<c:url value='/resources/background/ch03/k_0${i}.png'/>" class="head"/>
+				</div>
+			</c:forEach>
+		</c:when>
+		<c:otherwise>
+			<div class="canopic">
+				<c:forEach var="i" begin="1" end="4">
+					<img id="ca${i}" src="<c:url value='/resources/background/ch03/k_${i}.png'/>"/>
+				</c:forEach>
+			</div>
+		</c:otherwise>
+	</c:choose>
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter03/${page}"/>
 	</c:if>
@@ -69,6 +80,7 @@
 </div>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
+<input name="flag" 	type="hidden" value="${flag}"/>
 </form>
 </body>
 </html>

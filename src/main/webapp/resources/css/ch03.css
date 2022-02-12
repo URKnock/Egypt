@@ -13,10 +13,10 @@ body {
 }
 
 .pikachu {
-  -webkit-filter: drop-shadow(5px 5px 1px yellow)
-                  drop-shadow(-5px -5px 1px yellow);
-  filter: drop-shadow(5px 5px 1px yellow) 
-          drop-shadow(-5px -5px 1px yellow);
+	-webkit-filter: drop-shadow(5px 5px 1px yellow)
+					drop-shadow(-5px -5px 1px yellow);
+	filter: drop-shadow(5px 5px 1px yellow)
+			drop-shadow(-5px -5px 1px yellow);
 }
 
 #background {
@@ -34,13 +34,9 @@ body {
 	height:initial;
 	position:absolute;
 }
-.canopic > img:first-child {
+.canopic > img {
 	position:absolute;
 	z-index:2;	
-}
-.canopic > img:last-child {
-	position:absolute;
-	z-index:3;	
 }
 
 #menu {
@@ -69,10 +65,14 @@ body {
 	display: flex;
 	align-content: center;
 }
+#dialogue > img {
+	margin: 5px;
+}
 #scene {
 	display: inline-flex;
 	flex-direction: column;
 	width:100%;
+	margin: 10px;
 }
 #choice {
 	display: flex;
@@ -94,11 +94,11 @@ body {
 #title, #content {
 	display: inline-flex;
 	flex-direction: row;
-	font-weight: bold;
 	margin-left: 25px;
 	margin-top: 10px;
 }
 #title > div {
+	font-weight: bold;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;

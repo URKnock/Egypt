@@ -12,8 +12,8 @@
 	position: absolute;
 	top: 120;
 	left: 680;
-	width: calc(96px/10);
-	height: calc(107px/10);
+	width: calc(48px/10);
+	height: calc(58px/10);
 	opacity: 0;
 	z-index: 1;
 }
