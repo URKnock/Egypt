@@ -17,8 +17,13 @@ public class ChoiceController implements Controller {
     private int chapter;
 
     public ChoiceController() {
-        this.url = "/chapter03.jsp";
-        this.chapter = 5;
+        this.url = "/chapter05.jsp";
+        this.chapter = 5; 
+    }
+    
+    public ChoiceController(String url) {
+    	this.url = url;
+    	this.chapter = 5;
     }
 
     @Override
@@ -93,6 +98,7 @@ public class ChoiceController implements Controller {
     	}
     	dialogue = list.get(i);
     	
+    	System.out.println(score);
 	    int flag = Integer.parseInt(dialogue.getFlag());
 	    page = include.get(s, flag);
 	    
