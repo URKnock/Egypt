@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+#active {
+	filter: drop-shadow(0px 0px 0.5vw yellow);
+}
+#active:hover {
+	transform: scale(1.1);
+}
+#active:active {
+	transform: scale(1.0);
+}
+
+form {
+	animation-duration: 4s;
+	animation-name: dialog;
+}
+@keyframes dialog {
+	0% { opacity: 0; }
+	90% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+#interact .character:nth-of-type(2) {
+	display: none;
+}
+#interact .object {
+	display: none;
+}
+
+#interact .motion {
+	height: 88.80%;
+	width: auto;
+	
+	top: 38%;
+	left: -2%;
+	
+	animation-duration: 4s;
+	animation-name: walk;
+}
+
+@keyframes walk {
+	0% { top: 12%; left: -40%; }
+	20% { top: 17%; left: -25%; }
+	40% { top: 12%; left: -15%; }
+	60% { top: 17%; left: -2%; }
+	100% {}
+}

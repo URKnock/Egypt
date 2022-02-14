@@ -1,0 +1,54 @@
+.head {
+	position: absolute;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.pot {
+	position: absolute;
+	cursor: pointer;
+	z-index: 1;
+}
+
+#organ {
+	position: absolute;
+	cursor: pointer;
+	top: 100;
+	left: 700;
+	width: 90px;
+	height: 100px;
+	z-index: 2;
+}
+
+.head-hover {
+	transform: rotateZ(-80deg);
+	transform-origin: bottom left;
+	transition: transform 1s;
+}
+
+.head-leave {
+	transform: rotateZ(0deg);
+	transform-origin: bottom left;
+	transition: transform 1s;
+}
+
+.fade-out {
+  transform: rotateZ(-45deg) scale(0.2, 0.2);
+  transform-origin: bottom left;
+  transition: transform 1s;
+	
+  animation: fadeout 0.7s;
+  -moz-animation: fadeout 0.7s; /* Firefox */
+  -webkit-animation: fadeout 0.7s; /* Safari and Chrome */
+  -o-animation: fadeout 0.7s; /* Opera */
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+#active {
+	filter: drop-shadow(0px 0px 0.5vw yellow);
+}
+#active:hover {
+	transform: scale(1.1);
+}
+#active:active {
+	transform: scale(1.0);
+}
+
+#interact .motion1 {
+	height: 44.90%;
+	width: auto;
+	
+	left: 4%;
+	top: 26.9%;
+	
+	z-index: 3;
+}
+#interact .motion2 {
+	height: 44.90%;
+	width: auto;
+	
+	left: 25%;
+	top: 26.9%;
+	
+	z-index: 3;
+}
+
+#interact .effect1 {
+	width: 13.69%;
+	opacity: 0;
+	
+	left: 35%;
+	top: 25%;
+	
+	animation-name: effect1;
+	animation-duration: 1s;
+	animation-play-state: paused;
+	
+	z-index: 2;
+}
+#interact .effect2 {
+	width: 36.40%;
+	opacity: 0;
+	
+	left: 7%;
+	top: 5%;
+	
+	animation-name: effect2;
+	animation-duration: 3s;
+	animation-play-state: paused;
+	
+	z-index: 2;
+}
+#interact .effect3 {
+	width: 100%;
+	opacity: 0;
+	
+	animation-name: effect3;
+	animation-duration: 3s;
+	animation-play-state: paused;
+	
+	z-index: 10;
+	
+	z-index: 2;
+}
+
+@keyframes effect1 {
+	0% { opacity: 0; }
+	1% { left: 35%; top: 22%; opacity: 1; }
+	50% { top:20%; }
+	60%	{ left: 39%; top: 20%; }
+	90% { opacity: 1; }
+	100% { left: 40%; top: 22%; opacity: 0; }
+}
+@keyframes effect2 {
+	0% { opacity: 0; }
+	1% { top: 3%; opacity: 1; }
+	100% { top: -2%; opacity: 0; }
+}
+@keyframes effect3 {
+	0% { opacity: 0; }
+	1% { opacity: 1; }
+	100% { opacity: 0; }
+}
