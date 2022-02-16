@@ -73,7 +73,7 @@ public class ChoiceController implements Controller {
 		
 		int score = session.getAttribute("score") == null ? 0 : (int) session.getAttribute("score");
 		String choice = request.getParameter("choice") == null ? "null" : request.getParameter("choice");
-    	if(!choice.equals("null")) {
+    	if(!choice.equals("null") || scene.equals("14")) {
         	switch(scene) {
 	    		case "11":
 		    		if(choice.equals("0")) score += 1;

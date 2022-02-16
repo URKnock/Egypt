@@ -71,7 +71,6 @@ function init() {
 	
 	$("#choice > img").height( $("#dialogue > img").height() );
 	
-
 	w = $("#background").width() / 2650;
 	h = $("#background").height() / 1080;
 	
