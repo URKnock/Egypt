@@ -15,7 +15,7 @@
 	<c:forEach var="i" begin="1" end="3">
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
 	</c:forEach>
-	<img src="<c:url value='/resources/background/ch03/Anubis.gif'/>"/>
+	<img src="<c:url value='/resources/background/ch03/test.webp'/>"/>
 	<c:choose>
 		<c:when test="${scene eq 8}">
 			<c:forEach var="i" begin="1" end="4">
