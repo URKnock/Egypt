@@ -3,6 +3,11 @@ var scene, index, flag;
 var clicked = [1, 2, 3, 4, 5, 6];
 
 $(document).ready(function(){
+	w = $("#background").width() / 2650 / 0.87;
+	h = $("#background").height($("#background").prop("naturalHeight") * w);
+	$(window).resize(function() {
+		location.reload(true);
+	});
 	$(".close").on("click", function() { 
 		hide_info();
 		if(clicked.length == 0) {
@@ -12,7 +17,7 @@ $(document).ready(function(){
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
-
+ 
 	switch(scene) {
 		case '1':
 			if(index == 0) {
@@ -60,38 +65,42 @@ $(document).ready(function(){
 function init() {
 	scene = $("input[name='scene']").val();
 
-	h = $("#background").height() - $("#dialogue").height();
-	if (h < 0) h = 0;
-	$("#background").height(h);
-		
-	w = $("#scene").width() - $("#dialogue > img:first-of-type").width();
-	w = w - $("#choice").width();
-	if (w < 0) w = 0;
-	$("#scene").width(w);
+	w = $("#background").width() / 2650 / 0.87;
+	x = $("#background").width() / 2.0;
 	
+	var bh = $("#background").height() - $("#dialogue").height();
+	if (bh < 0) bh = 0;
+	$("#background").height(bh);
+		
+	var sw = $("#scene").width() - $("#dialogue > img:first-of-type").width();
+	sw = sw - $("#choice").width();
+	if (sw < 0) sw = 0;
+	$("#scene").width(sw);
 	$("#choice > img").height( $("#dialogue > img").height() );
 	
-	w = $("#background").width() / 2650;
-	h = $("#background").height() / 1080;
-	
-	x = $("#background").width() / 2.0;
-	y = $("#background").height() / 2.0;
+	var b = $("#dialogue").height() + 10*w;
 	
 	var bg1 = $("#background > img:nth-child(1)");
 	bg1.width(bg1.prop("naturalWidth") * w);
 	bg1.height(bg1.prop("naturalHeight") * w);
 	
 	var bg2 = $("#background > img:nth-child(2)");
-	bg2.css("left", x - 550);
-	bg2.css("bottom", $("#dialogue").height() + 10);
+	bg2.width(bg2.prop("naturalWidth") * w);
+	bg2.height(bg2.prop("naturalHeight") * w);
+	bg2.css("left", x - 550*w);
+	bg2.css("bottom", b);
 	
 	var bg3 = $("#background > img:nth-child(3)");
-	bg3.css("left", x + 450);
-	bg3.css("bottom", $("#dialogue").height() + 10);
+	bg3.width(bg3.prop("naturalWidth") * w);
+	bg3.height(bg3.prop("naturalHeight") * w);
+	bg3.css("left", x + 450*w);
+	bg3.css("bottom", b);
 	
 	var bg4 = $("#background > img:nth-child(4)");
-	bg4.css("left", x + 600);
-	bg4.css("bottom", $("#dialogue").height() + 5);
+	bg4.width(bg4.prop("naturalWidth") * w);
+	bg4.height(bg4.prop("naturalHeight") * w);
+	bg4.css("left", x + 600*w);
+	bg4.css("bottom", $("#dialogue").height() + 5*w);
 	
 	var bottom = 0;
 	if(scene == 8) {
@@ -99,7 +108,7 @@ function init() {
 	} else { 
 		bottom = canopic_one(); 
 	}
-	bg1.css("left", x - (bg1.width() / 2.0) + 10);
+	bg1.css("left", x - (bg1.width() / 2.0) + 10*w);
 	bg1.css("bottom", bottom);
 }
 
@@ -132,15 +141,19 @@ function canopic_one() {
 	}
 */
 	var caH = $("#ca1").height();
-	var ca_bottom = $("#dialogue").height() + 10;
+	var ca_bottom = $("#dialogue").height() + 10*w;
+	$("#ca1").width($("#ca1").prop("naturalWidth") * w);
+	$("#ca1").height($("#ca1").prop("naturalHeight") * w);
 	$("#ca1").css("bottom", ca_bottom);
-	$("#ca1").css("left", x - 237);
+	$("#ca1").css("left", x - 237*w);
 		
 	for(var i = 2; i < 5; i++) {
+		$("#ca" + i).width($("#ca" + i).prop("naturalWidth") * w);
+		$("#ca" + i).height($("#ca" + i).prop("naturalHeight") * w);
 		$("#ca" + i).css("bottom", ca_bottom);
-		$("#ca" + i).css("left", x - 312 + (125 * i) - 50);
+		$("#ca" + i).css("left", x + (-312 + (125 * i) - 50)*w);
 	}
-	return (ca_bottom + caH / 3 - 5);
+	return (ca_bottom + caH / 3 - 5*w);
 }
 
 function canopic_two() {
@@ -157,25 +170,33 @@ function canopic_two() {
 	}
 */
 	var caH = $("#ca1_0").height();
-	var ca_bottom_0 = $("#dialogue").height() + 10;
+	var ca_bottom_0 = $("#dialogue").height() + 10*w;
 	var ca_bottom_1 = $("#ca1_1").height() / 3 + ca_bottom_0;
+	$("#ca1_0").width($("#ca1_0").prop("naturalWidth") * w);
+	$("#ca1_0").height($("#ca1_0").prop("naturalHeight") * w);
+	$("#ca1_1").width($("#ca1_1").prop("naturalWidth") * w);
+	$("#ca1_1").height($("#ca1_1").prop("naturalHeight") * w);
 	$("#ca1_0").css("bottom", ca_bottom_0);
-	$("#ca1_0").css("left", x - 227);
+	$("#ca1_0").css("left", x - 227*w);
 	$("#ca1_1").css("bottom", ca_bottom_1);
-	$("#ca1_1").css("left", x - 237);
+	$("#ca1_1").css("left", x - 237*w);
 		
 	for(var i = 2; i < 5; i++) {
+		$("#ca" + i + "_0").width($("#ca" + i + "_0").prop("naturalWidth") * w);
+		$("#ca" + i + "_0").height($("#ca" + i + "_0").prop("naturalHeight") * w);
+		$("#ca" + i + "_1").width($("#ca" + i + "_0").prop("naturalWidth") * w);
+		$("#ca" + i + "_1").height($("#ca" + i + "_0").prop("naturalHeight") * w);
 		$("#ca" + i + "_0").css("bottom", ca_bottom_0);
-		$("#ca" + i + "_0").css("left", x - 312 + (125 * i) - 40);
+		$("#ca" + i + "_0").css("left", x + (-312 + (125 * i) - 40)*w);
 		$("#ca" + i + "_1").css("bottom", ca_bottom_1);
-		$("#ca" + i + "_1").css("left", x - 312 + (125 * i) - 50);
+		$("#ca" + i + "_1").css("left", x + (-312 + (125 * i) - 50)*w);
 	}
-	return (ca_bottom_0 + caH / 3 - 5);
+	return (ca_bottom_0 + caH / 3 - 5*w);
 }
 
 function center(element) {
 	x = $("#background").width() / 2.0;
-	y = $("#background").height() / 2.0 + 100;
+	y = $("#background").height() / 2.0 + 100*w;
 	$(element).css("left", x - ($(element).width() / 2));
 	$(element).css("top", y - ($(element).height() / 2));
 }
