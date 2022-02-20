@@ -102,14 +102,14 @@ function init() {
 	bg4.css("left", x + 600*w);
 	bg4.css("bottom", $("#dialogue").height() + 5*w);
 	
-	var bottom = 0;
+	b = 0;
 	if(scene == 8) {
-		bottom = canopic_two(); 
+		b = canopic_two(); 
 	} else { 
-		bottom = canopic_one(); 
+		b = canopic_one(); 
 	}
 	bg1.css("left", x - (bg1.width() / 2.0) + 10*w);
-	bg1.css("bottom", bottom);
+	bg1.css("bottom", b);
 }
 
 function object(select, index, arrIndex) {
@@ -153,7 +153,7 @@ function canopic_one() {
 		$("#ca" + i).css("bottom", ca_bottom);
 		$("#ca" + i).css("left", x + (-312 + (125 * i) - 50)*w);
 	}
-	return (ca_bottom + caH / 3 - 5*w);
+	return ((ca_bottom + caH / 3 - 5) * w);
 }
 
 function canopic_two() {
@@ -191,7 +191,7 @@ function canopic_two() {
 		$("#ca" + i + "_1").css("bottom", ca_bottom_1);
 		$("#ca" + i + "_1").css("left", x + (-312 + (125 * i) - 50)*w);
 	}
-	return (ca_bottom_0 + caH / 3 - 5*w);
+	return ((ca_bottom_0 + caH / 3 - 5) * w);
 }
 
 function center(element) {
