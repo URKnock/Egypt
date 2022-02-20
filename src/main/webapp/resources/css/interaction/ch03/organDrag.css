@@ -1,20 +1,12 @@
-	#head {
+.head {
 	position: absolute;
 	cursor: pointer;
-	top: 410;
-	left: 995;
-	width: 90px;
-	height: 150px;	
 	z-index: 3;
 }
 
-#pot {
+.pot {
 	position: absolute;
 	cursor: pointer;
-	top: 500;
-	left: 1000;
-	width: 75px;
-	height: 115px;
 	z-index: 1;
 }
 

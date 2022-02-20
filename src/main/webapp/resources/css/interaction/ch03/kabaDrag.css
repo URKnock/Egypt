@@ -1,8 +1,6 @@
 #human {
 	position: absolute;
 	cursor: pointer;
-	top: 350;
-	left: 550;
 	width: 481px;
 	height: 102px;
 	z-index: 0;
@@ -10,18 +8,14 @@
 
 #ka {
 	position: absolute;
-	top: 120;
-	left: 680;
-	width: calc(96px/10);
-	height: calc(107px/10);
+	width: calc(48px/10);
+	height: calc(58px/10);
 	opacity: 0;
 	z-index: 1;
 }
 
 #ba {
 	position: absolute;
-	top: 150;
-	left: 950;
 	width: calc(326px/10);
 	height: calc(232px/10);
 	opacity: 0;
@@ -30,8 +24,6 @@
 
 hr{
 	position: absolute;
-	top: 320; 
-	left: 750;
     border: none;
     border-top: 5px dotted red;
     height: 2px;

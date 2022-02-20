@@ -1,53 +1,63 @@
-$(function() {});
-
-function nextSpotInit()
-{   //만약 카를 꺼냈다면 바를 꺼낼 circle을 만들어준다. 
-	if(isKaShowed == 1){
-		console.log("isKaShowed가 1임.")
-		$('#dragDest').attr('style', "top: 200; left: 920; width: 100px; height: 100px;"); //dragDest 위치 변경
-		$('#dragSpot').show(); //화면에 dragSpot 재배치
-		$('#dragSpot').attr('style', "top: 365; left: 830; opacity: 0.8; background-color: #009999");
-		$('#dragLine').attr('style', "left: 860; transform: rotate(-45deg);");
-		//hr 라인도 각도 수정해주기
-	}
-}
+$(function() { // 런타임 동작
+	$('#head').mouseenter(function() {
+		console.log("마우스 오버!")
+		$('#head').removeClass("head-leave")
+		$('#head').addClass("head-hover")
+	});
+	
+	$('#head').mouseleave(function() {
+		console.log("마우스 포인터가 떠남")
+		$('#head').removeClass("head-hover")
+		$('#head').addClass("head-leave")
+	});
+});
 
 let currentDroppable = null;
-let isKaShowed = 0;
 
-dragSpot.onmousedown = function(event) {
-	let shiftX = event.clientX - dragSpot.getBoundingClientRect().left;
-	let shiftY = event.clientY - dragSpot.getBoundingClientRect().top;
+organ.onmousedown = function(event) {
+	let shiftX = event.clientX - organ.getBoundingClientRect().left;
+	let shiftY = event.clientY - organ.getBoundingClientRect().top;
 
 	// (1) absolute 속성과 zIndex 프로퍼티를 수정해 클릭한 대상이 제일 위에서 움직이기 위한 준비를 합니다.
-	dragSpot.style.position = 'absolute';
-	dragSpot.style.zIndex = 1000;
+	organ.style.position = 'absolute';
+	organ.style.zIndex = 1000;
 
 	// 현재 위치한 부모에서 body로 직접 이동하여
 	// body를 기준으로 위치를 지정합니다.
-	document.body.append(dragSpot);
+	document.body.append(organ);
+
 	moveAt(event.pageX, event.pageY);
 
 	// 초기 이동을 고려한 좌표 (pageX, pageY)에서
 	// 대상을 이동합니다.
 	function moveAt(pageX, pageY) {
-		dragSpot.style.left = pageX - shiftX + 'px';
-		dragSpot.style.top = pageY - shiftY + 'px';
+		organ.style.left = pageX - shiftX + 'px';
+		organ.style.top = pageY - shiftY + 'px';
 	}
 
 	function onMouseMove(event) {
 		moveAt(event.pageX, event.pageY); //마우스 포인터 아래로 사물을 이동시킵니다.
 
-		dragSpot.hidden = true;
-		let elemBelow = document.elementFromPoint(event.clientX, event.clientY); //elemBelow는 드롭 할 수 있는 객체의 아래 요소입니다.
-		dragSpot.hidden = false;
+		organ.hidden = true;
+		let elemBelow = document.elementFromPoint(event.clientX,
+				event.clientY); //elemBelow는 드롭 할 수 있는 객체의 아래 요소입니다.
+		organ.hidden = false;
 
 		// 마우스 이벤트는 윈도우 밖으로 트리거 될 수 없습니다.(클릭한 객체를 윈도우 밖으로 드래그 했을 때)
 		// 따라서 clientX∙clientY가 화면 밖에 있으면, elementFromPoint는 null을 반환합니다.
-		if (!elemBelow) return;
+		if (!elemBelow)
+			return;
 
 		// 'droppable' 클래스로 미리 지정되어 있는 객체를 잠재적으로 드롭 할 수 있는 요소로 가져옵니다.
 		let droppableBelow = elemBelow.closest('.droppable');
+		
+		// $(droppableBelow).attr('id') == "pot" // 단지가 droppable로 설정되었다면
+		var potId = $(droppableBelow).attr('id')
+		if(potId.startsWith("ca")) {
+			console.log("pot이 인식됨")
+			$('.head').addClass("droppable"); //head도 같이 droppable로 설정한다.
+		} //==> 꼭 필요할까?
+		
 		if (currentDroppable != droppableBelow) {
 			//currentDroppable=null 이벤트 전에 놓을 수 있는 요소 위에 있지 않다면(예: 빈 공간)
 			//droppableBelow=null 이벤트 동안 놓을 수 있는 요소 위에 있지 않다면
@@ -65,40 +75,34 @@ dragSpot.onmousedown = function(event) {
 	document.addEventListener('mousemove', onMouseMove);
 
 	// (3) 사물을 드롭하고, 불필요한 핸들러를 제거합니다.
-	dragSpot.onmouseup = function() { //대상을 드롭하는 순간에
+	organ.onmouseup = function() { //대상을 드롭하는 순간에
 		document.removeEventListener('mousemove', onMouseMove); //이벤트 리스너 제거
-		dragSpot.onmouseup = null; //속성 제거
-		if (dragSpot.isOverlaped == true) { //드롭 가능한 요소에 오버랩 되었다면
+		organ.onmouseup = null; //속성 제거
+		if (organ.isOverlaped == true) { //드롭 가능한 요소에 오버랩 되었다면
 			console.log("오버랩 되는 중")
 			leaveDroppable(currentDroppable)
-			if(isKaShowed == 0) { //드래그된 dest에 따라서 다른 객체에 클래스를 추가해준다.
-				$('#ka').addClass("fade-in");
-				$('#dragSpot').hide(); //대상을 숨김
-				isKaShowed = 1;
-				nextSpotInit();
-			}
-			else {
-				$('#ba').addClass("fade-in");
-				$('#dragSpot').hide(); //대상을 숨김
-				$('#dragDest').hide();
-				$('#dragLine').hide();
-			}
+			$('#organ').addClass("fade-out")
+			//organ.remove(); //대상을 삭제
 		}
 	};
 };
 
 function enterDroppable(elem) { //드롭 가능한 요소에 닿았다면
-	elem.style.background = 'pink'; //해당 요소의 배경 색상 변경 ==> 테두리만 따려면?
-	dragSpot.isOverlaped = true;
+	//elem.style.background = 'pink'; //해당 요소의 배경 색상 변경 ==> 테두리만 따려면?
+	organ.isOverlaped = true;
+	$('#head').removeClass("head-leave")
+	$('#head').addClass("head-hover")
 	console.log("isOverlaped 추가")
 }
 
 function leaveDroppable(elem) { //드롭 가능한 요소로부터 벗어났다면
-	elem.style.background = ''; //해당 요소의 배경 색상 제거
-	dragSpot.isOverlaped = false;
+	//elem.style.background = ''; //해당 요소의 배경 색상 제거
+	organ.isOverlaped = false;
+	$('#head').removeClass("head-hover")
+	$('#head').addClass("head-leave")
 	console.log("isOverlaped 해제")
 }
 
-dragSpot.ondragstart = function() {
+organ.ondragstart = function() {
 	return false;
 };

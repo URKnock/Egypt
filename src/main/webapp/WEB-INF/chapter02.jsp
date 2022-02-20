@@ -9,7 +9,6 @@
 
 </head>
 <body>
-	<a style="position: absolute;" href="<c:url value='/chapter03'/>">진주님이 만드실 홈 파트</a>
 	<div id="menu">
 		<div>
 			<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>

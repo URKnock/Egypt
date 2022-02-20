@@ -17,7 +17,7 @@ public class ChoiceController implements Controller {
     private int chapter;
 
     public ChoiceController() {
-        this.url = "/chapter03.jsp";
+        this.url = "/chapter05.jsp";
         this.chapter = 5;
     }
 
@@ -67,8 +67,8 @@ public class ChoiceController implements Controller {
 		List<Dialogue> list = null;
 		
 		int score = session.getAttribute("score") == null ? 0 : (int) session.getAttribute("score");
-		String choice = request.getParameter("choice") == null ? "null" : request.getParameter("choice");
-    	if(!choice.equals("null")) {
+		String choice = request.getParameter("choice") == null ? "null" : request.getParameter("choice");    	
+    	if(!choice.equals("null") || scene.equals("14")) {
         	switch(scene) {
 	    		case "11":
 		    		if(choice.equals("0")) score += 1;
@@ -81,7 +81,7 @@ public class ChoiceController implements Controller {
 		    		choice = String.valueOf(3 - score);
 		    		score = 0;
 		    		break;
-        	}    		
+        	}
     		if(choice.equals("0")) {
     			list = json.get(scene);
     		} else {
@@ -102,6 +102,7 @@ public class ChoiceController implements Controller {
 	    	s += 1;
 	    }
 	    
+	    request.setAttribute("flag", flag);
     	request.setAttribute("scene", s);
     	request.setAttribute("index", i);
     	request.setAttribute("page", page);
