@@ -1,6 +1,8 @@
 $(function() {
+	resize("#human");
 	center("#human");
 	center("#dragSpot");
+	$("#dragSpot").css("bottom", $("#dialogue").height() + 265*w + $("#human").height()/2);
 	if(scene == 3) {
 		var left = $('#dragSpot').offset().left;
 		var top = $('#dragSpot').offset().top;
@@ -121,6 +123,7 @@ function nextSpotInit() {
 		$('#dragLine').attr('style', "transform: rotate(-45deg);");
 		$('#dragDest').attr('style', "width: 100px; height: 100px;");
 		center("#dragSpot");
+		$("#dragSpot").css("bottom", $("#dialogue").height() + 265*w + $("#human").height()/2);
 		$('#dragLine').css("top", $('#human').offset().top - ($('#dragLine').width() / Math.sqrt(2)) / 2);
 		$('#dragLine').css("left", x);
 		$('#dragDest').css("top", $('#dragLine').offset().top - ($('#dragDest').height() / 2));

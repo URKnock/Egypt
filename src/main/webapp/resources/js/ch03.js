@@ -83,6 +83,8 @@ function init() {
 	var bg1 = $("#background > img:nth-child(1)");
 	bg1.width(bg1.prop("naturalWidth") * w);
 	bg1.height(bg1.prop("naturalHeight") * w);
+	bg1.css("left", x - (bg1.width() / 2.0) + 10*w);
+	bg1.css("bottom", b);
 	
 	var bg2 = $("#background > img:nth-child(2)");
 	bg2.width(bg2.prop("naturalWidth") * w);
@@ -102,14 +104,11 @@ function init() {
 	bg4.css("left", x + 600*w);
 	bg4.css("bottom", $("#dialogue").height() + 5*w);
 	
-	b = 0;
 	if(scene == 8) {
-		b = canopic_two(); 
+		canopic_two(); 
 	} else { 
-		b = canopic_one(); 
+		canopic_one(); 
 	}
-	bg1.css("left", x - (bg1.width() / 2.0) + 10*w);
-	bg1.css("bottom", b);
 }
 
 function object(select, index, arrIndex) {
@@ -133,70 +132,47 @@ function objectSubmit(select) {
 }
 
 function canopic_one() {
-/*	for(var i = 1; i < 5; i++) {
-		var caW = $("#ca" + i).width() * w;
-		var caH = $("#ca" + i).height() * w;
-		$("#ca" + i).width(caW);
-		$("#ca" + i).height(caH);
-	}
-*/
 	var caH = $("#ca1").height();
 	var ca_bottom = $("#dialogue").height() + 10*w;
-	$("#ca1").width($("#ca1").prop("naturalWidth") * w);
-	$("#ca1").height($("#ca1").prop("naturalHeight") * w);
+	resize("#ca1");
 	$("#ca1").css("bottom", ca_bottom);
 	$("#ca1").css("left", x - 237*w);
 		
 	for(var i = 2; i < 5; i++) {
-		$("#ca" + i).width($("#ca" + i).prop("naturalWidth") * w);
-		$("#ca" + i).height($("#ca" + i).prop("naturalHeight") * w);
+		resize("#ca" + i);
 		$("#ca" + i).css("bottom", ca_bottom);
 		$("#ca" + i).css("left", x + (-312 + (125 * i) - 50)*w);
 	}
-	return ((ca_bottom + caH / 3 - 5) * w);
 }
 
 function canopic_two() {
-/*	for(var i = 1; i < 5; i++) {
-		var caW = $("#ca" + i + "_1").width() * w;
-		var caH = $("#ca" + i + "_1").height() * w;
-		$("#ca" + i + "_1").width(caW);
-		$("#ca" + i + "_1").height(caH);
-			
-		caW = $("#ca" + i + "_0").width() * w;
-		caH = $("#ca" + i + "_0").height() * w;	
-		$("#ca" + i + "_0").width(caW);
-		$("#ca" + i + "_0").height(caH);
-	}
-*/
 	var caH = $("#ca1_0").height();
 	var ca_bottom_0 = $("#dialogue").height() + 10*w;
 	var ca_bottom_1 = $("#ca1_1").height() / 3 + ca_bottom_0;
-	$("#ca1_0").width($("#ca1_0").prop("naturalWidth") * w);
-	$("#ca1_0").height($("#ca1_0").prop("naturalHeight") * w);
-	$("#ca1_1").width($("#ca1_1").prop("naturalWidth") * w);
-	$("#ca1_1").height($("#ca1_1").prop("naturalHeight") * w);
+	resize("#ca1_0");
+	resize("#ca1_1");
 	$("#ca1_0").css("bottom", ca_bottom_0);
 	$("#ca1_0").css("left", x - 227*w);
 	$("#ca1_1").css("bottom", ca_bottom_1);
 	$("#ca1_1").css("left", x - 237*w);
 		
 	for(var i = 2; i < 5; i++) {
-		$("#ca" + i + "_0").width($("#ca" + i + "_0").prop("naturalWidth") * w);
-		$("#ca" + i + "_0").height($("#ca" + i + "_0").prop("naturalHeight") * w);
-		$("#ca" + i + "_1").width($("#ca" + i + "_0").prop("naturalWidth") * w);
-		$("#ca" + i + "_1").height($("#ca" + i + "_0").prop("naturalHeight") * w);
+		resize("#ca" + i + "_0");
+		resize("#ca" + i + "_1");
 		$("#ca" + i + "_0").css("bottom", ca_bottom_0);
 		$("#ca" + i + "_0").css("left", x + (-312 + (125 * i) - 40)*w);
 		$("#ca" + i + "_1").css("bottom", ca_bottom_1);
 		$("#ca" + i + "_1").css("left", x + (-312 + (125 * i) - 50)*w);
 	}
-	return ((ca_bottom_0 + caH / 3 - 5) * w);
 }
 
 function center(element) {
 	x = $("#background").width() / 2.0;
-	y = $("#background").height() / 2.0 + 100*w;
 	$(element).css("left", x - ($(element).width() / 2));
-	$(element).css("top", y - ($(element).height() / 2));
+	$(element).css("bottom", $("#dialogue").height() + 265*w);
+}
+
+function resize(element) {
+	$(element).width($(element).prop("naturalWidth") * w);
+	$(element).height($(element).prop("naturalHeight") * w);
 }
