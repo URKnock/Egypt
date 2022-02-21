@@ -21,6 +21,8 @@ $(document).ready(function(){
 	switch(scene) {
 		case '1':
 			if(index == 0) {
+				$("#background > img:nth-child(2)").addClass("select");
+				$("#background > img:nth-child(3)").addClass("select");
 				$("#background > img:nth-child(2)").addClass("pikachu");
 				$("#background > img:nth-child(3)").addClass("pikachu");
 				$("#background > img:nth-child(2)").on("click", function() { 
@@ -30,6 +32,7 @@ $(document).ready(function(){
 					object("#background > img:nth-child(3)", 5, 6); 
 				});
 				for(var i = 1; i < 5; i++) {
+					$("#ca" + i).addClass("select");
 					$("#ca" + i).addClass("pikachu");
 				}
 				$("#ca1").on("click", function() { object("#ca1", 3, 1) });
@@ -44,6 +47,7 @@ $(document).ready(function(){
 			break;
 		case '2':
 			if(flag == 1) {
+				$("#background > img:nth-child(4)").addClass("select");
 				$("#background > img:nth-child(4)").addClass("pikachu");
 				$("#background > img:nth-child(4)").on("click", function() {
 					objectSubmit("#background > img:nth-child(4)");
@@ -116,18 +120,15 @@ function object(select, index, arrIndex) {
 	if(arguments.length == 3) {
 		if(clicked.indexOf(arrIndex) != -1) {
 			clicked.splice(clicked.indexOf(arrIndex), 1);
-			$(select).removeClass("pikachu");
-			$(select).off("click");
+			$(select).removeClass("select");
 		}
 	} else {
-		$(select).removeClass("pikachu");
-		$(select).off("click");
+		$(select).removeClass("select");
 	}
 }
 
 function objectSubmit(select) {
-	$(select).removeClass("pikachu");
-	$(select).off("click");
+	$(select).removeClass("select");
 	$("form").submit();
 }
 

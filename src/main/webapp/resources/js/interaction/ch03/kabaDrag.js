@@ -21,6 +21,7 @@ $(function() {
 				$('#ka').css("top", top);
 				$('#ka').width(48);
 				$('#ka').height(58);
+				$('#ka').addClass("select");
 				$('#ka').addClass("pikachu");
  			}, 1000);
 			$('#ka').on("click", function(){ object("#ka", 8); });	
@@ -104,6 +105,7 @@ $(function() {
 							$('#ba').css("top", top);
 							$('#ba').width(326);
 							$('#ba').height(232);
+							$('#ba').addClass("select");
 							$('#ba').addClass("pikachu");
 		 				}, 1000);
 		 				$('#ba').on("click", function(){ object("#ba", 9); });
