@@ -12,11 +12,14 @@ body {
   	overflow-x: hidden;
 }
 
-.pikachu {
-	-webkit-filter: drop-shadow(5px 5px 1px yellow)
-					drop-shadow(-5px -5px 1px yellow);
-	filter: drop-shadow(5px 5px 1px yellow)
-			drop-shadow(-5px -5px 1px yellow);
+.select {
+	filter: drop-shadow(0px 0px 0.5vw yellow);
+}
+.pikachu:hover {
+	transform: scale(1.1);
+}
+.pikachu:active {
+	transform: scale(1.0);
 }
 
 #anunu {
