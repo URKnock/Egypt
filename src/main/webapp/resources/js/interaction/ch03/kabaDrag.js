@@ -1,4 +1,6 @@
 $(function() {
+	center("#human");
+	center("#dragSpot");
 	if(scene == 3) {
 		var left = $('#dragSpot').offset().left;
 		var top = $('#dragSpot').offset().top;
@@ -23,7 +25,9 @@ $(function() {
 		});
 	}
 	if(scene == 4) {
-		$('#dragSpot').hide(); //대상을 숨김
+		center("#ba");
+		$("#ba").css("top", 236);
+		$('#dragSpot').hide();
 		isKaShowed = 1;
 		nextSpotInit();
 		dragSpot.onmousedown = function (event) {
@@ -108,15 +112,19 @@ $(function() {
 	}
 });
 
-function nextSpotInit()
-{   //만약 카를 꺼냈다면 바를 꺼낼 circle을 만들어준다. 
+function nextSpotInit() {
+	x = $("#background").width() / 2.0;
+	y = $("#background").height() / 2.0 + 100;
 	if(isKaShowed == 1){
-		console.log("isKaShowed가 1임.")
-		$('#dragDest').attr('style', "top: 200; left: 920; width: 100px; height: 100px;"); //dragDest 위치 변경
 		$('#dragSpot').show(); //화면에 dragSpot 재배치
-		$('#dragSpot').attr('style', "top: 365; left: 830; opacity: 0.8; background-color: #009999");
-		$('#dragLine').attr('style', "left: 860; transform: rotate(-45deg);");
-		//hr 라인도 각도 수정해주기
+		$('#dragSpot').attr('style', "opacity: 0.8; background-color: #009999");
+		$('#dragLine').attr('style', "transform: rotate(-45deg);");
+		$('#dragDest').attr('style', "width: 100px; height: 100px;");
+		center("#dragSpot");
+		$('#dragLine').css("top", $('#human').offset().top - ($('#dragLine').width() / Math.sqrt(2)) / 2);
+		$('#dragLine').css("left", x);
+		$('#dragDest').css("top", $('#dragLine').offset().top - ($('#dragDest').height() / 2));
+		$('#dragDest').css("left", $('#dragLine').offset().left + $('#dragLine').width() - ($('#dragDest').width() / 2));
 	}
 }
 

@@ -1,12 +1,58 @@
-$(function() { //런타임 동작을 등록
-
-});
-
-$(document).ready(function(){
+$(function() {
 	$('#kettle').hide();
 	$('#dragLine').hide();
 	$('#dragSpot').hide();
+
+	x = $("#background").width() / 2.0;
+	y = $("#background").height() / 2.0 + 100;
+
+	resize('#human', 2);	
+	center('#human');
+	
+	var left = $('#human').offset().left;
+	left = dirty('#dirt_leg', left);
+	left = dirty('#dirt_bottom', left);
+	left = dirty('#dirt_body', left);
+	left = dirty('#dirt_head', left);
+	
+	resize('#scroll', 1.333);
+	$('#scroll').css("top", 100);
+	$('#scroll').css("left", x - $('#scroll').width() / 2);
+	
+	var scrollY = 100 + ($('#scroll').height() / 2);
+	var stick = $('#stick1');
+	resize('#stick1', 1.333);
+	stick.css("top", scrollY - (stick.height() / 2));
+	stick.css("left", $('#scroll').offset().left - (stick.width() / 2));
+	
+	stick = $('#stick2');
+	resize('#stick2', 1.333);
+	stick.css("top", scrollY - (stick.height() / 2));
+	stick.css("left", $('#scroll').offset().left + $('#scroll').width() - (stick.width() / 2));
+	
+	resize('#kettleToClick', 1.333);
+	$('#kettleToClick').css("top", scrollY - ($('#kettleToClick').height() / 2));
+	$('#kettleToClick').css("left", x - 100 - ($('#kettleToClick').width() / 2));
+	
+	resize('#linen', 1.333);
+	$('#linen').css("top", scrollY - ($('#linen').height() / 2));
+	$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
 });
+
+function dirty(element, l) {
+	var e = $(element);
+	resize(e, 2);
+	e.css("left", l);
+	e.css("bottom", $('#human').offset().bottom + (e.height() / 2));
+//	e.css("top", $('#human').offset().top - ($('#human').height() / 2) + (e.height() / 2));
+	return (l + (e.width() / 2));
+}
+
+function resize(element, div) {
+	var e = $(element);
+	e.width(e.prop("naturalWidth") / div);
+	e.height(e.prop("naturalHeight") / div);
+}
 
 let currentDroppable = null;
 let cleanCount = 0;

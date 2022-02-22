@@ -19,6 +19,11 @@ body {
 			drop-shadow(-5px -5px 1px yellow);
 }
 
+#anunu {
+	 image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
 #background {
 	width:100%;
 	height:100%;

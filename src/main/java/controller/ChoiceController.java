@@ -73,6 +73,7 @@ public class ChoiceController implements Controller {
 		
 		int score = session.getAttribute("score") == null ? 0 : (int) session.getAttribute("score");
 		String choice = request.getParameter("choice") == null ? "null" : request.getParameter("choice");
+
     	if(!choice.equals("null") || scene.equals("14")) {
         	switch(scene) {
 	    		case "11":
@@ -86,7 +87,7 @@ public class ChoiceController implements Controller {
 		    		choice = String.valueOf(3 - score);
 		    		score = 0;
 		    		break;
-        	}    		
+        	}
     		if(choice.equals("0")) {
     			list = json.get(scene);
     		} else {

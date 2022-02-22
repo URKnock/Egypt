@@ -8,6 +8,8 @@ function init() {
 	if(w < 0) w = 0;
 	$("#scene").width(w);
 	
+	$("#dialogue").on("click", function() { $("form").submit(); });	
+	
 	$("#choice > img").height( $("#dialogue > img").height() );
 	
 	$("#dialogue").click(function() {

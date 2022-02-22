@@ -82,14 +82,10 @@ function init() {
 	bg1.height(bg1.prop("naturalHeight") * w);
 	
 	var bg2 = $("#background > img:nth-child(2)");
-//	bg2.width(bg2.prop("naturalWidth") * w);
-//	bg2.height(bg2.prop("naturalHeight") * w);
 	bg2.css("left", x - 550);
 	bg2.css("bottom", $("#dialogue").height() + 10);
 	
 	var bg3 = $("#background > img:nth-child(3)");
-//	bg3.width(bg3.prop("naturalWidth") * w);
-//	bg3.height(bg3.prop("naturalHeight") * w);
 	bg3.css("left", x + 450);
 	bg3.css("bottom", $("#dialogue").height() + 10);
 	
@@ -175,4 +171,11 @@ function canopic_two() {
 		$("#ca" + i + "_1").css("left", x - 312 + (125 * i) - 50);
 	}
 	return (ca_bottom_0 + caH / 3 - 5);
+}
+
+function center(element) {
+	x = $("#background").width() / 2.0;
+	y = $("#background").height() / 2.0 + 100;
+	$(element).css("left", x - ($(element).width() / 2));
+	$(element).css("top", y - ($(element).height() / 2));
 }
