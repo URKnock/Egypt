@@ -18,39 +18,42 @@ $(document).ready(function(){
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
  
+ 	if((scene == 1 && index == 0) || (scene == 2 && flag == 1)) {
+ 		if(scene == 2 && flag == 1) {
+ 			$("#background > img:nth-child(4)").addClass("select");
+			$("#background > img:nth-child(4)").addClass("pikachu");
+			$("#background > img:nth-child(4)").on("click", function() {
+				objectSubmit("#background > img:nth-child(4)");
+			});
+ 		} else {
+			$("#background > img:nth-child(2)").addClass("select");
+			$("#background > img:nth-child(3)").addClass("select");
+			for(var i = 1; i < 5; i++) {
+				$("#ca" + i).addClass("select");
+			} 			
+ 		}
+ 		$("#background > img:nth-child(2)").addClass("pikachu");
+		$("#background > img:nth-child(3)").addClass("pikachu");
+
+		$("#background > img:nth-child(2)").on("click", function() { 
+			object("#background > img:nth-child(2)", 6, 5); 
+		});
+		$("#background > img:nth-child(3)").on("click", function() { 
+			object("#background > img:nth-child(3)", 5, 6); 
+		});
+		for(var i = 1; i < 5; i++) {
+			$("#ca" + i).addClass("pikachu");
+		}
+		$("#ca1").on("click", function() { object("#ca1", 3, 1) });
+		$("#ca2").on("click", function() { object("#ca2", 4, 2) });
+		$("#ca3").on("click", function() { object("#ca3", 0, 3) });
+		$("#ca4").on("click", function() { object("#ca4", 2, 4) });
+ 	}
 	switch(scene) {
 		case '1':
-			if(index == 0) {
-				$("#background > img:nth-child(2)").addClass("select");
-				$("#background > img:nth-child(3)").addClass("select");
-				$("#background > img:nth-child(2)").addClass("pikachu");
-				$("#background > img:nth-child(3)").addClass("pikachu");
-				$("#background > img:nth-child(2)").on("click", function() { 
-					object("#background > img:nth-child(2)", 6, 5); 
-				});
-				$("#background > img:nth-child(3)").on("click", function() { 
-					object("#background > img:nth-child(3)", 5, 6); 
-				});
-				for(var i = 1; i < 5; i++) {
-					$("#ca" + i).addClass("select");
-					$("#ca" + i).addClass("pikachu");
-				}
-				$("#ca1").on("click", function() { object("#ca1", 3, 1) });
-				$("#ca2").on("click", function() { object("#ca2", 4, 2) });
-				$("#ca3").on("click", function() { object("#ca3", 0, 3) });
-				$("#ca4").on("click", function() { object("#ca4", 2, 4) });
-			} else {
+			if(index != 0) {
 				$("#dialogue").on("click", function() {
 					$("form").submit();
-				});
-			}
-			break;
-		case '2':
-			if(flag == 1) {
-				$("#background > img:nth-child(4)").addClass("select");
-				$("#background > img:nth-child(4)").addClass("pikachu");
-				$("#background > img:nth-child(4)").on("click", function() {
-					objectSubmit("#background > img:nth-child(4)");
 				});
 			}
 			break;
