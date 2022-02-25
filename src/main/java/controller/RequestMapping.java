@@ -18,13 +18,14 @@ public class RequestMapping {
     	mappings.put("/testd", new InfoController("/interaction/chapter05/DuatInfo.jsp", 5));
     	//mappings.put("/duatg1", new ForwardController("/interaction/chapter05/Duat_g1.jsp"));
     	mappings.put("/chapter02", new HomeController("/chapter02.jsp"));
-    	mappings.put("/chapter09", new ForwardController("/chapter09.jsp"));
     	mappings.put("/chapter03", new ChapterController("/chapter03.jsp", 3));
     	mappings.put("/chapter04", new ChapterController("/chapter04.jsp", 4));
     	mappings.put("/chapter05_last", new ChoiceController("/interaction/chapter05/Duat_last.jsp"));
 		mappings.put("/chapter05", new ChoiceController());
 		mappings.put("/infot", new ForwardController("/interation/chapter05/info.jsp"));
-    }
+		mappings.put("/chapter09", new ForwardController("/chapter09.jsp"));
+		mappings.put("/chapter09_2", new ForwardController("/ch09_2.jsp"));
+}
 
     public Controller findController(String uri) {
     	// if(mappings.get(uri) == null) { return new ForwardController(uri); }
