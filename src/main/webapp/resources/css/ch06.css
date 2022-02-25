@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: 0;
+}
+body {
+	font-family: 'Minguk-Regular';
+	background: black;
+}
+
+#view {
+	width: 100vw;
+	height: 100vh !important;
+	
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	font-size: 1vw;
+}
+
+.background {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	
+	width: 100%;
+	height: 100% !important;
+}
+
+#menu {
+	position: absolute;
+	
+	width: 15%;
+	height: 5% !important;
+	
+	right: 2.5%;
+	top: 5%;
+	
+	display: flex;
+	justify-content: space-between;
+	
+	z-index: 50;
+}
+#menu img {
+	width: 20% !important;
+	height: 100% !important;
+}
+
+form {
+	position: absolute;
+	
+	background: url("../UI/Dialogue/BG.png");
+	
+	width: 100%;
+	height: 27% !important;
+	
+	bottom: 0%;
+	left: 0%;
+	
+	z-index: 50;
+}
+#dialogue {
+	position: absolute;
+
+	width: 100%;
+	height: 95% !important;
+	
+	bottom: 0%;
+}
+#dialogue>img {
+	position: absolute;
+	
+	width: auto !important;
+	height: 70%;
+	
+	top: 15%;
+	left: 5.5%;
+}
+#dialogue #scene {
+	position: absolute;
+	
+	width: 45% !important;
+	height: 80% !important;
+	
+	top: 10%;
+	left: 18%;
+}
+#dialogue #scene #title {
+	width: 40%;
+	height: 20% !important;
+	
+	font-size: 1.2em;
+	font-weight: bolder;
+	
+	display: flex;
+	justify-content: space-between;
+}
+#dialogue #scene #content {
+	position: absolute;
+	
+	width: 100%;
+	height: 60%;
+	
+	top: 30%;
+	left: 2%;
+		
+	font-size: 1em;
+}
