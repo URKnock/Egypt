@@ -1,9 +1,8 @@
 #kettleToClick {
 	position: absolute;
 	cursor: pointer;
-	top: 120;
-	left: 600;
 	z-index: 3;
+	display: none;
 }
 
 #kettle {
@@ -17,36 +16,42 @@
 
 #scroll {
 	position: absolute;
-	top: 50;
-	left: 300;
 	z-index: 1;
+	display: none;
+}
+
+#servant {
+	position: absolute;
+	z-index: 1;	
 }
 
 .stick {
 	position: absolute;
-	top: 25;
 	z-index: 2;
+	display: none;
 }
 
 #linen {
 	position: absolute;
-	top: 150;
-	left: 850;
 	z-index: 3;
+	display: none;
+}
+
+#bed {
+	position: absolute;
+	z-index: 1;
 }
 
 #human {
 	position: absolute;
-	top: 400;
 	left: 320;
-	z-index: 1;
+	z-index: 2;
 }	
 	
 .dirt{
 	position: absolute;
-	top: 400;
 	opacity: 1;
-	z-index: 2;
+	z-index: 3;
 }	
 
 hr{

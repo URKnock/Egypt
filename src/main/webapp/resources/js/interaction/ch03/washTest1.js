@@ -1,3 +1,8 @@
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
 $(function() {
 	$('#kettle').hide();
 	$('#dragLine').hide();
@@ -6,63 +11,117 @@ $(function() {
 	x = $("#background").width() / 2.0;
 	y = $("#background").height() / 2.0 + 100;
 
-	resize('#human', 2);	
-	center('#human');
+	$('#human').on("load", function() {
+		var arr = ["#human", "#dirt_head", "#dirt_body", "#dirt_bottom", "#dirt_leg"]
+		arr.forEach (function (item, idx) {
+			resize(item);
+			centerX(item);
+			$(item).css("bottom", $("#dialogue").height() + 90*w);
+		});
+		resize("#bed");
+		centerX("#bed");
+		$("#bed").css("bottom", 0);
+		$("#dirty").children().fadeIn(100);
+	});
+	$("#dirty").children().fadeOut(100);
 	
-	var left = $('#human').offset().left;
-	left = dirty('#dirt_leg', left);
-	left = dirty('#dirt_bottom', left);
-	left = dirty('#dirt_body', left);
-	left = dirty('#dirt_head', left);
+	preload([
+	    $('#scroll').attr("src"),
+	    $('#stick1').attr("src"),
+	    $('#stick2').attr("src"),
+	    $('#kettleToClick').attr("src"),
+	    $('#linen').attr("src"),
+	    $('#servant').attr("src")
+	]);
 	
-	resize('#scroll', 1.333);
+	resizeWithDiv('#scroll', 1.333);
 	$('#scroll').css("top", 100);
 	$('#scroll').css("left", x - $('#scroll').width() / 2);
 	
 	var scrollY = 100 + ($('#scroll').height() / 2);
 	var stick = $('#stick1');
-	resize('#stick1', 1.333);
+	resizeWithDiv('#stick1', 1.333);
 	stick.css("top", scrollY - (stick.height() / 2));
-	stick.css("left", $('#scroll').offset().left - (stick.width() / 2));
-	
+	stick.css("left", x - stick.width());
+		
 	stick = $('#stick2');
-	resize('#stick2', 1.333);
+	resizeWithDiv('#stick2', 1.333);
 	stick.css("top", scrollY - (stick.height() / 2));
-	stick.css("left", $('#scroll').offset().left + $('#scroll').width() - (stick.width() / 2));
+	stick.css("left", x);
 	
-	resize('#kettleToClick', 1.333);
+	var sLeft;
+	resize('#kettleToClick');
 	$('#kettleToClick').css("top", scrollY - ($('#kettleToClick').height() / 2));
 	$('#kettleToClick').css("left", x - 100 - ($('#kettleToClick').width() / 2));
+	$('#kettleToClick').on("click", function() {
+		sLeft = sLeft - $('#scroll').width();
+		var dLeft = sLeft + $('#dragLine').width();
+		$('#kettleToClick').removeClass("select");
+		$('#kettleToClick').hide();
+		$('#kettle').css("left", sLeft);
+		$('#dragLine').css("left", sLeft);
+		$('#dragSpot').css("top", 300);
+		$('#dragSpot').css("left", dLeft);
+		$('#kettle').show();
+		$('#dragLine').show();
+		$('#dragSpot').show();
+	});
 	
-	resize('#linen', 1.333);
+	resize('#linen');
 	$('#linen').css("top", scrollY - ($('#linen').height() / 2));
 	$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
+	
+	resize('#servant');
+	$('#servant').css("bottom", $("#dialogue").height());
+	$('#servant').css("left", 0);
+	$('#servant').addClass("select");
+	$('#servant').on("click", function() {
+		$('#servant').on("load", function() {
+			$('#scroll').fadeIn(3000);
+			$('#stick1').fadeIn(100);
+			$('#stick2').fadeIn(100);
+			sLeft = $('#scroll').offset().left - (stick.width() / 2);
+			$('#stick1').animate({
+				left: sLeft
+			}, 1000);
+			sLeft = sLeft + $('#scroll').width();
+			$('#stick2').animate({
+				left: sLeft
+			}, 1000, function(){
+				$('#linen').fadeIn("slow");
+				$('#kettleToClick').fadeIn("slow", function() {
+					$('#kettleToClick').addClass("select");
+				});
+				$('#background').children().hide();
+				$('#servant').hide();
+				$('#human').attr("src", "/resources/object/ch03/3_2_2.png");
+			});
+		});
+		$('#servant').attr("src", "/resources/character/ch03/3_9.png");
+		$('#servant').removeClass("select");
+	});
 });
 
-function dirty(element, l) {
-	var e = $(element);
-	resize(e, 2);
-	e.css("left", l);
-	e.css("bottom", $('#human').offset().bottom + (e.height() / 2));
-//	e.css("top", $('#human').offset().top - ($('#human').height() / 2) + (e.height() / 2));
-	return (l + (e.width() / 2));
-}
-
-function resize(element, div) {
+function resizeWithDiv(element, div) {
 	var e = $(element);
 	e.width(e.prop("naturalWidth") / div);
 	e.height(e.prop("naturalHeight") / div);
 }
 
+function resizeCenter(element) {
+	resize(element);
+	center(element);
+}
+
+function rescale(element, div) {
+	var e = $(element);
+	resizeWithDiv(e);
+	e.width(e.width() / div);
+	e.height(e.height() / div);
+}
+
 let currentDroppable = null;
 let cleanCount = 0;
-
-$('#kettleToClick').click(function(){
-	  $('#kettleToClick').hide();
-	  $('#kettle').show();
-	  $('#dragLine').show();
-	  $('#dragSpot').show();
-});
 
 kettle.onmousedown = function(event) {
 	let shiftX = event.clientX - kettle.getBoundingClientRect().left; //가로로만 움직임
@@ -75,7 +134,6 @@ kettle.onmousedown = function(event) {
 	// 현재 위치한 부모에서 body로 직접 이동하여
 	// body를 기준으로 위치를 지정합니다.
 	document.body.append(kettle);
-
 	moveAt(event.pageX);
 
 	// 초기 이동을 고려한 좌표 (pageX, pageY)에서
@@ -131,12 +189,16 @@ kettle.onmousedown = function(event) {
 function enterDroppable(elem) { //드롭 가능한 요소에 닿았다면
 	kettle.isOverlaped = true;
 	$('#dragSpot').hide();
-	$('#kettle').addClass("fade-out");
 	$('#dragLine').removeClass("blinking");
 	$('#dragLine').addClass("fade-out");
+	$('#kettle').addClass("fade-out");
+	$('#dirt_leg').fadeOut(1000);
+	$('#dirt_bottom').fadeOut(2000);
+	$('#dirt_body').fadeOut(3000);
+	$('#dirt_head').fadeOut(4000);
 	setTimeout(function() { 
 		$('form').submit();
-	}, 2000);
+	}, 5000);
 }
 
 function leaveDroppable(elem) { //드롭 가능한 요소로부터 벗어났다면

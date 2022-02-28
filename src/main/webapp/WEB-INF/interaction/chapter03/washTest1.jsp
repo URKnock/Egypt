@@ -9,12 +9,14 @@
 <img src="../resources/object/ch03/주전자.png" id="kettleToClick">
 <img src="../resources/object/ch03/주전자.png" id="kettle">
 <img src="../resources/object/ch03/3_2_4.png" id="linen">
-<div>
+<img src="../resources/character/ch03/3_1.png" id="human" class="human">
+<div id="dirty">
+	<img src="../resources/object/ch03/침대.png" id="bed"/>
 	<img src="../resources/object/ch03/3_2_1_1.png" id="dirt_head" class="dirt">
 	<img src="../resources/object/ch03/3_2_1_2.png" id="dirt_body" class="dirt">
 	<img src="../resources/object/ch03/3_2_1_3.png" id="dirt_bottom" class="dirt">
 	<img src="../resources/object/ch03/3_2_1_4.png" id="dirt_leg" class="dirt">
-	<img src="../resources/object/ch03/3_2_2.png" id="human" class="human">
 </div>
+<img src="../resources/character/ch03/3_10.png" id="servant">
 <hr class="blinking" id="dragLine"></hr>
 <script src="<c:url value='/resources/js/interaction/ch03/washTest1.js'/>"></script>

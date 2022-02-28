@@ -33,6 +33,8 @@
 			</div>
 		</c:otherwise>
 	</c:choose>
+</div>
+<div id="page">
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter03/${page}"/>
 	</c:if>
