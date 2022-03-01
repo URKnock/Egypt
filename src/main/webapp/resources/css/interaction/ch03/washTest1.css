@@ -14,7 +14,7 @@
 	z-index: 3;
 }
 
-#scroll {
+#scroll, #paper {
 	position: absolute;
 	z-index: 1;
 	display: none;
@@ -25,13 +25,7 @@
 	z-index: 1;	
 }
 
-.stick {
-	position: absolute;
-	z-index: 2;
-	display: none;
-}
-
-#linen {
+#linen, #water {
 	position: absolute;
 	z-index: 3;
 	display: none;
@@ -47,7 +41,7 @@
 	left: 320;
 	z-index: 2;
 }	
-	
+
 .dirt{
 	position: absolute;
 	opacity: 1;

@@ -42,6 +42,11 @@ body {
 	z-index:2;	
 }
 
+#human {
+	position:absolute;
+	z-index:1;
+}
+
 #menu {
 	position:fixed;
 	top:10px;

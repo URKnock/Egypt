@@ -24,7 +24,7 @@ $(document).ready(function(){
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
- 
+
  	if((scene == 1 && index == 0) || (scene == 2 && flag == 1)) {
  		if(scene == 2 && flag == 1) {
  			clicked = [0, 1, 2, 3, 4, 5, 6];
@@ -88,6 +88,9 @@ function init() {
 	if (sw < 0) sw = 0;
 	$("#scene").width(sw);
 	$("#choice > img").height( $("#dialogue > img").height() );
+	
+	resize("#human");
+	center("#human");
 	
 	var b = $("#dialogue").height() + 10*w;
 	
@@ -208,3 +211,11 @@ function resize(element) {
 	$(element).width($(element).prop("naturalWidth") * w);
 	$(element).height($(element).prop("naturalHeight") * w);
 }
+
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
+function interaction() {};

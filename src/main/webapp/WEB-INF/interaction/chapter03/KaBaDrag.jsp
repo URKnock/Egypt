@@ -4,7 +4,7 @@
 <link href="<c:url value='/resources/css/interaction/ch03/kabaDrag.css'/>" rel="stylesheet" type="text/css"/>
 <div>
 	<div id="dragSpot" class="circle" style="opacity: 0.8;"></div>	
-	<div id="dragDest" class="circle droppable" style="width: 100px; height: 100px;"></div>
+	<div id="dragDest" class="circle droppable"></div>
 	<img src="<c:url value='/resources/character/ch03/3_1.png'/>" id="human" class="human"/>	
 	<img src="<c:url value='/resources/object/ch03/카.webp'/>" id="ka"/>
 	<img src="<c:url value='/resources/object/ch03/바.webp'/>" id="ba"/>

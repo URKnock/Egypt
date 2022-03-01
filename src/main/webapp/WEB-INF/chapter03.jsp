@@ -10,12 +10,12 @@
 <script src="<c:url value='/resources/js/ch03.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 </head>
-<body onload="init();">
+<body onload="init(); interaction();">
 <div id="background">
 	<c:forEach var="i" begin="1" end="3">
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
 	</c:forEach>
-	<img src="<c:url value='/resources/background/ch03/test.webp'/>"/>
+	<img src="<c:url value='/resources/character/ch03/anubis_close.webp'/>"/>
 	<c:choose>
 		<c:when test="${scene eq 8}">
 			<c:forEach var="i" begin="1" end="4">
@@ -37,6 +37,9 @@
 <div id="page">
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter03/${page}"/>
+	</c:if>
+	<c:if test="${scene lt 3}">
+		<img id="human" src = "<c:url value='/resources/character/ch03/3_1.png'/>"/>
 	</c:if>
 </div>
 <div id="menu">

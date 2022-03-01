@@ -1,4 +1,5 @@
-$(function() {
+function interaction() {
+	x = $("#background").width() / 2.0;
 	resize("#human");
 	center("#human");
 	center("#dragSpot");
@@ -114,7 +115,7 @@ $(function() {
 			};
 		};
 	}
-});
+}
 
 function nextSpotInit() {
 	x = $("#background").width() / 2.0;
@@ -123,13 +124,14 @@ function nextSpotInit() {
 		$('#dragSpot').show(); //화면에 dragSpot 재배치
 		$('#dragSpot').attr('style', "opacity: 0.8; background-color: #009999");
 		$('#dragLine').attr('style', "transform: rotate(-45deg);");
-		$('#dragDest').attr('style', "width: 100px; height: 100px;");
+		$('#dragDest').removeClass('circle');
+		$('#dragDest').addClass('dest');
 		center("#dragSpot");
 		$("#dragSpot").css("bottom", $("#dialogue").height() + 265*w + $("#human").height()/2);
 		$('#dragLine').css("top", $('#human').offset().top - ($('#dragLine').width() / Math.sqrt(2)) / 2);
 		$('#dragLine').css("left", x);
-		$('#dragDest').css("top", $('#dragLine').offset().top - ($('#dragDest').height() / 2));
-		$('#dragDest').css("left", $('#dragLine').offset().left + $('#dragLine').width() - ($('#dragDest').width() / 2));
+		$('#dragDest').css("top", $('#dragLine').offset().top - $('#dragDest').height());
+		$('#dragDest').css("left", $('#dragLine').offset().left + $('#dragLine').width() - ($('#dragDest').width() / 3));
 	}
 }
 
