@@ -211,6 +211,10 @@ function resize(element) {
 	$(element).width($(element).prop("naturalWidth") * w);
 	$(element).height($(element).prop("naturalHeight") * w);
 }
+function resizeWH(element, ew, eh) {
+	$(element).width(ew * w);
+	$(element).height(eh * w);
+}
 
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){

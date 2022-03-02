@@ -16,6 +16,10 @@
 	"page":"brain.jsp"
 },
 {
+	"chapter":3, "scene":6, "flag":0,
+	"page":"cut.jsp"
+},
+{
 	"chapter":3, "scene":7, "flag":0,
 	"page":"dragTest.jsp"
 },

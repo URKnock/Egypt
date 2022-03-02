@@ -32,10 +32,11 @@ function interaction() {
 	
 	resize("#scroll");
 	centerX("#scroll");
-	$("#scroll").css("top", 100);
+	var sl = $('#scroll').offset().left;
+	$("#scroll").css("top", 112*w);
 	$('#scroll').hide();
 	
-	var scrollY = $("#scroll").height() / 2 + 100;
+	var scrollY = $("#scroll").height() / 2 + 112*w;
 	resize('#kettleToClick');
 	$('#kettleToClick').css("top", scrollY - ($('#kettleToClick').height() / 2));
 	$('#kettleToClick').css("left", x - 100 - ($('#kettleToClick').width() / 2));
@@ -60,9 +61,8 @@ function interaction() {
 	$('#linen').css("top", scrollY - ($('#linen').height() / 2));
 	$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
 	
-	resize('#servant');
-	$('#paper').width($('#servant').width());
-	$('#paper').height($('#servant').height());
+	resizeWH('#paper', 1341, 776);
+	resizeWH('#servant', 1341, 776);
 	$('#paper').css("bottom", $("#dialogue").height());
 	$('#paper').css("left", 0);
 	$('#servant').css("bottom", $("#dialogue").height());
@@ -73,9 +73,14 @@ function interaction() {
 			$('#servant').on("load", function() {
 				resize("#servant");
 				$('#paper').on("load", function() {
+					sl = sl - ($('#paper').width() - $('#scroll').width());
+					$('#paper').animate({
+						top: '0',
+						left: sl
+					}, 2600);
 					setTimeout(function() {
 						$('#scroll').show();
-						$('#paper').fadeIn("slow");
+						$('#paper').hide();
 						$('#linen').fadeIn("slow");
 						$('#kettleToClick').fadeIn("slow", function() {
 							$('#kettleToClick').addClass("select");
