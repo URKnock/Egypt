@@ -73,7 +73,7 @@
 			<img />
 		</div>
 	</div>
-	<c:if test="${dialogue.choice ne null}">
+	<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
 		<div id="choice">
 			<div>
 				<c:forEach var="c" items="${dialogue.choice}">
@@ -87,6 +87,7 @@
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
 <input name="flag" 	type="hidden" value="${flag}"/>
+<input name="choice" type="hidden" value="${choice}"/>
 </form>
 </body>
 </html>

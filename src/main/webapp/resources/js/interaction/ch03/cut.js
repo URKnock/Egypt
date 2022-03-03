@@ -17,30 +17,77 @@ function interaction() {
 	$('#dragDest').css("top", hTC);
 	$('#dragDest').hide();
 	
-	for(var i = 1; i < 6; i++) {
-		$('#organDest' + i).css("left", $("#human").offset().left + $("#human").width() / 5 * (i - 1));
-		$('#organDest' + i).css("top", 100);
-		$('#organDest' + i).hide();
-	}
-	
 	resize('#servant');
 	$('#servant').css("bottom", $("#dialogue").height());
 	$('#servant').css("left", 0);
-
-	resize('#knifeToClick');
-	$('#knifeToClick').css("bottom", $("#dialogue").height() + 427*w - ($('#knifeToClick').height()/4));
-	$('#knifeToClick').css("left", -$('#knifeToClick').width());
-	$('#knifeToClick').animate({
-		left: 162*w
-	}, 3600, function() {
-		$('#knifeToClick').addClass("select");
+	setTimeout(function() {
+		$('#servant').addClass("select");
+	}, 3600);
+	$('#servant').on("click", function() {
+		$('#servant').on("load", function() {
+			$('#servant').removeClass("select");
+			$('#knife').fadeIn("1000");
+			$('#dragLine').fadeIn("1000");
+			$('#dragDest').fadeIn("1000");
+		});
 		$('#servant').attr("src", "/resources/character/ch03/servant_2.webp");
 	});
-	$('#knifeToClick').on("click", function() {
-		$('#knifeToClick').removeClass("select");
-		$('#knifeToClick').fadeOut("1000");
-		$('#knife').fadeIn("1000");
-		$('#dragLine').fadeIn("1000");
-		$('#dragDest').fadeIn("1000");
-	});
+
+	$("#knife").on("mousedown", function(event) {
+		let shiftX = event.clientX - knife.getBoundingClientRect().left;
+		knife.style.position = 'absolute';
+		knife.style.zIndex = 1000;
+		document.body.append(knife);
+	
+		function moveknife(pageX) {
+			knife.style.left = pageX - shiftX + 'px';
+		}
+	
+		function onMouseknife(event) {
+			moveknife(event.pageX);
+	
+			knife.hidden = true;
+			let eb1 = document.elementFromPoint(event.clientX, event.clientY);
+			knife.hidden = false;
+			
+			if (!eb1) return;
+			let db1 = eb1.closest('.droppable');
+			if (cd1 != db1) {
+				if (cd1) {
+					leaveknife(cd1);
+				}
+				cd1 = db1;
+				if (cd1) {
+					enterknife(cd1);
+				}
+			}
+		}
+		document.addEventListener('mousemove', onMouseknife);
+		knife.onmouseup = function() {
+			document.removeEventListener('mousemove', onMouseknife);
+			knife.onmouseup = null;
+			if (knife.isOverlaped == true) {
+				leaveknife(cd1)
+			}
+		};
+	});	
 }
+
+let cd1 = null;
+
+function enterknife(elem) {
+	elem.style.background = 'pink';
+	knife.isOverlaped = true;
+	setTimeout(function() {
+		$("form").submit();
+	}, 100);
+}
+
+function leaveknife(elem) {
+	elem.style.background = '';
+	knife.isOverlaped = false;
+}
+
+knife.ondragstart = function() {
+	return false;
+};

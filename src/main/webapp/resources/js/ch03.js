@@ -56,6 +56,8 @@ $(document).ready(function(){
 		$("#ca2").on("click", function() { object("#ca2", 4, 2) });
 		$("#ca3").on("click", function() { object("#ca3", 0, 3) });
 		$("#ca4").on("click", function() { object("#ca4", 2, 4) });
+ 	} else if(scene == 7 && index == 1) {
+ 		$("input[name='index']").val(0);
  	}
 	switch(scene) {
 		case '1':
