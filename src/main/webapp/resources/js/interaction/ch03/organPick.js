@@ -30,48 +30,8 @@ function interaction() {
 		}
 		if(i != 1 && i != 3) {
 			oRB = oRB + $(organName).height() / 2;
-		}		
-		$(organName).on("mousedown", function (event) {
-			Element = organName;			
-			let shiftX = event.clientX - $(Element).offset().left;
-			let shiftY = event.clientY - $(Element).offset().top;
-			$(Element).css("position", 'absolute');
-			$(Element).css("z-index", 1000);
-			document.body.append($(Element));
-		
-			function moveElement(pageX, pageY) {
-				$(Element).css('left', pageX - shiftX);
-				$(Element).css('top', pageY - shiftY);
-			}
-		
-			function onMouseElement(event) {
-				moveElement(event.pageX, event.pageY);
-				$(Element).hidden = true;
-				let eb = document.elementFromPoint(event.clientX, event.clientY);
-				$(Element).hidden = false;
-				
-				if (!eb) return;
-				let db = eb.closest('.droppable');
-				if (cd != db) {
-					if (cd) {
-						leaveElement(cd);
-					}
-					cd = db;
-					if (cd) {
-						cdName = cd.id
-						enterElement(cd);
-					}
-				}
-			}
-			document.addEventListener('mousemove', onMouseElement);
-			$(Element).on("mouseup", function() {
-				document.removeEventListener('mousemove', onMouseElement);
-				$(Element).off('mouseup');
-				if ($(Element).isOverlaped == true) {
-					leaveElement(cd);
-				}
-			});
-		});
+		}
+		dragElement(document.getElementById('organDiv' + i), organName);
 	}
 	$('#organ1').on("click", function() {
 		$('input[name=choice]').val(1);
@@ -83,27 +43,74 @@ function interaction() {
 	resize('#servant');
 	$('#servant').css("bottom", $("#dialogue").height());
 	$('#servant').css("left", 0);
-}
 
 let cd = null;
 var Element = null;
-var entered = [ 2, 3, 4, 5 ];
+var entered = [];
 
 function enterElement(elem) {
-	elem.style.background = 'pink';
-	cd.isOverlaped = true;
+	console.log("enter: " + elem.id + ", " + entered);
+	cd.isOverlaped = false;
+	if($.inArray(elem.id, entered) == -1) {
+		elem.style.background = 'no-repeat url("' + $(Element).attr("src"); + '") center center';
+		elem.style.border = '';
+		elem.style.borderRadius = '';
+		$(Element).off("mousedown");
+		$(Element).hide();
+		entered.push(elem.id);
+		if(entered.length >= 4) {
+			setTimeout(function() { $("form").submit(); }, 1000 );
+		}
+	}
 }
 
 function leaveElement(elem) {
+	console.log("leave: " + elem.id + ", " + entered);
 	cd.isOverlaped = false;
+}
 
-	var idx = Element.charAt(Element.length-1);
-	entered.splice(entered.indexOf(idx), 1);
-	elem.style.background = '/resources/object/ch03/organ_' + idx + '.png';
-	$(Element).off("mousedown");
-	$(Element).hidden = true;
-
-	if(entered.length == 0) {
-		$("form").submit();
+function dragElement(elmnt, elem) {
+	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+	if (document.getElementById(elem)) {
+		document.getElementById(elem).onmousedown = dragMouseDown;
+	} else {
+		elmnt.onmousedown = dragMouseDown;
 	}
+	
+	function dragMouseDown(e) {
+		e = e || window.event;
+		e.preventDefault();
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		document.onmouseup = closeDragElement;
+		document.onmousemove = elementDrag;
+	}
+	
+	function elementDrag(e) {
+		e = e || window.event;
+		e.preventDefault();
+		pos1 = pos3 - e.clientX;
+		pos2 = pos4 - e.clientY;
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+	}
+	
+	function closeDragElement() {
+		Element = elem;
+		let eb = document.elementFromPoint(event.clientX, event.clientY);
+		let db = eb.closest('.droppable');
+		if (eb) {
+			if (cd != db) {
+				if (cd) { leaveElement(cd); }
+				cd = db;
+				if (cd) { enterElement(cd); }
+			}
+		}
+		document.onmouseup = null;
+		document.onmousemove = null;
+	}
+}
+
 }

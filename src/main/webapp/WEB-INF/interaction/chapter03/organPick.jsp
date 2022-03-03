@@ -3,7 +3,9 @@
 
 <link href="<c:url value='/resources/css/interaction/ch03/organPick.css'/>" rel="stylesheet" type="text/css"/>
 <c:forEach var="i" begin="1" end="5">
-	<img src="<c:url value='/resources/object/ch03/organ_${i}.png'/>" id="organ${i}" class="organ"/>
+	<div id="organDiv${i}" class="organ_div">
+		<img src="<c:url value='/resources/object/ch03/organ_${i}.png'/>" id="organ${i}" class="organ"/>
+	</div>
 	<c:if test="${i lt 5}"><div id="organDest${i}" class="dest droppable"></div></c:if>
 </c:forEach>
 <img src="<c:url value='/resources/character/ch03/3_2.png'/>" id="human"/>
