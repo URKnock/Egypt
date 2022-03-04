@@ -120,7 +120,7 @@ function init() {
 	bg4.css("left", x + 600*w);
 	bg4.css("bottom", $("#dialogue").height() + 5*w);
 	
-	if(scene == 8) {
+	if(scene == 9) {
 		canopic_two(); 
 	} else { 
 		canopic_one(); 

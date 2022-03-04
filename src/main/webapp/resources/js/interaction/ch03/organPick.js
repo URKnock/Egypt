@@ -48,19 +48,32 @@ let cd = null;
 var Element = null;
 var entered = [];
 
+function checkElement() {
+	if(entered.length >= 4) {
+		for(var i = 1; i <= 4; i++) {
+			$("#organDest" + i).animate({
+				left: x - $("#organDest" + i).width() / 2
+			}, 1000, 'linear');
+		}
+		setTimeout(function() { 
+			$('input[name=choice]').val(-1);
+			$("form").submit(); 
+		}, 2000);
+	}
+}
+
 function enterElement(elem) {
 	console.log("enter: " + elem.id + ", " + entered);
 	cd.isOverlaped = false;
 	if($.inArray(elem.id, entered) == -1) {
-		elem.style.background = 'no-repeat url("' + $(Element).attr("src"); + '") center center';
-		elem.style.border = '';
-		elem.style.borderRadius = '';
+		elem.style.background = 'center center no-repeat url("' + $(Element).attr("src"); + '")';
+		$("#" + elem.id).css("background-size", "contain");
+		$("#" + elem.id).css("border-radius", "0");
+		$("#" + elem.id).css("border", "0px");
 		$(Element).off("mousedown");
 		$(Element).hide();
 		entered.push(elem.id);
-		if(entered.length >= 4) {
-			setTimeout(function() { $("form").submit(); }, 1000 );
-		}
+		checkElement();
 	}
 }
 
@@ -101,6 +114,8 @@ function dragElement(elmnt, elem) {
 		Element = elem;
 		let eb = document.elementFromPoint(event.clientX, event.clientY);
 		let db = eb.closest('.droppable');
+		console.log(eb);
+		console.log(db);
 		if (eb) {
 			if (cd != db) {
 				if (cd) { leaveElement(cd); }

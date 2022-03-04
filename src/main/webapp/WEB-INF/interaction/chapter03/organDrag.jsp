@@ -2,9 +2,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <link href="<c:url value='/resources/css/interaction/ch03/organDrag.css'/>" rel="stylesheet" type="text/css"/>
-<div>
-	<img src="../resources/object/ch03/장기_위.png" id="organ" class="organ"/>
-	<img src="../resources/object/ch03/카누푸스_바디_전체.png" id="pot" class="droppable"/>
-	<img src="../resources/object/ch03/카노푸스_두아무테프머리.png" id="head" class="head"/>
-</div>
+<c:forEach var="i" begin="1" end="4">
+	<div class="canopic">
+		<img id="ca${i}_0" class="droppable" src="<c:url value='/resources/background/ch03/k_00.png'/>"/>
+		<img id="ca${i}_1" class="head droppable" src="<c:url value='/resources/background/ch03/k_0${i}.png'/>"/>
+	</div>
+	<div id="organDiv${i+1}" class="organ_div">
+		<img src="<c:url value='/resources/object/ch03/organ_${i+1}.png'/>" id="organ${i+1}" class="organ"/>
+	</div>
+</c:forEach>
+<img src="<c:url value='/resources/object/ch03/organ_1.png'/>" id="organ1"/>
+<img src="<c:url value='/resources/character/ch03/3_2.png'/>" id="human"/>
+<img src="<c:url value='/resources/character/ch03/servant_2.webp'/>" id="servant">
 <script src="<c:url value='/resources/js/interaction/ch03/organDrag.js'/>"></script>

@@ -16,23 +16,13 @@
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
 	</c:forEach>
 	<img src="<c:url value='/resources/character/ch03/anubis_close.webp'/>"/>
-	<c:choose>
-		<c:when test="${scene eq 8}">
+	<c:if test="${scene ne 9}">
+		<div class="canopic">
 			<c:forEach var="i" begin="1" end="4">
-				<div class="canopic">
-					<img id="ca${i}_0" src="<c:url value='/resources/background/ch03/k_00.png'/>" class="droppable"/>
-					<img id="ca${i}_1" src="<c:url value='/resources/background/ch03/k_0${i}.png'/>" class="head"/>
-				</div>
+				<img id="ca${i}" src="<c:url value='/resources/background/ch03/k_${i}.png'/>"/>
 			</c:forEach>
-		</c:when>
-		<c:otherwise>
-			<div class="canopic">
-				<c:forEach var="i" begin="1" end="4">
-					<img id="ca${i}" src="<c:url value='/resources/background/ch03/k_${i}.png'/>"/>
-				</c:forEach>
-			</div>
-		</c:otherwise>
-	</c:choose>
+		</div>
+	</c:if>
 </div>
 <div id="page">
 	<c:if test="${page ne null}">
