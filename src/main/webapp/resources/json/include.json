@@ -36,6 +36,10 @@
 	"page":"organDrag.jsp"
 },
 {
+	"chapter":3, "scene":9, "flag":0,
+	"page":"sodaTest.jsp"
+},
+{
 	"chapter":3, "scene":10, "flag":0,
 	"page":"washTest2.jsp"
 },

@@ -1,7 +1,4 @@
 function interaction() {
-	var hLC = $("#human").offset().left + ($("#human").width() / 3);
-	var hTC = $("#human").offset().top + ($("#human").height() / 2);
-	
 	resize("#human_cover");
 	center("#human_cover");
 	$("#human_cover").fadeOut(3000);
@@ -10,8 +7,8 @@ function interaction() {
 	resize(organName);
 	$(organName).width($(organName).width() / 2);
 	$(organName).height($(organName).height() / 2);
-	$(organName).css("top", hTC - $(organName).width() / 2);
-	$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3));
+	$(organName).css("top", $("#human").offset().top + ($("#human").height() / 2) - $(organName).width() / 2);
+	$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);
 	
 	for(var i = 2; i <= 5; i++) {
 		var organName = '#organ' + i;
@@ -29,12 +26,16 @@ function interaction() {
 	$('#servant').css("left", 0);
 
 	let cd = null;
+	var Element = null;
+	var Clicked = null;
+	
 	var lock1 = false;
 	var lock2 = false;
-	var Element = null;
+	
 	var entered = [];
 	var organed = [];
-	
+	var pairs = { "ca1":"organ5", "ca2":"organ2", "ca3":"organ3", "ca4":"organ4" }
+
 	function enterElement(elem) {
 		console.log("enter: " + elem.id + ", " + entered);
 		cd.isOverlaped = false;
@@ -44,8 +45,20 @@ function interaction() {
 			$('#' + id + "_1").removeClass("head-leave");
 			$('#' + id + "_1").addClass("head-hover");
 			$(Element).off("mousedown");
-			entered.push(id);
-			organed.push(cd.id);
+			console.log(id + ", " + cd.id + " & " + pairs[id] + " & " + Clicked);
+			if(Clicked != null) {
+			if(pairs[id] != Clicked) {
+				$('#' + id + "_0").addClass("hue");
+				$('#' + id + "_1").addClass("hue");
+				setTimeout(function() {
+					$('input[name=choice]').val(1);
+					$('form').submit();
+				}, 1000);
+			} else if(pairs[id] == Clicked) {
+				entered.push(id);
+				organed.push(cd.id);
+			}
+			}
 		}
 	}
 	
@@ -60,6 +73,18 @@ function interaction() {
 				$('#' + id + "_1").removeClass("head-hover");
 				$('#' + id + "_1").addClass("head-leave");
 				if(organed.length >= 4 && entered.length >= 4) {
+					for(var i = 1; i < 5; i++) {
+						$('#ca' + i + "_0").addClass("contrast");
+						$('#ca' + i + "_1").addClass("contrast");
+					}
+					setTimeout(function() {
+						for(var i = 1; i < 5; i++) {
+							$('#ca' + i + "_0").removeClass("contrast");
+							$('#ca' + i + "_1").removeClass("contrast");
+							$('#ca' + i + "_0").addClass("contrast_origin");
+							$('#ca' + i + "_1").addClass("contrast_origin");
+						}
+					}, 1000);
 					setTimeout(function() { 
 						$('input[name=choice]').val(-1);
 						$("form").submit(); 
@@ -87,6 +112,7 @@ function interaction() {
 			pos4 = e.clientY;
 			document.onmouseup = closeDragElement;
 			document.onmousemove = elementDrag;
+			Clicked = e.target.id;
 		}
 		
 		function elementDrag(e) {
@@ -101,7 +127,7 @@ function interaction() {
 			
 			Element = elem;
 			eb = document.elementFromPoint(event.clientX, event.clientY);
-			db = eb.closest('.droppable');		
+			db = eb.closest('.droppable');
 			if (eb) {
 				if (cd != db) {
 					if (cd) { leaveElement(cd); }
@@ -112,6 +138,7 @@ function interaction() {
 		}
 		
 		function closeDragElement() {
+			Clicked = elmnt;
 			elmnt.onmouseup = function() {
 				elmnt.onmouseup = null;
 				if (cd.isOverlaped == true) {

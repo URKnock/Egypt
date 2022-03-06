@@ -4,10 +4,19 @@
 	z-index: 3;
 }
 
-.pot {
-	position: absolute;
-	cursor: pointer;
-	z-index: 1;
+.contrast {
+	filter: contrast(200%);
+	transition: filter 1s ease-in-out;
+}
+
+.contrast_origin {
+	filter: contrast(100%);
+	transition: filter 0.5s ease-in-out;
+}
+
+.hue {
+	filter: hue-rotate(180deg);
+	transition: filter 0.5s ease-in-out;
 }
 
 .head-hover {
