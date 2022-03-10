@@ -11,7 +11,7 @@ public class RequestMapping {
     	mappings.put("/", new ForwardController("index.jsp"));
     	mappings.put("/chapter00", new ForwardController("/chapter00.jsp"));
     	mappings.put("/chapter01", new ForwardController("/chapter01.jsp"));
-    	mappings.put("/chapter02", new ForwardController("/chapter02.jsp"));
+    	mappings.put("/chapter02", new HomeController("/chapter02.jsp"));
     	mappings.put("/chapter03", new ChapterController("/chapter03.jsp", 3));
     	mappings.put("/chapter04", new ChapterController("/chapter04.jsp", 4));
 		mappings.put("/chapter05", new ChoiceController());

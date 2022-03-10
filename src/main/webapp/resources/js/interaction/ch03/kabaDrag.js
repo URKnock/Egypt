@@ -1,6 +1,9 @@
-$(function() {
+function interaction() {
+	x = $("#background").width() / 2.0;
+	resize("#human");
 	center("#human");
 	center("#dragSpot");
+	$("#dragSpot").css("bottom", $("#dialogue").height() + 265*w + $("#human").height()/2);
 	if(scene == 3) {
 		var left = $('#dragSpot').offset().left;
 		var top = $('#dragSpot').offset().top;
@@ -19,6 +22,7 @@ $(function() {
 				$('#ka').css("top", top);
 				$('#ka').width(48);
 				$('#ka').height(58);
+				$('#ka').addClass("select");
 				$('#ka').addClass("pikachu");
  			}, 1000);
 			$('#ka').on("click", function(){ object("#ka", 8); });	
@@ -102,6 +106,7 @@ $(function() {
 							$('#ba').css("top", top);
 							$('#ba').width(326);
 							$('#ba').height(232);
+							$('#ba').addClass("select");
 							$('#ba').addClass("pikachu");
 		 				}, 1000);
 		 				$('#ba').on("click", function(){ object("#ba", 9); });
@@ -110,7 +115,7 @@ $(function() {
 			};
 		};
 	}
-});
+}
 
 function nextSpotInit() {
 	x = $("#background").width() / 2.0;
@@ -118,13 +123,15 @@ function nextSpotInit() {
 	if(isKaShowed == 1){
 		$('#dragSpot').show(); //화면에 dragSpot 재배치
 		$('#dragSpot').attr('style', "opacity: 0.8; background-color: #009999");
-		$('#dragLine').attr('style', "transform: rotate(-45deg);");
-		$('#dragDest').attr('style', "width: 100px; height: 100px;");
+		$('#dragLine').attr('style', "transform: rotate(-90deg);");
+		$('#dragDest').removeClass('circle');
+		$('#dragDest').addClass('dest');
 		center("#dragSpot");
-		$('#dragLine').css("top", $('#human').offset().top - ($('#dragLine').width() / Math.sqrt(2)) / 2);
-		$('#dragLine').css("left", x);
-		$('#dragDest').css("top", $('#dragLine').offset().top - ($('#dragDest').height() / 2));
-		$('#dragDest').css("left", $('#dragLine').offset().left + $('#dragLine').width() - ($('#dragDest').width() / 2));
+		$("#dragSpot").css("bottom", $("#dialogue").height() + 265*w + $("#human").height()/2);
+		$('#dragLine').css("top", $('#human').offset().top - $('#dragLine').width());
+		$('#dragLine').css("left", x - $('#dragDest').width() / 2);
+		$('#dragDest').css("top", $('#dragLine').offset().top - $('#dragDest').height() - 30*w);
+		$('#dragDest').css("left", x - $('#dragDest').width() / 2 + 3);
 	}
 }
 
