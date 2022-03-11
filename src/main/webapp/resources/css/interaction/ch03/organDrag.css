@@ -4,20 +4,19 @@
 	z-index: 3;
 }
 
-.pot {
-	position: absolute;
-	cursor: pointer;
-	z-index: 1;
+.contrast {
+	filter: contrast(200%);
+	transition: filter 1s ease-in-out;
 }
 
-#organ {
-	position: absolute;
-	cursor: pointer;
-	top: 100;
-	left: 700;
-	width: 90px;
-	height: 100px;
-	z-index: 2;
+.contrast_origin {
+	filter: contrast(100%);
+	transition: filter 0.5s ease-in-out;
+}
+
+.hue {
+	filter: hue-rotate(180deg);
+	transition: filter 0.5s ease-in-out;
 }
 
 .head-hover {
@@ -30,6 +29,43 @@
 	transform: rotateZ(0deg);
 	transform-origin: bottom left;
 	transition: transform 1s;
+}
+
+.organ_div {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#human {
+	position: absolute;
+	cursor: pointer;
+	z-index: 0;
+}
+
+#servant {
+	position: absolute;
+	z-index: 1;
+}
+
+#organ1 {
+	position: absolute;
+	z-index: 1;
+	transform: rotate(90deg);
+}
+
+.organ {
+	cursor: move;
+	position: absolute;
+	z-index: 1;
+}
+
+.organ:hover {
+	transform: scale(1.1);
+  	transform-origin: center center;
+  	transition: transform 0.1s;
 }
 
 .fade-out {

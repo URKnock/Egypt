@@ -1,0 +1,79 @@
+#potToClick {
+	position: absolute;
+	cursor: pointer;
+	z-index: 3;
+	display: none;
+}
+
+#pot {
+	position: absolute;
+	cursor: pointer;
+	top: 300;
+	left: 300;
+	transform: rotate(135deg);
+	z-index: 5;
+}
+
+#scroll, #paper, #servant {
+	position: absolute;
+	z-index: 1;
+}
+
+#soda_pot {
+	position: absolute;
+	z-index: 1;	
+	transform: rotate(180deg);
+}
+
+#bandage, #niddle {
+	position: absolute;
+	z-index: 5;
+	display: none;
+}
+
+#bed {
+	position: absolute;
+	z-index: 0;
+}
+
+#human_cover {
+	position: absolute;
+	z-index: 4;
+}
+
+#human {
+	position: absolute;
+	z-index: 3;
+}
+
+#human_soda {
+	position: absolute;
+	z-index: 2;
+}
+
+#organ1 {
+	position: absolute;
+	z-index: 1;
+	transform: rotate(90deg);
+}
+
+.blinking{ 
+	-webkit-animation:blink 0.8s ease-in-out infinite alternate; 
+	-moz-animation:blink 0.8s ease-in-out infinite alternate; 
+	animation:blink 0.8s ease-in-out infinite alternate; 
+} 
+
+@-webkit-keyframes blink{ 
+	0% {opacity:0;} 
+	100% {opacity:1;} 
+} 
+
+@-moz-keyframes blink{
+	0% {opacity:0;} 
+	100% {opacity:1;} 
+} 
+
+@keyframes blink{
+	0% {opacity:0;} 
+	100% {opacity:1;} 
+}
