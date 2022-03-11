@@ -12,8 +12,20 @@
 	"page":"washTest1.jsp"
 },
 {
+	"chapter":3, "scene":5, "flag":0,
+	"page":"brain.jsp"
+},
+{
+	"chapter":3, "scene":6, "flag":0,
+	"page":"cut.jsp"
+},
+{
 	"chapter":3, "scene":7, "flag":0,
-	"page":"dragTest.jsp"
+	"page":"organPick.jsp"
+},
+{
+	"chapter":3, "scene":7, "flag":1,
+	"page":"organPick.jsp"
 },
 {
 	"chapter":3, "scene":8, "flag":0,
@@ -22,6 +34,10 @@
 {
 	"chapter":3, "scene":8, "flag":1,
 	"page":"organDrag.jsp"
+},
+{
+	"chapter":3, "scene":9, "flag":0,
+	"page":"sodaTest.jsp"
 },
 {
 	"chapter":3, "scene":10, "flag":0,

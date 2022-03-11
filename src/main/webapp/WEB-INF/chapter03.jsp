@@ -10,33 +10,26 @@
 <script src="<c:url value='/resources/js/ch03.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 </head>
-<body onload="init();">
+<body onload="init(); interaction();">
 <div id="background">
 	<c:forEach var="i" begin="1" end="3">
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
 	</c:forEach>
-	<img id="anunu" src="<c:url value='/resources/background/ch03/Anubis.gif'/>"/>
-	<img src="<c:url value='/resources/background/ch03/test.webp'/>"/>
-
-	<c:choose>
-		<c:when test="${scene eq 8}">
+	<img src="<c:url value='/resources/character/ch03/anubis_close.webp'/>"/>
+	<c:if test="${scene ne 9}">
+		<div class="canopic">
 			<c:forEach var="i" begin="1" end="4">
-				<div class="canopic">
-					<img id="ca${i}_0" src="<c:url value='/resources/background/ch03/k_00.png'/>" class="droppable"/>
-					<img id="ca${i}_1" src="<c:url value='/resources/background/ch03/k_0${i}.png'/>" class="head"/>
-				</div>
+				<img id="ca${i}" src="<c:url value='/resources/background/ch03/k_${i}.png'/>"/>
 			</c:forEach>
-		</c:when>
-		<c:otherwise>
-			<div class="canopic">
-				<c:forEach var="i" begin="1" end="4">
-					<img id="ca${i}" src="<c:url value='/resources/background/ch03/k_${i}.png'/>"/>
-				</c:forEach>
-			</div>
-		</c:otherwise>
-	</c:choose>
+		</div>
+	</c:if>
+</div>
+<div id="page">
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter03/${page}"/>
+	</c:if>
+	<c:if test="${scene lt 3}">
+		<img id="human" src = "<c:url value='/resources/character/ch03/3_1.png'/>"/>
 	</c:if>
 </div>
 <div id="menu">
@@ -70,7 +63,7 @@
 			<img />
 		</div>
 	</div>
-	<c:if test="${dialogue.choice ne null}">
+	<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
 		<div id="choice">
 			<div>
 				<c:forEach var="c" items="${dialogue.choice}">
@@ -84,6 +77,7 @@
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
 <input name="flag" 	type="hidden" value="${flag}"/>
+<input name="choice" type="hidden" value="${choice}"/>
 </form>
 </body>
 </html>

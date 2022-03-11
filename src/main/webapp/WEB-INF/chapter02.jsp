@@ -19,7 +19,7 @@
 	</div>
 	<div>
 		<img class="chapters" style="top: 340; left: 300; z-index: 0;" src="<c:url value='/resources/object/ch02/2_5.png'/>"/>
-		<img id="chap1" class="chapters island-move island-locked" src="<c:url value='/resources/object/ch02/2_1.png'/>"/>
+		<img id="chap1" class="chapters island-move island-unlocked" src="<c:url value='/resources/object/ch02/2_1.png'/>"/>
 		<img id="chap2" class="chapters island-move island-locked" src="<c:url value='/resources/object/ch02/2_2.png'/>"/>
 		<img id="chap3" class="chapters island-move island-locked" src="<c:url value='/resources/object/ch02/2_3.png'/>"/>
 		<img id="chap4" class="chapters island-move island-locked" src="<c:url value='/resources/object/ch02/2_4.png'/>"/>
@@ -35,15 +35,19 @@
 	
 	<c:choose>
 		<c:when test="${chapter eq '1'}">
-			<script>console.log("1챕터에 입장 가능합니다.");</script>
-		</c:when>
-		<c:when test="${chapter eq '2'}">
 			<script>
-				console.log("2챕터에 입장 가능합니다.");
-				$('#chap2').attr('src', "<c:url value='/resources/object/ch02/2_1.png'/>");
+				console.log("1챕터에 입장 가능합니다.");
 			</script>
 		</c:when>
-		<c:when test="${chapter eq '3'}">
+		<c:when test="${chapter ne '1'}"> <!-- 해금된 섬도 파일명 통일시켜서 ${chapter}로 제어 가능하게 바꾸기 -->
+			<script>
+				console.log(${chapter}, "챕터에 입장 가능합니다.");
+				$('#chap' + ${chapter}).attr('src', "<c:url value='/resources/object/ch02/2_1.png'/>");
+				$('#chap' + ${chapter}).removeClass('island-locked');
+				$('#chap' + ${chapter}).addClass('island-unlocked');
+			</script>
+		</c:when>
+		<c:when test="${chapter eq '3'}"> <!-- 아직 해금된 파일이 없어서 임시로 남겨둔 부분 -->
 			<script>console.log("3챕터에 입장 가능합니다.");</script>
 		</c:when>
 		<c:when test="${chapter eq '4'}">
@@ -77,6 +81,12 @@
 				$('#' + chapName).addClass("fade-out");
 			});
 			
+			$('.island-unlocked').click(function() { //이미 해금된 섬이라면
+				var chapName = $(this).attr("id");
+				var chapNum = Number(chapName[4]) + 2;
+				$(location).attr("href", "../../chapter0" + chapNum);
+			});
+			
 			$('.island-locked').click(function() { //아직 해금되지 않은 섬이라면
 				console.log("섬이 클릭됨");
 				var chapName = $(this).attr("id");
@@ -84,7 +94,7 @@
 				$('#' + chapName).addClass("island-shake");
 				setTimeout(function() { $('#' + chapName).addClass("island-move"); }, 1500);
 				//console.log($('#' + chapName).attr("class"));
-			})
+			});
 		});
 	</script>
 </body>

@@ -1,108 +1,152 @@
-$(function() { // 런타임 동작
-	$('#head').mouseenter(function() {
-		console.log("마우스 오버!")
-		$('#head').removeClass("head-leave")
-		$('#head').addClass("head-hover")
-	});
+function interaction() {
+	resize("#human_cover");
+	center("#human_cover");
+	$("#human_cover").fadeOut(3000);
 	
-	$('#head').mouseleave(function() {
-		console.log("마우스 포인터가 떠남")
-		$('#head').removeClass("head-hover")
-		$('#head').addClass("head-leave")
-	});
-});
-
-let currentDroppable = null;
-
-organ.onmousedown = function(event) {
-	let shiftX = event.clientX - organ.getBoundingClientRect().left;
-	let shiftY = event.clientY - organ.getBoundingClientRect().top;
-
-	// (1) absolute 속성과 zIndex 프로퍼티를 수정해 클릭한 대상이 제일 위에서 움직이기 위한 준비를 합니다.
-	organ.style.position = 'absolute';
-	organ.style.zIndex = 1000;
-
-	// 현재 위치한 부모에서 body로 직접 이동하여
-	// body를 기준으로 위치를 지정합니다.
-	document.body.append(organ);
-
-	moveAt(event.pageX, event.pageY);
-
-	// 초기 이동을 고려한 좌표 (pageX, pageY)에서
-	// 대상을 이동합니다.
-	function moveAt(pageX, pageY) {
-		organ.style.left = pageX - shiftX + 'px';
-		organ.style.top = pageY - shiftY + 'px';
+	var organName = '#organ1';
+	resize(organName);
+	$(organName).width($(organName).width() / 2);
+	$(organName).height($(organName).height() / 2);
+	$(organName).css("top", $("#human").offset().top + ($("#human").height() / 2) - $(organName).width() / 2);
+	$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);
+	
+	for(var i = 2; i <= 5; i++) {
+		var organName = '#organ' + i;
+		resize(organName);
+		$(organName).css("left", x - $("#organ" + i).width() / 2);
+		$(organName).css("top", 100);
+		$(organName).animate({
+			left: $("#human").offset().left + $("#human").width() / 4 * (i - 2)
+		}, 1000, 'linear');
+		dragElement(document.getElementById('organDiv' + i), organName);
 	}
+	
+	resize('#servant');
+	$('#servant').css("bottom", $("#dialogue").height());
+	$('#servant').css("left", 0);
 
-	function onMouseMove(event) {
-		moveAt(event.pageX, event.pageY); //마우스 포인터 아래로 사물을 이동시킵니다.
+	let cd = null;
+	var Element = null;
+	var Clicked = null;
+	
+	var lock1 = false;
+	var lock2 = false;
+	
+	var entered = [];
+	var organed = [];
+	var pairs = { "ca1":"organ5", "ca2":"organ2", "ca3":"organ3", "ca4":"organ4" }
 
-		organ.hidden = true;
-		let elemBelow = document.elementFromPoint(event.clientX,
-				event.clientY); //elemBelow는 드롭 할 수 있는 객체의 아래 요소입니다.
-		organ.hidden = false;
-
-		// 마우스 이벤트는 윈도우 밖으로 트리거 될 수 없습니다.(클릭한 객체를 윈도우 밖으로 드래그 했을 때)
-		// 따라서 clientX∙clientY가 화면 밖에 있으면, elementFromPoint는 null을 반환합니다.
-		if (!elemBelow)
-			return;
-
-		// 'droppable' 클래스로 미리 지정되어 있는 객체를 잠재적으로 드롭 할 수 있는 요소로 가져옵니다.
-		let droppableBelow = elemBelow.closest('.droppable');
-		
-		// $(droppableBelow).attr('id') == "pot" // 단지가 droppable로 설정되었다면
-		var potId = $(droppableBelow).attr('id')
-		if(potId.startsWith("ca")) {
-			console.log("pot이 인식됨")
-			$('.head').addClass("droppable"); //head도 같이 droppable로 설정한다.
-		} //==> 꼭 필요할까?
-		
-		if (currentDroppable != droppableBelow) {
-			//currentDroppable=null 이벤트 전에 놓을 수 있는 요소 위에 있지 않다면(예: 빈 공간)
-			//droppableBelow=null 이벤트 동안 놓을 수 있는 요소 위에 있지 않다면
-			if (currentDroppable) { //드롭 가능한 요소로부터 벗어났다면
-				leaveDroppable(currentDroppable);
+	function enterElement(elem) {
+		console.log("enter: " + elem.id + ", " + entered);
+		cd.isOverlaped = false;
+		var id = elem.id.substring(0, 3);
+		if(!lock1 && $.inArray(cd.id, organed) == -1 && $.inArray(id, entered) == -1) {
+			lock1 = true;
+			$('#' + id + "_1").removeClass("head-leave");
+			$('#' + id + "_1").addClass("head-hover");
+			$(Element).off("mousedown");
+			console.log(id + ", " + cd.id + " & " + pairs[id] + " & " + Clicked);
+			if(Clicked != null) {
+			if(pairs[id] != Clicked) {
+				$('#' + id + "_0").addClass("hue");
+				$('#' + id + "_1").addClass("hue");
+				setTimeout(function() {
+					$('input[name=choice]').val(1);
+					$('form').submit();
+				}, 1000);
+			} else if(pairs[id] == Clicked) {
+				entered.push(id);
+				organed.push(cd.id);
 			}
-			currentDroppable = droppableBelow;
-			if (currentDroppable) { //드롭 가능한 요소에 닿았다면 (닿지 않았을 때는 null)
-				enterDroppable(currentDroppable);
 			}
 		}
 	}
-
-	// (2) mousemove로 사물을 움직입니다.
-	document.addEventListener('mousemove', onMouseMove);
-
-	// (3) 사물을 드롭하고, 불필요한 핸들러를 제거합니다.
-	organ.onmouseup = function() { //대상을 드롭하는 순간에
-		document.removeEventListener('mousemove', onMouseMove); //이벤트 리스너 제거
-		organ.onmouseup = null; //속성 제거
-		if (organ.isOverlaped == true) { //드롭 가능한 요소에 오버랩 되었다면
-			console.log("오버랩 되는 중")
-			leaveDroppable(currentDroppable)
-			$('#organ').addClass("fade-out")
-			//organ.remove(); //대상을 삭제
+	
+	function leaveElement(elem) {
+		console.log("leave: " + elem.id + ", " + entered);
+		cd.isOverlaped = false;
+		var id = elem.id.substring(0, 3);
+		if(!lock2 && $.inArray(cd.id, organed) == $.inArray(id, entered)) {
+			lock2 = true;
+			setTimeout(function() {
+				$(Element).addClass("fade-out");
+				$('#' + id + "_1").removeClass("head-hover");
+				$('#' + id + "_1").addClass("head-leave");
+				if(organed.length >= 4 && entered.length >= 4) {
+					for(var i = 1; i < 5; i++) {
+						$('#ca' + i + "_0").addClass("contrast");
+						$('#ca' + i + "_1").addClass("contrast");
+					}
+					setTimeout(function() {
+						for(var i = 1; i < 5; i++) {
+							$('#ca' + i + "_0").removeClass("contrast");
+							$('#ca' + i + "_1").removeClass("contrast");
+							$('#ca' + i + "_0").addClass("contrast_origin");
+							$('#ca' + i + "_1").addClass("contrast_origin");
+						}
+					}, 1000);
+					setTimeout(function() { 
+						$('input[name=choice]').val(-1);
+						$("form").submit(); 
+					}, 2000);
+				}
+				lock1 = false;
+				lock2 = false;
+			}, 500);
 		}
-	};
-};
-
-function enterDroppable(elem) { //드롭 가능한 요소에 닿았다면
-	//elem.style.background = 'pink'; //해당 요소의 배경 색상 변경 ==> 테두리만 따려면?
-	organ.isOverlaped = true;
-	$('#head').removeClass("head-leave")
-	$('#head').addClass("head-hover")
-	console.log("isOverlaped 추가")
+	}
+	
+	function dragElement(elmnt, elem) {
+		var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+		var eb, db;
+		if (document.getElementById(elem)) {
+			document.getElementById(elem).onmousedown = dragMouseDown;
+		} else {
+			elmnt.onmousedown = dragMouseDown;
+		}
+		
+		function dragMouseDown(e) {
+			e = e || window.event;
+			e.preventDefault();
+			pos3 = e.clientX;
+			pos4 = e.clientY;
+			document.onmouseup = closeDragElement;
+			document.onmousemove = elementDrag;
+			Clicked = e.target.id;
+		}
+		
+		function elementDrag(e) {
+			e = e || window.event;
+			e.preventDefault();
+			pos1 = pos3 - e.clientX;
+			pos2 = pos4 - e.clientY;
+			pos3 = e.clientX;
+			pos4 = e.clientY;
+			elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+			elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+			
+			Element = elem;
+			eb = document.elementFromPoint(event.clientX, event.clientY);
+			db = eb.closest('.droppable');
+			if (eb) {
+				if (cd != db) {
+					if (cd) { leaveElement(cd); }
+					cd = db;
+					if (cd) { enterElement(cd); }
+				}
+			}
+		}
+		
+		function closeDragElement() {
+			Clicked = elmnt;
+			elmnt.onmouseup = function() {
+				elmnt.onmouseup = null;
+				if (cd.isOverlaped == true) {
+					leaveDroppable(cd);
+				}
+			}	
+			document.onmouseup = null;
+			document.onmousemove = null;
+		}
+	}
 }
-
-function leaveDroppable(elem) { //드롭 가능한 요소로부터 벗어났다면
-	//elem.style.background = ''; //해당 요소의 배경 색상 제거
-	organ.isOverlaped = false;
-	$('#head').removeClass("head-hover")
-	$('#head').addClass("head-leave")
-	console.log("isOverlaped 해제")
-}
-
-organ.ondragstart = function() {
-	return false;
-};
