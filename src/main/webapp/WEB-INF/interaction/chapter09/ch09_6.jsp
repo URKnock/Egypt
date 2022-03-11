@@ -4,10 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <title>ch09</title>
-<link href="<c:url value='/resources/css/ch09.css'/>" rel="stylesheet" type="text/css"/>
+<link href="<c:url value='/resources/css/interaction/ch09/ch09_6.css'/>" rel="stylesheet" type="text/css"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="<c:url value='/resources/js/interaction/ch09/ch09_1.js'/>"></script>
-<script> $(function(){ init(); }); </script> 
+<script src="<c:url value='/resources/js/interaction/ch09/ch09_6.js'/>"></script> 
+<script> $(function(){ init(); }); </script>
 </head>
 <body>
 <div id="background">
@@ -16,35 +16,20 @@
 		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
 		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
 		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
-	</div>
-	<div class="next">
-<a href="<c:url value='/chapter09_2' />" data-transition="fade">
-	<img id="next" src="<c:url value='/resources/UI/Menu/9_7_1.png'/>"/>
+	</div>	
+	<div class="pre">
+	<a href="<c:url value='/chapter09_5' />" data-transition="fade">
+	<img id="pre" src="<c:url value='/resources/UI/Menu/9_7_2.png'/>"/>
 	</a>
-	</div>
-</div>
-<div id="keeper">
-	<div id="keeper">
-	<img id="keepers" src="<c:url value='/resources/Character/ch09/9_12.png'/>"/>
 	</div>
 </div>
 <div id="characters">
 	<div id="character">
 	<img id="c1" src="<c:url value='/resources/Character/ch09/9_1.png'/>"/>
-	<img id="c2" src="<c:url value='/resources/Character/ch09/9_4.png'/>"/>
-	<img id="c3" src="<c:url value='/resources/Character/ch09/9_5.png'/>"/>
+	<img id="c2" src="<c:url value='/resources/Character/ch09/9_2.png'/>"/>
 	</div>
 </div>
-
-<!-- 모달 -->
-<div class="modal">
-  <div class="modal_content" 
-       title="클릭하면 창이 닫힙니다.">
-    <img class="info33" id="info33" src='<c:url value="${info33.img}"/>'/> 
-  </div>
-  </div>
-  
-<!-- <form method="post" action="<c:url value='/chapter09'/>">
+<form method="post" action="<c:url value='/chapter09'/>">
 <div id="dialogue">
 	<img src='<c:url value="${dialogue.image}"/>'/>
 	<div id="scene">
@@ -72,6 +57,14 @@
 </div>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
-</form> -->
+<input name="flag" 	type="hidden" value="${flag}"/>
+</form>
 </body>
+<!-- 모달 -->
+<div class="modal">
+  <div class="modal_content" 
+       title="클릭하면 창이 닫힙니다.">
+    <img class="info34" id="info34" src='<c:url value="${info40.img}"/>'/> 
+  </div>
+  </div>
 </html>

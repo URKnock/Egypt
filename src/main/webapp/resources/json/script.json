@@ -850,5 +850,22 @@
 	"chapter":14, "scene":0, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
+},
+{
+	"name":"라", "nickname":"태양의 신",
+	"content":"천국을 누리던 사자여, 생전의 사람들을 만나러 배에 승선할 것인가?",
+	"chapter":9, "scene":6, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png", "choice":{
+		"image":"UI/Dialogue/9_6_3.png",
+		"0":"배에 승선하겠습니다",
+		"1":"천국을 좀 더 둘러보고 싶습니다"
+    }
+},
+{
+	"name":"라", "nickname":"태양의 신",
+    "content":"잘 갔다 오거라 사자여, 평안한 안식이 되기를...",
+	"chapter":9, "scene":6, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
 }
 ] 

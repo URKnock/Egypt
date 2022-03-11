@@ -10,39 +10,18 @@ body {
 	overflow: hidden;
   	overflow-y: hidden;
   	overflow-x: hidden;
-  
 }
-@keyframes fadein {
-    from {opacity:0;}
-    to {opacity:1;}
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {opacity:0;}
-    to {opacity:1;}
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {opacity:0;}
-    to {opacity:1;}
-}
-@-o-keyframes fadein { /* Opera */
-    from {opacity:0;}
-    to {opacity: 1;}
-}
+
 #background {
 	width:100%;
 	height:100%;
-	background: no-repeat url("../../../background/ch09/9_1_0.jpg") center center;
+	background: no-repeat url("../../../background/ch09/9_3.jpg") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;  
 }
-
-#keepers {
-	 position: absolute;
-     z-index: 1;
- 	 top: 53%; right: 6%; 	 
-}
+ 
 
 #c1 {
 	position: absolute;
@@ -53,13 +32,21 @@ body {
 #c2 {
 	position: absolute;
 	top: 40%;
-	left: 45%;
+	left: 30%;
 	
 }
 #c3 {
 	position: absolute;
-	top: 60%;
-	left: 80%;
+	width:300px;
+	top: 57%;
+	left: 43%;
+	
+}
+
+#c4 {
+	position: absolute;
+	top: 54%;
+	left: 69%;
 }
 
 
@@ -106,7 +93,23 @@ body {
   display:none;
 }
 
-.info34 {
+.modal2{ 
+  z-index: 10;
+  position:absolute; 
+  width:100%; 
+  height:100%;
+  background: rgba(0,0,0,0.8); 
+  top:0; left:0;
+  display:none;
+}
+
+.info37 {
+  position: absolute;
+  top: 50%; right: 50%;
+  transform: translate(50%,-50%);
+}
+
+.info38 {
   position: absolute;
   top: 50%; right: 50%;
   transform: translate(50%,-50%);
