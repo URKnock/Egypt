@@ -1,0 +1,450 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: 0;
+}
+body {
+	font-family: 'Minguk-Regular';
+	background: black;
+	
+	overflow: hidden;
+  	overflow-y: hidden;
+  	overflow-x: hidden;
+}
+
+#view {
+	width: 100vw;
+	height: 100vh !important;
+	
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	font-size: 1vw;
+}
+
+.background1 {
+	position: absolute;
+	left: 0%;
+	bottom: 0%;
+	
+	width: 100vw;
+	height: 100vh;
+}
+
+.background2 {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	
+	width: 100%;
+	height: 100% !important;
+	
+	opacity: 0;
+}
+
+.background3 {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	
+	width: 100%;
+	height: 100% !important;
+	
+	opacity: 0;
+}
+
+#menu {
+	position: absolute;
+	
+	width: 15%;
+	height: 5% !important;
+	
+	right: 2.5%;
+	top: 5%;
+	
+	display: flex;
+	justify-content: space-between;
+	
+	z-index: 50;
+}
+#menu img {
+	width: 20% !important;
+	height: 100% !important;
+}
+
+form {
+	position: absolute;
+	
+	background: url("../UI/Dialogue/BG.png");
+	
+	width: 100%;
+	height: 27% !important;
+	
+	bottom: 0%;
+	left: 0%;
+	
+	z-index: 50;
+}
+
+#dialogue {
+	position: absolute;
+
+	width: 100%;
+	height: 95% !important;
+	
+	bottom: 0;
+}
+#dialogue>img {
+	position: absolute;
+	
+	width: auto !important;
+	height: 70%;
+	
+	top: 15%;
+	left: 5.5%;
+}
+#dialogue #scene {
+	position: absolute;
+	
+	width: 45% !important;
+	height: 80% !important;
+	
+	top: 10%;
+	left: 18%;
+}
+#dialogue #scene #title {
+	width: 40%;
+	height: 20% !important;
+	
+	font-size: 1.2em;
+	font-weight: bolder;
+	
+	display: flex;
+	justify-content: space-between;
+}
+#dialogue #scene #content {
+	position: absolute;
+	
+	width: 100%;
+	height: 60%;
+	
+	top: 30%;
+	left: 2%;
+		
+	font-size: 1em;
+}
+
+/*
+8_1
+*/
+
+#deco1 {
+	position: absolute; 
+	width: 40.5vw;
+	height: 48.3vh;
+	z-index: 2;
+	bottom: 48.5%;
+    left: -1.21%;
+}
+
+@keyframes shake{
+    	0% { transform: rotate(0deg); }
+        50% { transform: rotate(1.5deg); }
+        100% { transform: rotate(0deg); }
+}
+
+#grass2 {
+	position: absolute; 
+	width: 14.6vw;
+	height: 28.2vh;
+	z-index: 3;
+	bottom: 37.5%;
+    left: 39.83%;
+    
+    animation-name: shake;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#grass3 {
+	position: absolute; 
+	width: 20.3vw;
+	height: 21.4vh;
+	z-index: 4;
+	bottom: 46.98%;
+    left: 9.48%;
+    
+    animation-name: shake;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#grass1 {
+	position: absolute; 
+	width: 43.55vw;
+	height: 7.1vh;
+	z-index: 5;
+	bottom: 48.65%;
+    left: -1.2%;
+}
+
+#statue1 {
+	position: absolute; 
+	width: 14.1vw;
+	height: 40vh;
+	z-index: 6;
+	bottom: 48.5%;
+    left: 11.25%;
+}
+
+#altar {
+	position: absolute; 
+	width: 44.5vw;
+	height: 7.85vh;
+	z-index: 7;
+	bottom: 41.4%;
+    left: -1.2%;
+}
+
+#pillars1 {
+	position: absolute; 
+	width: 46.65vw;
+	height: 58.5vh;
+	z-index: 8;
+	bottom: 41.5%;
+    left: -1.25%;
+}
+
+#stairs {
+	position: absolute; 
+	width: 70.4vw;
+	height: 12.4vh;
+	z-index: 9;
+	bottom: 29.3%;
+    left: 0%;
+}
+
+@keyframes wave { 
+	0% { right: -1%; }
+	100% { right: 0; }
+}
+
+#water1 {
+	position: absolute; 
+	width:101vw;
+	height: 33vh;
+	z-index: 10;
+    bottom: 0;
+    
+    animation-name: wave;
+	animation-duration: 0.2s;
+	animation-iteration-count: infinite;
+}
+
+#user {
+	position: absolute; 
+	width: 10.1vw;
+	height: 40.5vh;
+	bottom: 41.3%;
+	right: 100%;
+	z-index: 11;
+}
+
+#la1 {
+	position: absolute; 
+	width: 10.2vw;
+	height: 42.5vh;
+	bottom: 34.4%;
+	right: 22.5%;
+	z-index: 12;
+}
+
+#la2 {
+	position: absolute; 
+	width: 10.2vw;
+	height: 42.5vh;
+	bottom: 34.4%;
+	right: 20%;
+	z-index: 12;
+	
+	opacity: 0;
+	transform: rotateY(180deg);
+}
+
+#boat {
+	position: absolute; 
+	width: 39.4vw;
+	height: 32.1vh;
+	z-index: 13;
+	bottom: 22.6%;
+    right: 1.4%;
+}
+
+/*
+8_2
+*/
+
+#water2 {
+	position: absolute; 
+	width:101vw;
+	height: 33vh;
+	z-index: 10;
+    bottom: 0;
+    
+    opacity: 0;
+    
+    animation-name: wave;
+	animation-duration: 0.2s;
+	animation-iteration-count: infinite;
+}
+
+#star {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	
+	width: 150vw;
+	height: 20vh;
+	
+	opacity: 0;
+}
+
+/*
+8_3
+*/
+
+#rock {
+	position: absolute;
+	left: 100%;
+	bottom: 33%;
+	
+	width: 148vw;
+	height: 30vh;
+}
+
+#snake {
+	position: absolute; 
+	width: 39.4vw;
+	height: 32.1vh;
+	z-index: 20;
+	bottom: 22.6%;
+    right: 1.4%;
+    
+    opacity: 0;
+}
+
+#paper {
+	position: absolute; 
+	width: 80vw;
+	height: 10vh;
+	z-index: 30;
+	top: 10%;
+    right: 10%;
+    
+    opacity: 0;
+}
+
+/*
+8_3
+*/
+
+#tree {
+	position: absolute; 
+	width: 23vw;
+	height: 63vh;
+	z-index: 2;
+	bottom: 37%;
+    right: -56%;
+    
+    opacity: 55%;
+    
+    animation-name: shake;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#grass4 {
+	position: absolute; 
+	width: 28.4vw;
+	height: 35.4vh;
+	z-index: 2;
+	bottom: 38%;
+    right: -100%;
+    
+    opacity: 80%;
+    
+    animation-name: shake;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#ground {
+	position: absolute; 
+	width: 65vw;
+	height: 5.3vh;
+	z-index: 3;
+	bottom: 33%;
+    right: -100%;
+}
+
+#pillars2 {
+	position: absolute; 
+	width: 55vw;
+	height: 62vh;
+	z-index: 4;
+	bottom: 38%;
+    right: -100%;
+}
+
+#statue2 {
+	position: absolute; 
+	width: 20.5vw;
+	height: 45.2vh;
+	z-index: 4;
+	bottom: 38%;
+    right: -86%;
+}
+
+#deco2 {
+	position: absolute; 
+	width: 14.5vw;
+	height: 25.89vh;
+	z-index: 4;
+	bottom: 38%;
+    right: -56.8%;
+}
+
+#grass5 {
+	position: absolute; 
+	width: 28.35vw;
+	height: 11.8vh;
+	z-index: 5;
+	bottom: 37.8%;
+    right: -86.8%;
+}
+
+#flower {
+	position: absolute; 
+	width: 70vw;
+	height: 10vh;
+	z-index: 11;
+	bottom: 26.1%;
+    right: -93.5%;
+}
