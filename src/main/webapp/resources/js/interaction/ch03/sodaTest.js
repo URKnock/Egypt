@@ -5,6 +5,9 @@ function interaction() {
 	$('canvas').hide();
 	resizeCenter("#human_soda");
 	resizeCenter("#human_cover");
+	dragElement($('.clickable:nth-child(1)'), "#pot");
+	dragElement($('.clickable:nth-child(2)'), "#bandage");
+	dragElement($('.clickable:nth-child(3)'), "#niddle");
 
 	function human_rescale() {
 		var arr = ["#human", "#human_soda", "#human_cover"]
@@ -233,10 +236,10 @@ function dragElement(elmnt, elem) {
 	
 	function closeDragElement() {
 		Element = elem;
-		cd.hide();
+		elmnt.hide();
 		let eb = document.elementFromPoint(event.clientX, event.clientY);
 		let db = eb.closest('.droppable');
-		cd.show();
+		elmnt.show();
 		console.log(eb);
 		console.log(db);
 		if (eb) {

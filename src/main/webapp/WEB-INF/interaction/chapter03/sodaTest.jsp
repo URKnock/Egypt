@@ -3,12 +3,12 @@
 
 <link href="<c:url value='/resources/css/interaction/ch03/sodaTest.css'/>" rel="stylesheet" type="text/css"/>
 <img src="../resources/object/ch03/paper.png" id="scroll"/>
-<div class="clickable"><img src="../resources/object/ch03/pot.png" id="potToClick"/></div>
-<div class="clickable"><img src="../resources/object/ch03/bandage.png" id="bandageToClick"/></div>
-<div class="clickable"><img src="../resources/object/ch03/niddle.png" id="niddleToClick"/></div>
-<img src="../resources/object/ch03/pot.png" id="pot"/>
-<img src="../resources/object/ch03/bandage.png" id="bandage"/>
-<img src="../resources/object/ch03/niddle.png" id="niddle"/>
+<div class="clickable"><img src="../resources/object/ch03/pot.png" id="pot"/></div>
+<div class="clickable"><img src="../resources/object/ch03/bandage.png" id="bandage"/></div>
+<div class="clickable"><img src="../resources/object/ch03/niddle.png" id="niddle"/></div>
+<img src="../resources/object/ch03/pot.png" id="potToClick"/>
+<img src="../resources/object/ch03/bandage.png" id="bandageToClick"/>
+<img src="../resources/object/ch03/niddle.png" id="niddleToClick"/>
 <img src="../resources/object/ch03/soda_1.png" id="soda_pot"/>
 <img src="../resources/object/ch03/침대.png" id="bed"/>
 <img src="/resources/object/ch03/organ_1.png" id="organ1"/>
