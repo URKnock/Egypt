@@ -1,5 +1,8 @@
 function interaction() {
 	$('#pot').hide();
+	$('#bandage').hide();
+	$('#niddle').hide();
+	$('canvas').hide();
 	resizeCenter("#human_soda");
 	resizeCenter("#human_cover");
 
@@ -29,7 +32,8 @@ function interaction() {
 	
 	preload([
 	    $('#potToClick').attr("src"),
-	    $('#bandage').attr("src"),
+	    $('#bandageToClick').attr("src"),
+	    $('#niddleToClick').attr("src"),
 	    $('#servant').attr("src"),
 	    $('#scroll').attr("src"),
 	    "/resources/object/ch03/soda_1.png",
@@ -62,13 +66,15 @@ function interaction() {
 		$('#pot').show();
 	});
 	
-	resize('#bandage');
-	$('#bandage').css("top", scrollY - ($('#bandage').height() / 2));
-	$('#bandage').css("left", x - $('#bandage').width() / 2);
+	resize('#bandageToClick');
+	$('#bandageToClick').css("top", scrollY - ($('#bandageToClick').height() / 2));
+	$('#bandageToClick').css("left", x - $('#bandageToClick').width() / 2);
+	$('#bandageToClick').hide();
 
-	resizeWH('#niddle', 43*w, 150*w);
-	$('#niddle').css("top", scrollY - ($('#niddle').height() / 2));
-	$('#niddle').css("left", x + $("#scroll").width() / 4 - $('#niddle').width() / 2);
+	resizeWH('#niddleToClick', 43*w, 150*w);
+	$('#niddleToClick').css("top", scrollY - ($('#niddleToClick').height() / 2));
+	$('#niddleToClick').css("left", x + $("#scroll").width() / 4 - $('#niddleToClick').width() / 2);
+	$('#niddleToClick').hide();
 
 	resizeWH('#paper', 1341, 776);
 	resizeWH('#servant', 1341, 776);
@@ -90,8 +96,8 @@ function interaction() {
 					setTimeout(function() {
 						$('#scroll').show();
 						$('#paper').hide();
-						$('#bandage').fadeIn("slow");
-						$('#niddle').fadeIn("slow");
+						$('#bandageToClick').fadeIn("slow");
+						$('#niddleToClick').fadeIn("slow");
 						$('#potToClick').fadeIn("slow", function() {
 							$('#potToClick').addClass("select");
 						});
@@ -103,52 +109,148 @@ function interaction() {
 				});
 				$('#paper').attr("src", "/resources/character/ch03/paper_4.webp");
 				$('#paper').show();
-			});	
+			});
 			$('#servant').attr("src", "/resources/character/ch03/servant_3.webp");
 			$('#servant').removeClass("select");
 		});
 	}, 2400);
+/*
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let coord = { x: canvas.offsetLeft, y: canvas.offsetTop };
 
-	var kWidth = $("#pot").height();
-	$("#pot").on("mousedown", function(event) {
-		let shiftX = event.clientX - pot.getBoundingClientRect().left;
-		pot.style.position = 'absolute';
-		pot.style.zIndex = 1000;
-		document.body.append(pot);
-	
-		function movepot(pageX) {
-			pot.style.left = pageX - shiftX + 'px';
-			soda_pot.style.left = kWidth + pageX - shiftX + 'px';
+canvas.addEventListener("mousedown", start);
+canvas.addEventListener("mouseup", stop);
+
+function reposition(event) {
+  coord.x = event.clientX - canvas.offsetLeft;
+  coord.y = event.clientY - canvas.offsetTop;
+}
+function start(event) {
+  canvas.addEventListener("mousemove", draw);
+  reposition(event);
+}
+function stop() {
+  canvas.removeEventListener("mousemove", draw);
+}
+function draw(event) {
+  ctx.beginPath();
+  ctx.lineWidth = 5;
+  ctx.lineCap = "round";
+  ctx.strokeStyle = "#FF0000";
+  ctx.moveTo(coord.x, coord.y);
+  reposition(event);
+  ctx.lineTo(coord.x, coord.y);
+  ctx.stroke();
+}
+*/
+
+let cd = null;
+let Element = null;
+var enterCnt = 1;
+var isEntering = false;
+
+function enterElement(elem) {
+	console.log("enter: " + elem.id + ", " + entered);
+	cd.isOverlaped = false;
+	if(!isEntering) {
+		isEntering = true;
+		enterCnt++;
+		if(elem.id == "pot") {
+			$('#human_soda').attr("src", "/resources/object/ch03/soda_" + enterCnt + ".png");
+			if(enterCnt == 3) {
+				enterCnt == 0;
+				$(Element).off("mousedown");
+				$(Element).hide();
+				$('#potToClick').show();
+				$('#bandageToClick').addClass("select");
+				$('#bandageToClick').on("click", function() {
+					$('#bandageToClick').removeClass("select");
+					$('#bandageToClick').hide();
+					$('#bandage').css("left", $("#bed").offset().left);
+					$('#bandage').show();
+				});
+			}
+		} else if(elem.id == "bandage") {
+			$('#human_soda').attr("src", "/resources/object/ch03/bandage_" + enterCnt + ".png");
+			if(enterCnt == 3) {
+				$(Element).off("mousedown");
+				$(Element).hide();
+				$('#bandageToClick').show();
+				$('#niddleToClick').on("click", function() {
+					$('#niddleToClick').removeClass("select");
+					$('#niddleToClick').hide();
+					$('#niddle').css("left", $("#bed").offset().left);
+					$('#niddle').show();
+				});
+			}
+		} else if(elem.id == "niddle") {
+			$(Element).off("mousedown");
+			$(Element).hide();
+			$('canvas').show();
 		}
+	}
+}
+
+function leaveElement(elem) {
+	console.log("leave: " + elem.id + ", " + entered);
+	cd.isOverlaped = false;
+	isEntering = false;
+}
+
+function dragElement(elmnt, elem) {
+	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+	var spot = $("#soda_pot");
+	if (document.getElementById(elem)) {
+		document.getElementById(elem).onmousedown = dragMouseDown;
+	} else {
+		elmnt.onmousedown = dragMouseDown;
+	}
 	
-		function onMousepot(event) {
-			movepot(event.pageX);
+	function dragMouseDown(e) {
+		e = e || window.event;
+		e.preventDefault();
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		document.onmouseup = closeDragElement;
+		document.onmousemove = elementDrag;
+	}
 	
-			pot.hidden = true;
-			let eb1 = document.elementFromPoint(event.clientX, event.clientY);
-			pot.hidden = false;
-			
-			if (!eb1) return;
-			let db1 = eb1.closest('.droppable');
-			if (cd1 != db1) {
-				if (cd1) {
-					leavepot(cd1);
-				}
-				cd1 = db1;
-				if (cd1) {
-					enterpot(cd1);
-				}
+	function elementDrag(e) {
+		e = e || window.event;
+		e.preventDefault();
+		pos1 = pos3 - e.clientX;
+		pos2 = pos4 - e.clientY;
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+		if(elmnt.id == "pot") {
+			spot.style.top = (spot.offsetTop - pos2) + "px";
+			spot.style.left = (spot.offsetLeft - pos1) + "px";
+		}
+	}
+	
+	function closeDragElement() {
+		Element = elem;
+		cd.hide();
+		let eb = document.elementFromPoint(event.clientX, event.clientY);
+		let db = eb.closest('.droppable');
+		cd.show();
+		console.log(eb);
+		console.log(db);
+		if (eb) {
+			if (cd != db) {
+				if (cd) { leaveElement(cd); }
+				cd = db;
+				if (cd) { enterElement(cd); }
 			}
 		}
-		document.addEventListener('mousemove', onMousepot);
-		pot.onmouseup = function() {
-			document.removeEventListener('mousemove', onMousepot);
-			pot.onmouseup = null;
-			if (pot.isOverlaped == true) {
-				leavepot(cd1)
-			}
-		};
-	});	
+		document.onmouseup = null;
+		document.onmousemove = null;
+	}
+}
+
 }
 
 function resizeWithDiv(element, div) {
@@ -168,92 +270,3 @@ function rescale(element, div) {
 	e.width(e.width() / div);
 	e.height(e.height() / div);
 }
-
-function checkWipeCount() {
-	if(wipeCount == 300) {
-		$('.dirt').fadeTo("1000", 0.6);
-	} else if(wipeCount == 600) {
-		$('.dirt').fadeTo("1000", 0.3);
-	} else if(wipeCount == 1000) {
-		$('#bandage').css("top", scrollY - ($('#bandage').height() / 2));
-		$('#bandage').css("left", x + 100 - ($('#bandage').width() / 2));
-		$('.dirt').fadeOut(1000);
-		setTimeout(function() { 
-			$("form").submit();
-		}, 3000);
-	}
-}
-
-let cd1 = null;
-let cd2 = null;
-let wipeCount = 0;
-let cleanCount = 0;
-
-function enterpot(elem) {
-	pot.isOverlaped = true;
-	$('#dragSpot').hide();
-	$('#dragLine').removeClass("blinking");
-	$('#dragLine').fadeOut(1000);
-	$('#pot').fadeOut(1000);
-	$('#soda_pot').fadeOut(1000);
-	
-	$('.dirt').fadeTo("1000", 0.75);
-	$('#bandage').addClass('select');
-	
-	$("#pot").off("mousedown");
-	pot.ondragstart = function() { return true; };
-	bandage.ondragstart = function() { return false; };
-	
-	var dirt_top = $("#human").offset().top;
-	var dirt_bottom = dirt_top + $("#human").height();
-	var dirt_left = $("#human").offset().left;
-	var dirt_right = dirt_left + $("#human").width();
-
-	$('#bandage').on("mousedown", function(event) {
-		let shiftX = event.clientX - bandage.getBoundingClientRect().left;
-		let shiftY = event.clientY - bandage.getBoundingClientRect().top;
-		var scrollY = $("#scroll").height() / 2 + 100;
-		
-		$('#bandage').removeClass('select');
-		bandage.style.position = 'absolute';
-		bandage.style.zIndex = 1000;
-		document.body.append(bandage);
-		
-		function movebandage(pageX, pageY) {
-			bandage.style.left = pageX - shiftX + 'px';
-			bandage.style.top = pageY - shiftY + 'px';
-		}
-		
-		function onMousebandage(event) {
-			movebandage(event.pageX, event.pageY);
-			var lin_top = $("#bandage").offset().top;
-			var lin_left = $("#bandage").offset().left;
-			if (lin_top >= dirt_top && lin_top <= dirt_bottom) {
-				if(lin_left >= dirt_left && lin_left <= dirt_right) {
-					wipeCount = wipeCount + 1;
-					checkWipeCount();
-				}
-			}
-		}
-		
-		document.addEventListener('mousemove', onMousebandage);
-		bandage.onmouseup = function() {
-			document.removeEventListener('mousemove', onMousebandage);
-			bandage.onmouseup = null;
-			if (bandage.isOverlaped == true) {
-				leavebandage(cd2)
-			} else {
-				$('#bandage').css("top", scrollY - ($('#bandage').height() / 2));
-				$('#bandage').css("left", x + 100 - ($('#bandage').width() / 2));
-			}
-		};
-	});	
-}	
-
-function leavepot(elem) {
-	pot.isOverlaped = false;
-}
-
-pot.ondragstart = function() {
-	return false;
-};
