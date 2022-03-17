@@ -2,26 +2,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_2.css'/>" rel="stylesheet" type="text/css"/>
-<link href="<c:url value='/resources/css/interaction/ch04/getItem.css'/>" rel="stylesheet" type="text/css"/>
-<style>
-	#interact .character:nth-of-type(3) { height: 34.07%; }
-	#interact .animal { height: 23.79%; bottom: 33.8%; }
-	#interact .animal:nth-of-type(5) { display: none; }
-	
-	#line { width: 20vh; bottom: 44%; left: 50%; transform: rotate(0.75turn) translate(0vh, -8vh); }
-	.item { height: 05.74%; bottom: 54.25%; left: 22.5%; }
-	
-	@keyframes getItem {
-	    from { bottom: 33%; left: 49%; }
-	    to { bottom: 54.25%; left: 22.5%; }
-	}
-</style>
+<link href="<c:url value='/resources/css/interaction/ch04/ch04_2_9.css'/>" rel="stylesheet" type="text/css"/>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script defer src="<c:url value='/resources/js/interaction/ch04/getItem.js'/>" type="text/javascript"></script>
 <script defer>
 	var body = document.querySelector('body');
-	body.onload = function() { init_item(); };
+	body.onload = function() { setTimeout(next, 6500); };
+	
+	function next() { $("form").submit(); }
 </script>
 
 <div id="interact">
@@ -42,17 +30,11 @@
 	</div>
 	
 	<!-- object -->
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_13.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_16.png'/>">
+	<img class="character" src="<c:url value='/resources/Character/ch04/4_20.png'/>">
+	<img class="character" src="<c:url value='/resources/Character/ch04/4_17.png'/>">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_6.png'/>">
-	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_4.png'/>">
-	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_3_1.png'/>">
 	
-	<img class="knife" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">
-	
-	<div class="spot1" id="circle" style="bottom: 48%; left: 49%;"></div>
-	<div class="spot2" id="circle" style="bottom: 30%; left: 49%;"></div>
-	<div id="line"></div>
-	
-	<img class="item" src="<c:url value='/resources/object/ch04/4_4_6.png'/>">
+	<img class="character" src="<c:url value='/resources/Character/ch04/4_21.png'/>">
+	<img class="character" src="<c:url value='/resources/Character/ch04/4_18.png'/>">
+	<img class="character" src="<c:url value='/resources/Character/ch04/4_7.png'/>">
 </div>

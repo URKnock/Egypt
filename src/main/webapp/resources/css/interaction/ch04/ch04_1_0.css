@@ -1,18 +1,7 @@
 @charset "UTF-8";
 
-#active {
-	filter: drop-shadow(0px 0px 0.5vw yellow);
-}
-#active:hover {
-	transform: scale(1.1);
-}
-#active:active {
-	transform: scale(1.0);
-}
-
 form {
-	animation-duration: 4s;
-	animation-name: dialog;
+	animation: 3s dialog;
 }
 @keyframes dialog {
 	0% { opacity: 0; }
@@ -21,27 +10,36 @@ form {
 }
 
 #interact .character:nth-of-type(2) {
-	display: none;
+	animation: 3s obj;
 }
-#interact .object {
-	display: none;
+#interact .object{
+	height: 9.07%;
+	width: auto;
+	top: 50%;
+	left: 58vh;
+	transform: translate(-50%, 0%);
+	
+	animation: 3s obj;
+	z-index: 3;
+}
+@keyframes obj {
+	0% { opacity: 0; }
+	100% { opacity: 0; }
 }
 
 #interact .motion {
 	height: 88.80%;
-	width: auto;
+	bottom: -26.8%; left: -2%;
+	opacity: 0;
+	z-index: 2;
 	
-	top: 38%;
-	left: -2%;
-	
-	animation-duration: 4s;
-	animation-name: walk;
+	animation: 3s walk;
 }
 
 @keyframes walk {
-	0% { top: 12%; left: -40%; }
-	20% { top: 17%; left: -25%; }
-	40% { top: 12%; left: -15%; }
-	60% { top: 17%; left: -2%; }
-	100% {}
+	0% { bottom: 0%; left: -40%; opacity: 1;}
+	20% { bottom: -5%; left: -25%; }
+	40% { bottom: 0%; left: -15%; }
+	60% { bottom: -26.8%; left: -2%; }
+	100% { opacity: 1; }
 }

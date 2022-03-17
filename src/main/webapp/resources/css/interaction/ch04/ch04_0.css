@@ -4,78 +4,100 @@
 	width: 100%;
 	height: 100%;
 	position: relative;
+	overflow: hidden;
 }
 #interact img {
 	position: absolute;
+}
+
+/* 배경 */
+#interact .background {
 	width: 100%;
+	z-index: 1;
 }
-
-/* 아이템들 */
-#interact .object {
+#interact .background:nth-of-type(1) { /* 배경 */
+	height: 100%;
+}
+#interact .background:nth-of-type(2) { /* 기둥 */
+	/* 1안 */
+	bottom: 28%;
+	height: 64.5%;
+	
+	/* 2안 
+	height: 64.5%;
 	width: auto;
+	left: 50%; transform: translate(-50%, 0%);*/
+}
+#interact .background:nth-of-type(3) { /* 윗판 */
+	height: 7.5%;
+}
+#interact .background:nth-of-type(4) { /* 밑판 */
+	top: 71.5%;
 }
 
-#interact .object:nth-of-type(6) {
-	height: 44.90%;
-	
-	left: 4%;
-	top: 26.9%;
-	
+/* 배경 오트젝트 */
+#interact .bgObj {
 	z-index: 2;
 }
-#interact .object:nth-of-type(7) {
-	height: 44.90%;
-	
-	left: 25%;
-	top: 26.9%;
-	
-	z-index: 2;
+#interact .bgObj:nth-of-type(5) { /*무덤 밑 발판*/
+	height: 5%;
+	width: 32.29%;
+	bottom: 28%;
+	right: 5%;
 }
-#interact .object:nth-of-type(8) {
-	height: 44.90%;
-	
-	left: 47.5%;
-	top: 27%;
-	
-	z-index: 2;
+#interact .bgObj:nth-of-type(6) {
+	height: 14.62%;
+	bottom: 28%;
+	left: 12%;
 }
-#interact .object:nth-of-type(9) {
-	height: 49.89%;
-	
-	left: 66%;
-	top: 17%;
-	
+
+
+/* 신관들 */
+#interact .pontiff {
+	height: 44.90%;
+	bottom: 27.5%;
 	z-index: 3;
 }
-#interact .object:nth-of-type(10) {
+#interact .pontiff:nth-of-type(7) {
+	left: 4%;
+}
+#interact .pontiff:nth-of-type(8) {
+	left: 25%;
+}
+#interact .pontiff:nth-of-type(9) {
+	left: 47.5%;
+}
+
+/* 사자랑 아누비스*/
+#interact .character {
+	bottom: 32.5%;
+	z-index: 3;
+}
+#interact .character:nth-of-type(10) {
 	height: 48.70%;
-	
-	left: 63%;
-	top: 18.5%;
-	
+	right: 22.5%;
+}
+#interact .character:nth-of-type(11) {
+	height: 49.89%;
+	right: 31.5%;
+}
+
+/* object */
+#interact .object {
+	bottom: 32.5%;
 	z-index: 2;
 }
-#interact .object:nth-of-type(11) {
-	height: 27.68%;
-	
-	top: 44%;
-	left: 34.5%;
-	
-	z-index: 1;
-}
 #interact .object:nth-of-type(12) {
-	height: 52.87%;
+	height: 30%;
+	left: 34%;
 	
-	left: 77%;
-	top: 14%;
-	
-	z-index: 1;
+	bottom: 28%;
 }
 #interact .object:nth-of-type(13) {
+	height: 52.87%;
+	right: 15%;
+}
+#interact .object:nth-of-type(14) {
 	height: 65.83%;
-	
-	left: 83%;
-	top: 1%;
-	
-	z-index: 1;
+	right: 8%;
 }
