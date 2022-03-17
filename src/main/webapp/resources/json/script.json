@@ -838,8 +838,40 @@
 
 {
     "name":"라", "nickname":"태양의 신",
-    "content":"이제 천국을 향한 마지막 관문이다. 저 뱀과 최선을 다 해 승부하여라.",
+    "content":"사자여, 결백을 증명했구나.<br/>태양선에 승선하여 항해하자.",
     "chapter":8, "scene":0, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"태양선은 매일 떠오르고 밤도 매일 찾아오지.<br/>우리의 적, 방울뱀 '아펩'도 마찬가지다.",
+    "chapter":8, "scene":1, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"천국을 향한 마지막 관문이다. 아펩과 최선을 다하여 승부하거라.",
+    "chapter":8, "scene":2, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"이제 정말 천국에 거의 도착했다. 수고 많았다 사자여.",
+    "chapter":8, "scene":3, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"자, 이곳이 천국이다.<br/>이곳에서 영생을 누리도록 하라.",
+    "chapter":8, "scene":4, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },

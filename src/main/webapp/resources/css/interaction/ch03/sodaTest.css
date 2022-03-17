@@ -1,4 +1,19 @@
-#potToClick {
+canvas {
+	position:absolute;
+	width: 110;
+	height: 80;
+	cursor: url('/resources/object/ch03/niddle.png') 10 37, auto;
+}
+
+.clickable {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+#potToClick, #bandageToClick, #niddleToClick {
 	position: absolute;
 	cursor: pointer;
 	z-index: 3;
