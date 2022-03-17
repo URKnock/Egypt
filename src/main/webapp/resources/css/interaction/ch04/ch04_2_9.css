@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+#interact .character:nth-of-type(2) { 
+	display: block; 
+	height: 44.81%; left: 1%;
+	opacity: 0;
+	animation: 3s disappear;
+}
+#interact .character:nth-of-type(3) { 
+	height: 34.3%; 
+	opacity: 0;
+	animation: 2s disappear;
+}
+#interact .character:nth-of-type(4) { 
+	opacity: 0;
+	animation: 1s disappear;
+}
+@keyframes disappear {
+	0% { opacity: 1; }
+	99% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+#interact .character:nth-of-type(5) { 
+	height: 61.20%;
+	left: 1%;
+	opacity: 0;
+	z-index: 3;
+	animation: 5s walk;
+	animation-delay: 3s;
+}
+#interact .character:nth-of-type(6) { 
+	height: 50.64%;
+	left: 10%;
+	opacity: 0;
+	animation: 5s walk;
+	animation-delay: 2s;
+}
+#interact .character:nth-of-type(7) { 
+	height: 48.70%;
+	right: 14%;
+	animation: 1s appear;
+}
+@keyframes appear {
+	0% { opacity: 0; }
+	99% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes walk {
+	0% { opacity: 1; }
+	100% { left: 120%; opacity: 1; }
+}

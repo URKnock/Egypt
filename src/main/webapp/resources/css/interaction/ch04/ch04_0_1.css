@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#active {
+	filter: drop-shadow(0px 0px 0.5vw yellow);
+}
+#active:hover {
+	transform: scale(1.1);
+}
+#active:active {
+	transform: scale(1.0);
+}
+	
+#interact .guide {
+	display: none;
+	
+	position: absolute;
+	width: 50%;
+	height: 7.5%;
+	background: ivory;
+	line-height: 275%;
+	font-size: 1.5vw;
+	top: 5%;
+	left: 50%;
+	
+	transform: translate(-50%, 0%);
+	
+	z-index: 10;
+}

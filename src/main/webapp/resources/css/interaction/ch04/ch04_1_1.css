@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+#interact .character:nth-of-type(2) {	
+	animation: obj 1s;
+}
+#interact .object{
+	height: 21.11%;
+	top: 38%;
+	left: 58vh;
+	transform: translate(-50%, 0%);
+	
+	animation: obj 1s;
+	z-index: 2;
+}
+@keyframes obj {
+	0% { top: 100%; }
+	100% { top: 38%; }
+}
+
+
+/* peseshkaf */
+
+.tool {
+	width: auto !important;
+	height: 21.01%;
+	
+	top: 45%;
+	left: 22%;
+	
+	display: none;
+}
+
+.oil {
+	position: absolute;
+	height: 3vh;
+	width: auto !important;
+	opacity: 0;
+	
+	animation: drop 1s;
+	display: none;
+}
+
+@keyframes drop{
+	0% { opacity: 1; }
+	70% { opacity: 1; }
+	100% { opacity: 0; transform: translateY(50%);}
+}

@@ -6,12 +6,15 @@
 	<title>사자의 서</title>
 	<link href="<c:url value='/resources/css/ch04.css'/>" rel="stylesheet" type="text/css"/>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-	<script src="<c:url value='/resources/js/ch03.js'/>"></script>
-	<script> $(function(){ init(); }); </script>
-	
-	<script defer src="<c:url value='/resources/js/ch04_1.js'/>"/></script>
+	<script>
+		function init() {
+			$("#dialogue").click(function() {
+				$("form").submit();
+			});
+		};
+	</script>
 </head>
-<body>
+<body onload="init();">
 <div id="view">
 <div id="wrap">
 	<div id="background">

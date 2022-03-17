@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#circle {
+	cursor: pointer;
+	position: absolute;
+	width: 5%; height: 9%;
+	
+	border-radius: 50%;
+	background-color: black;
+	opacity: 0;
+	
+	z-index: 3;
+}
+
+#line {
+	position: absolute;
+	
+    border: none;
+    border-top: 1vh dotted white;
+    
+	z-index: 5;
+}
+
+.item {
+	z-index: 3;
+
+	animation: 2s getItem;
+	display: none;
+}
