@@ -5,6 +5,9 @@
 
 <link rel="stylesheet" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 
+<div class="guide" align="center">마우스를 클릭하여 주변을 둘러보세요</div>
+
+<div class="info_back"></div>
 <div id="window">
 	<div class="infoImg"></div>
 	<div class="infoText">
@@ -13,7 +16,5 @@
 			더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트
 		</p>
 	</div>
-	<div class="close" onclick="hide_info()">
-		X
-	</div>
+	<div class="close" onclick="hide_info()">X</div>
 </div>
