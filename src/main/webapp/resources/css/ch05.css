@@ -5,133 +5,130 @@
     font-style: normal;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: 0;
+}
 body {
 	font-family: 'Minguk-Regular';
+	background: black;
+	
 	overflow: hidden;
   	overflow-y: hidden;
   	overflow-x: hidden;
 }
 
-#background {
-	width:100%;
-	height:100%;
-	background: no-repeat url("../background/ch05/5_0.jpg") center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
-	display: flex;
-	justify-content: flex-end;
-}
-
-#mainC {
-	 position: absolute;
-     z-index: 1;
- 	 top: 50%; right: 80%;
- 	 transform: translate(70%,-50%);
-}
-
-#earth {
+#view {
+	width: 100vw;
+	height: 100vh !important;
 	
-	position: absolute; 
-	top: 47%;
-	width:800px;
-    bottom: 0;
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	font-size: 1vw;
 }
 
-/* hover 효과 */
-
-.backs img{
-	transition: all 0.2s linear;
+.background {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	
+	width: 100%;
+	height: 100% !important;
 }
 
-.backs:hover img{
-	transform: scale(1.2);
+/*노랑 효과 */
+.select {
+	filter: drop-shadow(0px 0px 0.5vw yellow);
 }
-/* hover 효과 끝 */
-
-.water1 {
-	position: absolute; 
-	width:2500px;
-	z-index: 3;
-    bottom: 0;
+.pikachu:hover {
+	transform: scale(1.1);
 }
+.pikachu:active {
+	transform: scale(1.0);
+}
+/*노랑 효과 */
 
-.water1_1 {
-	position: absolute; 
-	width:1600px;
-	z-index: 3;
-    bottom: 0;
-    right: 30%;
+@keyframes wave1 { 
+	0% { left: 0%; }
+	50% { left: -6%; } 
+	100% { left: 0%; } 
 }
 
-.water2 {
-	position: absolute; 
-	width:1600px;
-	top: 58%;
-	z-index: 0;
-    bottom: 0;
+@keyframes wave2 { 
+	0% { right: 0%; }
+	50% { right: -6%; } 
+	100% { right: 0%; } 
 }
 
-.water3 {
-	position: absolute; 
-	width:1600px;
-	z-index: 0;
-    bottom: 0;
+
+form {
+	position: absolute;
+	
+	background: url("../UI/Dialogue/BG.png");
+	
+	width: 100%;
+	height: 27% !important;
+	
+	bottom: 0%;
+	left: 0%;
+	
+	z-index: 50;
 }
 
-.modal{ 
-  z-index: 10;
-  position:absolute; 
-  width:100%; 
-  height:100%;
-  background: rgba(0,0,0,0.8); 
-  top:0; left:0;
-  display:none;
+#dialogue {
+	position: absolute;
+
+	width: 100%;
+	height: 95% !important;
+	
+	bottom: 0;
+}
+#dialogue>img {
+	position: absolute;
+	
+	width: auto !important;
+	height: 70%;
+	
+	top: 15%;
+	left: 5.5%;
+}
+#dialogue #scene {
+	position: absolute;
+	
+	width: 45% !important;
+	height: 80% !important;
+	
+	top: 10%;
+	left: 18%;
+}
+#dialogue #scene #title {
+	width: 40%;
+	height: 20% !important;
+	
+	font-size: 1.2em;
+	font-weight: bolder;
+	
+	display: flex;
+	justify-content: space-between;
+}
+#dialogue #scene #content {
+	position: absolute;
+	
+	width: 100%;
+	height: 60%;
+	
+	top: 30%;
+	left: 2%;
+		
+	font-size: 1em;
 }
 
-.info1 {
-  position: absolute;
-  top: 50%; right: 50%;
-  transform: translate(50%,-50%);
-}
-
-.info2 {
-  position: absolute;
-  top: 50%; right: 50%;
-  transform: translate(50%,-50%);
-}
-
-.modal2{ 
-  z-index: 11;
-  position:absolute; 
-  width:100%; 
-  height:100%;
-  background: rgba(0,0,0,0.8); 
-  top:0; left:0;
-  display:none;
-}
-
-.inf_content{
-  position:absolute;
-  width:1200px; height:700px;
-  background:#fff; border-radius:10px;
-  top: 50%; right: 50%;
-  transform: translate(50%,-50%);
-  text-align:center;
-  box-sizing:border-box; padding:50px 0;
-  line-height:23px; cursor:pointer;
-}
-
-.inf_modal{
-	z-index: 15;
-	position:absolute;
-    width:100%; 
- 	height:100%;
- 	background: rgba(0,0,0,0.8); 
- 	top:0; left:0;
-    display:none;
-}
 
 #menu {
 	display: inline-flex;
@@ -143,14 +140,89 @@ body {
 	margin: 10px;
 }
 
-.lab {
-	 position: absolute;
-     z-index: 1;
- 	 top: 60%; right: 30%;
- 	 transform: translate(70%,-50%);
+#water1 {
+	position: absolute; 
+	width:106vw;
+	height: 35vh;
+	z-index: 2;
+    bottom: 60;
+    
+    animation-name: wave1;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#water2 {
+	position: absolute;
+	width: 106vw;
+	height: 35vh; 
+	z-index: 3;
+    bottom: 25;
+    
+    animation-name: wave2;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#water3 {
+	position: absolute; 
+	width:110vw;
+	height: 34vh;
+	z-index: 4;
+    bottom: 0;
+    background-repeat: repeat;
+    
+    animation-name: wave1;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#user1 {
+	position: absolute;
+	z-index: 4;
+	width: 10vw;
+	height: 38vh;
+	left: 6%;
+	top: 21%; 
+}
+#user2 {
+	opacity:0;
+	position: absolute;
+	z-index: 4;
+	width: 10vw;
+	height: 38vh;
+	left: 6%;
+	top: 21%; 
+}
+#earth {
+	position: absolute;
+	width: 40vw;
+	height: 42vh;
+	z-index: 3;
+	top: 19.7%; 
+}
+
+#la {
+	z-index: 3;
+	position: absolute;
+	right: -60%;
+	top: 29%;
+}
+#nol {
+	position: absolute;
+	width: 50px;
+	height: 90px;
+	left: 20%;
+	top: 19%;
+	opacity: 0;
 }
 
 #dialogue {
+	position: absolute;
+	z-index: 5;
 	width:100%;
 	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;
     -webkit-background-size: cover;
@@ -161,11 +233,13 @@ body {
 	align-content: center;
 }
 #scene {
+	z-index: 5;
 	display: inline-flex;
 	flex-direction: column;
 	width:100%;
 }
 #choice {
+	z-index: 5;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;

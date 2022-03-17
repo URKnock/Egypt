@@ -4,9 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <title>사자의 서</title>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link href="<c:url value='/resources/css/ch05.css'/>" rel="stylesheet" type="text/css"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch05.js'/>"></script>
+<script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 <script> $(function(){ init(); }); </script>
 </head>
 <body>
@@ -15,7 +17,21 @@
 		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
 		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
 		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>	
+	</div>
+	<div id="earth">
+	<img id="earth" src="<c:url value='/resources/background/ch05/5_1.png'/>">
+	</div>
+	<div id="water">
+		<img id="water1" src="<c:url value='/resources/background/ch05/5_4.png'/>">
+		<img id="water2" src="<c:url value='/resources/background/ch05/5_3.png'/>">
+		<img id="water3" src="<c:url value='/resources/background/ch05/5_2.png'/>">
+	</div>
+	<div id="chs">
+	<img id="user1" src="<c:url value='/resources/Character/ch05/5_2.png'/>">
+	<img id="user2" src="<c:url value='/resources/Character/ch05/5_1.png'/>">
+	<img id="la" src="<c:url value='/resources/Character/ch05/la_b.png'/>">
+	<img id="nol" src="<c:url value='/resources/object/ch05/nol.png'/>">
 	</div>
 </div>
 <form method="post" action="<c:url value='/chapter05'/>">

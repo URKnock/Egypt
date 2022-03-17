@@ -54,5 +54,10 @@
 {
 	"chapter":4, "scene":1, "flag":0,
 	"page":"ch04_01.jsp"
+},
+
+{
+	"chapter":5, "scene":3, "flag":0,
+	"page":"DuatFirst.jsp"
 }
 ]
