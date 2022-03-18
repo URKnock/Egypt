@@ -17,7 +17,7 @@
 	
 	<!-- Character -->
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_8.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_12.png'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/4_8_1.webp'/>">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_11.png'/>">
 	
 	<img id="active" onclick="tap_tool(this)" class="object" src="<c:url value='/resources/object/ch04/4_3_4.png'/>">

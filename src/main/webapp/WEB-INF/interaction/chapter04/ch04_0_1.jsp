@@ -25,11 +25,11 @@
 	<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_7.png'/>">
 	
 	<!-- character -->
-	<img id="active" onclick="tap_info(this, 0)" class="pontiff"  src="<c:url value='/resources/Character/ch04/4_1.png'/>">
-	<img id="active" onclick="tap_info(this, 1)" class="pontiff"  src="<c:url value='/resources/Character/ch04/4_2.png'/>">
-	<img id="active" onclick="tap_info(this, 2)" class="pontiff"  src="<c:url value='/resources/Character/ch04/4_3.png'/>">
+	<img id="active" onclick="tap_info(this, 0)" class="pontiff"  src="<c:url value='/resources/webp/ch04/4_1_1.webp'/>">
+	<img id="active" onclick="tap_info(this, 1)" class="pontiff"  src="<c:url value='/resources/webp/ch04/4_6_1.webp'/>">
+	<img id="active" onclick="tap_info(this, 2)" class="pontiff"  src="<c:url value='/resources/webp/ch04/4_7_1.webp'/>">
 	
-	<img id="anubis" class="character" src="<c:url value='/resources/Character/ch04/4_5.png'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/4_3_2.webp'/>">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_4.png'/>">
 	
 	<!-- object -->
