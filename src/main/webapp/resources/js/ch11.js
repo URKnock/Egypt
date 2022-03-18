@@ -76,31 +76,25 @@ function init() { //화면 초기화
 	
 	var b = $("#dialogue").height() + 10*w; //대화창
 	
-	var bg1 = $("#background > img:nth-child(1)"); //원숭이
+	var bg1 = $("#background > img:nth-child(1)"); //원숭이 탕
 	bg1.width(bg1.prop("naturalWidth") * w);
 	bg1.height(bg1.prop("naturalHeight") * w);
-	bg1.css("left", x - (bg1.width() / 2.0) + 100*w);
-	bg1.css("bottom", $("#dialogue").height() + 50*w);
+	bg1.css("left", x - (bg1.width() / 2.0) - 100*w);
+	bg1.css("bottom", $("#dialogue").height() - 50*w);
 	
-	var bg2 = $("#background > img:nth-child(2)"); //원숭이 상자 속 불꽃
+	var bg2 = $("#background > img:nth-child(2)"); //원숭이 탕 속 불꽃
 	bg2.width(bg2.prop("naturalWidth") * w);
 	bg2.height(bg2.prop("naturalHeight") * w);
-	bg2.css("left", x - (bg1.width() / 2.0) + 350*w);
-	bg2.css("bottom", $("#dialogue").height() + 300*w);
+	bg2.css("left", x - (bg1.width() / 2.0) - 100*w);
+	bg2.css("bottom", $("#dialogue").height() - 50*w);
 	
-	var bg3 = $("#background > img:nth-child(3)"); //바닥
-	bg3.width(bg3.prop("naturalWidth") * w);
-	bg3.height(bg3.prop("naturalHeight") * w);
-	//bg3.css("left", x + 400*w);
-	bg3.css("bottom", $("#dialogue").height());
-	
-	var bg4 = $("#background > img:nth-child(4)"); //바닥 마젠타색 불꽃
+	var bg4 = $("#background > img:nth-child(3)"); //바닥 마젠타색 불꽃
 	bg4.width(bg4.prop("naturalWidth") * w);
 	bg4.height(bg4.prop("naturalHeight") * w);
-	bg4.css("left", x - (bg1.width() / 2.0) + 100*w);
+	bg4.css("left", x - (bg1.width() / 2.0) - 100*w);
 	bg4.css("bottom", $("#dialogue").height());
 	
-	var bg5 = $("#background > img:nth-child(5)"); //뱀 인간?
+	var bg5 = $("#background > img:nth-child(4)"); //암무트
 	bg5.width(bg5.prop("naturalWidth") * w);
 	bg5.height(bg5.prop("naturalHeight") * w);
 	bg5.css("left", x + 600*w);
