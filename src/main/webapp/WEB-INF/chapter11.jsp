@@ -12,14 +12,13 @@
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
-		<img id="monkeys" class="select pikachu" src="<c:url value='/resources/object/ch11/11_0_13.png'/>"/>
-		<img id="fire" src="<c:url value='/resources/object/ch11/11_0_14.png'/>"/>
-		<img id="ground" src="<c:url value='/resources/object/ch11/11_0_3.png'/>"/>
-		<img id="hellFire" src="<c:url value='/resources/object/ch11/11_0_4.png'/>"/>
-		<img id="snakeMan" src="<c:url value='/resources/object/ch11/11_0_5.png'/>"/>
+		<img id="monkeys" src="<c:url value='/resources/object/ch11/1층_원숭이탕.png'/>"/>
+		<img id="fire" src="<c:url value='/resources/object/ch11/1층_원숭이탕불.png'/>"/>
+		<img id="hellFire" src="<c:url value='/resources/object/ch11/1층_땅불.png'/>"/>
+		<%-- <img id="snakeMan" src="<c:url value='/resources/object/ch11/11_0_5.png'/>"/> --%>
 	</div>
 	<div id="page">
-		<!-- 안 쓸지도 -->
+		<!-- 안 쓸듯 -->
 	</div>
 	<div id="menu">
 		<div>
