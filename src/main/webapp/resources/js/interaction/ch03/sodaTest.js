@@ -1,4 +1,5 @@
 function interaction() {
+	$('#bed').hide();
 	$('#pot').hide();
 	$('#bandage').hide();
 	$('#niddle').hide();
@@ -54,18 +55,13 @@ function interaction() {
 	$('#potToClick').css("top", scrollY - ($('#potToClick').height() / 2));
 	$('#potToClick').css("left", x - $("#scroll").width() / 4 - ($('#potToClick').width() / 2));
 	$('#potToClick').on("click", function() {
-		var sLeft = $("#bed").offset().left;
+		var sLeft = $('#background').width() / 2 - $('#pot').width() / 2;
 		$('#potToClick').removeClass("select");
 		$('#potToClick').hide();
-		resize("#soda_pot");
-		rescale("#soda_pot", 7/5);
-		$('#soda_pot').css("top", 300 + $("#pot").height()/7);
-		$('#soda_pot').css("left", sLeft + $("#pot").width()/7*3/2);
-		$('#soda_pot').addClass("blinking");
-		$('#pot').css("left", sLeft);
-		$('#soda_pot').show();
 		$('#pot').show();
+		$('#pot').css("left", sLeft);
 		$('#click1').show();
+		onUsing = "pot";
 		dragElement(document.getElementById('click1'), "#pot");
 	});
 	
@@ -107,6 +103,7 @@ function interaction() {
 						$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
 						$('#background').children().hide();
 						$('#servant').hide();
+						$('#bed').show();
 						human_rescale();
 					}, 2000);
 				});
@@ -117,86 +114,114 @@ function interaction() {
 			$('#servant').removeClass("select");
 		});
 	}, 2400);
-/*
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-let coord = { x: canvas.offsetLeft, y: canvas.offsetTop };
-
-canvas.addEventListener("mousedown", start);
-canvas.addEventListener("mouseup", stop);
-
-function reposition(event) {
-  coord.x = event.clientX - canvas.offsetLeft;
-  coord.y = event.clientY - canvas.offsetTop;
-}
-function start(event) {
-  canvas.addEventListener("mousemove", draw);
-  reposition(event);
-}
-function stop() {
-  canvas.removeEventListener("mousemove", draw);
-}
-function draw(event) {
-  ctx.beginPath();
-  ctx.lineWidth = 5;
-  ctx.lineCap = "round";
-  ctx.strokeStyle = "#FF0000";
-  ctx.moveTo(coord.x, coord.y);
-  reposition(event);
-  ctx.lineTo(coord.x, coord.y);
-  ctx.stroke();
-}
-*/
 
 let cd = null;
 let Element = null;
+var onUsing = null;
 var enterCnt = 1;
 var isEntering = false;
 
 function enterElement(elem) {
-	console.log("enter: " + elem.id + ", " + isEntering);
+	console.log("enter: " + elem.id + ", " + isEntering + ", " + enterCnt + ", " + cd.id);
 	cd.isOverlaped = false;
-	if(!isEntering) {
+	if(!isEntering && elem.id == "human_cover") {
 		isEntering = true;
 		enterCnt++;
-		if(elem.id == "pot") {
+		if(onUsing == "pot") {
 			$('#human_soda').attr("src", "/resources/object/ch03/soda_" + enterCnt + ".png");
-			if(enterCnt == 3) {
+			if(enterCnt >= 3) {
 				enterCnt == 0;
-				$(Element).off("mousedown");
-				$(Element).hide();
+				$("#" + onUsing).off("mousedown");
+				$("#" + onUsing).hide();
 				$('#potToClick').show();
 				$('#bandageToClick').addClass("select");
 				$('#bandageToClick').on("click", function() {
 					$('#bandageToClick').removeClass("select");
 					$('#bandageToClick').hide();
-					$('#bandage').css("left", $("#bed").offset().left);
+					$('#bandage').css("left", $('#background').width() / 2 - $('#pot').width() / 2);
 					$('#bandage').show();
 					$('#click1').hide();
 					$('#click2').show();
+					onUsing = "bandage";
 					dragElement(document.getElementById('click2'), "#bandage");
 				});
 			}
-		} else if(elem.id == "bandage") {
-			$('#human_soda').attr("src", "/resources/object/ch03/bandage_" + enterCnt + ".png");
-			if(enterCnt == 3) {
-				$(Element).off("mousedown");
-				$(Element).hide();
+		} else if(onUsing == "bandage") {
+			$('#human_soda').attr("src", "/resources/object/ch03/bandage_" + enterCnt-3 + ".png");
+			if(enterCnt >= 4) {
+				$("#" + onUsing).off("mousedown");
+				$("#" + onUsing).hide();
 				$('#bandageToClick').show();
+				$('#niddleToClick').addClass("select");
 				$('#niddleToClick').on("click", function() {
 					$('#niddleToClick').removeClass("select");
 					$('#niddleToClick').hide();
-					$('#niddle').css("left", $("#bed").offset().left);
-					$('#niddle').show();
 					$('#click2').hide();
 					$('#click3').show();
-					dragElement(document.getElementById('click3'), "#niddle");
+					$('#human_cover').addClass("select");
+					onUsing = "niddle";
+					// dragElement(document.getElementById('click3'), "#niddle");
+					
+					var isDrawed = false;
+					var cHeight2 = $('canvas').height() / 2;
+					
+					var cTop = $('#human').offset().top + 20*w;
+					var cLeft = $('#human').offset().left + 410*w;
+					$('canvas').show();
+					
+					$('canvas').width(210*w*1.25);
+					$('canvas').height(105*w);
+					$('canvas').css({ top : cTop, left : cLeft });
+					
+					function next() {
+						$('#human_soda').on("load", function() {
+							$('canvas').fadeOut(2000);
+							$('#human').fadeOut(1000);
+							$('#human_cover').fadeOut(1000);
+							$('#human_soda').addClass("fadeLeft");
+							setTimeout(function() { $('#human_soda').addClass("fadeActive"); }, 100);
+							setTimeout(function() { $("form").submit(); }, 5000);
+						});
+						canvas.removeEventListener("mousemove", draw);
+						$('#human_soda').attr("src", "/resources/character/ch03/3_4.png");						
+					}
+					
+					$('canvas').on("mouseover", function() { $('#human_cover').removeClass("select"); });
+					$('canvas').on("mouseout", function() { if( isDrawed ) { next(); } });
+					
+					const canvas = document.getElementById("canvas");
+					const ctx = canvas.getContext("2d");
+					let coord = { x: 0, y: 0 };
+					
+					canvas.addEventListener("mousedown", start);
+					canvas.addEventListener("mouseup", stop);
+					
+					function reposition(event) {
+					  coord.x = event.clientX - canvas.offsetLeft;
+					  coord.y = event.clientY - canvas.offsetTop + cHeight2;
+					}
+					function start(event) {
+					  canvas.addEventListener("mousemove", draw);
+					  reposition(event);
+					}
+					function stop() {
+					  canvas.removeEventListener("mousemove", draw);
+					  isDrawed = true;
+					}
+					function draw(event) {
+					  ctx.beginPath();
+					  ctx.lineWidth = 5;
+					  ctx.lineCap = "round";
+					  ctx.strokeStyle = "#FF0000";
+					  ctx.moveTo(coord.x, coord.y);
+					  reposition(event);
+					  ctx.lineTo(coord.x, coord.y);
+					  ctx.stroke();
+					  ctx.closePath();
+					  if(coord.x > canvas.offsetLeft + canvas.width() / 1.25) { next(); }
+					}
 				});
 			}
-		} else if(elem.id == "niddle") {
-			$(Element).off("mousedown");
-			$(Element).hide();
-			$('canvas').show();
 		}
 	}
 }
@@ -209,7 +234,6 @@ function leaveElement(elem) {
 
 function dragElement(elmnt, elem) {
 	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-	var spot = $("#soda_pot");
 	if (document.getElementById(elem)) {
 		document.getElementById(elem).onmousedown = dragMouseDown;
 	} else {
@@ -234,10 +258,6 @@ function dragElement(elmnt, elem) {
 		pos4 = e.clientY;
 		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
 		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-		if(elmnt.id == "pot") {
-			spot.style.top = (spot.offsetTop - pos2) + "px";
-			spot.style.left = (spot.offsetLeft - pos1) + "px";
-		}
 	}
 	
 	function closeDragElement() {
