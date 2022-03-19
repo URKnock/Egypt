@@ -3,9 +3,9 @@
 
 <link href="<c:url value='/resources/css/interaction/ch03/sodaTest.css'/>" rel="stylesheet" type="text/css"/>
 <img src="../resources/object/ch03/paper.png" id="scroll"/>
-<div class="clickable"><img src="../resources/object/ch03/pot.png" id="pot"/></div>
-<div class="clickable"><img src="../resources/object/ch03/bandage.png" id="bandage"/></div>
-<div class="clickable"><img src="../resources/object/ch03/niddle.png" id="niddle"/></div>
+<div id="click1" class="clickable"><img src="../resources/object/ch03/pot.png" id="pot"/></div>
+<div id="click2" class="clickable"><img src="../resources/object/ch03/bandage.png" id="bandage"/></div>
+<div id="click3" class="clickable"><img src="../resources/object/ch03/niddle.png" id="niddle"/></div>
 <img src="../resources/object/ch03/pot.png" id="potToClick"/>
 <img src="../resources/object/ch03/bandage.png" id="bandageToClick"/>
 <img src="../resources/object/ch03/niddle.png" id="niddleToClick"/>

@@ -3,11 +3,9 @@ function interaction() {
 	$('#bandage').hide();
 	$('#niddle').hide();
 	$('canvas').hide();
+	$('.clickable').hide();
 	resizeCenter("#human_soda");
 	resizeCenter("#human_cover");
-	dragElement($('.clickable:nth-child(1)'), "#pot");
-	dragElement($('.clickable:nth-child(2)'), "#bandage");
-	dragElement($('.clickable:nth-child(3)'), "#niddle");
 
 	function human_rescale() {
 		var arr = ["#human", "#human_soda", "#human_cover"]
@@ -67,6 +65,8 @@ function interaction() {
 		$('#pot').css("left", sLeft);
 		$('#soda_pot').show();
 		$('#pot').show();
+		$('#click1').show();
+		dragElement(document.getElementById('click1'), "#pot");
 	});
 	
 	resize('#bandageToClick');
@@ -154,7 +154,7 @@ var enterCnt = 1;
 var isEntering = false;
 
 function enterElement(elem) {
-	console.log("enter: " + elem.id + ", " + entered);
+	console.log("enter: " + elem.id + ", " + isEntering);
 	cd.isOverlaped = false;
 	if(!isEntering) {
 		isEntering = true;
@@ -172,6 +172,9 @@ function enterElement(elem) {
 					$('#bandageToClick').hide();
 					$('#bandage').css("left", $("#bed").offset().left);
 					$('#bandage').show();
+					$('#click1').hide();
+					$('#click2').show();
+					dragElement(document.getElementById('click2'), "#bandage");
 				});
 			}
 		} else if(elem.id == "bandage") {
@@ -185,6 +188,9 @@ function enterElement(elem) {
 					$('#niddleToClick').hide();
 					$('#niddle').css("left", $("#bed").offset().left);
 					$('#niddle').show();
+					$('#click2').hide();
+					$('#click3').show();
+					dragElement(document.getElementById('click3'), "#niddle");
 				});
 			}
 		} else if(elem.id == "niddle") {
@@ -196,7 +202,7 @@ function enterElement(elem) {
 }
 
 function leaveElement(elem) {
-	console.log("leave: " + elem.id + ", " + entered);
+	console.log("leave: " + elem.id);
 	cd.isOverlaped = false;
 	isEntering = false;
 }
@@ -236,10 +242,10 @@ function dragElement(elmnt, elem) {
 	
 	function closeDragElement() {
 		Element = elem;
-		elmnt.hide();
+		elmnt.style.display = 'none';
 		let eb = document.elementFromPoint(event.clientX, event.clientY);
 		let db = eb.closest('.droppable');
-		elmnt.show();
+		elmnt.style.display = '';
 		console.log(eb);
 		console.log(db);
 		if (eb) {
