@@ -42,10 +42,10 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_13.png'/>">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_17.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_6.png'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
 	
 	<!-- animal -->
-	<img class="animal" id="active" src="<c:url value='/resources/object/ch04/4_4_8.png'/>">
+	<img class="animal" id="active" src="<c:url value='/resources/webp/ch04/4_5.webp'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_9.png'/>">
 	
 	<img class="knife" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">

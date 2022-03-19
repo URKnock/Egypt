@@ -3,7 +3,11 @@
 
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_2.css'/>" rel="stylesheet" type="text/css"/>
 <style>
-	#interact .animal:nth-of-type(5) { height: 30.09%; z-index: 3; }
+	#interact .animal:nth-of-type(5) { 
+		height: 32.03%;
+		bottom: 35%;
+		z-index: 3; 
+	}
 	#interact .animal:nth-of-type(6) { height: 23.79%; bottom: 33.5%; display: none; }
 	
 	#active:hover {
@@ -41,8 +45,8 @@
 	<!-- object -->
 	<img class="character">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_15.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_6.png'/>">
-	<img class="animal" id="active" src="<c:url value='/resources/object/ch04/4_4_2.png'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
+	<img class="animal" id="active" src="<c:url value='/resources/webp/ch04/4_2.webp'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_3.png'/>">
 	
 	<img class="knife" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">
