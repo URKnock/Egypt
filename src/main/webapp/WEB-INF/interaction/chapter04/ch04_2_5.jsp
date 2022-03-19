@@ -26,5 +26,5 @@
 	<!-- object -->
 	<img>
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_17.png'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_3.webp'/>">
 </div>

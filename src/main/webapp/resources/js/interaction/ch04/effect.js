@@ -28,7 +28,7 @@ function tap_motion(e, i) {
 		motion_total--;
 		
 		if(motion_total <= 0) {
-			setTimeout(next, 1500);
+			setTimeout(next, 3000);
 		}
 	}
 }
