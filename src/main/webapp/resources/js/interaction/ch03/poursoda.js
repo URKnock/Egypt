@@ -3,7 +3,8 @@ function interaction() {
 	$('#soda_over').hide();
 	$('#dragLine').hide();
 	$('#dragSpot').hide();
-	$("#background").children().hide();
+	$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
+	$('#background').children().hide();
 
 	var arr = ["#hum", "#soda_head", "#soda_body", "#soda_bottom", "#soda_leg", "#soda_over"]
 	arr.forEach (function (item, idx) {
@@ -11,6 +12,7 @@ function interaction() {
 		centerX(item);
 		$(item).css("bottom", $("#dialogue").height() + 90*w);
 	});
+	$("#soda_over").css("bottom", $("#dialogue").height() + 90*w + 17*w);
 	$(".soda").hide();
 
 	resize("#bed");
@@ -26,6 +28,7 @@ function interaction() {
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;
 	$("#scroll").css("top", 112*w);
+	$('#scroll').attr("src", "/resources/object/ch03/paper_open.webp");
 	
 	var scrollY = $("#scroll").height() / 2 + 112*w;
 	resize('#potToClick');
@@ -45,6 +48,7 @@ function interaction() {
 		$('#dragLine').show();
 		$('#dragSpot').show();
 	});
+	$('#potToClick').hide().fadeIn(1100).addClass("select");
 
 	$("#pot").on("mousedown", function(event) {
 		let shiftX = event.clientX - pot.getBoundingClientRect().left;
@@ -97,11 +101,12 @@ function enterpot(elem) {
 	$("#pot").off("mousedown");
 	pot.ondragstart = function() { return true; };
 
-	$("#soda_over").fadeIn(2000);
+	$("#soda_over").fadeIn(500).fadeOut(2000);
 	$("#soda_leg").slideDown(1200);
 	$("#soda_bottom").slideDown(1500);
 	$("#soda_body").slideDown(1800);
 	$("#soda_head").slideDown(2100);
+	$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
 	setTimeout(function() { $("form").submit(); }, 5000);
 }	
 

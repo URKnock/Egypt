@@ -41,7 +41,9 @@ function interaction() {
 	    "/resources/object/ch03/soda_1.png",
 	    "/resources/object/ch03/soda_2.png",
 	    "/resources/object/ch03/soda_3.png",
-	    "/resources/object/ch03/soda_4.png"
+	    "/resources/object/ch03/soda_4.png",
+	    "/resources/object/ch03/paper_open.webp",
+	    "/resources/object/ch03/paper_close.webp"
 	]);
 	
 	resize("#scroll");
@@ -174,16 +176,23 @@ function enterElement(elem) {
 					$('canvas').css({ top : cTop, left : cLeft });
 					
 					function next() {
-						$('#human_soda').on("load", function() {
-							$('canvas').fadeOut(2000);
-							$('#human').fadeOut(1000);
-							$('#human_cover').fadeOut(1000);
-							$('#human_soda').addClass("fadeLeft");
-							setTimeout(function() { $('#human_soda').addClass("fadeActive"); }, 100);
-							setTimeout(function() { $("form").submit(); }, 5000);
-						});
-						canvas.removeEventListener("mousemove", draw);
-						$('#human_soda').attr("src", "/resources/character/ch03/3_4.png");						
+						if(isDrawed) {
+							isDrawed = false;
+							$('#potToClick').fadeOut();
+							$('#bandageToClick').fadeOut();
+							$('#niddleToClick').fadeOut();
+							$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
+							$('#human_soda').on("load", function() {
+								$('canvas').fadeOut(2000);
+								$('#human').fadeOut(1000);
+								$('#human_cover').fadeOut(1000);
+								$('#human_soda').addClass("fadeLeft");
+								setTimeout(function() { $('#human_soda').addClass("fadeActive"); }, 100);
+								setTimeout(function() { $("form").submit(); }, 5000);
+							});
+							canvas.removeEventListener("mousemove", draw);
+							$('#human_soda').attr("src", "/resources/character/ch03/3_4.png");
+						}
 					}
 					
 					$('canvas').on("mouseover", function() { $('#human_cover').removeClass("select"); });
@@ -207,6 +216,7 @@ function enterElement(elem) {
 					function stop() {
 					  canvas.removeEventListener("mousemove", draw);
 					  isDrawed = true;
+					  next();
 					}
 					function draw(event) {
 					  ctx.beginPath();
@@ -218,7 +228,9 @@ function enterElement(elem) {
 					  ctx.lineTo(coord.x, coord.y);
 					  ctx.stroke();
 					  ctx.closePath();
-					  if(coord.x > canvas.offsetLeft + canvas.width() / 1.25) { next(); }
+					  if(coord.x > canvas.offsetLeft + canvas.width() / 1.25) { 
+					 	isDrawed = true;
+					  }
 					}
 				});
 			}
