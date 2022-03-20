@@ -12,11 +12,11 @@
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
-		<img id="monkeys" src="<c:url value='/resources/object/ch11/1층_원숭이탕.png'/>"/>
-		<img id="fire" src="<c:url value='/resources/object/ch11/1층_원숭이탕불.png'/>"/>
-		<img id="hellFire" src="<c:url value='/resources/object/ch11/1층_땅불.png'/>"/>
-		<img id="arrow" onClick="location.href='../chapter11part2'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
-		<%-- <img id="snakeMan" src="<c:url value='/resources/object/ch11/11_0_5.png'/>"/> --%>
+		<img id="platform" src="<c:url value='/resources/object/ch11/2층_단상.png'/>"/>
+		<img id="hellFireFront" style="z-index: 2;" src="<c:url value='/resources/object/ch11/2층_땅불.png'/>"/>
+		<img id="hellFireBack" style="z-index: 1;" src="<c:url value='/resources/object/ch11/2층_땅뒷불.png'/>"/>
+		<img id="arrow" onClick="location.href='../chapter11part3'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
+		<img id="ground" style="z-index: 3;" src="<c:url value='/resources/object/ch11/2층_땅.png'/>"/>
 	</div>
 	<div id="page">
 		<!-- 안 쓸듯 -->
@@ -39,7 +39,8 @@
 	</div>
 	
 	<script>
-		
+		//챕터11_2에서는 background 이미지를 변경
+		$('#background').css('background-image', "url('resources/background/ch11/ch11_bg_2.png')");
 		
 	</script>
 	<form method="post" action="<c:url value='/chapter11'/>">

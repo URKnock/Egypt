@@ -25,7 +25,9 @@ body {
 #background {
 	width: 100%;
 	height: 100%;
-	background: no-repeat url("../background/ch11/ch11_bg_1.png") center center;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("../background/ch11/ch11_bg_1.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -112,4 +114,10 @@ body {
 #hellFire {
 	position: absolute;
 	z-index: 1;
+}
+
+#arrow {
+	position: absolute;
+	z-index: 2;
+	transform: scale(0.5);
 }
