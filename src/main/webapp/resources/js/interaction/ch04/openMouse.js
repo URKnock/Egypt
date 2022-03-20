@@ -2,6 +2,7 @@ var body = document.querySelector("#interact");
 var pese = document.querySelector("#interact .tool");
 var obj = document.querySelector("#interact .object");
 
+var Anubis = document.querySelector('#anubis');
 let spotCount = 1;
 pese.isHeld = false;
 
@@ -24,6 +25,8 @@ function init_pese() {
 	body.style.cursor = "auto";
 	
 	obj.onclick = function() { 
+			Anubis.src = "resources/webp/ch04/4_8_2.webp";
+		
 			obj.id = "inactive"
 			
 			obj.style.display = "none";
@@ -54,6 +57,7 @@ function tap_circle( e ) {
 		e.style.animation = "fadeout 3s";
 		
 		e.id = "inactive";
+		Anubis.src = "resources/webp/ch04/4_8_2.webp";
 
 		var oil =  document.querySelector('#oil0' + spotCount);
 		if(oil != null) {
@@ -79,4 +83,11 @@ function tap_circle( e ) {
 
 function next() {
 	$("form").submit();
+}
+
+setTimeout(changeWebp, 2000);
+
+
+function changeWebp() {
+	Anubis.src = "resources/webp/ch04/4_8_3.webp";
 }

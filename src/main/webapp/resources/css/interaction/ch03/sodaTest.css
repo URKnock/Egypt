@@ -1,8 +1,9 @@
 canvas {
 	position:absolute;
-	width: 110;
-	height: 80;
-	cursor: url('/resources/object/ch03/niddle.png') 10 37, auto;
+	width: 115;
+	height: 50;
+	cursor: url('/resources/object/ch03/n_cursor.png'), pointer;
+	z-index: 999;
 }
 
 .clickable {
@@ -43,6 +44,7 @@ canvas {
 #bandage, #niddle {
 	position: absolute;
 	z-index: 5;
+	top: 300;
 	display: none;
 }
 
@@ -91,4 +93,18 @@ canvas {
 @keyframes blink{
 	0% {opacity:0;} 
 	100% {opacity:1;} 
+}
+
+.fadeLeft {
+    opacity: 0;
+    overflow: hidden;
+    width: 0%;
+    -webkit-transition: width 2s ease-in, opacity 2s ease-out;
+    -moz-transition: width 2s ease-in, opacity 2s ease-out;
+    -o-transition: width 2s ease-in, opacity 2s ease-out;
+    transition: width 2s ease-in, opacity 2s ease-out;
+}
+.fadeActive {
+  opacity: 1;
+  width: 100%;
 }

@@ -1,105 +1,183 @@
-$(function() { //런타임 동작을 등록
-	
-});
+function interaction() {
+	$('#kettle').hide();
+	$('#water').hide();
+	$('#dragLine').hide();
+	$('#dragSpot').hide();
+	$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
+	$('#background').children().hide();
 
-function checkWipeCount(element) {
-	if(wipeCount == 5) {
-		//console.log("cleanCount: ", cleanCount)
-		$('#' + element.id).addClass("fade-out");
-		wipeCount = 0;
-		if($(".fade-out").length >= 4){
-			console.log("닦기 완료!");
-			$('#linen').attr('style', "top: 150; left: 900;");
-			setTimeout(function() { 
-				$("form").submit();
-			}, 2000);
+	var arr = ["#hum", "#soda_head", "#soda_body", "#soda_bottom", "#soda_leg", "#soda_over"]
+	arr.forEach (function (item, idx) {
+		resizeWH(item, 834, 177);
+		centerX(item);
+		$(item).css("bottom", $("#dialogue").height() + 90*w);
+	});
+	$("#soda_over").css("bottom", $("#dialogue").height() + 90*w + 17*w);
+
+	resize("#bed");
+	centerX("#bed");
+	$("#bed").css("bottom", 0);
+	
+	resize("#scroll");
+	centerX("#scroll");
+	var sl = $('#scroll').offset().left;
+	$("#scroll").css("top", 112*w);
+	$('#scroll').attr("src", "/resources/object/ch03/paper_open.webp");
+	
+	var scrollY = $("#scroll").height() / 2 + 112*w;
+	resize('#kettleToClick');
+	$('#kettleToClick').css("top", scrollY - ($('#kettleToClick').height() / 2));
+	$('#kettleToClick').css("left", x - 100 - ($('#kettleToClick').width() / 2));
+	$('#kettleToClick').on("click", function() {
+		var sLeft = $("#bed").offset().left;
+		var dLeft = sLeft + $('#dragLine').width();
+		$('#kettleToClick').removeClass("select");
+		$('#kettleToClick').hide();
+		$('#water').css("top", (300 + $("#kettle").height() / 2));
+		$('#water').css("left", (sLeft + $("#kettle").width()));
+		$('#kettle').css("left", sLeft);
+		$('#dragLine').css("left", sLeft);
+		$('#dragSpot').css("top", 300);
+		$('#dragSpot').css("left", dLeft);
+		$('#water').show();
+		$('#kettle').show();
+		$('#dragLine').show();
+		$('#dragSpot').show();
+	});
+	$('#kettleToClick').hide().fadeIn(1100).addClass("select");
+	
+	resize('#linen');
+	$('#linen').css("top", scrollY - ($('#linen').height() / 2));
+	$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
+	$('#linen').hide().fadeIn(1100);
+
+	var kWidth = $("#kettle").width();
+	$("#kettle").on("mousedown", function(event) {
+		let shiftX = event.clientX - kettle.getBoundingClientRect().left;
+		kettle.style.position = 'absolute';
+		kettle.style.zIndex = 1000;
+		document.body.append(kettle);
+	
+		function moveKettle(pageX) {
+			kettle.style.left = pageX - shiftX + 'px';
+			water.style.left = kWidth + pageX - shiftX + 'px';
 		}
+	
+		function onMouseKettle(event) {
+			moveKettle(event.pageX);
+	
+			kettle.hidden = true;
+			let eb1 = document.elementFromPoint(event.clientX, event.clientY);
+			kettle.hidden = false;
+			
+			if (!eb1) return;
+			let db1 = eb1.closest('.droppable');
+			if (cd1 != db1) {
+				if (cd1) {
+					leaveKettle(cd1);
+				}
+				cd1 = db1;
+				if (cd1) {
+					enterKettle(cd1);
+				}
+			}
+		}
+		document.addEventListener('mousemove', onMouseKettle);
+		kettle.onmouseup = function() {
+			document.removeEventListener('mousemove', onMouseKettle);
+			kettle.onmouseup = null;
+			if (kettle.isOverlaped == true) {
+				leaveKettle(cd1)
+			}
+		};
+	});	
+}
+
+function checkWipeCount() {
+	if(wipeCount == 100) {
+		$('.soda').fadeTo("1000", 0.6);
+	} else if(wipeCount == 300) {
+		$('.soda').fadeTo("1000", 0.3);
+	} else if(wipeCount == 500) {
+		$('#linen').css("top", scrollY - ($('#linen').height() / 2));
+		$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
+		$('.soda').fadeOut(1000);
+		setTimeout(function() { 
+			$("form").submit();
+		}, 3000);
 	}
 }
 
-let currentDroppable = null;
+let cd1 = null;
+let cd2 = null;
 let wipeCount = 0;
 let cleanCount = 0;
 
-linen.onmousedown = function(event) {
-	let shiftX = event.clientX - linen.getBoundingClientRect().left;
-	let shiftY = event.clientY - linen.getBoundingClientRect().top;
+function enterKettle(elem) {
+	kettle.isOverlaped = true;
+	$('#dragSpot').hide();
+	$('#dragLine').removeClass("blinking");
+	$('#dragLine').fadeOut(1000);
+	$('#kettle').fadeOut(1000);
+	$('#water').fadeOut(1000);
+	
+	$('.soda').fadeTo("1000", 0.75);
+	$('#linen').addClass('select');
+	
+	$("#kettle").off("mousedown");
+	kettle.ondragstart = function() { return true; };
+	linen.ondragstart = function() { return false; };
+	
+	var dirt_top = $("#hum").offset().top;
+	var dirt_bottom = dirt_top + $("#hum").height();
+	var dirt_left = $("#hum").offset().left;
+	var dirt_right = dirt_left + $("#hum").width();
 
-	// (1) absolute 속성과 zIndex 프로퍼티를 수정해 클릭한 대상이 제일 위에서 움직이기 위한 준비를 합니다.
-	linen.style.position = 'absolute';
-	linen.style.zIndex = 1000;
-
-	// 현재 위치한 부모에서 body로 직접 이동하여
-	// body를 기준으로 위치를 지정합니다.
-	document.body.append(linen);
-
-	moveAt(event.pageX, event.pageY);
-
-	// 초기 이동을 고려한 좌표 (pageX, pageY)에서
-	// 대상을 이동합니다.
-	function moveAt(pageX, pageY) {
-		linen.style.left = pageX - shiftX + 'px';
-		linen.style.top = pageY - shiftY + 'px';
-	}
-
-	function onMouseMove(event) {
-		moveAt(event.pageX, event.pageY); //마우스 포인터 아래로 사물을 이동시킵니다.
-
-		linen.hidden = true;
-		let elemBelow = document.elementFromPoint(event.clientX,
-				event.clientY); //elemBelow는 드롭 할 수 있는 객체의 아래 요소입니다.
-		linen.hidden = false;
-
-		// 마우스 이벤트는 윈도우 밖으로 트리거 될 수 없습니다.(클릭한 객체를 윈도우 밖으로 드래그 했을 때)
-		// 따라서 clientX∙clientY가 화면 밖에 있으면, elementFromPoint는 null을 반환합니다.
-		if (!elemBelow)
-			return;
-
-		// 'droppable' 클래스로 미리 지정되어 있는 객체를 잠재적으로 드롭 할 수 있는 요소로 가져옵니다.
-		let droppableBelow = elemBelow.closest('.droppable');
+	$('#linen').on("mousedown", function(event) {
+		let shiftX = event.clientX - linen.getBoundingClientRect().left;
+		let shiftY = event.clientY - linen.getBoundingClientRect().top;
+		var scrollY = $("#scroll").height() / 2 + 100;
 		
-		if (currentDroppable != droppableBelow) {
-			//currentDroppable=null 이벤트 전에 놓을 수 있는 요소 위에 있지 않다면(예: 빈 공간)
-			//droppableBelow=null 이벤트 동안 놓을 수 있는 요소 위에 있지 않다면
-			if (currentDroppable) { //드롭 가능한 요소로부터 벗어났다면
-				leaveDroppable(currentDroppable);
+		$('#linen').removeClass('select');
+		linen.style.position = 'absolute';
+		linen.style.zIndex = 1000;
+		document.body.append(linen);
+		
+		function moveLinen(pageX, pageY) {
+			linen.style.left = pageX - shiftX + 'px';
+			linen.style.top = pageY - shiftY + 'px';
+		}
+		
+		function onMouseLinen(event) {
+			moveLinen(event.pageX, event.pageY);
+			var lin_top = $("#linen").offset().top;
+			var lin_left = $("#linen").offset().left;
+			if (lin_top >= dirt_top && lin_top <= dirt_bottom) {
+				if(lin_left >= dirt_left && lin_left <= dirt_right) {
+					wipeCount = wipeCount + 1;
+					checkWipeCount();
+				}
 			}
-			currentDroppable = droppableBelow;
-			if (currentDroppable) { //드롭 가능한 요소에 닿았다면 (닿지 않았을 때는 null)
-				enterDroppable(currentDroppable);
+		}
+		
+		document.addEventListener('mousemove', onMouseLinen);
+		linen.onmouseup = function() {
+			document.removeEventListener('mousemove', onMouseLinen);
+			linen.onmouseup = null;
+			if (linen.isOverlaped == true) {
+				leaveLinen(cd2)
+			} else {
+				$('#linen').css("top", scrollY - ($('#linen').height() / 2));
+				$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
 			}
-		}
-	}
+		};
+	});	
+}	
 
-	// (2) mousemove로 사물을 움직입니다.
-	document.addEventListener('mousemove', onMouseMove);
-
-	// (3) 사물을 드롭하고, 불필요한 핸들러를 제거합니다.
-	linen.onmouseup = function() { //대상을 드롭하는 순간에
-		document.removeEventListener('mousemove', onMouseMove); //이벤트 리스너 제거
-		linen.onmouseup = null; //속성 제거
-		if (linen.isOverlaped == true) { //드롭 가능한 요소에 오버랩 되었다면
-			console.log("오버랩 되는 중")
-			leaveDroppable(currentDroppable)
-		}
-		else { //요소 밖에 드롭했다면
-			console.log("원위치")
-			$('#linen').attr('style', "top: 150; left: 900;");
-		}
-	};
-};
-
-function enterDroppable(elem) { //드롭 가능한 요소에 닿았다면
-	linen.isOverlaped = true;
-	wipeCount = wipeCount + 1;
-	checkWipeCount(elem)
+function leaveKettle(elem) {
+	kettle.isOverlaped = false;
 }
 
-function leaveDroppable(elem) { //드롭 가능한 요소로부터 벗어났다면
-	linen.isOverlaped = false;
-	checkWipeCount(elem)
-}
-
-linen.ondragstart = function() {
+kettle.ondragstart = function() {
 	return false;
 };

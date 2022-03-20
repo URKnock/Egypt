@@ -17,8 +17,8 @@
 	}
 		
 	#interact .character:nth-of-type(3) { height: 34.3%; }
-	#interact .animal:nth-of-type(5) { height: 15.27%; left: 50.8%; display: none;}
-	#interact .animal:nth-of-type(6) { height: 20.09%;}
+	#interact .animal:nth-of-type(5) { bottom: 35%; height: 15.27%; left: 50.8%; display: none;}
+	#interact .animal:nth-of-type(6) { bottom: 35%; height: 20.09%;}
 	
 	#line { width: 7vh; bottom: 48%; left: 50%; transform: rotate(0.97turn) translate(-13.5vh, -4vh); }
 	
@@ -56,7 +56,7 @@
 	<!-- object -->
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_15.png'/>">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_17.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_6.png'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_11.png'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_9.png'/>">
 	

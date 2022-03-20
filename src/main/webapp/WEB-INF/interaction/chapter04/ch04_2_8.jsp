@@ -7,7 +7,7 @@
 	#interact .character:nth-of-type(3) { height: 34.3%; }
 	
 	#interact .animal:nth-of-type(5) { height: 58.98%; z-index: 3; }
-	#interact .animal:nth-of-type(6) { display: none; height: 43.24%; }
+	#interact .animal:nth-of-type(6) { display: none; height: 43.24%; bottom: 35%;}
 	
 	#active:hover {
 		transform: scale(1.1) translate(-50%, 0%);
@@ -44,8 +44,8 @@
 	<!-- object -->
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_19.png'/>">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_17.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_6.png'/>">
-	<img class="animal" id="active" src="<c:url value='/resources/object/ch04/4_4_12.png'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
+	<img class="animal" id="active" src="<c:url value='/resources/webp/ch04/4_4.webp'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_13.png'/>">
 	
 	<img class="knife" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">

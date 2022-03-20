@@ -14,6 +14,7 @@
 #interact .character:nth-of-type(4) { 
 	opacity: 0;
 	animation: 1s disappear;
+	height: 48.70%;
 }
 @keyframes disappear {
 	0% { opacity: 1; }

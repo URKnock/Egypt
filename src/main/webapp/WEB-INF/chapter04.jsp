@@ -6,17 +6,15 @@
 	<title>사자의 서</title>
 	<link href="<c:url value='/resources/css/ch04.css'/>" rel="stylesheet" type="text/css"/>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-	<script>
-		function init() {
-			$("#dialogue").click(function() {
-				$("form").submit();
-			});
-		};
-	</script>
+	<script defer src="<c:url value='/resources/js/ch04.js'/>" type="text/javascript"></script>
 </head>
 <body onload="init();">
 <div id="view">
 <div id="wrap">
+	<div id="warning">
+		<div>최적화 되어있는 화면 비율을 벗어났습니다.<br>화면 비율을 조정해주세요</div>
+	</div>
+	
 	<div id="background">
 		<c:if test="${page ne null}">
 			<jsp:include page="./interaction/chapter04/${page}"/>

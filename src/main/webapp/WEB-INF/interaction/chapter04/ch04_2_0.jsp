@@ -4,7 +4,8 @@
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_2_0.css'/>" rel="stylesheet" type="text/css"/>
 <style>
 	#interact .animal {
-		height: 30.09%;
+		height: 32.03%;
+		bottom: 35%;
 	}
 </style>
 <div id="interact">
@@ -27,7 +28,7 @@
 	<!-- object -->
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_13.png'/>">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_14.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_6.png'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
 	
-	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_2.png'/>">
+	<img class="animal" src="<c:url value='/resources/webp/ch04/4_2.webp'/>">
 </div>
