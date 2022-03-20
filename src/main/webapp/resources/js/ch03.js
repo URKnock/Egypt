@@ -71,6 +71,9 @@ $(document).ready(function(){
 		case '4':
 			clicked = [];
 			break;
+		case '13':
+			clicked = [1, 2, 3];
+			break;
 		default:
 			$("#dialogue").on("click", function() {
 				$("form").submit();
