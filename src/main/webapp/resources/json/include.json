@@ -41,11 +41,31 @@
 },
 {
 	"chapter":3, "scene":10, "flag":0,
-	"page":"poursoda.jsp"
+	"page":"pourSoda.jsp"
 },
 {
 	"chapter":3, "scene":11, "flag":0,
 	"page":"washTest2.jsp"
+},
+{
+	"chapter":3, "scene":12, "flag":0,
+	"page":"findCharm.jsp"
+},
+{
+	"chapter":3, "scene":13, "flag":0,
+	"page":"dragCharm.jsp"
+},
+{
+	"chapter":3, "scene":14, "flag":0,
+	"page":"pourBandage.jsp"
+},
+{
+	"chapter":3, "scene":15, "flag":0,
+	"page":"mummyTest.jsp"
+},
+{
+	"chapter":3, "scene":16, "flag":0,
+	"page":"mummyEnd.jsp"
 },
 {
 	"chapter":4, "scene":0, "flag":0,
