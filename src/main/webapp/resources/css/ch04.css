@@ -74,7 +74,7 @@ body {
 #menu {
 	position: absolute;
 	
-	width: 15%;
+	width: 25vh;
 	height: 5% !important;
 	
 	right: 2.5%;
@@ -180,7 +180,7 @@ form {
 #choice {
 	position: absolute;
 	
-	width: 35%;
+	width: 60vh;
 	height: 100% !important;
 	
 	top: 0%;
@@ -197,7 +197,7 @@ form {
 }
 
 #choice > div {
-	width: 40%;
+	width: 25vh;
 	height: 80% !important;
 	
 	display: flex;
