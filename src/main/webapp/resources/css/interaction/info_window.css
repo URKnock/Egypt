@@ -1,24 +1,12 @@
 @charset "UTF-8";
-#interact .guide {
-	position: absolute;
-	width: 50%;
-	height: 7.5%;
-	background: ivory;
-	line-height: 275%;
-	font-size: 1.5vw;
-	top: 5%;
-	left: 50%;
-	
-	transform: translate(-50%, 0%);
-	
-	z-index: 100;
-}
+
 .info_back {
 	display: none;
 	position: absolute;
 	width: 100vw; height: 100vh;
+	top: 0; left: 0;
 	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 100;
+	z-index: 1000;
 }
 #window {
 	display: none;
@@ -32,7 +20,7 @@
 	top: 50%;
 	
 	transform: translate(-50%, -85%);
-	z-index: 100;
+	z-index: 1000;
 }
 
 #window .infoImg {

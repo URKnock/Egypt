@@ -37,6 +37,6 @@
 	<img id="active" onclick="tap_info(this, 4)" class="object"  src="<c:url value='/resources/object/ch04/4_1_2.png'/>">
 	<img id="active" onclick="tap_info(this, 5)" class="object"  src="<c:url value='/resources/object/ch04/4_1_3.png'/>">
 	
-	
+	<div class="guide" align="center">마우스를 클릭하여 주변을 둘러보세요</div>
 	<jsp:include page="../info_window.jsp"/>
 </div>
