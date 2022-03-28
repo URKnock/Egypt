@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<%request.setAttribute("choice", 0); %>
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_0.css'/>" rel="stylesheet" type="text/css"/>
 
 <script> 
@@ -37,6 +38,6 @@
 	<img id="active" onclick="tap_info(this, 4)" class="object"  src="<c:url value='/resources/object/ch04/4_1_2.png'/>">
 	<img id="active" onclick="tap_info(this, 5)" class="object"  src="<c:url value='/resources/object/ch04/4_1_3.png'/>">
 	
-	
+	<div class="guide" align="center">마우스를 클릭하여 주변을 둘러보세요</div>
 	<jsp:include page="../info_window.jsp"/>
 </div>

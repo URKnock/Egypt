@@ -104,3 +104,18 @@
 	height: 65.83%;
 	right: 8%;
 }
+
+#interact .guide {
+	position: absolute;
+	width: 50%;
+	height: 7.5%;
+	background: ivory;
+	line-height: 275%;
+	font-size: 1.5vw;
+	top: 5%;
+	left: 50%;
+	
+	transform: translate(-50%, 0%);
+	
+	z-index: 100;
+}

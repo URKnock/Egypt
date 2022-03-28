@@ -20,30 +20,13 @@ function getJsonData(path)
 
 getJsonData('resources/json/info.json');
 
-function show_info(chapter, num) {
-	var i = 0;
-	while(info[i].chapter != chapter) i++;
-
-	num += i;
-	
-	const bg = document.querySelector(".info_back");
-	bg.style.display = "block";
-	const window = document.querySelector("#window");
-	window.style.display = "block";
-	
-	infoContent = window.children;
-	
-	var Imagelink = info[num].image;
-	if(Imagelink != "link") {
-		infoContent[0].style.backgroundImage = "url('"+ info[num].image +"')";
+function show_info(index) {
+	if(typeof chapter != 'undefined') {
+		var i = 0;
+		while(info[i].chapter != chapter) i++;
+		index += i;	
 	}
 	
-	infoContent = infoContent[1].children;
-	
-	infoContent[0].innerHTML = info[num].name;
-	infoContent[1].innerHTML = info[num].content;
-}
-function show_info(index) {
 	var num = index;
 	
 	const bg = document.querySelector(".info_back");
