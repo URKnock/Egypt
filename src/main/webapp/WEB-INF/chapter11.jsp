@@ -12,11 +12,11 @@
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
-		<img id="monkeys" src="<c:url value='/resources/object/ch11/1층_원숭이탕.png'/>"/>
-		<img id="fire" src="<c:url value='/resources/object/ch11/1층_원숭이탕불.png'/>"/>
-		<img id="hellFire" src="<c:url value='/resources/object/ch11/1층_땅불.png'/>"/>
+		<img id="monkeys" src="<c:url value='/resources/object/ch11/1층_원숭이탕.webp'/>"/>
+		<img id="hellFire" src="<c:url value='/resources/object/ch11/1층_땅불.webp'/>"/>
 		<img id="arrow" onClick="location.href='../chapter11part2'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
-		<%-- <img id="snakeMan" src="<c:url value='/resources/object/ch11/11_0_5.png'/>"/> --%>
+		<img id="ground" src="<c:url value='/resources/object/ch11/1층_땅.png'/>"/>
+		<img id="ammut" class="select" style="z-index: 3;" src="<c:url value='/resources/Character/ch11/1층_암무트1.webp'/>"/>
 	</div>
 	<div id="page">
 		<!-- 안 쓸듯 -->
