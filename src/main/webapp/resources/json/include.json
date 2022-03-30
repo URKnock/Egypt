@@ -41,11 +41,31 @@
 },
 {
 	"chapter":3, "scene":10, "flag":0,
+	"page":"pourSoda.jsp"
+},
+{
+	"chapter":3, "scene":11, "flag":0,
 	"page":"washTest2.jsp"
 },
 {
+	"chapter":3, "scene":12, "flag":0,
+	"page":"findCharm.jsp"
+},
+{
+	"chapter":3, "scene":13, "flag":0,
+	"page":"dragCharm.jsp"
+},
+{
 	"chapter":3, "scene":14, "flag":0,
-	"page":"peseshkafTest.jsp"
+	"page":"pourBandage.jsp"
+},
+{
+	"chapter":3, "scene":15, "flag":0,
+	"page":"mummyTest.jsp"
+},
+{
+	"chapter":3, "scene":16, "flag":0,
+	"page":"mummyEnd.jsp"
 },
 {
 	"chapter":4, "scene":0, "flag":0,
@@ -129,6 +149,7 @@
 	"chapter":4, "scene":19, "flag":0,
 	"page":"ch04_3_2.jsp"
 },
+<<<<<<< HEAD
 {
 	"chapter":5, "scene":6, "flag":0,
 	"page":"duatg3.jsp"
@@ -144,5 +165,22 @@
 {
 	"chapter":5, "scene":5, "flag":0,
 	"page":"DuataGameSecond.jsp"
+},
+
+{
+	"chapter":7, "scene":0, "flag":0,
+	"page":"ch07_0_0.jsp"
+},
+{
+	"chapter":7, "scene":1, "flag":0,
+	"page":"ch07_0_1.jsp"
+},
+{
+	"chapter":7, "scene":2, "flag":0,
+	"page":"ch07_1.jsp"
+},
+{
+	"chapter":7, "scene":3, "flag":0,
+	"page":"question.jsp"
 }
 ]

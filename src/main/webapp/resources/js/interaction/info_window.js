@@ -20,11 +20,14 @@ function getJsonData(path)
 
 getJsonData('resources/json/info.json');
 
-function show_info(chapter, num) {
-	var i = 0;
-	while(info[i].chapter != chapter) i++;
-
-	num += i;
+function show_info(index) {
+	if(typeof chapter != 'undefined') {
+		var i = 0;
+		while(info[i].chapter != chapter) i++;
+		index += i;	
+	}
+	
+	var num = index;
 	
 	const bg = document.querySelector(".info_back");
 	bg.style.display = "block";

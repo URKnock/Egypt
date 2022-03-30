@@ -2,12 +2,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>" type="text/javascript"></script>
-
 <link rel="stylesheet" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 
-<div class="guide" align="center">마우스를 클릭하여 주변을 둘러보세요</div>
-
-<div class="info_back"></div>
+<div class="info_back">sgsd</div>
 <div id="window">
 	<div class="infoImg"></div>
 	<div class="infoText">

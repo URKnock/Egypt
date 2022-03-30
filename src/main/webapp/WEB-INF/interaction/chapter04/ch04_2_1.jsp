@@ -11,7 +11,10 @@
 	#active:hover{
 		transform: rotate(0.107turn) scale(1.1) translate(16vh, -1vh);
 	}
-	#interact .animal { height: 30.09%; }
+	#interact .animal {
+		height: 32.03%;
+		bottom: 35%;
+	}
 </style>
 <script>
 	var body = document.querySelector('body');
@@ -41,10 +44,10 @@
 	<!-- character -->
 	<img class="character">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_15.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_6.png'/>">
-	
+	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
+
 	<!-- object -->
-	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_2.png'/>">
+	<img class="animal" src="<c:url value='/resources/webp/ch04/4_2.webp'/>">
 	<img class="object" src="<c:url value='/resources/object/ch04/4_4_3.png'/>">
 	
 	<img class="knife" id="active" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">

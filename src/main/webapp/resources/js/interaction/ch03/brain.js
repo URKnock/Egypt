@@ -34,7 +34,7 @@ function interaction() {
 		if(lock == 0) {
 			$("#brain").on("load", function() {
 				console.log(idx + ", " + brains[idx]);
-				setTimeout(function() { lock = 0 }, 1200);
+				setTimeout(function() { lock = 0 }, 350);
 				if(idx == 10) {
 					$("#hum").hide();
 					$("#brain").removeClass("select");

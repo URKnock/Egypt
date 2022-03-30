@@ -1,0 +1,106 @@
+#potToClick {
+	position: absolute;
+	cursor: pointer;
+	z-index: 3;
+}
+
+#pot {
+	position: absolute;
+	cursor: pointer;
+	top: 300;
+	left: 300;
+	transform: rotate(135deg);
+	z-index: 5;
+}
+
+#scroll, #paper {
+	position: absolute;
+	z-index: 1;
+}
+
+#bed {
+	position: absolute;
+	z-index: 1;
+}
+
+#hum {
+	position: absolute;
+	z-index: 2;
+}	
+
+#soda_over {
+	position:absolute;
+	z-index:4;
+}
+
+.soda{
+	position: absolute;
+	opacity: 1;
+	z-index: 3;
+}	
+
+hr{
+	position: absolute;
+	top: 350; 
+	left: 300;
+    border: none;
+    border-top: 5px dotted red;
+    height: 1px;
+    width: 800;
+}
+
+.circle {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	background-color: #ee6c4d;
+	opacity: 0.4;
+	z-index: 3;
+}
+
+.fade-out {
+  animation: fadeout 1s;
+  -moz-animation: fadeout 1s; /* Firefox */
+  -webkit-animation: fadeout 1s; /* Safari and Chrome */
+  -o-animation: fadeout 1s; /* Opera */
+  animation-fill-mode: forwards;
+}
+
+.blinking{ 
+	-webkit-animation:blink 0.8s ease-in-out infinite alternate; 
+	-moz-animation:blink 0.8s ease-in-out infinite alternate; 
+	animation:blink 0.8s ease-in-out infinite alternate; 
+} 
+
+@-webkit-keyframes blink{ 
+	0% {opacity:0;} 
+	100% {opacity:1;} 
+} 
+
+@-moz-keyframes blink{
+	0% {opacity:0;} 
+	100% {opacity:1;} 
+} 
+
+@keyframes blink{
+	0% {opacity:0;} 
+	100% {opacity:1;} 
+}
+
+.fadeLeft {
+    opacity: 0;
+    overflow: hidden;
+    width: 0%;
+    -webkit-transition: width 2s ease-in, opacity 2s ease-out;
+    -moz-transition: width 2s ease-in, opacity 2s ease-out;
+    -o-transition: width 2s ease-in, opacity 2s ease-out;
+    transition: width 2s ease-in, opacity 2s ease-out;
+}
+.fadeActive {
+  opacity: 1;
+  width: 100%;
+}

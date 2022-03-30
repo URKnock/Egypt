@@ -58,6 +58,8 @@ $(document).ready(function(){
 		$("#ca4").on("click", function() { object("#ca4", 2, 4) });
  	} else if(scene == 7 && index == 1) {
  		$("input[name='index']").val(0);
+ 	} else if(scene == 13) {
+		clicked = [1, 2, 3];
  	}
 	switch(scene) {
 		case '1':
@@ -70,6 +72,9 @@ $(document).ready(function(){
 		case '3':
 		case '4':
 			clicked = [];
+			break;
+		case '13':
+			clicked = [1, 2, 3];
 			break;
 		default:
 			$("#dialogue").on("click", function() {

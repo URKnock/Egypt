@@ -129,9 +129,9 @@ function nextSpotInit() {
 		center("#dragSpot");
 		$("#dragSpot").css("bottom", $("#dialogue").height() + 265*w + $("#human").height()/2);
 		$('#dragLine').css("top", $('#human').offset().top - $('#dragLine').width());
-		$('#dragLine').css("left", x - $('#dragDest').width() / 2);
+		$('#dragLine').css("left", x - $('#dragDest').width() / 2 + 3);
 		$('#dragDest').css("top", $('#dragLine').offset().top - $('#dragDest').height() - 30*w);
-		$('#dragDest').css("left", x - $('#dragDest').width() / 2 + 3);
+		$('#dragDest').css("left", x - $('#dragDest').width() / 2);
 	}
 }
 

@@ -160,11 +160,11 @@ function rescale(element, div) {
 }
 
 function checkWipeCount() {
-	if(wipeCount == 300) {
+	if(wipeCount == 100) {
 		$('.dirt').fadeTo("1000", 0.6);
-	} else if(wipeCount == 600) {
+	} else if(wipeCount == 300) {
 		$('.dirt').fadeTo("1000", 0.3);
-	} else if(wipeCount == 1000) {
+	} else if(wipeCount == 500) {
 		$('#linen').css("top", scrollY - ($('#linen').height() / 2));
 		$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
 		$('.dirt').fadeOut(1000);

@@ -21,7 +21,7 @@ public class HomeController implements Controller {
     	//HttpSession session = request.getSession(true); //세션 정보를 가져온다. ==> 필요할 때만 사용...
     	
     	if(request.getParameter("chapter") == null) { //요청에 chapter 정보가 없다면 초기화 ==> request에서 가져올까 session에서 가져올까? ==> 일단은 request
-    		chapter = "2";
+    		chapter = "1";
     	} else { //있다면 그대로 가져와서 활용한다. 
     		chapter = request.getParameter("chapter");
     	}
@@ -42,4 +42,3 @@ public class HomeController implements Controller {
     	
     	return url;
     }
-}

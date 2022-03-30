@@ -1,4 +1,3 @@
-
 var body = document.querySelector("#interact");
 
 var animal = document.querySelector("#interact .animal:nth-of-type(6)");
@@ -10,22 +9,46 @@ var spot2 = document.querySelector("#interact .spot2");
 
 var item = document.querySelector("#interact .item");
 
-var is_dragging = false;
+var is_dragging = [];
+is_dragging[0] = false;
+is_dragging[1] = false;
 
 function init_item() {	
 	body.addEventListener('mousemove', follow_mouse);
 	body.addEventListener('mouseup', function() {
-		is_dragging = false;
+		is_dragging[0] = false;
+		is_dragging[1] = false;
 	});
 	body.style.cursor = "none";
 	spot1.style.cursor = "none";
 	spot2.style.cursor = "none";
 	
 	spot1.onmousedown = function() {
-		is_dragging = true;
+		if(!is_dragging[0]) {
+			is_dragging[1] = true;
+		}
+	}
+	spot2.onmousedown = function() {
+		if(!is_dragging[1]) {
+			is_dragging[0] = true;
+		}
+	}
+	spot1.onmouseup = function() {
+		if(is_dragging[0]) {
+			var line = document.querySelector("#interact #line");
+			line.style.display = "none";
+			
+			animal.style.display = "none";
+			animal = document.querySelector("#interact .animal:nth-of-type(5)");
+			animal.style.display = "block";
+			
+			item.style.display = "block";
+			
+			setTimeout(next, 2500);
+		}
 	}
 	spot2.onmouseup = function() {
-		if(is_dragging) {
+		if(is_dragging[1]) {
 			var line = document.querySelector("#interact #line");
 			line.style.display = "none";
 			

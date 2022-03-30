@@ -23,6 +23,7 @@ body {
 	-moz-user-select:none;
 	-ms-user-select:none;
 	user-select:none;
+	overflow: hidden;
 }
 
 #view {
@@ -34,7 +35,28 @@ body {
 	align-items: center;
 	justify-content: center;
 	
-	font-size: 1vw;
+	font-size: 2vh;
+}
+
+#warning {
+	position: absolute;
+	display: flex;
+	
+	width: 100%; height: 100%;
+	top: 0; left: 0;
+	
+	background-color: black;
+	opacity: 0.7;
+	z-index: 1000;
+
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#warning div{
+	color: white;
+	font-size: 5vh;
+	text-align: center;
 }
 
 #background {
@@ -52,7 +74,7 @@ body {
 #menu {
 	position: absolute;
 	
-	width: 15%;
+	width: 25vh;
 	height: 5% !important;
 	
 	right: 2.5%;
@@ -106,7 +128,7 @@ form {
 	height: 70%;
 	
 	top: 15%;
-	left: 5.5%;
+	left: 5.5vh;
 }
 #dialogue #scene {
 	position: absolute;
@@ -115,10 +137,10 @@ form {
 	height: 80% !important;
 	
 	top: 10%;
-	left: 18%;
+	left: 30vh;
 }
 #dialogue #scene #title {
-	width: 40%;
+	width: 40vh;
 	height: 20% !important;
 	
 	font-size: 1.2em;
@@ -127,6 +149,23 @@ form {
 	display: flex;
 	justify-content: space-between;
 }
+#title > div:nth-child(1) {
+	height: 100%;
+	line-height: 4vh;
+}
+#title > div:nth-child(2) {
+	color: white;
+	min-width: 28vh;
+	height: 100%;
+	background: no-repeat url("../UI/Dialogue/Title.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+    text-align: center;
+	margin-left: 02.31vh;
+	line-height: 4vh;
+}
 #dialogue #scene #content {
 	position: absolute;
 	
@@ -134,14 +173,14 @@ form {
 	height: 60%;
 	
 	top: 30%;
-	left: 2%;
+	left: 0%;
 		
 	font-size: 1em;
 }
 #choice {
 	position: absolute;
 	
-	width: 35%;
+	width: 60vh;
 	height: 100% !important;
 	
 	top: 0%;
@@ -153,12 +192,12 @@ form {
 	justify-content: space-around;
 }
 #choice img {
-	width: 30%;
+	width: auto;
 	height: 60% !important;
 }
 
 #choice > div {
-	width: 40%;
+	width: 25vh;
 	height: 80% !important;
 	
 	display: flex;
