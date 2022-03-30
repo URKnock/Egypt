@@ -101,16 +101,6 @@ body {
 	z-index: 3;
 }
 
-#fire {
-	position: absolute;
-	z-index: 2;
-}
-
-#ground {
-	position: absolute;
-	z-index: 2;
-}
-
 #hellFire {
 	position: absolute;
 	z-index: 1;
@@ -118,6 +108,11 @@ body {
 
 #arrow {
 	position: absolute;
-	z-index: 2;
+	z-index: 4;
 	transform: scale(0.5);
+}
+
+#ground {
+	position: absolute;
+	z-index: 2;
 }

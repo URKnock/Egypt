@@ -7,16 +7,22 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch11.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="<c:url value='/resources/js/ch11.js'/>"></script>
+<script src="<c:url value='/resources/js/ch11_2.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
 		<img id="platform" src="<c:url value='/resources/object/ch11/2층_단상.png'/>"/>
-		<img id="hellFireFront" style="z-index: 2;" src="<c:url value='/resources/object/ch11/2층_땅불.png'/>"/>
-		<img id="hellFireBack" style="z-index: 1;" src="<c:url value='/resources/object/ch11/2층_땅뒷불.png'/>"/>
+		<img id="hellFireFront" style="z-index: 6;" src="<c:url value='/resources/object/ch11/2층_땅불1.webp'/>"/>
+		<img id="hellFireBack" style="z-index: 1;" src="<c:url value='/resources/object/ch11/2층_땅불2.webp'/>"/>
 		<img id="arrow" onClick="location.href='../chapter11part3'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
-		<img id="ground" style="z-index: 3;" src="<c:url value='/resources/object/ch11/2층_땅.png'/>"/>
+		<img id="ground" style="z-index: 7;" src="<c:url value='/resources/object/ch11/2층_땅.png'/>"/>
+		<img id="pot_back" style="z-index: 2;" src="<c:url value='/resources/object/ch11/2층_항아리안.png'/>"/>
+		<img id="pot_inner" style="z-index: 4;" src="<c:url value='/resources/object/ch11/2층_항아리탕.webp'/>"/>
+		<img id="pot_frame" style="z-index: 5;" src="<c:url value='/resources/object/ch11/2층_항아리밖.png'/>"/>
+		<img id="devil" class="select" src="<c:url value='/resources/Character/ch11/2층_악마1.webp'/>"/>
+		<img style="transform: scale(0.5) scaleX(-1);" onClick="location.href='../chapter11'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
+		<img id="pot_dead" style="z-index: 3;" src="<c:url value='/resources/object/ch11/2층_항아리사자1.webp'/>"/>
 	</div>
 	<div id="page">
 		<!-- 안 쓸듯 -->

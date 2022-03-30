@@ -4,12 +4,18 @@ var o_select, o_index;
 var clicked = [1, 2, 3, 4, 5, 6];
 
 $(document).ready(function(){
-	o_select = "0"; //?
+	o_select = "0"; //클릭한 오브젝트를 담는 변수
 	w = $("#background").width() / 2650 / 0.87; //배경 규격 계산
 	h = $("#background").height($("#background").prop("naturalHeight") * w);
 	$(window).resize(function() { //정보창?
 		location.reload(true);
 	});
+	
+	$("#ammut").on("click", function() {
+		$("#ammut").attr("src", '/resources/Character/ch11/1층_암무트3.webp');
+		setTimeout(function() { $("#ammut").attr("src", '/resources/Character/ch11/1층_암무트1.webp'); }, 2000);
+	});
+	
 	$(".close").on("click", function() { //정보창의 닫기 버튼
 		hide_info();
 		if(clicked.length == 0) {
@@ -28,8 +34,8 @@ $(document).ready(function(){
 
 	//scene 제어 
  	if((scene == 1 && index == 0)) {
-		$("#background > img:nth-child(1)").addClass("select"); //원숭이
- 		$("#background > img:nth-child(1)").addClass("pikachu"); //원숭이
+		$("#background > img:nth-child(1)").addClass("select"); 
+ 		$("#background > img:nth-child(1)").addClass("pikachu");
 
 		//정보창을 띄우는 'object' 함수
 		$("#background > img:nth-child(1)").on("click", function() { 
@@ -78,32 +84,32 @@ function init() { //화면 초기화
 	var bg1 = $("#background > img:nth-child(1)"); //원숭이 탕
 	bg1.width(bg1.prop("naturalWidth") * w);
 	bg1.height(bg1.prop("naturalHeight") * w);
-	bg1.css("left", x - (bg1.width() / 2.0) - 100*w);
-	bg1.css("bottom", $("#dialogue").height() - 50*w);
+	bg1.css("left", x - (bg1.width() / 2.0) + 90*w);
+	bg1.css("bottom", $("#dialogue").height() + 150*w); //dialog와 떨어진 정도가 아니라 바닥이랑 떨어진 정도로 바꿔야 할 것 같음
 	
-	var bg2 = $("#background > img:nth-child(2)"); //원숭이 탕 속 불꽃
+	var bg2 = $("#background > img:nth-child(2)"); //바닥 마젠타색 불꽃
 	bg2.width(bg2.prop("naturalWidth") * w);
 	bg2.height(bg2.prop("naturalHeight") * w);
-	bg2.css("left", x - (bg1.width() / 2.0) - 100*w);
-	bg2.css("bottom", $("#dialogue").height() - 50*w);
+	bg2.css("left", x - (bg1.width() / 2.0) + 120*w);
+	bg2.css("bottom", $("#dialogue").height() - 50*w); //대화창에 가려져야 함
 	
-	var bg3 = $("#background > img:nth-child(3)"); //바닥 마젠타색 불꽃
+	var bg3 = $("#background > img:nth-child(3)"); //화살표
 	bg3.width(bg3.prop("naturalWidth") * w);
 	bg3.height(bg3.prop("naturalHeight") * w);
-	bg3.css("left", x - (bg1.width() / 2.0) - 100*w);
-	bg3.css("bottom", $("#dialogue").height());
+	bg3.css("left", x - (bg1.width() / 2.0) + 1550*w);
+	bg3.css("bottom", $("#dialogue").height() + 350*w);
 	
-	var bg4 = $("#background > img:nth-child(4)"); //화살표
-	bg4.width(bg4.prop("naturalWidth") * w);
+	var bg4 = $("#background > img:nth-child(4)"); //땅바닥
+	bg4.width($("#background").width()); //계산 X, 배경에 배율이 맞춰야 함
 	bg4.height(bg4.prop("naturalHeight") * w);
-	bg4.css("left", x + 800*w);
-	bg4.css("bottom", $("#dialogue").height() + 160*w);
+	//bg4.css("left", x);
+	bg4.css("bottom", $("#dialogue").height()); //대화창에 가려져야 함
 	
-	var bg5 = $("#background > img:nth-child(4)"); //땅바닥
+	var bg5 = $("#background > img:nth-child(5)"); //암무트
 	bg5.width(bg5.prop("naturalWidth") * w);
 	bg5.height(bg5.prop("naturalHeight") * w);
-	//bg5.css("left", x + 800*w);
-	//bg5.css("bottom", $("#dialogue").height() + 160*w);
+	bg5.css("left", x - (bg1.width() / 2.0) + 1200*w);
+	bg5.css("bottom", $("#dialogue").height() + 160*w);
 }
 
 function object(select, index, arrIndex) { //정보창을 보여주고 셀렉트 클래스를 제거한다.
