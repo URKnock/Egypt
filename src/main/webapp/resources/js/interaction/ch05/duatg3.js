@@ -2,18 +2,20 @@ const rand1 = Math.floor(Math.random() * 750);
 const rand2 = Math.floor(Math.random() * 500);
 const rand3 = Math.floor(Math.random() * 500);
 const rand4 = Math.floor(Math.random() * 500);
+var flag = 0;
 
-$(function () {
+$(function init() {
 	/* $(".bug1").click(function() {	
 		$(this).animate({top:rand1, left:rand2}, 900);
 	}); */
-	
+	$("#background").children().hide();
 	$(".bug1").click(function() {
 		$(this).fadeOut(250, function() {
 		$(this).attr("src",
 		 "<c:url value='/resources/object/ch05/5_23.png'/>");
 	});
-	}, 5000);
+	});
+
 
 	
 	$(function loop1() {

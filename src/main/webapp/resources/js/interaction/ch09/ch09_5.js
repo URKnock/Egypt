@@ -28,8 +28,15 @@ function init() {
 		 $(".modal").fadeIn();
 	});
 	
+	
 	$(".modal_content").click(function(){
-    $(".modal").fadeOut();
+    	$(".modal").fadeOut();
+		$("#c2").attr("src", 
+		"/D/resources/Character/ch09/3층 밭2.webp");	
+		$("#cow1").attr("src", 
+		"/D/resources/Character/ch09/2층 소2.webp");
+		$("#cow2").attr("src", 
+		"/D/resources/Character/ch09/2층 소2.webp");
  	});	
 
 	function objectSubmit(select) {

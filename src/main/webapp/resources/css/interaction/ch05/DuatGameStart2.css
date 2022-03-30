@@ -1,0 +1,147 @@
+body {
+    font-family: 'Minguk-Regular';
+	overflow: hidden;
+  	overflow-y: hidden;
+  	overflow-x: hidden; 
+}
+
+#background {
+	width:100%;
+	height:100%;
+	background: no-repeat url("../../../background/ch05/5_0.jpg") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+
+.mainC {
+	opacity:1;
+    position: absolute;
+    width: 1200px;
+	height: 500px;
+ 	top: 50%; left: -28%;
+ 	transform: translate(70%,-50%);
+
+ 	
+}
+.mainC_s {
+	opacity:0;
+    position: absolute;
+    width: 1200px;
+	height: 500px;
+ 	top: 50%; left: -28%;
+ 	transform: translate(70%,-50%);
+
+ 	
+}
+.mainC_k {
+	opacity:0;
+    position: absolute;
+    width: 1200px;
+	height: 500px;
+ 	top: 50%; left: -28%;
+ 	transform: translate(70%,-50%);
+
+ 	
+}
+.spear {
+	opacity: 0;
+	position: absolute;
+	width: 50px;
+	height: 340px;
+	left: 53%;
+	top: 30%; 
+}
+
+.crocs1 {
+	opacity:0;
+	position: absolute; 
+	left: 0;
+	top: 0;
+}
+.crocs2 {
+	opacity:0;
+    position: absolute;
+ 	top: 50%; 	
+ 	right: 0;
+	top: 0;
+
+}
+.crocs3 {
+	opacity:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+.crocs4 {
+	opacity:0;
+    position: absolute;
+	bottom: 0;
+    right: 0;
+}
+
+.crocs11 {
+	opacity:0;
+	transform: scaleY(-1); 
+	position: absolute; 
+	left: 0;
+	top: 0;
+}
+.crocs21 {
+	opacity:0;
+    position: absolute;
+    transform: scaleY(-1); 
+ 	top: 50%; 	
+ 	right: 0;
+	top: 0;
+
+}
+.crocs31 {
+	opacity:0;
+    position: absolute;
+    transform: scaleX(-1);
+    bottom: 0;
+    left: 0;
+
+}
+.crocs41 {
+	opacity:0;
+    position: absolute;
+	bottom: 0;
+    right: 0;
+}
+
+/** test **/
+.crocsi1 {
+	opacity:1;
+	transform: scaleY(-1); 
+	position: absolute; 
+	left: 0;
+	top: 0;	
+}
+.crocsi2 {
+	opacity:1;
+    position: absolute;
+    transform: scaleY(-1); 
+ 	top: 50%; 	
+ 	right: 0;
+	top: 0;	
+}
+.crocsi3 {
+	opacity:1;
+    position: absolute;
+    transform: scaleX(-1);
+    bottom: 0;
+    left: 0;	
+}
+.crocsi4 {
+	opacity:1;
+    position: absolute;
+	bottom: 0;
+    right: 0;
+}
+

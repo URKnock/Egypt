@@ -23,11 +23,13 @@ public class RequestMapping {
     	mappings.put("/chapter04", new ChapterController("/chapter04.jsp", 4));
     	mappings.put("/chapter05_last", new ChoiceController("/interaction/chapter05/Duat_last.jsp"));
 		mappings.put("/chapter05", new ChoiceController());
+		mappings.put("/duatgamestart", new ForwardController("/interaction/chapter05/DuatGameStart.jsp"));
 		mappings.put("/chapter09", new InfoController("/chapter09.jsp", 9));
 		mappings.put("/chapter09_2", new InfoController("/interaction/chapter09/ch09_2.jsp", 9));
 		mappings.put("/chapter09_3", new InfoController("/interaction/chapter09/ch09_3.jsp", 9));
 		mappings.put("/chapter09_4", new InfoController("/interaction/chapter09/ch09_4.jsp", 9));
 		mappings.put("/chapter09_5", new InfoController("/interaction/chapter09/ch09_5.jsp", 9));
+		mappings.put("/chapter09_6", new InfoController("/interaction/chapter09/ch09_6.jsp", 9));		
 		mappings.put("/chapter06", new ChapterController("/chapter06.jsp", 6));
 		mappings.put("/chapter08", new ChapterController("/chapter08.jsp", 8));
 		mappings.put("/chapter11", new ForwardController("/chapter11.jsp"));

@@ -26,20 +26,29 @@ function init() {
 }
 			
 	$("#c3").click(function() {
-		 $(".modal").fadeIn();
+		$(".modal").fadeIn();
+		$(".modal_content").click(function(){
+    		$(".modal").fadeOut();
+			$("#c3").attr("src", 
+			"/D/resources/Character/ch09/2층 왜가리2.webp");
+			//돌아감
+			setTimeout(function() { 
+			$("#c3").attr("src", 
+			"/D/resources/Character/ch09/2층 왜가리1.webp");	
+			}, 3600);
+ 		});					
 	});
 	
-	$(".modal_content").click(function(){
-    $(".modal").fadeOut();
- 	});	
+	
 			
 	$("#c4").click(function() {
 		 $(".modal2").fadeIn();
+		$(".modal_content2").click(function(){
+    		$(".modal2").fadeOut();
+ 	});
 	});
 	
-	$(".modal_content2").click(function(){
-    $(".modal2").fadeOut();
- 	});	
+		
 	
 	function objectSubmit(select) {
 	$(select).removeClass("select");

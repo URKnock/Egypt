@@ -42,7 +42,13 @@ body {
 	height: 100% !important;
 }
 
-/*노랑 효과 */
+/* 회전 */
+.rot {
+	transform: rotate(335deg);
+}
+/* 회전 */
+
+/* 노랑 효과 */
 .select {
 	filter: drop-shadow(0px 0px 0.5vw yellow);
 }
@@ -182,7 +188,7 @@ form {
 
 #user1 {
 	position: absolute;
-	z-index: 4;
+	z-index: 3;
 	width: 10vw;
 	height: 38vh;
 	left: 6%;
@@ -197,6 +203,7 @@ form {
 	left: 6%;
 	top: 21%; 
 }
+
 #earth {
 	position: absolute;
 	width: 40vw;
@@ -204,12 +211,16 @@ form {
 	z-index: 3;
 	top: 19.7%; 
 }
-
 #la {
 	z-index: 3;
 	position: absolute;
 	right: -60%;
 	top: 29%;
+}
+#la_b2 {
+	z-index: 3;
+	position: absolute;
+	opacity:0;
 }
 #nol {
 	position: absolute;

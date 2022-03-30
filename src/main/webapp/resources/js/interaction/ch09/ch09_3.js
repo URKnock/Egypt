@@ -28,19 +28,57 @@ function init() {
 }
 	$("#c2").click(function() {
 		 $(".modal").fadeIn();
-	});
+		$(".modal_content").click(function(){
+   			$(".modal").fadeOut();
+			$("#c2").attr("src", 
+			"/D/resources/Character/ch09/2층 카무트 노예2.webp");	
+			$("#c4").attr("src", 
+			"/D/resources/Character/ch09/2층 카무트2.webp");
+			//돌아감
+			setTimeout(function() { 
+				$("#c2").attr("src", 
+				"/D/resources/Character/ch09/2층 카무트 노예1.webp");	
+				}, 2700);
+ 		});
+			setTimeout(function() { 
+				$("#c4").attr("src", 
+				"/D/resources/Character/ch09/2층 카무트1.webp");	
+				}, 500);
+ 		});
 	
-	$(".modal_content").click(function(){
-    $(".modal").fadeOut();
- 	});	
+	
+		
 			
 	$("#c3").click(function() {
-		 $(".modal2").fadeIn();
+		$(".modal2").fadeIn();
+		$(".modal_content2").click(function(){
+		$(".modal2").fadeOut();
+		$("#c3").attr("src", 
+		"/D/resources/Character/ch09/2층 탈곡2.webp");
+		$("#cow1").attr("src", 
+		"/D/resources/Character/ch09/2층 소2.webp");
+		$("#cow2").attr("src", 
+		"/D/resources/Character/ch09/2층 소2.webp");
+		
+		//돌아감 이거 엄청 부자연스러움;
+		setTimeout(function() { 
+			$("#c3").attr("src", 
+			"/D/resources/Character/ch09/2층 탈곡1.webp");	
+			}, 1734);	
+
+		setTimeout(function() { 
+			$("#cow1").attr("src", 
+			"/D/resources/Character/ch09/2층 소1.webp");	
+			}, 1734);	
+
+		setTimeout(function() { 
+			$("#cow2").attr("src", 
+			"/D/resources/Character/ch09/2층 소1.webp");	
+			}, 1734);	
+ 		});	
 	});
 	
-	$(".modal_content2").click(function(){
-    $(".modal2").fadeOut();
- 	});	
+	
 	
 	function objectSubmit(select) {
 	$(select).removeClass("select");

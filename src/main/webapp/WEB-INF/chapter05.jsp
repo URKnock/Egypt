@@ -31,8 +31,14 @@
 	<img id="user1" src="<c:url value='/resources/Character/ch05/5_2.png'/>">
 	<img id="user2" src="<c:url value='/resources/Character/ch05/5_1.png'/>">
 	<img id="la" src="<c:url value='/resources/Character/ch05/la_b.png'/>">
+	<img id="la_b2" src="<c:url value='/resources/Character/ch05/la_b2.png'/>">
 	<img id="nol" src="<c:url value='/resources/object/ch05/nol.png'/>">
 	</div>
+</div>
+<div id="page">
+	<c:if test="${page ne null}">
+		<jsp:include page="./interaction/chapter05/${page}"/>
+	</c:if>
 </div>
 <form method="post" action="<c:url value='/chapter05'/>">
 <div id="dialogue">

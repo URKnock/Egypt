@@ -74,16 +74,16 @@ public class ChoiceController implements Controller {
 		int score = session.getAttribute("score") == null ? 0 : (int) session.getAttribute("score");
 		String choice = request.getParameter("choice") == null ? "null" : request.getParameter("choice");
 
-    	if(!choice.equals("null") || scene.equals("14")) {
+    	if(!choice.equals("null") || scene.equals("16")) {
         	switch(scene) {
 	    		case "11":
 		    		if(choice.equals("0")) score += 1;
 		    		break;
-		    	case "12":
-		    	case "13":
+		    	case "14":
+		    	case "15":
 		    		if(choice.equals("1")) score += 1;
 		    		break;
-		    	case "14":
+		    	case "16":
 		    		choice = String.valueOf(3 - score);
 		    		score = 0;
 		    		break;

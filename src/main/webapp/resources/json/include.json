@@ -56,10 +56,6 @@
 	"page":"ch04_01.jsp"
 },
 
-{
-	"chapter":5, "scene":3, "flag":0,
-	"page":"DuatFirst.jsp"
-},
 
 {
 	"chapter":4, "scene":2, "flag":0,
@@ -132,6 +128,21 @@
 {
 	"chapter":4, "scene":19, "flag":0,
 	"page":"ch04_3_2.jsp"
->>>>>>> cf3adfb6f327b8013fe401b7123a1b61f6826bd3
+},
+{
+	"chapter":5, "scene":6, "flag":0,
+	"page":"duatg3.jsp"
+},
+{
+	"chapter":5, "scene":3, "flag":0,
+	"page":"DuatGameStart.jsp"
+},
+{
+	"chapter":5, "scene":4, "flag":0,
+	"page":"DuatGameStart2.jsp"
+},
+{
+	"chapter":5, "scene":5, "flag":0,
+	"page":"DuataGameSecond.jsp"
 }
 ]

@@ -30,9 +30,14 @@
 </div>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/Character/ch09/9_1.png'/>"/>
-	<img id="c2" src="<c:url value='/resources/Character/ch09/9_6.png'/>"/>
-	<img id="c3" src="<c:url value='/resources/Character/ch09/9_13.png'/>"/>
+	<img id="c1" src="<c:url value='/resources/Character/ch09/사자.webp'/>"/>
+	<img id="c2" src="<c:url value='/resources/Character/ch09/1층 매사자1.webp'/>"/>
+	</div>
+</div>
+<div id="birds">
+	<div id="bird_s">
+	<img id="b1" src="<c:url value='/resources/Character/ch09/1층 매1.webp'/>"/>
+	<img id="b2" src="<c:url value='/resources/Character/ch09/1층 매 단상.png'/>"/>
 	</div>
 </div>
 </body>
