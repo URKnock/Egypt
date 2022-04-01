@@ -36,9 +36,7 @@
 </div>
 
 <script>	
-	var osiris = document.querySelector('.osiris');
-	
 	setTimeout(function() {
-		osiris.src = "resources/webp/ch04/osiris.webp";
+		obj.style.animation = "2.4s objmoving 0s infinite"
 	}, 3000);
 </script>
