@@ -5,7 +5,6 @@ var effect = [];
 effect[0] = document.querySelector('#interact .effect1');
 effect[1] = document.querySelector('#interact .effect2');
 effect[2] = document.querySelector('#interact .effect3');
-effect[3] = document.querySelector('#interact .effect4');
 
 var webp = [];
 webp[0] = "resources/webp/ch04/4_1_3.webp";
@@ -23,7 +22,6 @@ function tap_motion(e, i) {
 		}
 		else if(i == 1) {
 			effect[0].style.animationPlayState = 'running';
-			effect[3].style.animationPlayState = 'running';
 		}
 		motion_total--;
 		

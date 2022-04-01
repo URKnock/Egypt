@@ -8,7 +8,7 @@
 	#interact .animal { height: 23.79%; bottom: 33.8%; }
 	#interact .animal:nth-of-type(5) { display: none; }
 	
-	#line { width: 20vh; bottom: 44%; left: 50%; transform: rotate(0.75turn) translate(0vh, -8vh); }
+	#line { height: 18.14%; bottom: 28%; left: 50%; transform: translate(0vh, -8vh); }
 	.item { height: 05.74%; bottom: 54.25%; left: 22.5%; }
 	
 	@keyframes getItem {
@@ -31,14 +31,14 @@
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_1.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_2.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_11.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_7.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_10.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_6.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_7.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_9.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_6.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_4.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_5.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_8.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_9.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_7.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_8.webp'/>">
 	</div>
 	
 	<!-- object -->
@@ -50,9 +50,9 @@
 	
 	<img class="knife" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">
 	
-	<div class="spot1" id="circle" style="bottom: 48%; left: 49%;"></div>
-	<div class="spot2" id="circle" style="bottom: 30%; left: 49%;"></div>
-	<div id="line"></div>
+	<div class="spot1" id="circle" style="bottom: 49%; left: 50%; transform: translate(-2vh, 0);"></div>
+	<div class="spot2" id="circle" style="bottom: 32%; left: 50%; transform: translate(-2vh, 0);"></div>
+	<img id="line" src="<c:url value='/resources/object/ch04/4_4_18.png'/>">
 	
 	<img class="item" src="<c:url value='/resources/object/ch04/4_4_6.png'/>">
 </div>

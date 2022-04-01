@@ -21,7 +21,7 @@ function init_toss() {
 	spot.onclick = function() {
 		if(isDragging == true) {
 			item.style.display = "none";
-			setTimeout(next, 1000);
+			next();
 		}
 	}
 }

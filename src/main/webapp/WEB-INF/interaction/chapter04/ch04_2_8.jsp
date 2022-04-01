@@ -7,7 +7,7 @@
 	#interact .character:nth-of-type(3) { height: 34.3%; }
 	
 	#interact .animal:nth-of-type(5) { height: 58.98%; z-index: 3; }
-	#interact .animal:nth-of-type(6) { display: none; height: 43.24%; bottom: 35%;}
+	#interact .animal:nth-of-type(6) { display: none; height: 43.24%; bottom: 34.5%;}
 	
 	#active:hover {
 		transform: scale(1.1) translate(-50%, 0%);
@@ -31,14 +31,14 @@
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_1.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_2.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_11.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_7.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_10.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_6.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_7.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_9.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_6.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_4.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_5.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_8.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_9.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_7.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_8.webp'/>">
 	</div>
 	
 	<!-- object -->

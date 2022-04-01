@@ -13,8 +13,10 @@
 
 <div id="interact">
 	<!-- background -->
-	<img class="background" src="<c:url value='/resources/background/ch04/4_0_2.jpg'/>">
-	
+	<img class="background" src="<c:url value='/resources/background/ch04/4_2_2.png'/>">
+	<div id="bg">
+		<img class="background" src="<c:url value='/resources/background/ch04/4_2_1.png'/>">
+	</div>
 	<!-- Character -->
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_8.png'/>">
 	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/4_8_1.webp'/>">

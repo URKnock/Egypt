@@ -37,5 +37,4 @@
 	<img class="effect1" src="<c:url value='/resources/object/ch04/4_2_1.png'/>">
 	<img class="effect2" src="<c:url value='/resources/object/ch04/4_2_2.png'/>">
 	<img class="effect3" src="<c:url value='/resources/object/ch04/4_2_3.png'/>">
-	<img class="effect4" src="<c:url value='/resources/object/ch04/4_2_3.png'/>">
 </div>

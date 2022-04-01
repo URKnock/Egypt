@@ -17,10 +17,10 @@
 	}
 		
 	#interact .character:nth-of-type(3) { height: 34.3%; }
-	#interact .animal:nth-of-type(5) { bottom: 35%; height: 15.27%; left: 50.8%; display: none;}
-	#interact .animal:nth-of-type(6) { bottom: 35%; height: 20.09%;}
+	#interact .animal:nth-of-type(5) { bottom: 36%; height: 15.27%; left: 50.8%; display: none;}
+	#interact .animal:nth-of-type(6) { bottom: 36%; height: 20.09%;}
 	
-	#line { width: 7vh; bottom: 48%; left: 50%; transform: rotate(0.97turn) translate(-13.5vh, -4vh); }
+	#line { height: 02.31%; bottom: 45%; left: 50%; transform: translate(-13.5vh, -4vh); }
 	
 	.item { height: 05.92%; bottom: 53.25%; left: 7%; }
 	@keyframes getItem {
@@ -43,14 +43,14 @@
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_1.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_2.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_11.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_7.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_10.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_6.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_7.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_9.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_6.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_4.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_5.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_8.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_9.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_7.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_8.webp'/>">
 	</div>
 	
 	<!-- object -->
@@ -62,9 +62,9 @@
 	
 	<img class="knife" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">
 	
-	<div class="spot1" id="circle" style="bottom: 42%; left: 38%;"></div>
-	<div class="spot2" id="circle" style="bottom: 45%; left: 45%;"></div>
-	<div id="line"></div>
+	<div class="spot1" id="circle" style="bottom: 46%; left: 50%; transform: translate(-17vh, 0);"></div>
+	<div class="spot2" id="circle" style="bottom: 47%; left: 50%; transform: translate(-9vh, 0);"></div>
+	<img id="line" src="<c:url value='/resources/object/ch04/4_4_19.png'/>">
 	
 	<img class="item" src="<c:url value='/resources/object/ch04/4_4_10.png'/>">
 </div>

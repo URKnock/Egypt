@@ -43,6 +43,7 @@
 }
 #bg .bgObj:nth-of-type(4){
 	height: 05.27%;
+	width: auto;
 	left: 50%; transform: translate(-50%, 0%);
 }
 #bg .bgObj:nth-of-type(5){
