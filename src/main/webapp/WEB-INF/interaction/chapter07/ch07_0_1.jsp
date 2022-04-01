@@ -13,9 +13,9 @@
 	<img id="active" class="bgObj" src="<c:url value='/resources/background/ch07/7_0_6.png'/>">
 
 	<!-- character -->
-	<img class="character" src="<c:url value='/resources/Character/ch07/6_1.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch07/6_3.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch07/6_18.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch07/6_5.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch07/6_6.png'/>">
+	<img class="character" src="<c:url value='/resources/character/ch07/6_1.png'/>">
+	<img class="character" src="<c:url value='/resources/character/ch07/6_3.png'/>">
+	<img class="character" src="<c:url value='/resources/character/ch07/6_18.png'/>">
+	<img class="character" src="<c:url value='/resources/character/ch07/6_5.png'/>">
+	<img class="character" src="<c:url value='/resources/character/ch07/6_6.png'/>">
 </div>
