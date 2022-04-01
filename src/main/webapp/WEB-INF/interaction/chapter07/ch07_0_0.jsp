@@ -37,7 +37,7 @@
 	<img id="active" onclick="tap_info(this, 0)" class="bgObj" src="<c:url value='/resources/background/ch07/7_0_6.png'/>">
 
 	<!-- character -->
-	<img class="character" src="<c:url value='/resources/Character/ch07/6_1.png'/>">
+	<img class="character" src="<c:url value='/resources/character/ch07/6_1.png'/>">
 	<img id="active" onclick="tap_info(this, 1)" class="character" src="<c:url value='/resources/Character/ch07/6_3.png'/>">
 	<img id="active" onclick="tap_info(this, 2)" class="character" src="<c:url value='/resources/Character/ch07/6_18.png'/>">
 	<img id="active" onclick="tap_info(this, 3)"class="character" src="<c:url value='/resources/Character/ch07/6_5.png'/>">

@@ -1,6 +1,7 @@
 var body = document.querySelector("#interact");
 var item = document.querySelector("#interact .item");
 var spot = document.querySelector("#interact .spot");
+var circle = document.querySelector("#interact .circle");
 
 var xStart;
 var yStart;
@@ -17,11 +18,13 @@ function init_toss() {
 		
 		item.style.cursor = "none";
 		spot.style.cursor = "none";
+		
+		circle.style.display = "block";
 	}
 	spot.onclick = function() {
 		if(isDragging == true) {
 			item.style.display = "none";
-			setTimeout(next, 1000);
+			next();
 		}
 	}
 }
