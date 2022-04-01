@@ -19,7 +19,7 @@
 	<img class="pontiff" src="<c:url value='/resources/webp/ch04/servant_3.webp'/>">
 	
 	<img class="character" id="anubis" src="<c:url value='/resources/webp/ch04/anubis_2_talk.webp'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_4.png'/>">
+	<img class="character" src="<c:url value='/resources/character/ch04/4_4.png'/>">
 	
 	<!-- object -->
 	<img class="object" src="<c:url value='/resources/object/ch04/4_1_1.png'/>">

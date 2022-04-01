@@ -31,7 +31,7 @@
 	<img id="active" onclick="tap_info(this, 2)" class="pontiff"  src="<c:url value='/resources/webp/ch04/servant_3.webp'/>">
 	
 	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_2.webp'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_4.png'/>">
+	<img class="character" src="<c:url value='/resources/character/ch04/4_4.png'/>">
 	
 	<!-- object -->
 	<img id="active" onclick="tap_info(this, 3)" class="object"  src="<c:url value='/resources/object/ch04/4_1_1.png'/>">
