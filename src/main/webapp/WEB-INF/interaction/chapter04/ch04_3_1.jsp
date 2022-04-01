@@ -3,13 +3,13 @@
 
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_3.css'/>" rel="stylesheet" type="text/css"/>
 <style>
-	#interact .character:nth-of-type(3) { height: 28.61%; left: 18%; }
-	#interact .character:nth-of-type(4) { height: 50.64%; left: 3%; }
-	#interact .character:nth-of-type(5) { height: 28.61%; left: 3%; }
-	#interact .item { height: 13.42%; left: 8%; }
-	@keyframes walk {
-		from { left: -140%; opacity: 1;}
-		to { left: 3%; opacity: 1;}
+	#interact .item { height: 13.24%; left: 39vh; }
+	
+	#interact .spot {
+		transform: translate(-18vh, 0);
+	}
+	#interact .circle {
+		transform: translate(-20vh, 0);
 	}
 </style>
 
@@ -34,13 +34,23 @@
 	</div>
 	
 	<!-- character -->
-	<img class="osiris" src="<c:url value='/resources/Character/ch04/4_23.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_22.png'/>">
-	<img class="character" id="stand" src="<c:url value='/resources/Character/ch04/4_18.png'/>">
-	<img class="character" id="sit" src="<c:url value='/resources/Character/ch04/4_22.png'/>">
+	<img class="osiris" src="<c:url value='/resources/webp/ch04/osiris_motion.webp'/>">
+
+	<img class="character" src="<c:url value='/resources/webp/ch04/servant_7_nothing.webp'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/servant_8_nothing.webp'/>">
 	
 	<img class="item" id="active" src="<c:url value='/resources/object/ch04/4_4_7.png'/>">
 	
 	<div class="spot"></div>
+	<div class="circle"></div>
+	
 	<img class="victim1" src="<c:url value='/resources/object/ch04/4_4_16.png'/>">
 </div>
+
+<script>	
+	var osiris = document.querySelector('.osiris');
+	
+	setTimeout(function() {
+		osiris.src = "resources/webp/ch04/osiris.webp";
+	}, 2400);
+</script>

@@ -18,8 +18,8 @@
 		<img class="background" src="<c:url value='/resources/background/ch04/4_2_1.png'/>">
 	</div>
 	<!-- Character -->
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_8.png'/>">
-	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/4_8_1.webp'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/servant_4.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_3.webp'/>">
 	<img class="character" src="<c:url value='/resources/Character/ch04/4_11.png'/>">
 	
 	<img class="motion" src="<c:url value='/resources/Character/ch04/4_9.png'/>">
@@ -35,3 +35,10 @@
 	<img class="tool" src="<c:url value='/resources/object/ch04/4_3_1.png'/>"/>
 </div>
 
+<script>	
+	var osiris = document.querySelector('.osiris');
+	
+	setTimeout(function() {
+		osiris.src = "resources/webp/ch04/osiris.webp";
+	}, 3000);
+</script>

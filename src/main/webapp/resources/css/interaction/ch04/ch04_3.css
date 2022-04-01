@@ -70,35 +70,43 @@
 	bottom: 28.5%;
 	z-index: 2;
 }
-
-#stand { animation: 3s walk; opacity: 0; }
-#sit { animation: 3s appear; }
-
-@keyframes appear {
-	from { opacity: 0; }
-	to { opacity: 0; }
+#interact .character:nth-of-type(3) { 	
+	height: 38.3%;
+	left: 30vh;
 }
-@keyframes walk {
-	from { left: -120%; opacity: 1;}
-	to { left: 18%; opacity: 1;}
+#interact .character:nth-of-type(4) { 	
+	height: 49.25%;
+	left: 5vh; 
 }
 
 #interact .item {
-	bottom: 50%;
+	bottom: 53%;
 	z-index: 3;
 	animation: 3s appear;
 }
 
 #interact .spot {
 	position: absolute;
-	width: 30vh; height: 30vh;
-	bottom: 25%; left: 50%; transform: translate(-20vh, 0);
+	width: 15vh; height: 15vh;
+	bottom: 44%; left: 50%;
 	
 	border-radius: 50%;
 	background-color: black;
 	opacity: 0;
 	
 	z-index: 5;
+}
+#interact .circle {
+	display: none;
+	position: absolute;
+	width: 15vh; height: 15vh;
+	bottom: 39%; left: 50%;
+	
+	border-radius: 50%;
+	background-color: white;
+	opacity: 0.6;
+	
+	z-index: 2;
 }
 
 .victim1 {

@@ -5,27 +5,15 @@
 <link href="<c:url value='/resources/css/interaction/ch04/getItem.css'/>" rel="stylesheet" type="text/css"/>
 
 <style>
-	#interact .character:nth-of-type(2) {
-		display: block;
-		height: 28.61%; left: 1%;
-		animation: 1s walk;
-		z-index: 3;
-	}
-	@keyframes walk {
-		0% { left: -20%; }
-		100% { left: 1%;}
-	}
-		
-	#interact .character:nth-of-type(3) { height: 34.3%; }
-	#interact .animal:nth-of-type(5) { bottom: 36%; height: 15.27%; left: 50.8%; display: none;}
+	#interact .animal:nth-of-type(5) { bottom: 36%; height: 15.27%; left: 51%; display: none;}
 	#interact .animal:nth-of-type(6) { bottom: 36%; height: 20.09%;}
 	
 	#line { height: 02.31%; bottom: 45%; left: 50%; transform: translate(-13.5vh, -4vh); }
 	
-	.item { height: 05.92%; bottom: 53.25%; left: 7%; }
+	.item { height: 05.92%; bottom: 69%; left: 13vh; }
 	@keyframes getItem {
 	    from { bottom: 50%; left: 43%; }
-	    to { bottom: 53.25%; left: 7%; }
+	    to {  bottom: 69%; left: 13vh; }
 	}
 </style>
 
@@ -53,10 +41,11 @@
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_8.webp'/>">
 	</div>
 	
-	<!-- object -->
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_15.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_17.png'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
+	<!-- character -->
+	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_victim2.webp'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/servant_6_in.webp'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_11.png'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_9.png'/>">
 	

@@ -10,11 +10,11 @@
 	#interact .animal:nth-of-type(6) { height: 23.79%; bottom: 33.5%; }
 	
 	#line { height: 5vh; bottom: 38%; left: 50%; transform: translate(-8.5vh, 0); }
-	.item { height: 11.20%; bottom: 54.25%; left: 15%; }
+	.item { height: 11.20%; bottom: 70.5%; left: 28vh; }
 	
 	@keyframes getItem {
 	    from { bottom: 43%; left: 42%; }
-	    to { bottom: 54.25%; left: 15%; }
+	    to { bottom: 70.5%; left: 28vh; }
 	}
 </style>
 
@@ -43,9 +43,9 @@
 	</div>
 	
 	<!-- character -->
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_13.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_15.png'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5.webp'/>">
+	<img class="character">
+	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
 	
 	<!-- animal -->
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_3_1.png'/>">

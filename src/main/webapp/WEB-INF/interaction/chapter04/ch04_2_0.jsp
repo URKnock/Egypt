@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_2.css'/>" rel="stylesheet" type="text/css"/>
-<link href="<c:url value='/resources/css/interaction/ch04/ch04_2_0.css'/>" rel="stylesheet" type="text/css"/>
 <style>
 	#interact .animal {
-		height: 32.03%;
-		bottom: 35%;
+		height: 31.11%;
+		bottom: 35.5%;
 	}
 </style>
 <div id="interact">
@@ -26,9 +25,17 @@
 	</div>
 	
 	<!-- object -->
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_13.png'/>">
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_14.png'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_1.webp'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_in.webp'/>">
+	<img class="character">
+	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
 	
-	<img class="animal" src="<c:url value='/resources/webp/ch04/4_2.webp'/>">
+	<img class="animal" src="<c:url value='/resources/webp/ch04/animal_1.webp'/>">
 </div>
+
+<script>
+	var servant = document.querySelector('.character:nth-of-type(2)');
+
+	setTimeout(function() {
+		servant.src = "resources/webp/ch04/servant_5_knife.webp";
+	}, 5350);
+</script>
