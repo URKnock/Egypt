@@ -30,21 +30,7 @@ function interaction() {
 	$(organName).width($(organName).width() / 2);
 	$(organName).height($(organName).height() / 2);
 	$(organName).css("top", $("#human").offset().top + ($("#human").height() / 2) - $(organName).width() / 2);
-	$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);
-	
-	preload([
-	    $('#potToClick').attr("src"),
-	    $('#bandageToClick').attr("src"),
-	    $('#niddleToClick').attr("src"),
-	    $('#servant').attr("src"),
-	    $('#scroll').attr("src"),
-	    "/resources/object/ch03/soda_1.png",
-	    "/resources/object/ch03/soda_2.png",
-	    "/resources/object/ch03/soda_3.png",
-	    "/resources/object/ch03/soda_4.png",
-	    "/resources/object/ch03/paper_open.webp",
-	    "/resources/object/ch03/paper_close.webp"
-	]);
+	$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);	
 	
 	resize("#scroll");
 	centerX("#scroll");
@@ -131,7 +117,7 @@ function enterElement(elem) {
 		enterCnt++;
 		if(onUsing == "pot") {
 			$('#human_soda').attr("src", "/resources/object/ch03/soda_" + enterCnt + ".png");
-			if(enterCnt >= 3) {
+			if(enterCnt >= 4) {
 				enterCnt == 0;
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();
@@ -149,8 +135,8 @@ function enterElement(elem) {
 				});
 			}
 		} else if(onUsing == "bandage") {
-			$('#human_soda').attr("src", "/resources/object/ch03/bandage_" + enterCnt-3 + ".png");
-			if(enterCnt >= 4) {
+			$('#human_soda').attr("src", "/resources/object/ch03/bandage_" + enterCnt-4 + ".png");
+			if(enterCnt >= 8) {
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();
 				$('#bandageToClick').show();

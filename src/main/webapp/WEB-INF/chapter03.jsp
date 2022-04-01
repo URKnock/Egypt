@@ -7,8 +7,17 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch03.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch03.js'/>"></script>
+<link rel="preload" href="<c:url value='/resources/object/loading.gif'/>" as="image"/>
+<script>
+	<c:forEach items="${names}" var="name">
+		lists.push("${name}"); 
+	</c:forEach>
+</script>
 </head>
 <body onload="init(); interaction();">
+<div id="loading">
+	<img src="<c:url value='/resources/object/loading.gif'/>"/>
+</div>
 <div id="background">
 	<c:forEach var="i" begin="1" end="3">
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>

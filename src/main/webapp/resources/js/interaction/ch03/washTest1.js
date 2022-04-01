@@ -23,13 +23,6 @@ function interaction() {
 	$("#water").hide();
 	$("#human").show();
 	
-	preload([
-	    $('#kettleToClick').attr("src"),
-	    $('#linen').attr("src"),
-	    $('#servant').attr("src"),
-	    $('#scroll').attr("src")
-	]);
-	
 	resize("#scroll");
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;

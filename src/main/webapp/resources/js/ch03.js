@@ -2,14 +2,14 @@ var w, h, x, y;
 var scene, index, flag;
 var o_select, o_index;
 var clicked = [1, 2, 3, 4, 5, 6];
+var lists = new Array();
+var loaded = false;
 
 $(document).ready(function(){
 	o_select = "0";
 	w = $("#background").width() / 2650 / 0.87;
 	h = $("#background").height($("#background").prop("naturalHeight") * w);
-	$(window).resize(function() {
-		location.reload(true);
-	});
+	
 	$(".close").on("click", function() { 
 		hide_info();
 		if(clicked.length == 0) {
@@ -25,7 +25,15 @@ $(document).ready(function(){
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
 
- 	if((scene == 1 && index == 0) || (scene == 2 && flag == 1)) {
+	if(scene == 0 && !loaded) {
+		preload(lists);
+	} else {
+		$("#loading").fadeOut(0);
+		$(window).resize(function() {
+			location.reload(true);
+		});
+	}
+	if((scene == 1 && index == 0) || (scene == 2 && flag == 1)) {
  		if(scene == 2 && flag == 1) {
  			clicked = [0, 1, 2, 3, 4, 5, 6];
  			$("#background > img:nth-child(4)").addClass("select");
@@ -224,9 +232,17 @@ function resizeWH(element, ew, eh) {
 }
 
 function preload(arrayOfImages) {
-    $(arrayOfImages).each(function(){
-        $('<img/>')[0].src = this;
+	var preImg = $('#menu img:first-child');
+    $(arrayOfImages).each(function(index, value){
+    	if(!loaded && index + 1 >= arrayOfImages.length) {
+    		preImg.on("load", function() {
+    			$("#loading").fadeOut(2000);
+				loaded = true;
+    		});
+    	}
+       	preImg.attr("src", value);
     });
+    preImg.attr("src", "../resources/UI/Menu/1.png");
 }
 
 function interaction() {};

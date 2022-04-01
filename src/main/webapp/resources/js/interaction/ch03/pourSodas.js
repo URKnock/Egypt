@@ -19,11 +19,6 @@ function interaction() {
 	centerX("#bed");
 	$("#bed").css("bottom", 0);
 	
-	preload([
-	    $('#potToClick').attr("src"),
-	    $('#scroll').attr("src")
-	]);
-	
 	resize("#scroll");
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;

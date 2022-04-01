@@ -27,8 +27,7 @@ function interaction() {
 	    "/resources/object/ch03/B6_2.webp",
 	    "/resources/object/ch03/B7.webp"
 	];
-	preload(brains);
-	
+
 	var lock = 0;
 	$("#brain").on("click", function() {
 		if(lock == 0) {
