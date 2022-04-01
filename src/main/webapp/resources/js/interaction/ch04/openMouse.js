@@ -6,10 +6,12 @@ var Anubis = document.querySelector('#anubis');
 let spotCount = 1;
 pese.isHeld = false;
 
-var circle = []
+var circle = [];
+
+var flag = 0;
 
 for(var i = 1; i <= 3; i++) {
-	circle[i] = document.querySelector('#interact .circle:nth-of-type('+i+')');
+	circle[i] = document.querySelector('#interact .circle:nth-of-type('+(4-i)+')');
 	circle[i].style.cursor = "none";
 	circle[i].style.display = "none";
 	
@@ -25,7 +27,12 @@ function init_pese() {
 	body.style.cursor = "auto";
 	
 	obj.onclick = function() { 
-			Anubis.src = "resources/webp/ch04/4_8_2.webp";
+			Anubis.src = "resources/webp/ch04/anubis_3_motion.webp";
+			flag++;
+			setTimeout(function() {
+				flag--;
+				if(flag == 0) Anubis.src = "resources/webp/ch04/anubis_3.webp";
+			}, 2400);
 		
 			obj.id = "inactive"
 			
@@ -57,9 +64,14 @@ function tap_circle( e ) {
 		e.style.animation = "fadeout 3s";
 		
 		e.id = "inactive";
-		Anubis.src = "resources/webp/ch04/4_8_2.webp";
+		Anubis.src = "resources/webp/ch04/anubis_3_motion.webp";
+		flag++;
+		setTimeout(function() {
+			flag--;
+			if(flag == 0) Anubis.src = "resources/webp/ch04/anubis_3.webp";
+		}, 2400);
 
-		var oil =  document.querySelector('#oil0' + spotCount);
+		var oil =  document.querySelector('#oil0' + (4-spotCount));
 		if(oil != null) {
 			oil.style.display = "block";
 		}
@@ -85,9 +97,9 @@ function next() {
 	$("form").submit();
 }
 
-setTimeout(changeWebp, 2000);
+setTimeout(changeWebp, 3000);
 
 
 function changeWebp() {
-	Anubis.src = "resources/webp/ch04/4_8_3.webp";
+	Anubis.src = "resources/webp/ch04/anubis_3_talk.webp";
 }
