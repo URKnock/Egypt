@@ -104,6 +104,10 @@ function init() {
 	$("#scene").width(sw);
 	$("#choice > img").height( $("#dialogue > img").height() );
 	
+	$("#blur").height( $("#dialogue").height() );
+	$("#blur").css("left", "0");
+	$("#blur").css("bottom", "0");
+	
 	resize("#human");
 	center("#human");
 	

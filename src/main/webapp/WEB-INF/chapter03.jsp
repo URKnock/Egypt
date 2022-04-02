@@ -74,6 +74,7 @@
 		</div>
 	</c:if>
 </div>
+<div id="blur"></div>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
 <input name="flag" 	type="hidden" value="${flag}"/>

@@ -38,7 +38,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
 #loading > img {
 	width: 300px;
 	height: 300px;
@@ -54,12 +53,25 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
 #background > img {
 	width:initial;
 	height:initial;
 	position:absolute;
 }
+#blur {
+	width: 100%;
+	height: 200px;
+	background: inherit;
+	position: absolute;
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(15px);
+	-o-filter: blur(15px);
+	-ms-filter: blur(15px);
+	backdrop-filter: blur(10px);
+	z-index: 999;
+}
+
 .canopic > img {
 	position:absolute;
 	z-index:2;	
@@ -89,7 +101,7 @@ body {
 #dialogue {
 	position: absolute;
 	display: flex;
-	width:100%;
+	width: 100%;
 	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -98,7 +110,8 @@ body {
 	align-content: center;
 	left: 0;
 	bottom: 0;
-	z-index: 999;
+	z-index: 1000;
+	opacity: 0.9;
 }
 #dialogue > img {
 	margin: 5px;
