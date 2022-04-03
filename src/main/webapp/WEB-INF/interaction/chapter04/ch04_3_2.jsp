@@ -5,11 +5,11 @@
 
 <div id="interact">
 	<!-- background -->
-	<img class="background" src="<c:url value='/resources/background/ch04/4_4_5.png'/>">
+	<img class="background" src="<c:url value='/resources/background/ch04/4_1_5.png'/>">
 	<div id="bg">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_1.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_2.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_3.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_1.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_2.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_6.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_7.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_8.webp'/>">
