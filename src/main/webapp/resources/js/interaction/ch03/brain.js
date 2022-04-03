@@ -8,8 +8,9 @@ function interaction() {
 		$(item).css("left", 0);
 		$(item).css("bottom", $("#dialogue").height());
 	});
+	$("#bed").css("bottom", 0);
 	$("#brain").addClass("select");
-	$("#background").css("background", "#fff8e7");
+	$("#background").css("background", "#F9F2DB");
 	$("#background").children().hide();
 	
 	var idx = 0;

@@ -14,7 +14,7 @@ function interaction() {
 	$('#charm1').css("left", $('#charm1').offset().left - 100 - $('#charm1').width());
 	$('#charm3').css("left", $('#charm3').offset().left + 100 + $('#charm3').width());
 	
-	$('#body').css({"left":$("#human").offset().left + 284*w, "top":$("#human").offset().top - 7*w});
+	$('#body').css({"left":$("#human").offset().left + 204*w, "top":$("#human").offset().top + 7*w});
 	$('#chest').css({"left":$("#human").offset().left + 340*w, "top":$("#human").offset().top - 10*w});
 	
 let cd = null;
@@ -37,9 +37,10 @@ function enterElement(elem) {
 	cd.isOverlaped = false;
 	elem.style.background = 'pink';
 	console.log(elem.id + " && " + Element.id);
-	if((elem.id == "chest" && (Element.id == "charmDiv1" || Element.id == "charmDiv3")) || (elem.id == "body" && Element.id == "charmDiv2")) {
+	if((elem.id == "body" && Element.id == "charmDiv3") || (elem.id == "chest" && (Element.id == "charmDiv1" || Element.id == "charmDiv2"))) {
 		$(Element).off("mousedown");
 		$(Element).addClass("fade-out");
+		$(Element).fadeOut(1000);
 		entered.push(Element.id);
 		checkElement();
 		elem.style.background = '';

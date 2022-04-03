@@ -69,7 +69,7 @@ body {
 	-o-filter: blur(15px);
 	-ms-filter: blur(15px);
 	backdrop-filter: blur(10px);
-	z-index: 999;
+	z-index: 100;
 }
 
 .canopic > img {
@@ -110,7 +110,7 @@ body {
 	align-content: center;
 	left: 0;
 	bottom: 0;
-	z-index: 1000;
+	z-index: 111;
 	opacity: 0.9;
 }
 #dialogue > img {
