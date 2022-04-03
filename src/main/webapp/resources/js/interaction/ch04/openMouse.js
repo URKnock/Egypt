@@ -51,8 +51,8 @@ function init_pese() {
 
 function follow_mouse( event ) {
 	if(pese.isHeld) {
-		const x = event.x - (pese.clientWidth*0.95);
-		const y = event.y - (pese.clientHeight*0.2);
+		const x = event.x - (pese.clientWidth*0.9);
+		const y = event.y - (pese.clientHeight*0.15);
 		
 		pese.style.left = x + 'px';
 		pese.style.top = y + 'px';

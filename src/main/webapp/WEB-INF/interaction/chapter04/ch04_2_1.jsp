@@ -5,11 +5,10 @@
 <style>
 	.knife {
 		left: 34vh;
-		bottom: 67%;
-		transform: rotate(0.107turn);
+		bottom: 70%;
 	}
 	#active:hover{
-		transform: rotate(0.107turn) scale(1.1);
+		transform: scale(1.1);
 	}
 	#interact .animal {
 		height: 31.11%;
@@ -48,7 +47,6 @@
 
 	<!-- object -->
 	<img class="animal" src="<c:url value='/resources/webp/ch04/animal_1.webp'/>">
-	<img class="object" src="<c:url value='/resources/object/ch04/4_4_3.png'/>">
 	
 	<img class="knife" id="active" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">
 </div>

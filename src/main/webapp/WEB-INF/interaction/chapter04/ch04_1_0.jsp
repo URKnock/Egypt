@@ -13,7 +13,7 @@
 
 <div id="interact">
 	<!-- background -->
-	<img class="background" src="<c:url value='/resources/background/ch04/4_2_2.png'/>">
+	<img class="background" src="<c:url value='/resources/background/ch04/4_1_5.png'/>">
 	<div id="bg">
 		<img class="background" src="<c:url value='/resources/background/ch04/4_2_1.png'/>">
 	</div>
