@@ -27,7 +27,7 @@ canvas {
 	top: 300;
 	left: 300;
 	transform: rotate(135deg);
-	z-index: 5;
+	z-index: 99;
 }
 
 #scroll, #paper, #servant {
@@ -43,7 +43,7 @@ canvas {
 
 #bandage, #niddle {
 	position: absolute;
-	z-index: 5;
+	z-index: 99;
 	top: 300;
 	display: none;
 }
@@ -55,17 +55,22 @@ canvas {
 
 #human_cover {
 	position: absolute;
-	z-index: 4;
+	z-index: 10;
 }
 
 #human {
 	position: absolute;
-	z-index: 3;
+	z-index: 4;
 }
 
 #human_soda {
 	position: absolute;
 	z-index: 2;
+}
+
+#human_band {
+	position: absolute;
+	z-index: 3;
 }
 
 #organ1 {

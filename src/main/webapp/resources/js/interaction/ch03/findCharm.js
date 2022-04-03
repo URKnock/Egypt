@@ -2,8 +2,8 @@ function interaction() {
 	resize("#scroll");
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;
-	$("#scroll").css("top", 112*w);
-	var scrollY = $("#scroll").height() / 2 + 112*w;
+	$("#scroll").css("top", 112*h);
+	var scrollY = $("#scroll").height() / 2 + 112*h;
 
 	for(var i = 1; i < 4; i++) {
 		resize('#charmDest' + i);
@@ -17,14 +17,16 @@ function interaction() {
 	$('#charmDest1').css("left", $('#charmDest1').offset().left - 100 - $('#charmDest1').width());
 	$('#charmDest3').css("left", $('#charmDest3').offset().left + 100 + $('#charmDest3').width());
 	
+	$('#charm1').width($('#charm1').width() * 0.6);
+	$('#charm1').height($('#charm1').height() * 0.6);	
 	$('#charm2').width($('#charm2').width() * 0.5);
 	$('#charm2').height($('#charm2').height() * 0.5);
 	$('#charm3').width($('#charm3').width() * 0.3);
 	$('#charm3').height($('#charm3').height() * 0.3);
 	
-	$('#charm1').css({"left":50, "top":50});
-	$('#charm2').css({"left":x + 500*w, "bottom": $("#dialogue").height() + 10*w});
-	$('#charm3').css({"left":1535*w, "top":385*w});
+	$('#charm1').css({"left":37.5*w, "top":603*h});
+	$('#charm2').css({"left":303*w, "bottom":300*h});
+	$('#charm3').css({"left":1338*w, "top":365*h});
 		
 let cd = null;
 var Element = null;

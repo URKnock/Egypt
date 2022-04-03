@@ -10,9 +10,9 @@ function interaction() {
 	arr.forEach (function (item, idx) {
 		resizeWH(item, 834, 177);
 		centerX(item);
-		$(item).css("bottom", $("#dialogue").height() + 90*w);
+		$(item).css("bottom", 317*h);
 	});
-	$("#soda_over").css("bottom", $("#dialogue").height() + 90*w + 17*w);
+	$("#soda_over").css("bottom", 334*h);
 	$(".soda").hide();
 
 	resize("#bed");
@@ -31,6 +31,7 @@ function interaction() {
 	$('#potToClick').css("left", x - ($('#potToClick').width() / 2));
 	$("#potToClick").addClass("select");
 	$('#potToClick').on("click", function() {
+		$('#dragLine').width($("#bed").width());
 		var sLeft = $("#bed").offset().left;
 		var dLeft = sLeft + $('#dragLine').width();
 		$('#potToClick').removeClass("select");

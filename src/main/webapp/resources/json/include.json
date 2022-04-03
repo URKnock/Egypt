@@ -56,6 +56,10 @@
 	"page":"dragCharm.jsp"
 },
 {
+	"chapter":3, "scene":13, "flag":1,
+	"page":"dragCharm.jsp"
+},
+{
 	"chapter":3, "scene":14, "flag":0,
 	"page":"pourBandage.jsp"
 },

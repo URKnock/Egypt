@@ -71,6 +71,7 @@ public class ChapterController implements Controller {
 	    int i = Integer.parseInt(index);
 
 		if(json.getData().size() == s) {
+			session.setAttribute("chapter", chapter - 1);
 			return "/chapter02.jsp";
 		}
 		

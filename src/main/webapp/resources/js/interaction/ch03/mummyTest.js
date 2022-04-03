@@ -1,6 +1,6 @@
 function interaction() {
 	resize("#servant");
-	$('#servant').css("bottom", $("#dialogue").height());
+	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
 	$('#human').addClass("select");
 	dragElement(document.getElementById('humanDiv'), "#human");

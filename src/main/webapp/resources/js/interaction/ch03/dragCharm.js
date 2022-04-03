@@ -2,8 +2,8 @@ function interaction() {
 	resize("#scroll");
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;
-	$("#scroll").css("top", 112*w);
-	var scrollY = $("#scroll").height() / 2 + 112*w;
+	$("#scroll").css("top", 112*h);
+	var scrollY = $("#scroll").height() / 2 + 112*h;
 
 	for(var i = 1; i < 4; i++) {
 		resize('#charm' + i);
@@ -44,6 +44,9 @@ function enterElement(elem) {
 		entered.push(Element.id);
 		checkElement();
 		elem.style.background = '';
+	} else {
+		$('input[name=choice]').val(1);
+		$("form").submit(); 
 	}
 }
 
