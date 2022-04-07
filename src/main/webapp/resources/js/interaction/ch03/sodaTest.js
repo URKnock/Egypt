@@ -9,15 +9,16 @@ function interaction() {
 	resizeCenter("#human_cover");
 
 	function human_rescale() {
-		var arr = ["#human", "#human_soda", "#human_cover"]
+		var arr = ["#human", "#human_soda", "#human_band", "#human_cover"];
 		arr.forEach (function (item, idx) {
 			resizeWH(item, 834, 177);
 			centerX(item);
-			$(item).css("bottom", $("#dialogue").height() + 90*w);
+			$(item).css("bottom", 317*h);
 		});
 		resize("#bed");
 		centerX("#bed");
 		$("#bed").css("bottom", 0);
+		
 		resize(organName);
 		$(organName).css("top", $("#human").offset().top + ($("#human").height() / 2) - $(organName).width() / 2);
 		$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);
@@ -30,21 +31,7 @@ function interaction() {
 	$(organName).width($(organName).width() / 2);
 	$(organName).height($(organName).height() / 2);
 	$(organName).css("top", $("#human").offset().top + ($("#human").height() / 2) - $(organName).width() / 2);
-	$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);
-	
-	preload([
-	    $('#potToClick').attr("src"),
-	    $('#bandageToClick').attr("src"),
-	    $('#niddleToClick').attr("src"),
-	    $('#servant').attr("src"),
-	    $('#scroll').attr("src"),
-	    "/resources/object/ch03/soda_1.png",
-	    "/resources/object/ch03/soda_2.png",
-	    "/resources/object/ch03/soda_3.png",
-	    "/resources/object/ch03/soda_4.png",
-	    "/resources/object/ch03/paper_open.webp",
-	    "/resources/object/ch03/paper_close.webp"
-	]);
+	$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);	
 	
 	resize("#scroll");
 	centerX("#scroll");
@@ -79,13 +66,11 @@ function interaction() {
 
 	resizeWH('#paper', 1341, 776);
 	resizeWH('#servant', 1341, 776);
-	$('#paper').css("bottom", $("#dialogue").height());
+	$('#paper').css("bottom", 300*h);
 	$('#paper').css("left", 0);
-	$('#servant').css("bottom", $("#dialogue").height());
+	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
-	setTimeout(function() {	
-	$('#servant').addClass("select"); 
-		$('#servant').on("click", function() {
+	setTimeout(function() {
 			$('#servant').on("load", function() {
 				resize("#servant");
 				$('#paper').on("load", function() {
@@ -113,14 +98,12 @@ function interaction() {
 				$('#paper').show();
 			});
 			$('#servant').attr("src", "/resources/character/ch03/servant_3.webp");
-			$('#servant').removeClass("select");
-		});
-	}, 2400);
+	}, 4800);
 
 let cd = null;
 let Element = null;
 var onUsing = null;
-var enterCnt = 1;
+var enterCnt = 0;
 var isEntering = false;
 
 function enterElement(elem) {
@@ -149,8 +132,8 @@ function enterElement(elem) {
 				});
 			}
 		} else if(onUsing == "bandage") {
-			$('#human_soda').attr("src", "/resources/object/ch03/bandage_" + enterCnt-3 + ".png");
-			if(enterCnt >= 4) {
+			$('#human_band').attr("src", "/resources/object/ch03/bandage_" + (enterCnt - 3) + ".png");
+			if(enterCnt >= 6) {
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();
 				$('#bandageToClick').show();
@@ -182,6 +165,7 @@ function enterElement(elem) {
 							$('#bandageToClick').fadeOut();
 							$('#niddleToClick').fadeOut();
 							$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
+							$('#human_band').fadeOut();
 							$('#human_soda').on("load", function() {
 								$('canvas').fadeOut(2000);
 								$('#human').fadeOut(1000);

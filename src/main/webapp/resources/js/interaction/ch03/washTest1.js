@@ -7,11 +7,11 @@ function interaction() {
 	y = $("#background").height() / 2.0 + 100;
 
 	$('#human').on("load", function() {
-		var arr = ["#human", "#dirt_head", "#dirt_body", "#dirt_bottom", "#dirt_leg"]
+		var arr = ["#human", "#dirt_head", "#dirt_body", "#dirt_bottom", "#dirt_leg", "#shine"]
 		arr.forEach (function (item, idx) {
 			resize(item);
 			centerX(item);
-			$(item).css("bottom", $("#dialogue").height() + 90*w);
+			$(item).css("bottom", 317*h);
 		});
 		resize("#bed");
 		centerX("#bed");
@@ -21,40 +21,35 @@ function interaction() {
 	$("#dirty").children().hide();
 	$("#paper").hide();
 	$("#water").hide();
+	$('#shine').hide();
 	$("#human").show();
-	
-	preload([
-	    $('#kettleToClick').attr("src"),
-	    $('#linen').attr("src"),
-	    $('#servant').attr("src"),
-	    $('#scroll').attr("src")
-	]);
 	
 	resize("#scroll");
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;
-	$("#scroll").css("top", 112*w);
+	$("#scroll").css("top", 112*h);
 	$('#scroll').hide();
 	
-	var scrollY = $("#scroll").height() / 2 + 112*w;
+	var scrollY = $("#scroll").height() / 2 + 112*h;
 	resize('#kettleToClick');
 	$('#kettleToClick').css("top", scrollY - ($('#kettleToClick').height() / 2));
 	$('#kettleToClick').css("left", x - 100 - ($('#kettleToClick').width() / 2));
 	$('#kettleToClick').on("click", function() {
+		$('#dragLine').width($("#bed").width());
 		var sLeft = $("#bed").offset().left;
 		var dLeft = sLeft + $('#dragLine').width();
 		$('#kettleToClick').removeClass("select");
 		$('#kettleToClick').hide();
+		$('#water').show();
+		$('#kettle').show();
+		$('#dragLine').show();
+		$('#dragSpot').show();
 		$('#water').css("top", (300 + $("#kettle").height() / 2));
 		$('#water').css("left", (sLeft + $("#kettle").width()));
 		$('#kettle').css("left", sLeft);
 		$('#dragLine').css("left", sLeft);
 		$('#dragSpot').css("top", 300);
 		$('#dragSpot').css("left", dLeft);
-		$('#water').show();
-		$('#kettle').show();
-		$('#dragLine').show();
-		$('#dragSpot').show();
 	});
 	
 	resize('#linen');
@@ -63,13 +58,11 @@ function interaction() {
 	
 	resizeWH('#paper', 1341, 776);
 	resizeWH('#servant', 1341, 776);
-	$('#paper').css("bottom", $("#dialogue").height());
+	$('#paper').css("bottom", 300*h);
 	$('#paper').css("left", 0);
-	$('#servant').css("bottom", $("#dialogue").height());
+	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
-	setTimeout(function() {	
-	$('#servant').addClass("select"); 
-		$('#servant').on("click", function() {
+	setTimeout(function() {
 			$('#servant').on("load", function() {
 				resize("#servant");
 				$('#paper').on("load", function() {
@@ -96,8 +89,7 @@ function interaction() {
 			});	
 			$('#servant').attr("src", "/resources/character/ch03/servant_3.webp");
 			$('#servant').removeClass("select");
-		});
-	}, 2400);
+	}, 4800);
 
 	var kWidth = $("#kettle").width();
 	$("#kettle").on("mousedown", function(event) {
@@ -162,12 +154,13 @@ function rescale(element, div) {
 function checkWipeCount() {
 	if(wipeCount == 100) {
 		$('.dirt').fadeTo("1000", 0.6);
-	} else if(wipeCount == 300) {
+	} else if(wipeCount == 200) {
 		$('.dirt').fadeTo("1000", 0.3);
-	} else if(wipeCount == 500) {
+	} else if(wipeCount == 300) {
 		$('#linen').css("top", scrollY - ($('#linen').height() / 2));
 		$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
 		$('.dirt').fadeOut(1000);
+		$('#shine').fadeIn(1000);
 		setTimeout(function() { 
 			$("form").submit();
 		}, 3000);

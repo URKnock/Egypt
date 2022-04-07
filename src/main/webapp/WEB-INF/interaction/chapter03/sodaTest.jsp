@@ -12,6 +12,7 @@
 <img src="../resources/object/ch03/침대.png" id="bed"/>
 <img src="/resources/object/ch03/organ_1.png" id="organ1"/>
 <img src="../resources/character/ch03/3_3.png" id="human_soda"/>
+<img src="../resources/character/ch03/3_3.png" id="human_band"/>
 <img src="../resources/character/ch03/3_3.png" id="human" class="human"/>
 <img src="../resources/character/ch03/3_3_1.png" id="human_cover" class="droppable"/>
 <img src="../resources/character/ch03/paper_1.webp" id="servant">

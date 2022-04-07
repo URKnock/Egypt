@@ -10,6 +10,8 @@ body {
 	overflow: hidden;
   	overflow-y: hidden;
   	overflow-x: hidden;
+  	margin:0;
+	padding:0;
 }
 
 .select {
@@ -22,26 +24,53 @@ body {
 	transform: scale(1.0);
 }
 
-#anunu {
-	 image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+#loading {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	
+	position: fixed;
+	z-index: 1111;
+	
+	width: 100%;
+	height: 100%;
+	background: no-repeat url("../background/ch00/0_1.png") center center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#loading > img {
+	width: 300px;
+	height: 300px;
+	align-self: center;
 }
 
 #background {
 	width:100%;
 	height:100%;
-	background: no-repeat url("../background/ch03/3_3.png") center top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background: no-repeat url("../background/ch03/3_3.png") center center;
+    background-size: 100% 100%;
 }
-
 #background > img {
 	width:initial;
 	height:initial;
 	position:absolute;
 }
+#blur {
+	width: 100%;
+	height: 200px;
+	background: inherit;
+	position: absolute;
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(15px);
+	-o-filter: blur(15px);
+	-ms-filter: blur(15px);
+	backdrop-filter: blur(10px);
+	z-index: 100;
+}
+
 .canopic > img {
 	position:absolute;
 	z-index:2;	
@@ -71,7 +100,7 @@ body {
 #dialogue {
 	position: absolute;
 	display: flex;
-	width:100%;
+	width: 100%;
 	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -80,7 +109,8 @@ body {
 	align-content: center;
 	left: 0;
 	bottom: 0;
-	z-index: 999;
+	z-index: 111;
+	opacity: 0.9;
 }
 #dialogue > img {
 	margin: 5px;

@@ -1,18 +1,19 @@
 function interaction() {
 	$('#kettle').hide();
 	$('#water').hide();
+	$('#shine').hide();
 	$('#dragLine').hide();
 	$('#dragSpot').hide();
 	$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
 	$('#background').children().hide();
 
-	var arr = ["#hum", "#soda_head", "#soda_body", "#soda_bottom", "#soda_leg", "#soda_over"]
+	var arr = ["#hum", "#soda_head", "#soda_body", "#soda_bottom", "#soda_leg", "#soda_over", "#shine"]
 	arr.forEach (function (item, idx) {
 		resizeWH(item, 834, 177);
 		centerX(item);
-		$(item).css("bottom", $("#dialogue").height() + 90*w);
+		$(item).css("bottom", 317*h);
 	});
-	$("#soda_over").css("bottom", $("#dialogue").height() + 90*w + 17*w);
+	$("#soda_over").css("bottom", 334*h);
 
 	resize("#bed");
 	centerX("#bed");
@@ -21,14 +22,15 @@ function interaction() {
 	resize("#scroll");
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;
-	$("#scroll").css("top", 112*w);
+	$("#scroll").css("top", 112*h);
 	$('#scroll').attr("src", "/resources/object/ch03/paper_open.webp");
 	
-	var scrollY = $("#scroll").height() / 2 + 112*w;
+	var scrollY = $("#scroll").height() / 2 + 112*h;
 	resize('#kettleToClick');
 	$('#kettleToClick').css("top", scrollY - ($('#kettleToClick').height() / 2));
 	$('#kettleToClick').css("left", x - 100 - ($('#kettleToClick').width() / 2));
 	$('#kettleToClick').on("click", function() {
+		$('#dragLine').width($("#bed").width());
 		var sLeft = $("#bed").offset().left;
 		var dLeft = sLeft + $('#dragLine').width();
 		$('#kettleToClick').removeClass("select");
@@ -96,12 +98,13 @@ function interaction() {
 function checkWipeCount() {
 	if(wipeCount == 100) {
 		$('.soda').fadeTo("1000", 0.6);
-	} else if(wipeCount == 300) {
+	} else if(wipeCount == 200) {
 		$('.soda').fadeTo("1000", 0.3);
-	} else if(wipeCount == 500) {
+	} else if(wipeCount == 300) {
 		$('#linen').css("top", scrollY - ($('#linen').height() / 2));
 		$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
 		$('.soda').fadeOut(1000);
+		$('#shine').fadeIn(1000);
 		setTimeout(function() { 
 			$("form").submit();
 		}, 3000);

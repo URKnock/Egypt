@@ -41,7 +41,7 @@ function interaction() {
 	$('#organ3').css("top", $('#organ2').offset().top);
 	
 	resize('#servant');
-	$('#servant').css("bottom", $("#dialogue").height());
+	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
 
 let cd = null;
@@ -50,11 +50,6 @@ var entered = [];
 
 function checkElement() {
 	if(entered.length >= 4) {
-		for(var i = 1; i <= 4; i++) {
-			$("#organDest" + i).animate({
-				left: x - $("#organDest" + i).width() / 2
-			}, 1000, 'linear');
-		}
 		setTimeout(function() { 
 			$('input[name=choice]').val(-1);
 			$("form").submit(); 

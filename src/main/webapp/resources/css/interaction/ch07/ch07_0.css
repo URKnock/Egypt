@@ -17,7 +17,8 @@
 	z-index: 1;
 }
 #interact .background:nth-of-type(2) {
-	top: 72%;
+	top: 71.95%;
+	height: 28.05%;
 }
 
 /* 배경 오트젝트 */
@@ -46,32 +47,26 @@
 #interact .character {
 	bottom: 27.5%;
 	z-index: 3;
-	display: none;
 }
 #interact .character:nth-of-type(6) {
 	height: 39.90%;
 	left: 8%;
-	display: block;
 }
 #interact .character:nth-of-type(7) {
 	height: 43.70%;
 	right: 42%;
-	display: block;
 }
 #interact .character:nth-of-type(8) {
 	height: 48.51%;
 	right: 29%;
-	display: block;
 }
 #interact .character:nth-of-type(9) {
 	height: 39.81%;
 	right: 18%;
-	display: block;
 }
 #interact .character:nth-of-type(10) {
 	height: 22.12%;
 	right: 1%;
-	display: block;
 }
 
 #interact .guide {

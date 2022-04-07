@@ -56,6 +56,10 @@
 	"page":"dragCharm.jsp"
 },
 {
+	"chapter":3, "scene":13, "flag":1,
+	"page":"dragCharm.jsp"
+},
+{
 	"chapter":3, "scene":14, "flag":0,
 	"page":"pourBandage.jsp"
 },
@@ -168,11 +172,11 @@
 
 {
 	"chapter":7, "scene":0, "flag":0,
-	"page":"ch07_0_0.jsp"
+	"page":"ch07_0_info.jsp"
 },
 {
 	"chapter":7, "scene":1, "flag":0,
-	"page":"ch07_0_1.jsp"
+	"page":"ch07_0.jsp"
 },
 {
 	"chapter":7, "scene":2, "flag":0,
@@ -180,6 +184,30 @@
 },
 {
 	"chapter":7, "scene":3, "flag":0,
-	"page":"question.jsp"
+	"page":"ch07_1_quiz.jsp"
+},
+{
+	"chapter":7, "scene":4, "flag":0,
+	"page":"ch07_2.jsp"
+},
+{
+	"chapter":7, "scene":5, "flag":0,
+	"page":"ch07_2.jsp"
+},
+{
+	"chapter":7, "scene":6, "flag":0,
+	"page":"ch07_2.jsp"
+},
+{
+	"chapter":7, "scene":7, "flag":0,
+	"page":"ch07_3_info.jsp"
+},
+{
+	"chapter":7, "scene":8, "flag":0,
+	"page":"ch07_3.jsp"
+},
+{
+	"chapter":7, "scene":9, "flag":0,
+	"page":"ch07_3.jsp"
 }
 ]
