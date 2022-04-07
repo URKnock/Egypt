@@ -94,13 +94,22 @@ body {
 
 
 #menu {
-	display: inline-flex;
-	height: 70px;
+	position: absolute;
+	
+	width: 15%;
+	height: 5% !important;
+	
+	right: 2.5%;
+	top: 5%;
+	
+	display: flex;
+	justify-content: space-between;
+	
+	z-index: 50;
 }
 #menu img {
-	width: 50px;
-	height: 50px;
-	margin: 10px;
+	width: 20% !important;
+	height: 100% !important;
 }
 
 .lab {
@@ -109,7 +118,19 @@ body {
  	 top: 60%; right: 30%;
  	 transform: translate(70%,-50%);
 }
-
+form {
+	position: absolute;
+	
+	background: url("../UI/Dialogue/BG.png");
+	
+	width: 100%;
+	height: 27% !important;
+	
+	bottom: 0%;
+	left: 0%;
+	
+	z-index: 50;
+}
 #dialogue {
 	width:100%;
 	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;

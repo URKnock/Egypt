@@ -8,7 +8,8 @@ function init() {
 			});
 			
 	$("#c3").click(function() {
-		 $(".modal").fadeIn();
+		object("#c3", 33);
+/*		 $(".modal").fadeIn();
 			$(".modal_content").click(function(){
     		$(".modal").fadeOut();
 			$("#c2").attr("src", 
@@ -30,7 +31,7 @@ function init() {
 			$("#keepers").attr("src", 
 			"/D/resources/Character/ch09/1층 관문신1.webp");		
 			}, 1650);
- 	});	
+ 	});	*/
 		 
 	});
 	
@@ -55,5 +56,7 @@ function init() {
 	$("form").submit();
 }
 
-			
+function object(select, index) {
+	show_info(index);
+	}			
 }

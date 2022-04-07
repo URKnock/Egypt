@@ -36,7 +36,7 @@
 
 	</div>
 </div>
-
+<jsp:include page="interaction/info_window.jsp"/>
 <!-- 모달 -->
 <div class="modal">
   <div class="modal_content" 
@@ -45,7 +45,12 @@
   </div>
   </div>
   
-<!-- <form method="post" action="<c:url value='/chapter09'/>">
+<div id="page">
+	<c:if test="${page ne null}">
+		<jsp:include page="./interaction/chapter09/${page}"/>
+	</c:if>
+</div>
+<form method="post" action="<c:url value='/chapter09'/>">
 <div id="dialogue">
 	<img src='<c:url value="${dialogue.image}"/>'/>
 	<div id="scene">
@@ -73,6 +78,6 @@
 </div>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
-</form> -->
+</form>
 </body>
 </html>

@@ -1,10 +1,11 @@
 function init() {	
-	$("#background > img:nth-child(4)").addClass("select");
-			$("#c3").addClass("select");
-			$("#c3").addClass("pikachu");
+
+			
+			$("#boat_1").addClass("select");
+			$("#boat_1").addClass("pikachu");
 			$("#pre").addClass("pikachu");
-			$("#c3").on("click", function() {
-				objectSubmit("#c3");
+			$("#boat_1").on("click", function() {
+				objectSubmit("#boat_1");			
 			});
 			
 			
@@ -16,23 +17,25 @@ function init() {
 	linkLocation = this.href;
 	$("body").fadeOut(1000, redirectPage);
 		});
-	/*스르륵*/
-		
 	function redirectPage() {
 		window.location = linkLocation;
 }
+	/*스르륵*/
 
-	$("#c3").click(function() {
-		 $(".modal").fadeIn();
+	$("#boat_1").click(function() {
+		 object("#boat_1", 40);
 	});
 	
 	$(".modal_content").click(function(){
     $(".modal").fadeOut();
  	});	
 
+	function object(select, index) {
+		show_info(index);
+	}
+	
 	function objectSubmit(select) {
 	$(select).removeClass("select");
-	$("form").submit();
-}
+	}
 			
 }

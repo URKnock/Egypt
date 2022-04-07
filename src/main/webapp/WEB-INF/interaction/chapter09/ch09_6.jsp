@@ -10,6 +10,7 @@
 <script> $(function(){ init(); }); </script>
 </head>
 <body>
+<jsp:include page="../info_window.jsp"/>
 <div id="background">
 	<div id="menu">
 		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
@@ -25,9 +26,20 @@
 </div>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/Character/ch09/9_1.png'/>"/>
-	<img id="c2" src="<c:url value='/resources/Character/ch09/9_2.png'/>"/>
+	<img id="c1" src="<c:url value='/resources/Character/ch09/사자.webp'/>"/>
+	<img id="c2" src="<c:url value='/resources/Character/ch09/4층 라1.webp'/>"/>
 	</div>
+</div>
+<div id="boat">
+	<div id="boat_">
+	<img id="boat_1" src="<c:url value='/resources/Character/ch09/4층 배.webp'/>"/>
+	</div>
+</div>
+
+<div id="page">
+	<c:if test="${page ne null}">
+		<jsp:include page="./interaction/chapter09/${page}"/>
+	</c:if>
 </div>
 <form method="post" action="<c:url value='/chapter09'/>">
 <div id="dialogue">
@@ -57,9 +69,9 @@
 </div>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
-<input name="flag" 	type="hidden" value="${flag}"/>
 </form>
 </body>
+
 <!-- 모달 -->
 <div class="modal">
   <div class="modal_content" 

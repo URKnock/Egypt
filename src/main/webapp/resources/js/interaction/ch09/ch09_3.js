@@ -1,16 +1,11 @@
 function init() {	
 	$("#background > img:nth-child(4)").addClass("select");
-			$("#c2").addClass("select");
-			$("#c2").addClass("pikachu");
 			$("#next").addClass("pikachu");
 			$("#pre").addClass("pikachu");
-			$("#c2").on("click", function() {
-				objectSubmit("#c2");
-			});
-			$("#c3").addClass("select");
-			$("#c3").addClass("pikachu");
-			$("#c3").on("click", function() {
-				objectSubmit("#c3");
+			$("#c4").addClass("select");
+			$("#c4").addClass("pikachu");
+			$("#c4").on("click", function() {
+				objectSubmit("#c4");
 			});
 
 	/*스르륵*/
@@ -26,7 +21,7 @@ function init() {
 	function redirectPage() {
 		window.location = linkLocation;
 }
-	$("#c2").click(function() {
+	$("#c4").click(function() {
 		 $(".modal").fadeIn();
 		$(".modal_content").click(function(){
    			$(".modal").fadeOut();
