@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -57,8 +58,10 @@ public class CourtController implements Controller {
 	    int i = Integer.parseInt(index);
 
 		if(json.getData().size() == s) {
+			session.setAttribute("chapter", 7);
 			return "/chapter02.jsp";
 		}
+
 		
 		String choice = "-1";
 		Dialogue dialogue = null;
@@ -66,20 +69,41 @@ public class CourtController implements Controller {
 		
     	if(request.getParameter("choice") != null && !request.getParameter("choice").equals("-1")) {
     		choice = request.getParameter("choice");
-    		if(s == 3) {
-    			// 질문 번호
-    			String tmp = (String) session.getAttribute("questN");
-    			if(tmp == null) tmp = "0";
-    			tmp =  Integer.toString(Integer.parseInt(tmp) + 1);
-    			session.setAttribute("questN", tmp);
+    		if(s == 3 || s == 4) {
+    			// questN 설정
+    			int qn = i + 1;
+    			if(i == 0) qn = 13;
+    			String questN =  Integer.toString(qn);
+    			request.setAttribute("questN", questN);
     			
-    			// 질문 체크
-    			tmp = (String) session.getAttribute("ans"+choice);
-    			if(tmp == null) tmp = "0";
-    			tmp =  Integer.toString(Integer.parseInt(tmp) + 1);
-    			session.setAttribute("ans"+choice, tmp);
-    			
-    			list = json.get(scene);
+    			// answer 체크
+	   			ArrayList<String> ans = (ArrayList) session.getAttribute("answer");
+	  			if(ans == null) ans = new ArrayList<>();
+	  			
+				if(ans.size() >= qn-1) ans.remove(qn-2);
+				ans.add(qn-2, choice);
+				
+				session.setAttribute("answer", ans);
+				
+				System.out.println(ans);
+				// 부정고백 결과에 따라서
+				if(qn == 13) {
+					int score = 0;
+					for(String ansN: ans) {
+						switch(ansN) {
+							case "0": // 네
+								score++;
+								break;
+							case "1": // 아니오
+								score--;
+								break;
+						}
+					}
+					if(score >= 7) session.setAttribute("innocence", "true");
+					else session.setAttribute("innocence", "false");
+					System.out.println(session.getAttribute("innocence"));
+				}
+				list = json.get(scene);
     		}
     		else {
     			if(choice.equals("0")) {
@@ -90,7 +114,16 @@ public class CourtController implements Controller {
 	    		}
     		}
     		
-    	} else {	
+    	} else {
+    		if(s == 5) {
+	    		if(session.getAttribute("innocence") == "true")
+	    			scene = String.valueOf(++s);
+	    	}
+    		if(s == 6) {
+    			if(session.getAttribute("innocence") == "false") {
+    				return "/chapter04.jsp";
+    			}
+    		}
 	    	list = json.get(scene);
     	}
 	    dialogue = list.get(i);
@@ -103,7 +136,6 @@ public class CourtController implements Controller {
 	    	i = 0;
 	    	s += 1;
 	    }
-	    
     	request.setAttribute("scene", s);
     	request.setAttribute("index", i);
 	    request.setAttribute("flag", flag);

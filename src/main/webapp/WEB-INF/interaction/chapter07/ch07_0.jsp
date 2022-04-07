@@ -9,8 +9,8 @@
 	<img class="background" src="<c:url value='/resources/background/ch07/7_0_3.png'/>">
 	
 	<img class="bgObj" src="<c:url value='/resources/background/ch07/7_0_4.png'/>">
-	<img id="active" class="bgObj" src="<c:url value='/resources/background/ch07/7_0_5.png'/>">
-	<img id="active" class="bgObj" src="<c:url value='/resources/background/ch07/7_0_6.png'/>">
+	<img class="bgObj" src="<c:url value='/resources/background/ch07/7_0_5.png'/>">
+	<img class="bgObj" src="<c:url value='/resources/background/ch07/7_0_6.png'/>">
 
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/character/ch07/6_1.png'/>">
