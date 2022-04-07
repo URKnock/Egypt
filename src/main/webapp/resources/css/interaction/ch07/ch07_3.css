@@ -24,62 +24,49 @@
 /* 배경 오트젝트 */
 #interact .bgObj {
 	z-index: 2;
+	bottom: 28.05%;
 }
 #interact .bgobj:nth-of-type(3) {
-	height: 07.22%;
-	width: 81.35%;
-	bottom: 28%;
-	left: 8.5%;
-}
-#interact .bgobj:nth-of-type(4) {
-	height: 12%;
-	width: 53.38%;
-	top: 10%;
-	left: 38%;
-}
-#interact .bgobj:nth-of-type(5) {
-	height: 36.66%;
-	bottom: 28%;
-	left: 20%;
-}
-
-/* 캐릭터들 */
-#interact .character {
-	bottom: 27.5%;
+	width: 44.89%;
+	height: 07.03%;
+	left: 7%;
 	z-index: 3;
 }
-#interact .character:nth-of-type(6) {
-	height: 39.90%;
-	left: 8%;
+#interact .bgobj:nth-of-type(4) {
+	height: 24.62%;
+	left: 50%; transform: translate(-6vh, 0);
 }
-#interact .character:nth-of-type(7) {
-	height: 43.70%;
-	right: 42%;
+#interact .bgobj:nth-of-type(5) {
+	height: 61.75%;
+	right: 15vh;
 }
-#interact .character:nth-of-type(8) {
-	height: 48.51%;
-	right: 29%;
-}
-#interact .character:nth-of-type(9) {
-	height: 39.81%;
-	right: 18%;
-}
-#interact .character:nth-of-type(10) {
-	height: 22.12%;
-	right: 1%;
+#interact .bgobj:nth-of-type(6) {
+	display: none;
 }
 
-#interact .guide {
-	position: absolute;
-	width: 50%;
-	height: 7.5%;
-	background: ivory;
-	line-height: 275%;
-	font-size: 1.5vw;
-	top: 5%;
-	left: 50%;
-	
-	transform: translate(-50%, 0%);
-	
-	z-index: 100;
+/* 캐릭터 */
+#interact .character {
+	bottom: 28.05%;
+	z-index: 3;
+}
+#interact .character:nth-of-type(7) {
+	height: 44.90%;
+	left: 10%;
+}
+#interact .character:nth-of-type(8) {
+	height: 53.51%;
+	left: 20%;
+}
+#interact .character:nth-of-type(9) {
+	height: 40.64%;
+	right: 32vh;
+	bottom: 35.2%;
+}
+#interact .character:nth-of-type(10) {
+	height: 49.35%;
+	right: 18vh;
+}
+#interact .character:nth-of-type(11) {
+	height: 49.16%;
+	right: 10vh;
 }

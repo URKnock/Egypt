@@ -8,6 +8,6 @@
 </script>
 
 ${questN}번째 질문<br>
-예: ${ans0}<br>
-아니오: ${ans1}<br>
-잘모르겠습니다: ${ans2}<br>
+<%
+	out.println(session.getAttribute("answer"));
+%>

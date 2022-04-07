@@ -38,10 +38,10 @@
 
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/character/ch07/6_1.png'/>">
-	<img id="active" onclick="tap_info(this, 1)" class="character" src="<c:url value='/resources/Character/ch07/6_3.png'/>">
-	<img id="active" onclick="tap_info(this, 2)" class="character" src="<c:url value='/resources/Character/ch07/6_18.png'/>">
-	<img id="active" onclick="tap_info(this, 3)"class="character" src="<c:url value='/resources/Character/ch07/6_5.png'/>">
-	<img id="active" onclick="tap_info(this, 5)" class="character" src="<c:url value='/resources/Character/ch07/6_6.png'/>">
+	<img id="active" onclick="tap_info(this, 1)" class="character" src="<c:url value='/resources/character/ch07/6_3.png'/>">
+	<img id="active" onclick="tap_info(this, 2)" class="character" src="<c:url value='/resources/character/ch07/6_18.png'/>">
+	<img id="active" onclick="tap_info(this, 3)"class="character" src="<c:url value='/resources/character/ch07/6_5.png'/>">
+	<img id="active" onclick="tap_info(this, 5)" class="character" src="<c:url value='/resources/character/ch07/6_6.png'/>">
 
 	<div class="guide" align="center">마우스를 클릭하여 주변을 둘러보세요</div>
 	<jsp:include page="../info_window.jsp"/>
