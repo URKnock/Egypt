@@ -20,12 +20,12 @@
 		<img id="pot_back" style="z-index: 2;" src="<c:url value='/resources/object/ch11/2층_항아리안.png'/>"/>
 		<img id="pot_inner" style="z-index: 4;" src="<c:url value='/resources/object/ch11/2층_항아리탕.webp'/>"/>
 		<img id="pot_frame" style="z-index: 5;" src="<c:url value='/resources/object/ch11/2층_항아리밖.png'/>"/>
-		<img id="devil" class="select" src="<c:url value='/resources/Character/ch11/2층_악마1.webp'/>"/>
+		<img id="devil" style="z-index: 5;" class="select" src="<c:url value='/resources/Character/ch11/2층_악마1.webp'/>"/>
 		<img style="transform: scale(0.5) scaleX(-1);" onClick="location.href='../chapter11'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
 		<img id="pot_dead" style="z-index: 3;" src="<c:url value='/resources/object/ch11/2층_항아리사자1.webp'/>"/>
 	</div>
 	<div id="page">
-		<!-- 안 쓸듯 -->
+		
 	</div>
 	<div id="menu">
 		<div>
@@ -49,7 +49,7 @@
 		$('#background').css('background-image', "url('resources/background/ch11/ch11_bg_2.png')");
 		
 	</script>
-	<form method="post" action="<c:url value='/chapter11'/>">
+	<form method="post" action="<c:url value='/chapter11part2'/>">
 	<div id="dialogue">
 		<img src='<c:url value="${dialogue.image}"/>'/>
 		<div id="scene">

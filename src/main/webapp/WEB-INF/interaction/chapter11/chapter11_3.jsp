@@ -16,7 +16,7 @@
 		<img id="devil" class="select" src="<c:url value='/resources/Character/ch11/3층_악마1.webp'/>"/>
 	</div>
 	<div id="page">
-		<!-- 안 쓸듯 -->
+		
 	</div>
 	<div id="menu">
 		<div>
@@ -40,7 +40,7 @@
 		$('#background').css('background-image', "url('resources/background/ch11/ch11_bg_3.webp')");
 		
 	</script>
-	<form method="post" action="<c:url value='/chapter11'/>">
+	<form method="post" action="<c:url value='/chapter11part3'/>">
 	<div id="dialogue">
 		<img src='<c:url value="${dialogue.image}"/>'/>
 		<div id="scene">
