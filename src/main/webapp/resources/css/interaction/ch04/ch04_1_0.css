@@ -22,9 +22,15 @@ form {
 	animation: 3s obj;
 	z-index: 3;
 }
+
 @keyframes obj {
 	0% { opacity: 0; }
 	100% { opacity: 0; }
+}
+@keyframes objmoving {
+	0% { top: 49.5%; }
+	50% { top: 50.5%; }
+	100% { top: 49.5%; }
 }
 
 #interact .motion {

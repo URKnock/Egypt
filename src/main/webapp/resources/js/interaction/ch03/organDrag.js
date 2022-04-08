@@ -15,14 +15,12 @@ function interaction() {
 		resize(organName);
 		$(organName).css("left", x - $("#organ" + i).width() / 2);
 		$(organName).css("top", 100);
-		$(organName).animate({
-			left: $("#human").offset().left + $("#human").width() / 4 * (i - 2)
-		}, 1000, 'linear');
+		$(organName).css("left", $("#human").offset().left + $("#human").width() / 4 * (i - 2));
 		dragElement(document.getElementById('organDiv' + i), organName);
 	}
 	
 	resize('#servant');
-	$('#servant').css("bottom", $("#dialogue").height());
+	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
 
 	let cd = null;

@@ -1,5 +1,7 @@
 package controller;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -40,6 +42,18 @@ public class ChapterController implements Controller {
     		read = jsonManager.ReadJson("include.json");
     		include = jsonManager.ParseInclude(read, chapter);
     		session.setAttribute(page, include);
+
+    		List<String> paths = new ArrayList<String>();
+    		String ch = String.format("ch%02d", chapter);
+    		String[] dirs = { "/resources/background/" + ch, "/resources/character/" + ch, "/resources/object/" + ch };
+    		for(String dirname : dirs) {
+    			File dir = new File(request.getRealPath(dirname));
+    			File[] files = dir.listFiles();
+    			for(File file : files) {
+    				paths.add(dirname + "/" + file.getName());
+    			}
+    		}
+    		session.setAttribute("names", paths);
     	} else {
     		json = (Scene) session.getAttribute(data);
     		include = (Include) session.getAttribute(page);
@@ -57,6 +71,7 @@ public class ChapterController implements Controller {
 	    int i = Integer.parseInt(index);
 
 		if(json.getData().size() == s) {
+			session.setAttribute("chapter", chapter - 1);
 			return "/chapter02.jsp";
 		}
 		

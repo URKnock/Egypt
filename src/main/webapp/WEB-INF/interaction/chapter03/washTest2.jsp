@@ -15,5 +15,6 @@
 <img src="../resources/object/ch03/5_2_1_3.png" id="soda_bottom" class="soda"/>
 <img src="../resources/object/ch03/5_2_1_4.png" id="soda_leg" class="soda"/>
 <img src="../resources/character/ch03/paper_1.webp" id="servant">
+<img src="../resources/object/ch03/shine.webp" id="shine">
 <hr class="blinking" id="dragLine"></hr>
 <script src="<c:url value='/resources/js/interaction/ch03/washTest2.js'/>"></script>

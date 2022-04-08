@@ -2,10 +2,13 @@ var Anubis = document.querySelector('#anubis');
 
 var pontiff = [];
 var webp = [];
-webp[0] = "resources/webp/ch04/4_1_2.webp";
-webp[1] = "resources/webp/ch04/4_6_2.webp";
-webp[2] = "resources/webp/ch04/4_7_2.webp";
+webp[0] = "resources/webp/ch04/servant_1_info.webp";
+webp[1] = "resources/webp/ch04/servant_2_info.webp";
+webp[2] = "resources/webp/ch04/servant_3_info.webp";
 
+webp[3] = "resources/webp/ch04/servant_1.webp";
+webp[4] = "resources/webp/ch04/servant_2.webp";
+webp[5] = "resources/webp/ch04/servant_3.webp";
 var index;
 
 document.querySelector('.close').onclick = function() { hide_info(); info_close(); }
@@ -32,5 +35,14 @@ function tap_info(e, i) {
 function info_close() {
 	if(index < 3) {
 		pontiff[index].src = webp[index];
+		var i = index;
+		if(i == 0) 
+			setTimeout(function() {
+			  pontiff[i].src = webp[i+3];
+			}, 3600);
+		else
+			setTimeout(function() {
+			  pontiff[i].src = webp[i+3];
+			}, 2400);
 	}
 }

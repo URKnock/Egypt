@@ -43,6 +43,7 @@
 }
 #bg .bgObj:nth-of-type(4){
 	height: 05.27%;
+	width: auto;
 	left: 50%; transform: translate(-50%, 0%);
 }
 #bg .bgObj:nth-of-type(5){
@@ -85,19 +86,21 @@
 /* 캐릭터들 */
 #interact .character {
 	bottom: 31%;
-	z-index: 2;
-}
-#interact .character:nth-of-type(2) {
-	display: none;
 	z-index: 3;
 }
+#interact .character:nth-of-type(2) {
+	height: 51.01%;
+	left: 0%;
+}
 #interact .character:nth-of-type(3) {
-	height: 28.61%;
-	left: 10%;
+	height: 65.83%;
+	bottom: 28.5%;
+	left: 0%;
 }
 #interact .character:nth-of-type(4) {
 	height: 51.48%;
 	right: 15%;
+	z-index: 2;
 }
 
 /* 오브젝트들 */
@@ -109,7 +112,7 @@
 }
 
 .knife {
-	height: 11.38%;
+	height: 07.12%;
 	left: -100%;
 	z-index: 5;
 }

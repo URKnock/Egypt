@@ -3,7 +3,6 @@ function interaction() {
 	resize("#human");
 	center("#human");
 	center("#dragSpot");
-	$("#dragSpot").css("bottom", $("#dialogue").height() + 265*w + $("#human").height()/2);
 	if(scene == 3) {
 		var left = $('#dragSpot').offset().left;
 		var top = $('#dragSpot').offset().top;
@@ -127,7 +126,6 @@ function nextSpotInit() {
 		$('#dragDest').removeClass('circle');
 		$('#dragDest').addClass('dest');
 		center("#dragSpot");
-		$("#dragSpot").css("bottom", $("#dialogue").height() + 265*w + $("#human").height()/2);
 		$('#dragLine').css("top", $('#human').offset().top - $('#dragLine').width());
 		$('#dragLine').css("left", x - $('#dragDest').width() / 2 + 3);
 		$('#dragDest').css("top", $('#dragLine').offset().top - $('#dragDest').height() - 30*w);

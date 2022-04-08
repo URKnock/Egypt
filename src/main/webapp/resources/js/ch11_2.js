@@ -4,7 +4,6 @@ var o_select, o_index;
 var clicked = [1, 2, 3, 4, 5, 6];
 
 $(document).ready(function() {
-
 	w = $("#background").width() / 2650 / 0.87; //배경 규격 계산
 	h = $("#background").height($("#background").prop("naturalHeight") * w);
 	$(window).resize(function() { //정보창?
@@ -35,7 +34,7 @@ $(document).ready(function() {
 			setTimeout("$('form').submit()", 4500); //null이라서 전송 불가인듯. 
 		});
 	//} 
-	
+
 });
 
 function init() { //화면 초기화

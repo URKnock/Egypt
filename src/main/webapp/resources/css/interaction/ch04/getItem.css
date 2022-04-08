@@ -3,22 +3,17 @@
 #circle {
 	cursor: pointer;
 	position: absolute;
-	width: 5%; height: 9%;
+	height: 7vh; width: 7vh;
 	
 	border-radius: 50%;
 	background-color: black;
 	opacity: 0;
 	
-	z-index: 3;
+	z-index: 10;
 }
 
 #line {
-	position: absolute;
-	
-    border: none;
-    border-top: 1vh dotted white;
-    
-	z-index: 5;
+	z-index: 3;
 }
 
 .item {

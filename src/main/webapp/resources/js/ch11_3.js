@@ -4,7 +4,6 @@ var o_select, o_index;
 var clicked = [1, 2, 3, 4, 5, 6];
 
 $(document).ready(function(){
-
 	w = $("#background").width() / 2650 / 0.87; //배경 규격 계산
 	h = $("#background").height($("#background").prop("naturalHeight") * w);
 	$(window).resize(function() {
@@ -28,12 +27,6 @@ $(document).ready(function(){
 			$("#devil").attr("src", '/resources/Character/ch11/3층_악마3.webp');
 			setTimeout(function() { $("#devil").attr("src", '/resources/Character/ch11/3층_악마1.webp'); }, 2000);
 		});
-	
-	//scene 제어 
- 	//if((scene == 1 && index == 0)) {
-	//
- 	//} 
-	
 });
 
 function init() { //화면 초기화
