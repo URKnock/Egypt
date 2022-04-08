@@ -77,10 +77,8 @@
 },
 {
 	"chapter":4, "scene":1, "flag":0,
-	"page":"ch04_01.jsp"
+	"page":"ch04_0_1.jsp"
 },
-
-
 {
 	"chapter":4, "scene":2, "flag":0,
 	"page":"ch04_0_0.jsp"
@@ -153,6 +151,7 @@
 	"chapter":4, "scene":19, "flag":0,
 	"page":"ch04_3_2.jsp"
 },
+
 {
 	"chapter":5, "scene":6, "flag":0,
 	"page":"duatg3.jsp"
