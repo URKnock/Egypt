@@ -4,11 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <title>사자의 서</title>
-<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch11.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch11.js'/>"></script>
-<script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
@@ -19,7 +17,6 @@
 		<img id="ammut" class="select" style="z-index: 3;" src="<c:url value='/resources/Character/ch11/1층_암무트1.webp'/>"/>
 	</div>
 	<div id="page">
-		<!-- 안 쓸듯 -->
 	</div>
 	<div id="menu">
 		<div>
@@ -29,19 +26,8 @@
 			<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 		</div>
 	</div>
-	<div id="window">
-		<div class="infoImg"></div>
-		<div class="infoText">
-			<h3 class="name"></h3>
-			<p class="content"></p>
-		</div>
-		<div class="close">X</div>
-	</div>
-	
-	<script>
-		
-		
-	</script>
+
+	<jsp:include page="interaction/info_window.jsp"/>
 	<form method="post" action="<c:url value='/chapter11'/>">
 	<div id="dialogue">
 		<img src='<c:url value="${dialogue.image}"/>'/>
