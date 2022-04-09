@@ -16,17 +16,17 @@ function interaction() {
 	$("#scroll").css("top", 15*h);
 	
 	centerX("#stick");
+	$("#stick").hide().fadeIn(1000);
 	$("#stick").css("top", $("#scroll").height() / 2 + 15*h);
 	$("#stick").addClass("select");
 	$("#stick").on("click", function() {
 		$("#brain").addClass("select");
 		$("#stick").removeClass("select");
 		$("#stick").css("transform", "rotate(45deg)");
+		$("#stick").off("click");
 		stick.isHeld = true;
 		document.getElementById("brain").setAttribute("onclick", "clickBrain( this )");
 		document.addEventListener('mousemove', followMouse);
-		document.addEventListener('mouseup', showMouse);
-		document.addEventListener('mousedown', hideMouse);
 	});
 }
 
@@ -41,19 +41,8 @@ var brains = [
     "/resources/object/ch03/B5_1.webp",
     "/resources/object/ch03/B5_2.webp",
     "/resources/object/ch03/B5_3.webp",
-    "/resources/object/ch03/B5_4.webp",
-    "/resources/object/ch03/B6_1.webp",
-    "/resources/object/ch03/B6_2.webp",
-    "/resources/object/ch03/B7.webp"
+    "/resources/object/ch03/B5_4.webp"
 ];
-
-function showMouse( event ) {
-	$("#stick").show();
-}
-
-function hideMouse( event ) {
-	$("#stick").hide();
-}
 
 function followMouse( event ) {
 	if(stick.isHeld) {
@@ -65,21 +54,27 @@ function followMouse( event ) {
 }
 
 function clickBrain( event ) {
-	var lock = 0;
+	var lock = -1;
+	if(lock == -1) {
+		$("#scroll").on("load", function() {
+			$("#scroll").animate({ left:-$("#scroll").width() }, 2000);
+			$("#scroll").delay(1000).fadeOut(1000);
+		});
+		$("#scroll").attr("src", "/resources/object/ch03/paper_close.webp");
+		lock = 0;
+	}
+	$("#stick").hide();
 	if(lock == 0) {
 		$("#brain").on("load", function() {
-			setTimeout(function() { lock = 0 }, 350);
-			if(idx == 10) {
-				$("#scroll").on("load", function() {
-					$("#hum").hide();
-					$("#brain").removeClass("select");
-				});
-				$("#scroll").attr("src", "/resources/object/ch03/paper_close.webp");
-			} else if(idx == 12) {
-				$("#bed").hide();
-				$("#scroll").fadeOut("1000");
-				setTimeout(function() { $("form").submit(); }, 5000);
-			}
+			$("#brain").removeClass("select");
+			setTimeout(function() { 
+				if(idx >= 10) {
+					$("form").submit();
+				} else {
+					lock = 0;
+					$("#stick").show();
+				}
+			}, 350);
 		});
 		$("#brain").attr("src", brains[idx]);
 		idx += 1;

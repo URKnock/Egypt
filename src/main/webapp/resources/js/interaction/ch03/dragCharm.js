@@ -35,7 +35,7 @@ function checkElement() {
 
 function enterElement(elem) {
 	cd.isOverlaped = false;
-	elem.style.background = 'pink';
+	elem.style.backgroundColor = 'yellow';
 	console.log(elem.id + " && " + Element.id);
 	if((elem.id == "body" && Element.id == "charmDiv3") || (elem.id == "chest" && (Element.id == "charmDiv1" || Element.id == "charmDiv2"))) {
 		$(Element).off("mousedown");

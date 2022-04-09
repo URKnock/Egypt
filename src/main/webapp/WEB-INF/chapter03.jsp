@@ -23,7 +23,7 @@
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
 	</c:forEach>
 	<img src="<c:url value='/resources/character/ch03/anubis_close.webp'/>"/>
-	<c:if test="${scene ne 9}">
+	<c:if test="${scene ne 10}">
 		<div class="canopic">
 			<c:forEach var="i" begin="1" end="4">
 				<img id="ca${i}" src="<c:url value='/resources/background/ch03/k_${i}.png'/>"/>

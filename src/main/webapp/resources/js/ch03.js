@@ -13,24 +13,19 @@ $(document).ready(function(){
 	$(".close").on("click", function() { 
 		hide_info();
 		if(clicked.length == 0) {
-			setTimeout(function() {
-				$("form").submit();
-			}, 1000);
-		}
-		if(o_select != "0") {
-			var path = "/resources/background/ch03/" + o_index + ".webp";
-			$(o_select).on("load", function() { canopic_one(); });
-			$(o_select).attr("src", path);
+			$("form").submit();
 		}
 	});
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
 
+	// 로딩
 	if(scene == 0 && !loaded) {
 		preload(lists);
 	}
 	$("#loading").fadeOut(0);
+	
 	$(window).resize(function() {
 		location.reload(true);
 	});
@@ -54,18 +49,18 @@ $(document).ready(function(){
 		$("#background > img:nth-child(3)").addClass("pikachu");
 
 		$("#background > img:nth-child(2)").on("click", function() { 
-			object("#background > img:nth-child(2)", 6, 5); 
+			object("#background > img:nth-child(2)", 5, 5); 
 		});
 		$("#background > img:nth-child(3)").on("click", function() { 
-			object("#background > img:nth-child(3)", 5, 6); 
+			object("#background > img:nth-child(3)", 4, 6); 
 		});
 		for(var i = 1; i < 5; i++) {
 			$("#ca" + i).addClass("pikachu");
 		}
-		$("#ca1").on("click", function() { object("#ca1", 3, 1) });
-		$("#ca2").on("click", function() { object("#ca2", 4, 2) });
+		$("#ca1").on("click", function() { object("#ca1", 2, 1) });
+		$("#ca2").on("click", function() { object("#ca2", 3, 2) });
 		$("#ca3").on("click", function() { object("#ca3", 0, 3) });
-		$("#ca4").on("click", function() { object("#ca4", 2, 4) });
+		$("#ca4").on("click", function() { object("#ca4", 1, 4) });
  	} else if(scene == 7 && index == 1) {
  		$("input[name='index']").val(0);
  	} else if(scene == 13) {
@@ -107,6 +102,7 @@ function init() {
 	$("#scene").width(sw);
 	$("#choice > img").height( $("#dialogue > img").height() );
 	
+	// 블러
 	$("#blur").height( $("#dialogue").height() );
 	$("#blur").css("left", "0");
 	$("#blur").css("bottom", "0");
@@ -140,7 +136,7 @@ function init() {
 	bg4.css("left", x + 500*w);
 	bg4.css("bottom", b);
 	
-	if(scene == 9) {
+	if(scene == 10) {
 		canopic_two(); 
 	} else { 
 		canopic_one(); 
@@ -148,7 +144,6 @@ function init() {
 }
 
 function object(select, index, arrIndex) {
-	show_info(index);
 	if(arguments.length == 3) {
 		o_select = select;
 		o_index = arrIndex;
@@ -156,9 +151,18 @@ function object(select, index, arrIndex) {
 			clicked.splice(clicked.indexOf(arrIndex), 1);
 			$(select).removeClass("select");
 		}
+		if(o_select != "0") {
+			var path = "/resources/background/ch03/" + o_index + ".webp";
+			$(o_select).on("load", function() { 
+				canopic_one();
+				setTimeout(function() { show_info(index); }, 1000);
+			});
+			$(o_select).attr("src", path);
+		}
 	} else {
 		o_select = "0";
 		$(select).removeClass("select");
+		show_info(index);
 	}
 }
 
@@ -243,6 +247,7 @@ function resizeWH(element, ew, eh) {
 	$(element).height(eh * h);
 }
 
+// 로딩
 function preload(arrayOfImages) {
 	var preImg = $('#menu img:first-child');
     $(arrayOfImages).each(function(index, value){
