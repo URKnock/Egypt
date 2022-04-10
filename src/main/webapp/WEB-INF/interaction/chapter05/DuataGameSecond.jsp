@@ -14,13 +14,13 @@
 </div>
 <div id="keeper">
 	<div id="keeper">
-	<img id="keepers" src="<c:url value='/resources/Character/ch09/9_12.png'/>"/>
+	<img id="keepers" src="<c:url value='/resources/character/ch09/9_12.png'/>"/>
 	</div>
 </div>
 <div id="characters">
 	<div id="character">
-		<img class="mainC_s" src="<c:url value='/resources/Character/ch05/5_Lc.png'/>">
-		<img class="mainC_k" src="<c:url value='/resources/Character/ch05/5_Lc_k.png'/>">		
+		<img class="mainC_s" src="<c:url value='/resources/character/ch05/5_Lc.png'/>">
+		<img class="mainC_k" src="<c:url value='/resources/character/ch05/5_Lc_k.png'/>">		
 		<img class="spear" src="<c:url value='/resources/object/ch05/spear.png'/>">
 	</div>
 </div>

@@ -17,58 +17,62 @@
 },
 {
 	"chapter":3, "scene":6, "flag":0,
-	"page":"cut.jsp"
+	"page":"brain2.jsp"
 },
 {
 	"chapter":3, "scene":7, "flag":0,
-	"page":"organPick.jsp"
-},
-{
-	"chapter":3, "scene":7, "flag":1,
-	"page":"organPick.jsp"
+	"page":"cut.jsp"
 },
 {
 	"chapter":3, "scene":8, "flag":0,
-	"page":"organDrag.jsp"
+	"page":"organPick.jsp"
 },
 {
 	"chapter":3, "scene":8, "flag":1,
-	"page":"organDrag.jsp"
+	"page":"organPick.jsp"
 },
 {
 	"chapter":3, "scene":9, "flag":0,
-	"page":"sodaTest.jsp"
+	"page":"organDrag.jsp"
+},
+{
+	"chapter":3, "scene":9, "flag":1,
+	"page":"organDrag.jsp"
 },
 {
 	"chapter":3, "scene":10, "flag":0,
-	"page":"pourSoda.jsp"
+	"page":"sodaTest.jsp"
 },
 {
 	"chapter":3, "scene":11, "flag":0,
-	"page":"washTest2.jsp"
+	"page":"pourSoda.jsp"
 },
 {
 	"chapter":3, "scene":12, "flag":0,
-	"page":"findCharm.jsp"
+	"page":"washTest2.jsp"
 },
 {
 	"chapter":3, "scene":13, "flag":0,
-	"page":"dragCharm.jsp"
-},
-{
-	"chapter":3, "scene":13, "flag":1,
-	"page":"dragCharm.jsp"
+	"page":"findCharm.jsp"
 },
 {
 	"chapter":3, "scene":14, "flag":0,
-	"page":"pourBandage.jsp"
+	"page":"dragCharm.jsp"
+},
+{
+	"chapter":3, "scene":14, "flag":1,
+	"page":"dragCharm.jsp"
 },
 {
 	"chapter":3, "scene":15, "flag":0,
-	"page":"mummyTest.jsp"
+	"page":"pourBandage.jsp"
 },
 {
 	"chapter":3, "scene":16, "flag":0,
+	"page":"mummyTest.jsp"
+},
+{
+	"chapter":3, "scene":17, "flag":0,
 	"page":"mummyEnd.jsp"
 },
 {
@@ -77,10 +81,8 @@
 },
 {
 	"chapter":4, "scene":1, "flag":0,
-	"page":"ch04_01.jsp"
+	"page":"ch04_0_1.jsp"
 },
-
-
 {
 	"chapter":4, "scene":2, "flag":0,
 	"page":"ch04_0_0.jsp"
@@ -153,6 +155,7 @@
 	"chapter":4, "scene":19, "flag":0,
 	"page":"ch04_3_2.jsp"
 },
+
 {
 	"chapter":5, "scene":6, "flag":0,
 	"page":"duatg3.jsp"

@@ -23,7 +23,7 @@ function init() {
 	
 	var clicked = 0;
 	$("div img:nth-child(2)").addClass('fadeEffect');
-	$("div").click(function() {
+	$(document).click(function() {
 		$("div img:nth-child(2)").removeClass('fadeEffect')
 		$("div").fadeOut(1000);
 		$("#logo").fadeOut(1000);

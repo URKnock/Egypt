@@ -46,8 +46,8 @@ function enterElement(elem) {
 		}, 600);
 		$("#" + elem.id).on("click", function() {
 			$("#" + elem.id).removeClass("select");
-			var arrIndex = Number(elem.id.slice(-1));
-			object(elem.id, (9 + arrIndex), arrIndex);
+			var arrIndex = parseInt(elem.id.slice(-1));
+			object(elem.id, (8 + arrIndex), arrIndex);
 			if(clicked.indexOf(arrIndex) != -1) {
 				clicked.splice(clicked.indexOf(arrIndex), 1);
 			}

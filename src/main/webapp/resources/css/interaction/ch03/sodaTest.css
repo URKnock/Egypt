@@ -26,7 +26,6 @@ canvas {
 	cursor: pointer;
 	top: 300;
 	left: 300;
-	transform: rotate(135deg);
 	z-index: 99;
 }
 

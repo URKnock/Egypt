@@ -9,5 +9,9 @@
 <img src="<c:url value='/resources/object/ch03/paper.png'/>" id="scroll"/>
 <img src="<c:url value='/resources/character/ch03/3_4.png'/>" id="human"/>
 <img src="<c:url value='/resources/character/ch03/3_6.png'/>" id="human_cover"/>
-<hr class="blinking" id="dragLine"></hr>
+<c:forEach var="i" begin="1" end="7">
+	<div id="hole${i}" class="holes"></div>
+</c:forEach>
+<canvas id="canvas1"></canvas>
+<canvas id="canvas2"></canvas>
 <script src="<c:url value='/resources/js/interaction/ch03/pourBandage.js'/>"></script>

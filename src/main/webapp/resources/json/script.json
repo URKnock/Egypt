@@ -60,106 +60,113 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"뇌를 제외한 장기는 매우 중요하지.</br>장기를 꺼내기에 앞서 몸 좌측을 절개하거라.",
+	"content":"뇌를 다 으깼다면 사자의 고개를 돌려 비강으로 뇌를 빼내어라.",
 	"chapter":3, "scene":6, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"장기를 모두 위로 꺼내거라.<br/>심장은 너의 모든 것을 담고 있으니 반드시 제자리에 두어야 한다.",
+	"content":"뇌를 제외한 장기는 매우 중요하지.</br>장기를 꺼내기에 앞서 몸 좌측을 절개하거라.",
 	"chapter":3, "scene":7, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"심장은 제자리를 지켜야 한다 말 했거늘!",
-	"chapter":3, "scene":7, "flag":1,
-	"image":"UI/Dialogue/Anubis.png",
-	"choice":"없음"
-},
-{
-	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"이제 꺼낸 장기를 알맞은 카노푸스 단지에 담거라.<br/>오시리스의 네 아들이 너의 장기를 보호할 것이다.",
+	"content":"장기를 모두 위로 꺼내거라.<br/>심장은 너의 모든 것을 담고 있으니 반드시 제자리에 두어야 한다.",
 	"chapter":3, "scene":8, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"틀렸다. 영생의 길에 오르고 싶지 않은 모양이구나!",
+	"content":"심장은 제자리를 지켜야 한다 말 했거늘!",
 	"chapter":3, "scene":8, "flag":1,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"빈 체강을 채워 넣어 과거의 형태를 되찾게 하라.<br/>소다석과 수지로 적신 리넨으로 체강을 채운 후 실로 봉합하거라.",
+	"content":"이제 꺼낸 장기를 알맞은 카노푸스 단지에 담거라.<br/>오시리스의 네 아들이 너의 장기를 보호할 것이다.",
 	"chapter":3, "scene":9, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"틀렸다! 온전하지 않은 육체로 영생을 살 셈이냐!",
+	"content":"틀렸다. 영생의 길에 오르고 싶지 않은 모양이구나!",
 	"chapter":3, "scene":9, "flag":1,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
-},    
+},
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"이제 심장만 남은 너의 '사'가 썩지 않도록 바싹 말릴 순서이다.<br/>소다석을 부어 방부 처리를 하여라.",
+	"content":"빈 체강을 채워 넣어 과거의 형태를 되찾게 하라.<br/>소다석과 수지로 적신 리넨으로 체강을 채운 후 실로 봉합하거라.",
 	"chapter":3, "scene":10, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"40일이 지났으니 육체가 썩지 않게 잘 건조되었겠구나. <br/>육체에 묻은 소다석을 나일 강 물로 잘 닦거라.",
+	"content":"틀렸다! 온전하지 않은 육체로 영생을 살 셈이냐!",
+	"chapter":3, "scene":10, "flag":1,
+	"image":"UI/Dialogue/Anubis.png",
+	"choice":"없음"
+},    
+{
+	"name":"아누비스", "nickname":"죽음을 인도하는 자",
+	"content":"이제 심장만 남은 너의 '사'가 썩지 않도록 바싹 말릴 순서이다.<br/>소다석을 부어 방부 처리를 하여라.",
 	"chapter":3, "scene":11, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"아마포 천으로 육체를 감기 전에,<br>방 안에 숨겨져 있는 부적을 찾거라.",
+	"content":"40일이 지났으니 육체가 썩지 않게 잘 건조되었겠구나. <br/>육체에 묻은 소다석을 나일 강 물로 잘 닦거라.",
 	"chapter":3, "scene":12, "flag":0,
+	"image":"UI/Dialogue/Anubis.png",
+	"choice":"없음"
+},
+{
+	"name":"아누비스", "nickname":"죽음을 인도하는 자",
+	"content":"아마포 천으로 육체를 감기 전에,<br>방 안에 숨겨져 있는 부적을 찾거라.",
+	"chapter":3, "scene":13, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },    
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
 	"content":"부적을 다 모았는가? 모은 부적을 알맞은 위치에 소지하도록 하거라.",
-	"chapter":3, "scene":13, "flag":0,
+	"chapter":3, "scene":14, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
 	"content":"다시 생각해 보거라! 정말 그 위치가 맞다고 생각하는가?",
-	"chapter":3, "scene":13, "flag":1,
+	"chapter":3, "scene":14, "flag":1,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },   
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
 	"content":"부적을 소지했다면, 아마포 천으로 육체를 감아 마무리 하거라.",
-	"chapter":3, "scene":14, "flag":0,
+	"chapter":3, "scene":15, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },    
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
 	"content":"마지막이다. 완성된 미라를 관 안에 넣거라.",
-	"chapter":3, "scene":15, "flag":0,
+	"chapter":3, "scene":16, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
     {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
 	"content":"사자여, 그대의 몸은 영생의 여정을 떠나기에 완벽한 상태가 되었다. '입을 여는 의식'을 치루고 영생으로의 여정을 떠나도록 하거라.",
-	"chapter":3, "scene":16, "flag":0,
+	"chapter":3, "scene":17, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
@@ -898,6 +905,30 @@
     "content":"자, 이곳이 천국이다.<br/>이곳에서 영생을 누리도록 하라.",
     "chapter":8, "scene":4, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
+{
+	"name":"암무트", "nickname":"식인 괴수",
+	"content":"생명이 없는 지옥, 파괴의 땅에 온 것을 환영한다, 사자여.",
+	"chapter":11, "scene":0, "flag":0,
+	"image":"UI/Dialogue/Ammut.png",
+	"choice":"없음"
+}, 
+
+{
+	"name":"악마", "nickname":"악의 신",
+	"content":"청렴하지 못한 자, 참혹한 고통을 느낄 지니...",
+	"chapter":11, "scene":1, "flag":0,
+	"image":"UI/Dialogue/Devil.png",
+	"choice":"없음"
+}, 
+
+{
+	"name":"악마", "nickname":"악의 신",
+	"content":"사자는 영원히 파괴의 땅에서 도망치지 못할 것이다.",
+	"chapter":11, "scene":2, "flag":0,
+	"image":"UI/Dialogue/Devil.png",
 	"choice":"없음"
 },
 

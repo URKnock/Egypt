@@ -4,19 +4,19 @@
 <head>
 <meta charset="UTF-8">
 <title>사자의 서</title>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch11.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="<c:url value='/resources/js/ch11.js'/>"></script>
+<script src="<c:url value='/resources/js/ch11_3.js'/>"></script>
+<script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
-		<img id="monkeys" src="<c:url value='/resources/object/ch11/1층_원숭이탕.webp'/>"/>
-		<img id="hellFire" src="<c:url value='/resources/object/ch11/1층_땅불.webp'/>"/>
-		<img id="arrow" onClick="location.href='../chapter11part2'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
-		<img id="ground" src="<c:url value='/resources/object/ch11/1층_땅.png'/>"/>
-		<img id="ammut" class="select" style="z-index: 3;" src="<c:url value='/resources/Character/ch11/1층_암무트1.webp'/>"/>
+		<img id="arrow" style="transform: scale(0.5) scaleX(-1);" onClick="location.href='../chapter11part2'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
+		<img id="devil" class="select" src="<c:url value='/resources/Character/ch11/3층_악마1.webp'/>"/>
 	</div>
 	<div id="page">
+		
 	</div>
 	<div id="menu">
 		<div>
@@ -26,9 +26,21 @@
 			<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 		</div>
 	</div>
-
-	<jsp:include page="interaction/info_window.jsp"/>
-	<form method="post" action="<c:url value='/chapter11'/>">
+	<div id="window">
+		<div class="infoImg"></div>
+		<div class="infoText">
+			<h3 class="name"></h3>
+			<p class="content"></p>
+		</div>
+		<div class="close">X</div>
+	</div>
+	
+	<script>
+		//챕터11_2에서는 background 이미지를 변경
+		$('#background').css('background-image', "url('resources/background/ch11/ch11_bg_3.webp')");
+		
+	</script>
+	<form method="post" action="<c:url value='/chapter11part3'/>">
 	<div id="dialogue">
 		<img src='<c:url value="${dialogue.image}"/>'/>
 		<div id="scene">

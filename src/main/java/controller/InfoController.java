@@ -45,6 +45,8 @@ public class InfoController implements Controller{
     		json =  (List<Info>)session.getAttribute(data);	
     	}
 
+		session.setAttribute("chapter", "1");
+		
 		//System.out.println(chapter); //챕터 몇인지 그냥 확인용...
 		session.setAttribute("info", json.get(18)); 
 		session.setAttribute("info2", json.get(19));

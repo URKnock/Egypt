@@ -27,7 +27,7 @@ public class HomeController implements Controller {
     		chapter = request.getParameter("chapter");
     	}
     	
-    	if(request.getSession().getAttribute("chapter") != null) {
+    	if(session.getAttribute("chapter") != null) {
     		chapter = (String) session.getAttribute("chapter");
     	}
     	

@@ -118,7 +118,6 @@ function enterElement(elem) {
 				enterCnt == 0;
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();
-				$('#potToClick').show();
 				$('#bandageToClick').addClass("select");
 				$('#bandageToClick').on("click", function() {
 					$('#bandageToClick').removeClass("select");
@@ -136,7 +135,6 @@ function enterElement(elem) {
 			if(enterCnt >= 6) {
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();
-				$('#bandageToClick').show();
 				$('#niddleToClick').addClass("select");
 				$('#niddleToClick').on("click", function() {
 					$('#niddleToClick').removeClass("select");
