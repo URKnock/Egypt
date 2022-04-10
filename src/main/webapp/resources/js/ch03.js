@@ -63,7 +63,7 @@ $(document).ready(function(){
 		$("#ca4").on("click", function() { object("#ca4", 1, 4) });
  	} else if(scene == 7 && index == 1) {
  		$("input[name='index']").val(0);
- 	} else if(scene == 13) {
+ 	} else if(scene == 14) {
 		clicked = [1, 2, 3];
  	}
 	switch(scene) {
@@ -78,7 +78,7 @@ $(document).ready(function(){
 		case '4':
 			clicked = [];
 			break;
-		case '13':
+		case '14':
 			clicked = [1, 2, 3];
 			break;
 		default:
@@ -151,7 +151,9 @@ function object(select, index, arrIndex) {
 			clicked.splice(clicked.indexOf(arrIndex), 1);
 			$(select).removeClass("select");
 		}
-		if(o_select != "0") {
+		if(o_select.startsWith("charm")) {
+			show_info(index);
+		} else if(o_select != "0") {
 			var path = "/resources/background/ch03/" + o_index + ".webp";
 			$(o_select).on("load", function() { 
 				canopic_one();

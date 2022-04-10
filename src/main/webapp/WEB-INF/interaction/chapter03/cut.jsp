@@ -7,7 +7,7 @@
 <img src="<c:url value='/resources/object/ch03/knife.png'/>" id="knifeToClick"/>
 <img src="<c:url value='/resources/character/ch03/paper_1.webp'/>" id="servant">
 <img src="../resources/object/ch03/paper.png" id="scroll"/>
-<img src="../resources/object/ch03/paper.png" id="paper">
+<img src="../resources/object/ch03/none.png" id="paper">
 <hr class="blinking" id="dragLine"></hr>
 <div id="dragDest" class="dest droppable blinking"></div>
 <script src="<c:url value='/resources/js/interaction/ch03/cut.js'/>"></script>

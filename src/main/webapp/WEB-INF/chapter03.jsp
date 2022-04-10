@@ -22,7 +22,17 @@
 	<c:forEach var="i" begin="1" end="3">
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
 	</c:forEach>
-	<img src="<c:url value='/resources/character/ch03/anubis_close.webp'/>"/>
+	<c:choose>
+		<c:when test="${flag ne 0 && scene ne 2}">
+			<img src="<c:url value='/resources/character/ch03/anubis_angry.webp'/>"/>
+		</c:when>
+		<c:when test="${scene eq 1}">
+			<img src="<c:url value='/resources/character/ch03/anubis_close.webp'/>"/>
+		</c:when>
+		<c:otherwise>
+			<img src="<c:url value='/resources/character/ch03/anubis_open.webp'/>"/>
+		</c:otherwise>
+	</c:choose>
 	<c:if test="${scene ne 10}">
 		<div class="canopic">
 			<c:forEach var="i" begin="1" end="4">
