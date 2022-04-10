@@ -25,14 +25,14 @@
 </div>
 <div id="keeper">
 	<div id="keeper">
-	<img id="keepers" src="<c:url value='/resources/Character/ch09/1층 관문신1.webp'/>"/>
+	<img id="keepers" src="<c:url value='/resources/character/ch09/1층 관문신1.webp'/>"/>
 	</div>
 </div>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/Character/ch09/사자.webp'/>"/>
-	<img id="c2" src="<c:url value='/resources/Character/ch09/1층 공물 노예1.webp'/>"/>
-	<img id="c3" src="<c:url value='/resources/Character/ch09/1층 공물1.webp'/>"/>
+	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
+	<img id="c2" src="<c:url value='/resources/character/ch09/1층 공물 노예1.webp'/>"/>
+	<img id="c3" src="<c:url value='/resources/character/ch09/1층 공물1.webp'/>"/>
 
 	</div>
 </div>
