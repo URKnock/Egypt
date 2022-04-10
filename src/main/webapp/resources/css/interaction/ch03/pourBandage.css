@@ -20,30 +20,6 @@
 #human {
 	position: absolute;
 	z-index: 2;
-}	
-
-hr{
-	position: absolute;
-	top: 350; 
-	left: 300;
-    border: none;
-    border-top: 5px dotted red;
-    height: 1px;
-    width: 600;
-    z-index: 10;
-}
-
-.circle {
-	cursor: pointer;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	border: 5px dotted red;
-	opacity: 0.4;
-	z-index: 10;
 }
 
 .hole {

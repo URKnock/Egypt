@@ -44,6 +44,10 @@
 	"page":"sodaTest.jsp"
 },
 {
+	"chapter":3, "scene":10, "flag":1,
+	"page":"sodaTest.jsp"
+},
+{
 	"chapter":3, "scene":11, "flag":0,
 	"page":"pourSoda.jsp"
 },
