@@ -38,7 +38,7 @@ function interaction() {
 	$("#hole5").css({"left": 1063*w, "top": 680*h});
 	$("#hole6").css({"left": 1085*w, "top": 610*h});
 	$("#hole7").css({"left": 1100*w, "top": 660*h});
-	
+
 	var offsets = $("#canvas1").offset();
 	function holeClick(event) {
 		var tid = "#" + $(this).attr("id");
@@ -51,14 +51,15 @@ function interaction() {
 		if(!clicked) {
 			clicked = true;
 			recent = "#hole" + idx;
-			$(this).addClass("doings");
+			$(this).addClass("strings");
 			$(this).removeClass("holes");
-			$(this).removeClass("starts");
+			$("#hole" + (idx+1)).addClass("doings");
+			$("#hole" + (idx+1)).removeClass("holes");
+			
 			ctx1.lineWidth = 5;
-			ctx1.strokeStyle = "blue";
+			ctx1.strokeStyle = "yellow";
 			ctx1.beginPath();
 			ctx1.moveTo(pos.x, pos.y);
-			console.log(pos.x + " , " + pos.y);
 			$("#canvas2").mousemove(function(e) {
 				ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
 				ctx2.lineWidth = 3;
@@ -69,45 +70,51 @@ function interaction() {
 				ctx2.stroke();
 			});
 		} else {
-			if(recent != tid) {
-				if(recent == "#hole" + (idx-1)) {
-					$("#canvas2").off("mousemove");
-					ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
-					ctx1.lineTo(pos.x, pos.y);
-					ctx1.stroke();
-					clicked = false;
-					$(recent).removeClass("doings");
-					$(recent).addClass("strings");
-					$(this).removeClass("holes");
-					$(this).addClass("starts");
-					if(recent == "#hole6") {
-						$(this).removeClass("starts");
-						$(this).addClass("strings");
-						
-						$("#human_cover").fadeIn(2000);
-						$('#scroll').on("load", function() {
-							$('#scroll').fadeOut("1000");
-						});
-						$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
-						setTimeout(function() { 
-							$('input[name=choice]').val(-1);
-							$("form").submit();
-						}, 5000);
-					}
-				} else {
-					$(recent).removeClass("doings");
-					$(recent).removeClass("strings");
-					$(recent).addClass("holes");
-					setTimeout(function() {
-						$('input[name=choice]').val(1);
-						$('form').submit();
-					}, 1000);
+			if(recent == "#hole" + (idx-1)) {
+				$("#canvas2").off("mousemove");
+				ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+				ctx1.lineTo(pos.x, pos.y);
+				ctx1.stroke();
+				
+				recent = "#hole" + idx;
+				$(this).removeClass("doings");
+				$(this).addClass("strings");
+				$("#hole" + (idx+1)).addClass("doings");
+				$("#hole" + (idx+1)).removeClass("holes");				
+				
+				if(recent != "#hole7") {
+					ctx1.lineWidth = 5;
+					ctx1.strokeStyle = "yellow";
+					ctx1.beginPath();
+					ctx1.moveTo(pos.x, pos.y);
+					$("#canvas2").mousemove(function(e) {
+						ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+						ctx2.lineWidth = 3;
+						ctx2.strokeStyle = "red";
+						ctx2.beginPath();
+						ctx2.moveTo(pos.x, pos.y);
+						ctx2.lineTo(e.pageX - offsets.left, e.pageY - offsets.top);
+						ctx2.stroke();
+					});
+				} else {					
+					$("#human_cover").fadeIn(2000);
+					$('#scroll').on("load", function() {
+						$('#scroll').fadeOut("1000");
+					});
+					$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
+					setTimeout(function() { 
+						$('input[name=choice]').val(-1);
+						$("form").submit();
+					}, 5000);
 				}
 			} else {
+				$(this).removeClass("strings");
+				$(this).removeClass("doings");
+				$(this).addClass("holes");
 				setTimeout(function() {
 					$('input[name=choice]').val(1);
 					$('form').submit();
-				}, 1000);	
+				}, 1000);
 			}
 		}
 	}

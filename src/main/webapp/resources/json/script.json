@@ -155,7 +155,14 @@
 	"chapter":3, "scene":15, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
-},    
+},
+{
+	"name":"아누비스", "nickname":"죽음을 인도하는 자",
+	"content":"다시 생각해 보거라! 정말 그 위치가 맞다고 생각하는가?",
+	"chapter":3, "scene":15, "flag":1,
+	"image":"UI/Dialogue/Anubis.png",
+	"choice":"없음"
+},
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
 	"content":"마지막이다. 완성된 미라를 관 안에 넣거라.",

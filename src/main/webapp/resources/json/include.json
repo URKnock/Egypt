@@ -68,6 +68,10 @@
 	"page":"pourBandage.jsp"
 },
 {
+	"chapter":3, "scene":15, "flag":1,
+	"page":"pourBandage.jsp"
+},
+{
 	"chapter":3, "scene":16, "flag":0,
 	"page":"mummyTest.jsp"
 },
