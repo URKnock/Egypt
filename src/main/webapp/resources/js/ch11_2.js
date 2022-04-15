@@ -17,7 +17,11 @@ $(document).ready(function() {
 
 	$("#dialogue").hide();
 	//scene 제어 
-	//if ((scene == 2 && index == 0)) { //문제2: 이 페이지에서 scene 번호가 null임 (못 읽어옴)
+	if ((scene == 1 && index == 0)) {
+		$('form').submit()
+	}
+	
+	if ((scene == 2 && index == 0)) { //문제2: 이 페이지에서 scene 번호가 null임 (못 읽어옴) ==> session이 날라감
 		console.log(scene, index);
 		
 		$("#devil").on("click", function() {
@@ -31,10 +35,9 @@ $(document).ready(function() {
 			setTimeout(function() { $("#devil").attr("src", '/resources/Character/ch11/2층_악마3.webp'); }, 2000);
 			setTimeout(function() { $("#devil").attr("src", '/resources/Character/ch11/2층_악마1.webp'); }, 3000);
 			setTimeout(function() { $("#pot_dead").attr("src", '/resources/object/ch11/2층_항아리사자1.webp'); }, 4000);
-			setTimeout("$('form').submit()", 4500); //null이라서 전송 불가인듯. 
+			//setTimeout($('form').submit(), 4500); //null이라서 전송 불가. 
 		});
-	//} 
-
+	} 
 });
 
 function init() { //화면 초기화

@@ -17,6 +17,9 @@
 		<img id="ammut" class="select" style="z-index: 3;" src="<c:url value='/resources/Character/ch11/1층_암무트1.webp'/>"/>
 	</div>
 	<div id="page">
+<%-- 		<c:if test="${page ne null}"> --%>
+<%-- 			<jsp:include page="./interaction/chapter11/${page}"/> --%>
+<%-- 		</c:if> --%>
 	</div>
 	<div id="menu">
 		<div>

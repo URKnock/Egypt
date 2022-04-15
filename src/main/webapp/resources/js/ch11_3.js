@@ -17,16 +17,29 @@ $(document).ready(function(){
 
 	$("#dialogue").hide();
 	
-	$("#devil").on("click", function() {
-			$("#dialogue").fadeIn(500);
-			$("#devil").attr("src", '/resources/Character/ch11/3층_악마2.webp');
-	});
+	//scene 제어 
+	if ((scene == 1 && index == 0)) {
+		$('form').submit()
+	}
 	
-	$("#dialogue").on("click", function() {
-			$("#dialogue").fadeOut(500);
-			$("#devil").attr("src", '/resources/Character/ch11/3층_악마3.webp');
-			setTimeout(function() { $("#devil").attr("src", '/resources/Character/ch11/3층_악마1.webp'); }, 2000);
+	if ((scene == 2 && index == 0)) { 
+		$('form').submit() //하드코딩...(수정 예정)
+	}
+	
+	if ((scene == 3 && index == 0)) {
+		console.log(scene, index);
+		
+		$("#devil").on("click", function() {
+				$("#dialogue").fadeIn(500);
+				$("#devil").attr("src", '/resources/Character/ch11/3층_악마2.webp');
 		});
+		
+		$("#dialogue").on("click", function() {
+				$("#dialogue").fadeOut(500);
+				$("#devil").attr("src", '/resources/Character/ch11/3층_악마3.webp');
+				setTimeout(function() { $("#devil").attr("src", '/resources/Character/ch11/3층_악마1.webp'); }, 2000);
+			});
+	}	
 });
 
 function init() { //화면 초기화
@@ -56,7 +69,7 @@ function init() { //화면 초기화
 	bg2.width(bg2.prop("naturalWidth") * w);
 	bg2.height(bg2.prop("naturalHeight") * w);
 	bg2.css("left", x - (bg1.width() / 2.0) - 220*w);
-	bg2.css("bottom", - 70*w);
+	bg2.css("bottom", ($("#arrow").height() / 4.0) - 130*w);
 }
 
 function center(element) { //중앙으로 정렬
