@@ -67,7 +67,7 @@ function init() { //화면 초기화
 	$("#choice > img").height( $("#dialogue > img").height() );
 
 	// 블러
-	$("#blur").height( $("#dialogue").height() / 2.0);
+	$("#blur").height( $("#dialogue").height() );
 	$("#blur").css("left", "0");
 	$("#blur").css("bottom", "0");
 	
