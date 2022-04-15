@@ -30,36 +30,14 @@ $(document).ready(function(){
 			$("#dialogue").fadeOut(500);
 			$("#ammut").attr("src", '/resources/Character/ch11/1층_암무트3.webp');
 			setTimeout(function() { $("#ammut").attr("src", '/resources/Character/ch11/1층_암무트1.webp'); }, 2000);
-			setTimeout("$('form').submit()", 2500); //문제1: 1번 페이지에서 안 눌렀으면 다음으로 전송 안 됨
+			//setTimeout($('form').submit(), 2500); //문제1: 1번 페이지에서 안 눌렀으면 다음으로 전송 안 됨
 		});
 		
-		$("#arrow").on("click", function() {
+		//$("#arrow").on("click", function() {
 			//어떻게든 1번 페이지에서 대화창을 안 누르고 화살표를 눌렀을 때도 submit 되게 만들어야 함
-			//console.log("submit()");
-			//$("form").submit(); 
-			//$("#dialogue").hide();
-		});
+			//==> session이 사라지지 않게 해야 함
+		//});
  	} 
-
-	/*
-	switch(scene) {
-		case '1':
-			if(index != 0) {
-				$("#dialogue").on("click", function() {
-					$("form").submit();
-				});
-			}
-			break;
-		case '3':
-		case '4':
-			clicked = [];
-			break;
-		default:
-			$("#dialogue").on("click", function() {
-				$("form").submit();
-			});	
-			break;
-	}*/
 });
 
 function init() { //화면 초기화
