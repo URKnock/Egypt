@@ -18,7 +18,12 @@ public class ChoiceController implements Controller {
 
     public ChoiceController() {
         this.url = "/chapter05.jsp";
-        this.chapter = 5;
+        this.chapter = 5; 
+    }
+    
+    public ChoiceController(String url) {
+    	this.url = url;
+    	this.chapter = 5;
     }
 
     @Override
@@ -67,17 +72,18 @@ public class ChoiceController implements Controller {
 		List<Dialogue> list = null;
 		
 		int score = session.getAttribute("score") == null ? 0 : (int) session.getAttribute("score");
-		String choice = request.getParameter("choice") == null ? "null" : request.getParameter("choice");    	
-    	if(!choice.equals("null") || scene.equals("14")) {
+		String choice = request.getParameter("choice") == null ? "null" : request.getParameter("choice");
+
+    	if(!choice.equals("null") || scene.equals("16")) {
         	switch(scene) {
 	    		case "11":
 		    		if(choice.equals("0")) score += 1;
 		    		break;
-		    	case "12":
-		    	case "13":
+		    	case "14":
+		    	case "15":
 		    		if(choice.equals("1")) score += 1;
 		    		break;
-		    	case "14":
+		    	case "16":
 		    		choice = String.valueOf(3 - score);
 		    		score = 0;
 		    		break;
@@ -93,6 +99,7 @@ public class ChoiceController implements Controller {
     	}
     	dialogue = list.get(i);
     	
+    	System.out.println(score);
 	    int flag = Integer.parseInt(dialogue.getFlag());
 	    page = include.get(s, flag);
 	    

@@ -17,6 +17,7 @@
 	<img src="../resources/object/ch03/3_2_1_4.png" id="dirt_leg" class="dirt"/>
 </div>
 <img src="../resources/character/ch03/paper_1.webp" id="servant">
-<img src="../resources/object/ch03/paper.png" id="paper">
+<img src="../resources/object/ch03/none.png" id="paper">
+<img src="../resources/object/ch03/shine.webp" id="shine">
 <hr class="blinking" id="dragLine"></hr>
 <script src="<c:url value='/resources/js/interaction/ch03/washTest1.js'/>"></script>

@@ -42,6 +42,7 @@ public class Scene implements Serializable {
 		this.flag = flag;
 	}
 
+
 	public List<Dialogue> get(String scene, String index) {
 		System.out.println(flag.get(scene).size());
 		System.out.println(flag.get(scene).keySet());

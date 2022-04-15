@@ -18,7 +18,7 @@
 	z-index: 1;
 }
 
-#water {
+#water, #shine {
 	position: absolute;
 	z-index: 3;
 	display: none;

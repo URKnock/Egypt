@@ -22,24 +22,31 @@ form {
 	animation: 3s obj;
 	z-index: 3;
 }
+
 @keyframes obj {
 	0% { opacity: 0; }
 	100% { opacity: 0; }
 }
+@keyframes objmoving {
+	0% { top: 49.5%; }
+	50% { top: 50.5%; }
+	100% { top: 49.5%; }
+}
 
 #interact .motion {
-	height: 88.80%;
-	bottom: -26.8%; left: -2%;
+	height: 90%;
+	
+	bottom: -27%;
+	left: -2.5%;
+	
 	opacity: 0;
 	z-index: 2;
-	
 	animation: 3s walk;
 }
 
 @keyframes walk {
-	0% { bottom: 0%; left: -40%; opacity: 1;}
-	20% { bottom: -5%; left: -25%; }
-	40% { bottom: 0%; left: -15%; }
-	60% { bottom: -26.8%; left: -2%; }
+	0% { bottom: -5%; left: -40%; opacity: 1;}
+	50% { bottom: -5%; }
+	80% { bottom: -27%; left: -2.5%; }
 	100% { opacity: 1; }
 }

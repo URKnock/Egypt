@@ -6,10 +6,12 @@ var Anubis = document.querySelector('#anubis');
 let spotCount = 1;
 pese.isHeld = false;
 
-var circle = []
+var circle = [];
+
+var flag = 0;
 
 for(var i = 1; i <= 3; i++) {
-	circle[i] = document.querySelector('#interact .circle:nth-of-type('+i+')');
+	circle[i] = document.querySelector('#interact .circle:nth-of-type('+(4-i)+')');
 	circle[i].style.cursor = "none";
 	circle[i].style.display = "none";
 	
@@ -25,7 +27,12 @@ function init_pese() {
 	body.style.cursor = "auto";
 	
 	obj.onclick = function() { 
-			Anubis.src = "resources/webp/ch04/4_8_2.webp";
+			Anubis.src = "resources/webp/ch04/anubis_3_motion.webp";
+			flag++;
+			setTimeout(function() {
+				flag--;
+				if(flag == 0) Anubis.src = "resources/webp/ch04/anubis_3.webp";
+			}, 2400);
 		
 			obj.id = "inactive"
 			
@@ -44,8 +51,8 @@ function init_pese() {
 
 function follow_mouse( event ) {
 	if(pese.isHeld) {
-		const x = event.x - (pese.clientWidth*0.95);
-		const y = event.y - (pese.clientHeight*0.2);
+		const x = event.x - (pese.clientWidth*0.9);
+		const y = event.y - (pese.clientHeight*0.15);
 		
 		pese.style.left = x + 'px';
 		pese.style.top = y + 'px';
@@ -54,26 +61,41 @@ function follow_mouse( event ) {
 
 function tap_circle( e ) {
 	if(e.id == "spot") {
+		if(pese.style.removeAttribute)
+			pese.style.removeAttribute('animation');
+		else pese.style.removeProperty('animation');
+		setTimeout(function() { pese.style.animation = "open 1.5s"; }, 100);
+		
 		e.style.animation = "fadeout 3s";
 		
 		e.id = "inactive";
-		Anubis.src = "resources/webp/ch04/4_8_2.webp";
-
-		var oil =  document.querySelector('#oil0' + spotCount);
-		if(oil != null) {
-			oil.style.display = "block";
-		}
+		Anubis.src = "resources/webp/ch04/anubis_3_motion.webp";
+		flag++;
+		setTimeout(function() {
+			flag--;
+			if(flag == 0) Anubis.src = "resources/webp/ch04/anubis_3.webp";
+		}, 2400);
+		
+		setTimeout(function() { 
+			var oil =  document.querySelector('#oil0' + (4-spotCount+1));
+			if(oil != null) {
+				oil.style.display = "block";
+			}
+		}, 750);
+		
 		
 		spotCount++;
 		if(spotCount > 3) {
-			pese.style.display = "none";
-			obj.style.display = "block";
-			pese.isHeld = false;
-			
-			var char = document.querySelector('#interact .character:nth-of-type(2)');
-			char.style.animation = "withdraw 1s";
-			
-			setTimeout(next, 900);
+			setTimeout(function() { 
+				pese.style.display = "none";
+				obj.style.display = "block";
+				pese.isHeld = false;
+				
+				var char = document.querySelector('#interact .character:nth-of-type(2)');
+				char.style.animation = "withdraw 1s";
+				setTimeout(next, 900);
+				
+			}, 1500);
 		}
 		else
 			circle[spotCount].style.display = "block";
@@ -85,9 +107,9 @@ function next() {
 	$("form").submit();
 }
 
-setTimeout(changeWebp, 2000);
+setTimeout(changeWebp, 3000);
 
 
 function changeWebp() {
-	Anubis.src = "resources/webp/ch04/4_8_3.webp";
+	Anubis.src = "resources/webp/ch04/anubis_3_talk.webp";
 }

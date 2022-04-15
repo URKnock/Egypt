@@ -4,7 +4,6 @@ var o_select, o_index;
 var clicked = [1, 2, 3, 4, 5, 6];
 
 $(document).ready(function(){
-
 	w = $("#background").width() / 2650 / 0.87; //배경 규격 계산
 	h = $("#background").height($("#background").prop("naturalHeight") * w);
 	$(window).resize(function() {
@@ -74,13 +73,13 @@ function init() { //화면 초기화
 	bg3.height(bg3.prop("naturalHeight") * w);
 	bg3.css("left", x - (bg1.width() / 2.0) + 1550*w);
 	bg3.css("bottom", $("#hellFire").height() + 300*w);
-	
+  
 	var bg4 = $("#background > img:nth-child(4)"); //땅바닥
 	bg4.width($("#background").width()); //계산 X, 배경에 배율이 맞춰야 함
 	bg4.height(bg4.prop("naturalHeight") * w);
 	//bg4.css("left", x);
 	bg4.css("bottom", 0); //대화창에 가려져야 함
-	
+
 	var bg5 = $("#background > img:nth-child(5)"); //암무트
 	bg5.width(bg5.prop("naturalWidth") * w);
 	bg5.height(bg5.prop("naturalHeight") * w);

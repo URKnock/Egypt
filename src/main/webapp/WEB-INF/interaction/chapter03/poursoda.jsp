@@ -6,7 +6,7 @@
 <div id="dragSpot" class="circle droppable"></div>
 <img src="../resources/object/ch03/paper.png" id="scroll"/>
 <img src="../resources/object/ch03/pot.png" id="potToClick"/>
-<img src="../resources/object/ch03/pot.png" id="pot"/>
+<img src="../resources/object/ch03/pot_rotate.webp" id="pot"/>
 <img src="../resources/character/ch03/3_4.png" id="hum" class="human"/>
 <img src="../resources/object/ch03/침대.png" id="bed"/>
 <img src="../resources/object/ch03/soda_4.png" id="soda_over"/>

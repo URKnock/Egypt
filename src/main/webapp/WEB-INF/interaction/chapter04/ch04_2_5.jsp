@@ -3,8 +3,25 @@
 
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_2.css'/>" rel="stylesheet" type="text/css"/>
 <style>
-	#interact .character:nth-of-type(3) { height: 34.3%; }
+	#interact .animal:nth-of-type(5) { 
+		height: 24.16%; z-index: 3; 
+		bottom: 36%;
+		animation: 0.5s put;
+		animation-timing-function: ease-out;
+	}
+	@keyframes put {
+		0% { bottom: 40%; }
+		95% { bottom: 35.9%; }
+		100% { bottom: 36%; }
+	}
 </style>
+
+<script defer src="<c:url value='/resources/js/interaction/ch04/getItem.js'/>" type="text/javascript"></script>
+<script defer>
+	var body = document.querySelector('body');
+	body.style.cursor = "none";
+	body.onload = function() { setTimeout(next, 1500); };
+</script>
 
 <div id="interact">
 	<!-- background -->
@@ -13,18 +30,21 @@
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_1.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_2.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_11.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_7.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_10.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_6.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_7.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_9.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_6.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_4.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_5.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_8.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_9.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_7.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_3_8.webp'/>">
 	</div>
 	
-	<!-- object -->
-	<img>
-	<img class="character" src="<c:url value='/resources/Character/ch04/4_17.png'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/4_3_3.webp'/>">
+	<!-- character -->
+	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_victim2.webp'/>">
+	<img class="character">
+	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	
+	<img class="animal" src="<c:url value='/resources/webp/ch04/animal_2.webp'/>">
+	<img class="knife" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">
 </div>

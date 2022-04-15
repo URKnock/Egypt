@@ -7,14 +7,33 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch03.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch03.js'/>"></script>
+<link rel="preload" href="<c:url value='/resources/object/loading.gif'/>" as="image"/>
+<script>
+	<c:forEach items="${names}" var="name">
+		lists.push("${name}"); 
+	</c:forEach>
+</script>
 </head>
 <body onload="init(); interaction();">
+<div id="loading">
+	<img src="<c:url value='/resources/object/loading.gif'/>"/>
+</div>
 <div id="background">
 	<c:forEach var="i" begin="1" end="3">
 		<img src="<c:url value='/resources/background/ch03/3_0${i}.png'/>"/>
 	</c:forEach>
-	<img src="<c:url value='/resources/character/ch03/anubis_close.webp'/>"/>
-	<c:if test="${scene ne 9}">
+	<c:choose>
+		<c:when test="${flag ne 0 && scene ne 2}">
+			<img src="<c:url value='/resources/character/ch03/anubis_angry.webp'/>"/>
+		</c:when>
+		<c:when test="${scene eq 1}">
+			<img src="<c:url value='/resources/character/ch03/anubis_close.webp'/>"/>
+		</c:when>
+		<c:otherwise>
+			<img src="<c:url value='/resources/character/ch03/anubis_open.webp'/>"/>
+		</c:otherwise>
+	</c:choose>
+	<c:if test="${scene ne 10}">
 		<div class="canopic">
 			<c:forEach var="i" begin="1" end="4">
 				<img id="ca${i}" src="<c:url value='/resources/background/ch03/k_${i}.png'/>"/>
@@ -65,6 +84,7 @@
 		</div>
 	</c:if>
 </div>
+<div id="blur"></div>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
 <input name="flag" 	type="hidden" value="${flag}"/>

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+#interact {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#interact img {
+	position: absolute;
+}
+
+/* 배경 */
+#interact .background {
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+#interact .background:nth-of-type(2) {
+	top: 71.95%;
+	height: 28.05%;
+}
+
+/* 배경 오트젝트 */
+#interact .bgObj {
+	z-index: 2;
+	bottom: 28.05%;
+}
+#interact .bgobj:nth-of-type(3) {
+	height: 49.81%;
+	left: 50%; transform: translate(-50%, 0);
+}
+
+/* 캐릭터 */
+#interact .character {
+	bottom: 27.05%;
+	z-index: 3;
+}
+#interact .character:nth-of-type(4) {
+	height: 44.90%;
+	left: 18vh;
+}
+#interact .character:nth-of-type(5) {
+	height: 35.92%;
+	left: 50%; transform: translate(-50%, 0);
+}
+#interact .character:nth-of-type(6) {
+	height: 44.81%;
+	right: 5%;
+}
+#interact .character:nth-of-type(7) {
+	height: 27.12%;
+	right: 25vh;
+}
+
+#interact .item {
+	left: 25vh;
+	height: 7%;
+	bottom: 55%;
+	z-index: 3;
+}
+
+#interact .spot {
+	position: absolute;
+	width: 15vh; height: 15vh;
+	bottom: 36.5%; left: 50%; transform: translate(-33.5vh, 0);
+	
+	border-radius: 50%;
+	background-color: black;
+	opacity: 0;
+	
+	z-index: 5;
+}
+#interact .circle {
+	display: none;
+	position: absolute;
+	width: 10vh; height: 10vh;
+	bottom: 39%; left: 50%; transform: translate(-31vh, 0);
+	
+	border-radius: 50%;
+	background-color: white;
+	opacity: 0.6;
+	
+	z-index: 2;
+}
