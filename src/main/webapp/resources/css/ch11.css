@@ -10,6 +10,8 @@ body {
 	overflow: hidden;
   	overflow-y: hidden;
   	overflow-x: hidden;
+  	margin:0;
+	padding:0;
 }
 
 .select {
@@ -17,27 +19,41 @@ body {
 }
 .pikachu:hover {
 	transform: scale(1.1);
+	transform-origin: bottom center;
 }
 .pikachu:active {
 	transform: scale(1.0);
 }
 
 #background {
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-image: url("../background/ch11/ch11_bg_1.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	width:100%;
+	height:100%;
+	background: no-repeat url("../background/ch11/ch11_bg_1.png") center center;
+    background-size: 100% 100%;
 }
-
 #background > img {
 	width:initial;
 	height:initial;
 	position:absolute;
+}
+#blur {
+	width: 100%;
+	height: 100px;
+	background: inherit;
+	position: absolute;
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(15px);
+	-o-filter: blur(15px);
+	-ms-filter: blur(15px);
+	backdrop-filter: blur(10px);
+	z-index: 100;
+}
+
+#human {
+	position:absolute;
+	z-index:1;
+	transform: scaleX(-1)
 }
 
 #menu {
@@ -59,7 +75,7 @@ body {
 #dialogue {
 	position: absolute;
 	display: flex;
-	width:100%;
+	width: 100%;
 	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -68,7 +84,8 @@ body {
 	align-content: center;
 	left: 0;
 	bottom: 0;
-	z-index: 999;
+	z-index: 111;
+	opacity: 0.8;
 }
 #dialogue > img {
 	margin: 5px;
@@ -94,6 +111,30 @@ body {
 #choice button {
 	height: 30px;
 	margin: 5px 25px 5px 0;
+}
+
+#title, #content {
+	display: inline-flex;
+	flex-direction: row;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+#title > div {
+	font-weight: bold;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+#title > div:nth-child(2) {
+	color: white;
+	min-width: 200px;
+	height: 30px;
+	background: no-repeat url("../UI/Dialogue/Title.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+	margin-left: 25px;
 }
 
 #monkeys {

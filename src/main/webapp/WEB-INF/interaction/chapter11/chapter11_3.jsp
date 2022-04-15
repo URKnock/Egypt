@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <title>사자의 서</title>
-<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch11.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch11_3.js'/>"></script>
@@ -13,7 +12,8 @@
 <body onload="init(); interaction();">
 	<div id="background">
 		<img id="arrow" style="transform: scale(0.5) scaleX(-1);" onClick="location.href='../chapter11part2'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
-		<img id="devil" class="select" src="<c:url value='/resources/Character/ch11/3층_악마1.webp'/>"/>
+		<img id="devil" class="select pikachu" src="<c:url value='/resources/character/ch11/3층_악마1.webp'/>"/>
+		<img id="human" src="<c:url value='/resources/character/ch11/사자.webp'/>"/>
 	</div>
 	<div id="page">
 		
@@ -66,6 +66,7 @@
 			</div>
 		</c:if>
 	</div>
+	<div id="blur"></div>
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>

@@ -3,10 +3,10 @@ var scene, index, flag;
 var o_select, o_index;
 var clicked = [1, 2, 3, 4, 5, 6];
 
-$(document).ready(function() {
+$(document).ready(function(){
 	w = $("#background").width() / 2650 / 0.87; //배경 규격 계산
 	h = $("#background").height($("#background").prop("naturalHeight") * w);
-	$(window).resize(function() { //정보창?
+	$(window).resize(function() { 
 		location.reload(true);
 	});
 
@@ -16,6 +16,8 @@ $(document).ready(function() {
 	flag = $("input[name='flag']").val();
 
 	$("#dialogue").hide();
+	$("#blur").hide();
+	
 	//scene 제어 
 	if ((scene == 1 && index == 0)) {
 		$('form').submit()
@@ -25,16 +27,17 @@ $(document).ready(function() {
 		console.log(scene, index);
 		
 		$("#devil").on("click", function() {
-			$("#dialogue").fadeIn(500);
-			$("#devil").attr("src", '/resources/Character/ch11/2층_악마2.webp');
+			$("#pot_dead").attr("src", '/resources/object/ch11/2층_항아리사자2.webp');
+			setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/2층_악마3.webp'); }, 2000);
+			setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/2층_악마1.webp'); }, 3800);
+			setTimeout(function() { $("#pot_dead").attr("src", '/resources/object/ch11/2층_항아리사자1.webp'); }, 4000);
+			setTimeout(function() { $("#dialogue").fadeIn(500); $("#blur").fadeIn(500);}, 4500);
+			setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/2층_악마2.webp'); }, 4550);
 		});
 		
 		$("#dialogue").on("click", function() {
-			$("#dialogue").fadeOut(500);
-			$("#pot_dead").attr("src", '/resources/object/ch11/2층_항아리사자2.webp');
-			setTimeout(function() { $("#devil").attr("src", '/resources/Character/ch11/2층_악마3.webp'); }, 2000);
-			setTimeout(function() { $("#devil").attr("src", '/resources/Character/ch11/2층_악마1.webp'); }, 3000);
-			setTimeout(function() { $("#pot_dead").attr("src", '/resources/object/ch11/2층_항아리사자1.webp'); }, 4000);
+			$("#dialogue").fadeOut(500); $("#blur").fadeOut(500);
+			$("#devil").attr("src", '/resources/character/ch11/2층_악마1.webp');
 			//setTimeout($('form').submit(), 4500); //null이라서 전송 불가. 
 		});
 	} 
@@ -44,6 +47,7 @@ function init() { //화면 초기화
 	scene = $("input[name='scene']").val();
 
 	w = $("#background").width() / 2650 / 0.87;
+	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
 
 	var sw = $("#scene").width() - $("#dialogue > img:first-of-type").width();
@@ -52,10 +56,15 @@ function init() { //화면 초기화
 	$("#scene").width(sw);
 	$("#choice > img").height($("#dialogue > img").height());
 
-	//resize("#human"); //#human: 사자의 몸통
-	//center("#human");
-
-	var b = $("#dialogue").height() + 10 * w; //대화창
+	// 블러
+	$("#blur").height( $("#dialogue").height() / 2.0 );
+	$("#blur").css("left", "0");
+	$("#blur").css("bottom", "0");
+	
+	resize("#human");
+	center("#human");
+	
+	var b = 300*h;
 
 	var bg1 = $("#background > img:nth-child(1)"); //2층 단상
 	bg1.width(bg1.prop("naturalWidth") * w);
@@ -79,12 +88,11 @@ function init() { //화면 초기화
 	bg4.width(bg4.prop("naturalWidth") * w);
 	bg4.height(bg4.prop("naturalHeight") * w);
 	bg4.css("left", x - (bg1.width() / 2.0) + 1200 * w);
-	bg4.css("bottom", $("#hellFireFront").height() + 250 * w);
+	bg4.css("bottom", $("#hellFireFront").height() + 170 * w);
 
 	var bg5 = $("#background > img:nth-child(5)"); //땅바닥
 	bg5.width($("#background").width()); //계산 X, 배경에 배율이 맞춰야 함
 	bg5.height(bg5.prop("naturalHeight") * w);
-	//bg5.css("left", x);
 	bg5.css("bottom", 0);
 
 	var bg6 = $("#background > img:nth-child(6)"); //2층 항아리 안
@@ -115,13 +123,19 @@ function init() { //화면 초기화
 	bg10.width(bg10.prop("naturalWidth") * w);
 	bg10.height(bg10.prop("naturalHeight") * w);
 	bg10.css("left", x - (bg1.width() / 2.0) - 950 * w);
-	bg10.css("bottom", $("#hellFireFront").height() + 250 * w);
+	bg10.css("bottom", bg4.css("bottom"));
 
 	var bg11 = $("#background > img:nth-child(11)"); //2층 항아리 탕 안 사자
 	bg11.width(bg11.prop("naturalWidth") * w);
 	bg11.height(bg11.prop("naturalHeight") * w);
 	bg11.css("left", x - (bg1.width() / 2.0) + 160 * w);
 	bg11.css("bottom", $("#hellFireFront").height() - 125*w);
+	
+	var bg12 = $("#background > img:nth-child(12)"); //2층 단상
+	bg12.width(bg12.prop("naturalWidth") * w);
+	bg12.height(bg12.prop("naturalHeight") * w);
+	bg12.css("left", x - (bg1.width() / 2.0) - 650 * w);
+	bg12.css("bottom", $("#ground").height());
 }
 
 function center(element) { //중앙으로 정렬
