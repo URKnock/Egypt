@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <title>사자의 서</title>
-<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch11.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch11_2.js'/>"></script>
@@ -20,9 +19,10 @@
 		<img id="pot_back" style="z-index: 2;" src="<c:url value='/resources/object/ch11/2층_항아리안.png'/>"/>
 		<img id="pot_inner" style="z-index: 4;" src="<c:url value='/resources/object/ch11/2층_항아리탕.webp'/>"/>
 		<img id="pot_frame" style="z-index: 5;" src="<c:url value='/resources/object/ch11/2층_항아리밖.png'/>"/>
-		<img id="devil" style="z-index: 5;" class="select" src="<c:url value='/resources/Character/ch11/2층_악마1.webp'/>"/>
+		<img id="devil" style="z-index: 5;" class="select pikachu" src="<c:url value='/resources/character/ch11/2층_악마1.webp'/>"/>
 		<img style="transform: scale(0.5) scaleX(-1);" onClick="location.href='../chapter11'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
 		<img id="pot_dead" style="z-index: 3;" src="<c:url value='/resources/object/ch11/2층_항아리사자1.webp'/>"/>
+		<img id="human" src="<c:url value='/resources/character/ch11/사자.webp'/>"/>
 	</div>
 	<div id="page">
 		
@@ -75,6 +75,7 @@
 			</div>
 		</c:if>
 	</div>
+	<div id="blur"></div>
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>

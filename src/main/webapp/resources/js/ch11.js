@@ -16,20 +16,23 @@ $(document).ready(function(){
 	flag = $("input[name='flag']").val();
 
 	$("#dialogue").hide();
+	$("#blur").hide();
+	
 	//scene 제어 
  	if((scene == 1 && index == 0)) {
 		console.log(scene, index);
 	
 		$("#ammut").on("click", function() {
-			$("#dialogue").fadeIn(500);
-			$("#ammut").attr("src", '/resources/Character/ch11/1층_암무트2.webp');
+			$("#ammut").attr("src", '/resources/character/ch11/1층_암무트3.webp');
+			setTimeout(function() { $("#ammut").attr("src", '/resources/character/ch11/1층_암무트1.webp'); }, 2000);
+			setTimeout(function() { $("#dialogue").fadeIn(500); $("#blur").fadeIn(500); }, 2500);
+			setTimeout(function() { $("#ammut").attr("src", '/resources/character/ch11/1층_암무트2.webp'); }, 2550);
 		});
 		
 		$("#dialogue").on("click", function() {
-			$("#dialogue").fadeOut(500);
-			$("#ammut").attr("src", '/resources/Character/ch11/1층_암무트3.webp');
-			setTimeout(function() { $("#ammut").attr("src", '/resources/Character/ch11/1층_암무트1.webp'); }, 2000);
-			//setTimeout($('form').submit(), 2500); //문제1: 1번 페이지에서 안 눌렀으면 다음으로 전송 안 됨
+			$("#dialogue").fadeOut(500); $("#blur").fadeOut(500);
+			$("#ammut").attr("src", '/resources/character/ch11/1층_암무트1.webp');
+			//setTimeout($('form').submit(), 2500); //문제1: 1번 페이지에서 읽지 않으면 다음으로 전송 안 됨
 		});
 		
 		//$("#arrow").on("click", function() {
@@ -43,6 +46,7 @@ function init() { //화면 초기화
 	scene = $("input[name='scene']").val();
 
 	w = $("#background").width() / 2650 / 0.87;
+	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
 		
 	var sw = $("#scene").width() - $("#dialogue > img:first-of-type").width();
@@ -50,11 +54,16 @@ function init() { //화면 초기화
 	if (sw < 0) sw = 0;
 	$("#scene").width(sw);
 	$("#choice > img").height( $("#dialogue > img").height() );
+
+	// 블러
+	$("#blur").height( $("#dialogue").height() / 2.0 );
+	$("#blur").css("left", "0");
+	$("#blur").css("bottom", "0");
 	
-	//resize("#human"); //#human: 사자의 몸통
-	//center("#human");
+	resize("#human");
+	center("#human");
 	
-	var b = $("#dialogue").height() + 10*w; //대화창
+	var b = 300*h;
 	
 	var bg1 = $("#background > img:nth-child(1)"); //원숭이 탕
 	bg1.width(bg1.prop("naturalWidth") * w);
@@ -72,7 +81,7 @@ function init() { //화면 초기화
 	bg3.width(bg3.prop("naturalWidth") * w);
 	bg3.height(bg3.prop("naturalHeight") * w);
 	bg3.css("left", x - (bg1.width() / 2.0) + 1550*w);
-	bg3.css("bottom", $("#hellFire").height() + 300*w);
+	bg3.css("bottom", $("#hellFire").height() + 200*w);
   
 	var bg4 = $("#background > img:nth-child(4)"); //땅바닥
 	bg4.width($("#background").width()); //계산 X, 배경에 배율이 맞춰야 함
@@ -85,6 +94,12 @@ function init() { //화면 초기화
 	bg5.height(bg5.prop("naturalHeight") * w);
 	bg5.css("left", x - (bg1.width() / 2.0) + 1200*w);
 	bg5.css("bottom", $("#ground").height());
+	
+	var bg6 = $("#background > img:nth-child(6)"); //사자
+	bg6.width(bg6.prop("naturalWidth") * w);
+	bg6.height(bg6.prop("naturalHeight") * w);
+	bg6.css("left", x - (bg1.width() / 2.0) - 300*w);
+	bg6.css("bottom", $("#ground").height());
 }
 
 /*
