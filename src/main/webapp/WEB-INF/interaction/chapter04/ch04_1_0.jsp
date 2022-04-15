@@ -22,13 +22,13 @@
 	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_3.webp'/>">
 	<img class="character" src="<c:url value='/resources/character/ch04/4_11.png'/>">
 	
-	<img class="motion" src="<c:url value='/resources/character/ch04/4_9.png'/>">
+	<img class="motion" src="<c:url value='/resources/webp/ch04/servant_4_1.webp'/>">
 	
 	<img id="active" onclick="tap_tool(this)" class="object" src="<c:url value='/resources/object/ch04/4_3_2.png'/>">
 	
 	<div id="spots">
 		<div id="spot" class="circle" style="top: -2vh; right: 15vh;"></div>
-		<div id="spot" class="circle" style="top: 1vh; right: 14vh;"></div>
+		<div id="spot" class="circle" style="top: 1vh; right: 18.5vh;"></div>
 		<div id="spot" class="circle" style="top: 3vh; right: 17vh;"></div>
 	</div>
 	
