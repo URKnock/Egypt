@@ -153,14 +153,18 @@
 },
 {
 	"chapter":4, "scene":17, "flag":0,
-	"page":"ch04_3_0.jsp"
+	"page":"ch04_2_11.jsp"
 },
 {
 	"chapter":4, "scene":18, "flag":0,
-	"page":"ch04_3_1.jsp"
+	"page":"ch04_3_0.jsp"
 },
 {
 	"chapter":4, "scene":19, "flag":0,
+	"page":"ch04_3_1.jsp"
+},
+{
+	"chapter":4, "scene":20, "flag":0,
 	"page":"ch04_3_2.jsp"
 },
 

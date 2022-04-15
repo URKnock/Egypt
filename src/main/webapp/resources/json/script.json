@@ -218,14 +218,14 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"페세슈카프를 들고 사자의 눈, 얼굴, 입에 대어 사후세계에서 말할 수 있도록 입을 열게 하거라.",
+	"content":"페세슈카프를 들고 사자의 입술, 코, 눈에 대어 사후세계에서 말할 수 있도록 입을 열게 하거라.",
 	"chapter":4, "scene":4, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"저승에서의 승리를 위하여 향유를 눈, 얼굴, 입에 바르거라.",
+	"content":"저승에서의 승리를 위하여 향유를 입, 얼굴, 눈에 바르거라.",
 	"chapter":4, "scene":5, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
@@ -267,7 +267,7 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"사자가 지하세계에서 적을 살해하는 것을 기원하기 위하여,<br/>오리와 영양을 가져오거라.",
+	"content":"사자가 지하세계에서 적을 살해하는 것을 기원하기 위하여,<br/>오리를 가져오거라.",
 	"chapter":4, "scene":11, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
@@ -288,50 +288,57 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"마지막으로 영양을 도살하거라.",
+	"content":"그 다음, 영양을 가져오거라.",
 	"chapter":4, "scene":14, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"신에게 바치기 위해 영양의 목을 따거라.",
+	"content":"마지막으로 영양을 도살하거라.",
 	"chapter":4, "scene":15, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"오시리스에게 황소의 앞다리, 심장, 오리의 목 그리고 영양의 목을 바치러 가거라.",
+	"content":"신에게 바치기 위해 영양의 목을 따거라.",
 	"chapter":4, "scene":16, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 자",
-	"content":"오시리스에게 재물을 바쳐 봉헌의식을 진행하거라.",
+	"content":"오시리스에게 황소의 앞다리, 심장, 오리의 목 그리고 영양의 목을 바치러 가거라.",
 	"chapter":4, "scene":17, "flag":0,
+	"image":"UI/Dialogue/Anubis.png",
+	"choice":"없음"
+},
+{
+	"name":"아누비스", "nickname":"죽음을 인도하는 자",
+	"content":"오시리스에게 재물을 바쳐 봉헌의식을 진행하거라.",
+	"chapter":4, "scene":18, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"하인", "nickname":"",
 	"content":"오시리스여! 그대를 위해 영양과 오리를 도살 했습니다!",
-	"chapter":4, "scene":18, "flag":0,
+	"chapter":4, "scene":19, "flag":0,
 	"image":"UI/Dialogue/하인.png",
 	"choice":"없음"
 },
 {
 	"name":"하인", "nickname":"",
 	"content":"오시리스여! 사자의 적들이 신 앞에 대항하지 못하게 하소서!",
-	"chapter":4, "scene":19, "flag":0,
+	"chapter":4, "scene":20, "flag":0,
 	"image":"UI/Dialogue/하인.png",
 	"choice":"없음"
 },
 {
 	"name":"오시리스", "nickname":"죽음의 신",
 	"content":"고생했다 사자여. 오시리스 법정에서 기다리고 있을테니,<br/>부디 여러가지 관문을 무사히 통과하도록……",
-	"chapter":4, "scene":19, "flag":0,
+	"chapter":4, "scene":20, "flag":0,
 	"image":"UI/Dialogue/오시리스.png",
 	"choice":"없음"
 }, 

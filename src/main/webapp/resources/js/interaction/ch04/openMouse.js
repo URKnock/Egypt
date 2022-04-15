@@ -61,6 +61,11 @@ function follow_mouse( event ) {
 
 function tap_circle( e ) {
 	if(e.id == "spot") {
+		if(pese.style.removeAttribute)
+			pese.style.removeAttribute('animation');
+		else pese.style.removeProperty('animation');
+		setTimeout(function() { pese.style.animation = "open 1.5s"; }, 100);
+		
 		e.style.animation = "fadeout 3s";
 		
 		e.id = "inactive";
@@ -70,22 +75,27 @@ function tap_circle( e ) {
 			flag--;
 			if(flag == 0) Anubis.src = "resources/webp/ch04/anubis_3.webp";
 		}, 2400);
-
-		var oil =  document.querySelector('#oil0' + (4-spotCount));
-		if(oil != null) {
-			oil.style.display = "block";
-		}
+		
+		setTimeout(function() { 
+			var oil =  document.querySelector('#oil0' + (4-spotCount+1));
+			if(oil != null) {
+				oil.style.display = "block";
+			}
+		}, 750);
+		
 		
 		spotCount++;
 		if(spotCount > 3) {
-			pese.style.display = "none";
-			obj.style.display = "block";
-			pese.isHeld = false;
-			
-			var char = document.querySelector('#interact .character:nth-of-type(2)');
-			char.style.animation = "withdraw 1s";
-			
-			setTimeout(next, 900);
+			setTimeout(function() { 
+				pese.style.display = "none";
+				obj.style.display = "block";
+				pese.isHeld = false;
+				
+				var char = document.querySelector('#interact .character:nth-of-type(2)');
+				char.style.animation = "withdraw 1s";
+				setTimeout(next, 900);
+				
+			}, 1500);
 		}
 		else
 			circle[spotCount].style.display = "block";

@@ -40,7 +40,7 @@ function init_item() {
 }
 
 function follow_mouse( event ) {
-	const x = event.clientX - (knife.clientWidth*0.95);
+	const x = event.clientX - (knife.clientWidth*1.05);
 	const y = event.clientY - (knife.clientHeight*0.1);
 		
 	knife.style.left = x + 'px';
