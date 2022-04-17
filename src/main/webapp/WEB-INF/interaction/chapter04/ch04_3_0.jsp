@@ -25,9 +25,11 @@
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_2.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_6.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_7.webp'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_8.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_5.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_7.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_9.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_4.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_4.png'/>">
 	</div>
 	
 	<!-- character -->

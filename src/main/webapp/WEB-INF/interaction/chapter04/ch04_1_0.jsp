@@ -24,7 +24,7 @@
 	
 	<img class="motion" src="<c:url value='/resources/webp/ch04/servant_4_1.webp'/>">
 	
-	<img id="active" onclick="tap_tool(this)" class="object" src="<c:url value='/resources/object/ch04/4_3_2.png'/>">
+	<img id="active" onclick="tap_tool(this)" class="object" src="<c:url value='/resources/webp/ch04/pese.webp'/>">
 	
 	<div id="spots">
 		<div id="spot" class="circle" style="top: -2vh; right: 15vh;"></div>
@@ -34,9 +34,3 @@
 	
 	<img class="tool" src="<c:url value='/resources/object/ch04/4_3_1.png'/>"/>
 </div>
-
-<script>	
-	setTimeout(function() {
-		obj.style.animation = "2.4s objmoving 0s infinite"
-	}, 3000);
-</script>

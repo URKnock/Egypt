@@ -322,14 +322,14 @@
 	"choice":"없음"
 },
 {
-	"name":"하인", "nickname":"",
+	"name":"하인", "nickname":"없음",
 	"content":"오시리스여! 그대를 위해 영양과 오리를 도살 했습니다!",
 	"chapter":4, "scene":19, "flag":0,
 	"image":"UI/Dialogue/하인.png",
 	"choice":"없음"
 },
 {
-	"name":"하인", "nickname":"",
+	"name":"하인", "nickname":"없음",
 	"content":"오시리스여! 사자의 적들이 신 앞에 대항하지 못하게 하소서!",
 	"chapter":4, "scene":20, "flag":0,
 	"image":"UI/Dialogue/하인.png",

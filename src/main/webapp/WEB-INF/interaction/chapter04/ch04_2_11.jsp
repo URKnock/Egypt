@@ -30,6 +30,6 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_out.webp'/>">
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_6_out.webp'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1_motion.webp'/>">
 
 </div>

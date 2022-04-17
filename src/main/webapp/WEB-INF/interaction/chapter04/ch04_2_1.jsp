@@ -4,11 +4,12 @@
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_2.css'/>" rel="stylesheet" type="text/css"/>
 <style>
 	.knife {
-		left: 34vh;
+		left: 32vh;
 		bottom: 70%;
+		transform: scaleX(-1);
 	}
 	#active:hover{
-		transform: scale(1.1);
+		transform: scale(1.1) scaleX(-1);
 	}
 	#interact .animal {
 		height: 31.11%;
