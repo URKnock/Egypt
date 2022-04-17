@@ -27,27 +27,13 @@ document.querySelector('.close').onclick = function() { hide_info(); info_close(
 
 function pause(index) {
 	for(var i = 0; i < 4; i++) {
-		if(i != index) {
-			obj[i].src = png[i];
-			obj[i].style.height = "44.90vh";
-			obj[i].style.transform = "translate(3%, 0)";
-			if(i == 3) {
-				obj[i].style.height = "48.70vh";
-				obj[i].style.transform = "translate(-3%, 0)";
-			}
-		}
+		if(i != index) obj[i].src = png[i];
 	}
 }
 function play() {
 	for(var i = 0; i < 4; i++) {
 		obj[i].src = webp[i];
-		obj[i].style.transform = "";
 	}
-		
-	obj[0].style.height = "45.83%";
-	obj[1].style.height = "45.46%";
-	obj[2].style.height = "45.64%";
-	obj[3].style.height = "49.89%";
 }
 
 function info_close() {
@@ -84,7 +70,7 @@ function tap_info(e, i) {
 			guide.style.display = 'none';
 	
 			Anubis.id = 'active';
-			Anubis.style.filter ="drop-shadow(0px 0px 0.5vw red)";
+			Anubis.style.filter ="drop-shadow(0px 0px 1.5vh red)";
 			Anubis.onclick = function() { $("form").submit(); };
 		}
 	}

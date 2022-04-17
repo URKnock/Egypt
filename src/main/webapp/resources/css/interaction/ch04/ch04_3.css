@@ -46,17 +46,27 @@
 #bg .bgObj:nth-of-type(5){
 	bottom: 32%;
 	left: 11%;
-	height: 61.57%;
+	height: 42.87%;
 }
 #bg .bgObj:nth-of-type(6){
 	bottom: 31.7%;
 	left: 20%;
-	height: 52.03%;
+	height: 33.33%;
 }
 #bg .bgObj:nth-of-type(7){
 	bottom: 28.5%;
 	left: 50%; transform: translate(-20vh, 0);
 	height: 11.11%;
+}
+#bg .bgObj:nth-of-type(8){
+	bottom: 73%;
+	left: 11%;
+	height: 22.3%;
+}
+#bg .bgObj:nth-of-type(9){
+	bottom: 63%;
+	left: 20%;
+	height: 22.03%;
 }
 
 #interact .osiris {

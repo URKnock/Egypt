@@ -61,6 +61,7 @@
 #interact .pontiff:nth-of-type(7) {
 	height: 45.83%;
 	left: 4%;
+	z-index: 4;
 }
 #interact .pontiff:nth-of-type(8) {
 	height: 45.46%;

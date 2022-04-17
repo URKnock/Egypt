@@ -22,7 +22,7 @@
 	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_3.webp'/>">
 	<img class="character" src="<c:url value='/resources/character/ch04/4_11.png'/>">
 	
-	<img id="active" onclick="tap_tool(this)" class="object" src="<c:url value='/resources/object/ch04/4_3_4.png'/>">
+	<img id="active" onclick="tap_tool(this)" class="object" src="<c:url value='/resources/webp/ch04/bottle.webp'/>">
 	
 	<div id="spots">
 		<div id="spot" class="circle" style="top: -2vh; right: 15vh;"></div>
@@ -38,10 +38,4 @@
 	
 	<img class="tool" src="<c:url value='/resources/object/ch04/4_3_3.png'/>"/>
 </div>
-
-<script>
-	setTimeout(function() {
-		obj.style.animation = "2.4s objmoving 0s infinite"
-	}, 1000);
-</script>
 	

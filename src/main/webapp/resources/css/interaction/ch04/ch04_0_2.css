@@ -18,7 +18,7 @@
 	width: auto;
 	opacity: 0;
 	
-	left: 0%;
+	left: -10%;
 	top: 0%;
 	
 	animation-name: effect2;
@@ -43,11 +43,11 @@
 
 @keyframes effect1 {
 	0% { opacity: 0; }
-	1% { left: 35%; top: 22%; opacity: 1; }
-	50% { top:20%; }
-	60%	{ left: 39%; top: 20%; }
+	1% { left: 35%; top: 26%; opacity: 1; }
+	50% { top: 24%; }
+	60%	{ left: 39%; top: 24%; }
 	90% { opacity: 1; }
-	100% { left: 40%; top: 22%; opacity: 0; }
+	100% { left: 42%; top: 27%; opacity: 0; }
 }
 @keyframes effect2 {
 	0% { opacity: 0; }
@@ -58,8 +58,7 @@
 @keyframes effect3 {
 	0% { opacity: 0; }
 	1% { opacity: 0; z-index: 10;}
-	50% { opacity: 0; }
-	60% { opacity: 1; }
+	40% { opacity: 0; }
 	80% { opacity: 1; }
 	100% { opacity: 0; z-index: 10;}
 }
