@@ -30,16 +30,16 @@
 </div>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/Character/ch09/사자.webp'/>"/>
-	<img id="c2" src="<c:url value='/resources/Character/ch09/2층 카무트 노예1.webp'/>"/>
-	<img id="c3" src="<c:url value='/resources/Character/ch09/2층 탈곡1.webp'/>"/>
-	<img id="c4" src="<c:url value='/resources/Character/ch09/2층 카무트1.webp'/>"/>
+	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
+	<img id="c2" src="<c:url value='/resources/character/ch09/2층 카무트 노예1.webp'/>"/>
+	<img id="c3" src="<c:url value='/resources/character/ch09/2층 탈곡1.webp'/>"/>
+	<img id="c4" src="<c:url value='/resources/character/ch09/2층 카무트1.webp'/>"/>
 	</div>
 </div>
 <div id="cows">
 	<div id="cow">
-	<img id="cow1" src="<c:url value='/resources/Character/ch09/2층 소1.webp'/>"/>
-	<img id="cow2" src="<c:url value='/resources/Character/ch09/2층 소1.webp'/>"/>
+	<img id="cow1" src="<c:url value='/resources/character/ch09/2층 소1.webp'/>"/>
+	<img id="cow2" src="<c:url value='/resources/character/ch09/2층 소1.webp'/>"/>
 	</div>	
 </div>
 </body>
