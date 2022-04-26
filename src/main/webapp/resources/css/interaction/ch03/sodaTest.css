@@ -1,9 +1,45 @@
 canvas {
-	position:absolute;
-	width: 115;
-	height: 50;
-	cursor: url('/resources/object/ch03/n_cursor.png'), pointer;
-	z-index: 999;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;	
+}
+
+#canvas1 {
+	z-index: 18;
+}
+#canvas2 {
+	z-index: 19;
+}
+
+.hole {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	opacity: 0.8;
+	z-index: 20;
+}
+
+.doings {
+	border: 2px solid white;
+	background-color: yellow;
+}
+
+.strings {
+	border: 3px solid white;
+	background-color: orange;
+}
+
+.holes {
+	border: 1px solid white;
+	background-color: gray;
+	transform: scale(0.5);
+	transform-origin: center center;
+	transition: transform 1s;
 }
 
 .clickable {
@@ -17,11 +53,11 @@ canvas {
 #potToClick, #bandageToClick, #niddleToClick {
 	position: absolute;
 	cursor: pointer;
-	z-index: 3;
+	z-index: 22;
 	display: none;
 }
 
-#pot {
+#bandage, #pot {
 	position: absolute;
 	cursor: pointer;
 	top: 300;
@@ -40,9 +76,9 @@ canvas {
 	transform: rotate(180deg);
 }
 
-#bandage, #niddle {
+#niddle {
 	position: absolute;
-	z-index: 99;
+	z-index: 11;
 	top: 300;
 	display: none;
 }

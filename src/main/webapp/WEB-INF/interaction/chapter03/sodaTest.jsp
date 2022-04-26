@@ -17,5 +17,9 @@
 <img src="../resources/character/ch03/3_3_1.png" id="human_cover" class="droppable"/>
 <img src="../resources/character/ch03/paper_1.webp" id="servant">
 <img src="../resources/object/ch03/none.png" id="paper">
-<canvas id="canvas"></canvas>
+<c:forEach var="i" begin="1" end="7">
+	<div id="hole${i}" class="hole holes"></div>
+</c:forEach>
+<canvas id="canvas1"></canvas>
+<canvas id="canvas2"></canvas>
 <script src="<c:url value='/resources/js/interaction/ch03/sodaTest.js'/>"></script>

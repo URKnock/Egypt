@@ -6,6 +6,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Daehan-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
 	margin: 0;
@@ -91,7 +97,7 @@ body {
 }
 
 #active {
-	filter: drop-shadow(0px 0px 0.5vw yellow);
+	filter: drop-shadow(0px 0px 1.5vh #FFAB00);
 }
 #active:hover {
 	transform: scale(1.1);
@@ -124,10 +130,11 @@ form {
 #dialogue>img {
 	position: absolute;
 	
-	width: auto !important;
-	height: 70%;
+	width: 18vh;
+	height: auto;
 	
-	top: 15%;
+	top: 50%;
+	transform: translate(0, -50%);
 	left: 5.5vh;
 }
 #dialogue #scene {
@@ -140,23 +147,25 @@ form {
 	left: 30vh;
 }
 #dialogue #scene #title {
-	width: 40vh;
+	width: 38vh;
 	height: 20% !important;
 	
-	font-size: 1.2em;
 	font-weight: bolder;
 	
 	display: flex;
 	justify-content: space-between;
 }
 #title > div:nth-child(1) {
+	font-size: 2.7vh;
+	font-family: 'Daehan-Regular';
 	height: 100%;
 	line-height: 4vh;
 }
 #title > div:nth-child(2) {
+	font-size: 2vh;
 	color: white;
-	min-width: 28vh;
-	height: 100%;
+	min-width: 25vh;
+	height: 75%;
 	background: no-repeat url("../UI/Dialogue/Title.png") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -164,7 +173,8 @@ form {
     background-size: cover;  
     text-align: center;
 	margin-left: 02.31vh;
-	line-height: 4vh;
+	line-height: 3vh;
+	transform: translate(0%, 10%);
 }
 #dialogue #scene #content {
 	position: absolute;
@@ -175,7 +185,8 @@ form {
 	top: 30%;
 	left: 0%;
 		
-	font-size: 1em;
+	font-size: 2.2vh;
+	font-weight: bold;
 }
 #choice {
 	position: absolute;

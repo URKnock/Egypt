@@ -11,9 +11,11 @@
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_2.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_6.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_7.webp'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_8.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_5.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_7.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_9.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_4.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_4.png'/>">
 	</div>
 	
 	<!-- character -->
@@ -28,7 +30,9 @@
 
 <script>
 	var osiris = document.querySelector('.osiris');
+	var character =  document.querySelector('#interact .character:nth-of-type(3)');
 	if(${index} == 1) {
+		character.src = "resources/webp/ch04/servant_7_talk.webp";
 		setTimeout(function() {
 			osiris.src = "resources/webp/ch04/osiris.webp";
 		}, 2400);

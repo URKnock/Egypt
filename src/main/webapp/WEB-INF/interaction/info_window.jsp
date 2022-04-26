@@ -13,5 +13,5 @@
 			더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트
 		</p>
 	</div>
-	<div class="close" onclick="hide_info()">X</div>
+	<div class="close" onclick="hide_info()">ｘ</div>
 </div>

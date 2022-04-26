@@ -1,10 +1,10 @@
-#bandageToClick, #human_cover {
+#human_cover {
 	position: absolute;
 	cursor: pointer;
 	z-index: 3;
 }
 
-#bandage {
+#bandageToClick, #bandage {
 	position: absolute;
 	cursor: pointer;
 	top: 300;
@@ -20,83 +20,38 @@
 #human {
 	position: absolute;
 	z-index: 2;
-}	
-
-hr{
-	position: absolute;
-	top: 350; 
-	left: 300;
-    border: none;
-    border-top: 5px dotted red;
-    height: 1px;
-    width: 600;
-    z-index: 10;
 }
 
-.circle {
+.hole {
 	cursor: pointer;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	border: 5px dotted red;
-	opacity: 0.4;
-	z-index: 10;
-}
-
-.strings {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	border: 3px solid white;
-	background-color: orange;
 	opacity: 0.8;
 	z-index: 10;
 }
 
 .starts {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
 	border: 2px solid white;
 	background-color: green;
-	opacity: 0.8;
-	z-index: 10;
 }
 
 .doings {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
 	border: 2px solid white;
 	background-color: yellow;
-	opacity: 0.8;
-	z-index: 10;
+}
+
+.strings {
+	border: 3px solid white;
+	background-color: orange;
 }
 
 .holes {
-	cursor: pointer;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
 	border: 1px solid white;
 	background-color: gray;
-	opacity: 0.8;
-	z-index: 10;
 	transform: scale(0.5);
 	transform-origin: center center;
 	transition: transform 1s;

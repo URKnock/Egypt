@@ -10,7 +10,7 @@
 <img src="<c:url value='/resources/character/ch03/3_4.png'/>" id="human"/>
 <img src="<c:url value='/resources/character/ch03/3_6.png'/>" id="human_cover"/>
 <c:forEach var="i" begin="1" end="7">
-	<div id="hole${i}" class="holes"></div>
+	<div id="hole${i}" class="hole holes"></div>
 </c:forEach>
 <canvas id="canvas1"></canvas>
 <canvas id="canvas2"></canvas>

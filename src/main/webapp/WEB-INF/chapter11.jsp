@@ -14,9 +14,13 @@
 		<img id="hellFire" src="<c:url value='/resources/object/ch11/1층_땅불.webp'/>"/>
 		<img id="arrow" onClick="location.href='../chapter11part2'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
 		<img id="ground" src="<c:url value='/resources/object/ch11/1층_땅.png'/>"/>
-		<img id="ammut" class="select" style="z-index: 3;" src="<c:url value='/resources/Character/ch11/1층_암무트1.webp'/>"/>
+		<img id="ammut" class="select pikachu" style="z-index: 3;" src="<c:url value='/resources/character/ch11/1층_암무트1.webp'/>"/>
+		<img id="human" src="<c:url value='/resources/character/ch11/사자.webp'/>"/>
 	</div>
 	<div id="page">
+<%-- 		<c:if test="${page ne null}"> --%>
+<%-- 			<jsp:include page="./interaction/chapter11/${page}"/> --%>
+<%-- 		</c:if> --%>
 	</div>
 	<div id="menu">
 		<div>
@@ -28,7 +32,7 @@
 	</div>
 
 	<jsp:include page="interaction/info_window.jsp"/>
-	<form method="post" action="<c:url value='/chapter11'/>">
+	<form id="form" method="post" action="<c:url value='/chapter11'/>">
 	<div id="dialogue">
 		<img src='<c:url value="${dialogue.image}"/>'/>
 		<div id="scene">
@@ -54,6 +58,7 @@
 			</div>
 		</c:if>
 	</div>
+	<div id="blur"></div>
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>
