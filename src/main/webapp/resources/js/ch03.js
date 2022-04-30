@@ -2,15 +2,13 @@ var w, h, x, y;
 var scene, index, flag;
 var o_select, o_index;
 var clicked = [1, 2, 3, 4, 5, 6];
-var lists = new Array();
-var loaded = false;
 
 $(document).ready(function(){
 	o_select = "0";
 	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
 	
-	$(".close").on("click", function() { 
+	$(".close").off().on("click", function() { 
 		hide_info();
 		if(clicked.length == 0) {
 			$("form").submit();
@@ -19,12 +17,6 @@ $(document).ready(function(){
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
-
-	// 로딩
-	if(scene == 0 && !loaded) {
-		preload(lists);
-	}
-	$("#loading").fadeOut(0);
 	
 	$(window).resize(function() {
 		location.reload(true);
@@ -247,21 +239,6 @@ function resize(element) {
 function resizeWH(element, ew, eh) {
 	$(element).width(ew * w);
 	$(element).height(eh * h);
-}
-
-// 로딩
-function preload(arrayOfImages) {
-	var preImg = $('#menu img:first-child');
-    $(arrayOfImages).each(function(index, value){
-    	if(!loaded && index + 1 >= arrayOfImages.length) {
-    		preImg.on("load", function() {
-    			$("#loading").fadeOut(2000);
-				loaded = true;
-    		});
-    	}
-       	preImg.attr("src", value);
-    });
-    preImg.attr("src", "../resources/UI/Menu/1.png");
 }
 
 function interaction() {};
