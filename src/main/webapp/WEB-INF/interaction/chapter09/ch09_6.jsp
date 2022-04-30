@@ -26,13 +26,13 @@
 </div>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/Character/ch09/사자.webp'/>"/>
-	<img id="c2" src="<c:url value='/resources/Character/ch09/4층 라1.webp'/>"/>
+	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
+	<img id="c2" src="<c:url value='/resources/character/ch09/4층 라1.webp'/>"/>
 	</div>
 </div>
 <div id="boat">
 	<div id="boat_">
-	<img id="boat_1" src="<c:url value='/resources/Character/ch09/4층 배.webp'/>"/>
+	<img id="boat_1" src="<c:url value='/resources/character/ch09/4층 배.webp'/>"/>
 	</div>
 </div>
 

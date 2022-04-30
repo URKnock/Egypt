@@ -215,12 +215,13 @@ form {
 	z-index: 3;
 	position: absolute;
 	right: -60%;
-	top: 29%;
+	top: 14%;
 }
 #la_b2 {
 	z-index: 3;
 	position: absolute;
 	opacity:0;
+	top: 14%;
 }
 #nol {
 	position: absolute;

@@ -19,17 +19,18 @@
 </div>
 <div id="characters">
 	<div id="character">
-		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b2.png'/>">
+		<img class="saja" src="<c:url value='/resources/character/ch05/5_2.png'/>">
+		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b.png'/>">
 		<img class="mainC_s" src="<c:url value='/resources/character/ch05/5_Lc.png'/>">
 		<img class="mainC_k" src="<c:url value='/resources/character/ch05/5_Lc_k.png'/>">		
 		<img class="spear" src="<c:url value='/resources/object/ch05/spear.png'/>">
 	</div>
 </div>
 <div id="crocs">
-	<img class="crocs1" src="<c:url value='/resources/object/ch05/croc_many1.png'/>">
-	<img class="crocs2" src="<c:url value='/resources/object/ch05/croc_many2.png'/>">
-	<img class="crocs3" src="<c:url value='/resources/object/ch05/croc_many3.png'/>">
-	<img class="crocs4" src="<c:url value='/resources/object/ch05/croc_many4.png'/>">
+	<img class="crocs1" src="<c:url value='/resources/object/ch05/none.png'/>">
+	<img class="crocs2" src="<c:url value='/resources/object/ch05/none.png'/>">
+	<img class="crocs3" src="<c:url value='/resources/object/ch05/none.png'/>">
+	<img class="crocs4" src="<c:url value='/resources/object/ch05/none.png'/>">
 </div>
 <div id="crocs2">
 	<img class="crocs11" src="<c:url value='/resources/object/ch05/croc_im3.webp'/>">
@@ -43,5 +44,6 @@
 	<img class="crocsi3" src="<c:url value='/resources/object/ch05/none.png'/>">
 	<img class="crocsi4" src="<c:url value='/resources/object/ch05/none.png'/>">
 </div>
+<div class="guide" align="center">마우스로 클릭하여 악어를 처치해주세요.</div>
 </body>
 </html>

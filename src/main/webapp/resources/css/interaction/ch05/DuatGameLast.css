@@ -58,32 +58,20 @@ body {
 	z-index: 100;
 }
 
-.ant1 {
+.snake1 {
 	opacity:1;
 	transform: scaleY(-1); 
 	position: absolute; 
 	left: 0;
 	top: 0;	
 }
-.ant2 {
+.snake2 {
 	opacity:1;
     position: absolute;
     transform: scaleY(-1); 
  	top: 50%; 	
  	right: 0;
 	top: 0;	
-}
-.ant3 {
-	opacity:1;
-    position: absolute;
-    bottom: 0;
-    left: 0;	
-}
-.ant4 {
-	opacity:1;
-    position: absolute;
-	bottom: 0;
-    right: 0;
 }
 
 

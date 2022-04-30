@@ -23,7 +23,7 @@ function init() {
 		.fadeOut(2000);
 
 		
-		$("#la").delay(500).animate({right: "20%"}, 6000);
+		$("#la").delay(500).animate({right: "5%"}, 6000);
 	
 		setTimeout(function() {
 			$("#la").addClass("pikachu");
@@ -55,7 +55,7 @@ function init() {
 		.fadeOut(2000); 
 		/*$("#user1").css({top:300, left:900});*/
 		 $("#earth").delay(2000).animate({left: "-50%"}, 5000);
-	    $("#la_b2").css({right: "15%", top: "29%"})
+	    $("#la_b2").css({right: "15%", top: "14%"})
 		.delay(2000).animate({right: "-60%"}, 5000)
 
 	

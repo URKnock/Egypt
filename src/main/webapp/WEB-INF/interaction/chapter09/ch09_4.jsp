@@ -30,10 +30,10 @@
 </div>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/Character/ch09/사자.webp'/>"/>
-	<img id="c2" src="<c:url value='/resources/Character/ch09/2층 왜가리 노예.webp'/>"/>
-	<img id="c3" src="<c:url value='/resources/Character/ch09/2층 왜가리1.webp'/>"/>
-	<img id="c4" src="<c:url value='/resources/Character/ch09/2층 영혼의 양식.webp'/>"/>
+	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
+	<img id="c2" src="<c:url value='/resources/character/ch09/2층 왜가리 노예.webp'/>"/>
+	<img id="c3" src="<c:url value='/resources/character/ch09/2층 왜가리1.webp'/>"/>
+	<img id="c4" src="<c:url value='/resources/character/ch09/2층 영혼의 양식.webp'/>"/>
 	</div>
 </div>
 </body>
