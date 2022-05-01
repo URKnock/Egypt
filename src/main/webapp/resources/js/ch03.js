@@ -183,6 +183,9 @@ function init() {
 	voice.play();
 	$("#voice").bind("ended", function() {
 		bg4.attr("src", "/resources/character/ch03/anubis_close.webp");
+		if(scene == 18) {
+			setTimeout(function() { $("form").submit(); }, 2000);
+		}
 	});
 }
 
