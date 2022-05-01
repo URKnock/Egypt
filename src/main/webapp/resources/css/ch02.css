@@ -39,7 +39,7 @@ body {
 	display: inline-flex;
 	height: 70px;
 }
-#menu img {
+#menu img { 
 	width: 50px;
 	height: 50px;
 	margin: 10px;
@@ -47,53 +47,13 @@ body {
 
 .chapters {
 	position: absolute;
-	transform: scale(0.8);
 	z-index: 1;
 }
 
 .chapViews {
 	position: absolute;
 	top: 80px;
-	transform: scale(0.8);
 	z-index: 2;
-}
-
-#chap1{
-	top: 80px;
-}
-
-#chap1view{
-	top: 10px;
-}
-
-#chap2{
-	top: 220px;
-	left: 360px;
-}
-
-#chap2view{
-	top: 120px;
-	left: 360px;
-}
-
-#chap3{
-	top: 80px;
-	left: 700px;
-}
-
-#chap3view{
-	top: 50px;
-	left: 700px;
-}
-
-#chap4{
-	top: 220px;
-	left: 1040px;
-}
-
-#chap4view{
-	top: 70px;
-	left: 1040px;
 }
 
 .fade-out {
@@ -141,26 +101,26 @@ body {
 .island-move:nth-child(1) {animation: move-low 3s infinite alternate; -webkit-animation: move-low 3s infinite alternate; animation-fill-mode: forwards;}
 .island-move:nth-child(3) {animation: move-low 3s infinite alternate; -webkit-animation: move-low 3s infinite alternate; animation-fill-mode: forwards;}
 
-@-webkit-keyframes move {
+@-webkit-keyframes move { 
     from {
-        top: 80;
+        top: 170;
     }
     to {
-        top: 60;
+        top: 150;
     }
 }
 
 @-webkit-keyframes move-low {
     from {
-        top: 220;
+        top: 320;
     }
     to {
-        top: 200;
+        top: 300;
     }
 }
 
 .island-move:hover{
-	animation-play-state: paused; /*마우스올리면 정지*/
+	animation-play-state: paused;
 }
 
 .island-shake {
@@ -168,38 +128,49 @@ body {
 	-webkit-animation: shake 0.5s; /* Safari and Chrome */
 }
 
-@-webkit-keyframes shake {
+@-webkit-keyframes shake { /*shake 하면서 높낮이는 보존되지 않기 때문에, shake에도 높이 지정이 필요함*/
 	0%{
-		transform: translate(1px, 1px) rotate(0deg) scale(0.8);
+		top: 250;
+		transform: translate(1px, 1px) rotate(0deg) scale(1.2);
 	}
 	10%{
-		transform: translate(-1px, -1px) rotate(1deg) scale(0.8);
+		top: 250;
+		transform: translate(-1px, -1px) rotate(1deg) scale(1.2);
 	}
 	20%{
-		transform: translate(-2px, 1px) rotate(-1deg) scale(0.8);
+		top: 250;
+		transform: translate(-2px, 1px) rotate(-1deg) scale(1.2);
 	}
 	30%{
-		transform: translate(1px, 2px) rotate(0deg) scale(0.8);
+		top: 250;
+		transform: translate(1px, 2px) rotate(0deg) scale(1.2);
 	}
 	40%{
-		transform: translate(-1px, 1px) rotate(1deg) scale(0.8);
+		top: 250;
+		transform: translate(-1px, 1px) rotate(1deg) scale(1.2);
 	}
 	50%{
-		transform: translate(1px, -1px) rotate(-2deg) scale(0.8);
+		top: 250;
+		transform: translate(1px, -1px) rotate(-2deg) scale(1.2);
 	}
 	60%{
-		transform: translate(2px, 1px) rotate(1deg) scale(0.8);
+		top: 250;
+		transform: translate(2px, 1px) rotate(1deg) scale(1.2);
 	}
 	70%{
-		transform: translate(-1px, 2px) rotate(2deg) scale(0.8);
+		top: 250;
+		transform: translate(-1px, 2px) rotate(2deg) scale(1.2);
 	}
 	80%{
-		transform: translate(2px, -1px) rotate(1deg) scale(0.8);
+		top: 250;
+		transform: translate(2px, -1px) rotate(1deg) scale(1.2);
 	}
 	90%{
-		transform: translate(-1px, 2px) rotate(0deg) scale(0.8);
+		top: 250;
+		transform: translate(-1px, 2px) rotate(0deg) scale(1.2);
 	}
 	100%{
-		transform: translate(2px, 1px) rotate(-1deg) scale(0.8);
+		top: 250;
+		transform: translate(2px, 1px) rotate(-1deg) scale(1.2);
 	}
 }
