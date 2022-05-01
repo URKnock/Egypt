@@ -113,53 +113,67 @@
 	"chapter":3, "scene":10, "flag":1,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
-},    
+},
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
-	"content":"육체가 썩지 않게 잘 건조되었겠구나. <br/><span>육체에 묻은 소다석을 나일 강 물로 잘 닦거라.</span>",
+	"content":"이제 심장만 남은 너의 '사'가 썩지 않도록 바싹 말릴 순서이다.<br/><span>소다석을 부어 방부 처리를 하여라.</span>",
 	"chapter":3, "scene":11, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
-	"content":"아마포 천으로 육체를 감기 전에,<br/><span>방 안에 숨겨져 있는 부적을 찾거라.</span>",
+	"content":"육체가 썩지 않게 잘 건조되었겠구나. <br/><span>육체에 묻은 소다석을 나일 강 물로 잘 닦거라.</span>",
 	"chapter":3, "scene":12, "flag":0,
+	"image":"UI/Dialogue/Anubis.png",
+	"choice":"없음"
+},
+{
+	"name":"아누비스", "nickname":"죽음을 인도하는 신",
+	"content":"아마포 천으로 육체를 감기 전에,<br/><span>방 안에 숨겨져 있는 부적을 찾거라.</span>",
+	"chapter":3, "scene":13, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },    
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"부적을 다 모았는가? <span>모은 부적을 알맞은 위치에 소지하도록 하거라.</span>",
-	"chapter":3, "scene":13, "flag":0,
+	"chapter":3, "scene":14, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"다시 생각해 보거라! 정말 그 위치가 맞다고 생각하는가?",
-	"chapter":3, "scene":13, "flag":1,
+	"chapter":3, "scene":14, "flag":1,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },   
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"부적을 소지했다면, <span>아마포 천으로 육체를 감아 마무리 하거라.</span>",
-	"chapter":3, "scene":14, "flag":0,
+	"chapter":3, "scene":15, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
-},    
+},
+{
+	"name":"아누비스", "nickname":"죽음을 인도하는 신",
+	"content":"다시 생각해 보거라! 정말 그 위치가 맞다고 생각하는가?",
+	"chapter":3, "scene":15, "flag":1,
+	"image":"UI/Dialogue/Anubis.png",
+	"choice":"없음"
+},   
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"마지막이다. <span>완성된 미라를 관 안에 넣거라.</span>",
-	"chapter":3, "scene":15, "flag":0,
+	"chapter":3, "scene":16, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
     {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"사자여, 그대의 몸은 영생의 여정을 떠나기에 완벽한 상태가 되었다. <br/>‘입을 여는 의식’을 치루고 영생으로의 여정을 떠나도록 하거라.",
-	"chapter":3, "scene":16, "flag":0,
+	"chapter":3, "scene":17, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
