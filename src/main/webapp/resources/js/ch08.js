@@ -42,29 +42,62 @@ function init() {
 		
 		$("form").delay(2000).fadeOut(1000);
 		
-		$("#rock").animate({left: '0%'}, 4000).animate({left: '-148%'}, 120000);
+		$("#rock").animate({left: '0%'}, 4000).animate({left: '-148%'}, 95000);
 
-		$("#user").delay(3000).animate({right: "65%"}, 1000);
+		$("#user").delay(3000).animate({right: "65%"}, 1000); 
 		$("#la2").delay(3000).animate({right: "74%"}, 1000);
 		$("#boat").delay(3000).animate({right: "55.4%"}, 1000);
-		$("#paper").delay(2500).animate({opacity: "100%"}, 500).delay(2000).animate({opacity: "0%"}, 500);
+		$("#paper").delay(2500).animate({opacity: "100%"}, 500);
 		
-		$("#snake").delay(4000).animate({opacity: "100%"}, 1000);
+		var count = 0;
 		
-		/* 일단 창 던지기 인터랙션 대신 넣어둔거 */
-		$("#snake").on("click", function() {
-			$("#snake").hide();
-			
-			$("#rock").stop().animate({left: '-148%'}, 3000);
-			
-			$("#user").animate({right: "40%"}, 2000);
-			$("#la2").animate({right: "49%"}, 2000);
-			$("#boat").animate({right: "30.4%"}, 2000);
-			
-			$("form").fadeIn(1000);
-			$("#con").text('훌륭하다. 아펩을 무찔렀구나.');
-			setTimeout("$('form').submit()", 3000);
-		});	
+		$("#snakeAppear").delay(4000).animate({opacity: "100%"}).delay(4660).fadeOut();
+		$("#snake1").delay(9000).animate({opacity: "100%"});
+		//여기 다시 해야함.
+		//$("#userArm").delay(9000).animate({opacity: "100%"}, 500);
+		$("#back").delay(9000).animate({opacity: "100%"}, 500);
+		$("#target1").delay(9000).animate({opacity: "100%"}, 500);
+		setTimeout(function(){$("input[name=flag]").val('true')},9500); 
+	
+        $("#wrapper").click(function (e) {
+			if ($("input[name=flag]").val() == 'true') {
+				var panel_y = $("#wrapper").offset().top;
+				var select_y = e.clientY - panel_y -10;
+				$("#spear").css({top: select_y});
+				$("#spear").clearQueue().stop().animate({opacity: "100%"}, 500).animate({opacity: "0%"}, 1000);
+				
+				if (count == 0 && select_y > $("#target1").offset().top - 30 && select_y < $("#target1").offset().top + 30) {
+					$("#snake1").css("opacity", "0");
+					$("#snake3").delay(100).animate({opacity: "100%"});
+					$("#target1").css("opacity", "0");
+					$("#target2").delay(200).animate({opacity: "100%"});
+					count = 1;
+				}
+				else if(count == 1 && select_y > $("#target2").offset().top - 30 && select_y < $("#target2").offset().top + 30) {
+					count = 2;
+				}
+			}
+				console.log(select_y)
+			/* 창 던지기가 끝나면 */
+			if (count == 2) {
+				$("#snake3").css("opacity", "0");
+				$("#userArm").css("opacity", "0");
+				$("#back").css("opacity", "0");
+				$("#paper").css("opacity", "0");
+				$("#snakeDead").delay(100).animate({opacity: "100%"}).delay(3500).animate({opacity: "0%"}, 100);
+				
+				$("#rock").delay(3500).stop().animate({left: '-148%'}, 8000);
+				
+				$("#user").delay(3500).animate({right: "40%"}, 2000);
+				$("#la2").delay(3500).animate({right: "49%"}, 2000);
+				$("#boat").delay(3500).animate({right: "30.4%"}, 2000);
+				
+				$("form").delay(3500).fadeIn(1000);
+				$("#con").text('훌륭하다. 아펩을 무찔렀구나.');
+				count = 0;
+				setTimeout("$('form').submit()", 11500);
+			}
+        })
 	}
 	else if(scene == 4) {
 		setting2();
@@ -113,6 +146,7 @@ function init() {
 		$("#flower").css("right", "6.5%");
 		
 		$("#user").delay(1000).animate({right: "47%"}, 1000);
+		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
 }
 
