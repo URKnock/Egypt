@@ -29,7 +29,11 @@
 <div class = "background">
 <div><img id = "logo" src = "image/2.png">
 <span id = "title">&nbsp;단어장</span></div>
+<<<<<<< HEAD
 <div><%@include file="shabti_nav.jsp" %></div>
+=======
+<div><%@include file="/UI_nav.jsp" %></div>
+>>>>>>> 2bcfbae0fea7bd18caa10c954a1e4dcbe0d07fae
 
 </div>
 

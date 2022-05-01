@@ -18,8 +18,11 @@ function getJsonData(path)
     rawFile.send(null);
 }
 
-getJsonData('resources/json/info.json');
+getJsonData('../../resources/json/info.json');
 
+<<<<<<< HEAD
+function show_info(num) {
+=======
 function show_info(index) {
 	if(typeof chapter != 'undefined') {
 		var i = 0;
@@ -32,6 +35,7 @@ function show_info(index) {
 	const bg = document.querySelector(".info_back");
 	bg.style.display = "block";
 	bg.style.opacity = "1";
+>>>>>>> branch 'main' of https://github.com/URKnock/Egypt.git
 	const window = document.querySelector("#window");
 	window.style.display = "block";
 	
@@ -51,6 +55,4 @@ function show_info(index) {
 function hide_info() {
 	const window = document.querySelector("#window");
 	window.style.display = "none";
-	const bg = document.querySelector(".info_back");
-	bg.style.display = "none";
 }
