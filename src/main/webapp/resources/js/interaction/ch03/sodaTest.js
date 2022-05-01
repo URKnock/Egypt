@@ -193,8 +193,6 @@ function interaction() {
 	if(flag == "1") {
 		$('#scroll').show();
 		$('#paper').hide();
-		$('#human_soda').attr("src", "/resources/object/ch03/soda_3.png");
-		$('#human_band').attr("src", "/resources/object/ch03/bandage_3.png");
 		$('#niddleToClick').fadeIn("slow", function() {
 			$('#niddleToClick').addClass("select");
 			$('#niddleToClick').on("click", function() {

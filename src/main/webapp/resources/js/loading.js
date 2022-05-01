@@ -12,7 +12,6 @@ function init() {
 
 	$("#character").width($("#character").width() * w);
 	$("#character").height($("#character").height() * h);
-	$("#character").fadeIn(2000);
 	
 	if(chapter == 3) {
 		$("#character").css({"left":820*w, "top":120*h});
