@@ -11,9 +11,8 @@
 	
 	<script> $(function(){ init(); }); </script>
 </head>
-<body>
 	<div id="wrapper">
-		<%-- 8-1 --%>
+		<!-- 8-1 -->
 		<img class="background1" src="<c:url value='/resources/background/ch08/8_1_10.png'/>">
 		
 		<img id="water1" src="<c:url value='/resources/background/ch08/8_1_1.png'/>">
@@ -31,33 +30,47 @@
 		
 		<img id="boat" src="<c:url value='/resources/object/ch08/8_2_1.png'/>">
 		
-		<img id="la1" src="<c:url value='/resources/Character/ch08/9_2.png'/>">
-		<img id="la2" src="<c:url value='/resources/Character/ch08/9_2.png'/>">
-		<img id="user" src="<c:url value='/resources/Character/ch08/5_4.png'/>">
+		<img id="la1" src="<c:url value='/resources/character/ch08/9_2.png'/>">
+		<img id="la2" src="<c:url value='/resources/character/ch08/9_2.png'/>">
+		<img id="user" src="<c:url value='/resources/character/ch08/5_4.png'/>">
 		
-		<%-- 8-2 --%>
+		<!-- 8-2 -->
 		<img class="background2" src="<c:url value='/resources/background/ch08/8_2_6.png'/>">
 		<img id="star" src="<c:url value='/resources/background/ch08/8_2_5.png'/>">
 		
 		<img id="water2" src="<c:url value='/resources/background/ch08/8_2_3.png'/>">
 		
-		<%-- 8-3 --%>
+		<!-- 8-3 -->
 		<img id="rock" src="<c:url value='/resources/background/ch08/8_2_4.png'/>">
-		
-		<%-- 파일 달라고 해야함 --%>
+				
+		<!-- throw -->
+		<div id='target1'></div>
+		<div id='target2'></div>
+		<input type='hidden' name='flag' value='false'>
 		<img id="paper" src="<c:url value='/resources/object/ch08/paper.png'/>">
-		<img id="snake" src="<c:url value='/resources/object/ch08/8_2_2.png'/>">
+		<img id="snakeAppear" src="<c:url value='/resources/object/ch08/01_뱀등장.webp'/>">
+		<img id="snake1" src="<c:url value='/resources/object/ch08/02+1_뱀움직임.webp'/>">
+		<img id="snake2" src="<c:url value='/resources/object/ch08/03+2.webp'/>">
+		<img id="snake3" src="<c:url value='/resources/object/ch08/04.webp'/>">
+		<img id="snakeDead" src="<c:url value='/resources/object/ch08/05_마지막맞고죽음.webp'/>">
 		
-		<%-- 8-4 --%>
+		<img id="userArm" src="<c:url value='/resources/object/ch08/userarm.png'/>">
+
+    	<div id="panel">
+			<img id="spear" src="<c:url value='/resources/object/ch08/spear.png'/>">
+		</div>
+		<img id="back" src="<c:url value='/resources/object/ch08/back.png'/>">
+		
+		<!-- 8-4 -->
 		<img class="background3" src="<c:url value='/resources/background/ch08/8_3_10.png'/>">
 		
-		<img id="tree" src="<c:url value='/resources/background/ch08/8_3_9.png'/>">
-		<img id="grass4" src="<c:url value='/resources/background/ch08/8_3_8.png'/>">
+		<img id="tree" src="<c:url value='/resources/background/ch08/8_3_9.webp'/>">
+		<img id="grass4" src="<c:url value='/resources/background/ch08/8_3_8.webp'/>">
 		<img id="ground" src="<c:url value='/resources/background/ch08/8_3_3.png'/>">
 		<img id="pillars2" src="<c:url value='/resources/background/ch08/8_3_5.png'/>">
 		<img id="statue2" src="<c:url value='/resources/background/ch08/8_3_6.png'/>">
 		<img id="deco2" src="<c:url value='/resources/background/ch08/8_3_7.png'/>">
-		<img id="grass5" src="<c:url value='/resources/background/ch08/8_3_4.png'/>">
+		<img id="grass5" src="<c:url value='/resources/background/ch08/8_3_4.webp'/>">
 		<img id="flower" src="<c:url value='/resources/background/ch08/8_3_1.png'/>">
 	</div>
 	
@@ -91,4 +104,5 @@
 		</form>
 	</div>
 </body>
+<script src="<c:url value='/resources/js/interaction/ch08/throw.js'/>"></script>
 </html>
