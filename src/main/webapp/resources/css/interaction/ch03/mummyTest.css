@@ -1,0 +1,17 @@
+#servant {
+	position: absolute;
+	z-index: 1;	
+}
+
+#human {
+	position: absolute;
+	z-index: 2;
+}	
+
+#humanDiv {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}

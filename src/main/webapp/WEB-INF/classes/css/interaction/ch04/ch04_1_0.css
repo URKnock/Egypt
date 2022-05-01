@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+form {
+	animation: 3s dialog;
+}
+@keyframes dialog {
+	0% { opacity: 0; }
+	90% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+#interact .character:nth-of-type(2) {
+	animation: 2.9s obj;
+}
+#interact .object{
+	height: 10.18%;
+	width: auto;
+	top: 50%;
+	left: 58vh;
+	transform: translate(-50%, 0%);
+	
+	animation: 2.9s obj;
+	z-index: 3;
+}
+
+@keyframes obj {
+	0% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+#interact .motion {
+	height: 90%;
+	
+	bottom: -27%;
+	left: -2.5%;
+	
+	opacity: 0;
+	z-index: 2;
+	animation: 3s walk;
+}
+
+@keyframes walk {
+	0% { bottom: 0%; left: -40%; opacity: 1;}
+	20% { bottom: -5%; left: -25%; }
+	40% { bottom: 0%; left: -15%; }
+	60% { bottom: -26.8%; left: -2%; }
+	100% { opacity: 1; }
+}

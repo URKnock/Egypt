@@ -23,7 +23,7 @@ public class LoadingController implements Controller {
     	HttpSession session = request.getSession(true);
     	int chapter = 3;
     	if(request.getParameter("chapter") != null) {
-    		chapter = Integer.parseInt(request.getParameter("chapter"));
+    		Integer.parseInt(request.getParameter("chapter")); 
     	}
     	
 		List<String> paths = new ArrayList<String>();
@@ -34,16 +34,14 @@ public class LoadingController implements Controller {
 		for(String dirname : dirs) {
 			File dir = new File(request.getRealPath(dirname));
 			File[] files = dir.listFiles();
-			if(files != null) {
-				for(File file : files) {
-					String filename = dirname + "/" + file.getName();
-					if(filename.endsWith("webp")) {
-						webps.add(filename);
-					} else if(filename.endsWith("wav")) {
-						wavs.add(filename);
-					} else {
-						paths.add(filename);
-					}
+			for(File file : files) {
+				String filename = dirname + "/" + file.getName();
+				if(filename.endsWith("webp")) {
+					webps.add(filename);
+				} else if(filename.endsWith("wav")) {
+					wavs.add(filename);
+				} else {
+					paths.add(filename);
 				}
 			}
 		}

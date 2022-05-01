@@ -24,7 +24,6 @@ public class RequestMapping {
     	mappings.put("/chapter04", new ChapterController("/chapter04.jsp", 4));
     	mappings.put("/chapter05_last", new ChoiceController("/interaction/chapter05/Duat_last.jsp"));
 		mappings.put("/chapter05", new ChoiceController());
-		
 		mappings.put("/duatgamestart", new ForwardController("/interaction/chapter05/DuatGameStart.jsp"));
 		mappings.put("/chapter09", new InfoController("/chapter09.jsp", 9));
 		mappings.put("/chapter09_2", new InfoController("/interaction/chapter09/ch09_2.jsp", 9));
@@ -39,6 +38,7 @@ public class RequestMapping {
 		mappings.put("/chapter11part2", new ChapterController("/interaction/chapter11/chapter11_2.jsp", 11));
 		mappings.put("/chapter11part3", new ChapterController("/interaction/chapter11/chapter11_3.jsp", 11));
     }
+
 
     public Controller findController(String uri) {
     	// if(mappings.get(uri) == null) { return new ForwardController(uri); }

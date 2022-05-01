@@ -1,0 +1,13 @@
+#human {
+	position: absolute;
+	cursor: pointer;
+	width: 481px;
+	height: 102px;
+	z-index: 0;
+}	
+
+#ka, #ba, #kaPng, #baPng {
+	position: absolute;
+	opacity: 0;
+	z-index: 2;
+}
