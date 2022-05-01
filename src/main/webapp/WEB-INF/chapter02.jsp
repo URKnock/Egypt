@@ -77,6 +77,15 @@
 				$('#' + chapName).addClass("fade-out");
 			});
 			
+<<<<<<< HEAD
+=======
+			$('.island-unlocked').click(function() { //이미 해금된 섬이라면
+				var chapName = $(this).attr("id");
+				var chapNum = Number(chapName[4]) + 2;
+				$(location).attr("href", "/load?chapter=" + chapNum);
+			});
+			
+>>>>>>> branch 'main' of https://github.com/URKnock/Egypt.git
 			$('.island-locked').click(function() { //아직 해금되지 않은 섬이라면
 				console.log("섬이 클릭됨");
 				var chapName = $(this).attr("id");

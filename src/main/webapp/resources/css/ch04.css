@@ -6,6 +6,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Daehan-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
 	margin: 0;
@@ -35,7 +41,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	
-	font-size: 1vw;
+	font-size: 2vh;
 }
 
 #warning {
@@ -74,7 +80,7 @@ body {
 #menu {
 	position: absolute;
 	
-	width: 15%;
+	width: 25vh;
 	height: 5% !important;
 	
 	right: 2.5%;
@@ -91,7 +97,7 @@ body {
 }
 
 #active {
-	filter: drop-shadow(0px 0px 0.5vw yellow);
+	filter: drop-shadow(0px 0px 1.5vh #FFAB00);
 }
 #active:hover {
 	transform: scale(1.1);
@@ -124,11 +130,12 @@ form {
 #dialogue>img {
 	position: absolute;
 	
-	width: auto !important;
-	height: 70%;
+	width: 18vh;
+	height: auto;
 	
-	top: 15%;
-	left: 5.5%;
+	top: 50%;
+	transform: translate(0, -50%);
+	left: 5.5vh;
 }
 #dialogue #scene {
 	position: absolute;
@@ -137,17 +144,37 @@ form {
 	height: 80% !important;
 	
 	top: 10%;
-	left: 18%;
+	left: 30vh;
 }
 #dialogue #scene #title {
-	width: 40%;
+	width: 38vh;
 	height: 20% !important;
 	
-	font-size: 1.2em;
 	font-weight: bolder;
 	
 	display: flex;
 	justify-content: space-between;
+}
+#title > div:nth-child(1) {
+	font-size: 2.7vh;
+	font-family: 'Daehan-Regular';
+	height: 100%;
+	line-height: 4vh;
+}
+#title > div:nth-child(2) {
+	font-size: 2vh;
+	color: white;
+	min-width: 25vh;
+	height: 75%;
+	background: no-repeat url("../UI/Dialogue/Title.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+    text-align: center;
+	margin-left: 02.31vh;
+	line-height: 3vh;
+	transform: translate(0%, 10%);
 }
 #dialogue #scene #content {
 	position: absolute;
@@ -156,14 +183,15 @@ form {
 	height: 60%;
 	
 	top: 30%;
-	left: 2%;
+	left: 0%;
 		
-	font-size: 1em;
+	font-size: 2.2vh;
+	font-weight: bold;
 }
 #choice {
 	position: absolute;
 	
-	width: 35%;
+	width: 60vh;
 	height: 100% !important;
 	
 	top: 0%;
@@ -175,12 +203,12 @@ form {
 	justify-content: space-around;
 }
 #choice img {
-	width: 30%;
+	width: auto;
 	height: 60% !important;
 }
 
 #choice > div {
-	width: 40%;
+	width: 25vh;
 	height: 80% !important;
 	
 	display: flex;

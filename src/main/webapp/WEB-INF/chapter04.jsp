@@ -19,9 +19,12 @@
 		<c:if test="${page ne null}">
 			<jsp:include page="./interaction/chapter04/${page}"/>
 		</c:if>
+		<c:if test="${page eq null}">
+			<jsp:include page="./interaction/chapter04/ch04_0_1.jsp"/>
+		</c:if>
 	</div>
 	
-	<div id="menu">
+	<div id="menu" class="${page}">
 		<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
 		<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
 		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
@@ -29,33 +32,35 @@
 	</div>
 
 	<form method="post" action="<c:url value='/chapter04'/>">
-		<div id="dialogue">
-			<img src='<c:url value="${dialogue.image}"/>'/>
-			<div id="scene">
-				<div id="title">
-					<div>${dialogue.name}</div>
-					<c:if test="${dialogue.nickname ne '없음'}">
-						<div>${dialogue.nickname}</div>
-					</c:if>
-				</div>
-				<div id="content">
-					<p>${dialogue.content}</p>
-					<img />
-				</div>
+	<div id="dialogue">
+		<img src='<c:url value="${dialogue.image}"/>'/>
+		<div id="scene">
+			<div id="title">
+				<div>${dialogue.name}</div>
+				<c:if test="${dialogue.nickname ne '없음'}">
+					<div>${dialogue.nickname}</div>
+				</c:if>
 			</div>
-			<c:if test="${dialogue.choice ne null}">
-				<div id="choice">
-					<div>
-						<c:forEach var="c" items="${dialogue.choice}">
-							<button name="choice" type="submit" value="${c.id}">${c.content}</button>
-						</c:forEach>
-					</div>
-					<img src='<c:url value="${dialogue.player}"/>'/>
-				</div>
-			</c:if>
-			<input name="scene" type="hidden" value="${scene}"/>
-			<input name="index" type="hidden" value="${index}"/>
+			<div id="content">
+				<p>${dialogue.content}</p>
+				<img />
+			</div>
 		</div>
+		<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
+			<div id="choice">
+				<div>
+					<c:forEach var="c" items="${dialogue.choice}">
+						<button name="choice" type="submit" value="${c.id}">${c.content}</button>
+					</c:forEach>
+				</div>
+				<img src='<c:url value="${dialogue.player}"/>'/>
+			</div>
+		</c:if>
+	</div>
+	<input name="scene" type="hidden" value="${scene}"/>
+	<input name="index" type="hidden" value="${index}"/>
+	<input name="flag" 	type="hidden" value="${flag}"/>
+	<input name="choice" type="hidden" value="${choice}"/>
 	</form>
 </div>
 </div>

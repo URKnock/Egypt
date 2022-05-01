@@ -11,7 +11,7 @@
 </head>
 <body>
 <div>
-<video controls width="100%" style="pointer-events: none;">
+<video width="100%" preload="auto" style="pointer-events: none;">
 	<source type="video/mp4" src="<c:url value='/resources/background/ch01/intro.mp4'/>">
 </video>
 </div>

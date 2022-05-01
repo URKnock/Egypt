@@ -13,7 +13,12 @@
 			더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트
 		</p>
 	</div>
+<<<<<<< HEAD
 	<div class="close" onclick="hide_info()">
 		X
 	</div>
 </div>
+=======
+	<div class="close" onclick="hide_info()">ｘ</div>
+</div>
+>>>>>>> branch 'main' of https://github.com/URKnock/Egypt.git

@@ -4,7 +4,7 @@
 	animation: obj 1s;
 }
 #interact .object{
-	height: 21.11%;
+	height: 23.61%;
 	top: 38%;
 	left: 58vh;
 	transform: translate(-50%, 0%);
@@ -16,7 +16,6 @@
 	0% { top: 100%; }
 	100% { top: 38%; }
 }
-
 
 /* peseshkaf */
 

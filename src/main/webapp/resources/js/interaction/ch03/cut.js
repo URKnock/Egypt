@@ -3,6 +3,16 @@ function interaction() {
 	var hTC = $("#human").offset().top + ($("#human").height() / 2);
 	var hRC = hLC + ($("#human").width() / 3);
 	
+	resize("#scroll");
+	centerX("#scroll");
+	var sl = $('#scroll').offset().left;
+	$("#scroll").css("top", 112*h);
+	$('#scroll').hide();
+	
+	resize('#knifeToClick');
+	$('#knifeToClick').hide();
+	$('#paper').hide();
+	
 	resize('#knife');
 	$('#knife').css("left", hLC - ($('#knife').width() / 1.414) / 2);
 	$('#knife').css("top", hTC - $('#knife').height());
@@ -14,24 +24,46 @@ function interaction() {
 	$('#dragLine').hide();
 	
 	$('#dragDest').css("left", hRC);
-	$('#dragDest').css("top", hTC);
+	$('#dragDest').css("top", hTC-20);
 	$('#dragDest').hide();
 	
-	resize('#servant');
-	$('#servant').css("bottom", $("#dialogue").height());
+	var scrollY = $("#scroll").height() / 2 + 112*h;
+	resize('#knifeToClick');
+	$('#knifeToClick').css("top", scrollY - ($('#knifeToClick').height() / 2));
+	$('#knifeToClick').css("left", x - ($('#knifeToClick').width() / 2));
+	$('#knifeToClick').on("click", function() {	
+		$('#knifeToClick').fadeOut(1000);
+		$('#knife').fadeIn("1000");
+		$('#dragLine').fadeIn("1000");
+		$('#dragDest').fadeIn("1000");
+	});
+	
+	resizeWH('#paper', 1341, 776);
+	resizeWH('#servant', 1341, 776);
+	$('#paper').css("bottom", 300*h);
+	$('#paper').css("left", 0);
+	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
 	setTimeout(function() {
-		$('#servant').addClass("select");
-	}, 3600);
-	$('#servant').on("click", function() {
-		$('#servant').on("load", function() {
-			$('#servant').removeClass("select");
-			$('#knife').fadeIn("1000");
-			$('#dragLine').fadeIn("1000");
-			$('#dragDest').fadeIn("1000");
-		});
+			$('#servant').on("load", function() {
+				resize("#servant");
+				$('#paper').on("load", function() {
+					sl = sl - ($('#paper').width() - $('#scroll').width());
+					$('#paper').animate({
+						top: '0',
+						left: sl
+					}, 2600);
+					setTimeout(function() {
+						$('#scroll').show();
+						$('#paper').hide();
+						$('#knifeToClick').fadeIn("1000").addClass("select");
+					}, 2000);
+				});
+				$('#paper').attr("src", "/resources/character/ch03/paper_4.webp");
+				$('#paper').show();
+			});
 		$('#servant').attr("src", "/resources/character/ch03/servant_2.webp");
-	});
+	}, 4800);
 
 	$("#knife").on("mousedown", function(event) {
 		let shiftX = event.clientX - knife.getBoundingClientRect().left;

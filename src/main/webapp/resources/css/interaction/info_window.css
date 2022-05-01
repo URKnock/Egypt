@@ -1,44 +1,32 @@
 @charset "UTF-8";
-#interact .guide {
-	position: absolute;
-	width: 50%;
-	height: 7.5%;
-	background: ivory;
-	line-height: 275%;
-	font-size: 1.5vw;
-	top: 5%;
-	left: 50%;
-	
-	transform: translate(-50%, 0%);
-	
-	z-index: 100;
-}
+
 .info_back {
 	display: none;
 	position: absolute;
 	width: 100vw; height: 100vh;
+	top: 0; left: 0;
 	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 100;
+	z-index: 1000;
 }
 #window {
 	display: none;
 	position: absolute;
 
-	background: white;
-	width: 45%;
+	background: ivory;
+	width: 70vh;
 	height: 35%;
 	
 	left: 50%;
 	top: 50%;
 	
 	transform: translate(-50%, -85%);
-	z-index: 100;
+	z-index: 1000;
 }
 
 #window .infoImg {
 	position: absolute;
-	width: 25%;
-	height: 60%;
+	width: 22vh;
+	height: 22vh;
 	
 	background-position: center center;
 	background-attachment: scale-down;
@@ -48,7 +36,7 @@
 	
 	transform: translate(0%, -50%);
 	
-	border: 5px solid yellow;
+	background: blanchedalmond;
 }
 #window .infoText {
 	position: absolute;
@@ -63,27 +51,28 @@
 	border: 1px soild blue;
 }
 #window .infoText .name{
-	font-size: 2vw;
+	font-family: 'Daehan-Regular';
+	font-size: 3vh;
 	text-align: left;
 }
 #window .infoText .content{
 	margin-top: 10%;
 	
-	font-size: 1vw;
+	font-size: 2vh;
 	text-align: left;
+	font-weight: bold;
 }
 
 #window .close {
 	position: absolute;
-	font-size: 1.5vw;
+	font-size: 4vh;
 	
-	right: 2.5%;
-	top: 5%;
+	right: 1vh;
+	top: 0.5vh;
 	
-	width: 4%;
-	height: 10%;
+	width: 5vh;
+	height: 5vh;
 	
 	text-align: center;
-	
-	background: grey;
+	color: burlywood;
 }

@@ -1,5 +1,4 @@
 function interaction() {
-	$('#bed').hide();
 	$('#pot').hide();
 	$('#bandage').hide();
 	$('#niddle').hide();
@@ -9,15 +8,16 @@ function interaction() {
 	resizeCenter("#human_cover");
 
 	function human_rescale() {
-		var arr = ["#human", "#human_soda", "#human_cover"]
+		var arr = ["#human", "#human_soda", "#human_band", "#human_cover"];
 		arr.forEach (function (item, idx) {
 			resizeWH(item, 834, 177);
 			centerX(item);
-			$(item).css("bottom", $("#dialogue").height() + 90*w);
+			$(item).css("bottom", 317*h);
 		});
 		resize("#bed");
 		centerX("#bed");
 		$("#bed").css("bottom", 0);
+		
 		resize(organName);
 		$(organName).css("top", $("#human").offset().top + ($("#human").height() / 2) - $(organName).width() / 2);
 		$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);
@@ -30,28 +30,135 @@ function interaction() {
 	$(organName).width($(organName).width() / 2);
 	$(organName).height($(organName).height() / 2);
 	$(organName).css("top", $("#human").offset().top + ($("#human").height() / 2) - $(organName).width() / 2);
-	$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);
-	
-	preload([
-	    $('#potToClick').attr("src"),
-	    $('#bandageToClick').attr("src"),
-	    $('#niddleToClick').attr("src"),
-	    $('#servant').attr("src"),
-	    $('#scroll').attr("src"),
-	    "/resources/object/ch03/soda_1.png",
-	    "/resources/object/ch03/soda_2.png",
-	    "/resources/object/ch03/soda_3.png",
-	    "/resources/object/ch03/soda_4.png",
-	    "/resources/object/ch03/paper_open.webp",
-	    "/resources/object/ch03/paper_close.webp"
-	]);
+	$(organName).css("right", $('#background').width() - ($("#human").offset().left + $("#human").width() / 4 * 3) + 25*w);	
 	
 	resize("#scroll");
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;
 	$("#scroll").css("top", 112*w);
 	$('#scroll').hide();
+
+	var canvas1 = document.getElementById("canvas1");
+	var canvas2 = document.getElementById("canvas2");
+	var ctx1 = canvas1.getContext("2d");
+	var ctx2 = canvas2.getContext("2d");
 	
+	canvas1.width = $("#background").width();
+	canvas1.height = $("#background").height();
+	canvas2.width = $("#background").width();
+	canvas2.height = $("#background").height();
+	
+	var recent = "null";
+	var clicked = false;
+	
+	var holes = ["#hole1", "#hole2", "#hole3", "#hole4", "#hole5", "#hole6", "#hole7"]
+	$(holes).each(function(index){
+		$(holes[index]).on("click", holeClick);
+		$(holes[index]).hide();
+	});
+	
+	$("#hole1").css({"left": 943*w, "top": 660*h});
+	$("#hole2").css({"left": 965*w, "top": 610*h});
+	$("#hole3").css({"left": 1003*w, "top": 680*h});
+	$("#hole4").css({"left": 1040*w, "top": 593*h});
+	$("#hole5").css({"left": 1088*w, "top": 680*h});
+	$("#hole6").css({"left": 1110*w, "top": 610*h});
+	$("#hole7").css({"left": 1140*w, "top": 660*h});
+
+	$("#hole1").addClass("doings");
+	$("#hole1").removeClass("holes");
+
+	var offsets = $("#canvas1").offset();
+	function holeClick(event) {
+		var tid = "#" + $(this).attr("id");
+		var idx = parseInt(tid.slice(-1));
+		var pos = {
+			x:event.pageX - offsets.left,
+			y:event.pageY - offsets.top
+		}
+	
+		if(!clicked) {
+			clicked = true;
+			recent = "#hole" + idx;
+			$(this).addClass("strings");
+			$(this).removeClass("holes");
+			$("#hole" + (idx+1)).addClass("doings");
+			$("#hole" + (idx+1)).removeClass("holes");
+			
+			ctx1.lineWidth = 5;
+			ctx1.strokeStyle = "yellow";
+			ctx1.beginPath();
+			ctx1.moveTo(pos.x, pos.y);
+			$("#canvas2").mousemove(function(e) {
+				ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+				ctx2.lineWidth = 3;
+				ctx2.strokeStyle = "red";
+				ctx2.beginPath();
+				ctx2.moveTo(pos.x, pos.y);
+				ctx2.lineTo(e.pageX - offsets.left, e.pageY - offsets.top);
+				ctx2.stroke();
+			});
+		} else {
+			if(recent == "#hole" + (idx-1)) {
+				$("#canvas2").off("mousemove");
+				ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+				ctx1.lineTo(pos.x, pos.y);
+				ctx1.stroke();
+				
+				recent = "#hole" + idx;
+				$(this).removeClass("doings");
+				$(this).addClass("strings");
+				$("#hole" + (idx+1)).addClass("doings");
+				$("#hole" + (idx+1)).removeClass("holes");				
+				
+				if(recent != "#hole7") {
+					ctx1.lineWidth = 5;
+					ctx1.strokeStyle = "yellow";
+					ctx1.beginPath();
+					ctx1.moveTo(pos.x, pos.y);
+					$("#canvas2").mousemove(function(e) {
+						ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+						ctx2.lineWidth = 3;
+						ctx2.strokeStyle = "red";
+						ctx2.beginPath();
+						ctx2.moveTo(pos.x, pos.y);
+						ctx2.lineTo(e.pageX - offsets.left, e.pageY - offsets.top);
+						ctx2.stroke();
+					});
+				} else {			
+					$("#niddle").fadeOut(1000);		
+					$("#human_cover").fadeIn(2000);
+					$('#human_band').fadeOut();
+					$('#human_soda').on("load", function() {
+						$(holes).each(function(index){
+							$(holes[index]).fadeOut(2000);
+						});
+						$('canvas').fadeOut(2000);
+						$('#human').fadeOut(1000);
+						$('#human_cover').fadeOut(1000);
+						$('#human_soda').addClass("fadeLeft");
+						$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
+						setTimeout(function() { $('#human_soda').addClass("fadeActive"); }, 100);
+						setTimeout(function() { $("form").submit(); }, 5000);
+					});
+					$('#human_soda').attr("src", "/resources/character/ch03/3_4.png");
+					setTimeout(function() { 
+						$('input[name=choice]').val(-1);
+						$("form").submit();
+					}, 5000);
+				}
+			} else {
+				$(this).removeClass("strings");
+				$(this).removeClass("doings");
+				$(this).addClass("holes");
+				setTimeout(function() {
+					$('input[name=choice]').val(1);
+					$('form').submit();
+				}, 1000);
+			}
+		}
+	}
+
 	var scrollY = $("#scroll").height() / 2 + 112*w;
 	resize('#potToClick');
 	$('#potToClick').css("top", scrollY - ($('#potToClick').height() / 2));
@@ -79,49 +186,86 @@ function interaction() {
 
 	resizeWH('#paper', 1341, 776);
 	resizeWH('#servant', 1341, 776);
-	$('#paper').css("bottom", $("#dialogue").height());
+	$('#paper').css("bottom", 300*h);
 	$('#paper').css("left", 0);
-	$('#servant').css("bottom", $("#dialogue").height());
+	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
-	setTimeout(function() {	
-	$('#servant').addClass("select"); 
-		$('#servant').on("click", function() {
-			$('#servant').on("load", function() {
-				resize("#servant");
-				$('#paper').on("load", function() {
-					sl = sl - ($('#paper').width() - $('#scroll').width());
-					$('#paper').animate({
-						top: '0',
-						left: sl
-					}, 2600);
-					setTimeout(function() {
-						$('#scroll').show();
-						$('#paper').hide();
-						$('#bandageToClick').fadeIn("slow");
-						$('#niddleToClick').fadeIn("slow");
-						$('#potToClick').fadeIn("slow", function() {
-							$('#potToClick').addClass("select");
-						});
-						$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
-						$('#background').children().hide();
-						$('#servant').hide();
-						$('#bed').show();
-						human_rescale();
-					}, 2000);
+	if(flag == "1") {
+		$('#scroll').show();
+		$('#paper').hide();
+		$('#niddleToClick').fadeIn("slow", function() {
+			$('#niddleToClick').addClass("select");
+			$('#niddleToClick').on("click", function() {
+				$('#niddleToClick').removeClass("select");
+				$('#niddleToClick').hide();
+				$('#click2').hide();
+				$('#click3').show();
+				$('canvas').show();
+				$('#human_cover').addClass("select");
+				onUsing = "niddle";
+				$(holes).each(function(index){
+					$(holes[index]).fadeIn(1000);
 				});
-				$('#paper').attr("src", "/resources/character/ch03/paper_4.webp");
-				$('#paper').show();
+				$('#niddle').show();
+				$('#niddle').css("z-index", "15");
+				$('#niddle').css("transform", "rotate(45deg)");
+				center('#niddle');
+				niddle.isHeld = true;
+				document.addEventListener('mousemove', followMouse);
 			});
-			$('#servant').attr("src", "/resources/character/ch03/servant_3.webp");
-			$('#servant').removeClass("select");
 		});
-	}, 2400);
+		$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
+		$('#background').children().hide();
+		$('#servant').hide();
+		human_rescale();
+	} else {
+		$('#bed').hide();
+		setTimeout(function() {
+				$('#servant').on("load", function() {
+					resize("#servant");
+					$('#paper').on("load", function() {
+						sl = sl - ($('#paper').width() - $('#scroll').width());
+						$('#paper').animate({
+							top: '0',
+							left: sl
+						}, 2600);
+						setTimeout(function() {
+							$('#scroll').show();
+							$('#paper').hide();
+							$('#bandageToClick').fadeIn("slow");
+							$('#niddleToClick').fadeIn("slow");
+							$('#potToClick').fadeIn("slow", function() {
+								$('#potToClick').addClass("select");
+							});
+							$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
+							$('#background').children().hide();
+							$('#servant').hide();
+							$('#bed').show();
+							human_rescale();
+						}, 2000);
+					});
+					$('#paper').attr("src", "/resources/character/ch03/paper_4.webp");
+					$('#paper').show();
+				});
+				$('#servant').attr("src", "/resources/character/ch03/servant_3.webp");
+		}, 4800);
+	}
 
 let cd = null;
 let Element = null;
 var onUsing = null;
-var enterCnt = 1;
+var enterCnt = 0;
 var isEntering = false;
+var niddle = document.getElementById("niddle");
+
+function followMouse( event ) {
+	if(niddle.isHeld) {
+		const x = event.x - (niddle.clientWidth / 2.0);
+		const y = event.y - (niddle.clientHeight / 2.0);
+		niddle.style.left = x + 'px';
+		niddle.style.top = y + 'px';
+	}
+}
 
 function enterElement(elem) {
 	console.log("enter: " + elem.id + ", " + isEntering + ", " + enterCnt + ", " + cd.id);
@@ -135,7 +279,6 @@ function enterElement(elem) {
 				enterCnt == 0;
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();
-				$('#potToClick').show();
 				$('#bandageToClick').addClass("select");
 				$('#bandageToClick').on("click", function() {
 					$('#bandageToClick').removeClass("select");
@@ -149,89 +292,28 @@ function enterElement(elem) {
 				});
 			}
 		} else if(onUsing == "bandage") {
-			$('#human_soda').attr("src", "/resources/object/ch03/bandage_" + enterCnt-3 + ".png");
-			if(enterCnt >= 4) {
+			$('#human_band').attr("src", "/resources/object/ch03/bandage_" + (enterCnt - 3) + ".png");
+			if(enterCnt >= 6) {
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();
-				$('#bandageToClick').show();
 				$('#niddleToClick').addClass("select");
 				$('#niddleToClick').on("click", function() {
 					$('#niddleToClick').removeClass("select");
 					$('#niddleToClick').hide();
 					$('#click2').hide();
 					$('#click3').show();
+					$('canvas').show();
 					$('#human_cover').addClass("select");
 					onUsing = "niddle";
-					// dragElement(document.getElementById('click3'), "#niddle");
-					
-					var isDrawed = false;
-					var cHeight2 = $('canvas').height() / 2;
-					
-					var cTop = $('#human').offset().top + 20*w;
-					var cLeft = $('#human').offset().left + 410*w;
-					$('canvas').show();
-					
-					$('canvas').width(210*w*1.25);
-					$('canvas').height(105*w);
-					$('canvas').css({ top : cTop, left : cLeft });
-					
-					function next() {
-						if(isDrawed) {
-							isDrawed = false;
-							$('#potToClick').fadeOut();
-							$('#bandageToClick').fadeOut();
-							$('#niddleToClick').fadeOut();
-							$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
-							$('#human_soda').on("load", function() {
-								$('canvas').fadeOut(2000);
-								$('#human').fadeOut(1000);
-								$('#human_cover').fadeOut(1000);
-								$('#human_soda').addClass("fadeLeft");
-								setTimeout(function() { $('#human_soda').addClass("fadeActive"); }, 100);
-								setTimeout(function() { $("form").submit(); }, 5000);
-							});
-							canvas.removeEventListener("mousemove", draw);
-							$('#human_soda').attr("src", "/resources/character/ch03/3_4.png");
-						}
-					}
-					
-					$('canvas').on("mouseover", function() { $('#human_cover').removeClass("select"); });
-					$('canvas').on("mouseout", function() { if( isDrawed ) { next(); } });
-					
-					const canvas = document.getElementById("canvas");
-					const ctx = canvas.getContext("2d");
-					let coord = { x: 0, y: 0 };
-					
-					canvas.addEventListener("mousedown", start);
-					canvas.addEventListener("mouseup", stop);
-					
-					function reposition(event) {
-					  coord.x = event.clientX - canvas.offsetLeft;
-					  coord.y = event.clientY - canvas.offsetTop + cHeight2;
-					}
-					function start(event) {
-					  canvas.addEventListener("mousemove", draw);
-					  reposition(event);
-					}
-					function stop() {
-					  canvas.removeEventListener("mousemove", draw);
-					  isDrawed = true;
-					  next();
-					}
-					function draw(event) {
-					  ctx.beginPath();
-					  ctx.lineWidth = 5;
-					  ctx.lineCap = "round";
-					  ctx.strokeStyle = "#FF0000";
-					  ctx.moveTo(coord.x, coord.y);
-					  reposition(event);
-					  ctx.lineTo(coord.x, coord.y);
-					  ctx.stroke();
-					  ctx.closePath();
-					  if(coord.x > canvas.offsetLeft + canvas.width() / 1.25) { 
-					 	isDrawed = true;
-					  }
-					}
+					$(holes).each(function(index){
+						$(holes[index]).fadeIn(1000);
+					});
+					$('#niddle').show();
+					$('#niddle').css("z-index", "15");
+					$('#niddle').css("transform", "rotate(45deg)");
+					center('#niddle');
+					niddle.isHeld = true;
+					document.addEventListener('mousemove', followMouse);
 				});
 			}
 		}
