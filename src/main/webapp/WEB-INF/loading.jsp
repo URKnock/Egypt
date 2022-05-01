@@ -16,6 +16,9 @@
 <c:forEach items="${webps}" var="webp">
 	<link rel="preload" as="image" type="image/webp" href="${webp}" crossorigin>
 </c:forEach>
+<c:forEach items="${wavs}" var="wav">
+	<audio preload="auto" src="${wav}"></audio>
+</c:forEach>
 </head>
 <body onload="init();">
 <div>
