@@ -28,8 +28,9 @@ public class LoadingController implements Controller {
     	
 		List<String> paths = new ArrayList<String>();
 		List<String> webps = new ArrayList<String>();
+		List<String> wavs = new ArrayList<String>();
 		String ch = String.format("ch%02d", chapter);
-		String[] dirs = { "/resources/background/" + ch, "/resources/character/" + ch, "/resources/object/" + ch };
+		String[] dirs = { "/resources/background/" + ch, "/resources/character/" + ch, "/resources/object/" + ch, "/resources/bgm/" + ch };
 		for(String dirname : dirs) {
 			File dir = new File(request.getRealPath(dirname));
 			File[] files = dir.listFiles();
@@ -37,6 +38,8 @@ public class LoadingController implements Controller {
 				String filename = dirname + "/" + file.getName();
 				if(filename.endsWith("webp")) {
 					webps.add(filename);
+				} else if(filename.endsWith("wav")) {
+					wavs.add(filename);
 				} else {
 					paths.add(filename);
 				}
@@ -45,6 +48,7 @@ public class LoadingController implements Controller {
 		request.setAttribute("chapter", chapter);
 		request.setAttribute("names", paths);
 		request.setAttribute("webps", webps);
+		request.setAttribute("wavs", wavs);
     	return url;
     }
 }

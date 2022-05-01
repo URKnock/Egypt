@@ -27,8 +27,11 @@ function init() {
 	
 	preload(lists);
 	$("*").on("click", function() {
-		$("div").fadeOut();
-		location.replace("/chapter" + chapter);
+		$("*").off("click");
+		$("div").fadeOut(1000);
+		setTimeout(function() {
+			location.replace("/chapter" + chapter);
+		}, 1500);
 	});
 }
 

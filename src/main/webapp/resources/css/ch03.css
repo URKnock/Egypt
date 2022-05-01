@@ -115,6 +115,9 @@ body {
 #dialogue > img {
 	margin: 5px;
 }
+#content span {
+	color: red;
+}
 #scene {
 	display: inline-flex;
 	flex-direction: column;
