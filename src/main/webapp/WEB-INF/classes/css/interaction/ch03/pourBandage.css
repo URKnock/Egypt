@@ -1,0 +1,101 @@
+#human_cover {
+	position: absolute;
+	cursor: pointer;
+	z-index: 3;
+}
+
+#bandageToClick, #bandage {
+	position: absolute;
+	cursor: pointer;
+	top: 300;
+	left: 300;
+	z-index: 11;
+}
+
+#scroll {
+	position: absolute;
+	z-index: 1;
+}
+
+#human {
+	position: absolute;
+	z-index: 2;
+}
+
+.hole {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	opacity: 0.8;
+	z-index: 10;
+}
+
+.starts {
+	border: 2px solid white;
+	background-color: green;
+}
+
+.doings {
+	border: 2px solid white;
+	background-color: yellow;
+}
+
+.strings {
+	border: 3px solid white;
+	background-color: orange;
+}
+
+.holes {
+	border: 1px solid white;
+	background-color: gray;
+	transform: scale(0.5);
+	transform-origin: center center;
+	transition: transform 1s;
+}
+
+canvas {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;	
+}
+
+#canvas1 {
+	z-index: 8;
+}
+#canvas2 {
+	z-index: 9;
+}
+
+.fade-out {
+  animation: fadeout 1s;
+  -moz-animation: fadeout 1s; /* Firefox */
+  -webkit-animation: fadeout 1s; /* Safari and Chrome */
+  -o-animation: fadeout 1s; /* Opera */
+  animation-fill-mode: forwards;
+}
+
+.blinking{ 
+	-webkit-animation:blink 0.8s ease-in-out infinite alternate; 
+	-moz-animation:blink 0.8s ease-in-out infinite alternate; 
+	animation:blink 0.8s ease-in-out infinite alternate; 
+} 
+
+@-webkit-keyframes blink{ 
+	0% {opacity:0;} 
+	100% {opacity:1;} 
+} 
+
+@-moz-keyframes blink{
+	0% {opacity:0;} 
+	100% {opacity:1;} 
+} 
+
+@keyframes blink{
+	0% {opacity:0;} 
+	100% {opacity:1;} 
+}

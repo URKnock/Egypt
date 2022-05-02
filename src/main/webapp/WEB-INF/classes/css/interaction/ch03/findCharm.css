@@ -1,0 +1,40 @@
+.charmDiv {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#human, #scroll {
+	position: absolute;
+	cursor: pointer;
+	z-index: 0;
+}
+
+.charm {
+	cursor: move;
+	position: absolute;
+	z-index: 5;
+}
+
+.charm:hover {
+	transform: scale(1.1);
+  	transform-origin: center center;
+  	transition: transform 1s;
+}
+
+.dest {
+	cursor: pointer;
+	position: absolute;
+	z-index: 4;
+}
+
+.grayContrast {
+	filter: contrast(0%);	
+}
+
+.originContrast {
+	filter: contrast(100%);
+	transition: filter 0.5s ease-in-out;
+}

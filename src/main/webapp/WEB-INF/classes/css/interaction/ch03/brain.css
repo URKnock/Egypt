@@ -1,0 +1,24 @@
+#bed {
+	position: absolute;
+	z-index: 1;
+}
+#hum {
+	position: absolute;
+	opacity: 0.6;
+	z-index: 2;
+}
+#scroll {
+	position: absolute;
+	cursor: pointer;
+	z-index: 3;
+}
+#stick {
+	position: absolute;
+	cursor: pointer;
+	z-index: 4;
+}
+#brain {
+	position: absolute;
+	cursor: pointer;
+	z-index: 9;
+}

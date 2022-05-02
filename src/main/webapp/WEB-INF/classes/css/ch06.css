@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: 0;
+}
+body {
+	font-family: 'Minguk-Regular';
+	background: black;
+	
+	overflow: hidden;
+  	overflow-y: hidden;
+  	overflow-x: hidden;
+}
+
+#view {
+	width: 100vw;
+	height: 100vh !important;
+	
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	font-size: 1vw;
+}
+
+.background {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	
+	width: 100%;
+	height: 100% !important;
+}
+
+#menu {
+	position: absolute;
+	
+	width: 15%;
+	height: 5% !important;
+	
+	right: 2.5%;
+	top: 5%;
+	
+	display: flex;
+	justify-content: space-between;
+	
+	z-index: 50;
+}
+#menu img {
+	width: 20% !important;
+	height: 100% !important;
+}
+
+form {
+	position: absolute;
+	
+	background: url("../UI/Dialogue/BG.png");
+	
+	width: 100%;
+	height: 27% !important;
+	
+	bottom: 0%;
+	left: 0%;
+	
+	z-index: 50;
+}
+
+#dialogue {
+	position: absolute;
+
+	width: 100%;
+	height: 95% !important;
+	
+	bottom: 0;
+}
+#dialogue>img {
+	position: absolute;
+	
+	width: auto !important;
+	height: 70%;
+	
+	top: 15%;
+	left: 5.5%;
+}
+#dialogue #scene {
+	position: absolute;
+	
+	width: 45% !important;
+	height: 80% !important;
+	
+	top: 10%;
+	left: 18%;
+}
+#dialogue #scene #title {
+	width: 40%;
+	height: 20% !important;
+	
+	font-size: 1.2em;
+	font-weight: bolder;
+	
+	display: flex;
+	justify-content: space-between;
+}
+#dialogue #scene #content {
+	position: absolute;
+	
+	width: 100%;
+	height: 60%;
+	
+	top: 30%;
+	left: 2%;
+		
+	font-size: 1em;
+}
+
+@keyframes wave1 { 
+	0% { left: 0%; }
+	50% { left: -6%; } 
+	100% { left: 0%; } 
+}
+
+@keyframes wave2 { 
+	0% { right: 0%; }
+	50% { right: -6%; } 
+	100% { right: 0%; } 
+}
+
+#water1 {
+	position: absolute; 
+	width:106vw;
+	height: 42vh;
+	z-index: 2;
+    bottom: 0;
+    background-repeat: repeat;
+    
+    animation-name: wave1;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#tree {
+	position: absolute; 
+	width: 65.5vw;
+	height: 58vh;
+	z-index: 3;
+    top: 0;
+    left: 80%;
+}
+
+#grass {
+	position: absolute; 
+	width: 66vw;
+	height: 28.3vh;
+	z-index: 4;
+	bottom: 41.7%;
+    left: 74%;
+}
+
+#pillar {
+	position: absolute; 
+	width: 48vw;
+	height: 58.6vh;
+	z-index: 5;
+	top: 0;
+    left: 87%;
+}
+
+#ground {
+	position: absolute; 
+	width: 100vw;
+	height: 42vh;
+	left: 40%;
+	z-index: 6;
+	bottom: 0;
+}
+
+#water2 {
+	position: absolute; 
+	width: 106vw;
+	height: 37.4vh;
+	z-index: 7;
+    bottom: 0;
+    
+    animation-name: wave2;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#water3 {
+	position: absolute; 
+	width:106vw;
+	height: 32vh;
+	z-index: 8;
+    bottom: 0;
+    
+    animation-name: wave1;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#anubis {
+	position: absolute; 
+	width: 12vw;
+	height: 42vh;
+	right: 2%;
+	top: 16.5%;
+	z-index: 9;
+}
+
+#anubis2 {
+	position: absolute; 
+	width: 12vw;
+	height: 42vh;
+	right: 30%;
+	top: 16.5%;
+	z-index: 9;
+	opacity: 0;
+}
+
+#user {
+	position: absolute; 
+	width: 10vw;
+	height: 42vh;
+	z-index: 10;
+}
+
+#user2 {
+	position: absolute; 
+	width: 10vw;
+	height: 42vh;
+	right: 14%;
+	top: 16.5%;
+	z-index: 10;
+	transform: rotateY(180deg);
+	opacity: 0;
+}
+
+#la {
+	position: absolute; 
+	width: 12vw;
+	height: 50vh;
+	top: 17%;
+	z-index: 11;
+}
+
+#boat {
+	position: absolute; 
+	width: 50vw;
+	height: 50vh;
+	top: 25%;
+	z-index: 12;
+}
