@@ -19,34 +19,37 @@ function init() {
 		$("#user1").css({left: "11%"});
 		$("#nol").delay(1000).css({opacity: "100%"}, 1000).
 		animate({opacity: "0"}, 1000);
-		$("form").hide().delay(6500).fadeIn(1000)
-		.fadeOut(2000);
+		$("form").hide().delay(6500).fadeIn(1000);
 
 		
 		$("#la").delay(500).animate({right: "5%"}, 6000);
 	
-		setTimeout(function() {
-			$("#la").addClass("pikachu");
-		}, 6600);
-		setTimeout(function() {
-			$("#la").addClass("select");
-		}, 6600);
-		setTimeout(function() {
-			$("#earth").addClass("pikachu");
-		}, 6600);
-		setTimeout(function() {
-			$("#earth").addClass("select");
-		}, 6600);
+	
+} 
+	
+	 else if(scene == 3) { /* 두아트 정보창 */
+		$("#la").css({right: "5%"});
+		
+		$("#la").addClass("pikachu");
+		$("#la").addClass("select");
+		$("#earth").addClass("pikachu");
+		$("#earth").addClass("select");
 
 		$("#la").on("click", function() {
 				objectSubmit("#la", 1);
 				});
 		$("#earth").on("click", function() {
+			console.log("클릭");
 				objectSubmit("#earth", 2);
 				});
-} 
-	
-	 else if(scene == 3) { /* 탑승했는가? 출발한다 씬2 */
+		} 
+		
+/*		else if(scene == 3) {
+			 $("form").delay(2000).fadeIn(1000)
+		.fadeOut(2000); 
+			}*/
+			
+		 else if(scene == 4) { //탑승했는가? 출발하겠다
 		$("#user1").css({opacity: "0"});
 		$("#la_b2").css({opacity: "1"});
 		$("#la_b2").css({opacity: "1"});
@@ -62,16 +65,8 @@ function init() {
 		/*.animate({top:"30%"}, 500).animate({top:"55%"}, 500) 
 		.delay(30).animate({right: "-30%", top: "-70%"}, 4000);*/
 		setTimeout(function() { $("form").submit(); }, 8000); 
-		} 
-		
-		else if(scene == 3) {
-			 $("form").delay(2000).fadeIn(1000)
-		.fadeOut(2000); 
-			}
-			
-		 else if(scene == 4) {
-			
 		}
+		
 	var h = $("#background").height() - $("#dialogue").height();
 	if(h < 0) h = 0;
 	$("#background").height(h);

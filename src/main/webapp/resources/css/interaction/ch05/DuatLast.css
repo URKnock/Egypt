@@ -20,6 +20,12 @@ body {
 	position: absolute;
 }
 
+.keepers {
+	position: absolute;
+	width: 2000px;
+	top: 3%; left: 150%;
+}
+
 .mainC_s {
 	opacity:1;
     position: absolute;

@@ -357,40 +357,39 @@
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
-
 {
     "name":"라", "nickname":"태양의 신",
-    "content":"탑승했는가? 이제 출발하겠다.",
+    "content":"두아트 정보창",
     "chapter":5, "scene":2, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
-    "content":"길을 조심하거라. 이 밑에서 종종 무시무시한 괴물들이 나타나 방해를 하고는 한다.",
-     "chapter":5, "scene":3, "flag":0,
+    "content":"탑승했는가? 이제 출발하겠다.",
+    "chapter":5, "scene":3, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"길을 조심하거라. 이 밑에서 종종 무시무시한 괴물들이 나타나 방해를 하고는 한다.",
+     "chapter":5, "scene":4, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"악어공격씬",
+     "chapter":5, "scene":5, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
 {
     "name":"라", "nickname":"태양의 신",
     "content":"이런! 말하기도 무섭게 악어가 우리를 향해 닥쳐오는군. <br/>이 창을 이용하여 네 마리의 방해짐승을 없애 주겠나?",
-    "chapter":5, "scene":4, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
-	"choice":"없음"
-},
-
-{
-    "name":"라", "nickname":"태양의 신",
-    "content":"개미",
-    "chapter":5, "scene":5, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
-	"choice":"없음"
-},
-
-{
-    "name":"라", "nickname":"태양의 신",
-    "content":"풍뎅이",
     "chapter":5, "scene":6, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
@@ -398,8 +397,33 @@
 
 {
     "name":"라", "nickname":"태양의 신",
-    "content":"뱀",
+    "content":"악어",
     "chapter":5, "scene":7, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"벌레",
+    "chapter":5, "scene":8, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"풍뎅이",
+    "chapter":5, "scene":9, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"뱀",
+    "chapter":5, "scene":10, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
@@ -408,49 +432,56 @@
 {
   "name":"라", "nickname":"태양의 신",
     "content":"대단하군. 방해물을 모두 퇴치하다니 수고 많았다, 사자여.",
-     "chapter":5, "scene":8, "flag":0,
+     "chapter":5, "scene":11, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"이제 한 관문만 더 통과하면 오시리스 법정 안으로 들어갈 수 있다.",
-     "chapter":5, "scene":9, "flag":0,
+     "chapter":5, "scene":12, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"그럼, 행운을 빌겠네.",
-     "chapter":5, "scene":10, "flag":0,
+     "chapter":5, "scene":13, "flag":0,
+	"image":"UI/Dialogue/9_6_1.png",
+	"choice":"없음"
+},
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"관문신정보창",
+     "chapter":5, "scene":14, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"사자여, 오시리스 법정 안으로 들어가고 싶은가? <br/>그렇다면 이 관문을 통과하거라. <br/>통과하지 못한다면 엄청난 일이 벌어질 지어니.",
-    "chapter":5, "scene":11, "flag":0,
+    "chapter":5, "scene":15, "flag":0,
 	"image":"UI/Dialogue/5_30_1.png",
 	"choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
     "content":"우리가 말하는 안내인, 문지기, 그리고 전령의 이름을 기억하거라.",
-    "chapter":5, "scene":12, "flag":0,
+    "chapter":5, "scene":16, "flag":0,
 	"image":"UI/Dialogue/5_30_2.png",
 	"choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"안내인의 이름은 ‘우넴하우우엔투페휘’, <br/>문지기의 이름은 ‘세레셔’, <br/>전령의 이름은 ‘아아’.",
-    "chapter":5, "scene":13, "flag":0,
+    "chapter":5, "scene":17, "flag":0,
 	"image":"UI/Dialogue/5_30_3.png",
 	"choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"기억했는가 사자여, 안내인의 이름은?",
-    "chapter":5, "scene":14, "flag":0,
+    "chapter":5, "scene":18, "flag":0,
 	"image":"UI/Dialogue/5_30_1.png","choice":{
         "image":"UI/Dialogue/5_30_4",
         "0":"우넴하우우엔투페휘",
@@ -461,28 +492,28 @@
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"안내인의 이름은 <br/>‘우넴하우우엔투페휘’. <br/>정답이다.",
-    "chapter":5, "scene":14, "flag":0,
+    "chapter":5, "scene":18, "flag":0,
 	"image":"UI/Dialogue/5_30_1.png",
         "choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"안내인의 이름은 <br/>‘우넴하우우엔투페휘’. <br/>오답이다.",
-    "chapter":5, "scene":14, "flag":1,
+    "chapter":5, "scene":18, "flag":1,
 	"image":"UI/Dialogue/5_30_1.png",
         "choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"안내인의 이름은 <br/>‘우넴하우우엔투페휘’. <br/>오답이다.",
-    "chapter":5, "scene":14, "flag":2,
+    "chapter":5, "scene":18, "flag":2,
 	"image":"UI/Dialogue/5_30_1.png",
         "choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
     "content":"기억했는가 사자여, 문지기의 이름은?",
-    "chapter":5, "scene":15, "flag":0,
+    "chapter":5, "scene":19, "flag":0,
 	"image":"UI/Dialogue/5_30_2.png","choice":{
         "image":"UI/Dialogue/5_30_4",
         "0":"세래셔",
@@ -493,28 +524,28 @@
 {
     "name":"두 번째 신", "nickname":"없음",
     "content":"문지기의 이름은 <br/>‘세레셔’. <br/>오답이다.",
-    "chapter":5, "scene":15, "flag":0,
+    "chapter":5, "scene":19, "flag":0,
 	"image":"UI/Dialogue/5_30_2.png",
         "choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
     "content":"문지기의 이름은 <br/>‘세레셔’. <br/>정답이다.",
-    "chapter":5, "scene":15, "flag":1,
+    "chapter":5, "scene":19, "flag":1,
 	"image":"UI/Dialogue/5_30_2.png",
         "choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
     "content":"문지기의 이름은 <br/>‘세레셔’. <br/>오답이다.",
-    "chapter":5, "scene":15, "flag":2,
+    "chapter":5, "scene":19, "flag":2,
 	"image":"UI/Dialogue/5_30_2.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"기억했는가 사자여, 정령의 이름은?",
-"chapter":5, "scene":16, "flag":0,
+"chapter":5, "scene":20, "flag":0,
 	"image":"UI/Dialogue/5_30_3.png","choice":{
         "image":"UI/Dialogue/5_30_4",
         "0":"아이",
@@ -525,21 +556,21 @@
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"문지기의 이름은 <br/>‘아아’. <br/>오답이다.",
-    "chapter":5, "scene":16, "flag":0,
+    "chapter":5, "scene":20, "flag":0,
 	"image":"UI/Dialogue/5_30_3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"문지기의 이름은 <br/>‘아아’. <br/>정답이다.",
-    "chapter":5, "scene":16, "flag":1,
+    "chapter":5, "scene":20, "flag":1,
 	"image":"UI/Dialogue/5_30_3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"문지기의 이름은 <br/>‘아아’. <br/>오답이다.",
-     "chapter":5, "scene":16, "flag":2,
+     "chapter":5, "scene":20, "flag":2,
 	"image":"UI/Dialogue/5_30_3.png",
         "choice":"없음"
 },
@@ -547,7 +578,7 @@
  {
     "name":"세 번째 신", "nickname":"없음",
     "content":"모두 옳은 답을 하였구나. <br/>훌륭하군. <br/>통과하여도 좋다.",
-    "chapter":5, "scene":17, "flag":0,
+    "chapter":5, "scene":21, "flag":0,
 	"image":"UI/Dialogue/5_30_3.png",
     "choice":"없음"
 },
@@ -555,14 +586,14 @@
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"다음에는 더 잘할 수 있기를 바란다. <br/>통과하거라.",
-    "chapter":5, "scene":17, "flag":1,
+    "chapter":5, "scene":21, "flag":1,
 	"image":"UI/Dialogue/5_30_3.png",
     "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"분발해야한다. <br/>이번만 통과를 허가한다.",
-    "chapter":5, "scene":17, "flag":2,
+    "chapter":5, "scene":21, "flag":2,
 	"image":"UI/Dialogue/5_30_3.png",
         "choice":"없음"
 },
@@ -570,7 +601,7 @@
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"어찌 기억해내지 못하는 것인가, 사자여? <br>이런 식이라면 법정으로 들여보내줄 수 없다! <br/>악마들이여, 사자를 데려가거라!",
-    "chapter":5, "scene":17, "flag":3,
+    "chapter":5, "scene":21, "flag":3,
 	"image":"UI/Dialogue/5_30_3.png",
         "choice":"없음"
 },
