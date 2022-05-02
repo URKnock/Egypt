@@ -5,8 +5,23 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Minguk-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Daehan-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	font-family: 'Minguk-Regular';
+	font-size: 24px;
 	overflow: hidden;
   	overflow-y: hidden;
   	overflow-x: hidden;
@@ -137,8 +152,17 @@ body {
 	justify-content: center;
 }
 #choice button {
+	font-family: 'Minguk-Bold';
 	height: 30px;
 	margin: 5px 25px 5px 0;
+	border: none;
+	cursor: pointer;
+	color: #B0988C;
+}
+#choice button:hover {
+	background: url("/resources/UI/Dialogue/answer.png");
+	color: #000000;
+	font-weight: bold;
 }
 
 #title, #content {
@@ -148,13 +172,17 @@ body {
 	margin-top: 10px;
 }
 #title > div {
-	font-weight: bold;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 }
+#title > div:nth-child(1) {
+	font-family: 'Daehan-Bold';
+	font-size: 30px;
+}
 #title > div:nth-child(2) {
-	color: white;
+	font-family: 'Minguk-Bold';
+	color: #FBF8F2;
 	min-width: 200px;
 	height: 30px;
 	background: no-repeat url("../UI/Dialogue/Title.png") center center;

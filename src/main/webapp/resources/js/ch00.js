@@ -1,6 +1,7 @@
 function init() {
+	$("video").height("100%");
 	$("video").hide();
-	$("#logo").hide().fadeIn(2000);
+	$("#logo").fadeIn(2000);
 	$("div").hide().fadeIn(2000);
 	$("div img:nth-child(1)").hide().fadeIn(2000);
 	
