@@ -1,11 +1,12 @@
 
 $(function init() { 
+	$("#background").children().hide();
 	$("form").hide();
 	$(".guide")
 	.animate({opacity: "100%"}, 500)
 	.delay(1000).animate({opacity: "0%"}, 500);
 	
-	$("#background").children().hide();
+	//$("#background").children().hide();
 		$("#keepers").addClass("pikachu");
 		$("#keepers").addClass("select");
 

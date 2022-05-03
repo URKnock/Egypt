@@ -30,6 +30,6 @@
 	<img class="bug3" src="<c:url value='/resources/object/ch05/none.png'/>">
 	<img class="bug4" src="<c:url value='/resources/object/ch05/none.png'/>">
 </div>
-<div class="guide" align="center">마우스로 클릭하여 풍뎅이를 처치해주세요.</div>
+<div class="guide2" align="center">마우스로 클릭하여 풍뎅이를 처치해주세요.</div>
 </body>
 </html>

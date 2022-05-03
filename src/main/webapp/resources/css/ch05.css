@@ -4,7 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Daehan-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -150,7 +155,7 @@ form {
 	position: absolute; 
 	width:106vw;
 	height: 35vh;
-	z-index: 2;
+	z-index: 3;
     bottom: 60;
     
     animation-name: wave1;
@@ -163,7 +168,7 @@ form {
 	position: absolute;
 	width: 106vw;
 	height: 35vh; 
-	z-index: 3;
+	z-index: 4;
     bottom: 25;
     
     animation-name: wave2;
@@ -176,7 +181,7 @@ form {
 	position: absolute; 
 	width:110vw;
 	height: 34vh;
-	z-index: 4;
+	z-index: 6;
     bottom: 0;
     background-repeat: repeat;
     
@@ -188,7 +193,7 @@ form {
 
 #user1 {
 	position: absolute;
-	z-index: 3;
+	z-index: 4;
 	width: 10vw;
 	height: 38vh;
 	left: 6%;
@@ -208,20 +213,22 @@ form {
 	position: absolute;
 	width: 40vw;
 	height: 42vh;
-	z-index: 3;
+	z-index: 4;
 	top: 19.7%; 
 }
 #la {
-	z-index: 3;
+	z-index: 4;
+	height: 500px;
+	transform: scaleX(-1); 
+	position: absolute;
+	right: -20%;
+	top: 16%;
+}
+#boat {
+	z-index: 5;
 	position: absolute;
 	right: -60%;
-	top: 14%;
-}
-#la_b2 {
-	z-index: 3;
-	position: absolute;
-	opacity:0;
-	top: 14%;
+	top: 26%;
 }
 #nol {
 	position: absolute;
@@ -231,7 +238,21 @@ form {
 	top: 19%;
 	opacity: 0;
 }
-
+.guide {
+	opacity:0;
+	position: absolute;
+	width: 50%;
+	height: 7.5%;
+	background: ivory;
+	line-height: 275%;
+	font-size: 1.5vw;
+	top: 5%;
+	left: 50%;
+	
+	transform: translate(-50%, 0%);
+	
+	z-index: 100;
+}
 #dialogue {
 	position: absolute;
 	z-index: 5;

@@ -19,7 +19,7 @@
 </div>
 <div id="characters">
 	<div id="character">
-		<img class="saja" src="<c:url value='/resources/character/ch05/5_2.png'/>">
+		<img class="saja" src="<c:url value='/resources/character/ch05/창든사자(위)_1처음.webp'/>">
 		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b.png'/>">
 		<img class="mainC_s" src="<c:url value='/resources/character/ch05/5_Lc.png'/>">
 		<img class="mainC_k" src="<c:url value='/resources/character/ch05/5_Lc_k.png'/>">		
@@ -44,6 +44,6 @@
 	<img class="crocsi3" src="<c:url value='/resources/object/ch05/none.png'/>">
 	<img class="crocsi4" src="<c:url value='/resources/object/ch05/none.png'/>">
 </div>
-<div class="guide" align="center">마우스로 클릭하여 악어를 처치해주세요.</div>
+<div class="guide2" align="center">마우스로 클릭하여 악어를 처치해주세요.</div>
 </body>
 </html>

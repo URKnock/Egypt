@@ -1,8 +1,9 @@
 
 $(function init() { 
+	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	
-	$("#background").children().hide();
+	//$("#background").children().hide();
 	//$("form").hide();
 	
 	if(scene == 14) {
