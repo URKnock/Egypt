@@ -30,9 +30,11 @@
 	<div id="chs">
 	<img id="user1" src="<c:url value='/resources/character/ch05/5_2.png'/>">
 	<img id="user2" src="<c:url value='/resources/character/ch05/5_1.png'/>">
-	<img id="la" src="<c:url value='/resources/character/ch05/la_b21.png'/>">
-	<img id="la_b2" src="<c:url value='/resources/character/ch05/la_b2.png'/>">
 	<img id="nol" src="<c:url value='/resources/object/ch05/nol.png'/>">
+	</div>
+	<div id="LawBoat">
+	<img id="la" src="<c:url value='/resources/character/ch05/라_발잘림.png'/>">
+	<img id="boat" src="<c:url value='/resources/object/ch05/배.png'/>">
 	</div>
 </div>
 <div id="page">
@@ -69,5 +71,7 @@
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
 </form>
+<jsp:include page="interaction/info_window.jsp"/>
+<div class="guide" align="center">마우스로 클릭하여 주변을 둘러보세요.</div>
 </body>
 </html>

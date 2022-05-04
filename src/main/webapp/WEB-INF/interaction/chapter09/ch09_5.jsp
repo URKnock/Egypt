@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ch09</title>
+<title>사자의 서</title>
 <link href="<c:url value='/resources/css/interaction/ch09/ch09_5.css'/>" rel="stylesheet" type="text/css"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/interaction/ch09/ch09_5.js'/>"></script> 
@@ -30,7 +30,7 @@
 </div>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
+	<img id="c1" src="<c:url value='/resources/character/ch09/천국 사자 기본.webp'/>"/>
 	<img id="c2" src="<c:url value='/resources/character/ch09/3층 밭1.webp'/>"/>
 	</div>
 </div>
@@ -41,11 +41,5 @@
 	</div>	
 </div>
 </body>
-<!-- 모달 -->
-<div class="modal">
-  <div class="modal_content" 
-       title="클릭하면 창이 닫힙니다.">
-    <img class="info39" id="info39" src='<c:url value="${info39.img}"/>'/> 
-  </div>
-  </div>
+<jsp:include page="../info_window.jsp"/>
 </html>

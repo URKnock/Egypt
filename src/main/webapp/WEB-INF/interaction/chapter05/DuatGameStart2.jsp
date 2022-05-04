@@ -21,8 +21,6 @@
 	<div id="character">
 		<img class="saja" src="<c:url value='/resources/character/ch05/5_2.png'/>">
 		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b.png'/>">
-		<img class="mainC_s" src="<c:url value='/resources/character/ch05/5_Lc.png'/>">
-		<img class="mainC_k" src="<c:url value='/resources/character/ch05/5_Lc_k.png'/>">		
 		<img class="spear" src="<c:url value='/resources/object/ch05/spear.png'/>">
 	</div>
 </div>

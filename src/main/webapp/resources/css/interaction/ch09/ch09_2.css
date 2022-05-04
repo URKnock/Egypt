@@ -4,7 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Daehan-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
 	font-family: 'Minguk-Regular';
 	overflow: hidden;
@@ -46,14 +51,14 @@ body {
 
 #c1 {
 	position: absolute;
-	top: 37.8%;
+	top: 36.5%;
 	left: 13%;
 	transform: scaleX(-1); 
 	
 }
 #c2 {
 	position: absolute;
-	top: 36%;
+	top: 33.4%;
 	left: 45%;
 	
 }
@@ -61,7 +66,7 @@ body {
 #b1 {
 	z-index: 1;
 	position: absolute;
-	top: 23.5%;
+	top: 22%;
 	right: 7%;
 }
 #b2 {
@@ -74,8 +79,6 @@ body {
 
 #next {
 	z-index: 2;
-	width:60px;
-	height:64px;
 	position: absolute;
 	top: 42%;
 	left: 96%;
@@ -83,8 +86,6 @@ body {
 
 #pre {
 	z-index: 2;
-	width:60px;
-	height:64px;
 	position: absolute;
 	top: 42%;
 	left: 1%;

@@ -28,6 +28,6 @@
 	<img class="snake1" src="<c:url value='/resources/object/ch05/none.png'/>">
 	<img class="snake2" src="<c:url value='/resources/object/ch05/none.png'/>">
 </div>
-<div class="guide" align="center">마우스로 클릭하여 뱀을 처치해주세요.</div>
+<div class="guide2" align="center">마우스로 클릭하여 뱀을 처치해주세요.</div>
 </body>
 </html>

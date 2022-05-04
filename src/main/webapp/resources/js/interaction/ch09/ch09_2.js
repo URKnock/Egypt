@@ -21,30 +21,50 @@ function init() {
 	
 	
 	$("#b1").click(function() {
-		$(".modal").fadeIn();
+		$("#b1").attr("src", 
+		"/D/resources/character/ch09/1층 매2.webp");
+		$("#c2").attr("src", 
+		"/D/resources/character/ch09/1층 매사자2.webp");
+		setTimeout(function() {
+					object("#b1", 34);
+					object("#c2", 34);
+				}, 5200);
+		document.querySelector('.close').onclick 
+		= function() { hide_info(); 
+		$("#b1").attr("src", 
+		"/D/resources/character/ch09/1층 매1.webp");
+		$("#c2").attr("src", 
+		"/D/resources/character/ch09/1층 매사자1.webp");
+		 }	
+		
+		/*$(".modal").fadeIn();
 		$(".modal_content").click(function(){
     		$(".modal").fadeOut();
 			$("#b1").attr("src", 
-			"/D/resources/Character/ch09/1층 매2.webp");
+			"/D/resources/character/ch09/1층 매2.webp");
 			$("#c2").attr("src", 
-			"/D/resources/Character/ch09/1층 매사자2.webp");
+			"/D/resources/character/ch09/1층 매사자2.webp");
 			//원상태로 돌아감
 			setTimeout(function() { 
 			$("#b1").attr("src", 
-			"/D/resources/Character/ch09/1층 매1.webp");	
+			"/D/resources/character/ch09/1층 매1.webp");	
 			}, 5300);
 			setTimeout(function() { 
 			$("#c2").attr("src", 
-			"/D/resources/Character/ch09/1층 매사자1.webp");
-			}, 2700);
+			"/D/resources/character/ch09/1층 매사자1.webp");
+			}, 2700);*/
 
- 		});	
+
 
 	});	
 		
 	function redirectPage() {
 		window.location = linkLocation;
 }
+
+	function object(select, index) {
+	show_info(index);
+	}
 
 	function objectSubmit(select) {
 	$(select).removeClass("select");

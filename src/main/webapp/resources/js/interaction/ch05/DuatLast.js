@@ -1,19 +1,18 @@
 
 $(function init() { 
+	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	
-	$("#background").children().hide();
+	//$("#background").children().hide();
 	//$("form").hide();
 	
-	if(scene == 8) {
-		$(".mandara").animate({left: "-50%"}, 4000);
-		$("#dialogue").on("click", function() { $("form").submit(); });	
+	if(scene == 14) {
+		$(".keepers").animate({left: "90%"}, 4000);
+		
 	}
 	
-	if(scene == 9) {
-		$("#dialogue").on("click", function() { $("form").submit(); });	
-	}
-	
+
+
 
 
 

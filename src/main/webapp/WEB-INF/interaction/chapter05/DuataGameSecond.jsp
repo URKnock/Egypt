@@ -19,17 +19,16 @@
 </div>
 <div id="characters">
 	<div id="character">
-		<img class="mainC_s" src="<c:url value='/resources/character/ch05/la_b.png'/>">
-		<img class="mainC_k" src="<c:url value='/resources/character/ch05/5_Lc_k.png'/>">		
-		<img class="spear" src="<c:url value='/resources/object/ch05/spear.png'/>">
+		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b.png'/>">
+		<img class="saja" src="<c:url value='/resources/character/ch05/5_4.png'/>">
 	</div>
 </div>
 <div id="ants">
-	<img class="ant1" src="<c:url value='/resources/object/ch05/none.png'/>">
-	<img class="ant2" src="<c:url value='/resources/object/ch05/none.png'/>">
-	<img class="ant3" src="<c:url value='/resources/object/ch05/none.png'/>">
-	<img class="ant4" src="<c:url value='/resources/object/ch05/none.png'/>">
+	<img class="ant1" src="<c:url value='/resources/object/ch05/im.png'/>">
+	<img class="ant2" src="<c:url value='/resources/object/ch05/im.png'/>">
+	<img class="ant3" src="<c:url value='/resources/object/ch05/im.png'/>">
+	<img class="ant4" src="<c:url value='/resources/object/ch05/im.png'/>">
 </div>
-<div class="guide" align="center">마우스로 클릭하여 벌레를 처치해주세요.</div>
+<div class="guide2" align="center">마우스로 클릭하여 벌레를 처치해주세요.</div>
 </body>
 </html>

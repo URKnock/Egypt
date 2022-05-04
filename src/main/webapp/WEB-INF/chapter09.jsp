@@ -30,54 +30,17 @@
 </div>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
+	<img id="c1" src="<c:url value='/resources/character/ch09/천국 사자 기본.webp'/>"/>
 	<img id="c2" src="<c:url value='/resources/character/ch09/1층 공물 노예1.webp'/>"/>
 	<img id="c3" src="<c:url value='/resources/character/ch09/1층 공물1.webp'/>"/>
 
 	</div>
 </div>
 <jsp:include page="interaction/info_window.jsp"/>
-<!-- 모달 -->
-<div class="modal">
-  <div class="modal_content" 
-       title="클릭하면 창이 닫힙니다.">
-    <img class="info33" id="info33" src='<c:url value="${info33.img}"/>'/> 
-  </div>
-  </div>
-  
 <div id="page">
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter09/${page}"/>
 	</c:if>
 </div>
-<form method="post" action="<c:url value='/chapter09'/>">
-<div id="dialogue">
-	<img src='<c:url value="${dialogue.image}"/>'/>
-	<div id="scene">
-		<div id="title">
-			<div>${dialogue.name}</div>
-			<c:if test="${dialogue.nickname ne '없음'}">
-				<div>${dialogue.nickname}</div>
-			</c:if>
-		</div>
-		<div id="content">
-			<p>${dialogue.content}</p>
-			<img />
-		</div>
-	</div>
-	<c:if test="${dialogue.choice ne null}">
-		<div id="choice">
-			<div>
-				<c:forEach var="c" items="${dialogue.choice}">
-					<button name="choice" type="submit" value="${c.id}">${c.content}</button>
-				</c:forEach>
-			</div>
-			<img src='<c:url value="${dialogue.player}"/>'/>
-		</div>
-	</c:if>
-</div>
-<input name="scene" type="hidden" value="${scene}"/>
-<input name="index" type="hidden" value="${index}"/>
-</form>
 </body>
 </html>

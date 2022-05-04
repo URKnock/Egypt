@@ -30,7 +30,7 @@
 </div>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
+	<img id="c1" src="<c:url value='/resources/character/ch09/천국 사자 기본.webp'/>"/>
 	<img id="c2" src="<c:url value='/resources/character/ch09/1층 매사자1.webp'/>"/>
 	</div>
 </div>
@@ -40,12 +40,6 @@
 	<img id="b2" src="<c:url value='/resources/character/ch09/1층 매 단상.png'/>"/>
 	</div>
 </div>
+<jsp:include page="../info_window.jsp"/>
 </body>
-<!-- 모달 -->
-<div class="modal">
-  <div class="modal_content" 
-       title="클릭하면 창이 닫힙니다.">
-    <img class="info34" id="info34" src='<c:url value="${info34.img}"/>'/> 
-  </div>
-  </div>
 </html>

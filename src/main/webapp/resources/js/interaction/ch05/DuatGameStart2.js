@@ -1,11 +1,13 @@
 var count = 0;
 
 $(function init() { 
+	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	
 	if(scene == 5) { /*이런 말하기도 무섭게*/
-		$("#background").children().hide();
-		$("form").hide().fadeIn(1000)
+		$("form").hide().delay(2200).fadeIn(1000);
+		//$("#background").children().hide();
+		$("form").hide().fadeIn(1800)
 		.fadeOut(2000);
 		
 		setTimeout(function() {

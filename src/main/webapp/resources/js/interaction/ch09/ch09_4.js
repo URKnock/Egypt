@@ -26,30 +26,29 @@ function init() {
 }
 			
 	$("#c3").click(function() {
-		$(".modal").fadeIn();
-		$(".modal_content").click(function(){
-    		$(".modal").fadeOut();
-			$("#c3").attr("src", 
-			"/D/resources/Character/ch09/2층 왜가리2.webp");
-			//돌아감
-			setTimeout(function() { 
-			$("#c3").attr("src", 
-			"/D/resources/Character/ch09/2층 왜가리1.webp");	
-			}, 3600);
+		$("#c3").attr("src", 
+			"/D/resources/character/ch09/2층 왜가리2.webp");
+		setTimeout(function() {
+					object("#c3", 37);
+				}, 3800);
+		document.querySelector('.close').onclick 
+		= function() { hide_info(); 
+		$("#c3").attr("src", 
+			"/D/resources/character/ch09/2층 왜가리1.webp");
+		 }	
  		});					
-	});
+
 	
 	
 			
 	$("#c4").click(function() {
-		 $(".modal2").fadeIn();
-		$(".modal_content2").click(function(){
-    		$(".modal2").fadeOut();
- 	});
+		object("#c4", 38);
 	});
 	
 		
-	
+	function object(select, index) {
+	show_info(index);
+	}	
 	function objectSubmit(select) {
 	$(select).removeClass("select");
 	$("form").submit();
