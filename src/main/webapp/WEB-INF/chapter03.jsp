@@ -5,8 +5,10 @@
 <meta charset="UTF-8">
 <title>사자의 서</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch03.css'/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch03.js'/>"></script>
+<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 </head>
 <body onload="init(); interaction();">
 <div id="background">

@@ -90,7 +90,7 @@ canvas {
 
 #human_cover {
 	position: absolute;
-	z-index: 10;
+	z-index: 100;
 }
 
 #human {

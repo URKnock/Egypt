@@ -171,7 +171,9 @@ function interaction() {
 		$('#pot').css("left", sLeft);
 		$('#click1').show();
 		onUsing = "pot";
-		dragElement(document.getElementById('click1'), "#pot");
+		pot.isHeld = true;
+		document.addEventListener('mousemove', followPot);
+		$('#human_cover').addClass("select");
 	});
 	
 	resize('#bandageToClick');
@@ -204,6 +206,7 @@ function interaction() {
 				$('#click3').show();
 				$('canvas').show();
 				$('#human_cover').addClass("select");
+				$("#human_cover").css("z-index", 10);
 				onUsing = "niddle";
 				$(holes).each(function(index){
 					$(holes[index]).fadeIn(1000);
@@ -213,7 +216,7 @@ function interaction() {
 				$('#niddle').css("transform", "rotate(45deg)");
 				center('#niddle');
 				niddle.isHeld = true;
-				document.addEventListener('mousemove', followMouse);
+				document.addEventListener('mousemove', followNiddle);
 			});
 		});
 		$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
@@ -258,9 +261,30 @@ let Element = null;
 var onUsing = null;
 var enterCnt = 0;
 var isEntering = false;
+
+var pot = document.getElementById("pot");
+var bandage = document.getElementById("bandage");
 var niddle = document.getElementById("niddle");
 
-function followMouse( event ) {
+function followPot( event ) {
+	if(pot.isHeld) {
+		const x = event.x - (pot.clientWidth / 2.0);
+		const y = event.y - (pot.clientHeight / 2.0);
+		pot.style.left = x + 'px';
+		pot.style.top = y + 'px';
+	}
+}
+
+function followBandage( event ) {
+	if(bandage.isHeld) {
+		const x = event.x - (bandage.clientWidth / 2.0);
+		const y = event.y - (bandage.clientHeight / 2.0);
+		bandage.style.left = x + 'px';
+		bandage.style.top = y + 'px';
+	}
+}
+
+function followNiddle( event ) {
 	if(niddle.isHeld) {
 		const x = event.x - (niddle.clientWidth / 2.0);
 		const y = event.y - (niddle.clientHeight / 2.0);
@@ -269,10 +293,11 @@ function followMouse( event ) {
 	}
 }
 
-function enterElement(elem) {
-	console.log("enter: " + elem.id + ", " + isEntering + ", " + enterCnt + ", " + cd.id);
-	cd.isOverlaped = false;
-	if(!isEntering && elem.id == "human_cover") {
+function enterElement() {
+//	console.log("enter: " + elem.id + ", " + isEntering + ", " + enterCnt + ", " + cd.id);
+//	cd.isOverlaped = false;
+	$('#human_cover').removeClass("select");
+	if(!isEntering) {
 		isEntering = true;
 		enterCnt++;
 		if(onUsing == "pot") {
@@ -290,7 +315,9 @@ function enterElement(elem) {
 					$('#click1').hide();
 					$('#click2').show();
 					onUsing = "bandage";
-					dragElement(document.getElementById('click2'), "#bandage");
+					bandage.isHeld = true;
+					document.addEventListener('mousemove', followBandage);
+					$('#human_cover').addClass("select");
 				});
 			}
 		} else if(onUsing == "bandage") {
@@ -310,22 +337,25 @@ function enterElement(elem) {
 					$(holes).each(function(index){
 						$(holes[index]).fadeIn(1000);
 					});
+					$("#human_cover").css("z-index", 10);
 					$('#niddle').show();
 					$('#niddle').css("z-index", "15");
 					$('#niddle').css("transform", "rotate(45deg)");
 					center('#niddle');
 					niddle.isHeld = true;
-					document.addEventListener('mousemove', followMouse);
+					document.addEventListener('mousemove', followNiddle);
 				});
 			}
 		}
 	}
 }
 
-function leaveElement(elem) {
-	console.log("leave: " + elem.id);
-	cd.isOverlaped = false;
-	isEntering = false;
+function leaveElement() {
+//	console.log("leave: " + elem.id);
+//	cd.isOverlaped = false;
+	setTimeout(function() {
+		isEntering = false;
+	}, 500);
 }
 
 function dragElement(elmnt, elem) {
@@ -376,6 +406,8 @@ function dragElement(elmnt, elem) {
 	}
 }
 
+$("#human_cover").on("mouseenter", enterElement);
+$("#human_cover").on("mouseleave", leaveElement);
 }
 
 function resizeWithDiv(element, div) {
