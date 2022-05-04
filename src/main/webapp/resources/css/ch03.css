@@ -1,34 +1,3 @@
-@font-face {
-    font-family: 'Minguk-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Minguk-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Daehan-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-	font-family: 'Minguk-Regular';
-	font-size: 24px;
-	overflow: hidden;
-  	overflow-y: hidden;
-  	overflow-x: hidden;
-  	margin:0;
-	padding:0;
-}
-
 .select {
 	filter: drop-shadow(0px 0px 0.5vw #FFAB00);
 }
@@ -43,10 +12,8 @@ body {
 	display: flex;
 	align-content: center;
 	justify-content: center;
-	
 	position: fixed;
 	z-index: 1111;
-	
 	width: 100%;
 	height: 100%;
 	background: no-repeat url("../background/ch00/0_1.png") center center;
@@ -72,19 +39,6 @@ body {
 	height:initial;
 	position:absolute;
 }
-#blur {
-	width: 100%;
-	height: 200px;
-	background: inherit;
-	position: absolute;
-	filter: blur(10px);
-	-webkit-filter: blur(10px);
-	-moz-filter: blur(15px);
-	-o-filter: blur(15px);
-	-ms-filter: blur(15px);
-	backdrop-filter: blur(10px);
-	z-index: 100;
-}
 
 .canopic > img {
 	position:absolute;
@@ -94,101 +48,4 @@ body {
 #human {
 	position:absolute;
 	z-index:1;
-}
-
-#menu {
-	position:fixed;
-	top:10px;
-	right:10px;
-	z-index:999;
-}
-
-#menu > div {
-	display: inline-flex;
-	height: 70px;
-}
-#menu img {
-	width: 50px;
-	height: 50px;
-	margin: 10px;
-}
-#dialogue {
-	position: absolute;
-	display: flex;
-	width: 100%;
-	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
-	align-content: center;
-	left: 0;
-	bottom: 0;
-	z-index: 111;
-	opacity: 0.9;
-}
-#dialogue > img {
-	margin: 5px;
-}
-#content span {
-	color: red;
-}
-#scene {
-	display: inline-flex;
-	flex-direction: column;
-	width:100%;
-	margin: 10px;
-}
-#choice {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-}
-
-#choice > div {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-#choice button {
-	font-family: 'Minguk-Bold';
-	height: 30px;
-	margin: 5px 25px 5px 0;
-	border: none;
-	cursor: pointer;
-	color: #B0988C;
-}
-#choice button:hover {
-	background: url("/resources/UI/Dialogue/answer.png");
-	color: #000000;
-	font-weight: bold;
-}
-
-#title, #content {
-	display: inline-flex;
-	flex-direction: row;
-	margin-left: 25px;
-	margin-top: 10px;
-}
-#title > div {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-}
-#title > div:nth-child(1) {
-	font-family: 'Daehan-Bold';
-	font-size: 30px;
-}
-#title > div:nth-child(2) {
-	font-family: 'Minguk-Bold';
-	color: #FBF8F2;
-	min-width: 200px;
-	height: 30px;
-	background: no-repeat url("../UI/Dialogue/Title.png") center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
-	margin-left: 25px;
 }

@@ -83,21 +83,8 @@ $(document).ready(function(){
 
 function init() {
 	scene = $("input[name='scene']").val();
-
-	w = $("#background").width() / 1920;
-	h = $("#background").height() / 1080;
-	x = $("#background").width() / 2.0;
-		
-	var sw = $("#scene").width() - $("#dialogue > img:first-of-type").width();
-	sw = sw - $("#choice").width();
-	if (sw < 0) sw = 0;
-	$("#scene").width(sw);
-	$("#choice > img").height( $("#dialogue > img").height() );
 	
-	// 블러
-	$("#blur").height( $("#dialogue").height() );
-	$("#blur").css("left", "0");
-	$("#blur").css("bottom", "0");
+	setDialogueSize();
 	
 	resize("#human");
 	center("#human");
@@ -286,10 +273,6 @@ function centerY(element) {
 	}
 }
 
-function resize(element) {
-	$(element).width($(element).prop("naturalWidth") * w);
-	$(element).height($(element).prop("naturalHeight") * h);
-}
 function resizeWH(element, ew, eh) {
 	$(element).width(ew * w);
 	$(element).height(eh * h);
