@@ -116,7 +116,7 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
-	"content":"이제 심장만 남은 너의 '사'가 썩지 않도록 바싹 말릴 순서이다.<br/><span>소다석을 부어 방부 처리를 하여라.</span>",
+	"content":"이제 심장만 남은 너의 육체가 썩지 않도록 바싹 말릴 순서다.<br/><span>소다석을 부어 방부 처리를 하여라.</span>",
 	"chapter":3, "scene":11, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"

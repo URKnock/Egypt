@@ -50,8 +50,9 @@
 </div>
 <jsp:include page="interaction/info_window.jsp"/>
 <form method="post" action="<c:url value='/chapter03'/>">
+<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 <div id="dialogue">
-	<img src='<c:url value="${dialogue.image}"/>'/>
+	<img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
 	<div id="scene">
 		<div id="title">
 			<div>${dialogue.name}</div>
@@ -76,7 +77,7 @@
 	</c:if>
 </div>
 <div id="blur"></div>
-<audio id="bgm" preload="auto" src="/resources/bgm/ch03/test.mp3" loop="true" autobuffer></audio>
+<audio id="bgm" preload="auto" src="/resources/bgm/ch03/bgm.mp3" loop="true" autobuffer></audio>
 <audio id="voice" preload="auto" src="/resources/bgm/ch03/3_${scene}_${index}_${flag}.wav"></audio>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>

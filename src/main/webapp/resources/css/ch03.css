@@ -43,10 +43,8 @@ body {
 	display: flex;
 	align-content: center;
 	justify-content: center;
-	
 	position: fixed;
 	z-index: 1111;
-	
 	width: 100%;
 	height: 100%;
 	background: no-repeat url("../background/ch00/0_1.png") center center;
@@ -117,21 +115,23 @@ body {
 	display: flex;
 	width: 100%;
 	height: 290px;
-	background: no-repeat url("../UI/Dialogue/0.png") center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
-	align-content: center;
 	left: 0;
 	bottom: 0;
 	z-index: 111;
-	opacity: 0.9;
 }
-#dialogue > img {
-	margin: 5px;
+#dialogue_bg {
+	position: absolute;
+	width: 100%;
+	height: 290px;
+	left: 0;
+	bottom: 0;
+	z-index: 99;
+}
+#dialogue_img {
+	margin: auto 90px auto 100px;
 }
 #content span {
+	font-family: 'Minguk-Bold';
 	color: red;
 }
 #scene {
@@ -151,29 +151,34 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-top: 30px;
+}
+#choice > img {
+	margin: 100px 110px 80px 50px;
 }
 #choice button {
-	font-family: 'Minguk-Bold';
+	font-size: 24px;
+	background: transparent;
 	width: 250px;
 	height: 65px;
-	margin: 5px 25px 5px 0;
+	margin: 0 50px 3px 0;
 	border: none;
 	cursor: pointer;
-	color: #B0988C;
+	color: #B59D8E;
+	
 }
 #choice button:hover {
+	font-family: 'Minguk-Bold';
 	background: url("/resources/UI/Dialogue/answer.png");
 	color: #000000;
 	width: 288px;
-	font-weight: bold;
-	padding-left: -38px;
+	margin-right: 11px;
+	padding-right: 28px;
 }
 
 #title, #content {
 	display: inline-flex;
 	flex-direction: row;
-	margin-left: 25px;
-	margin-top: 10px;
 }
 #title > div {
 	display: inline-flex;
@@ -183,16 +188,21 @@ body {
 #title > div:nth-child(1) {
 	font-family: 'Daehan-Bold';
 	font-size: 30px;
+	height: 30px;
+	padding: 0;
+	margin: 55px 20px 10px 0;
 }
 #title > div:nth-child(2) {
 	font-family: 'Minguk-Bold';
-	color: #FBF8F2;
-	min-width: 200px;
-	height: 30px;
-	background: no-repeat url("../UI/Dialogue/Title.png") center center;
+	font-size: 20px;
+	color: #FBF7F0;
+	min-width: 194px;
+	margin-top: 54px;
+	padding-bottom: 1px;
+	height: 29px;
+	background: no-repeat url("../UI/Dialogue/name_tag_1.png") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;  
-	margin-left: 25px;
+    background-size: cover;
 }
