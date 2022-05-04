@@ -3,7 +3,7 @@ var which;
 var count = 0;
 
 function init() {
-	
+	setDialogueSize();
 	scene = $("input[name='scene']").val();
 
 	 if(scene == 1) { /* 여기가 어디여.. 씬0 */

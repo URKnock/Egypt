@@ -7,6 +7,8 @@
 <link href="<c:url value='/resources/css/interaction/ch05/DuatQueez.css'/>" rel="stylesheet" type="text/css"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/interaction/ch05/DuatQueez.js'/>"></script>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
+<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script> $(function(){ init(); }); </script> 
 </head>
 <body>
