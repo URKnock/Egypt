@@ -116,7 +116,8 @@ body {
 	position: absolute;
 	display: flex;
 	width: 100%;
-	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;
+	height: 290px;
+	background: no-repeat url("../UI/Dialogue/0.png") center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -153,7 +154,8 @@ body {
 }
 #choice button {
 	font-family: 'Minguk-Bold';
-	height: 30px;
+	width: 250px;
+	height: 65px;
 	margin: 5px 25px 5px 0;
 	border: none;
 	cursor: pointer;
@@ -162,7 +164,9 @@ body {
 #choice button:hover {
 	background: url("/resources/UI/Dialogue/answer.png");
 	color: #000000;
+	width: 288px;
 	font-weight: bold;
+	padding-left: -38px;
 }
 
 #title, #content {

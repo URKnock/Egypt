@@ -87,8 +87,8 @@ function init() {
 	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
-		
-	var sw = $("#scene").width() - $("#dialogue > img:first-of-type").width();
+
+	var sw = $("#dialogue").width() - $("#dialogue > img:first-of-type").width();
 	sw = sw - $("#choice").width();
 	if (sw < 0) sw = 0;
 	$("#scene").width(sw);
