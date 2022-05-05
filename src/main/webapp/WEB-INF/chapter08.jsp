@@ -5,9 +5,11 @@
 	<meta charset="UTF-8">
 	<title>사자의 서</title>
 	<link href="<c:url value='/resources/css/ch08.css'/>" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	<script src="/resources/js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
-	<script src="<c:url value='/resources/js/ch08.js'/>"></script>
+	<script src="<c:url value='/resources/js/ch08.js'/>"></script>	
+	<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 	
 	<script> $(function(){ init(); }); </script>
 </head>
@@ -47,7 +49,8 @@
 		<div id='target1'></div>
 		<div id='target2'></div>
 		<input type='hidden' name='flag' value='false'>
-		<img id="paper" src="<c:url value='/resources/object/ch08/paper.png'/>">
+		<p id="paper">마우스를 클릭해 머리에 창을 던져 아펩을 처치하세요.</p>
+		<img id="paperImg" src="<c:url value='/resources/object/ch08/paper.png'/>">
 		<img id="snakeAppear" src="<c:url value='/resources/object/ch08/01_뱀등장.webp'/>">
 		<img id="snake1" src="<c:url value='/resources/object/ch08/02+1_뱀움직임.webp'/>">
 		<img id="snake2" src="<c:url value='/resources/object/ch08/03+2.webp'/>">
@@ -83,8 +86,9 @@
 		</div>
 	
 		<form method="post" action="<c:url value='/chapter08'/>">
+			<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 			<div id="dialogue">
-				<img src='<c:url value="${dialogue.image}"/>'/>
+				<img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
 				<div id="scene">
 					<div id="title">
 						<div>${dialogue.name}</div>
@@ -93,14 +97,28 @@
 						</c:if>
 					</div>
 					<div id="content">
-						<p id="con">${dialogue.content}</p>
+						<p id='con'>${dialogue.content}</p>
 						<img />
 					</div>
 				</div>
-				<input name="scene" type="hidden" value="${scene}"/>
-				<input name="index" type="hidden" value="${index}"/>
-				<input name="position" type="hidden" value="0"/>
+				<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
+					<div id="choice">
+						<div>
+							<c:forEach var="c" items="${dialogue.choice}">
+								<button name="choice" type="submit" value="${c.id}">${c.content}</button>
+							</c:forEach>
+						</div>
+						<img src='<c:url value="${dialogue.player}"/>'/>
+					</div>
+				</c:if>
 			</div>
+			<audio id="bgm" preload="auto" src="/resources/bgm/ch08/bgm.mp3" loop="true" autobuffer></audio>
+			<audio id="voice" preload="auto" src="/resources/bgm/ch08/8_${scene}_${index}_${flag}.wav"></audio>
+			<input name="scene" type="hidden" value="${scene}"/>
+			<input name="index" type="hidden" value="${index}"/>
+			<input name="flag" 	type="hidden" value="${flag}"/>
+			<input name="choice" type="hidden" value="${choice}"/>
+			<input name="position" type="hidden" value="0"/>
 		</form>
 	</div>
 </body>

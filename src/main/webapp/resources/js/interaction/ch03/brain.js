@@ -6,7 +6,7 @@ function interaction() {
 	arr.forEach (function (item, idx) {
 		resize(item);
 		$(item).css("left", 0);
-		$(item).css("bottom", $("#dialogue").height());
+		$(item).css("bottom", $("#blur").height());
 	});
 	$("#bed").css("bottom", 0);
 	$("#background").css("background", "#F9F2DB");
