@@ -1,6 +1,5 @@
 var count = 0;
-$(function init() { 
-	
+function interaction() {
 	$("#background").children().hide();
 	$("form").hide();
 	
@@ -106,7 +105,5 @@ $(function init() {
 	
 		function isclicked() {
 			count++;
-		}
-
-	
-});
+		}	
+}

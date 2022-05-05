@@ -345,7 +345,7 @@
     "name":"사자", "nickname":"없음",
     "content":"여기가 어디지……",
     "chapter":5, "scene":0, "flag":0,
-    "image":"UI/Dialogue/Player.png",
+    "image":"UI/Dialogue/player.png",
     "choice":"없음"
 },
 {

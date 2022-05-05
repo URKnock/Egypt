@@ -1,5 +1,3 @@
-
-$(function init() { 
-
-$("#background").children().hide();
-});
+function interaction() {
+	$("#background").children().hide();
+}

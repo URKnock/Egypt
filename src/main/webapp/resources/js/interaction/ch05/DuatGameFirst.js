@@ -1,6 +1,6 @@
 var count = 0;
 
-$(function init() { 	
+function interaction() {	
 	$(".guide2")
 		.animate({opacity: "100%"}, 500)
 		.animate({opacity: "0%"}, 3000);
@@ -134,7 +134,5 @@ $(function init() {
 
 		function isclicked() {
 			count++;
-		}
-		
-	
-});
+		}	
+}
