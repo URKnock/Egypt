@@ -19,6 +19,7 @@ function init() {
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
 	else if(scene == 2) { /* 난태양의신라.  씬1 */
+		setDialogueSize();
 		$("#user1").css({left: "11%"});
 		$("#nol").delay(1000).css({opacity: "100%"}, 1000).
 		animate({opacity: "0"}, 1000);
@@ -31,6 +32,7 @@ function init() {
 } 
 	
 	 else if(scene == 3) { /* 두아트 정보창 */
+		setDialogueSize();
 		$("#user1").css({left: "11%"});
 		$(".guide")
 		.animate({opacity: "100%"}, 500)
@@ -84,6 +86,7 @@ function init() {
 			}*/
 			
 		 else if(scene == 4) { //탑승했는가? 출발하겠다
+		setDialogueSize();
 		$("#user1").css({opacity: "0"});
 		$("#la_b2").css({opacity: "1"});
 		$("#la_b2").css({opacity: "1"});
@@ -101,7 +104,7 @@ function init() {
 		setTimeout(function() { $("form").submit(); }, 8000); 
 		}
 		
- w = $("#background").width() / 1920;
+ /*w = $("#background").width() / 1920;
    h = $("#background").height() / 1080;
    x = $("#background").width() / 2.0;
 
@@ -130,7 +133,7 @@ function init() {
 
    $("#blur").height(260 * h);
    $("#blur").css("left", "0");
-   $("#blur").css("bottom", "0");
+   $("#blur").css("bottom", "0");*/
 
 	
 	$("#dialogue").click(function() {

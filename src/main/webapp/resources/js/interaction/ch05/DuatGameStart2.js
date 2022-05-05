@@ -1,6 +1,7 @@
 var count = 0;
 
 $(function init() { 
+	setDialogueSize();
 	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	
