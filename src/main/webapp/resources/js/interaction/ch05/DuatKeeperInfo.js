@@ -1,5 +1,4 @@
-
-$(function init() { 
+function interaction() {
 	$("#background").children().hide();
 	$("form").hide();
 	$(".guide")
@@ -16,16 +15,13 @@ $(function init() {
 			$("#keepers").removeClass("select");
 			$("#keepers").removeClass("pikachu");
 			object("#keepers", 20);
-			document.querySelector('.close').onclick 
-					= function() { 
-					hide_info();
-					setTimeout("$('form').submit()", 1000);
-	 				}	
-			});
-
-		
-		
-function object(select, index) {
-	show_info(index);
+			document.querySelector('.close').onclick = function() { 
+				hide_info();
+				setTimeout("$('form').submit()", 1000);
+	 		}	
+		});
+			
+	function object(select, index) {
+		show_info(index);
 	}	
-});
+}

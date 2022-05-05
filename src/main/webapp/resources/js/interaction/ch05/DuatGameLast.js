@@ -1,6 +1,4 @@
-
-$(function init() { 
-	
+function interaction() {	
 	$("#background").children().hide();
 	$("form").hide();
 	
@@ -9,7 +7,4 @@ $(function init() {
 	.delay(1200).animate({opacity: "0%"}, 500);
 	
 	setTimeout("$('form').submit()", 3000);
-
-
-	
-});
+}

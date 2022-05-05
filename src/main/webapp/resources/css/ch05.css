@@ -1,31 +1,6 @@
-@font-face {
-    font-family: 'Minguk-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Daehan-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-* {
-	margin: 0;
-	padding: 0;
-}
 img {
 	border: 0;
 }
-body {
-	font-family: 'Minguk-Regular';
-	background: black;
-	
-	overflow: hidden;
-  	overflow-y: hidden;
-  	overflow-x: hidden;
-}
-
 #view {
 	width: 100vw;
 	height: 100vh !important;
@@ -37,25 +12,21 @@ body {
 	
 	font-size: 1vw;
 }
-
-.background {
+body {
+	background: black;
+}
+#background {
 	position: absolute;
 	left: 0%;
 	top: 0%;
-	
 	width: 100%;
 	height: 100% !important;
 }
-
-/* 회전 */
 .rot {
 	transform: rotate(335deg);
 }
-/* 회전 */
-
-/* 노랑 효과 */
 .select {
-	filter: drop-shadow(0px 0px 0.5vw yellow);
+	filter: drop-shadow(0px 0px 0.5vw #FFAB00);
 }
 .pikachu:hover {
 	transform: scale(1.1);
@@ -63,7 +34,6 @@ body {
 .pikachu:active {
 	transform: scale(1.0);
 }
-/*노랑 효과 */
 
 @keyframes wave1 { 
 	0% { left: 0%; }
@@ -75,79 +45,6 @@ body {
 	0% { right: 0%; }
 	50% { right: -6%; } 
 	100% { right: 0%; } 
-}
-
-
-/*  form {
-	position: absolute;
-
-	
-	width: 100%;
-	height: 27% !important;
-	
-	bottom: 0%;
-	left: 0%;
-	
-	z-index: 50;
-}  */
-
- #dialogue {
-	position: absolute;
-
-	width: 100%;
-	height: 95% !important;
-	
-	bottom: 0;
-} 
-/* #dialogue>img {
-	position: absolute;
-	
-	width: auto !important;
-	height: 70%;
-	
-	top: 15%;
-	left: 5.5%;
-}
-#dialogue #scene {
-	position: absolute;
-	
-	width: 45% !important;
-	height: 80% !important;
-	
-	top: 10%;
-	left: 18%;
-}
-#dialogue #scene #title {
-	width: 40%;
-	height: 20% !important;
-	
-	font-size: 1.2em;
-	font-weight: bolder;
-	
-	display: flex;
-	justify-content: space-between;
-}
-#dialogue #scene #content {
-	position: absolute;
-	
-	width: 100%;
-	height: 60%;
-	
-	top: 30%;
-	left: 2%;
-		
-	font-size: 1em;
-} */
-
-
-#menu {
-	display: inline-flex;
-	height: 70px;
-}
-#menu img {
-	width: 50px;
-	height: 50px;
-	margin: 10px;
 }
 
 #water1 {
@@ -252,112 +149,3 @@ body {
 	
 	z-index: 100;
 }
-#blur {
-	width: 100%;
-	height: 200px;
-	background: inherit;
-	position: absolute;
-	filter: blur(2px);
-	-webkit-filter: blur(2px);
-	-moz-filter: blur(2px);
-	-o-filter: blur(2px);
-	-ms-filter: blur(2px);
-	backdrop-filter: blur(2px);
-	z-index: 100;
-}
- #dialogue {
-	position: absolute;
-	display: flex;
-	width: 100%;
-	height: 290px;
-	left: 0;
-	bottom: 0;
-	z-index: 111;
-} 
-#dialogue_bg {
-	position: absolute;
-	width: 100%;
-	height: 290px;
-	left: 0;
-	bottom: 0;
-	z-index: 99;
-}
-#dialogue_img {
-	margin: auto 90px auto 100px;
-}
-#content span {
-	font-family: 'Minguk-Bold';
-	color: red;
-}
-#scene {
-	display: inline-flex;
-	flex-direction: column;
-	width:100%;
-	margin: 10px;
-}
-#choice {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-}
-
-#choice > img {
-	margin: 100px 110px 80px 50px;
-}
-#choice > div {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-top: 30px;
-}
-#choice button {
-font-size: 24px;
-	background: transparent;
-	width: 250px;
-	height: 65px;
-	margin: 0 50px 3px 0;
-	border: none;
-	cursor: pointer;
-	color: #B59D8E;
-}
-#choice button:hover {
-	font-family: 'Minguk-Bold';
-	background: url("/resources/UI/Dialogue/answer.png");
-	color: #000000;
-	width: 288px;
-	margin-right: 11px;
-	padding-right: 28px;
-}
-
- #title, #content {
-	display: inline-flex;
-	flex-direction: row;
-}
-#title > div {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#title > div:nth-child(1) {
-	font-family: 'Daehan-Bold';
-	font-size: 30px;
-	height: 30px;
-	padding: 0;
-	margin: 55px 20px 10px 0;
-}
-#title > div:nth-child(2) {
-	font-family: 'Minguk-Bold';
-	font-size: 20px;
-	color: #FBF7F0;
-	min-width: 194px;
-	margin-top: 54px;
-	padding-bottom: 1px;
-	height: 29px;
-	background: no-repeat url("../UI/Dialogue/name_tag_1.png") center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-} 
