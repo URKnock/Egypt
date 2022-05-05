@@ -5,6 +5,10 @@ function init() {
 	$("div").hide().fadeIn(2000);
 	$("div img:nth-child(1)").hide().fadeIn(2000);
 	
+	$(window).resize(function() {
+		location.reload(true);
+	});
+	
 	var width01 = $("div img:nth-child(1)").width();
 	function wind() {
 		$("div img:nth-child(1)").animate({

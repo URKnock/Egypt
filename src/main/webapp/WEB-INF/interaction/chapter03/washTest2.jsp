@@ -8,7 +8,7 @@
 <img src="../resources/object/ch03/주전자.png" id="kettle"/>
 <img src="../resources/object/ch03/3_2_4.png" id="linen"/>
 <img src="../resources/object/ch03/3_2.webp" id="water"/>
-<img src="../resources/character/ch03/3_4.png" id="hum" class="human"/>
+<img src="../resources/character/ch03/3_4_2.png" id="hum" class="human"/>
 <img src="../resources/object/ch03/침대.png" id="bed"/>
 <img src="../resources/object/ch03/5_2_1_1.png" id="soda_head" class="soda"/>
 <img src="../resources/object/ch03/5_2_1_2.png" id="soda_body" class="soda"/>

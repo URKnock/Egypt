@@ -9,6 +9,8 @@ function interaction() {
 		$(item).css("bottom", $("#blur").height());
 	});
 	$("#bed").css("bottom", 0);
+	$("#hum").css("bottom", $("#blur").height()-15*h);
+	$("#brain").css("bottom", $("#blur").height()-15*h);
 	$("#background").css("background", "#F9F2DB");
 	$("#background").children().hide();
 	
@@ -28,20 +30,25 @@ function interaction() {
 		document.getElementById("brain").setAttribute("onclick", "clickBrain( this )");
 		document.addEventListener('mousemove', followMouse);
 	});
+	$("#brain").on("mouseover", function() {
+		$("#stick").fadeOut();
+	}).on("mouseout", function() {
+		$("#stick").fadeIn();
+	});
 }
 
 var stick = document.getElementById("stick");
 var idx = 0;
 var brains = [
-    "/resources/object/ch03/B2.webp",
-    "/resources/object/ch03/B3_1.webp",
-    "/resources/object/ch03/B3_2.webp",
-    "/resources/object/ch03/B4_1.webp",
-    "/resources/object/ch03/B4_2.webp",
-    "/resources/object/ch03/B5_1.webp",
-    "/resources/object/ch03/B5_2.webp",
-    "/resources/object/ch03/B5_3.webp",
-    "/resources/object/ch03/B5_4.webp"
+    "/resources/object/ch03/3_3_1.webp",
+    "/resources/object/ch03/3_3_2.webp",
+    "/resources/object/ch03/3_3_3.webp",
+    "/resources/object/ch03/3_3_4.webp",
+    "/resources/object/ch03/3_3_5.webp",
+    "/resources/object/ch03/3_3_6.webp",
+    "/resources/object/ch03/3_3_7.webp",
+    "/resources/object/ch03/3_3_8.webp",
+    "/resources/object/ch03/3_3_9.webp"
 ];
 
 function followMouse( event ) {
@@ -62,17 +69,18 @@ function clickBrain( event ) {
 		});
 		$("#scroll").attr("src", "/resources/object/ch03/paper_close.webp");
 		lock = 0;
+		$("#brain").removeClass("select");
+		$("#brain").css({"bottom":25*h});
+		$("#hum").hide();
+		resizeWH("#brain", 1270, 1092);
 	}
-	$("#stick").hide();
 	if(lock == 0) {
 		$("#brain").on("load", function() {
-			$("#brain").removeClass("select");
 			setTimeout(function() { 
 				if(idx >= 10) {
 					$("form").submit();
 				} else {
 					lock = 0;
-					$("#stick").show();
 				}
 			}, 350);
 		});

@@ -73,16 +73,20 @@ $(document).ready(function(){
 		case '14':
 			clicked = [1, 2, 3];
 			break;
-		default:
+		case '18':
 			$("#dialogue").on("click", function() {
 				$("form").submit();
 			});	
 			break;
 	}
+	$("#loading").fadeOut();
 });
 
-function init() {
+function init() {	
 	scene = $("input[name='scene']").val();
+	w = $("#background").width() / 1920;
+	h = $("#background").height() / 1080;
+	x = $("#background").width() / 2.0;
 	
 	setDialogueSize();
 	

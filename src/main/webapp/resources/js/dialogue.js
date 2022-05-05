@@ -1,8 +1,4 @@
 function setDialogueSize() {
-	w = $("body").width() / 1920;
-	h = $("body").height() / 1080;
-	x = $("body").width() / 2.0;
-
 	$("#dialogue").height($("#dialogue").height() * h);
 	$("#dialogue_bg").height($("#dialogue").height());
 

@@ -141,7 +141,7 @@ function interaction() {
 						setTimeout(function() { $('#human_soda').addClass("fadeActive"); }, 100);
 						setTimeout(function() { $("form").submit(); }, 5000);
 					});
-					$('#human_soda').attr("src", "/resources/character/ch03/3_4.png");
+					$('#human_soda').attr("src", "/resources/character/ch03/3_4_2.png");
 					setTimeout(function() { 
 						$('input[name=choice]').val(-1);
 						$("form").submit();
@@ -237,6 +237,9 @@ function interaction() {
 						setTimeout(function() {
 							$('#scroll').show();
 							$('#paper').hide();
+							$("#human").attr("src", "/resources/character/ch03/3_4_1.png");
+							$("#human_soda").attr("src", "/resources/character/ch03/3_4_1.png");
+							$("#human_band").attr("src", "/resources/character/ch03/3_4_1.png");
 							$('#bandageToClick').fadeIn("slow");
 							$('#niddleToClick').fadeIn("slow");
 							$('#potToClick').fadeIn("slow", function() {
@@ -355,7 +358,7 @@ function leaveElement() {
 //	cd.isOverlaped = false;
 	setTimeout(function() {
 		isEntering = false;
-	}, 500);
+	}, 2000);
 }
 
 function dragElement(elmnt, elem) {
