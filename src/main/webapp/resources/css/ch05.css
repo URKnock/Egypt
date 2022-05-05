@@ -78,10 +78,9 @@ body {
 }
 
 
- form {
+/*  form {
 	position: absolute;
-	
-	background: url("../UI/Dialogue/BG.png");
+
 	
 	width: 100%;
 	height: 27% !important;
@@ -90,7 +89,7 @@ body {
 	left: 0%;
 	
 	z-index: 50;
-} 
+}  */
 
  #dialogue {
 	position: absolute;
@@ -253,62 +252,112 @@ body {
 	
 	z-index: 100;
 }
-/* #dialogue {
+#blur {
+	width: 100%;
+	height: 200px;
+	background: inherit;
 	position: absolute;
-	z-index: 5;
-	width:100%;
-	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	backdrop-filter: blur(2px);
+	z-index: 100;
+}
+ #dialogue {
+	position: absolute;
 	display: flex;
-	align-content: center;
-} */
-/* #scene {
-	z-index: 5;
+	width: 100%;
+	height: 290px;
+	left: 0;
+	bottom: 0;
+	z-index: 111;
+} 
+#dialogue_bg {
+	position: absolute;
+	width: 100%;
+	height: 290px;
+	left: 0;
+	bottom: 0;
+	z-index: 99;
+}
+#dialogue_img {
+	margin: auto 90px auto 100px;
+}
+#content span {
+	font-family: 'Minguk-Bold';
+	color: red;
+}
+#scene {
 	display: inline-flex;
 	flex-direction: column;
 	width:100%;
-} */
+	margin: 10px;
+}
 #choice {
-	z-index: 5;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 }
 
+#choice > img {
+	margin: 100px 110px 80px 50px;
+}
 #choice > div {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-top: 30px;
 }
 #choice button {
-	height: 30px;
-	margin: 5px 25px 5px 0;
+font-size: 24px;
+	background: transparent;
+	width: 250px;
+	height: 65px;
+	margin: 0 50px 3px 0;
+	border: none;
+	cursor: pointer;
+	color: #B59D8E;
+}
+#choice button:hover {
+	font-family: 'Minguk-Bold';
+	background: url("/resources/UI/Dialogue/answer.png");
+	color: #000000;
+	width: 288px;
+	margin-right: 11px;
+	padding-right: 28px;
 }
 
-/* #title, #content {
+ #title, #content {
 	display: inline-flex;
 	flex-direction: row;
-	font-weight: bold;
-	margin-left: 25px;
-	margin-top: 10px;
 }
 #title > div {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 }
-#title > div:nth-child(2) {
-	color: white;
-	min-width: 200px;
+
+#title > div:nth-child(1) {
+	font-family: 'Daehan-Bold';
+	font-size: 30px;
 	height: 30px;
-	background: no-repeat url("../UI/Dialogue/Title.png") center center;
+	padding: 0;
+	margin: 55px 20px 10px 0;
+}
+#title > div:nth-child(2) {
+	font-family: 'Minguk-Bold';
+	font-size: 20px;
+	color: #FBF7F0;
+	min-width: 194px;
+	margin-top: 54px;
+	padding-bottom: 1px;
+	height: 29px;
+	background: no-repeat url("../UI/Dialogue/name_tag_1.png") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;  
-	margin-left: 25px;
-} */
+    background-size: cover;
+} 
