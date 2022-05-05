@@ -922,35 +922,35 @@
 {
     "name":"라", "nickname":"태양의 신",
     "content":"태양선이 이곳 지하세계를 통과할 때마다 악의 신 ‘아펩’이 나타난다. <br/>그가 나타나기 때문에 태양은 가려지고 매일 밤이 찾아오지.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":1, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"천국을 향한 마지막 관문이다. <span>아펩과 최선을 다하여 승부하거라.</span><br/>아펩을 무찌르면 다시 태양이 떠오를 것이다.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":2, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"훌륭하다, 아펩을 무찔렀구나.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":3, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"덕분에 태양이 다시 떠오르는구나. <br/>이제 정말 천국에 거의 도착했다. 수고많았다, 사자여.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":4, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"자, 이곳이 천국이다. <br/>이곳에서 영생을 누리도록 하라.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":5, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },

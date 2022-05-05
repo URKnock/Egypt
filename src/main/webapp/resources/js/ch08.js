@@ -48,6 +48,7 @@ function init() {
 		$("#la2").delay(3000).animate({right: "74%"}, 1000);
 		$("#boat").delay(3000).animate({right: "55.4%"}, 1000);
 		$("#paper").delay(2500).animate({opacity: "100%"}, 500);
+		$("#paperImg").delay(2500).animate({opacity: "100%"}, 500);
 		
 		var count = 0;
 		
@@ -84,6 +85,7 @@ function init() {
 				$("#userArm").css("opacity", "0");
 				$("#back").css("opacity", "0");
 				$("#paper").css("opacity", "0");
+				$("#paperImg").css("opacity", "0");
 				$("#snakeDead").delay(100).animate({opacity: "100%"}).delay(3500).animate({opacity: "0%"}, 100);
 				
 				$("#rock").delay(3500).stop().animate({left: '-148%'}, 8000);
@@ -100,6 +102,7 @@ function init() {
         })
 	}
 	else if(scene == 4) {
+		$("#dialogue").on("click", function() { $("form").submit(); });	
 		setting2();
 		
 		$(".background2").fadeOut(2000);
@@ -107,6 +110,16 @@ function init() {
 		
 		$("#water1").fadeIn(2000);
 		$("#water2").fadeOut(2000);
+	}
+	else if(scene == 5) {
+		setting();
+		
+		$(".background2").hide();
+		$(".background3").css("opacity", "100%");
+		
+		$("#user").css("right", "40%").css("bottom", "34.4%");
+		$("#la2").css("opacity", "100%").css("right", "49%");
+		$("#boat").css("right", "30.4%");
 		
 		$("#dialogue").on("click", function() { 
 			setTimeout("$('form').submit()", 4000);
@@ -126,7 +139,7 @@ function init() {
 			$("#flower").animate({right: "6.5%"}, 4000);
 		});
 	}
-	else if(scene == 5) {
+	else if(scene == 6) {
 		setting();
 		
 		$(".background2").hide();
