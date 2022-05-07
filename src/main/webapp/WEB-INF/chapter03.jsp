@@ -51,6 +51,7 @@
 		<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 	</div>
 </div>
+<jsp:include page="interaction/setting.jsp"/>
 <jsp:include page="interaction/info_window.jsp"/>
 <form method="post" action="<c:url value='/chapter03'/>">
 <img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
@@ -83,6 +84,7 @@
 <div id="loading"></div>
 <audio id="bgm" preload="auto" src="/resources/bgm/ch03/bgm.mp3" loop="true" autobuffer></audio>
 <audio id="voice" preload="auto" src="/resources/bgm/ch03/3_${scene}_${index}_${flag}.wav"></audio>
+<audio id="effect" preload="auto" src=""></audio>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
 <input name="flag" 	type="hidden" value="${flag}"/>

@@ -81,6 +81,9 @@ $(document).ready(function(){
 			break;
 	}
 	$("#loading").fadeOut();
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
 });
 
 function init() {	
@@ -90,6 +93,8 @@ function init() {
 	x = $("#background").width() / 2.0;
 	
 	setDialogueSize();
+	setSetting();
+	$("#setting").css("display", "none");
 	
 	resize("#human");
 	center("#human");
