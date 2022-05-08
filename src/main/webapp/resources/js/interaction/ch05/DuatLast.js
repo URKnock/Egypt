@@ -1,5 +1,4 @@
-
-$(function init() { 
+function interaction() { 
 	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	
@@ -10,11 +9,4 @@ $(function init() {
 		$(".keepers").animate({left: "90%"}, 4000);
 		
 	}
-	
-
-
-
-
-
-	
-});
+}

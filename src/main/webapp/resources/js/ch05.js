@@ -1,9 +1,15 @@
 var clicked = [1, 2];
 var which;
 var count = 0;
+var w, h, x, y;
+var scene, index, flag;
 
 function init() {
-	
+	w = $("body").width() / 1920;
+	h = $("body").height() / 1080;
+	x = $("body").width() / 2.0;
+
+	setDialogueSize();
 	scene = $("input[name='scene']").val();
 
 	 if(scene == 1) { /* 여기가 어디여.. 씬0 */
@@ -22,9 +28,7 @@ function init() {
 		$("#user1").css({left: "11%"});
 		$("#nol").delay(1000).css({opacity: "100%"}, 1000).
 		animate({opacity: "0"}, 1000);
-		$("form").hide().delay(6500).fadeIn(1000);
-
-		
+		$("form").hide().delay(6500).fadeIn(1000);	
 		$("#boat").delay(500).animate({right: "5%"}, 6000);
 		$("#la").delay(500).animate({right: "36%"}, 6000);
 	
@@ -83,37 +87,21 @@ function init() {
 		.fadeOut(2000); 
 			}*/
 			
-		 else if(scene == 4) { //탑승했는가? 출발하겠다
+		else if(scene == 4) { //탑승했는가? 출발하겠다
 		$("#user1").css({opacity: "0"});
 		$("#la_b2").css({opacity: "1"});
 		$("#la_b2").css({opacity: "1"});
 		$("body").delay(2000).fadeIn(2000);		
-	    $("form").delay(2000).fadeIn(1000)
-		.fadeOut(2000); 
+	    $("form").delay(2000).fadeIn(1000).fadeOut(2000); 
 		/*$("#user1").css({top:300, left:900});*/
-		 $("#earth").delay(2000).animate({left: "-50%"}, 5000);
-	    $("#la_b2").css({right: "15%", top: "14%"})
-		.delay(2000).animate({right: "-60%"}, 5000)
-
+		$("#earth").delay(2000).animate({left: "-50%"}, 5000);
+	    $("#la_b2").css({right: "15%", top: "14%"}).delay(2000).animate({right: "-60%"}, 5000)
 	
 		/*.animate({top:"30%"}, 500).animate({top:"55%"}, 500) 
 		.delay(30).animate({right: "-30%", top: "-70%"}, 4000);*/
 		setTimeout(function() { $("form").submit(); }, 8000); 
 		}
-		
-	var h = $("#background").height() - $("#dialogue").height();
-	if(h < 0) h = 0;
-	$("#background").height(h);
-		
-	var w = $("#scene").width() - $("#dialogue > img:first-of-type").width();
-	w = w - $("#choice").width();
-	if(w < 0) w = 0;
-	$("#scene").width(w);
-	
-	$("#dialogue").on("click", function() { $("form").submit(); });	
-	
-	$("#choice > img").height( $("#dialogue > img").height() );
-	
+			
 	$("#dialogue").click(function() {
 		$("form").submit();
 	});
@@ -150,6 +138,5 @@ $("#dialogue").delay(4000).on("click", function() {
 function submit() {
 	setTimeout("$('form').submit()", 2000);
 }
-
-	
-} 
+}
+function interaction() {}; 
