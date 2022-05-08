@@ -94,7 +94,7 @@ function init() {
 	
 	setDialogueSize();
 	setSetting();
-	$("#setting").css("display", "none");
+	$("#setting").hide();
 	
 	resize("#human");
 	center("#human");

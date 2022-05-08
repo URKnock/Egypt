@@ -9,36 +9,36 @@
 <div id="setting">
 <div id="setting_container">
 	<div>
-		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>	<!-- 환경설정 아이콘 -->
+		<img src="<c:url value='/resources/UI/Menu/setting_1.png'/>"/>
 		환경설정
 	</div>
 	<div>
 		<div class="audioSetting">
 			<div>
 				◆ 배경음악
-				<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>	<!-- 초기화 아이콘 -->
+				<img src="<c:url value='/resources/UI/Menu/setting_2.png'/>"/>
 			</div>
-			<img src="<c:url value='/resources/UI/Menu/9_7_1.png'/>"/>	<!-- 아누비스 입벌림 -->
+			<img src="<c:url value='/resources/UI/Menu/setting_3.png'/>"/>
 			<div class="audioSlider"></div>
-			<img src="<c:url value='/resources/UI/Menu/9_7_2.png'/>"/>	<!-- 아누비스 입닫음 -->
+			<img src="<c:url value='/resources/UI/Menu/setting_4.png'/>"/>
 		</div>
 		<div class="audioSetting">
 			<div>
 				◆ 효과음
-				<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>	<!-- 초기화 아이콘 -->
+				<img src="<c:url value='/resources/UI/Menu/setting_2.png'/>"/>
 			</div>
-			<img src="<c:url value='/resources/UI/Menu/9_7_1.png'/>"/>	<!-- 아누비스 입벌림 -->
+			<img src="<c:url value='/resources/UI/Menu/setting_3.png'/>"/>
 			<div class="audioSlider"></div>
-			<img src="<c:url value='/resources/UI/Menu/9_7_2.png'/>"/>	<!-- 아누비스 입닫음 -->
+			<img src="<c:url value='/resources/UI/Menu/setting_4.png'/>"/>
 		</div>
 		<div class="audioSetting">
 			<div>
 				◆ 나레이션
-				<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>	<!-- 초기화 아이콘 -->
+				<img src="<c:url value='/resources/UI/Menu/setting_2.png'/>"/>
 			</div>
-			<img src="<c:url value='/resources/UI/Menu/9_7_1.png'/>"/>	<!-- 아누비스 입벌림 -->
+			<img src="<c:url value='/resources/UI/Menu/setting_3.png'/>"/>
 			<div class="audioSlider"></div>
-			<img src="<c:url value='/resources/UI/Menu/9_7_2.png'/>"/>	<!-- 아누비스 입닫음 -->
+			<img src="<c:url value='/resources/UI/Menu/setting_4.png'/>"/>
 		</div>
 		<input type="button" value="저장하기"/>
 	</div>

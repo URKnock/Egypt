@@ -3,6 +3,8 @@ function setSetting() {
 	var voice = document.getElementById("voice");
 	var effect = document.getElementById("effect");
 
+	$("#setting").css("display", "flex");
+
 	var volumed = getCookie("bgmVol");
 	if(!volumed) {
 		setCookie("bgmVol", 1);
@@ -51,14 +53,25 @@ function setSetting() {
 	    }
 	});
 	
+	$('.audioSetting:nth-child(1) > div > img').on("click", function() {
+		bgm.volume = 1;
+		$('.audioSetting:nth-child(1) .audioSlider').slider("value", 1);
+	});
+	$('.audioSetting:nth-child(2) > div > img').on("click", function() {
+		effect.volume = 1;
+		$('.audioSetting:nth-child(2) .audioSlider').slider("value", 1);
+	});
+	$('.audioSetting:nth-child(3) > div > img').on("click", function() {
+		voice.volume = 1;
+		$('.audioSetting:nth-child(3) .audioSlider').slider("value", 1);
+	});
+	
 	$("#setting_container").width(1195 * w);
 	$("#setting_container").height(655 * h);
 	$("#setting input").on("click", function() {
-		$("#setting").css("display", "none");
+		$("#setting").hide();
 	    setCookie("bgmVol", $('.audioSetting:nth-child(1) .audioSlider').slider("value"));
 	    setCookie("effectVol", $('.audioSetting:nth-child(2) .audioSlider').slider("value"));
 	    setCookie("voiceVol", $('.audioSetting:nth-child(3) .audioSlider').slider("value"));
 	});
 }
-
-// $(document).ready(function(){ setSetting(); });
