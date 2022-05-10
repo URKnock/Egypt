@@ -19,48 +19,44 @@ body {
   	overflow-x: hidden;
 }
 
-#background {
-	width:100%;
-	height:100%;
-	background: no-repeat url("../background/ch09/9_0.webp") center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
+
+
+#mp4 {
+	margin:0;
+	padding:0;
+	position:absolute;
+	z-index:0;
+	object-fit: cover;
+	
 }
 
 
 #keepers {
 	 position: absolute;
      z-index: 1;
- 	 top: 50.5%; right: 6%; 	 
+ 	 top: 52%; right: 6%; 	 
 }
 
 #c1 {
 	position: absolute;
-	top: 36.5%;
+	top: 37.8%;
 	left: 13%;
 	transform: scaleX(-1); 
 	
 }
 #c2 {
 	position: absolute;
-	top: 39.5%;
+	top: 40.5%;
 	left: 30%;
 	
 }
 #c3 {
 	position: absolute;
-	top: 36.5%;
+	top: 37.8%;
 	left: 50%;
 	
 }
-#c31 {	
-	opacity:0;
-	position: absolute;
-	top: 40%;
-	left: 40%;
-}
+
 
 #next {
 	z-index: 2;

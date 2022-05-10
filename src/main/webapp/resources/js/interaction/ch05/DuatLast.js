@@ -6,6 +6,7 @@ function interaction() {
 	//$("form").hide();
 	
 	if(scene == 14) {
+		$(".mandara").animate({right: "90%"}, 4000);
 		$(".keepers").animate({left: "90%"}, 4000);
 		
 	}
