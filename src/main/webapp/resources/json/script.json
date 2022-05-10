@@ -957,9 +957,9 @@
 {
 	"name":"라", "nickname":"태양의 신",
 	"content":"천국을 누리던 사자여, 생전의 사람들을 만나러 배에 승선할 것인가?",
-	"chapter":9, "scene":6, "flag":0,
+	"chapter":9, "scene":0, "flag":0,
 	"image":"UI/Dialogue/ra.png", "choice":{
-		"image":"UI/Dialogue/Ra.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"더 둘러보고 싶습니다"
     }
@@ -967,10 +967,11 @@
 {
 	"name":"라", "nickname":"태양의 신",
     "content":"잘 다녀오거라 사자여, 평안한 안식이 되기를 바란다.",
-	"chapter":9, "scene":6, "flag":0,
-	"image":"UI/Dialogue/Ra.png",
+	"chapter":9, "scene":1, "flag":0,
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
+
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"사자여, 무척이나 실망했다.<br/><span>심장을 암무트에게 바치도록 해라.</span>",

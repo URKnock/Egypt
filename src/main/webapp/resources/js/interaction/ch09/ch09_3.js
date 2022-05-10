@@ -1,4 +1,6 @@
 function init() {	
+	$("video").height("100%");	
+	$("video").width("100%");	
 	$("#background > img:nth-child(4)").addClass("select");
 			$("#next").addClass("pikachu");
 			$("#pre").addClass("pikachu");

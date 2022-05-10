@@ -46,18 +46,22 @@
 		<img id="rock" src="<c:url value='/resources/background/ch08/8_2_4.png'/>">
 				
 		<!-- throw -->
+		<div id='spearTarget'></div>
 		<div id='target1'></div>
 		<div id='target2'></div>
 		<input type='hidden' name='flag' value='false'>
-		<p id="paper">마우스를 클릭해 머리에 창을 던져 아펩을 처치하세요.</p>
-		<img id="paperImg" src="<c:url value='/resources/object/ch08/paper.png'/>">
+		<div id='paper'><p>마우스를 클릭해 머리에 창을 던져 아펩을 처치하세요.</p></div>
 		<img id="snakeAppear" src="<c:url value='/resources/object/ch08/01_뱀등장.webp'/>">
 		<img id="snake1" src="<c:url value='/resources/object/ch08/02+1_뱀움직임.webp'/>">
 		<img id="snake2" src="<c:url value='/resources/object/ch08/03+2.webp'/>">
 		<img id="snake3" src="<c:url value='/resources/object/ch08/04.webp'/>">
 		<img id="snakeDead" src="<c:url value='/resources/object/ch08/05_마지막맞고죽음.webp'/>">
 		
-		<img id="userArm" src="<c:url value='/resources/object/ch08/userarm.png'/>">
+		<img id="userArm1" src="<c:url value='/resources/character/ch08/1창던질준비.webp'/>">
+		<img id="userArm2" src="<c:url value='/resources/character/ch08/2팔움직임.webp'/>">
+		<img id="userArm3" src="<c:url value='/resources/character/ch08/3팔움직임.webp'/>">
+		
+		<img id="userArm4" src="<c:url value='/resources/character/ch08/5팔내리기.webp'/>">
 
     	<div id="panel">
 			<img id="spear" src="<c:url value='/resources/object/ch08/spear.png'/>">
@@ -122,5 +126,4 @@
 		</form>
 	</div>
 </body>
-<script src="<c:url value='/resources/js/interaction/ch08/throw.js'/>"></script>
 </html>
