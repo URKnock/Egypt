@@ -292,34 +292,60 @@ img {
 }
 
 #paper {
-	position: absolute; 
-	width: 80vw;
-	height: 10vh;
+	position: fixed; 
+	width: 100vw;
+	height: 100vh;
 	z-index: 30;
-	top: 10%;
+	top: 0%;
     right: 10%;
+    
+    background: url("../object/ch08/paper.png");
     
     opacity: 0;
 }
 
-#paperImg {
+#paper p {
+	position: absolute;
+	top: 2.5%;
+	right: 22%;
+}
+
+#userArm1 {
 	position: absolute; 
-	width: 80vw;
-	height: 10vh;
-	z-index: 30;
-	top: 10%;
-    right: 10%;
+	width: 32vw;
+	height: 60.1vh;
+	bottom: 26.3%;
+	right: 51.4%;
     
     opacity: 0;
 }
 
-#userArm {
+#userArm2 {
 	position: absolute; 
-	width: 10vw;
-	height: 5vh;
-	z-index: 30;
-	bottom: 50%;
-    right: 58%;
+	width: 32vw;
+	height: 60.1vh;
+	bottom: 26.3%;
+	right: 51.4%;
+    
+    opacity: 0;
+}
+
+#userArm3 {
+	position: absolute; 
+	width: 32vw;
+	height: 60.1vh;
+	bottom: 26.3%;
+	right: 51.4%;
+    
+    opacity: 0;
+}
+
+#userArm4 {
+	position: absolute; 
+	width: 32vw;
+	height: 60.1vh;
+	bottom: 26.3%;
+	right: 51.4%;
     
     opacity: 0;
 }
@@ -327,11 +353,11 @@ img {
 #back {
 	position: absolute; 
 	width: 20vw;
-	height: 30vh;
+	height: 46vh;
 	z-index: 20;
-	bottom: 50%;
+	bottom: 40%;
     left: 35%;
-    
+     
     opacity: 0;
 }
 
@@ -345,6 +371,29 @@ img {
     opacity: 0;
  }
  
+  #spearTarget {
+    position: absolute;
+    left: 65%;
+    width: 5vw;
+    height: 6vh;
+    z-index: 700;
+    
+	animation-name: spearMove;
+	animation-duration: 2.75s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+	
+	display: none;
+	
+	opacity: 0;
+ }
+ 
+  @keyframes spearMove { 
+	0% { bottom: 85%; }
+	50% { bottom: 23%; }
+	100% { bottom: 85%; }
+}
+
   #target1 {
  	position: absolute;
 	bottom: 60%;
@@ -364,7 +413,7 @@ img {
     height: 6vh;
     z-index: 1000;
     
-    opacity: 0;
+    display: none;
     
 	animation-name: move;
 	animation-duration: 2.62s;

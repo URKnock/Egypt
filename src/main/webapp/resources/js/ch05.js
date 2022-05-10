@@ -5,6 +5,10 @@ var w, h, x, y;
 var scene, index, flag;
 
 function init() {
+	w = $("body").width() / 1920;
+	h = $("body").height() / 1080;
+	x = $("body").width() / 2.0;
+
 	setDialogueSize();
 	scene = $("input[name='scene']").val();
 

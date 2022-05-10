@@ -4,7 +4,7 @@ function interaction() {
 	
 	resizeWH("#brain", 1714, 678);
 	$("#brain").css("left", 0);
-	$("#brain").css("bottom", $("#blur").height());
+	$("#brain").css("bottom", $("#blur").height()-15*h);
 	$("#brain").on("click", clickBrain);
 	$("#brain").addClass("pikachu");
 	$("#brain").addClass("select");

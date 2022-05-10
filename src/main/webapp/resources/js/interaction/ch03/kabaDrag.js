@@ -1,5 +1,4 @@
 function interaction() {
-	x = $("#background").width() / 2.0;
 	resize("#human");
 	center("#human");
 	if(scene == 3) {
@@ -34,6 +33,7 @@ function interaction() {
 		$("#baPng").width($("#baPng").width() / 3);
 		$("#baPng").height($("#baPng").height() / 3);
 		center("#baPng");
+		$('#baPng').css({"top":450*h});
 		$('#baPng').on("click", function() {
 			$("#baPng").hide();	
 			$('#ba').css({opacity:1});
