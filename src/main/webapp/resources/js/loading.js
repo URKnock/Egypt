@@ -16,12 +16,12 @@ function init() {
 	setTimeout(function() {
 		$("*").on("click", function() {
 			$("*").off("click");
-			$("div").fadeOut(1000);
+			$("div").fadeOut(500);
 			setTimeout(function() {
 				location.replace("/chapter" + chapter);
-			}, 1500);
+			}, 500);
 		});
-	}, 2000);
+	}, 1000);
 	
 	if(chapter == 3) {
 		$("#character").css({"left":820*w, "top":120*h});
