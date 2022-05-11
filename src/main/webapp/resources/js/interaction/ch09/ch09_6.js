@@ -1,6 +1,12 @@
 var count = 0;
+var w, h, x, y;
 function interaction() { }; 
 function init() {
+	w = $("body").width() / 1920;
+	h = $("body").height() / 1080;
+	x = $("body").width() / 2.0;
+	
+	setDialogueSize();
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
@@ -19,12 +25,14 @@ function init() {
 		if($(this).val() == 1) {
 		$("#dialogue_bg").hide();
 		$("#dialogue").hide();
+		$("#blur").hide();
 		}
 	});
 	
 	if(choice == -1 || choice == 1 || scene == 1) {
 		$("#dialogue_bg").hide();
 		$("#dialogue").hide();
+		$("#blur").hide();
 		$("#boat_1").addClass("select");
 		$("#boat_1").addClass("pikachu");
 		
@@ -73,6 +81,7 @@ function init() {
 		$("#c2").removeClass("select2");
 		$("#dialogue_bg").show();
 		$("#dialogue").show();
+		$("#blur").show();
 	});
 	
 	});
