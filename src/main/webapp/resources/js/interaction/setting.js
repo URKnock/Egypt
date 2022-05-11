@@ -74,4 +74,14 @@ function setSetting() {
 	    setCookie("effectVol", $('.audioSetting:nth-child(2) .audioSlider').slider("value"));
 	    setCookie("voiceVol", $('.audioSetting:nth-child(3) .audioSlider').slider("value"));
 	});
+	
+	var containOffset = $("#setting_container").offset();
+	$("#setting_close").css({
+		left: containOffset.left + (1195 * w) - $("#setting_close").width() - 50,
+		top: containOffset.top + 30
+	});
+	$("#setting_close").on("click", function() {
+		$("#setting").fadeOut();
+	});
+	
 }

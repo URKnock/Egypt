@@ -26,29 +26,40 @@ public class LoadingController implements Controller {
     		Integer.parseInt(request.getParameter("chapter")); 
     	}
     	
-		List<String> paths = new ArrayList<String>();
-		List<String> webps = new ArrayList<String>();
-		List<String> wavs = new ArrayList<String>();
+		List<String> image = new ArrayList<String>();
+		List<String> webp = new ArrayList<String>();
+		List<String> wav = new ArrayList<String>();
+		List<String> css = new ArrayList<String>();
+		List<String> js = new ArrayList<String>();
 		String ch = String.format("ch%02d", chapter);
-		String[] dirs = { "/resources/background/" + ch, "/resources/character/" + ch, "/resources/object/" + ch, "/resources/bgm/" + ch };
+		String[] dirs = { "/resources/background/" + ch, "/resources/character/" + ch, "/resources/object/" + ch, "/resources/bgm/" + ch, "/resources/js/interaction/" + ch, "/resources/css/interaction", ch };
 		for(String dirname : dirs) {
 			File dir = new File(request.getRealPath(dirname));
 			File[] files = dir.listFiles();
-			for(File file : files) {
-				String filename = dirname + "/" + file.getName();
-				if(filename.endsWith("webp")) {
-					webps.add(filename);
-				} else if(filename.endsWith("wav")) {
-					wavs.add(filename);
-				} else {
-					paths.add(filename);
+			if(files != null) {
+				for(File file : files) {
+					String filename = dirname + "/" + file.getName();
+					if(filename.endsWith("webp")) {
+						webp.add(filename);
+					} else if(filename.endsWith("wav")) {
+						wav.add(filename);
+					} else if(filename.endsWith("css")) {
+						css.add(filename);
+					} else if(filename.endsWith("js")) {
+						js.add(filename);
+					} else {
+						image.add(filename);
+					}
 				}
 			}
 		}
+		
 		request.setAttribute("chapter", chapter);
-		request.setAttribute("names", paths);
-		request.setAttribute("webps", webps);
-		request.setAttribute("wavs", wavs);
+		request.setAttribute("image", image);
+		request.setAttribute("webp", webp);
+		request.setAttribute("wav", wav);
+		request.setAttribute("css", css);
+		request.setAttribute("js", js);
     	return url;
     }
 }

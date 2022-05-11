@@ -52,15 +52,14 @@
 .audioSetting > div {
 	font-family: 'Minguk-Regular';
 	font-size: 24px;
-	display: block;
+	display: flex;
 	color: #554740;
 }
 #setting_container > div:nth-child(1) {
 	display: flex;
 	align-content: center;
 	color: #554740;
-	margin: 20px;
-	margin-top: 30px;
+	margin: 30px;
 }
 #setting_container > div:nth-child(2) {
 	display: flex;
@@ -73,9 +72,16 @@
 	font-size: 21px;
 	color: #4F1B00;
 	background: transparent;
-	border: 3px solid #4F1B00;
+	border: 2px solid #4F1B00;
 	border-radius: 15px;
 	cursor: pointer;
 	width: 200px;
 	height: 75px;
+}
+#setting input:hover {
+	background: #4F1B00;
+	color: white;
+}
+#setting_close {
+	position: absolute;
 }

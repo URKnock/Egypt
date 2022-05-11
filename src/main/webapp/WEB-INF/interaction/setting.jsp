@@ -42,5 +42,6 @@
 		</div>
 		<input type="button" value="저장하기"/>
 	</div>
+	<img id="setting_close" src="<c:url value='/resources/UI/Shabti/3.png'/>"/>
 </div>
 </div>
