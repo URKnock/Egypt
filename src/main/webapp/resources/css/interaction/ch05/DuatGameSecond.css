@@ -1,0 +1,85 @@
+body {
+    font-family: 'Minguk-Regular';
+	overflow: hidden;
+  	overflow-y: hidden;
+  	overflow-x: hidden; 
+}
+
+#background {
+	width:100%;
+	height:100%;
+	background: no-repeat url("../../../background/ch05/5_0.jpg") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+
+.mainC {
+	opacity:1;
+	z-index:2;
+    position: absolute;
+ 	top: 50%; left: -28%;
+ 	transform: translate(70%,-50%);
+
+ 	
+}
+.saja {
+	position: absolute;
+	z-index:1;
+	height:480px;
+	top: 50%; left: 30%;
+	transform: translate(70%,-50%);
+}
+
+
+.guide2 {
+	opacity:0;
+	position: absolute;
+	width: 50%;
+	height: 7.5%;
+	background: ivory;
+	line-height: 275%;
+	font-size: 1.5vw;
+	top: 5%;
+	left: 50%;
+	
+	transform: translate(-50%, 0%);
+	
+	z-index: 100;
+}
+
+.ant1 {
+	opacity:1;
+	z-index:2;
+	position: absolute; 
+	left: -11%;
+	top: 60%;	
+}
+.ant2 {
+	opacity:1;
+	z-index:2;
+    position: absolute;
+ 	top: 50%; 	
+ 	left: 21%;
+}
+.ant3 {
+	opacity:1;
+	z-index:2;
+	position: absolute;
+    top: 30%;
+    left: 40%;	
+}
+.ant4 {
+	opacity:1;
+	z-index:2;
+    position: absolute;
+    transform: scaleX(-1); 
+	top: 26%;
+    left: 60%;
+}
+
+
+

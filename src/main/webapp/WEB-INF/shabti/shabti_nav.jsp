@@ -11,7 +11,6 @@
    rel="stylesheet">
 </head>
 <body>
-<!-- nav바 수직으로 하는 거 css에서 수정하기 -->
  <nav class="navbar navbar-expand-sm navbar-light bg-light">
 
   <div class="container-fluid">
@@ -37,8 +36,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<c:url value='/shabti/shabti_hell' />">지옥</a><p>
-        </li>
-      </ul>
+        </ul>W
     </div>
   </div>
 </nav>

@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Daehan-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: 'Minguk-Regular';
+	overflow: hidden;
+  	overflow-y: hidden;
+  	overflow-x: hidden;
+}
+
+#background {
+	width:100%;
+	height:100%;
+	background: no-repeat url("../background/ch09/9_0.webp") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+#keepers {
+	 position: absolute;
+     z-index: 1;
+ 	 top: 50.5%; right: 6%; 	 
+}
+
+#c1 {
+	position: absolute;
+	top: 36.5%;
+	left: 13%;
+	transform: scaleX(-1); 
+	
+}
+#c2 {
+	position: absolute;
+	top: 39.5%;
+	left: 30%;
+	
+}
+#c3 {
+	position: absolute;
+	top: 36.5%;
+	left: 50%;
+	
+}
+#c31 {	
+	opacity:0;
+	position: absolute;
+	top: 40%;
+	left: 40%;
+}
+
+#next {
+	z-index: 2;
+
+	position: absolute;
+	top: 42%;
+	left: 96%;
+}
+
+/* hover 효과 */
+.select {
+	filter: drop-shadow(0px 0px 0.5vw yellow);
+}
+.pikachu:hover {
+	transform: scale(1.1);
+}
+.pikachu:active {
+	transform: scale(1.0);
+}
+/* hover 효과 끝 */
+
+
+.modal{ 
+  z-index: 10;
+  position:absolute; 
+  width:100%; 
+  height:100%;
+  background: rgba(0,0,0,0.8); 
+  top:0; left:0;
+  display:none;
+}
+
+.info33 {
+  position: absolute;
+  top: 50%; right: 50%;
+  transform: translate(50%,-50%);
+}
+
+
+#menu {
+	position: absolute;
+	
+	width: 15%;
+	height: 5% !important;
+	
+	right: 2.5%;
+	top: 5%;
+	
+	display: flex;
+	justify-content: space-between;
+	
+	z-index: 50;
+}
+#menu img {
+	width: 20% !important;
+	height: 100% !important;
+}
+
+.lab {
+	 position: absolute;
+     z-index: 1;
+ 	 top: 60%; right: 30%;
+ 	 transform: translate(70%,-50%);
+}
+form {
+	position: absolute;
+	
+	background: url("../UI/Dialogue/BG.png");
+	
+	width: 100%;
+	height: 27% !important;
+	
+	bottom: 0%;
+	left: 0%;
+	
+	z-index: 50;
+}
+#dialogue {
+	width:100%;
+	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+	display: flex;
+	align-content: center;
+}
+#scene {
+	display: inline-flex;
+	flex-direction: column;
+	width:100%;
+}
+#choice {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#choice > div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#choice button {
+	height: 30px;
+	margin: 5px 25px 5px 0;
+}
+
+#title, #content {
+	display: inline-flex;
+	flex-direction: row;
+	font-weight: bold;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+#title > div {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+#title > div:nth-child(2) {
+	color: white;
+	min-width: 200px;
+	height: 30px;
+	background: no-repeat url("../UI/Dialogue/Title.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+	margin-left: 25px;
+}

@@ -18,9 +18,20 @@ function getJsonData(path)
     rawFile.send(null);
 }
 
-getJsonData('../../resources/json/info.json');
+getJsonData('resources/json/info.json');
 
-function show_info(num) {
+function show_info(index) {
+	if(typeof chapter != 'undefined') {
+		var i = 0;
+		while(info[i].chapter != chapter) i++;
+		index += i;	
+	}
+	
+	var num = index;
+	
+	const bg = document.querySelector(".info_back");
+	bg.style.display = "block"; 
+	bg.style.opacity = "1";
 	const window = document.querySelector("#window");
 	window.style.display = "block";
 	
@@ -40,4 +51,6 @@ function show_info(num) {
 function hide_info() {
 	const window = document.querySelector("#window");
 	window.style.display = "none";
+	const bg = document.querySelector(".info_back");
+	bg.style.display = "none";
 }

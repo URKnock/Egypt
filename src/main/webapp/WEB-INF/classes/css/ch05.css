@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: 0;
+}
+body {
+	font-family: 'Minguk-Regular';
+	background: black;
+	
+	overflow: hidden;
+  	overflow-y: hidden;
+  	overflow-x: hidden;
+}
+
+#view {
+	width: 100vw;
+	height: 100vh !important;
+	
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	font-size: 1vw;
+}
+
+.background {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	
+	width: 100%;
+	height: 100% !important;
+}
+
+/* 회전 */
+.rot {
+	transform: rotate(335deg);
+}
+/* 회전 */
+
+/* 노랑 효과 */
+.select {
+	filter: drop-shadow(0px 0px 0.5vw yellow);
+}
+.pikachu:hover {
+	transform: scale(1.1);
+}
+.pikachu:active {
+	transform: scale(1.0);
+}
+/*노랑 효과 */
+
+@keyframes wave1 { 
+	0% { left: 0%; }
+	50% { left: -6%; } 
+	100% { left: 0%; } 
+}
+
+@keyframes wave2 { 
+	0% { right: 0%; }
+	50% { right: -6%; } 
+	100% { right: 0%; } 
+}
+
+
+form {
+	position: absolute;
+	
+	background: url("../UI/Dialogue/BG.png");
+	
+	width: 100%;
+	height: 27% !important;
+	
+	bottom: 0%;
+	left: 0%;
+	
+	z-index: 50;
+}
+
+#dialogue {
+	position: absolute;
+
+	width: 100%;
+	height: 95% !important;
+	
+	bottom: 0;
+}
+#dialogue>img {
+	position: absolute;
+	
+	width: auto !important;
+	height: 70%;
+	
+	top: 15%;
+	left: 5.5%;
+}
+#dialogue #scene {
+	position: absolute;
+	
+	width: 45% !important;
+	height: 80% !important;
+	
+	top: 10%;
+	left: 18%;
+}
+#dialogue #scene #title {
+	width: 40%;
+	height: 20% !important;
+	
+	font-size: 1.2em;
+	font-weight: bolder;
+	
+	display: flex;
+	justify-content: space-between;
+}
+#dialogue #scene #content {
+	position: absolute;
+	
+	width: 100%;
+	height: 60%;
+	
+	top: 30%;
+	left: 2%;
+		
+	font-size: 1em;
+}
+
+
+#menu {
+	display: inline-flex;
+	height: 70px;
+}
+#menu img {
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+}
+
+#water1 {
+	position: absolute; 
+	width:106vw;
+	height: 35vh;
+	z-index: 2;
+    bottom: 60;
+    
+    animation-name: wave1;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#water2 {
+	position: absolute;
+	width: 106vw;
+	height: 35vh; 
+	z-index: 3;
+    bottom: 25;
+    
+    animation-name: wave2;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#water3 {
+	position: absolute; 
+	width:110vw;
+	height: 34vh;
+	z-index: 4;
+    bottom: 0;
+    background-repeat: repeat;
+    
+    animation-name: wave1;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+}
+
+#user1 {
+	position: absolute;
+	z-index: 3;
+	width: 10vw;
+	height: 38vh;
+	left: 6%;
+	top: 21%; 
+}
+#user2 {
+	opacity:0;
+	position: absolute;
+	z-index: 4;
+	width: 10vw;
+	height: 38vh;
+	left: 6%;
+	top: 21%; 
+}
+
+#earth {
+	position: absolute;
+	width: 40vw;
+	height: 42vh;
+	z-index: 3;
+	top: 19.7%; 
+}
+#la {
+	z-index: 3;
+	position: absolute;
+	right: -60%;
+	top: 14%;
+}
+#la_b2 {
+	z-index: 3;
+	position: absolute;
+	opacity:0;
+	top: 14%;
+}
+#nol {
+	position: absolute;
+	width: 50px;
+	height: 90px;
+	left: 20%;
+	top: 19%;
+	opacity: 0;
+}
+
+#dialogue {
+	position: absolute;
+	z-index: 5;
+	width:100%;
+	background: no-repeat url("../UI/Dialogue/BG.png") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+	display: flex;
+	align-content: center;
+}
+#scene {
+	z-index: 5;
+	display: inline-flex;
+	flex-direction: column;
+	width:100%;
+}
+#choice {
+	z-index: 5;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#choice > div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#choice button {
+	height: 30px;
+	margin: 5px 25px 5px 0;
+}
+
+#title, #content {
+	display: inline-flex;
+	flex-direction: row;
+	font-weight: bold;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+#title > div {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+#title > div:nth-child(2) {
+	color: white;
+	min-width: 200px;
+	height: 30px;
+	background: no-repeat url("../UI/Dialogue/Title.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+	margin-left: 25px;
+}

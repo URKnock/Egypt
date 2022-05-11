@@ -4,21 +4,23 @@
 <head>
 <meta charset="UTF-8">
 <title>사자의 서</title>
-<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch11.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch11.js'/>"></script>
-<script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
-		<img id="monkeys" src="<c:url value='/resources/object/ch11/1층_원숭이탕.png'/>"/>
-		<img id="fire" src="<c:url value='/resources/object/ch11/1층_원숭이탕불.png'/>"/>
-		<img id="hellFire" src="<c:url value='/resources/object/ch11/1층_땅불.png'/>"/>
-		<%-- <img id="snakeMan" src="<c:url value='/resources/object/ch11/11_0_5.png'/>"/> --%>
+		<img id="monkeys" src="<c:url value='/resources/object/ch11/1층_원숭이탕.webp'/>"/>
+		<img id="hellFire" src="<c:url value='/resources/object/ch11/1층_땅불.webp'/>"/>
+		<img id="arrow" onClick="location.href='../chapter11part2'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
+		<img id="ground" src="<c:url value='/resources/object/ch11/1층_땅.png'/>"/>
+		<img id="ammut" class="select pikachu" style="z-index: 3;" src="<c:url value='/resources/character/ch11/1층_암무트1.webp'/>"/>
+		<img id="human" src="<c:url value='/resources/character/ch11/사자.webp'/>"/>
 	</div>
 	<div id="page">
-		<!-- 안 쓸듯 -->
+<%-- 		<c:if test="${page ne null}"> --%>
+<%-- 			<jsp:include page="./interaction/chapter11/${page}"/> --%>
+<%-- 		</c:if> --%>
 	</div>
 	<div id="menu">
 		<div>
@@ -28,20 +30,9 @@
 			<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 		</div>
 	</div>
-	<div id="window">
-		<div class="infoImg"></div>
-		<div class="infoText">
-			<h3 class="name"></h3>
-			<p class="content"></p>
-		</div>
-		<div class="close">X</div>
-	</div>
-	
-	<script>
-		
-		
-	</script>
-	<form method="post" action="<c:url value='/chapter11'/>">
+
+	<jsp:include page="interaction/info_window.jsp"/>
+	<form id="form" method="post" action="<c:url value='/chapter11'/>">
 	<div id="dialogue">
 		<img src='<c:url value="${dialogue.image}"/>'/>
 		<div id="scene">
@@ -67,6 +58,7 @@
 			</div>
 		</c:if>
 	</div>
+	<div id="blur"></div>
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>

@@ -32,6 +32,5 @@
 <div><!-- <%@include file="/WEB-INF/shabti_nav.jsp" %> --></div>
 
 </div>
-
 </body>
 </html>

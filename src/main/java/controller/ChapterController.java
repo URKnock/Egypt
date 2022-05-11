@@ -57,13 +57,15 @@ public class ChapterController implements Controller {
 	    int i = Integer.parseInt(index);
 
 		if(json.getData().size() == s) {
+			session.setAttribute("chapter", chapter - 1);
 			return "/chapter02.jsp";
 		}
 		
+		String choice = "-1";
 		Dialogue dialogue = null;
 		List<Dialogue> list = null;
-    	if(request.getParameter("choice") != null) {
-    		String choice = request.getParameter("choice");
+    	if(request.getParameter("choice") != null && !request.getParameter("choice").equals("-1")) {
+    		choice = request.getParameter("choice");
     		if(choice.equals("0")) {
     			list = json.get(scene);
     		} else {
@@ -84,10 +86,11 @@ public class ChapterController implements Controller {
 	    	s += 1;
 	    }
 	    
-	    request.setAttribute("flag", flag);
     	request.setAttribute("scene", s);
     	request.setAttribute("index", i);
+	    request.setAttribute("flag", flag);
     	request.setAttribute("page", page);
+	    request.setAttribute("choice", choice);
     	session.setAttribute("dialogue", dialogue);
     	
     	return url;

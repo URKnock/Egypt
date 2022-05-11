@@ -17,54 +17,70 @@
 },
 {
 	"chapter":3, "scene":6, "flag":0,
-	"page":"cut.jsp"
+	"page":"brain2.jsp"
 },
 {
 	"chapter":3, "scene":7, "flag":0,
-	"page":"organPick.jsp"
-},
-{
-	"chapter":3, "scene":7, "flag":1,
-	"page":"organPick.jsp"
+	"page":"cut.jsp"
 },
 {
 	"chapter":3, "scene":8, "flag":0,
-	"page":"organDrag.jsp"
+	"page":"organPick.jsp"
 },
 {
 	"chapter":3, "scene":8, "flag":1,
-	"page":"organDrag.jsp"
+	"page":"organPick.jsp"
 },
 {
 	"chapter":3, "scene":9, "flag":0,
-	"page":"sodaTest.jsp"
+	"page":"organDrag.jsp"
+},
+{
+	"chapter":3, "scene":9, "flag":1,
+	"page":"organDrag.jsp"
 },
 {
 	"chapter":3, "scene":10, "flag":0,
-	"page":"pourSoda.jsp"
+	"page":"sodaTest.jsp"
+},
+{
+	"chapter":3, "scene":10, "flag":1,
+	"page":"sodaTest.jsp"
 },
 {
 	"chapter":3, "scene":11, "flag":0,
-	"page":"washTest2.jsp"
+	"page":"pourSoda.jsp"
 },
 {
 	"chapter":3, "scene":12, "flag":0,
-	"page":"findCharm.jsp"
+	"page":"washTest2.jsp"
 },
 {
 	"chapter":3, "scene":13, "flag":0,
-	"page":"dragCharm.jsp"
+	"page":"findCharm.jsp"
 },
 {
 	"chapter":3, "scene":14, "flag":0,
-	"page":"pourBandage.jsp"
+	"page":"dragCharm.jsp"
+},
+{
+	"chapter":3, "scene":14, "flag":1,
+	"page":"dragCharm.jsp"
 },
 {
 	"chapter":3, "scene":15, "flag":0,
-	"page":"mummyTest.jsp"
+	"page":"pourBandage.jsp"
+},
+{
+	"chapter":3, "scene":15, "flag":1,
+	"page":"pourBandage.jsp"
 },
 {
 	"chapter":3, "scene":16, "flag":0,
+	"page":"mummyTest.jsp"
+},
+{
+	"chapter":3, "scene":17, "flag":0,
 	"page":"mummyEnd.jsp"
 },
 {
@@ -137,14 +153,181 @@
 },
 {
 	"chapter":4, "scene":17, "flag":0,
-	"page":"ch04_3_0.jsp"
+	"page":"ch04_2_11.jsp"
 },
 {
 	"chapter":4, "scene":18, "flag":0,
-	"page":"ch04_3_1.jsp"
+	"page":"ch04_3_0.jsp"
 },
 {
 	"chapter":4, "scene":19, "flag":0,
+	"page":"ch04_3_1.jsp"
+},
+{
+	"chapter":4, "scene":20, "flag":0,
 	"page":"ch04_3_2.jsp"
+},
+
+{
+	"chapter":5, "scene":6, "flag":0,
+	"page":"duatg3.jsp"
+},
+{
+	"chapter":5, "scene":4, "flag":0,
+	"page":"DuatGameStart.jsp"
+},
+
+{
+	"chapter":5, "scene":5, "flag":0,
+	"page":"crocAttack.jsp"
+},
+
+{
+	"chapter":5, "scene":6, "flag":0,
+	"page":"DuatGameSS.jsp"
+},
+
+{
+	"chapter":5, "scene":7, "flag":0,
+	"page":"DuatGameFirst.jsp"
+},
+
+{
+	"chapter":5, "scene":8, "flag":0,
+	"page":"DuataGameSecond.jsp"
+},
+
+{
+	"chapter":5, "scene":9, "flag":0,
+	"page":"DuatGameThird.jsp"
+},
+
+{
+	"chapter":5, "scene":10, "flag":0,
+	"page":"DuatGameLast.jsp"
+},
+
+{
+	"chapter":5, "scene":11, "flag":0,
+	"page":"DuatLast.jsp"
+},
+
+{
+	"chapter":5, "scene":12, "flag":0,
+	"page":"DuatLast.jsp"
+},
+
+{
+	"chapter":5, "scene":13, "flag":0,
+	"page":"DuatKeepPre.jsp"
+},
+
+{
+	"chapter":5, "scene":14, "flag":0,
+	"page":"DuatKeeperInfo.jsp"
+},
+{
+	"chapter":5, "scene":15, "flag":0,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":16, "flag":0,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":17, "flag":0,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":18, "flag":0,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":18, "flag":1,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":18, "flag":2,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":19, "flag":0,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":19, "flag":1,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":19, "flag":2,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":20, "flag":0,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":20, "flag":1,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":20, "flag":2,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":21, "flag":0,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":21, "flag":1,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":21, "flag":2,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":5, "scene":21, "flag":3,
+	"page":"DuatQueez.jsp"
+},
+{
+	"chapter":7, "scene":0, "flag":0,
+	"page":"ch07_0_info.jsp"
+},
+{
+	"chapter":7, "scene":1, "flag":0,
+	"page":"ch07_0.jsp"
+},
+{
+	"chapter":7, "scene":2, "flag":0,
+	"page":"ch07_1.jsp"
+},
+{
+	"chapter":7, "scene":3, "flag":0,
+	"page":"ch07_1_quiz.jsp"
+},
+{
+	"chapter":7, "scene":4, "flag":0,
+	"page":"ch07_2.jsp"
+},
+{
+	"chapter":7, "scene":5, "flag":0,
+	"page":"ch07_2.jsp"
+},
+{
+	"chapter":7, "scene":6, "flag":0,
+	"page":"ch07_2.jsp"
+},
+{
+	"chapter":7, "scene":7, "flag":0,
+	"page":"ch07_3_info.jsp"
+},
+{
+	"chapter":7, "scene":8, "flag":0,
+	"page":"ch07_3.jsp"
+},
+{
+	"chapter":7, "scene":9, "flag":0,
+	"page":"ch07_3.jsp"
 }
 ]

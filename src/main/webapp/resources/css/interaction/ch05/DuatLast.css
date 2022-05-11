@@ -1,0 +1,49 @@
+body {
+    font-family: 'Minguk-Regular';
+	overflow: hidden;
+  	overflow-y: hidden;
+  	overflow-x: hidden; 
+}
+
+#background {
+	width:100%;
+	height:100%;
+	background: no-repeat url("../../../background/ch05/5_0.jpg") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+.mandara {
+	z-index: 3;
+	position: absolute;
+}
+
+.keepers {
+	position: absolute;
+	width: 2000px;
+	top: 3%; left: 150%;
+}
+
+.mainC_s {
+	opacity:1;
+    position: absolute;
+ 	top: 50%; left: -28%;
+ 	transform: translate(70%,-50%);
+
+ 	
+}
+.mainC_k {
+	opacity:0;
+    position: absolute;
+ 	top: 50%; left: -28%;
+ 	transform: translate(70%,-50%);
+
+ 	
+}
+
+
+
+
+
