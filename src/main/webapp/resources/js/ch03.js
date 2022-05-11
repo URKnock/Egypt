@@ -80,7 +80,9 @@ $(document).ready(function(){
 			});	
 			break;
 	}
-	$("#loading").fadeOut();
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
 	$("#menu img:nth-child(3)").on("click", function() {
 		$("#setting").css("display", "flex");
 	});
@@ -138,6 +140,7 @@ function init() {
 			setTimeout(function() { $("form").submit(); }, 2000);
 		}
 	});
+	$("#loading").hide();
 }
 
 function object(select, index, arrIndex) {
