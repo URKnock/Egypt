@@ -6,14 +6,20 @@ function interaction() {
 	
 	if(scene == 5) { /*이런 말하기도 무섭게*/
 		$("form").hide().delay(2200).fadeIn(1000);
-		//$("#background").children().hide();
+		
 		$("form").hide().fadeIn(1800).fadeOut(2000);
 		
 		setTimeout(function() {
-			$(".spear").css({opacity: "100%"}, 500);
+			$(".spear").css({opacity: 1});
 		}, 1800);
 
+		//창 다가감
 		$(".spear").delay(2900).animate({left: "45%"}, 1000).fadeOut(1000);
+		$(".saja").delay(3000).animate({opacity: "0%"});
+			setTimeout(function() {
+			$(".saja").attr("src", 
+			"/D/resources/character/ch05/하얀사자.png");
+		}, 3100);
 		$(".guide").delay(4000).animate({opacity: "100%"}, 500).delay(2000).animate({opacity: "0%"}, 500);
 		
 		//악어 튀어나오고

@@ -7,13 +7,24 @@ function init() {
 	choice = $("input[name='choice']").val();
 	
 	$("button").on("click", function() {
-		if(choice == 0) {
-			$("form").submit();
+		console.log("눌림");
+		//console.log($(this).val());
+		if($(this).val() == 0) {
+			$("#content").val(1);
+			console.log(scene);
+			console.log($("#content").val());
+			$("#choice").hide();
+			$("#con").text('잘 다녀오거라 사자여, 평안한 안식이 되기를 바란다.');
+		}
+		if($(this).val() == 1) {
+		$("#dialogue_bg").hide();
+		$("#dialogue").hide();
 		}
 	});
 	
 	if(choice == -1 || choice == 1 || scene == 1) {
-		$("form").hide();
+		$("#dialogue_bg").hide();
+		$("#dialogue").hide();
 		$("#boat_1").addClass("select");
 		$("#boat_1").addClass("pikachu");
 		
@@ -58,9 +69,10 @@ function init() {
 
 		}
 	$("#c2").click(function() {
-		$("#c2").removeClass("pikachu");
+		//$("#c2").removeClass("pikachu");
 		$("#c2").removeClass("select2");
-		$("form").show();
+		$("#dialogue_bg").show();
+		$("#dialogue").show();
 	});
 	
 	});

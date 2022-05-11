@@ -39,7 +39,6 @@
 	<img id="boat_1" src="<c:url value='/resources/character/ch09/4층 배.webp'/>"/>
 	</div>
 </div>
-<form method="post" >
 <img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 <div id="dialogue">
    <img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
@@ -51,7 +50,7 @@
          </c:if>
       </div>
       <div id="content">
-         <p>${dialogue.content}</p>
+         <p id='con'>${dialogue.content}</p>
          <img />
       </div>
    </div>
@@ -59,7 +58,7 @@
       <div id="choice">
          <div>
             <c:forEach var="c" items="${dialogue.choice}">
-               <button name="choice" type="submit" value="${c.id}">${c.content}</button>
+               <button id="btn" name="choice" type="submit" value="${c.id}">${c.content}</button>
             </c:forEach>
          </div>
          <img src='<c:url value="${dialogue.player}"/>'/>
@@ -67,10 +66,10 @@
    </c:if>
 </div>
 <div id="blur"></div>
-	<input name="scene" type="hidden" value="${scene}"/>
+	<input id ="sn" name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>
 	<input name="choice" type="hidden" value="${choice}"/>
-	</form>
+
 </body>
 </html>
