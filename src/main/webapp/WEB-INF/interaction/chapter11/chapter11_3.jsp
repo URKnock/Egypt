@@ -11,7 +11,7 @@
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
-		<img id="arrow" style="transform: scale(0.5) scaleX(-1);" onClick="location.href='../chapter11part2'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
+		<img id="arrow" style="transform: scaleX(-1);" onClick="location.href='../chapter11part2'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
 		<img id="devil" class="select pikachu" src="<c:url value='/resources/character/ch11/3층_악마1.webp'/>"/>
 		<img id="human" src="<c:url value='/resources/character/ch11/사자.webp'/>"/>
 	</div>

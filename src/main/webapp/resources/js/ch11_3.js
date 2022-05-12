@@ -41,12 +41,15 @@ $(document).ready(function(){
 		
 		$("#devil").on("click", function() {
 				$("#devil").attr("src", '/resources/character/ch11/3층_악마3.webp');
+				setTimeout(function() { $("#human").attr("src", '/resources/character/ch11/사자_눈물.webp'); }, 1000);
 				setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/3층_악마1.webp'); }, 2000);
+				console.log("사자 눈물");
 				setTimeout(function() { $("#dialogue").fadeIn(500); $("#blur").fadeIn(500); }, 2500);
 				setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/3층_악마2.webp'); }, 3000);
 		});
 		
 		$("#dialogue").on("click", function() {
+				$("#human").attr("src", '/resources/character/ch11/사자.webp');
 				$("#dialogue").fadeOut(500); $("#blur").fadeOut(500);
 				$("#devil").attr("src", '/resources/character/ch11/3층_악마1.webp');
 			});
