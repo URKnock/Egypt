@@ -65,7 +65,7 @@ body {
 
 /* hover È¿°ú */
 .select {
-	filter: drop-shadow(0px 0px 0.5vw yellow);
+	filter: drop-shadow(0px 0px 0.5vw #FFAB00);
 }
 .pikachu:hover {
 	transform: scale(1.1);

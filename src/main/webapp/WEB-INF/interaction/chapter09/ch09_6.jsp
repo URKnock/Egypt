@@ -25,12 +25,12 @@
 	</a>
 	</div>
 </div>
-<video id ="mp4" autoplay loop>
+<video id ="mp4" autoplay loop muted>
 	<source type="video/mp4" src="<c:url value='/resources/background/ch09/천국4층.mp4'/>">
 </video>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
+	<img id="c1" src="<c:url value='/resources/character/ch09/천국 사자 기본.webp'/>"/>
 	<img id="c2" src="<c:url value='/resources/character/ch09/4층 라1.webp'/>"/>
 	</div>
 </div>

@@ -24,7 +24,7 @@ body {
 #c1 {
 	position: absolute;
 	transform: scaleX(-1); 
-	top: 39.5%;
+	top: 38.3%;
 	left: 13%;
 	
 }
@@ -43,8 +43,6 @@ body {
 
 #pre {
 	z-index: 2;
-	width:60px;
-	height:64px;
 	position: absolute;
 	top: 42%;
 	left: 1%;
@@ -53,7 +51,7 @@ body {
 
 /* hover È¿°ú */
 .select {
-	filter: drop-shadow(0px 0px 0.5vw yellow);
+	filter: drop-shadow(0px 0px 0.5vw #FFAB00);
 }
 .select2 {
 	filter: drop-shadow(0px 0px 0.5vw #DB4636);
