@@ -225,16 +225,23 @@ function canopic_two() {
 	}
 }
 
+var cenX = ["#human", "#dirt_head", "#dirt_body", "#dirt_bottom", "#dirt_leg"];
+var cenY = ["#human", "#human_cover", "#human_soda", "#human_band"];
+
 function center(element) {
 	centerX(element);
 	centerY(element);
 }
 function centerX(element) {
-	$(element).css("left", x - ($(element).width() / 2));
+	if(cenX.includes(element)) {
+		$(element).css("left", x - ($(element).width() / 2) - 10*w);
+	} else {
+		$(element).css("left", x - ($(element).width() / 2));
+	}
 }
 function centerY(element) {
-	if(element == "#human" || element == "#human_cover" || element == "#human_soda" || element == "#human_band") {
-		$(element).css("bottom", 555*h);
+	if(cenY.includes(element)) {
+		$(element).css("bottom", 560*h);
 	} else {
 		$(element).css("bottom", 606*h);
 	}
