@@ -24,7 +24,7 @@
 	</div>
 </div>
 <div>
-<video id ="mp4" autoplay loop>
+<video id ="mp4" autoplay loop muted>
 	<source type="video/mp4" src="<c:url value='/resources/background/ch09/9_0_1.mp4'/>">
 </video>
 </div>

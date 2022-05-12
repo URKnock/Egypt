@@ -1,6 +1,6 @@
 function init() {	
-	$("video").height("100%");	
-	$("video").width("100%");	
+/*	$("video").height("100%");	
+	$("video").width("100%");	*/
 	$("#background > img:nth-child(4)").addClass("select");
 			$("#c3").addClass("select");
 			$("#c3").addClass("pikachu");
@@ -28,6 +28,8 @@ function init() {
 }
 			
 	$("#c3").click(function() {
+		$("#c1").attr("src", 
+			"/D/resources/character/ch09/천국 사자 박수.webp");
 		$("#c3").attr("src", 
 			"/D/resources/character/ch09/2층 왜가리2.webp");
 		setTimeout(function() {
@@ -35,6 +37,8 @@ function init() {
 				}, 3800);
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 
+		$("#c1").attr("src", 
+			"/D/resources/character/ch09/천국 사자 기본.webp");
 		$("#c3").attr("src", 
 			"/D/resources/character/ch09/2층 왜가리1.webp");
 		 }	

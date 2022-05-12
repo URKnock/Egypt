@@ -1,7 +1,7 @@
 function init() {	
-	$("video").height("100%");	
-	$("video").width("100%");		
-	$("#background > img:nth-child(4)").addClass("select");
+/*	$("video").height("100%");	
+	$("video").width("100%");*/		
+	//$("#background > img:nth-child(4)").addClass("select");
 			$("#c2").addClass("select");
 			$("#c2").addClass("pikachu");
 			$("#next").addClass("pikachu");
