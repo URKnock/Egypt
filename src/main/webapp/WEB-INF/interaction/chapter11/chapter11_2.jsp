@@ -20,7 +20,7 @@
 		<img id="pot_inner" style="z-index: 4;" src="<c:url value='/resources/object/ch11/2층_항아리탕.webp'/>"/>
 		<img id="pot_frame" style="z-index: 5;" src="<c:url value='/resources/object/ch11/2층_항아리밖.png'/>"/>
 		<img id="devil" style="z-index: 5;" class="select pikachu" src="<c:url value='/resources/character/ch11/2층_악마1.webp'/>"/>
-		<img style="transform: scale(0.5) scaleX(-1);" onClick="location.href='../chapter11'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
+		<img style="transform: scaleX(-1);" onClick="location.href='../chapter11'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
 		<img id="pot_dead" style="z-index: 3;" src="<c:url value='/resources/object/ch11/2층_항아리사자1.webp'/>"/>
 		<img id="human" src="<c:url value='/resources/character/ch11/사자.webp'/>"/>
 	</div>

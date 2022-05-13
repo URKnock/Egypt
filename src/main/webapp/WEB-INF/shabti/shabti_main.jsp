@@ -24,13 +24,13 @@
 <script src="./js/owl.autoplay.js"></script>
 <script src="./js/owl.navigation.js"></script>
 <script type="text/javascript" src= "./js/ui.js?ver=1"></script>
+<div class="info_back"></div>
 <nav><div class="close" onclick="hide_dic()" align ="right"><img src = "image/3.png"></div></nav>
 
 <div class = "background">
 <div><img id = "logo" src = "UI/Shabti/2.png">
 <span id = "title">&nbsp;단어장</span></div>
-<div><!-- <%@include file="/WEB-INF/shabti_nav.jsp" %> --></div>
-<jsp:include page = '<%=pagefile+".jsp" %>'/>
+<div> <%@include file="/shabti/shabti_nav.jsp" %> </div>
 </div>
 </body>
 </html>

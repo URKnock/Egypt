@@ -4,7 +4,7 @@
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>" type="text/javascript"></script>
 <link rel="stylesheet" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 
-<div class="info_back"></div>
+
 <div id="window">
 	<div class="infoImg"></div>
 	<div class="infoText">

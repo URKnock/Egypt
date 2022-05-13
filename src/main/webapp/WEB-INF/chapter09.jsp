@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ch09</title>
+<title>사자의 서</title>
 <link href="<c:url value='/resources/css/ch09.css'/>" rel="stylesheet" type="text/css"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/interaction/ch09/ch09_1.js'/>"></script>
@@ -24,7 +24,7 @@
 	</div>
 </div>
 <div>
-<video id ="mp4" autoplay loop>
+<video id ="mp4" autoplay loop muted>
 	<source type="video/mp4" src="<c:url value='/resources/background/ch09/9_0_1.mp4'/>">
 </video>
 </div>

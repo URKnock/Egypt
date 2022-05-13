@@ -28,7 +28,7 @@
 	</a>
 	</div>
 </div>
-<video id ="mp4" autoplay loop>
+<video id ="mp4" autoplay loop muted>
 	<source type="video/mp4" src="<c:url value='/resources/background/ch09/천국3층.mp4'/>">
 </video>
 <div id="characters">

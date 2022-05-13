@@ -1,6 +1,5 @@
 function init() {	
-	$("video").height("100%");	
-	$("video").width("100%");	
+
 	$("#background > img:nth-child(4)").addClass("select");
 			$("#b1").addClass("select");
 			$("#b1").addClass("pikachu");
@@ -23,6 +22,8 @@ function init() {
 	
 	
 	$("#b1").click(function() {
+		$("#c1").attr("src", 
+		"/D/resources/character/ch09/천국 사자 놀람.webp");
 		$("#b1").attr("src", 
 		"/D/resources/character/ch09/1층 매2.webp");
 		$("#c2").attr("src", 
@@ -35,6 +36,8 @@ function init() {
 		= function() { hide_info(); 
 		$("#b1").attr("src", 
 		"/D/resources/character/ch09/1층 매1.webp");
+		$("#c1").attr("src", 
+		"/D/resources/character/ch09/천국 사자 기본.webp");		
 		$("#c2").attr("src", 
 		"/D/resources/character/ch09/1층 매사자1.webp");
 		 }	

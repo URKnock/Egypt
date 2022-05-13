@@ -1,8 +1,17 @@
 /*main ÆÄÀÏ css*/
+.info_back {
+	display: none;
+	position: absolute;
+	width: 100vw; 
+	height: 100vh;
+	top: 0; left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
 .background{
-	background-image:"image/1.png";
-	width:1450px;
-	height:880px;
+	background-image:"resources/background/1.png";
+	width:1450vh;
+	height:880vh;
 	color: #554740;
 }
 #title{

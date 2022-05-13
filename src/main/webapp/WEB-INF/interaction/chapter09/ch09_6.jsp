@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ch09</title>
+<title>사자의 서</title>
 <link href="<c:url value='/resources/css/interaction/ch09/ch09_6.css'/>" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -25,12 +25,12 @@
 	</a>
 	</div>
 </div>
-<video id ="mp4" autoplay loop>
+<video id ="mp4" autoplay loop muted>
 	<source type="video/mp4" src="<c:url value='/resources/background/ch09/천국4층.mp4'/>">
 </video>
 <div id="characters">
 	<div id="character">
-	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
+	<img id="c1" src="<c:url value='/resources/character/ch09/천국 사자 기본.webp'/>"/>
 	<img id="c2" src="<c:url value='/resources/character/ch09/4층 라1.webp'/>"/>
 	</div>
 </div>

@@ -172,7 +172,6 @@ body {
 #arrow {
 	position: absolute;
 	z-index: 4;
-	transform: scale(0.5);
 }
 
 #ground {
