@@ -38,6 +38,16 @@ public class RequestMapping {
 		mappings.put("/chapter11part2", new ChapterController("/interaction/chapter11/chapter11_2.jsp", 11));
 		mappings.put("/chapter11part3", new ChapterController("/interaction/chapter11/chapter11_3.jsp", 11));
 		mappings.put("/shabti_main", new ForwardController("/shabti/shabti_main.jsp"));
+		mappings.put("/shabti_nav", new ForwardController("/shabti/shabti_nav.jsp"));
+		//mappings.put("/shabti_all", new InfoController("/shabti/shabti_all.jsp", ));->전체 정보 파일은 어떻게 해야할지 몰라서 일단 두기
+		mappings.put("/shabti_prepare", new InfoController("/shabti/shabti_prepare.jsp", 3));
+		mappings.put("/shabti_conscious", new InfoController("/shabti/shabti_conscious.jsp", 4));
+		mappings.put("/shabti_duat", new InfoController("/shabti/shabti_duat.jsp", 5));
+		mappings.put("/shabti_law", new InfoController("/shabti/shabti_law.jsp", 6));
+		mappings.put("/shabti_heaven", new InfoController("/shabti/shabti_heaven.jsp", 9));
+		mappings.put("/shabti_hell", new InfoController("/shabti/shabti_hell.jsp", 11));
+		
+		
     }
 
 

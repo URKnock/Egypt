@@ -1,5 +1,5 @@
 function init() {
-
+	setSound(); 
 	$("#background > img:nth-child(4)").addClass("select");
 			$("#c3").addClass("select");
 			$("#c3").addClass("pikachu");

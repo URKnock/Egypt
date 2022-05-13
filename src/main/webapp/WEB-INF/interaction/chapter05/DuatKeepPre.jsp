@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="<c:url value='/resources/css/interaction/ch05/DuatLast.css'/>" rel="stylesheet" type="text/css"/>
 <script src="<c:url value='/resources/js/interaction/ch05/DuatLast.js'/>"></script>
-<img class="mandara" src="<c:url value='/resources/object/ch05/만다라_진행.webp'/>">
+<img class="mandara" src="<c:url value='/resources/object/ch05/패턴풀.png'/>">
 <div id="keeper">
 	<div id="keeper">
 	<img class="keepers" src="<c:url value='/resources/character/ch05/단상.png'/>"/>

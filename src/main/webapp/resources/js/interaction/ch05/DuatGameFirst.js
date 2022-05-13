@@ -19,23 +19,31 @@ function interaction() {
 		//$(".saja").delay(3200).animate({opacity: "0%"});
 			setTimeout(function() {
 			$(".saja").attr("src", 
-			"/D/resources/character/ch05/하얀사자.png");
+			"/D/resources/character/ch05/하얀창든사자.png");
 		}, 3300);
-		$(".saja").delay(3300).animate({opacity: "100%"});
+			setTimeout(function() {
+			$(".saja").attr("src", 
+			"/D/resources/character/ch05/창든멈춘사자.png");
+		}, 3800);
+		//$(".saja").delay(3300).animate({opacity: "100%"});
 		
 		$(".guide2").delay(4000).animate({opacity: "100%"}, 500).delay(2000).animate({opacity: "0%"}, 500);
 		
-		setTimeout(function() {
+/*		setTimeout(function() {
 			$(".saja").delay(5000).css({left:"-20%"});
-		}, 4200); 
+		}, 4200); */
 		
 		
 		//사자 대기중으로 바뀜
 		setTimeout(function() {
+		$(".saja").delay(5000).css({left:"-20%"});	
 		$(".saja").attr("src", 
 		"/D/resources/character/ch05/창든사자(위)_1처음.webp");
-		}, 4200); 
-		
+		}, 5000); 
+		setTimeout(function() {
+		$(".saja").attr("src", 
+		"/D/resources/character/ch05/창든사자(위)_2대기.webp");
+		}, 5000); 		
 		//악어 튀어나오고
 		 setTimeout(function() {
 			console.log("셋탐 호출");

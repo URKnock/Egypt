@@ -7,8 +7,17 @@ function interaction() {
 	$(".guide2").delay(500).animate({opacity: "100%"}, 500)
 	.delay(2000).animate({opacity: "0%"}, 500);
 	
-	//개미 기어옴
-	
+	//사자 대기중
+		setTimeout(function() {
+			$(".saja").delay(5000).css({left:"-20%"});	
+			$(".saja").attr("src", 
+			"/D/resources/character/ch05/창든사자(하1)_1처음.webp");
+		}, 2900); 
+		setTimeout(function() {
+			$(".saja").attr("src", 
+			"/D/resources/character/ch05/창든사자(하1)_2대기.webp");
+		}, 5000); 
+		
 	setTimeout(function() {
 			$(".ant1").attr("src", 
 			"/D/resources/object/ch05/1_ant_1도입.webp");
@@ -51,10 +60,9 @@ function interaction() {
 			console.log(count); 
 			$(".ant1").attr("src", 
 			"/D/resources/object/ch05/개미_죽음왼.webp").fadeOut(2000);
-			isclicked();
+			count++;
 			$(".ant1").fadeOut(2000);
-		
-			if(count == 2) {
+			if(count == 8) {
 				setTimeout("$('form').submit()", 3000);
 				}
 			
@@ -65,10 +73,10 @@ function interaction() {
 			console.log(count); 
 			$(".ant2").attr("src", 
 			"/D/resources/object/ch05/개미_죽음오.webp");
-			//isclicked();
+			count++;
 			$(".ant2").fadeOut(2000);
 		
-			if(count == 2) {
+			if(count == 8) {
 				setTimeout("$('form').submit()", 3000);
 				}
 			
@@ -79,10 +87,10 @@ function interaction() {
 			console.log(count); 
 			$(".ant3").attr("src", 
 			"/D/resources/object/ch05/개미_죽음왼.webp");
-			isclicked();
+			count++;
 			$(".ant3").fadeOut(2000);
 		
-			if(count == 2) {
+			if(count == 8) {
 				setTimeout("$('form').submit()", 3000);
 				}
 			
@@ -93,17 +101,13 @@ function interaction() {
 			console.log(count); 
 			$(".ant4").attr("src", 
 			"/D/resources/object/ch05/개미_죽음오.webp");
-			isclicked();
-			$(".ant4").fadeOut(2000);
-		
-			if(count == 2) {
+			count++;
+			$(".ant4").fadeOut(2000);		
+			if(count == 8) {
 				setTimeout("$('form').submit()", 3000);
 				}
 			
 			 });
 		});		
 	
-		function isclicked() {
-			count++;
-		}	
 }

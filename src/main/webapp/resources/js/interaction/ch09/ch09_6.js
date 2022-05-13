@@ -2,6 +2,7 @@ var count = 0;
 var w, h, x, y;
 function interaction() { }; 
 function init() {
+	setSound(); 
 	w = $("body").width() / 1920;
 	h = $("body").height() / 1080;
 	x = $("body").width() / 2.0;
@@ -19,6 +20,8 @@ function init() {
 			console.log(scene);
 			console.log($("#content").val());
 			$("#choice").hide();
+			var second = new Audio('/D/resources/bgm/ch09/9_5_2_0.wav');
+			second.play();				
 			$("#con").text('잘 다녀오거라 사자여, 평안한 안식이 되기를 바란다.');
 		}
 		if($(this).val() == 1) {
@@ -73,10 +76,11 @@ function init() {
 		= function() { hide_info(); 
 			$("#c2").addClass("pikachu");
 			$("#c2").addClass("select2");
-
 		}
 	$("#c2").click(function() {
-		//$("#c2").removeClass("pikachu");
+		var first = new Audio('/D/resources/bgm/ch09/9_5_1_0.wav');
+		first.play();	
+	
 		$("#c2").removeClass("select2");
 		$("#dialogue_bg").show();
 		$("#dialogue").show();

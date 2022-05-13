@@ -15,9 +15,20 @@ body {
     background-size: cover;  
 }
 
+@keyframes rotate_image{ 
+	100% { 
+	transform: rotate(360deg);
+		 } 
+	 }
+
+
 .mandara {
 	z-index: 3;
 	position: absolute;
+	right: 19%;
+    animation: rotate_image 135s linear
+     infinite;transform-origin: 50% 50%;
+
 }
 
 .keepers {

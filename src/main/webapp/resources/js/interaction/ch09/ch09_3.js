@@ -1,4 +1,5 @@
 function init() {	
+	setSound(); 
 	$("#background > img:nth-child(4)").addClass("select");
 			$("#next").addClass("pikachu");
 			$("#pre").addClass("pikachu");
@@ -27,6 +28,8 @@ function init() {
 		window.location = linkLocation;
 }
 	$("#c4").click(function() {
+		var audio = new Audio('/D/resources/bgm/ch09/grass.mp3');
+		audio.play();
 		$("#c2").attr("src", 
 			"/D/resources/character/ch09/2층 카무트 노예2.webp");	
 		$("#c4").attr("src", 
@@ -48,6 +51,8 @@ function init() {
 		
 			
 	$("#c3").click(function() {
+		var cow = new Audio('/D/resources/bgm/ch09/cow.mp3');
+		cow.play();
 		$("#c3").attr("src", 
 		"/D/resources/character/ch09/2층 탈곡2.webp");
 		$("#cow1").attr("src", 

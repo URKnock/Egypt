@@ -29,7 +29,6 @@ body {
 .saja {
 	position: absolute;
 	z-index:1;
-	height:480px;
 	top: 50%; left: 30%;
 	transform: translate(70%,-50%);
 }

@@ -39,6 +39,10 @@
 	<img id="boat_1" src="<c:url value='/resources/character/ch09/4층 배.webp'/>"/>
 	</div>
 </div>
+<script src="<c:url value='/resources/js/sound.js'/>"></script>
+
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/heaven.mp3'/>"></audio>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/pond.mp3'/>"></audio>
 <img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 <div id="dialogue">
    <img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
@@ -70,6 +74,7 @@
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>
 	<input name="choice" type="hidden" value="${choice}"/>
-
+ <audio id="first" src="<c:url value='/resources/bgm/ch09/9_5_1_0.wav'/>"></audio>
+<audio id="second" src="<c:url value='/resources/bgm/ch09/9_5_2_0.wav'/>"></audio> 
 </body>
 </html>
