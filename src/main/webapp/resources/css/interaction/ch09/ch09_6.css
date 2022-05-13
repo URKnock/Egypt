@@ -12,27 +12,25 @@ body {
   	overflow-x: hidden;
 }
 
-#background {
-	width:100%;
-	height:100%;
-	background: no-repeat url("../../../background/ch09/9_5.webp") center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
+#mp4 {
+	margin:0;
+	padding:0;
+	position:absolute;
+	z-index:0;
+	object-fit: cover;
+	
 }
- 
 
 #c1 {
 	position: absolute;
 	transform: scaleX(-1); 
-	top: 37.7%;
+	top: 38.8%;
 	left: 13%;
 	
 }
 #c2 {
 	position: absolute;
-	top: 27.6%;
+	top: 28.7%;
 	left: 36%;
 	
 }
@@ -57,6 +55,9 @@ body {
 .select {
 	filter: drop-shadow(0px 0px 0.5vw yellow);
 }
+.select2 {
+	filter: drop-shadow(0px 0px 0.5vw #DB4636);
+}
 .pikachu:hover {
 	transform: scale(1.1);
 }
@@ -66,25 +67,8 @@ body {
 /* hover È¿°ú ³¡ */
 
 
-.modal{ 
-  z-index: 10;
-  position:absolute; 
-  width:100%; 
-  height:100%;
-  background: rgba(0,0,0,0.8); 
-  top:0; left:0;
-  display:none;
-}
 
-
-.info39 {
-  position: absolute;
-  top: 50%; right: 50%;
-  transform: translate(50%,-50%);
-}
-
-
-#menu {
+/* #menu {
 	position: absolute;
 	
 	width: 15%;
@@ -101,7 +85,7 @@ body {
 #menu img {
 	width: 20% !important;
 	height: 100% !important;
-}
+} */
 
 .lab {
 	 position: absolute;
@@ -109,7 +93,7 @@ body {
  	 top: 60%; right: 30%;
  	 transform: translate(70%,-50%);
 }
-form {
+/* form {
 	position: absolute;
 	
 	background: url("../UI/Dialogue/BG.png");
@@ -121,8 +105,8 @@ form {
 	left: 0%;
 	
 	z-index: 50;
-}
-#dialogue {
+} */
+/* #dialogue {
 	position: absolute;
 	z-index: 5;
 	width:100%;
@@ -133,8 +117,8 @@ form {
     background-size: cover;  
 	display: flex;
 	align-content: center;
-}
-#scene {
+} */
+/* #scene {
 	
 	display: inline-flex;
 	flex-direction: column;
@@ -179,4 +163,4 @@ form {
     -o-background-size: cover;
     background-size: cover;  
 	margin-left: 25px;
-}
+} */

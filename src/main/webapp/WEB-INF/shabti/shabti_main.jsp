@@ -30,7 +30,7 @@
 <div><img id = "logo" src = "UI/Shabti/2.png">
 <span id = "title">&nbsp;단어장</span></div>
 <div><!-- <%@include file="/WEB-INF/shabti_nav.jsp" %> --></div>
-
+<jsp:include page = '<%=pagefile+".jsp" %>'/>
 </div>
 </body>
 </html>

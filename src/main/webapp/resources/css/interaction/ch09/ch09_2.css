@@ -33,16 +33,14 @@ body {
     from {opacity:0;}
     to {opacity: 1;}
 }
-#background {
-	width:100%;
-	height:100%;
-	background: no-repeat url("../../../background/ch09/9_1_0.webp") center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
+#mp4 {
+	margin:0;
+	padding:0;
+	position:absolute;
+	z-index:0;
+	object-fit: cover;
+	
 }
-
 #keepers {
 	 position: absolute;
      z-index: 1;
@@ -51,14 +49,14 @@ body {
 
 #c1 {
 	position: absolute;
-	top: 36.5%;
+	top: 37.8%;
 	left: 13%;
 	transform: scaleX(-1); 
 	
 }
 #c2 {
 	position: absolute;
-	top: 33.4%;
+	top: 34.8%;
 	left: 45%;
 	
 }
@@ -66,12 +64,12 @@ body {
 #b1 {
 	z-index: 1;
 	position: absolute;
-	top: 22%;
+	top: 23.6%;
 	right: 7%;
 }
 #b2 {
 	position: absolute;
-	top: 75.7%;
+	top: 77%;
 	right: 15%;
 }
 

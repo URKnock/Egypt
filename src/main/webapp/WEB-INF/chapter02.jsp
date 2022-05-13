@@ -27,7 +27,7 @@
 	<div id="menu">
 		<div>
 			<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-			<img src="<c:url value='/resources/UI/Menu/2.png'/>"/><!-- 접속 코드 추가하기 -->
+			<a href="/shabti/shabti_main.jsp" target="_blank"><img src="<c:url value='/resources/UI/Menu/2.png'/>"/><!-- 접속 코드 추가하기 --></a>
 			<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
 			<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 		</div>

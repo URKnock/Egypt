@@ -29,7 +29,7 @@ function show_info(index) {
 	
 	var num = index;
 	
-	const bg = document.querySelector(".info_back");
+	const bg = document.querySelector(".info_back"); 
 	bg.style.display = "block"; 
 	bg.style.opacity = "1";
 	const window = document.querySelector("#window");

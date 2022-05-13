@@ -4,8 +4,8 @@ function interaction() {
 	if(scene == 3) {
 		$('#kaPng').animate({opacity : 1}, 500);
 		resize("#kaPng");
-		$("#kaPng").width($("#kaPng").width() / 3);
-		$("#kaPng").height($("#kaPng").height() / 3);
+		$("#kaPng").width($("#kaPng").width() / 2);
+		$("#kaPng").height($("#kaPng").height() / 2);
 		center("#kaPng");
 		$('#kaPng').on("click", function() {
 			$("#kaPng").hide();
@@ -13,13 +13,13 @@ function interaction() {
 			setTimeout(function(){
 				resize("#ka");
 				center("#ka");
-				$("#ka").width($("#ka").width() / 3);
-				$("#ka").height($("#ka").height() / 3);
+				$("#ka").width($("#ka").width() / 2);
+				$("#ka").height($("#ka").height() / 2);
 				$('#ka').animate({
-					top: $("#human").position().top + $("#human").height() / 2 - $("#ka").height() * 3 / 2,
-					left: $("#human").position().left + $("#human").width() / 2 - $("#ka").width() * 3 / 2,
-					width : $("#ka").width() * 3,
-					height: $("#ka").height() * 3
+					top: $("#human").position().top + $("#human").height() / 2 - $("#ka").height(),
+					left: $("#human").position().left + $("#human").width() / 2 - $("#ka").width(),
+					width : $("#ka").width() * 2,
+					height: $("#ka").height() * 2
 				}, 100);
 				$('#ka').addClass("select");
 				$('#ka').addClass("pikachu");

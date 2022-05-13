@@ -28,7 +28,7 @@ function init() {
 		$("#user1").css({left: "11%"});
 		$("#nol").delay(1000).css({opacity: "100%"}, 1000).
 		animate({opacity: "0"}, 1000);
-		$("form").hide().delay(6500).fadeIn(1000);	
+		$("form").hide().delay(6000).fadeIn(1000);	
 		$("#boat").delay(500).animate({right: "5%"}, 6000);
 		$("#la").delay(500).animate({right: "36%"}, 6000);
 	
@@ -53,8 +53,10 @@ function init() {
 			count++;
 			console.log(count);
 			if(count >= 2) {
+			$("#la").css({'zIndex': 6});
 			$("#la").addClass("pikachu");
 			$("#la").addClass("select");
+					
 			$("#la").on("click", function() {
 				$("#user1").animate({top:300, left:900}, 2000);
 				$("body").fadeOut(2000);

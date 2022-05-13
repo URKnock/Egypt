@@ -8,9 +8,9 @@ function interaction() {
 		$(item).css("left", 0);
 		$(item).css("bottom", $("#blur").height());
 	});
-	$("#bed").css("bottom", 0);
-	$("#hum").css("bottom", $("#blur").height()-15*h);
-	$("#brain").css("bottom", $("#blur").height()-15*h);
+	$("#bed").css("bottom", -30*h);
+	$("#hum").css("bottom", $("#blur").height()-15*h-30*h);
+	$("#brain").css("bottom", $("#blur").height()-15*h-30*h);
 	$("#background").css("background", "#F9F2DB");
 	$("#background").children().hide();
 	
@@ -70,19 +70,14 @@ function clickBrain( event ) {
 		$("#scroll").attr("src", "/resources/object/ch03/paper_close.webp");
 		lock = 0;
 		$("#brain").removeClass("select");
-		$("#brain").css({"bottom":25*h});
+		$("#brain").css({"bottom":-5*h});
 		$("#hum").hide();
 		resizeWH("#brain", 1270, 1092);
 	}
 	if(lock == 0) {
 		$("#brain").on("load", function() {
-			setTimeout(function() { 
-				if(idx >= 10) {
-					$("form").submit();
-				} else {
-					lock = 0;
-				}
-			}, 350);
+			setTimeout(function() {	lock = 0; }, 350);
+			if(idx >= 9) { $("form").submit(); }
 		});
 		$("#brain").attr("src", brains[idx]);
 		idx += 1;

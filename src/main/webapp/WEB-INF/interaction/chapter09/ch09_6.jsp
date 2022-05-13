@@ -5,11 +5,12 @@
 <meta charset="UTF-8">
 <title>ch09</title>
 <link href="<c:url value='/resources/css/interaction/ch09/ch09_6.css'/>" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/interaction/ch09/ch09_6.js'/>"></script> 
-<script> $(function(){ init(); }); </script>
+<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 </head>
-<body>
+<body onload="init(); interaction();">
 <jsp:include page="../info_window.jsp"/>
 <div id="background">
 	<div id="menu">
@@ -20,10 +21,13 @@
 	</div>	
 	<div class="pre">
 	<a href="<c:url value='/chapter09_5' />" data-transition="fade">
-	<img id="pre" src="<c:url value='/resources/UI/Menu/9_7_2.png'/>"/>
+	<img id="pre" src="<c:url value='/resources/UI/Menu/화살표pre.png'/>"/>
 	</a>
 	</div>
 </div>
+<video id ="mp4" autoplay loop>
+	<source type="video/mp4" src="<c:url value='/resources/background/ch09/천국4층.mp4'/>">
+</video>
 <div id="characters">
 	<div id="character">
 	<img id="c1" src="<c:url value='/resources/character/ch09/사자.webp'/>"/>
@@ -35,48 +39,37 @@
 	<img id="boat_1" src="<c:url value='/resources/character/ch09/4층 배.webp'/>"/>
 	</div>
 </div>
-
-<div id="page">
-	<c:if test="${page ne null}">
-		<jsp:include page="./interaction/chapter09/${page}"/>
-	</c:if>
-</div>
-<form method="post" action="<c:url value='/chapter09'/>">
+<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 <div id="dialogue">
-	<img src='<c:url value="${dialogue.image}"/>'/>
-	<div id="scene">
-		<div id="title">
-			<div>${dialogue.name}</div>
-			<c:if test="${dialogue.nickname ne '없음'}">
-				<div>${dialogue.nickname}</div>
-			</c:if>
-		</div>
-		<div id="content">
-			<p>${dialogue.content}</p>
-			<img />
-		</div>
-	</div>
-	<c:if test="${dialogue.choice ne null}">
-		<div id="choice">
-			<div>
-				<c:forEach var="c" items="${dialogue.choice}">
-					<button name="choice" type="submit" value="${c.id}">${c.content}</button>
-				</c:forEach>
-			</div>
-			<img src='<c:url value="${dialogue.player}"/>'/>
-		</div>
-	</c:if>
+   <img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
+   <div id="scene">
+      <div id="title">
+         <div>${dialogue.name}</div>
+         <c:if test="${dialogue.nickname ne '없음'}">
+            <div>${dialogue.nickname}</div>
+         </c:if>
+      </div>
+      <div id="content">
+         <p id='con'>${dialogue.content}</p>
+         <img />
+      </div>
+   </div>
+   <c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
+      <div id="choice">
+         <div>
+            <c:forEach var="c" items="${dialogue.choice}">
+               <button id="btn" name="choice" type="submit" value="${c.id}">${c.content}</button>
+            </c:forEach>
+         </div>
+         <img src='<c:url value="${dialogue.player}"/>'/>
+      </div>
+   </c:if>
 </div>
-<input name="scene" type="hidden" value="${scene}"/>
-<input name="index" type="hidden" value="${index}"/>
-</form>
-</body>
+<div id="blur"></div>
+	<input id ="sn" name="scene" type="hidden" value="${scene}"/>
+	<input name="index" type="hidden" value="${index}"/>
+	<input name="flag" 	type="hidden" value="${flag}"/>
+	<input name="choice" type="hidden" value="${choice}"/>
 
-<!-- 모달 -->
-<div class="modal">
-  <div class="modal_content" 
-       title="클릭하면 창이 닫힙니다.">
-    <img class="info34" id="info34" src='<c:url value="${info40.img}"/>'/> 
-  </div>
-  </div>
+</body>
 </html>

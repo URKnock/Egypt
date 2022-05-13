@@ -19,15 +19,18 @@
 	</div>
 	<div class="next">
 	<a href="<c:url value='/chapter09_4' />" data-transition="fade">
-	<img id="next" src="<c:url value='/resources/UI/Menu/9_7_1.png'/>"/>
+	<img id="next" src="<c:url value='/resources/UI/Menu/화살표next.png'/>"/>
 	</a>
 	</div>
 	<div class="pre">
 	<a href="<c:url value='/chapter09_2' />" data-transition="fade">
-	<img id="pre" src="<c:url value='/resources/UI/Menu/9_7_2.png'/>"/>
+	<img id="pre" src="<c:url value='/resources/UI/Menu/화살표pre.png'/>"/>
 	</a>
 	</div>
 </div>
+<video id ="mp4" autoplay loop>
+	<source type="video/mp4" src="<c:url value='/resources/background/ch09/천국2층1.mp4'/>">
+</video>
 <div id="characters">
 	<div id="character">
 	<img id="c1" src="<c:url value='/resources/character/ch09/천국 사자 기본.webp'/>"/>

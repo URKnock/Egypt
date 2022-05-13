@@ -73,13 +73,19 @@ $(document).ready(function(){
 		case '14':
 			clicked = [1, 2, 3];
 			break;
+		case '0':
 		case '18':
 			$("#dialogue").on("click", function() {
 				$("form").submit();
 			});	
 			break;
 	}
-	$("#loading").fadeOut();
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
 });
 
 function init() {	
@@ -89,6 +95,8 @@ function init() {
 	x = $("#background").width() / 2.0;
 	
 	setDialogueSize();
+	setSetting();
+	$("#setting").hide();
 	
 	resize("#human");
 	center("#human");
@@ -125,59 +133,14 @@ function init() {
 		canopic_one(); 
 	}
 
-	function setCookie(c_name,value,exdays)
-	{
-	    var exdate=new Date();
-	    exdate.setDate(exdate.getDate() + exdays);
-	    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-	    document.cookie=c_name + "=" + c_value;
-	}
-	
-	function getCookie(c_name)
-	{
-	    var i,x,y,ARRcookies=document.cookie.split(";");
-	    for (i=0;i<ARRcookies.length;i++)
-	    {
-	      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-	      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-	      x=x.replace(/^\s+|\s+$/g,"");
-	      if (x==c_name)
-	        {
-		        return unescape(y);
-	        }
-	      }
-	}
-	
-	var song = document.getElementsByTagName('audio')[0];
-	var voice = document.getElementsByTagName('audio')[1];
-	var played = false;
-	var tillPlayed = getCookie('timePlayed');
-	function update()
-	{
-	    if(!played){
-	        if(tillPlayed){
-	        	song.currentTime = tillPlayed;
-	        	song.play();
-	        	played = true;
-	        }
-	        else {
-	                song.play();
-	                played = true;
-	        }
-	    }
-	    else {
-		    setCookie('timePlayed', song.currentTime);
-	    }
-	}
-	update();
-	setInterval(update, 500);
-	voice.play();
+	setSound();
 	$("#voice").bind("ended", function() {
 		bg4.attr("src", "/resources/character/ch03/anubis_close.webp");
 		if(scene == 18) {
 			setTimeout(function() { $("form").submit(); }, 2000);
 		}
 	});
+	$("#loading").hide();
 }
 
 function object(select, index, arrIndex) {
@@ -262,16 +225,23 @@ function canopic_two() {
 	}
 }
 
+var cenX = ["#human", "#dirt_head", "#dirt_body", "#dirt_bottom", "#dirt_leg"];
+var cenY = ["#human", "#human_cover", "#human_soda", "#human_band"];
+
 function center(element) {
 	centerX(element);
 	centerY(element);
 }
 function centerX(element) {
-	$(element).css("left", x - ($(element).width() / 2));
+	if(cenX.includes(element)) {
+		$(element).css("left", x - ($(element).width() / 2) - 10*w);
+	} else {
+		$(element).css("left", x - ($(element).width() / 2));
+	}
 }
 function centerY(element) {
-	if(element == "#human" || element == "#human_cover" || element == "#human_soda" || element == "#human_band") {
-		$(element).css("bottom", 555*h);
+	if(cenY.includes(element)) {
+		$(element).css("bottom", 560*h);
 	} else {
 		$(element).css("bottom", 606*h);
 	}
