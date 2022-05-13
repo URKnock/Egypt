@@ -20,37 +20,24 @@ body {
 .mainC {
 	opacity:1;
     position: absolute;    
-
+	z-index:1;
  	top: 50%; left: -28%;
  	transform: translate(70%,-50%);
 
  	
 }
-.mainC_s {
-	opacity:0;
-    position: absolute;
-    width: 1200px;
-	height: 500px;
- 	top: 50%; left: -28%;
- 	transform: translate(70%,-50%);
-}
+
 
 .saja {
+	z-index:1;
 	position: absolute;
 	top: 50%; left: -18%;
 	transform: translate(70%,-50%);
 }
-.mainC_k {
-	opacity:0;
-    position: absolute;
-    width: 1200px;
-	height: 500px;
- 	top: 50%; left: -28%;
- 	transform: translate(70%,-50%);
 
- 	
-}
+
 .spear {
+	z-index:3;
 	opacity: 0;
 	position: absolute;
 	width: 50px;

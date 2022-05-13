@@ -43,6 +43,10 @@
 	<img id="cow2" src="<c:url value='/resources/character/ch09/2층 소1.webp'/>"/>
 	</div>	
 </div>
+<script src="<c:url value='/resources/js/sound.js'/>"></script>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/heaven.mp3'/>"></audio>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/pond.mp3'/>"></audio>
+<audio id="cowcow" src="<c:url value='/resources/bgm/ch09/cocwcow.mp3'/>"></audio>
 </body>
 <jsp:include page="../info_window.jsp"/>
 </html>

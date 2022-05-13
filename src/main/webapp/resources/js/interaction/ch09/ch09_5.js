@@ -1,4 +1,5 @@
 function init() {	
+	setSound(); 
 /*	$("video").height("100%");	
 	$("video").width("100%");*/		
 	//$("#background > img:nth-child(4)").addClass("select");
@@ -27,6 +28,8 @@ function init() {
 
 
 	$("#c2").click(function() {
+		var audio = new Audio('/D/resources/bgm/ch09/cowcow.mp3');
+		audio.play();
 		$("#c2").attr("src", 
 		"/D/resources/character/ch09/3층 밭2.webp");	
 		$("#cow1").attr("src", 

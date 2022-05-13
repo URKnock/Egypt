@@ -39,7 +39,14 @@
 	<img id="c2" src="<c:url value='/resources/character/ch09/1층 공물 노예1.webp'/>"/>
 	<img id="c3" src="<c:url value='/resources/character/ch09/1층 공물1.webp'/>"/>
 	</div>
+	
+	
 </div>
+<script src="<c:url value='/resources/js/sound.js'/>"></script>
+<!-- <audio id="bgm" preload="auto" src="/resources/bgm/ch09/heaven.mp3" loop="true" autobuffer></audio> -->
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/heaven.mp3'/>"></audio>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/pond.mp3'/>"></audio>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/bird.mp3'/>"></audio>
 <jsp:include page="interaction/info_window.jsp"/>
 <div id="page">
 	<c:if test="${page ne null}">

@@ -1,5 +1,5 @@
 function init() {	
-
+	setSound(); 
 	$("#background > img:nth-child(4)").addClass("select");
 			$("#b1").addClass("select");
 			$("#b1").addClass("pikachu");
@@ -22,6 +22,8 @@ function init() {
 	
 	
 	$("#b1").click(function() {
+		var audio = new Audio('/D/resources/bgm/ch09/chirping.mp3');
+		audio.play();
 		$("#c1").attr("src", 
 		"/D/resources/character/ch09/천국 사자 놀람.webp");
 		$("#b1").attr("src", 

@@ -43,6 +43,11 @@
 	<img id="b2" src="<c:url value='/resources/character/ch09/1층 매 단상.png'/>"/>
 	</div>
 </div>
+<script src="<c:url value='/resources/js/sound.js'/>"></script>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/heaven.mp3'/>"></audio>
+<audio id="bgm" preload="auto"  loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/pond.mp3'/>"></audio>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/bird.mp3'/>"></audio>
+<audio id="chirp" src="<c:url value='/resources/bgm/ch09/chirping.mp3'/>"></audio>
 <jsp:include page="../info_window.jsp"/>
 </body>
 </html>

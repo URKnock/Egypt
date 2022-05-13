@@ -1,4 +1,5 @@
 function init() {	
+	setSound(); 
 /*	$("video").height("100%");	
 	$("video").width("100%");	*/
 	$("#background > img:nth-child(4)").addClass("select");
@@ -28,6 +29,11 @@ function init() {
 }
 			
 	$("#c3").click(function() {
+		var audio = new Audio('/D/resources/bgm/ch09/splash.mp3');
+		//audio.play();
+				setTimeout(function() {
+					audio.play();
+				}, 940);
 		$("#c1").attr("src", 
 			"/D/resources/character/ch09/천국 사자 박수.webp");
 		$("#c3").attr("src", 

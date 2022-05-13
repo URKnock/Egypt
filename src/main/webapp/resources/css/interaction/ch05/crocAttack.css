@@ -42,6 +42,7 @@ body {
 }
 
 .crocs1 {
+	z-index:3;
 	position: absolute; 
 	width : 900px;
 	transform: scaleY(-1); 
@@ -49,6 +50,7 @@ body {
 	top: 0;
 }
 .crocs2 {
+	z-index:3;
     position: absolute;
     width : 900px;
     transform: scaleY(-1); 
@@ -58,6 +60,7 @@ body {
 
 }
 .crocs3 {
+	z-index:3;
     position: absolute;
     width : 900px;
     bottom: 0;
@@ -65,6 +68,7 @@ body {
 
 }
 .crocs4 {
+	z-index:3;
     position: absolute;
     width : 900px;
 	bottom: 0;

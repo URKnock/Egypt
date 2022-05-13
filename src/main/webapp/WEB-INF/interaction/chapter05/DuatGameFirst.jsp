@@ -4,7 +4,7 @@
 <script src="<c:url value='/resources/js/interaction/ch05/DuatGameFirst.js'/>"></script>
 <div id="characters">
 	<div id="character">
-		<img class="saja" src="<c:url value='/resources/character/ch05/5_2.png'/>">
+		<img class="saja" src="<c:url value='/resources/character/ch05/사자발잘림.png'/>">
 		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b.png'/>">		
 		<img class="spear" src="<c:url value='/resources/object/ch05/하얀창.png'/>">
 	</div>
