@@ -34,6 +34,7 @@ public class RequestMapping {
 		mappings.put("/chapter06", new ChapterController("/chapter06.jsp", 6));
 		mappings.put("/chapter07", new CourtController("/chapter07.jsp"));
 		mappings.put("/chapter08", new ChapterController("/chapter08.jsp", 8));
+		mappings.put("/chapter10", new ChapterController("/chapter10.jsp", 10));
 		mappings.put("/chapter11", new ChapterController("/chapter11.jsp", 11));
 		mappings.put("/chapter11part2", new ChapterController("/interaction/chapter11/chapter11_2.jsp", 11));
 		mappings.put("/chapter11part3", new ChapterController("/interaction/chapter11/chapter11_3.jsp", 11));
