@@ -23,6 +23,8 @@ $(document).ready(function(){
 	});
 
 	if((scene == 1 && index == 0) || (scene == 2 && flag == 1)) {
+		$("#order").css("display", "flex");
+		$("#order").text("마우스로 클릭하여 주변을 둘러보세요.");
  		if(scene == 2 && flag == 1) {
  			clicked = [0, 1, 2, 3, 4, 5, 6];
  			$("#background > img:nth-child(4)").addClass("select");
@@ -140,7 +142,11 @@ function init() {
 			setTimeout(function() { $("form").submit(); }, 2000);
 		}
 	});
-	$("#loading").hide();
+	if(scene == 0) {
+		$("#loading").fadeOut(2000);
+	} else {
+		$("#loading").hide();
+	}
 }
 
 function object(select, index, arrIndex) {
@@ -233,7 +239,7 @@ function center(element) {
 	centerY(element);
 }
 function centerX(element) {
-	if(cenX.includes(element)) {
+	if(cenX.includes(element) || cenY.includes(element)) {
 		$(element).css("left", x - ($(element).width() / 2) - 10*w);
 	} else {
 		$(element).css("left", x - ($(element).width() / 2));
