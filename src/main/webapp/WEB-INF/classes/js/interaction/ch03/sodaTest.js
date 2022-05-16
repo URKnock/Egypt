@@ -4,6 +4,7 @@ function interaction() {
 	$('#niddle').hide();
 	$('canvas').hide();
 	$('.clickable').hide();
+	
 	resizeCenter("#human_soda");
 	resizeCenter("#human_cover");
 
@@ -34,8 +35,7 @@ function interaction() {
 	
 	resize("#scroll");
 	centerX("#scroll");
-	var sl = $('#scroll').offset().left;
-	$("#scroll").css("top", 112*w);
+	$("#scroll").css("top", 0);
 	$('#scroll').hide();
 
 	var canvas1 = document.getElementById("canvas1");
@@ -137,11 +137,13 @@ function interaction() {
 						$('#human').fadeOut(1000);
 						$('#human_cover').fadeOut(1000);
 						$('#human_soda').addClass("fadeLeft");
-						$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
+						
+						$("#scroll").animate({ left:-$("#scroll").width() }, 2000);
+						$("#scroll").delay(1000).fadeOut(1000);
 						setTimeout(function() { $('#human_soda').addClass("fadeActive"); }, 100);
 						setTimeout(function() { $("form").submit(); }, 5000);
 					});
-					$('#human_soda').attr("src", "/resources/character/ch03/3_4.png");
+					$('#human_soda').attr("src", "/resources/character/ch03/3_4_2.png");
 					setTimeout(function() { 
 						$('input[name=choice]').val(-1);
 						$("form").submit();
@@ -159,9 +161,8 @@ function interaction() {
 		}
 	}
 
-	var scrollY = $("#scroll").height() / 2 + 112*w;
 	resize('#potToClick');
-	$('#potToClick').css("top", scrollY - ($('#potToClick').height() / 2));
+	$('#potToClick').css("top", $("#scroll").height() - $('#potToClick').height() - 27*h);
 	$('#potToClick').css("left", x - $("#scroll").width() / 4 - ($('#potToClick').width() / 2));
 	$('#potToClick').on("click", function() {
 		var sLeft = $('#background').width() / 2 - $('#pot').width() / 2;
@@ -171,23 +172,25 @@ function interaction() {
 		$('#pot').css("left", sLeft);
 		$('#click1').show();
 		onUsing = "pot";
-		dragElement(document.getElementById('click1'), "#pot");
+		pot.isHeld = true;
+		document.addEventListener('mousemove', followPot);
+		$('#human_cover').addClass("select");
 	});
 	
 	resize('#bandageToClick');
-	$('#bandageToClick').css("top", scrollY - ($('#bandageToClick').height() / 2));
+	$('#bandageToClick').css("top", $("#scroll").height() - $('#bandageToClick').height() - 27*h);
 	$('#bandageToClick').css("left", x - $('#bandageToClick').width() / 2);
 	$('#bandageToClick').hide();
 
 	resizeWH('#niddleToClick', 43*w, 150*w);
-	$('#niddleToClick').css("top", scrollY - ($('#niddleToClick').height() / 2));
+	$('#niddleToClick').css("top", $("#scroll").height() - $('#niddleToClick').height() - 27*h);
 	$('#niddleToClick').css("left", x + $("#scroll").width() / 4 - $('#niddleToClick').width() / 2);
 	$('#niddleToClick').hide();
 
-	resizeWH('#paper', 1341, 776);
+	resizeWH('#paper', 522, 217);
 	resizeWH('#servant', 1341, 776);
-	$('#paper').css("bottom", 300*h);
-	$('#paper').css("left", 0);
+	$('#paper').css("top", 0);
+	centerX('#paper');
 	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
 	if(flag == "1") {
@@ -204,6 +207,7 @@ function interaction() {
 				$('#click3').show();
 				$('canvas').show();
 				$('#human_cover').addClass("select");
+				$("#human_cover").css("z-index", 10);
 				onUsing = "niddle";
 				$(holes).each(function(index){
 					$(holes[index]).fadeIn(1000);
@@ -213,7 +217,7 @@ function interaction() {
 				$('#niddle').css("transform", "rotate(45deg)");
 				center('#niddle');
 				niddle.isHeld = true;
-				document.addEventListener('mousemove', followMouse);
+				document.addEventListener('mousemove', followNiddle);
 			});
 		});
 		$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
@@ -226,14 +230,12 @@ function interaction() {
 				$('#servant').on("load", function() {
 					resize("#servant");
 					$('#paper').on("load", function() {
-						sl = sl - ($('#paper').width() - $('#scroll').width());
-						$('#paper').animate({
-							top: '0',
-							left: sl
-						}, 2600);
 						setTimeout(function() {
 							$('#scroll').show();
 							$('#paper').hide();
+							$("#human").attr("src", "/resources/character/ch03/3_4_1.png");
+							$("#human_soda").attr("src", "/resources/character/ch03/3_4_1.png");
+							$("#human_band").attr("src", "/resources/character/ch03/3_4_1.png");
 							$('#bandageToClick').fadeIn("slow");
 							$('#niddleToClick').fadeIn("slow");
 							$('#potToClick').fadeIn("slow", function() {
@@ -246,11 +248,11 @@ function interaction() {
 							human_rescale();
 						}, 2000);
 					});
-					$('#paper').attr("src", "/resources/character/ch03/paper_4.webp");
+					$('#paper').attr("src", "/resources/object/ch03/dish_soda1.webp");
 					$('#paper').show();
 				});
-				$('#servant').attr("src", "/resources/character/ch03/servant_3.webp");
-		}, 4800);
+				$('#servant').attr("src", "/resources/character/ch03/servant_none_back.webp");
+		}, 4200);
 	}
 
 let cd = null;
@@ -258,9 +260,30 @@ let Element = null;
 var onUsing = null;
 var enterCnt = 0;
 var isEntering = false;
+
+var pot = document.getElementById("pot");
+var bandage = document.getElementById("bandage");
 var niddle = document.getElementById("niddle");
 
-function followMouse( event ) {
+function followPot( event ) {
+	if(pot.isHeld) {
+		const x = event.x - (pot.clientWidth / 2.0);
+		const y = event.y - (pot.clientHeight / 2.0);
+		pot.style.left = x + 'px';
+		pot.style.top = y + 'px';
+	}
+}
+
+function followBandage( event ) {
+	if(bandage.isHeld) {
+		const x = event.x - (bandage.clientWidth / 2.0);
+		const y = event.y - (bandage.clientHeight / 2.0);
+		bandage.style.left = x + 'px';
+		bandage.style.top = y + 'px';
+	}
+}
+
+function followNiddle( event ) {
 	if(niddle.isHeld) {
 		const x = event.x - (niddle.clientWidth / 2.0);
 		const y = event.y - (niddle.clientHeight / 2.0);
@@ -269,10 +292,11 @@ function followMouse( event ) {
 	}
 }
 
-function enterElement(elem) {
-	console.log("enter: " + elem.id + ", " + isEntering + ", " + enterCnt + ", " + cd.id);
-	cd.isOverlaped = false;
-	if(!isEntering && elem.id == "human_cover") {
+function enterElement() {
+//	console.log("enter: " + elem.id + ", " + isEntering + ", " + enterCnt + ", " + cd.id);
+//	cd.isOverlaped = false;
+	$('#human_cover').removeClass("select");
+	if(!isEntering) {
 		isEntering = true;
 		enterCnt++;
 		if(onUsing == "pot") {
@@ -290,7 +314,9 @@ function enterElement(elem) {
 					$('#click1').hide();
 					$('#click2').show();
 					onUsing = "bandage";
-					dragElement(document.getElementById('click2'), "#bandage");
+					bandage.isHeld = true;
+					document.addEventListener('mousemove', followBandage);
+					$('#human_cover').addClass("select");
 				});
 			}
 		} else if(onUsing == "bandage") {
@@ -310,22 +336,25 @@ function enterElement(elem) {
 					$(holes).each(function(index){
 						$(holes[index]).fadeIn(1000);
 					});
+					$("#human_cover").css("z-index", 10);
 					$('#niddle').show();
 					$('#niddle').css("z-index", "15");
 					$('#niddle').css("transform", "rotate(45deg)");
 					center('#niddle');
 					niddle.isHeld = true;
-					document.addEventListener('mousemove', followMouse);
+					document.addEventListener('mousemove', followNiddle);
 				});
 			}
 		}
 	}
 }
 
-function leaveElement(elem) {
-	console.log("leave: " + elem.id);
-	cd.isOverlaped = false;
-	isEntering = false;
+function leaveElement() {
+//	console.log("leave: " + elem.id);
+//	cd.isOverlaped = false;
+	setTimeout(function() {
+		isEntering = false;
+	}, 2000);
 }
 
 function dragElement(elmnt, elem) {
@@ -376,6 +405,8 @@ function dragElement(elmnt, elem) {
 	}
 }
 
+$("#human_cover").on("mouseenter", enterElement);
+$("#human_cover").on("mouseleave", leaveElement);
 }
 
 function resizeWithDiv(element, div) {

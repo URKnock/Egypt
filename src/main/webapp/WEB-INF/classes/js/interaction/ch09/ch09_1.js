@@ -1,4 +1,5 @@
-function init() {	
+function init() {
+	setSound(); 
 	$("#background > img:nth-child(4)").addClass("select");
 			$("#c3").addClass("select");
 			$("#c3").addClass("pikachu");
@@ -8,7 +9,25 @@ function init() {
 			});
 			
 	$("#c3").click(function() {
-		object("#c3", 33);
+		$("#c2").attr("src", 
+		"/D/resources/character/ch09/1층 공물 노예2.webp");
+		$("#c3").attr("src", 
+		"/D/resources/character/ch09/1층 공물2.webp");
+		$("#keepers").attr("src", 
+		"/D/resources/character/ch09/1층 관문신2.webp");
+		setTimeout(function() {
+					object("#c3", 33);
+				}, 3300);
+		document.querySelector('.close').onclick 
+		= function() { hide_info();
+		$("#c2").attr("src", 
+		"/D/resources/character/ch09/1층 공물 노예1.webp");
+		 $("#c3").attr("src", 
+		"/D/resources/character/ch09/1층 공물1.webp");
+		$("#keepers").attr("src", 
+		"/D/resources/character/ch09/1층 관문신1.webp"); }		
+
+		
 /*		 $(".modal").fadeIn();
 			$(".modal_content").click(function(){
     		$(".modal").fadeOut();
@@ -55,6 +74,7 @@ function init() {
 	$(select).removeClass("select");
 	$("form").submit();
 }
+
 
 function object(select, index) {
 	show_info(index);

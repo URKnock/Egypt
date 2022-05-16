@@ -1,0 +1,14 @@
+대화창
+이름: 대한 Bold 30pt #000000
+내용: 민국 Bold 24pt #000000
+Nametage : 민국 Bold 24 #FBF8F2
+
+사자 선택지
+선택: 민국 Bold 24pt #000000
+비선택: 민국 Regular 24pt #B0988C
+
+
+파일
+Name_tage_1:anubis 사용
+Name_tage_2:horus 사용
+Name_tage_3:네임태그 쓰는 파일 전부 사용

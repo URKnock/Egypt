@@ -25,6 +25,7 @@ function checkElement() {
 	if(entered.length >= 3) {
 		$("#scroll").on("load", function() {
 			setTimeout(function() {
+				$("#scroll").fadeOut(500);
 				$('input[name=choice]').val(-1);
 				$("form").submit(); 
 			}, 2000);

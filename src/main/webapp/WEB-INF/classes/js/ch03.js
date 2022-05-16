@@ -23,6 +23,8 @@ $(document).ready(function(){
 	});
 
 	if((scene == 1 && index == 0) || (scene == 2 && flag == 1)) {
+		$("#order").css("display", "flex");
+		$("#order").text("마우스로 클릭하여 주변을 둘러보세요.");
  		if(scene == 2 && flag == 1) {
  			clicked = [0, 1, 2, 3, 4, 5, 6];
  			$("#background > img:nth-child(4)").addClass("select");
@@ -73,31 +75,30 @@ $(document).ready(function(){
 		case '14':
 			clicked = [1, 2, 3];
 			break;
-		default:
+		case '0':
+		case '18':
 			$("#dialogue").on("click", function() {
 				$("form").submit();
 			});	
 			break;
 	}
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
 });
 
-function init() {
+function init() {	
 	scene = $("input[name='scene']").val();
-
 	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
-		
-	var sw = $("#scene").width() - $("#dialogue > img:first-of-type").width();
-	sw = sw - $("#choice").width();
-	if (sw < 0) sw = 0;
-	$("#scene").width(sw);
-	$("#choice > img").height( $("#dialogue > img").height() );
 	
-	// 블러
-	$("#blur").height( $("#dialogue").height() );
-	$("#blur").css("left", "0");
-	$("#blur").css("bottom", "0");
+	setDialogueSize();
+	setSetting();
+	$("#setting").hide();
 	
 	resize("#human");
 	center("#human");
@@ -134,59 +135,18 @@ function init() {
 		canopic_one(); 
 	}
 
-	function setCookie(c_name,value,exdays)
-	{
-	    var exdate=new Date();
-	    exdate.setDate(exdate.getDate() + exdays);
-	    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-	    document.cookie=c_name + "=" + c_value;
-	}
-	
-	function getCookie(c_name)
-	{
-	    var i,x,y,ARRcookies=document.cookie.split(";");
-	    for (i=0;i<ARRcookies.length;i++)
-	    {
-	      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-	      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-	      x=x.replace(/^\s+|\s+$/g,"");
-	      if (x==c_name)
-	        {
-		        return unescape(y);
-	        }
-	      }
-	}
-	
-	var song = document.getElementsByTagName('audio')[0];
-	var voice = document.getElementsByTagName('audio')[1];
-	var played = false;
-	var tillPlayed = getCookie('timePlayed');
-	function update()
-	{
-	    if(!played){
-	        if(tillPlayed){
-	        	song.currentTime = tillPlayed;
-	        	song.play();
-	        	played = true;
-	        }
-	        else {
-	                song.play();
-	                played = true;
-	        }
-	    }
-	    else {
-		    setCookie('timePlayed', song.currentTime);
-	    }
-	}
-	update();
-	setInterval(update, 500);
-	voice.play();
+	setSound();
 	$("#voice").bind("ended", function() {
 		bg4.attr("src", "/resources/character/ch03/anubis_close.webp");
 		if(scene == 18) {
 			setTimeout(function() { $("form").submit(); }, 2000);
 		}
 	});
+	if(scene == 0) {
+		$("#loading").fadeOut(2000);
+	} else {
+		$("#loading").hide();
+	}
 }
 
 function object(select, index, arrIndex) {
@@ -271,25 +231,28 @@ function canopic_two() {
 	}
 }
 
+var cenX = ["#human", "#dirt_head", "#dirt_body", "#dirt_bottom", "#dirt_leg"];
+var cenY = ["#human", "#human_cover", "#human_soda", "#human_band"];
+
 function center(element) {
 	centerX(element);
 	centerY(element);
 }
 function centerX(element) {
-	$(element).css("left", x - ($(element).width() / 2));
+	if(cenX.includes(element) || cenY.includes(element)) {
+		$(element).css("left", x - ($(element).width() / 2) - 10*w);
+	} else {
+		$(element).css("left", x - ($(element).width() / 2));
+	}
 }
 function centerY(element) {
-	if(element == "#human" || element == "#human_cover" || element == "#human_soda" || element == "#human_band") {
-		$(element).css("bottom", 555*h);
+	if(cenY.includes(element)) {
+		$(element).css("bottom", 560*h);
 	} else {
 		$(element).css("bottom", 606*h);
 	}
 }
 
-function resize(element) {
-	$(element).width($(element).prop("naturalWidth") * w);
-	$(element).height($(element).prop("naturalHeight") * h);
-}
 function resizeWH(element, ew, eh) {
 	$(element).width(ew * w);
 	$(element).height(eh * h);
