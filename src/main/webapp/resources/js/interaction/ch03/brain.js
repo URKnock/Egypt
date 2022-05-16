@@ -63,13 +63,11 @@ function followMouse( event ) {
 function clickBrain( event ) {
 	var lock = -1;
 	if(lock == -1) {
-		$("#scroll").animate({ left:-$("#scroll").width() }, 2000);
-		$("#scroll").delay(1000).fadeOut(1000);
-		$("#stick").hide();
-		$("#brain").off("mouseover");
-		$("#brain").off("mouseout");
-		document.removeEventListener('mousemove', followMouse);
-		
+		$("#scroll").on("load", function() {
+			$("#scroll").animate({ left:-$("#scroll").width() }, 2000);
+			$("#scroll").delay(1000).fadeOut(1000);
+		});
+		$("#scroll").attr("src", "/resources/object/ch03/paper_close.webp");
 		lock = 0;
 		$("#brain").removeClass("select");
 		$("#brain").css({"bottom":-5*h});

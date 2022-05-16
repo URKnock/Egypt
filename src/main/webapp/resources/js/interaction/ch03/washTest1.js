@@ -74,9 +74,10 @@ function interaction() {
 					setTimeout(function() {
 						$('#scroll').show();
 						$('#paper').hide();
-						$('#linen').show();
-						$('#kettleToClick').show();
-						$('#kettleToClick').addClass("select");
+						$('#linen').fadeIn("slow");
+						$('#kettleToClick').fadeIn("slow", function() {
+							$('#kettleToClick').addClass("select");
+						});
 						$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
 						$('#background').children().hide();
 						$('#servant').hide();

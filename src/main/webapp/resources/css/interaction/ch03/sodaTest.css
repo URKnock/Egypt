@@ -60,6 +60,8 @@ canvas {
 #bandage, #pot {
 	position: absolute;
 	cursor: pointer;
+	top: 300;
+	left: 300;
 	z-index: 99;
 }
 
@@ -77,6 +79,7 @@ canvas {
 #niddle {
 	position: absolute;
 	z-index: 11;
+	top: 300;
 	display: none;
 }
 

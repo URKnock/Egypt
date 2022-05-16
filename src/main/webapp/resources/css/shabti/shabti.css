@@ -1,0 +1,100 @@
+/*main ÆÄÀÏ css*/
+.info_back {
+	display: none;
+	position: absolute;
+	width: 100vw; 
+	height: 100vh;
+	top: 0; left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+.background{
+	background-image:"resources/background/1.png";
+	width:1450vh;
+	height:880vh;
+	color: #554740;
+}
+#title{
+	font-family:"´ëÇÑ";
+	font-size: 30pt;
+	color: #554740;
+}
+/*nav¹Ù ÆÄÀÏ css*/
+.container-fluid{
+	width:400px;
+}
+ul{
+	font-family:"¹Î±¹";
+   list-style:none;
+}
+li a{
+	font-family:"¹Î±¹";
+	font-size: 24pt;
+	display: block;
+	color: #554740;
+}
+li a:link { 
+	color: #4C3D36; 
+	text-decoration: none;
+}
+.nav-item:active{
+	backgroud-image:"image/5_1.png";
+}
+/*¿Ã»©¹ÌÄ³·¯¼¿*/
+.owl-nav, .owl-dots 
+{
+	display: block; 
+	text-align: center;
+} 
+.owl-nav .owl-prev, .owl-nav .owl-next
+{ 
+	display:inline-block; 
+	margin:5px;
+} 
+.owl-dots .owl-dot 
+{
+	display: inline-block; 
+	background-color: #ccc;
+	width: 12px; 
+	height: 12px; 
+	border-radius: 50%; 
+	margin:5px ; 
+} 
+.owl-dots .active 
+{
+	background-color:#666;
+}
+.items{
+	width:90px;
+	height:90px;
+	margin:5px ;
+}
+.owl-prev{
+	background-color:transparent;
+	margin:auto;
+	border:0;
+	outline:0;
+}
+.owl-next{
+	background-color:transparent;
+	margin:auto;
+	border:0;
+	outline:0;
+}
+.owl-prev:hover{
+	background:url("image/4_1_1.png");
+	background-color:transparent;
+	background-size:cover;
+	border:0;
+	outline:0;
+}
+.owl-next:hover{
+	background:url("image/4_1_1.png");
+	background-color:transparent;
+	background-size:cover;
+	border:0;
+	outline:0;
+}
+
+
+

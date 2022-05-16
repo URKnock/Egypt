@@ -6,7 +6,7 @@
 <title>사자의 서</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch03.css'/>"/>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
-<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch03.js'/>"></script>
 <script src="<c:url value='/resources/js/sound.js'/>"></script>
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
@@ -54,7 +54,6 @@
 <jsp:include page="interaction/setting.jsp"/>
 <jsp:include page="interaction/info_window.jsp"/>
 <form method="post" action="<c:url value='/chapter03'/>">
-<div id="order"></div>
 <img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 <div id="dialogue">
 	<img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
@@ -83,8 +82,8 @@
 </div>
 <div id="blur"></div>
 <div id="loading"></div>
-<audio id="bgm" preload="auto" src="/resources/bgm/3_forever.mp3" loop="true" autobuffer></audio>
-<audio id="voice" preload="auto" src="/resources/bgm/ch03/3_${scene}_${index}_${flag}.mp3"></audio>
+<audio id="bgm" preload="auto" src="/resources/bgm/ch03/bgm.mp3" loop="true" autobuffer></audio>
+<audio id="voice" preload="auto" src="/resources/bgm/ch03/3_${scene}_${index}_${flag}.wav"></audio>
 <audio id="effect" preload="auto" src=""></audio>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>

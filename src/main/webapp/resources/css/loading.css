@@ -6,18 +6,13 @@
 body {
 	background-color: black;
 }
-
-#title {
-	position: absolute;
-	top: 120px;
-	left: 175px;
-	z-index: 999;
-}
-
-div {
+div, #title {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	z-index: 999;
+}
+div {
 	background-image: url("/resources/background/load/background.png");
 	background-size: cover;
 	background-repeat: no-repeat;

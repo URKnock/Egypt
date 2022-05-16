@@ -7,6 +7,8 @@
 #kettle {
 	position: absolute;
 	cursor: pointer;
+	top: 300;
+	left: 300;
 	transform: rotate(45deg);
 	z-index: 3;
 }
@@ -43,9 +45,14 @@
 	z-index: 3;
 }	
 
-#dragLine, #arrowLine{
+hr{
 	position: absolute;
-    z-index: 999;
+	top: 350; 
+	left: 300;
+    border: none;
+    border-top: 5px dotted red;
+    height: 1px;
+    width: 800;
 }
 
 .circle {
@@ -56,7 +63,8 @@
 	width: 110px;
 	height: 110px;
 	border-radius: 50%;
-	border: 3px dashed #FFBB25;
+	background-color: #ee6c4d;
+	opacity: 0.4;
 	z-index: 3;
 }
 

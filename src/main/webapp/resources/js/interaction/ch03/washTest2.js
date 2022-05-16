@@ -49,8 +49,8 @@ function interaction() {
 	$('#kettleToClick').hide().fadeIn(1100).addClass("select");
 	
 	resize('#linen');
-	$('#linen').css("top", $("#scroll").height() - $('#linen').height() - 27*h);
-	$('#linen').css("left", x + 80*w - ($('#linen').width() / 2));
+	$('#linen').css("top", scrollY - ($('#linen').height() / 2));
+	$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
 	$('#linen').hide().fadeIn(1100);
 
 	var kWidth = $("#kettle").width();
