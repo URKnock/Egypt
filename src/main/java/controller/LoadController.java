@@ -23,7 +23,13 @@ public class LoadController implements Controller {
     	HttpSession session = request.getSession(true);
     	int chapter = 3;
     	if(request.getParameter("chapter") != null) {
-    		Integer.parseInt(request.getParameter("chapter")); 
+    		chapter = Integer.parseInt(request.getParameter("chapter")); 
+    	}
+    	
+    	if(chapter == 8) {
+    		return "redirect:/chapter08";
+    	} else if(chapter == 9) {
+    		return "redirect:/chapter09";
     	}
     	
 		List<String> image = new ArrayList<String>();
