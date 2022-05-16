@@ -8,8 +8,11 @@
 	<link href="<c:url value='/resources/css/ch04.css'/>" rel="stylesheet" type="text/css"/>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	<script defer src="<c:url value='/resources/js/ch04.js'/>" type="text/javascript"></script>
+	
 	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 	<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
+	
+	<script src="<c:url value='/resources/js/sound.js'/>"></script>
 </head>
 <body onload="init();">
 <div id="view">
@@ -31,7 +34,10 @@
 	</div>
 </div>
 </div>
+<jsp:include page="interaction/setting.jsp"/>
+<jsp:include page="interaction/info_window.jsp"/>
 <form method="post" action="<c:url value='/chapter04'/>">
+	<div id="order"></div>
 	<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 	<div id="dialogue">
 		<img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
@@ -44,7 +50,7 @@
 			</div>
 			<div id="content">
 				<p>${dialogue.content}</p>
-				<img />
+				<img id="nextButton" src='<c:url value="/resources/UI/Dialogue/next_triangle.png"/>'>
 			</div>
 		</div>
 		<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
@@ -59,12 +65,15 @@
 		</c:if>
 	</div>
 	<div id="blur"></div>
-	<audio id="bgm" preload="auto" src="/resources/bgm/ch03/bgm.mp3" loop="true" autobuffer></audio>
-	<audio id="voice" preload="auto" src="/resources/bgm/ch03/3_${scene}_${index}_${flag}.wav"></audio>
+	<div id="loading"></div>
+	<audio id="bgm" preload="auto" src='<c:url value="/resources/bgm/4_openmouth.mp3"/>' loop="true" autobuffer></audio>
+	<audio id="voice" preload="auto" src='<c:url value="/resources/bgm/ch04/4_${scene}_${index}_${flag}.mp3"/>'></audio>
+	<audio id="effect" preload="auto" src=""></audio>
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>
 	<input name="choice" type="hidden" value="${choice}"/>
+	
 </form>
 </body>
 </html>

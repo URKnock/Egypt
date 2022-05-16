@@ -2,14 +2,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <link href="<c:url value='/resources/css/interaction/ch07/ch07_0.css'/>" rel="stylesheet" type="text/css"/>
-
+<script defer>
+	var body = document.querySelector('body');
+	body.onload = function() { console.log("아아"); setSound(); };
+</script>
 <div id="interact">
 	<!-- background -->
 	<img class="background" src="<c:url value='/resources/background/ch07/7_0_2.png'/>">
 	<img class="background" src="<c:url value='/resources/background/ch07/7_0_3.png'/>">
 	
 	<div class="bg">
-		<img class="bgObj" src="<c:url value='/resources/background/ch07/7_0_4.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower1.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower2.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower3.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/webp/ch07/45god.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/webp/ch07/balance.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/webp/ch07/feather.webp'/>">

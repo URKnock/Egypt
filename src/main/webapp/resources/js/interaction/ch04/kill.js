@@ -4,11 +4,14 @@ var knife = document.querySelector("#interact .knife");
 
 var animal = document.querySelector("#interact #active");
 
+var effectName;
+
 function init_kill() {
 	body.addEventListener('mousemove', follow_mouse);
 	body.style.cursor = "none";
 	
 	animal.onclick = function() {
+		effSoundPlay( effectName );
 		animal.style.display = "none";
 		animal = document.querySelector("#interact .animal:nth-of-type(6)");
 		animal.style.display = "block";

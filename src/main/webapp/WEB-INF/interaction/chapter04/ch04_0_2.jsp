@@ -8,7 +8,11 @@
 <script defer src="<c:url value='/resources/js/interaction/ch04/effect.js'/>" type="text/javascript"></script>
 <script>
 	var body = document.querySelector('body');
-	body.onload = function() { console.log("motion time~") };
+	body.onload = function() { 
+		console.log("motion time~") setSound();
+		extButton = document.querySelector('#nextButton');
+		nextButton.style.display = "none";
+	};
 </script>
 
 <div id="interact">

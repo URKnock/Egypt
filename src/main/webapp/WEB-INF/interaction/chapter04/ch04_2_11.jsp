@@ -5,7 +5,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer>
 	var body = document.querySelector('body');
-	body.onload = function() { setTimeout(next, 6000); };
+	body.onload = function() { setTimeout(next, 6000); setSound();};
 	
 	function next() { $("form").submit(); }
 </script>

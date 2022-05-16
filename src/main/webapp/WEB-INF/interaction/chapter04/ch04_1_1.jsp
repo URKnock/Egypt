@@ -7,8 +7,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/openMouse.js'/>" type="text/javascript"></script>
 <script>
+	effectName = "perfume_touch";
 	var body = document.querySelector('body');
-	body.onload = function() { init_pese(); };
+	body.onload = function() { init_pese(); setSound();};
 </script>
 
 <div id="interact">

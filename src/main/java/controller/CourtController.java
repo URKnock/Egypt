@@ -16,12 +16,12 @@ public class CourtController implements Controller {
     private String url;
     private int chapter;
 
-    public CourtController(String url) {
+    public CourtController(String url, int chapter) {
         if (url == null) {
             throw new NullPointerException("forwardUrl is null. 이동할 URL을 입력하세요.");
         }
         this.url = url;
-        this.chapter = 7;
+        this.chapter = chapter;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class CourtController implements Controller {
 	    int s = Integer.parseInt(scene);
 	    int i = Integer.parseInt(index);
 
-		if(json.getData().size() == s) {
+		if(json.getData().size() == s && chapter != 14) {
 			session.setAttribute("chapter", chapter - 1);
 			return "/chapter02.jsp";
 		}

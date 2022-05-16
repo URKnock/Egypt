@@ -11,6 +11,8 @@ var item = document.querySelector("#interact .item");
 
 var is_dragging = false;
 
+var effectName;
+
 function init_item() {	
 	body.addEventListener('mousemove', follow_mouse);
 	body.addEventListener('mouseup', function() {
@@ -25,6 +27,8 @@ function init_item() {
 	}
 	spot2.onmouseup = function() {
 		if(is_dragging) {
+			effSoundPlay( effectName );
+			
 			var line = document.querySelector("#interact #line");
 			line.style.display = "none";
 			
