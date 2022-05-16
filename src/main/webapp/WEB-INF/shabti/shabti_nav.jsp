@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav justify-content-start bg-light">
        <li class="nav-item">
-          <a class="nav-link" href="<c:url value='/shabti/shabti_all.jsp'/>">전체</a><p>
+          <a class="nav-link" href="<c:url value='/shabti/shabti_all'/>">전체</a><p>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<c:url value='/shabti/shabti_prepare'/>">영생의 준비</a><p>

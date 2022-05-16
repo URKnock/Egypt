@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
-<!DOCTYPE html>
-<html>
-<!-- 단어장 아이콘 클릭 시 단어장 메인 jsp로 들어가게 코드 추가 요청하기 -->
-<head>
 <link
    href="css/shabti/shabti.css"
    rel="stylesheet">
@@ -25,12 +21,10 @@
 <script src="./js/owl.navigation.js"></script>
 <script type="text/javascript" src= "./js/ui.js?ver=1"></script>
 <div class="info_back"></div>
-<nav><div class="close" onclick="hide_dic()" align ="right"><img src = "image/3.png"></div></nav>
+<nav><div class="close" onclick="hide_dic()" align ="right"><img src = "UI/Shabti/3.png"></div></nav>
 
 <div class = "background">
 <div><img id = "logo" src = "UI/Shabti/2.png">
 <span id = "title">&nbsp;단어장</span></div>
 <div> <%@include file="/shabti/shabti_nav.jsp" %> </div>
 </div>
-</body>
-</html>

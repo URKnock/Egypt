@@ -52,6 +52,7 @@
 	</div>
 </div>
 <jsp:include page="interaction/setting.jsp"/>
+<jsp:include page="shabti/shabti_main.jsp"/>
 <jsp:include page="interaction/info_window.jsp"/>
 <form method="post" action="<c:url value='/chapter03'/>">
 <img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>

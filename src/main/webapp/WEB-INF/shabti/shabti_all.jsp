@@ -1,15 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
 <link
    href="/resources/css/shabti/shabti_info.css"
    rel="stylesheet">
 <meta charset="UTF-8">
-<title>사자의 서</title>
-</head>
-<body>
+
 <div id = "info_window">
 <button type="button" role="presentation" class="prev" onClick="click_prev()">
 	<span aria-label="Previous"><img id = "prev" src = "/resources/UI/Shabti/4_1_2.png" ></span>
@@ -28,8 +23,3 @@
 		</p>
 	</div>
 </div>
-<footer>
-</footer>
-
-</body>
-</html>
