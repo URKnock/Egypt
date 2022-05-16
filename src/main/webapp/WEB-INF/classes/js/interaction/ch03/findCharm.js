@@ -2,7 +2,8 @@ function interaction() {
 	resize("#scroll");
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;
-	$("#scroll").css("top", 112*h);
+	$("#scroll").css("top", 0);
+	$("#scroll").animate({top: 112*h}, 500);
 	var scrollY = $("#scroll").height() / 2 + 112*h;
 
 	for(var i = 1; i < 4; i++) {
