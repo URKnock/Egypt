@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+#info_window {
+	display: none;
+	position: absolute;
+
+	background: transparent;
+	width: 70vh;
+	height: 35%;
+	
+	left: 50%;
+	top: 50%;
+	
+	transform: translate(-50%, -85%);
+	z-index: 1000;
+}
+
+#info_window .infoImg {
+	position: absolute;
+	width: 22vh;
+	height: 22vh;
+	
+	background-position: center center;
+	background-attachment: scale-down;
+	
+	left: 5%;
+	top: 50%;
+	
+	transform: translate(0%, -50%);
+	
+	background-image: /resources/UI/Shabti/7_1.png;
+}
+#info_window .infoText {
+	position: absolute;
+	
+	width: 55%;
+	
+	left: 40%;
+	top: 50%;
+	
+	transform: translate(0%, -50%);
+	
+	border: 1px soild blue;
+}
+#info_window .name{
+	font-family: 'Daehan-Regular';
+	font-size: 3vh;
+	font-weight:bold;
+	text-align: center;
+}
+#info_window .infoText .detail{
+	margin-top: 10%;
+	
+	font-size: 2vh;
+	text-align: left;
+}

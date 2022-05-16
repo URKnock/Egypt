@@ -21,36 +21,30 @@ function interaction() {
 	
 	resize("#scroll");
 	centerX("#scroll");
-	$("#scroll").css("top", 0);
+	var sl = $('#scroll').offset().left;
+	$("#scroll").css("top", 112*w);
+	$('#scroll').attr("src", "/resources/object/ch03/paper_open.webp");
 	
-	resize("#paper");
-	centerX("#paper");
-	$("#paper").css("top", 0);	
-	
-	resizeWH('#potToClick', 110, 100);
-	$('#potToClick').css("top", $("#scroll").height() - $('#potToClick').height() - 27*h);
+	var scrollY = $("#scroll").height() / 2 + 112*w;
+	resize('#potToClick');
+	$('#potToClick').css("top", scrollY - ($('#potToClick').height() / 2));
 	$('#potToClick').css("left", x - ($('#potToClick').width() / 2));
 	$("#potToClick").addClass("select");
 	$('#potToClick').on("click", function() {
-		$('#dragLine').show();
-		$('#dragLine').css("top", 500*h);
-		centerX('#dragLine');
-		var dragLeft = $("#dragLine").offset().left;
+		$('#dragLine').width($("#bed").width());
+		var sLeft = $("#bed").offset().left;
+		var dLeft = sLeft + $('#dragLine').width();
 		$('#potToClick').removeClass("select");
 		$('#potToClick').hide();
+		$('#pot').css("left", sLeft);
+		$('#dragLine').css("left", sLeft);
+		$('#dragSpot').css("top", 300);
+		$('#dragSpot').css("left", dLeft);
 		$('#pot').show();
-		$('#pot').css("top", 500*h - $("#pot").height() / 2);
-		$('#pot').css("left", dragLeft - $("#pot").width());
+		$('#dragLine').show();
 		$('#dragSpot').show();
-		$('#dragSpot').css("top", 500*h-55);
-		$('#dragSpot').css("left", dragLeft + $('#dragLine').width());		
 	});
-	$('#potToClick').hide();
-	
-	setTimeout(function() {
-		$('#potToClick').fadeIn(1100).addClass("select");
-		$('#paper').hide();
-	}, 1000);
+	$('#potToClick').hide().fadeIn(1100).addClass("select");
 
 	$("#pot").on("mousedown", function(event) {
 		let shiftX = event.clientX - pot.getBoundingClientRect().left;

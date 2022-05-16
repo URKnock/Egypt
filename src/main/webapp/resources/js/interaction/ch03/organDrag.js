@@ -18,6 +18,10 @@ function interaction() {
 		$(organName).css("left", $("#human").offset().left + $("#human").width() / 4 * (i - 2));
 		dragElement(document.getElementById('organDiv' + i), organName);
 	}
+	
+	resize('#servant');
+	$('#servant').css("bottom", 300*h);
+	$('#servant').css("left", 0);
 
 	let cd = null;
 	var Element = null;
