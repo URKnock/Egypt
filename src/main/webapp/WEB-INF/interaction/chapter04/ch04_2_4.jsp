@@ -8,11 +8,11 @@
 	#interact .animal:nth-of-type(5) { display: none; }
 	
 	#line { height: 18.14%; bottom: 28%; left: 50%; transform: translate(0vh, -8vh); }
-	.item { height: 05.74%; bottom: 70.5%; left: 41vh; }
+	.item { height: 05.74%; bottom: 67.5%; left: 41vh; }
 	
 	@keyframes getItem {
 	    from { bottom: 33%; left: 49%; }
-	    to { bottom: 70.5%; left: 41vh; }
+	    to { bottom: 67.5%; left: 41vh; }
 	}
 </style>
 
@@ -50,8 +50,8 @@
 	
 	<img class="knife" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">
 	
-	<div class="spot1" id="circle" style="bottom: 49%; left: 50%; transform: translate(-2vh, 0);"></div>
-	<div class="spot2" id="circle" style="bottom: 32%; left: 50%; transform: translate(-2vh, 0);"></div>
+	<div class="spot1" id="circle" style="bottom: 49%; left: 50%; transform: translate(-2.5vh, 0);"></div>
+	<div class="spot2" id="circle" style="bottom: 32%; left: 50%; transform: translate(-2.5vh, 0);"></div>
 	<img id="line" src="<c:url value='/resources/object/ch04/4_4_18.png'/>">
 	
 	<img class="item" src="<c:url value='/resources/object/ch04/4_4_6.png'/>">

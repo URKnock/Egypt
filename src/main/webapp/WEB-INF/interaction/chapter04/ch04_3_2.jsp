@@ -41,4 +41,5 @@
 		osiris.src = "resources/webp/ch04/osiris_talk.webp";
 	}
 	
+	alert(${scene}+", "+${index});
 </script>

@@ -3,7 +3,7 @@
 
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_3.css'/>" rel="stylesheet" type="text/css"/>
 <style>
-	#interact .item { height: 13.24%; left: 39vh; }
+	#interact .item { height: 13.24%; left: 49vh; }
 	
 	#interact .spot {
 		transform: translate(-18vh, 0);
@@ -55,4 +55,6 @@
 	setTimeout(function() {
 		osiris.src = "resources/webp/ch04/osiris.webp";
 	}, 2400);
+	
+	alert(${scene}+", "+${index});
 </script>

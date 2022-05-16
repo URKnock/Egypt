@@ -3,12 +3,13 @@
 
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_3.css'/>" rel="stylesheet" type="text/css"/>
 <style>
-	#interact .item { display: none; height: 23.98%; left: 17vh; }
+	#interact .item { display: none; height: 23.98%; left: 22vh; }
 
 	#interact .circle {
 		transform: translate(-5vh, 0);
 	}
 </style>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/toss.js'/>" type="text/javascript"></script>
@@ -25,11 +26,9 @@
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_2.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_1_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_6.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_5.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_7.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_7.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_8.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_9.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_4.png'/>">
-		<img class="bgObj" src="<c:url value='/resources/background/ch04/4_4_4.png'/>">
 	</div>
 	
 	<!-- character -->

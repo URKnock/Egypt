@@ -3,18 +3,6 @@
 
 <link href="<c:url value='/resources/css/interaction/ch07/ch07_0.css'/>" rel="stylesheet" type="text/css"/>
 
-<style>
-	#active {
-		filter: drop-shadow(0px 0px 0.5vw yellow);
-	}
-	#active:hover {
-		transform: scale(1.1);
-	}
-	#active:active {
-		transform: scale(1.0);
-	}
-</style>
-
 <script> 
 	var chapter = 7;
 	var info_total = 6;
@@ -26,23 +14,30 @@
 	body.onload = function() { console.log("info time~"); };
 </script>
 
-
 <div id="interact">
 	<!-- background -->
 	<img class="background" src="<c:url value='/resources/background/ch07/7_0_2.png'/>">
 	<img class="background" src="<c:url value='/resources/background/ch07/7_0_3.png'/>">
 	
-	<img class="bgObj" src="<c:url value='/resources/background/ch07/7_0_4.png'/>">
-	<img id="active" onclick="tap_info(this, 6)" class="bgObj" src="<c:url value='/resources/background/ch07/7_0_5.png'/>">
-	<img id="active" onclick="tap_info(this, 0)" class="bgObj" src="<c:url value='/resources/background/ch07/7_0_6.png'/>">
-
+	<div class="bg">
+		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower1.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower2.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower3.webp'/>">
+		<img id="active" onclick="tap_info(this, 6)" class="bgObj" src="<c:url value='/resources/webp/ch07/45god.webp'/>">
+		<img id="active" onclick="tap_info(this, 0)" class="bgObj" src="<c:url value='/resources/webp/ch07/balance.webp'/>">
+		<img id="active" onclick="tap_info(this, 4)" class="bgObj" src="<c:url value='/resources/webp/ch07/feather.webp'/>">
+	</div>
+	
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/character/ch07/6_1.png'/>">
-	<img id="active" onclick="tap_info(this, 1)" class="character" src="<c:url value='/resources/character/ch07/6_3.png'/>">
-	<img id="active" onclick="tap_info(this, 2)" class="character" src="<c:url value='/resources/character/ch07/6_18.png'/>">
-	<img id="active" onclick="tap_info(this, 3)"class="character" src="<c:url value='/resources/character/ch07/6_5.png'/>">
-	<img id="active" onclick="tap_info(this, 5)" class="character" src="<c:url value='/resources/character/ch07/6_6.png'/>">
+	<img id="active" onclick="tap_info(this, 1)" class="character" src="<c:url value='/resources/webp/ch07/anubis.webp'/>">
+	<img id="active" onclick="tap_info(this, 2)" class="character" src="<c:url value='/resources/webp/ch07/horus.webp'/>">
+	<img id="active" onclick="tap_info(this, 3)"class="character" src="<c:url value='/resources/webp/ch07/thoth.webp'/>">
+	<img id="active" onclick="tap_info(this, 5)" class="character" src="<c:url value='/resources/webp/ch07/ammut.webp'/>">
 
-	<div class="guide" align="center">마우스를 클릭하여 주변을 둘러보세요</div>
+	<div class="guide">
+		<img src="<c:url value='/resources/UI/Info/guide.png'/>">
+		<div>마우스를 클릭하여 주변을 둘러보세요.</div>
+	</div>
 	<jsp:include page="../info_window.jsp"/>
 </div>
