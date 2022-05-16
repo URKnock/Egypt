@@ -35,6 +35,7 @@
 	height: 31.5%;
 	width: 100%;
 	top: 68.5%;
+	z-index: 2;
 }
 #bg .bgObj:nth-of-type(3){
 	top: 0;
@@ -85,7 +86,7 @@
 }
 /* 캐릭터들 */
 #interact .character {
-	bottom: 31%;
+	bottom: 28%;
 	z-index: 3;
 }
 #interact .character:nth-of-type(2) {
@@ -94,7 +95,7 @@
 }
 #interact .character:nth-of-type(3) {
 	height: 65.83%;
-	bottom: 28.5%;
+	bottom: 25.5%;
 	left: 0%;
 }
 #interact .character:nth-of-type(4) {

@@ -1,31 +1,22 @@
 @charset "UTF-8";
 
 #interact .effect1 {
-	width: 13.69%;
-	opacity: 0;
+	display: none;
+	height: 21.11%;
 	
-	left: 35%;
-	top: 25%;
+	left: 36%;
+	top: 20%;
 	
-	animation-name: effect1;
-	animation-duration: 1s;
-	animation-play-state: paused;
-	
-	z-index: 2;
+	z-index: 5;
 }
 #interact .effect2 {
-	height: 100%;
-	width: auto;
-	opacity: 0;
+	display: none;
+	height: 24.81%;
 	
-	left: -10%;
+	left: 15%;
 	top: 0%;
 	
-	animation-name: effect2;
-	animation-duration: 3s;
-	animation-play-state: paused;
-	
-	z-index: 2;
+	z-index: 5;
 }
 #interact .effect3{
 	width: 100%;

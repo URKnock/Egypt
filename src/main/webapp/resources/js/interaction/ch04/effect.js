@@ -25,14 +25,16 @@ function tap_motion(e, i) {
 		
 		if(i == 0) {
 			setTimeout(function() {
-				effect[1].style.animationPlayState = 'running';
+				effect[1].style.display = 'block';
+				setTimeout(function() {
 				effect[2].style.animationPlayState = 'running';
-			}, 1800);
+				}, 600);
+			}, 1000);
 		}
 		else if(i == 1) {
 			setTimeout(function() {
-				effect[0].style.animationPlayState = 'running';
-			}, 1800);
+				effect[0].style.display = 'block';
+			}, 1200);
 			
 		}
 		motion_total--;

@@ -10,10 +10,10 @@
 	
 	#line { height: 02.31%; bottom: 45%; left: 50%; transform: translate(-13.5vh, -4vh); }
 	
-	.item { height: 05.92%; bottom: 69%; left: 13vh; }
+	.item { height: 05.92%; bottom: 66%; left: 13vh; }
 	@keyframes getItem {
 	    from { bottom: 50%; left: 43%; }
-	    to {  bottom: 69%; left: 13vh; }
+	    to {  bottom: 66%; left: 13vh; }
 	}
 </style>
 

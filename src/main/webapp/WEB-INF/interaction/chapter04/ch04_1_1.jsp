@@ -25,15 +25,15 @@
 	<img id="active" onclick="tap_tool(this)" class="object" src="<c:url value='/resources/webp/ch04/bottle.webp'/>">
 	
 	<div id="spots">
-		<div id="spot" class="circle" style="top: -2vh; right: 15vh;"></div>
-		<div id="spot" class="circle" style="top: 1vh; right: 14vh;"></div>
-		<div id="spot" class="circle" style="top: 3vh; right: 17vh;"></div>
+		<div id="spot" class="circle" style="top: -1vh; right: 17vh;"></div>
+		<div id="spot" class="circle" style="top: 2vh; right: 16vh;"></div>
+		<div id="spot" class="circle" style="top: 5vh; right: 20vh;"></div>
 		<img id="oil01" class="oil" src="<c:url value='/resources/object/ch04/4_3_5.png'/>"
-			style="top: -2vh; right: 17vh;">
+			style="top: -1vh; right: 19vh;">
 		<img id="oil02" class="oil" src="<c:url value='/resources/object/ch04/4_3_5.png'/>"
-			style="top: 1vh; right: 16vh;">
+			style="top: 2vh; right: 18vh;">
 		<img id="oil03" class="oil" src="<c:url value='/resources/object/ch04/4_3_5.png'/>"
-			style="top: 3vh; right: 19vh;">
+			style="top: 5vh; right: 22vh;">
 	</div>
 	
 	<img class="tool" src="<c:url value='/resources/object/ch04/4_3_3.png'/>"/>

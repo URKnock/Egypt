@@ -41,29 +41,34 @@ function info_close() {
 }
 
 function tap_info(e, i) {
-	if(e.id == 'active') {
-		e.id = 'inactive';
+	var visited;
+	if(e.id == 'active') visited = false;
+	else visited = true;
+
+	e.id = 'visited';
+	
+	pause();
+	if(i < 3) {
+		e.src = motion[i];
 		
-		info_total--;
-		pause();
-		if(i < 3) {
-			e.src = motion[i];
-			
-			const bg = document.querySelector(".info_back");
-			bg.style.display = "block";
-			bg.style.opacity = "0";
-			
-			if(i == 0) 
-				setTimeout(function() {
-					show_info(i);
-				}, 3600);
-			else
-				setTimeout(function() {
-					show_info(i);
-				}, 2400);
-		}
+		const bg = document.querySelector(".info_back");
+		bg.style.display = "block";
+		bg.style.opacity = "0";
+		
+		if(i == 0) 
+			setTimeout(function() {
+				show_info(i);
+			}, 3600);
 		else
-			show_info(i);
+			setTimeout(function() {
+				show_info(i);
+			}, 2400);
+	}
+	else
+		show_info(i);
+	
+	if(visited == false) {
+		info_total--;
 		
 		if(info_total <= 0) { // 모든 정보 확인함.
 			var guide = document.querySelector('.guide');
@@ -75,3 +80,15 @@ function tap_info(e, i) {
 		}
 	}
 }
+
+if(info_total <= 0) { // 모든 정보 확인함.
+	var guide = document.querySelector('.guide');
+	guide.style.display = 'none';
+
+	Anubis.id = 'active';
+	Anubis.style.filter ="drop-shadow(0px 0px 1.5vh red)";
+	Anubis.onclick = function() { $("form").submit(); };
+}
+
+document.querySelector('.guide').onclick = function() { $("form").submit(); };
+

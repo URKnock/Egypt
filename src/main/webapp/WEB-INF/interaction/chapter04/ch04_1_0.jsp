@@ -27,9 +27,9 @@
 	<img id="active" onclick="tap_tool(this)" class="object" src="<c:url value='/resources/webp/ch04/pese.webp'/>">
 	
 	<div id="spots">
-		<div id="spot" class="circle" style="top: -2vh; right: 15vh;"></div>
-		<div id="spot" class="circle" style="top: 1vh; right: 18.5vh;"></div>
-		<div id="spot" class="circle" style="top: 3vh; right: 17vh;"></div>
+		<div id="spot" class="circle" style="top: -2vh; right: 17vh;"></div>
+		<div id="spot" class="circle" style="top: 2vh; right: 21vh;"></div>
+		<div id="spot" class="circle" style="top: 5vh; right: 19vh;"></div>
 	</div>
 	
 	<img class="tool" src="<c:url value='/resources/object/ch04/4_3_1.png'/>"/>

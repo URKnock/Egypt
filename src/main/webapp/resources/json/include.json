@@ -157,15 +157,7 @@
 },
 {
 	"chapter":4, "scene":18, "flag":0,
-	"page":"ch04_3_0.jsp"
-},
-{
-	"chapter":4, "scene":19, "flag":0,
-	"page":"ch04_3_1.jsp"
-},
-{
-	"chapter":4, "scene":20, "flag":0,
-	"page":"ch04_3_2.jsp"
+	"page":"ch04_3.jsp"
 },
 
 {
@@ -308,23 +300,23 @@
 },
 {
 	"chapter":7, "scene":4, "flag":0,
-	"page":"ch07_2.jsp"
+	"page":"ch07_1.jsp"
 },
 {
 	"chapter":7, "scene":5, "flag":0,
-	"page":"ch07_2.jsp"
+	"page":"ch07_1.jsp"
 },
 {
 	"chapter":7, "scene":6, "flag":0,
-	"page":"ch07_2.jsp"
+	"page":"ch07_2_1.jsp"
 },
 {
 	"chapter":7, "scene":7, "flag":0,
-	"page":"ch07_3_info.jsp"
+	"page":"ch07_2_2.jsp"
 },
 {
 	"chapter":7, "scene":8, "flag":0,
-	"page":"ch07_3.jsp"
+	"page":"ch07_3_info.jsp"
 },
 {
 	"chapter":7, "scene":9, "flag":0,

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#interact {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#interact img {
+	position: absolute;
+}
+
+/* 배경 */
+#interact .background {
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+#interact .bg .bgObj {
+	z-index: 2;
+}
+#interact .bg .bgobj:nth-of-type(1) {
+	height: 28.05%;
+	width: 100%;
+	bottom: 0%;
+	left: 0%;
+}
+#interact .bg .bgobj:nth-of-type(2) {
+	height: 24.90%;
+	bottom: 28.05%;
+	right: -72vh;
+}
+
+/* 캐릭터 */
+#interact .character {
+	height: 45.18%;
+	bottom: 28.05%;
+	left: 7%;
+	z-index: 2;
+}
+#interact .god {
+	height: 34.25%;
+	bottom: 32.2%;
+	right: 7vh;
+	z-index: 2;
+}

@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daehan-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.info_back {
+	display: none;
+	position: absolute;
+	width: 100vw; height: 100vh;
+	top: 0; left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+#window {
+	display: none;
+	position: absolute;
+
+	width: 100vw;
+	height: 100vh;
+	
+	top: 0%;
+	left: 0%;
+	
+	z-index: 1000;
+	font-weight: bold;
+}
+#window>img {
+	position: absolute;
+	width: auto;
+	height: 100vh;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#window .infoImg {
+	position: absolute;
+	width: 28vh;
+	height: 28vh;
+	
+	left: 50%;
+	top: 50%;
+	
+	transform: translate(-125%, -50%);
+}
+#window .infoImg>img {
+	width: 100%;
+	height: 100%;
+}
+#window .infoText {
+	position: absolute;
+	
+	width: 40vh;
+	
+	left: 50%;
+	top: 50%;
+	
+	transform: translate(-10%, -50%);
+}
+#window .infoText .top{
+	display: flex;
+	width: 100%;
+}
+#window .infoText .top .name{
+	font-family: 'Daehan-Regular';
+	font-size: 2.77vh;
+	font-weight: bold;
+}
+#window .infoText .tag{
+	position: relative;
+	margin: 0.5vh;
+	margin-left: 2vh;
+	width: 9.39vh;
+	height: 2.31vh;
+}
+#window .infoText .tag>img{
+	height: 2.31vh;
+	width: auto;
+	opacity: 0.5;
+}
+#window .infoText .tag>div{
+	position: absolute;
+	width: 15vh;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.85vh;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+#window .infoText .content{
+	margin-top: 5%;
+	
+	font-size: 2.22vh;
+}
+
+#window .close {
+	position: absolute;
+	
+	left: 50%;
+	top: 50%;
+	
+	width: 5vh;
+	height: 5vh;
+	transform: translate(660%, -350%);
+}
