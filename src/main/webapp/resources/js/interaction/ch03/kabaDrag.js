@@ -32,14 +32,13 @@ function interaction() {
 		resize("#baPng");
 		$("#baPng").width($("#baPng").width() / 3);
 		$("#baPng").height($("#baPng").height() / 3);
-		center("#baPng");
-		$('#baPng').css({"top":450*h});
+		$('#baPng').css({"top":425*h, "left": 980*w});
 		$('#baPng').on("click", function() {
 			$("#baPng").hide();	
 			$('#ba').css({opacity:1});
 			setTimeout(function(){
 				resize("#ba");
-				center("#ba");
+				$('#ba').css({"top":425*h, "left": 980*w});
 				$("#ba").width($("#ba").width() / 3);
 				$("#ba").height($("#ba").height() / 3);
 				$('#ba').animate({
@@ -52,7 +51,10 @@ function interaction() {
 				$('#ba').addClass("select");
 				$('#ba').addClass("pikachu");
  			}, 100);
-			$('#ba').on("click", function(){ object("#ba", 8); });	
+			$('#ba').on("click", function(){
+				$('#ba').animate({top : -300}, 500);
+				object("#ba", 8);
+			});	
 		});
 	}
 }

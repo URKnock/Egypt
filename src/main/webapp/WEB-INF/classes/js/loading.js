@@ -13,6 +13,15 @@ function init() {
 	$("#character").width($("#character").width() * w);
 	$("#character").height($("#character").height() * h);
 	$("#character").fadeIn(2000);
+	setTimeout(function() {
+		$("*").on("click", function() {
+			$("*").off("click");
+			$("div").fadeOut(500);
+			setTimeout(function() {
+				location.replace("/chapter" + chapter);
+			}, 500);
+		});
+	}, 1000);
 	
 	if(chapter == 3) {
 		$("#character").css({"left":820*w, "top":120*h});
@@ -27,13 +36,6 @@ function init() {
 	}
 	
 	preload(lists);
-	$("*").on("click", function() {
-		$("*").off("click");
-		$("div").fadeOut(1000);
-		setTimeout(function() {
-			location.replace("/chapter" + chapter);
-		}, 1500);
-	});
 }
 
 function preload(arrayOfImages) {

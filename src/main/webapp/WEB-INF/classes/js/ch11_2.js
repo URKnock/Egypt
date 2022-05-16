@@ -14,6 +14,8 @@ $(document).ready(function(){
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
+	
+	var sound = new Audio("/resources/bgm/ch11/11_"+ scene +"_" + index + "_" + flag + ".mp3");
 
 	$("#dialogue").hide();
 	$("#blur").hide();
@@ -29,13 +31,16 @@ $(document).ready(function(){
 		$("#devil").on("click", function() {
 			$("#pot_dead").attr("src", '/resources/object/ch11/2층_항아리사자2.webp');
 			setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/2층_악마3.webp'); }, 2000);
+			setTimeout(function() { $("#human").attr("src", '/resources/character/ch11/사자_놀람.webp'); }, 2600);
 			setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/2층_악마1.webp'); }, 3800);
 			setTimeout(function() { $("#pot_dead").attr("src", '/resources/object/ch11/2층_항아리사자1.webp'); }, 4000);
-			setTimeout(function() { $("#dialogue").fadeIn(500); $("#blur").fadeIn(500);}, 4500);
+			setTimeout(function() { $("#dialogue").fadeIn(500); $("#blur").fadeIn(500); sound.currentTime=0; sound.play();}, 4500);
+			setTimeout(function() { $("#human").attr("src", '/resources/character/ch11/사자.webp'); }, 4525);
 			setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/2층_악마2.webp'); }, 4550);
 		});
 		
 		$("#dialogue").on("click", function() {
+			sound.pause();
 			$("#dialogue").fadeOut(500); $("#blur").fadeOut(500);
 			$("#devil").attr("src", '/resources/character/ch11/2층_악마1.webp');
 			//setTimeout($('form').submit(), 4500); //null이라서 전송 불가. 
@@ -45,8 +50,10 @@ $(document).ready(function(){
 
 function init() { //화면 초기화
 	scene = $("input[name='scene']").val();
+	setDialogueSize();
+	setSound();
 
-	w = $("#background").width() / 2650 / 0.87;
+	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
 
@@ -56,11 +63,6 @@ function init() { //화면 초기화
 	$("#scene").width(sw);
 	$("#choice > img").height($("#dialogue > img").height());
 
-	// 블러
-	$("#blur").height( $("#dialogue").height() );
-	$("#blur").css("left", "0");
-	$("#blur").css("bottom", "0");
-	
 	resize("#human");
 	center("#human");
 	
@@ -87,7 +89,7 @@ function init() { //화면 초기화
 	var bg4 = $("#background > img:nth-child(4)"); //화살표
 	bg4.width(bg4.prop("naturalWidth") * w);
 	bg4.height(bg4.prop("naturalHeight") * w);
-	bg4.css("left", x - (bg1.width() / 2.0) + 1200 * w);
+	bg4.css("left", x - (bg1.width() / 2.0) + 1080 * w);
 	bg4.css("bottom", $("#hellFireFront").height() + 170 * w);
 
 	var bg5 = $("#background > img:nth-child(5)"); //땅바닥
@@ -122,7 +124,7 @@ function init() { //화면 초기화
 	var bg10 = $("#background > img:nth-child(10)"); //반대 화살표
 	bg10.width(bg10.prop("naturalWidth") * w);
 	bg10.height(bg10.prop("naturalHeight") * w);
-	bg10.css("left", x - (bg1.width() / 2.0) - 950 * w);
+	bg10.css("left", x - (bg1.width() / 2.0) - 700 * w);
 	bg10.css("bottom", bg4.css("bottom"));
 
 	var bg11 = $("#background > img:nth-child(11)"); //2층 항아리 탕 안 사자
@@ -131,10 +133,10 @@ function init() { //화면 초기화
 	bg11.css("left", x - (bg1.width() / 2.0) + 160 * w);
 	bg11.css("bottom", $("#hellFireFront").height() - 125*w);
 	
-	var bg12 = $("#background > img:nth-child(12)"); //2층 단상
+	var bg12 = $("#background > img:nth-child(12)"); //사자
 	bg12.width(bg12.prop("naturalWidth") * w);
 	bg12.height(bg12.prop("naturalHeight") * w);
-	bg12.css("left", x - (bg1.width() / 2.0) - 650 * w);
+	bg12.css("left", x - (bg1.width() / 2.0) - 530 * w);
 	bg12.css("bottom", $("#ground").height());
 }
 

@@ -1,24 +1,26 @@
 var count = 0;
 
-$(function init() { 
+function interaction() {
+	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	
 	if(scene == 5) { /*이런 말하기도 무섭게*/
-		$("#background").children().hide();
-		$("form").hide().fadeIn(1000)
-		.fadeOut(2000);
+		$("form").hide().delay(2200).fadeIn(1000);
+		
+		$("form").hide().fadeIn(1800).fadeOut(2000);
 		
 		setTimeout(function() {
-			$(".spear").css({opacity: "100%"}, 500);
+			$(".spear").css({opacity: 1});
 		}, 1800);
 
-		$(".spear").delay(2900).animate({left: "45%"}, 1000)
-		.fadeOut(1000);
-		
+		//창 다가감
+		$(".spear").delay(2900).animate({left: "45%"}, 1000).fadeOut(1000);
+		$(".saja").delay(3000).animate({opacity: "0%"});
+			setTimeout(function() {
+			$(".saja").attr("src", 
+			"/D/resources/character/ch05/하얀사자.png");
+		}, 3100);
 		$(".guide").delay(4000).animate({opacity: "100%"}, 500).delay(2000).animate({opacity: "0%"}, 500);
-
-		
-		
 		
 		//악어 튀어나오고
 		 setTimeout(function() {
@@ -63,67 +65,56 @@ $(function init() {
 			"/D/resources/object/ch05/악어_진행왼.webp");
 		}, 6400); 
 		
-		
-		
-		
 		$(".crocsi1").on("load", function() {
-			$(".crocsi1").one("click", function() {
-			console.log(count); 
-			$(".crocsi1").attr("src", 
-			"/D/resources/object/ch05/악어_죽음왼.webp");
-			isclicked();
-			$(".crocsi1").fadeOut(2000);
-		
-			if(count == 8) {
-				setTimeout("$('form').submit()", 3000);
+			$(".crocsi1").on("click", function() {
+				$(".crocsi1").off("click");
+				console.log(count); 
+				$(".crocsi1").attr("src", "/D/resources/object/ch05/악어_죽음왼.webp");
+				isclicked();
+				$(".crocsi1").fadeOut(2000);
+				if(count == 8) {
+					setTimeout(function() { $('form').submit() }, 3000);
 				}
-			
 			 });
 		});		
 		
 		$(".crocsi2").on("load", function() {
-			$(".crocsi2").one("click", function() {
-			console.log(count); 
-			$(".crocsi2").attr("src", 
-			"/D/resources/object/ch05/악어_죽음오.webp");
-			isclicked();
-			$(".crocsi2").fadeOut(2000);
-		
-			if(count == 8) {
-				setTimeout("$('form').submit()", 3000);
-				}
-			
-			 });
-		});
-		
-		
-		
-		$(".crocsi3").on("load", function() {
-			$(".crocsi3").one("click", function() { 
+			$(".crocsi2").on("click", function() {
 				$(".crocsi2").off("click");
 				console.log(count);
-			$(".crocsi3").attr("src", 
-			"/D/resources/object/ch05/악어_죽음왼.webp");
-			isclicked();
-			$(".crocsi3").fadeOut(2000);
-			if(count == 8) {
-				setTimeout("$('form').submit()", 3000);
+				$(".crocsi2").attr("src", "/D/resources/object/ch05/악어_죽음오.webp");
+				isclicked();
+				$(".crocsi2").fadeOut(2000);
+				if(count == 8) {
+					setTimeout(function() { $('form').submit() }, 3000);
+				}
+			});
+		});
+			
+		$(".crocsi3").on("load", function() {
+			$(".crocsi3").on("click", function() {
+				$(".crocsi3").off("click");
+				console.log(count); 
+				$(".crocsi3").attr("src", "/D/resources/object/ch05/악어_죽음왼.webp");
+				isclicked();
+				$(".crocsi3").fadeOut(2000);
+				if(count == 8) {
+					setTimeout(function() { $('form').submit() }, 3000);
 				}
 			 });
 		});
 		
 		$(".crocsi4").on("load", function() {
-			$(".crocsi4").one("click", function() { 
-				$(".crocsi2").off("click");
+			$(".crocsi4").on("click", function() {
+				$(".crocsi4").off("click");
 				console.log(count);
-			$(".crocsi4").attr("src", 
-			"/D/resources/object/ch05/악어_죽음오.webp");
-			isclicked();
-			$(".crocsi4").fadeOut(2000);
-			if(count == 8) {
-				setTimeout("$('form').submit()", 3000);
+				$(".crocsi4").attr("src", "/D/resources/object/ch05/악어_죽음오.webp");
+				isclicked();
+				$(".crocsi4").fadeOut(2000);
+				if(count == 8) {
+					setTimeout(function() { $('form').submit() }, 3000);
 				}
-			 });
+			});
 		});
 		
 		/* 악어 추가되면 if count == 4로 바꾸기 
@@ -157,10 +148,5 @@ $(function init() {
 		function isclicked() {
 			count++;
 		}
-		
-
-	}
-		
-		
-	
-});
+	}	
+}

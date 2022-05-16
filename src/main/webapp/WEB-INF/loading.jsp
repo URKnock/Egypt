@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>사자의 서</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/loading.css'/>"/>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 <script src="<c:url value='/resources/js/loading.js'/>"></script>
 <script>
 <c:forEach items="${image}" var="img">
@@ -15,7 +15,7 @@
 </script>
 <c:if test="${chapter eq 3}">
 	<link rel="prerender" href="<c:url value='/chapter03'/>"/>
-	<audio preload="auto" src="<c:url value='/resources/bgm/ch03/bgm.mp3'/>"></audio>
+	<audio preload="auto" src="<c:url value='/resources/bgm/3_forever.mp3'/>"></audio>
 </c:if>
 <c:forEach items="${js}" var="j">
 	<link rel="prefetch" href="${j}"/>
@@ -26,14 +26,14 @@
 <c:forEach items="${webp}" var="w">
 	<link rel="prefetch" as="image" type="image/webp" href="${w}" crossorigin/>
 </c:forEach>
-<c:forEach items="${wav}" var="w">
-	<audio preload="auto" src="${w}"></audio>
+<c:forEach items="${mp3}" var="m">
+	<audio preload="auto" src="${m}"></audio>
 </c:forEach>
 </head>
 <body onload="init();">
 <div>
 	<img id="title" src="<c:url value='/resources/background/load/title${chapter}.png'/>">
-	<img id="character" src="<c:url value='/resources/background/load/ch${chapter}.png'/>">
+	<img id="character" src="<c:url value='/resources/background/load/${chapter}.webp'/>">
 </div>
 <img src=""/>
 <input type="hidden" value="${chapter}"/>

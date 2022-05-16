@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <link href="<c:url value='/resources/css/interaction/ch03/sodaTest.css'/>" rel="stylesheet" type="text/css"/>
-<img src="../resources/object/ch03/paper.png" id="scroll"/>
+<img src="../resources/object/ch03/dish.png" id="scroll"/>
 <div id="click1" class="clickable"><img src="../resources/object/ch03/pot_rotate.webp" id="pot"/></div>
 <div id="click2" class="clickable"><img src="../resources/object/ch03/bandage.png" id="bandage"/></div>
 <div id="click3" class="clickable"><img src="../resources/object/ch03/niddle.png" id="niddle"/></div>
@@ -15,7 +15,7 @@
 <img src="../resources/character/ch03/3_3.png" id="human_band"/>
 <img src="../resources/character/ch03/3_3.png" id="human" class="human"/>
 <img src="../resources/character/ch03/3_3_1.png" id="human_cover" class="droppable"/>
-<img src="../resources/character/ch03/paper_1.webp" id="servant">
+<img src="../resources/character/ch03/servant_dish_soda.webp" id="servant">
 <img src="../resources/object/ch03/none.png" id="paper">
 <c:forEach var="i" begin="1" end="7">
 	<div id="hole${i}" class="hole holes"></div>

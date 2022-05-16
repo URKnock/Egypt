@@ -4,7 +4,7 @@ const rand3 = Math.floor(Math.random() * 500);
 const rand4 = Math.floor(Math.random() * 500);
 var flag = 0;
 
-$(function init() {
+function interaction() {
 	/* $(".bug1").click(function() {	
 		$(this).animate({top:rand1, left:rand2}, 900);
 	}); */
@@ -39,7 +39,6 @@ $(function init() {
 	});
 	$(".bug4").click(function() {	
 		$(this).animate({top:"+=100", left:"+=500"}, 900);
-	});
-	
-});	
+	});	
+}
 

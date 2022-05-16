@@ -13,9 +13,12 @@
 	<img src="<c:url value='/resources/background/ch00/0_3.png'/>"/>
 	<img src="<c:url value='/resources/background/ch00/0_5.png'/>"/>
 </div>
+<iframe src="/resources/bgm/ch00/click.mp3" allow="autoplay"></iframe>
 <video width="100%" preload="auto" style="pointer-events: none;">
 	<source type="video/mp4" src="<c:url value='/resources/background/ch00/0_6.mp4'/>">
 </video>
+<audio id="bgm" preload="auto" src="/resources/bgm/0_main.mp3" autoplay loop></audio>
+<audio id="effect" preload="auto" src="/resources/bgm/ch00/click.mp3"></audio>
 <img id="logo" src="<c:url value='/resources/background/ch00/0_4.png'/>"/>
 </body>
 </html>

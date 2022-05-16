@@ -7,8 +7,6 @@
 #pot {
 	position: absolute;
 	cursor: pointer;
-	top: 300;
-	left: 300;
 	z-index: 5;
 }
 
@@ -38,14 +36,9 @@
 	z-index: 3;
 }	
 
-hr{
+#dragLine {
 	position: absolute;
-	top: 350; 
-	left: 300;
-    border: none;
-    border-top: 5px dotted red;
-    height: 1px;
-    width: 800;
+	z-index: 999;
 }
 
 .circle {

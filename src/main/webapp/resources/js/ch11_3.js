@@ -4,6 +4,8 @@ var o_select, o_index;
 var clicked = [1, 2, 3, 4, 5, 6];
 
 $(document).ready(function(){
+	w = $("#background").width() / 2650 / 0.87; //배경 규격 계산
+	h = $("#background").height($("#background").prop("naturalHeight") * w);
 	$(window).resize(function() {
 		location.reload(true);
 	});
@@ -13,6 +15,8 @@ $(document).ready(function(){
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
 	
+	var sound = new Audio("/resources/bgm/ch11/11_"+ scene +"_" + index + "_" + flag + ".mp3");
+	
 	$("#devil").hover(
 		function() { 
 		$(this).css('transform','scale(1.1)'); 
@@ -20,7 +24,6 @@ $(document).ready(function(){
 		function() { 
 			$(this).css('transform','scale(1.0)'); }
 	);
-
 
 	$("#dialogue").hide();
 	$("#blur").hide();
@@ -41,21 +44,23 @@ $(document).ready(function(){
 				$("#devil").attr("src", '/resources/character/ch11/3층_악마3.webp');
 				setTimeout(function() { $("#human").attr("src", '/resources/character/ch11/사자_눈물.webp'); }, 1000);
 				setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/3층_악마1.webp'); }, 2000);
-				console.log("사자 눈물");
-				setTimeout(function() { $("#dialogue").fadeIn(500); $("#blur").fadeIn(500); }, 2500);
+				setTimeout(function() { $("#dialogue").fadeIn(500); $("#blur").fadeIn(500); sound.currentTime=0; sound.play();}, 2500);
 				setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/3층_악마2.webp'); }, 3000);
 		});
 		
 		$("#dialogue").on("click", function() {
-				$("#human").attr("src", '/resources/character/ch11/사자.webp');
-				$("#dialogue").fadeOut(500); $("#blur").fadeOut(500);
-				$("#devil").attr("src", '/resources/character/ch11/3층_악마1.webp');
-			});
+			sound.pause();
+			$("#human").attr("src", '/resources/character/ch11/사자.webp');
+			$("#dialogue").fadeOut(500); $("#blur").fadeOut(500);
+			$("#devil").attr("src", '/resources/character/ch11/3층_악마1.webp');
+		});
 	}	
 });
 
 function init() { //화면 초기화
 	scene = $("input[name='scene']").val();
+	setDialogueSize();
+	setSound();
 
 	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
@@ -66,11 +71,6 @@ function init() { //화면 초기화
 	if (sw < 0) sw = 0;
 	$("#scene").width(sw);
 	$("#choice > img").height( $("#dialogue > img").height() );
-
-	// 블러
-	$("#blur").height( $("#dialogue").height() );
-	$("#blur").css("left", "0");
-	$("#blur").css("bottom", "0");
 	
 	resize("#human");
 	center("#human");
@@ -80,7 +80,7 @@ function init() { //화면 초기화
 	var bg1 = $("#background > img:nth-child(1)"); //화살표
 	bg1.width(bg1.prop("naturalWidth") * w);
 	bg1.height(bg1.prop("naturalHeight") * w);
-	bg1.css("left", x - (bg1.width() / 2.0) - 1050*w);
+	bg1.css("left", x - (bg1.width() / 2.0) - 850*w);
 	bg1.css("bottom", ($("#background").height() / 2.0) - 100*w);
 	
 	var bg2 = $("#background > img:nth-child(2)"); //땅바닥

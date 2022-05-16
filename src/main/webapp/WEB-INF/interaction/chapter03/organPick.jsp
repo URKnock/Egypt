@@ -8,5 +8,4 @@
 </c:forEach>
 <img src="<c:url value='/resources/character/ch03/3_2.png'/>" id="human"/>
 <img src="<c:url value='/resources/character/ch03/3_3.png'/>" id="human_cover"/>
-<img src="<c:url value='/resources/character/ch03/servant_2.webp'/>" id="servant">
 <script src="<c:url value='/resources/js/interaction/ch03/organPick.js'/>"></script>
