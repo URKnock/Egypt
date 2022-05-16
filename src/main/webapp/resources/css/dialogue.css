@@ -88,6 +88,7 @@ body {
 }
 #dialogue_img {
 	margin: auto 90px auto 100px;
+	padding-left: 50px;
 }
 #content span {
 	font-family: 'Minguk-Bold';

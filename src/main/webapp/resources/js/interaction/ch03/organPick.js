@@ -47,6 +47,10 @@ function interaction() {
 	});
 	$('#organ1').css("right", oRC + $("#organ2").height() / 2);
 	$('#organ3').css("top", $('#organ2').offset().top);
+	
+	resize('#servant');
+	$('#servant').css("bottom", 300*h);
+	$('#servant').css("left", 0);
 
 	var entered = [];
 	function checkElement() {
