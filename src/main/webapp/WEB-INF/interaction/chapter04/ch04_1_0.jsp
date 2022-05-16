@@ -7,8 +7,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/openMouse.js'/>" type="text/javascript"></script>
 <script>
+	effectName = "Pesheskaf_touch";
 	var body = document.querySelector('body');
-	body.onload = function() { setTimeout(init_pese, 3000); };
+	body.onload = function() { setTimeout(init_pese, 3000); setSound(); };
 </script>
 
 <div id="interact">

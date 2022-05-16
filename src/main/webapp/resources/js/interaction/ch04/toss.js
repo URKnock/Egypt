@@ -41,14 +41,17 @@ function init_toss() {
 		}, 3150);
 	}
 	else if($("input[name=index]").val() == "2") {
+		effSoundPlay( "Dish" );
 		victim1.style.display = "block";
 		item2.style.display = "block";
 	}
 	else if($("input[name=index]").val() == "3") {
+		effSoundPlay( "Dish" );
 		victim2.style.display = "block";
 		item1.style.display = "block";
 	}
 	else {
+		effSoundPlay( "Dish" );
 		victim1.style.display = "block";
 		victim2.style.display = "block";
 		
@@ -95,7 +98,7 @@ function init_toss() {
 		
 	}
 	spot.onclick = function() {
-		if(isDragging == true) {	
+		if(isDragging == true) {
 			if($("input[name=index]").val() == "1") $("input[name=index]").val(num);
 			else if($("input[name=index]").val() == "2") $("input[name=index]").val("4");
 			else if($("input[name=index]").val() == "3") $("input[name=index]").val("3");

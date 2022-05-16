@@ -24,7 +24,7 @@
 	</c:if>
 	<c:if test="${scene eq 7 and index eq 0}">
 		<c:choose>
-			<c:when test="${innocent eq 'true'}">
+			<c:when test="${result eq 'chapter08'}">
 				<script defer>
 				body.onload = function() {
 					init();
@@ -39,7 +39,7 @@
 				<script defer>
 				body.onload = function() {
 					$("#dialogue").click(function() {
-						location.href = '/D/chapter14';
+						location.href = '/' + ${result};
 					});
 				}
 				</script>

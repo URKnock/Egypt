@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.util.*"%>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
 <link href="<c:url value='/resources/css/interaction/ch07/ch07_1.css'/>" rel="stylesheet" type="text/css"/>  
 <script defer src="<c:url value='/resources/js/interaction/ch07/ch07_1.js'/>" type="text/javascript"></script>
@@ -27,13 +30,41 @@
 </div>
 
 
+
 <c:if test="${scene eq '5'}">
-	<script defer>
-		var body = document.querySelector('body');
-		body.onload = function() {
-			init();
-			$("input[name=scene]").val("6");
-			$("input[name=index]").val("0");
+	<%
+		ArrayList<String> ans = (ArrayList) session.getAttribute("answer");
+		if(ans != null) {
+			int score = 0;
+			for(String ansN: ans) {
+				if(ansN.equals("0")) score++;
+			}
+			System.out.println(score);
+			System.out.println(ans);
+			if(score >= 9) session.setAttribute("result", "chapter08");
+			else if(score >= 5) session.setAttribute("result", "chapter12"); // 혼돈의 강?
+			else session.setAttribute("result", "chapter11");
 		}
-	</script>
+		
+	%>
+	<c:choose>
+		<c:when test="${result eq 'chapter08'}">
+			<script defer>
+			var body = document.querySelector('body');
+			body.onload = function() {
+				$("input[name=scene]").val("6");
+				$("input[name=index]").val("0");
+				init();
+			}
+			</script>
+		</c:when>
+		<c:otherwise>
+			<script defer>
+			var body = document.querySelector('body');
+			body.onload = function() {
+				$("form").submit();
+			}
+			</script>
+		</c:otherwise>
+	</c:choose>
 </c:if>

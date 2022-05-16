@@ -10,6 +10,8 @@ var circle = [];
 
 var flag = 0;
 
+var effectName;
+
 for(var i = 1; i <= 3; i++) {
 	circle[i] = document.querySelector('#interact .circle:nth-of-type('+(4-i)+')');
 	circle[i].style.cursor = "none";
@@ -61,6 +63,7 @@ function follow_mouse( event ) {
 
 function tap_circle( e ) {
 	if(e.id == "spot") {
+		effSoundPlay( effectName );
 		if(pese.style.removeAttribute)
 			pese.style.removeAttribute('animation');
 		else pese.style.removeProperty('animation');

@@ -19,8 +19,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/getItem.js'/>" type="text/javascript"></script>
 <script defer>
+	effectName = "cut1";
 	var body = document.querySelector('body');
-	body.onload = function() { init_item(); };
+	body.onload = function() { init_item(); setSound();};
 </script>
 
 <div id="interact">

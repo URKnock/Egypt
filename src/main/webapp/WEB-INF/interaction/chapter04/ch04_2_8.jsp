@@ -19,7 +19,7 @@
 <script defer>
 	var body = document.querySelector('body');
 	body.style.cursor = "none";
-	body.onload = function() { setTimeout(next, 1500); };
+	body.onload = function() { setTimeout(next, 1500); setSound();};
 </script>
 
 <div id="interact">

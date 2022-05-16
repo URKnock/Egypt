@@ -33,12 +33,12 @@ public class RequestMapping {
 		mappings.put("/chapter09_5", new InfoController("/interaction/chapter09/ch09_5.jsp", 9));
 		mappings.put("/chapter09_6", new ChapterController("/interaction/chapter09/ch09_6.jsp", 9));		
 		mappings.put("/chapter06", new ChapterController("/chapter06.jsp", 6));
-		mappings.put("/chapter07", new CourtController("/chapter07.jsp"));
+		mappings.put("/chapter07", new CourtController("/chapter07.jsp", 7));
 		mappings.put("/chapter08", new ChapterController("/chapter08.jsp", 8));
 		mappings.put("/chapter11", new ChapterController("/chapter11.jsp", 11));
 		mappings.put("/chapter11part2", new ChapterController("/interaction/chapter11/chapter11_2.jsp", 11));
 		mappings.put("/chapter11part3", new ChapterController("/interaction/chapter11/chapter11_3.jsp", 11));
-		mappings.put("/chapter14", new ChapterController("/chapter14.jsp", 14));
+		mappings.put("/chapter10", new CourtController("/chapter14.jsp", 10));
 		
 		mappings.put("/shabti_main", new ForwardController("/shabti/shabti_main.jsp"));
 		mappings.put("/shabti_nav", new ForwardController("/shabti/shabti_nav.jsp"));

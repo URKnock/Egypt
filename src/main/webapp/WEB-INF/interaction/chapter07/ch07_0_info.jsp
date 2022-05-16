@@ -11,7 +11,7 @@
 <script defer src="<c:url value='/resources/js/interaction/ch07/info_tap.js'/>" type="text/javascript"></script>
 <script>
 	var body = document.querySelector('body');
-	body.onload = function() { console.log("info time~"); };
+	body.onload = function() { console.log("info time~"); setSound(); };
 </script>
 
 <div id="interact">
