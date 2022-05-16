@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class LoadController implements Controller {
+public class LoadingController implements Controller {
     private String url;
 
-    public LoadController(String url) {
+    public LoadingController(String url) {
         if (url == null) {
             throw new NullPointerException("forwardUrl is null. 이동할 URL을 입력하세요.");
         }
         this.url = url;
     }
-    
+
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
     	HttpSession session = request.getSession(true);
@@ -34,29 +34,11 @@ public class LoadController implements Controller {
     	
 		List<String> image = new ArrayList<String>();
 		List<String> webp = new ArrayList<String>();
-		List<String> mp3 = new ArrayList<String>();
+		List<String> wav = new ArrayList<String>();
 		List<String> css = new ArrayList<String>();
 		List<String> js = new ArrayList<String>();
-		
 		String ch = String.format("ch%02d", chapter);
-		List<String> dirs = new ArrayList<String>();
-		dirs.add("/resources/background/" + ch);
-		dirs.add("/resources/character/" + ch);
-		dirs.add("/resources/object/" + ch);
-		dirs.add("/resources/bgm/" + ch);
-		dirs.add("/resources/js/interaction/" + ch);
-		dirs.add("/resources/css/interaction/" + ch);
-		
-		if(chapter == 7) {
-			ch = String.format("ch%02d", chapter + 1);
-			dirs.add("/resources/background/" + ch);
-			dirs.add("/resources/character/" + ch);
-			dirs.add("/resources/object/" + ch);
-			dirs.add("/resources/bgm/" + ch);
-			dirs.add("/resources/js/interaction/" + ch);
-			dirs.add("/resources/css/interaction/" + ch);
-		}
-		
+		String[] dirs = { "/resources/background/" + ch, "/resources/character/" + ch, "/resources/object/" + ch, "/resources/bgm/" + ch, "/resources/js/interaction/" + ch, "/resources/css/interaction", ch };
 		for(String dirname : dirs) {
 			File dir = new File(request.getRealPath(dirname));
 			File[] files = dir.listFiles();
@@ -65,8 +47,8 @@ public class LoadController implements Controller {
 					String filename = dirname + "/" + file.getName();
 					if(filename.endsWith("webp")) {
 						webp.add(filename);
-					} else if(filename.endsWith("mp3")) {
-						mp3.add(filename);
+					} else if(filename.endsWith("wav")) {
+						wav.add(filename);
 					} else if(filename.endsWith("css")) {
 						css.add(filename);
 					} else if(filename.endsWith("js")) {
@@ -81,7 +63,7 @@ public class LoadController implements Controller {
 		request.setAttribute("chapter", chapter);
 		request.setAttribute("image", image);
 		request.setAttribute("webp", webp);
-		request.setAttribute("mp3", mp3);
+		request.setAttribute("wav", wav);
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);
     	return url;
