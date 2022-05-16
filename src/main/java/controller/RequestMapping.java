@@ -20,6 +20,7 @@ public class RequestMapping {
     	mappings.put("/duatg1", new ForwardController("/interaction/chapter05/Duat_g1.jsp"));
     	mappings.put("/duatg3", new ForwardController("/interaction/chapter05/duatg3.jsp"));
     	mappings.put("/chapter02", new HomeController("/chapter02.jsp"));
+    	mappings.put("/chapter02_2", new HomeController("/interaction/chapter02/chapter02_2.jsp"));
     	mappings.put("/chapter03", new ChapterController("/chapter03.jsp", 3));
     	mappings.put("/chapter04", new ChapterController("/chapter04.jsp", 4));
     	mappings.put("/chapter05_last", new ChoiceController("/interaction/chapter05/Duat_last.jsp"));

@@ -58,7 +58,7 @@ body {
 	z-index: 1;
 }
 
-.chapViews {
+.chapViews, .banner {
 	position: absolute;
 	z-index: 2;
 }
@@ -103,32 +103,6 @@ body {
   -webkit-animation: move 3s infinite alternate; /* Safari and Chrome */
   -o-animation: move 3s infinite alternate; /* Opera */
   animation-fill-mode: forwards;
-}
-
-.island-move:nth-child(1), .islandmove:nth-child(10){
-	animation: move-low 3s infinite alternate; 
-	-webkit-animation: move-low 3s infinite alternate; 
-	animation-fill-mode: forwards;
-}
-.island-move:nth-child(10) {
-	animation: move-bottom 3s infinite alternate; 
-	-webkit-animation: move-bottom 3s infinite alternate; 
-	animation-fill-mode: forwards;
-}
-.island-move:nth-child(11) {
-	animation: move-semi-low 3s infinite alternate; 
-	-webkit-animation: move-semi-low 3s infinite alternate; 
-	animation-fill-mode: forwards;
-}
-.island-move:nth-child(12) {
-	animation: move-low 3s infinite alternate; 
-	-webkit-animation: move-low 3s infinite alternate; 
-	animation-fill-mode: forwards;
-}
-.island-move:nth-child(4) {
-	animation: move-high 3s infinite alternate;
-	-webkit-animation: move-high 3s infinite alternate; 
-	animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes move-high {
