@@ -975,28 +975,28 @@
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"사자여, 무척이나 실망했다.<br/><span>심장을 암무트에게 바치도록 해라.</span>",
-	"chapter":14, "scene":0, "flag":0,
+	"chapter":10, "scene":0, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"암무트", "nickname":"식인 괴수",
     "content":"생명이 없는 지옥, 파괴의 땅에 온 것을 환영한다, 사자여.",
-	"chapter":11, "scene":1, "flag":0,
+	"chapter":11, "scene":0, "flag":0,
 	"image":"UI/Dialogue/Ammut.png",
 	"choice":"없음"
 },
 {
 	"name":"악마", "nickname":"악의 신",
     "content":"청렴하지 못한 자, 참혹한 고통을 느낄 지어다.",
-	"chapter":11, "scene":2, "flag":0,
+	"chapter":11, "scene":1, "flag":0,
 	"image":"UI/Dialogue/Devil.png",
 	"choice":"없음"
 },
 {
 	"name":"악마", "nickname":"악의 신",
     "content":"사자는 영원히 파괴의 땅에서 도망치지 못할 것이다.",
-	"chapter":11, "scene":3, "flag":0,
+	"chapter":11, "scene":2, "flag":0,
 	"image":"UI/Dialogue/Devil.png",
 	"choice":"없음"
 },

@@ -102,7 +102,6 @@ function enterpot(elem) {
 	$("#soda_bottom").slideDown(1500);
 	$("#soda_body").slideDown(1800);
 	$("#soda_head").slideDown(2100);
-	$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
 	setTimeout(function() { $("form").submit(); }, 5000);
 }	
 

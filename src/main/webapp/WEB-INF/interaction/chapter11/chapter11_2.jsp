@@ -47,35 +47,39 @@
 	<script>
 		//챕터11_2에서는 background 이미지를 변경
 		$('#background').css('background-image', "url('resources/background/ch11/ch11_bg_2.png')");
-		
 	</script>
+	
+	<jsp:include page="../setting.jsp"/>
+	<script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 	<form method="post" action="<c:url value='/chapter11part2'/>">
-	<div id="dialogue">
-		<img src='<c:url value="${dialogue.image}"/>'/>
-		<div id="scene">
-			<div id="title">
-				<div>${dialogue.name}</div>
-				<c:if test="${dialogue.nickname ne '없음'}">
-					<div>${dialogue.nickname}</div>
-				</c:if>
-			</div>
-			<div id="content">
-				<p>${dialogue.content}</p>
-				<img />
-			</div>
-		</div>
-		<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
-			<div id="choice">
-				<div>
-					<c:forEach var="c" items="${dialogue.choice}">
-						<button name="choice" type="submit" value="${c.id}">${c.content}</button>
-					</c:forEach>
+		<div id="dialogue">
+			<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
+			<img style="z-index: 222;" id="dialogue_img" src='<c:url value="${dialogue.image}"/>' />
+			<div style="z-index: 222;" id="scene">
+				<div id="title">
+					<div>${dialogue.name}</div>
+					<c:if test="${dialogue.nickname ne '없음'}">
+						<div>${dialogue.nickname}</div>
+					</c:if>
 				</div>
-				<img src='<c:url value="${dialogue.player}"/>'/>
+				<div id="content">
+					<p>${dialogue.content}</p>
+					<img />
+				</div>
 			</div>
-		</c:if>
-	</div>
-	<div id="blur"></div>
+			<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
+				<div id="choice">
+					<div>
+						<c:forEach var="c" items="${dialogue.choice}">
+							<button name="choice" type="submit" value="${c.id}">${c.content}</button>
+						</c:forEach>
+					</div>
+					<img src='<c:url value="${dialogue.player}"/>' />
+				</div>
+			</c:if>
+		</div>
+		<div id="blur"></div>
+		<audio id="bgm" preload="auto" src="/resources/bgm/ch11/11_bgm.mp3" loop="true" autobuffer></audio>
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>

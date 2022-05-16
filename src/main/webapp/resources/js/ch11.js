@@ -25,7 +25,7 @@ $(document).ready(function(){
 		$("#ammut").on("click", function() {
 			$("#ammut").attr("src", '/resources/character/ch11/1층_암무트3.webp');
 			setTimeout(function() { $("#ammut").attr("src", '/resources/character/ch11/1층_암무트1.webp'); }, 2000);
-			setTimeout(function() { $("#dialogue").fadeIn(500); $("#blur").fadeIn(500); }, 2500);
+			setTimeout(function() { $("#dialogue").fadeIn(500); $("#blur").fadeIn(500); sound.currentTime=0; sound.play();}, 2500);
 			setTimeout(function() { $("#ammut").attr("src", '/resources/character/ch11/1층_암무트2.webp'); }, 2550);
 		});
 		

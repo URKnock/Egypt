@@ -59,7 +59,7 @@ $(document).ready(function(){
 function init() { //화면 초기화
 	scene = $("input[name='scene']").val();
 
-	w = $("#background").width() / 2650 / 0.87;
+	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
 		
@@ -85,17 +85,24 @@ function init() { //화면 초기화
 	bg1.css("left", x - (bg1.width() / 2.0) - 1050*w);
 	bg1.css("bottom", ($("#background").height() / 2.0) - 100*w);
 	
-	var bg2 = $("#background > img:nth-child(2)"); //악마 
-	bg2.width(bg2.prop("naturalWidth") * w);
+	var bg2 = $("#background > img:nth-child(2)"); //땅바닥
+	bg2.width(bg2.prop("naturalWidth") * w); 
 	bg2.height(bg2.prop("naturalHeight") * w);
-	bg2.css("left", x - (bg1.width() / 2.0) - 220*w);
-	bg2.css("bottom", b - 300*w);
+	bg2.css("bottom", 1 * w);
 	
-	var bg3 = $("#background > img:nth-child(3)"); //2층 단상
+	var bg3 = $("#background > img:nth-child(3)"); //악마 
 	bg3.width(bg3.prop("naturalWidth") * w);
 	bg3.height(bg3.prop("naturalHeight") * w);
-	bg3.css("left", x - (bg1.width() / 2.0) - 750 * w);
-	bg3.css("bottom", b - 145*w);
+	bg3.css("left", x - (bg1.width() / 2.0) - 220*w);
+	bg3.css("bottom", 1 * w);
+	
+	var bg4 = $("#background > img:nth-child(4)"); //사자
+	bg4.width(bg4.prop("naturalWidth") * w);
+	bg4.height(bg4.prop("naturalHeight") * w);
+	bg4.css("left", x - (bg1.width() / 2.0) - 750 * w);
+	bg4.css("bottom", $("#ground").height());
+	
+	
 }
 
 function center(element) { //중앙으로 정렬
