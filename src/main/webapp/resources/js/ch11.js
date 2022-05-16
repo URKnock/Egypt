@@ -4,8 +4,6 @@ var o_select, o_index;
 var clicked = [1, 2, 3, 4, 5, 6];
 
 $(document).ready(function(){
-	w = $("#background").width() / 2650 / 0.87; //배경 규격 계산
-	h = $("#background").height($("#background").prop("naturalHeight") * w);
 	$(window).resize(function() {
 		location.reload(true);
 	});
@@ -34,11 +32,6 @@ $(document).ready(function(){
 			$("#ammut").attr("src", '/resources/character/ch11/1층_암무트1.webp');
 			//setTimeout($('form').submit(), 2500); //문제1: 1번 페이지에서 읽지 않으면 다음으로 전송 안 됨
 		});
-		
-		//$("#arrow").on("click", function() {
-			//어떻게든 1번 페이지에서 대화창을 안 누르고 화살표를 눌렀을 때도 submit 되게 만들어야 함
-			//==> session이 사라지지 않게 해야 함
-		//});
  	} 
 });
 
