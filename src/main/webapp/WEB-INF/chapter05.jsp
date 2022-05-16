@@ -13,6 +13,7 @@
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 </head>
 <body onload="init(); interaction();">
+
 <div id="background">
 	<div id="menu">
 		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
@@ -20,6 +21,7 @@
 		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
 		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>	
 	</div>
+	<div id=ew">
 	<div id="earth">
 	<img id="earth" src="<c:url value='/resources/background/ch05/5_1.png'/>">
 	</div>
@@ -28,8 +30,9 @@
 		<img id="water2" src="<c:url value='/resources/background/ch05/5_3.png'/>">
 		<img id="water3" src="<c:url value='/resources/background/ch05/5_2.png'/>">
 	</div>
+	</div>
 	<div id="chs">
-	<img id="user1" src="<c:url value='/resources/character/ch05/5_2.png'/>">
+	<img id="saja" src="<c:url value='/resources/character/ch05/두리번사자(112).webp'/>">
 	<img id="user2" src="<c:url value='/resources/character/ch05/5_1.png'/>">
 	<img id="nol" src="<c:url value='/resources/object/ch05/nol.png'/>">
 	</div>

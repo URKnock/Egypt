@@ -1,5 +1,7 @@
 var count = 0;
 var w, h, x, y;
+var first = new Audio('/D/resources/bgm/ch09/9_5_1_0.wav');
+var second = new Audio('/D/resources/bgm/ch09/9_5_2_0.wav');
 function interaction() { }; 
 function init() {
 	setSound(); 
@@ -20,7 +22,7 @@ function init() {
 			console.log(scene);
 			console.log($("#content").val());
 			$("#choice").hide();
-			var second = new Audio('/D/resources/bgm/ch09/9_5_2_0.wav');
+			
 			second.play();				
 			$("#con").text('잘 다녀오거라 사자여, 평안한 안식이 되기를 바란다.');
 		}
@@ -78,9 +80,11 @@ function init() {
 			$("#c2").addClass("select2");
 		}
 	$("#c2").click(function() {
-		var first = new Audio('/D/resources/bgm/ch09/9_5_1_0.wav');
 		first.play();	
-	
+		if($("button").on("click", function() {
+			first.pause();
+			first.currentTime = 0;
+			}));
 		$("#c2").removeClass("select2");
 		$("#dialogue_bg").show();
 		$("#dialogue").show();

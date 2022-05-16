@@ -1,4 +1,9 @@
 function interaction() {
+	w = $("body").width() / 1920;
+	h = $("body").height() / 1080;
+	x = $("body").width() / 2.0;
+
+	setDialogueSize();
 	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	$(".mainC").css({opacity: "1"});

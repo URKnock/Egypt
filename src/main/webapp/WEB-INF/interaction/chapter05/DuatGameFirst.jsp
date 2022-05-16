@@ -2,12 +2,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="<c:url value='/resources/css/interaction/ch05/DuatGameStart2.css'/>" rel="stylesheet" type="text/css"/>
 <script src="<c:url value='/resources/js/interaction/ch05/DuatGameFirst.js'/>"></script>
+<img class="mandara1" src="<c:url value='/resources/object/ch05/패턴1.png'/>">
 <div id="characters">
 	<div id="character">
 		<img class="saja" src="<c:url value='/resources/character/ch05/사자발잘림.png'/>">
 		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b.png'/>">		
 		<img class="spear" src="<c:url value='/resources/object/ch05/하얀창.png'/>">
 	</div>
+</div>
+<div id="mandara">
+	<img class="m1" src="<c:url value='/resources/background/ch05/만다라1투명배경.png'/>">
+	
 </div>
 <div id="crocs">
 	<img class="crocs1" src="<c:url value='/resources/object/ch05/none.png'/>">
