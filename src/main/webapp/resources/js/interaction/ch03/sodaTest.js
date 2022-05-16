@@ -4,7 +4,6 @@ function interaction() {
 	$('#niddle').hide();
 	$('canvas').hide();
 	$('.clickable').hide();
-	
 	resizeCenter("#human_soda");
 	resizeCenter("#human_cover");
 
@@ -35,7 +34,8 @@ function interaction() {
 	
 	resize("#scroll");
 	centerX("#scroll");
-	$("#scroll").css("top", 0);
+	var sl = $('#scroll').offset().left;
+	$("#scroll").css("top", 112*w);
 	$('#scroll').hide();
 
 	var canvas1 = document.getElementById("canvas1");
@@ -137,9 +137,7 @@ function interaction() {
 						$('#human').fadeOut(1000);
 						$('#human_cover').fadeOut(1000);
 						$('#human_soda').addClass("fadeLeft");
-						
-						$("#scroll").animate({ left:-$("#scroll").width() }, 2000);
-						$("#scroll").delay(1000).fadeOut(1000);
+						$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
 						setTimeout(function() { $('#human_soda').addClass("fadeActive"); }, 100);
 						setTimeout(function() { $("form").submit(); }, 5000);
 					});
@@ -161,8 +159,9 @@ function interaction() {
 		}
 	}
 
+	var scrollY = $("#scroll").height() / 2 + 112*w;
 	resize('#potToClick');
-	$('#potToClick').css("top", $("#scroll").height() - $('#potToClick').height() - 27*h);
+	$('#potToClick').css("top", scrollY - ($('#potToClick').height() / 2));
 	$('#potToClick').css("left", x - $("#scroll").width() / 4 - ($('#potToClick').width() / 2));
 	$('#potToClick').on("click", function() {
 		var sLeft = $('#background').width() / 2 - $('#pot').width() / 2;
@@ -178,19 +177,19 @@ function interaction() {
 	});
 	
 	resize('#bandageToClick');
-	$('#bandageToClick').css("top", $("#scroll").height() - $('#bandageToClick').height() - 27*h);
+	$('#bandageToClick').css("top", scrollY - ($('#bandageToClick').height() / 2));
 	$('#bandageToClick').css("left", x - $('#bandageToClick').width() / 2);
 	$('#bandageToClick').hide();
 
 	resizeWH('#niddleToClick', 43*w, 150*w);
-	$('#niddleToClick').css("top", $("#scroll").height() - $('#niddleToClick').height() - 27*h);
+	$('#niddleToClick').css("top", scrollY - ($('#niddleToClick').height() / 2));
 	$('#niddleToClick').css("left", x + $("#scroll").width() / 4 - $('#niddleToClick').width() / 2);
 	$('#niddleToClick').hide();
 
-	resizeWH('#paper', 522, 217);
+	resizeWH('#paper', 1341, 776);
 	resizeWH('#servant', 1341, 776);
-	$('#paper').css("top", 0);
-	centerX('#paper');
+	$('#paper').css("bottom", 300*h);
+	$('#paper').css("left", 0);
 	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
 	if(flag == "1") {
@@ -230,6 +229,11 @@ function interaction() {
 				$('#servant').on("load", function() {
 					resize("#servant");
 					$('#paper').on("load", function() {
+						sl = sl - ($('#paper').width() - $('#scroll').width());
+						$('#paper').animate({
+							top: '0',
+							left: sl
+						}, 2600);
 						setTimeout(function() {
 							$('#scroll').show();
 							$('#paper').hide();
@@ -248,11 +252,11 @@ function interaction() {
 							human_rescale();
 						}, 2000);
 					});
-					$('#paper').attr("src", "/resources/object/ch03/dish_soda1.webp");
+					$('#paper').attr("src", "/resources/character/ch03/paper_4.webp");
 					$('#paper').show();
 				});
-				$('#servant').attr("src", "/resources/character/ch03/servant_none_back.webp");
-		}, 4200);
+				$('#servant').attr("src", "/resources/character/ch03/servant_3.webp");
+		}, 4800);
 	}
 
 let cd = null;

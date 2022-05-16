@@ -5,7 +5,8 @@ function interaction() {
 	
 	resize("#scroll");
 	centerX("#scroll");
-	$("#scroll").css("top", 0);
+	var sl = $('#scroll').offset().left;
+	$("#scroll").css("top", 112*h);
 	$('#scroll').hide();
 	
 	resize('#knifeToClick');
@@ -17,18 +18,19 @@ function interaction() {
 	$('#knife').css("top", hTC - $('#knife').height());
 	$('#knife').hide();
 	
-	resize('#dragLine');
-	centerX('#dragLine');
+	$('#dragLine').width($("#human").width() / 3);
+	$('#dragLine').css("left", hLC);
 	$('#dragLine').css("top", hTC);
 	$('#dragLine').hide();
 	
 	$('#dragDest').css("left", hRC);
 	$('#dragDest').css("top", hTC-20);
 	$('#dragDest').hide();
-
+	
+	var scrollY = $("#scroll").height() / 2 + 112*h;
 	resize('#knifeToClick');
-	$('#knifeToClick').css("top", $("#scroll").height() - $('#knifeToClick').height() - 27*h);
-	centerX('#knifeToClick');
+	$('#knifeToClick').css("top", scrollY - ($('#knifeToClick').height() / 2));
+	$('#knifeToClick').css("left", x - ($('#knifeToClick').width() / 2));
 	$('#knifeToClick').on("click", function() {	
 		$('#knifeToClick').fadeOut(1000);
 		$('#knife').fadeIn("1000");
@@ -36,29 +38,32 @@ function interaction() {
 		$('#dragDest').fadeIn("1000");
 	});
 	
-	resizeWH('#paper', 522, 217);
-	$('#paper').css("top", 0);
-	centerX('#paper');
-	
+	resizeWH('#paper', 1341, 776);
 	resizeWH('#servant', 1341, 776);
+	$('#paper').css("bottom", 300*h);
+	$('#paper').css("left", 0);
 	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
 	setTimeout(function() {
 			$('#servant').on("load", function() {
 				resize("#servant");
 				$('#paper').on("load", function() {
+					sl = sl - ($('#paper').width() - $('#scroll').width());
+					$('#paper').animate({
+						top: '0',
+						left: sl
+					}, 2600);
 					setTimeout(function() {
-					$('#scroll').show();
-					$('#paper').hide();
-					$('#knifeToClick').fadeIn("1000").addClass("select");
+						$('#scroll').show();
+						$('#paper').hide();
+						$('#knifeToClick').fadeIn("1000").addClass("select");
 					}, 2000);
-					setTimeout(function() { $('#servant').hide(); }, 1800);
 				});
-				$('#paper').attr("src", "/resources/object/ch03/dish_organ.webp");
+				$('#paper').attr("src", "/resources/character/ch03/paper_4.webp");
 				$('#paper').show();
 			});
-		$('#servant').attr("src", "/resources/character/ch03/servant_none_back.webp");
-	}, 5000);
+		$('#servant').attr("src", "/resources/character/ch03/servant_2.webp");
+	}, 4800);
 
 	$("#knife").on("mousedown", function(event) {
 		let shiftX = event.clientX - knife.getBoundingClientRect().left;
@@ -106,12 +111,8 @@ function enterknife(elem) {
 	elem.style.background = 'pink';
 	knife.isOverlaped = true;
 	setTimeout(function() {
-		$("#scroll").animate({ left:-$("#scroll").width() }, 500);
-		$("#knife").fadeOut(500);
-		$("#dragLine").fadeOut(500);
-		$("#dragDest").fadeOut(500);
 		$("form").submit();
-	}, 2000);
+	}, 100);
 }
 
 function leaveknife(elem) {

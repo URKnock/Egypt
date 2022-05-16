@@ -4,17 +4,6 @@ function init() {
 	$("#logo").fadeIn(2000);
 	$("div").hide().fadeIn(2000);
 	$("div img:nth-child(1)").hide().fadeIn(2000);
-
-	var effect = document.getElementById("effect");
-	effect.pause();
-	effect.currentTime = 0;
-	
-	function audio() {
-		document.getElementById("bgm").play();
-		document.removeEventListener("mouseover", audio);		
-	}
-	document.addEventListener("mouseover", audio);
-	
 	
 	$(window).resize(function() {
 		location.reload(true);
@@ -40,7 +29,6 @@ function init() {
 	var clicked = 0;
 	$("div img:nth-child(2)").addClass('fadeEffect');
 	$(document).click(function() {
-		effect.play();
 		$("div img:nth-child(2)").removeClass('fadeEffect')
 		$("div").fadeOut(1000);
 		$("#logo").fadeOut(1000);
