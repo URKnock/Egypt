@@ -15,26 +15,34 @@ function interaction() {
 	$("#background").children().hide();
 	
 	centerX("#scroll");
-	$("#scroll").css("top", 15*h);
+	$("#scroll").css("top", 0);
 	
 	centerX("#stick");
-	$("#stick").hide().fadeIn(1000);
-	$("#stick").css("top", $("#scroll").height() / 2 + 15*h);
-	$("#stick").addClass("select");
-	$("#stick").on("click", function() {
-		$("#brain").addClass("select");
-		$("#stick").removeClass("select");
-		$("#stick").css("transform", "rotate(45deg)");
-		$("#stick").off("click");
-		stick.isHeld = true;
-		document.getElementById("brain").setAttribute("onclick", "clickBrain( this )");
-		document.addEventListener('mousemove', followMouse);
-	});
-	$("#brain").on("mouseover", function() {
-		$("#stick").fadeOut();
-	}).on("mouseout", function() {
-		$("#stick").fadeIn();
-	});
+	$("#stick").hide();
+	setTimeout(function(){
+		$("#scroll").on("load", function () {
+			$("#scroll").animate({opacity:1});
+			$("#stick").fadeIn(1000);
+			$("#stick").css("top", $("#scroll").height() - $("#stick").height() - 27*h);
+			$("#stick").addClass("select");
+			$("#stick").on("click", function() {
+				$("#brain").addClass("select");
+				$("#stick").removeClass("select");
+				$("#stick").css("transform", "rotate(45deg)");
+				$("#stick").off("click");
+				stick.isHeld = true;
+				document.getElementById("brain").setAttribute("onclick", "clickBrain( this )");
+				document.addEventListener('mousemove', followMouse);
+			});
+			$("#brain").on("mouseover", function() {
+				$("#stick").fadeOut();
+			}).on("mouseout", function() {
+				$("#stick").fadeIn();
+			});
+		});
+		$("#scroll").attr("src", "/resources/object/ch03/dish.png");
+		$("#scroll").animate({opacity:0});
+	}, 1000);
 }
 
 var stick = document.getElementById("stick");

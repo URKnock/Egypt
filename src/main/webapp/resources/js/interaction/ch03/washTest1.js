@@ -2,6 +2,7 @@ function interaction() {
 	$('#kettle').hide();
 	$('#dragLine').hide();
 	$('#dragSpot').hide();
+	$('#arrowLine').hide();
 
 	x = $("#background").width() / 2.0;
 	y = $("#background").height() / 2.0 + 100;
@@ -26,51 +27,44 @@ function interaction() {
 	
 	resize("#scroll");
 	centerX("#scroll");
-	var sl = $('#scroll').offset().left;
-	$("#scroll").css("top", 112*h);
+	$("#scroll").css("top", 0);
 	$('#scroll').hide();
 	
-	var scrollY = $("#scroll").height() / 2 + 112*h;
 	resize('#kettleToClick');
-	$('#kettleToClick').css("top", scrollY - ($('#kettleToClick').height() / 2));
-	$('#kettleToClick').css("left", x - 100 - ($('#kettleToClick').width() / 2));
+	$('#kettleToClick').css("top", $("#scroll").height() - $('#kettleToClick').height() - 27*h);
+	$('#kettleToClick').css("left", x - 80*w - ($('#kettleToClick').width() / 2));
 	$('#kettleToClick').on("click", function() {
-		$('#dragLine').width($("#bed").width());
-		var sLeft = $("#bed").offset().left;
-		var dLeft = sLeft + $('#dragLine').width();
+		$('#dragLine').show();
+		$('#dragLine').css("top", 500*h);
+		centerX('#dragLine');
+		var dragLeft = $("#dragLine").offset().left;
 		$('#kettleToClick').removeClass("select");
 		$('#kettleToClick').hide();
 		$('#water').show();
 		$('#kettle').show();
-		$('#dragLine').show();
 		$('#dragSpot').show();
-		$('#water').css("top", (300 + $("#kettle").height() / 2));
-		$('#water').css("left", (sLeft + $("#kettle").width()));
-		$('#kettle').css("left", sLeft);
-		$('#dragLine').css("left", sLeft);
-		$('#dragSpot').css("top", 300);
-		$('#dragSpot').css("left", dLeft);
+		$('#water').css("top", 500*h);
+		$('#water').css("left", dragLeft);
+		$('#kettle').css("top", 500*h - $("#kettle").height() / 2);
+		$('#kettle').css("left", dragLeft - $("#kettle").width());
+		$('#dragSpot').css("top", 500*h-55);
+		$('#dragSpot').css("left", dragLeft + $('#dragLine').width());
 	});
 	
 	resize('#linen');
-	$('#linen').css("top", scrollY - ($('#linen').height() / 2));
-	$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
+	$('#linen').css("top", $("#scroll").height() - $('#linen').height() - 27*h);
+	$('#linen').css("left", x + 80*w - ($('#linen').width() / 2));
 	
-	resizeWH('#paper', 1341, 776);
+	resizeWH('#paper', 522, 217);
 	resizeWH('#servant', 1341, 776);
-	$('#paper').css("bottom", 300*h);
-	$('#paper').css("left", 0);
+	$('#paper').css("top", 0);
+	centerX("#paper");
 	$('#servant').css("bottom", 300*h);
 	$('#servant').css("left", 0);
 	setTimeout(function() {
 			$('#servant').on("load", function() {
 				resize("#servant");
 				$('#paper').on("load", function() {
-					sl = sl - ($('#paper').width() - $('#scroll').width());
-					$('#paper').animate({
-						top: '0',
-						left: sl
-					}, 2600);
 					setTimeout(function() {
 						$('#scroll').show();
 						$('#paper').hide();
@@ -83,12 +77,12 @@ function interaction() {
 						$('#human').attr("src", "/resources/object/ch03/3_2_2.png");
 					}, 2000);
 				});
-				$('#paper').attr("src", "/resources/character/ch03/paper_4.webp");
+				$('#paper').attr("src", "/resources/object/ch03/dish_wash.webp");
 				$('#paper').show();
 			});	
-			$('#servant').attr("src", "/resources/character/ch03/servant_3.webp");
+			$('#servant').attr("src", "/resources/character/ch03/servant_none_back.webp");
 			$('#servant').removeClass("select");
-	}, 4800);
+	}, 6120);
 
 	var kWidth = $("#kettle").width();
 	$("#kettle").on("mousedown", function(event) {
@@ -156,8 +150,8 @@ function checkWipeCount() {
 	} else if(wipeCount == 200) {
 		$('.dirt').fadeTo("1000", 0.3);
 	} else if(wipeCount == 300) {
-		$('#linen').css("top", scrollY - ($('#linen').height() / 2));
-		$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
+		$('#linen').css("top", $("#scroll").height() - $('#linen').height() - 27*h);
+		$('#linen').css("left", x + 80*w - ($('#linen').width() / 2));
 		$('.dirt').fadeOut(1000);
 		$('#shine').fadeIn(1000);
 		setTimeout(function() { 
@@ -192,6 +186,10 @@ function enterKettle(elem) {
 	var dirt_right = dirt_left + $("#human").width();
 
 	$('#linen').on("mousedown", function(event) {
+		$('#arrowLine').show();
+		$('#arrowLine').css("top", $("#human").offset().top);
+		centerX('#arrowLine');
+
 		let shiftX = event.clientX - linen.getBoundingClientRect().left;
 		let shiftY = event.clientY - linen.getBoundingClientRect().top;
 		var scrollY = $("#scroll").height() / 2 + 100;
@@ -225,8 +223,8 @@ function enterKettle(elem) {
 			if (linen.isOverlaped == true) {
 				leaveLinen(cd2)
 			} else {
-				$('#linen').css("top", scrollY - ($('#linen').height() / 2));
-				$('#linen').css("left", x + 100 - ($('#linen').width() / 2));
+				$('#linen').css("top", $("#scroll").height() - $('#linen').height() - 27*h);
+				$('#linen').css("left", x + 80*w - ($('#linen').width() / 2));
 			}
 		};
 	});	

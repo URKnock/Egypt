@@ -51,6 +51,7 @@
 		<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 	</div>
 </div>
+<jsp:include page="interaction/help.jsp"/>
 <jsp:include page="interaction/setting.jsp"/>
 <jsp:include page="interaction/info_window.jsp"/>
 <form method="post" action="<c:url value='/chapter03'/>">
