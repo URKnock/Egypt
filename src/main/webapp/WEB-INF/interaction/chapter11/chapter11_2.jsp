@@ -5,22 +5,24 @@
 <meta charset="UTF-8">
 <title>사자의 서</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch11.css'/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/ch11_2.js'/>"></script>
-<script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
+<script src="<c:url value='/resources/js/sound_bgmonly.js'/>"></script>
+<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
 		<img id="platform" src="<c:url value='/resources/object/ch11/2층_단상.png'/>"/>
 		<img id="hellFireFront" style="z-index: 6;" src="<c:url value='/resources/object/ch11/2층_땅불1.webp'/>"/>
 		<img id="hellFireBack" style="z-index: 1;" src="<c:url value='/resources/object/ch11/2층_땅불2.webp'/>"/>
-		<img id="arrow" onClick="location.href='../chapter11part3'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
+		<img id="arrow" onClick="location.href='../chapter11part3'" class="pikachu" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
 		<img id="ground" style="z-index: 7;" src="<c:url value='/resources/object/ch11/2층_땅.png'/>"/>
 		<img id="pot_back" style="z-index: 2;" src="<c:url value='/resources/object/ch11/2층_항아리안.png'/>"/>
 		<img id="pot_inner" style="z-index: 4;" src="<c:url value='/resources/object/ch11/2층_항아리탕.webp'/>"/>
 		<img id="pot_frame" style="z-index: 5;" src="<c:url value='/resources/object/ch11/2층_항아리밖.png'/>"/>
 		<img id="devil" style="z-index: 5;" class="select pikachu" src="<c:url value='/resources/character/ch11/2층_악마1.webp'/>"/>
-		<img style="transform: scaleX(-1);" onClick="location.href='../chapter11'" src="<c:url value='/resources/object/ch11/arrow.png'/>"/>
+		<img id="arrow_pre" onClick="location.href='../chapter11'" class="pikachu" src="<c:url value='/resources/object/ch11/arrow_pre.png'/>"/>
 		<img id="pot_dead" style="z-index: 3;" src="<c:url value='/resources/object/ch11/2층_항아리사자1.webp'/>"/>
 		<img id="human" src="<c:url value='/resources/character/ch11/사자.webp'/>"/>
 	</div>
