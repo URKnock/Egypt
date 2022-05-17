@@ -39,7 +39,7 @@
 				<script defer>
 				body.onload = function() {
 					$("#dialogue").click(function() {
-						location.href = '/' + ${result};
+						location.href = '/chapter10';
 					});
 				}
 				</script>

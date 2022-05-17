@@ -88,7 +88,10 @@
 	var body = document.querySelector('body');
 	body.onload = function() {
 		$("#dialogue").click(function() {
-			location.href = '/D/chapter11';
+			if(${result} != null)
+				location.href = '/' + '${result}';
+			else
+				location.href = '/chapter11';
 		});
 	}
 </script>
