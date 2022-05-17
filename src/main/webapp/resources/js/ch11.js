@@ -12,7 +12,9 @@ $(document).ready(function(){
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
-
+	
+	var sound = new Audio("/resources/bgm/ch11/11_"+ scene +"_" + index + "_" + flag + ".mp3");
+	
 	$("#dialogue").hide();
 	$("#blur").hide();
 	
@@ -28,6 +30,7 @@ $(document).ready(function(){
 		});
 		
 		$("#dialogue").on("click", function() {
+			sound.pause();
 			$("#dialogue").fadeOut(500); $("#blur").fadeOut(500);
 			$("#ammut").attr("src", '/resources/character/ch11/1층_암무트1.webp');
 			//setTimeout($('form').submit(), 2500); //문제1: 1번 페이지에서 읽지 않으면 다음으로 전송 안 됨
@@ -37,8 +40,10 @@ $(document).ready(function(){
 
 function init() { //화면 초기화
 	scene = $("input[name='scene']").val();
+	setDialogueSize();
+	setSound();
 
-	w = $("#background").width() / 2650 / 0.87;
+	w = $("#background").width() / 1980;
 	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
 		
@@ -47,11 +52,6 @@ function init() { //화면 초기화
 	if (sw < 0) sw = 0;
 	$("#scene").width(sw);
 	$("#choice > img").height( $("#dialogue > img").height() );
-
-	// 블러
-	$("#blur").height( $("#dialogue").height() );
-	$("#blur").css("left", "0");
-	$("#blur").css("bottom", "0");
 	
 	resize("#human");
 	center("#human");
@@ -62,7 +62,7 @@ function init() { //화면 초기화
 	bg1.width(bg1.prop("naturalWidth") * w);
 	bg1.height(bg1.prop("naturalHeight") * w);
 	bg1.css("left", x - (bg1.width() / 2.0) + 70*w);
-	bg1.css("bottom", 0 + 180*w); //dialog와 떨어진 정도가 아니라 바닥이랑 떨어진 정도로 바꿔야 할 것 같음
+	bg1.css("bottom", 0 + 180*w); //dialog와 떨어진 정도가 아니라 바닥이랑 떨어진 정도로 바꾸기
 	
 	var bg2 = $("#background > img:nth-child(2)"); //바닥 마젠타색 불꽃
 	bg2.width(bg2.prop("naturalWidth") * w);
@@ -73,7 +73,7 @@ function init() { //화면 초기화
 	var bg3 = $("#background > img:nth-child(3)"); //화살표
 	bg3.width(bg3.prop("naturalWidth") * w);
 	bg3.height(bg3.prop("naturalHeight") * w);
-	bg3.css("left", x - (bg1.width() / 2.0) + 1550*w);
+	bg3.css("left", x - (bg1.width() / 2.0) + 1450*w);
 	bg3.css("bottom", $("#hellFire").height() + 200*w);
   
 	var bg4 = $("#background > img:nth-child(4)"); //땅바닥
@@ -85,37 +85,15 @@ function init() { //화면 초기화
 	var bg5 = $("#background > img:nth-child(5)"); //암무트
 	bg5.width(bg5.prop("naturalWidth") * w);
 	bg5.height(bg5.prop("naturalHeight") * w);
-	bg5.css("left", x - (bg1.width() / 2.0) + 1200*w);
+	bg5.css("left", x - (bg1.width() / 2.0) + 1080*w);
 	bg5.css("bottom", $("#ground").height());
 	
 	var bg6 = $("#background > img:nth-child(6)"); //사자
 	bg6.width(bg6.prop("naturalWidth") * w);
 	bg6.height(bg6.prop("naturalHeight") * w);
-	bg6.css("left", x - (bg1.width() / 2.0) - 300*w);
+	bg6.css("left", x - (bg1.width() / 2.0) - 200*w);
 	bg6.css("bottom", $("#ground").height());
 }
-
-/*
-function object(select, index, arrIndex) { //정보창을 보여주고 셀렉트 클래스를 제거한다.
-	show_info(index);
-	if(arguments.length == 3) {
-		o_select = select;
-		o_index = arrIndex;
-		if(clicked.indexOf(arrIndex) != -1) {
-			clicked.splice(clicked.indexOf(arrIndex), 1);
-			$(select).removeClass("select");
-		}
-	} else {
-		o_select = "0";
-		$(select).removeClass("select");
-	}
-}*/
-
-/*
-function objectSubmit(select) {
- 	$(select).removeClass("select"); //노란색 shadow 제거(select class 제거)
-	$("form").submit(); //폼을 통해 지금까지의 경과 전송
-}*/
 
 function center(element) { //중앙으로 정렬
 	centerX(element);
