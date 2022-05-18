@@ -6,6 +6,7 @@ function interaction() {
 	resize("#human_cover");
 	center("#human_cover");
 	$("#human_cover").hide();
+	$("#effect").attr("src", "/resources/bgm/ch03/needle.mp3");
 	
 	var canvas1 = document.getElementById("canvas1");
 	var canvas2 = document.getElementById("canvas2");
@@ -45,6 +46,7 @@ function interaction() {
 			x:event.pageX - offsets.left,
 			y:event.pageY - offsets.top
 		}
+		effect();
 	
 		if(!clicked) {
 			clicked = true;

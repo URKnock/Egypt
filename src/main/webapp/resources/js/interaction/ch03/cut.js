@@ -2,6 +2,7 @@ function interaction() {
 	var hLC = $("#human").offset().left + ($("#human").width() / 3);
 	var hTC = $("#human").offset().top + ($("#human").height() / 2);
 	var hRC = hLC + ($("#human").width() / 3);
+	$("#effect").attr("src", "/resources/bgm/ch03/knife.mp3");
 	
 	resize("#scroll");
 	centerX("#scroll");
@@ -105,6 +106,7 @@ let cd1 = null;
 function enterknife(elem) {
 	elem.style.background = 'pink';
 	knife.isOverlaped = true;
+	effect();
 	setTimeout(function() {
 		$("#scroll").animate({ left:-$("#scroll").width() }, 500);
 		$("#knife").fadeOut(500);

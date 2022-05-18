@@ -8,7 +8,7 @@
 
 <div id="setting">
 <div id="setting_container">
-	<div>
+	<div id="setting_title">
 		<img src="<c:url value='/resources/UI/Menu/setting_1.png'/>"/>
 		환경설정
 	</div>
