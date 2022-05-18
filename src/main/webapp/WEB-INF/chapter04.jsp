@@ -36,16 +36,16 @@
 		</c:if>
 	</div>
 	
-	<div id="menu" class="${page}">
-		<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-		<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-		<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+	<div id="menu">
+		<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+		<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+		<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 	</div>
 </div>
 </div>
+<jsp:include page="interaction/help.jsp"/>
 <jsp:include page="interaction/setting.jsp"/>
-<jsp:include page="interaction/info_window.jsp"/>
 <form method="post" action="<c:url value='/chapter04'/>">
 	<div id="order"></div>
 	<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
@@ -80,7 +80,6 @@
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>
 	<input name="choice" type="hidden" value="${choice}"/>
-	
 </form>
 </body>
 </html>
