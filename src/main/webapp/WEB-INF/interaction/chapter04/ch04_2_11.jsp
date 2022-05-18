@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_2.css'/>" rel="stylesheet" type="text/css"/>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
 <div id="interact">
 	<!-- background -->
@@ -38,7 +37,7 @@
 		}, 2400);
 		$("#voice").bind("ended", function() {
 			anubis.src = "resources/webp/ch04/anubis_1.webp";
-			setTimeout(next, 1000)
+			setTimeout(next, 100)
 		});
 	};
 	

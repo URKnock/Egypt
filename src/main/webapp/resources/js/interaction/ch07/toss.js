@@ -12,8 +12,11 @@ function init_toss() {
 	xStart = item.style.left; 
 	yStart = item.style.top;
 	
-	item.onclick = function() {
+	item.onmousedown = function() {
 		isDragging = true;
+		xStart = item.style.left;
+		yStart = item.style.top;
+		
 		body.addEventListener('mousemove', follow_mouse);
 		
 		item.style.cursor = "none";
@@ -21,7 +24,14 @@ function init_toss() {
 		
 		circle.style.display = "block";
 	}
-	spot.onclick = function() {
+	body.onmouseup = function() {
+		if(isDragging == true) {
+			reset();
+			is_Dragging = false;
+		}
+	}
+	
+	spot.onmouseup = function() {
 		if(isDragging == true) {
 			item.style.display = "none";
 			next();
@@ -38,8 +48,8 @@ function follow_mouse( event ) {
 }
 
 function reset() {
-	item.x = xStart;
-	item.y = yStart;
+	item.style.left = xStart;
+	item.style.top = yStart;
 	
 	body.removeEventListener("mousemove", follow_mouse);
 }

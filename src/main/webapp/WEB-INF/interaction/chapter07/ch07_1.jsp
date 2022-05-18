@@ -3,11 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.*"%>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
 <link href="<c:url value='/resources/css/interaction/ch07/ch07_1.css'/>" rel="stylesheet" type="text/css"/>  
-<script defer src="<c:url value='/resources/js/interaction/ch07/ch07_1.js'/>" type="text/javascript"></script>
-
 <div id="interact">
 	<!-- background -->
 	<img class="background" src="<c:url value='/resources/background/ch07/7_2_2.png'/>">
@@ -21,15 +18,25 @@
 	<img class="character" src="<c:url value='/resources/webp/ch07/men.webp'/>">
 	<c:choose>
 		<c:when test="${scene eq 3}">
-			<img class="god" src="<c:url value='/resources/webp/ch07/42_1.webp'/>">
+			<img class="god" src="<c:url value='/resources/webp/ch07/42_1_talk.webp'/>">
+			<script defer>
+				var god = document.querySelector('.god');
+				$("#voice").bind("ended", function() {
+					god.src =  "resources/webp/ch07/42_1.webp";
+				});
+			</script>
 		</c:when>
 		<c:otherwise>
-			<img class="god" src="<c:url value='/resources/webp/ch07/42_10.webp'/>">
+			<img class="god" src="<c:url value='/resources/webp/ch07/42_10_talk.webp'/>">
+			<script defer>
+				var god = document.querySelector('.god');
+				$("#voice").bind("ended", function() {
+					god.src =  "resources/webp/ch07/42_10.webp";
+				});
+			</script>
 		</c:otherwise>
 	</c:choose>	
 </div>
-
-
 
 <c:if test="${scene eq '5'}">
 	<%
@@ -50,18 +57,20 @@
 	<c:choose>
 		<c:when test="${result eq 'chapter08'}">
 			<script defer>
-			var body = document.querySelector('body');
-			body.onload = function() {
-				$("input[name=scene]").val("6");
-				$("input[name=index]").val("0");
-				init();
-			}
+				var body = document.querySelector('body');
+				body.onload = function() {
+					$("input[name=scene]").val("6");
+					$("input[name=index]").val("0");
+					init();
+					setSound();
+				}
 			</script>
 		</c:when>
 		<c:otherwise>
 			<script defer>
 			var body = document.querySelector('body');
 			body.onload = function() {
+				setSound();
 				$("form").submit();
 			}
 			</script>

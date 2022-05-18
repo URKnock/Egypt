@@ -11,10 +11,10 @@ function init() {
 		$("form").submit();
 	});
 	
+	setSound();
+	
 	var nextButton = document.querySelector('#nextButton');
 	nextButton.style.display = "block";
-	
-	setSound();
 };
 
 $(document).ready(function() {
@@ -36,8 +36,3 @@ $(document).ready(function() {
 	
 	effect = document.getElementsByTagName('audio')[2];
 });
-
-function effSoundPlay( soundName ) {
-	effect.src = "resources/bgm/ch04/effect/"+soundName+".mp3";
-	effect.play();
-}

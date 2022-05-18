@@ -82,8 +82,11 @@ public class CourtController implements Controller {
 				
     			list = json.get(scene);
     		}
-    		else if(s == 4 || s == 5 || (s == 6 && i == 0))
+    		else if(s == 4 || s == 5 || s == 6) {
     			list = json.get(scene);
+    			session.setAttribute("balance", choice);
+    			System.out.println(session.getAttribute("balance"));
+    		}
     		else if(choice.equals("0")) {
     			list = json.get(scene);
     		} else {

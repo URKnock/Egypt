@@ -799,7 +799,7 @@
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"오시리스 법정엔 저울이 있다.<br/>한쪽 저울엔 진리의 깃털을, 반대쪽에는 사자의 심장을 올리지.<br/>저울의 균형이 맞춰진다면 영생을 누리고, 반대로 균형이 깨지면 암무트에게 심장을 잡아먹힐 것이다.",
-	"chapter":7, "scene":6, "flag":1,
+	"chapter":7, "scene":6, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
@@ -914,7 +914,7 @@
 {
 	"name":"호루스", "nickname":"고백을 유도하는 신",
 	"content":"오시리스 법에 합당한 진실을 선포했으니,<br/>이 자는 여생을 누릴 자격이 충분합니다.",
-	"chapter":7, "scene":11, "flag":1,
+	"chapter":7, "scene":11, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
@@ -985,7 +985,13 @@
 	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
-
+{
+	"name":"아누비스", "nickname":"죽음을 심판하는 신",
+	"content":"사자의 심장은 깃털보다 무겁다.",
+	"chapter":10, "scene":0, "flag":0,
+	"image":"UI/Dialogue/Anubis.png",
+	"choice":"없음"
+},
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"사자여, 무척이나 실망했다.<br/><span>심장을 암무트에게 바치도록 해라.</span>",
