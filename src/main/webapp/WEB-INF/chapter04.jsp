@@ -15,6 +15,9 @@
 	<script src="<c:url value='/resources/js/sound.js'/>"></script>
 </head>
 <body onload="init();">
+<audio id="bgm" preload="auto" src='<c:url value="/resources/bgm/4_openmouth.mp3"/>' loop="true" autobuffer></audio>
+<audio id="voice" preload="auto" src='<c:url value="/resources/bgm/ch04/4_${scene}_${index}_${flag}.mp3"/>'></audio>
+<audio id="effect" preload="auto" src=""></audio>
 <div id="view">
 <div id="wrap">
 	<div id="background">
@@ -66,9 +69,6 @@
 	</div>
 	<div id="blur"></div>
 	<div id="loading"></div>
-	<audio id="bgm" preload="auto" src='<c:url value="/resources/bgm/4_openmouth.mp3"/>' loop="true" autobuffer></audio>
-	<audio id="voice" preload="auto" src='<c:url value="/resources/bgm/ch04/4_${scene}_${index}_${flag}.mp3"/>'></audio>
-	<audio id="effect" preload="auto" src=""></audio>
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>

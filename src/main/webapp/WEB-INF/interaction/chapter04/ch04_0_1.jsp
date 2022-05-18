@@ -16,7 +16,15 @@
 <script defer src="<c:url value='/resources/js/interaction/ch04/info_tap.js'/>" type="text/javascript"></script>
 <script>
 	var body = document.querySelector('body');
-	body.onload = function() { console.log("info time~"); setSound(); };
+	body.onload = function() { 
+		var anubis = document.querySelector('#anubis');
+		
+		$("#voice").bind("ended", function() {
+			anubis.attr("src", "resources/webp/ch04/anubis_2.webp");
+			setTimeout(function() { $("form").submit(); }, 2000);
+		});
+		setSound(); 
+	};
 </script>
 
 <style>
@@ -44,7 +52,7 @@
 	<img id="active" onclick="tap_info(this, 1)" class="pontiff"  src="<c:url value='/resources/webp/ch04/servant_2.webp'/>">
 	<img id="active" onclick="tap_info(this, 2)" class="pontiff"  src="<c:url value='/resources/webp/ch04/servant_3.webp'/>">
 	
-	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_2.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_2_talk.webp'/>">
 	<img class="character" src="<c:url value='/resources/character/ch04/4_4.png'/>">
 	
 	<!-- object -->
@@ -58,3 +66,20 @@
 	</div>
 	<jsp:include page="../info_window.jsp"/>
 </div>
+
+<script defer>
+	var anubis = document.querySelector('#anubis');
+	
+	if(${scene} == 3) {
+		var body = document.querySelector('body');
+		body.onload = function() { console.log("Selection time~"); };
+	
+		anubis.src = "resources/webp/ch04/anubis_2_motion.webp";
+		setTimeout(function() {
+			anubis.src = "resources/webp/ch04/anubis_2_talk.webp";
+		}, 2400);
+	}
+	$("#voice").bind("ended", function() {
+		anubis.src= "resources/webp/ch04/anubis_2.webp";
+	});
+</script>

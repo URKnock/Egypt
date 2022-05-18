@@ -11,14 +11,10 @@ function init() {
 		$("form").submit();
 	});
 	
-	setSound();
-	
 	var nextButton = document.querySelector('#nextButton');
 	nextButton.style.display = "block";
 	
-	//var effect = document.getElementsByTagName('audio')[2];
-	//effect.src = "resources/bgm/ch04/effect/cow.mp3";
-	//effect.play();
+	setSound();
 };
 
 $(document).ready(function() {
@@ -34,9 +30,8 @@ $(document).ready(function() {
 	
 	scene = $("input[name='scene']").val();
 	if(scene == 1) {
+		$("#loading").style.display = block;
 		$("#loading").fadeOut(2000);
-	} else {
-		$("#loading").hide();
 	}
 	
 	effect = document.getElementsByTagName('audio')[2];
