@@ -36,3 +36,13 @@ $(document).ready(function() {
 	
 	effect = document.getElementsByTagName('audio')[2];
 });
+
+function home() {
+	location.href = "chapter02";
+}
+function setting() {
+	//$("#setting").css("display", "flex");
+}
+function help() {
+	//$("#help").css("display", "flex");
+}
