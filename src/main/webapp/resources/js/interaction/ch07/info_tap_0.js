@@ -1,13 +1,15 @@
 var Anubis = document.querySelector('#interact .character:nth-of-type(4)');
 
 var obj = [];
-obj[0] = document.querySelector('#interact .bg .bgObj:nth-of-type(3)');
+obj[0] = document.querySelector('#interact .bg .bgObj:nth-of-type(5)');
 obj[1] = document.querySelector('#interact .character:nth-of-type(4)');
 obj[2] = document.querySelector('#interact .character:nth-of-type(5)');
 obj[3] = document.querySelector('#interact .character:nth-of-type(6)');
-obj[4] = document.querySelector('#interact .bg .bgObj:nth-of-type(4)');
+obj[4] = document.querySelector('#interact .bg .bgObj:nth-of-type(6)');
 obj[5] = document.querySelector('#interact .character:nth-of-type(7)');
-obj[6] = document.querySelector('#interact .bg .bgObj:nth-of-type(2)');
+obj[6] = document.querySelector('#interact .bg .bgObj:nth-of-type(4)');
+
+obj[7] = document.querySelector('#interact .character:nth-of-type(3)');
 
 var motion = [];
 motion[0] = "resources/webp/ch07/balance_motion.webp";
@@ -27,24 +29,30 @@ webp[4] = "resources/webp/ch07/feather.webp";
 webp[5] = "resources/webp/ch07/ammut.webp";
 webp[6] = "resources/webp/ch07/45god.webp";
 
+webp[7] = "resources/webp/ch07/men.webp";
+
 var png = [];
-png[0] = "resources/background/ch07/7_2_4.png";
-png[1] = "resources/character/ch07/6_3.png";
-png[2] = "resources/character/ch07/6_18.png";
-png[3] = "resources/character/ch07/6_5.png";
-png[4] = "resources/background/ch07/깃털.png";
-png[5] = "resources/character/ch07/6_6.png";
-png[6] = "resources/background/ch07/7_0_5.png";
+png[0] = "resources/webp/ch07/balance.png";
+png[1] = "resources/webp/ch07/anubis.png";
+png[2] = "resources/webp/ch07/horus.png";
+png[3] = "resources/webp/ch07/thoth.png";
+png[4] = "resources/webp/ch07/feather.png";
+png[5] = "resources/webp/ch07/ammut.png";
+png[6] = "resources/webp/ch07/45god.png";
+
+png[7] = "resources/webp/ch07/men.png";
 
 document.querySelector('.close').onclick = function() { hide_info(); info_close(); }
 
 function pause(index) {
-	for(var i = 0; i < 7; i++) {
+	for(var i = 0; i < 8; i++) {
 		if(i != index) obj[i].src = png[i];
 	}
+	if(index == 0) obj[4].style.display = "none";
 }
 function play() {
-	for(var i = 0; i < 7; i++) {
+	if(obj[4].style.display == "none") obj[4].style.display = "block";
+	for(var i = 0; i < 8; i++) {
 		obj[i].src = webp[i];
 	}
 }
@@ -58,15 +66,20 @@ function tap_info(e, i) {
 	else visited = true;
 	
 	e.id = 'visited';
-	pause();
+	if(i == 1) {
+		show_info(i);
+	}
+	else {
+		pause();
 	
-	e.src = motion[i];
-	
-	const bg = document.querySelector(".info_back");
-	bg.style.display = "block";
-	bg.style.opacity = "0"
-	
-	setTimeout(function() { show_info(i); }, 3000);
+		e.src = motion[i];
+		
+		const bg = document.querySelector(".info_back");
+		bg.style.display = "block";
+		bg.style.opacity = "0"
+		
+		setTimeout(function() { show_info(i); }, 3000);
+	}
 	
 	if(visited == false) {
 		info_total--;

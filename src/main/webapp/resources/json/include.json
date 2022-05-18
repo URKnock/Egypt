@@ -316,10 +316,22 @@
 },
 {
 	"chapter":7, "scene":8, "flag":0,
-	"page":"ch07_3_info.jsp"
+	"page":"ch07_2_2.jsp"
 },
 {
 	"chapter":7, "scene":9, "flag":0,
+	"page":"ch07_3_info.jsp"
+},
+{
+	"chapter":7, "scene":10, "flag":0,
+	"page":"ch07_3.jsp"
+},
+{
+	"chapter":7, "scene":11, "flag":0,
+	"page":"ch07_3.jsp"
+},
+{
+	"chapter":7, "scene":12, "flag":0,
 	"page":"ch07_3.jsp"
 }
 ]

@@ -5,16 +5,18 @@
 	<meta charset="UTF-8">
 	<title>사자의 서</title>
 	<link href="<c:url value='/resources/css/ch04.css'/>" rel="stylesheet" type="text/css"/>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 	<script defer src="<c:url value='/resources/js/ch04.js'/>" type="text/javascript"></script>
 	<link href="<c:url value='/resources/css/interaction/ch07/ch07_2.css'/>" rel="stylesheet" type="text/css"/>
 	
 	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 	<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
-	
-
+	<script src="<c:url value='/resources/js/sound.js'/>"></script>
 </head>
 <body>
+<audio id="bgm" preload="auto" src="<c:url value='/resources/bgm/6_7_courtroom.mp3'/>" loop="true" autobuffer></audio>
+<audio id="voice" preload="auto" src="<c:url value='/resources/bgm/ch10/10_${scene}_${index}_${flag}.mp3'/>"></audio>
+<audio id="effect" preload="auto" src=""></audio>
 <div id="view">
 <div id="wrap">
 	<div id="background">
@@ -43,7 +45,7 @@
 
 <jsp:include page="interaction/setting.jsp"/>
 <jsp:include page="interaction/info_window.jsp"/>
-<form method="post" action="<c:url value='/chapter04'/>">
+<form method="post" action="<c:url value='/chapter10'/>">
 	<div id="order"></div>
 	<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 	<div id="dialogue">
@@ -73,9 +75,7 @@
 	</div>
 	<div id="blur"></div>
 	<div id="loading"></div>
-	<audio id="bgm" preload="auto" src="/resources/bgm/3_forever.mp3" loop="true" autobuffer></audio>
-	<audio id="voice" preload="auto" src="/resources/bgm/ch03/3_${scene}_${index}_${flag}.mp3"></audio>
-	<audio id="effect" preload="auto" src=""></audio>
+
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>
@@ -84,14 +84,23 @@
 </body>
 </html>
 
-<script defer>
-	var body = document.querySelector('body');
-	body.onload = function() {
-		$("#dialogue").click(function() {
-			if(${result} != null)
-				location.href = '/' + '${result}';
-			else
-				location.href = '/chapter11';
-		});
-	}
-</script>
+<c:if test="${scene eq 0}">
+	<script defer>
+		var body = document.querySelector('body');
+		body.onload = function() { init(); }
+	</script>
+</c:if>
+
+<c:if test="${scene eq 1}">
+	<script defer>
+		var body = document.querySelector('body');
+		body.onload = function() { setSound();
+			$("#dialogue").click(function() {
+				if("${result}" != "")
+					location.href = '${result}';
+				else
+					location.href = 'chapter11';
+			});
+		}
+	</script>
+</c:if>

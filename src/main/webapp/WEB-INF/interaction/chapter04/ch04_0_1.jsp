@@ -12,7 +12,6 @@
 	<script> info_total = 0; </script>
 </c:if>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/info_tap.js'/>" type="text/javascript"></script>
 <script>
 	var body = document.querySelector('body');

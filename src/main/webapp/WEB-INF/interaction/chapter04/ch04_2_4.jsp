@@ -16,7 +16,6 @@
 	}
 </style>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/getItem.js'/>" type="text/javascript"></script>
 <script defer>
 	effectName = "cut2";

@@ -7,10 +7,6 @@
 
 
 <script defer src="<c:url value='/resources/js/interaction/ch07/question.js'/>" type="text/javascript"></script>
-<script>
-	var body = document.querySelector('body');
-	body.onload = function() { console.log("부정고백 time~"); setSound(); };
-</script>
 
 <div id="interact">
 	<!-- background -->
@@ -23,5 +19,16 @@
 	
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch07/men.webp'/>">
-	<img class="god" src="<c:url value='/resources/webp/ch07/42_${questN}.webp'/>">
+	<img class="god" src="<c:url value='/resources/webp/ch07/42_${questN}_talk.webp'/>">
 </div>
+
+<script>
+	var body = document.querySelector('body');
+	var god = document.querySelector('.god');
+	body.onload = function() { 
+		console.log("부정고백 time~"); setSound(); 
+		$("#voice").bind("ended", function() {
+			god.src =  "resources/webp/ch07/42_${questN}.webp";
+		});
+	};
+</script>
