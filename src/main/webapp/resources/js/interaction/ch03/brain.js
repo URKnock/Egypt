@@ -1,6 +1,7 @@
 function interaction() {
 	x = $("#background").width() / 2.0;
 	y = $("#background").height() / 2.0 + 100;
+	$("#effect").attr("src", "/resources/bgm/ch03/brain1.mp3");
 
 	var arr = ["#bed", "#hum", "#brain", "#scroll", "#stick"]
 	arr.forEach (function (item, idx) {
@@ -89,6 +90,7 @@ function clickBrain( event ) {
 			setTimeout(function() {	lock = 0; }, 350);
 			if(idx >= 9) { $("form").submit(); }
 		});
+		effect();
 		$("#brain").attr("src", brains[idx]);
 		idx += 1;
 		lock = 1;

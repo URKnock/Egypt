@@ -6,6 +6,7 @@ function interaction() {
 
 	x = $("#background").width() / 2.0;
 	y = $("#background").height() / 2.0 + 100;
+	$("#effect").attr("src", "/resources/bgm/ch03/kettle.mp3");
 
 	$('#human').on("load", function() {
 		var arr = ["#human", "#dirt_head", "#dirt_body", "#dirt_bottom", "#dirt_leg", "#shine"]
@@ -49,6 +50,8 @@ function interaction() {
 		$('#kettle').css("left", dragLeft - $("#kettle").width());
 		$('#dragSpot').css("top", 500*h-55);
 		$('#dragSpot').css("left", dragLeft + $('#dragLine').width());
+		Effect.loop = true;
+		effect();
 	});
 	
 	resize('#linen');
@@ -147,13 +150,16 @@ function rescale(element, div) {
 function checkWipeCount() {
 	if(wipeCount == 100) {
 		$('.dirt').fadeTo("1000", 0.6);
+		effect();
 	} else if(wipeCount == 200) {
 		$('.dirt').fadeTo("1000", 0.3);
+		effect();
 	} else if(wipeCount == 300) {
 		$('#linen').css("top", $("#scroll").height() - $('#linen').height() - 27*h);
 		$('#linen').css("left", x + 80*w - ($('#linen').width() / 2));
 		$('.dirt').fadeOut(1000);
 		$('#shine').fadeIn(1000);
+		effect();
 		setTimeout(function() { 
 			$("form").submit();
 		}, 3000);
@@ -172,6 +178,11 @@ function enterKettle(elem) {
 	$('#dragLine').fadeOut(1000);
 	$('#kettle').fadeOut(1000);
 	$('#water').fadeOut(1000);
+
+	Effect.pause();
+	setTimeout(function() {
+		$("#effect").attr("src", "/resources/bgm/ch03/towel.mp3");
+	}, 4000);
 	
 	$('.dirt').fadeTo("1000", 0.75);
 	$('#linen').addClass('select');
