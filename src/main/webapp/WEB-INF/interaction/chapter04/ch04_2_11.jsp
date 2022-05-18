@@ -3,12 +3,6 @@
 
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_2.css'/>" rel="stylesheet" type="text/css"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script defer>
-	var body = document.querySelector('body');
-	body.onload = function() { setTimeout(next, 6000); setSound();};
-	
-	function next() { $("form").submit(); }
-</script>
 
 <div id="interact">
 	<!-- background -->
@@ -30,6 +24,23 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_out.webp'/>">
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_6_out.webp'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1_motion.webp'/>">
-
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_motion.webp'/>">
 </div>
+
+<script defer>
+	var body = document.querySelector('body');
+	var anubis = document.querySelector('#anubis');
+	
+	body.onload = function() { 
+		setSound(); 
+		setTimeout(function(){
+			anubis.src = "resources/webp/ch04/anubis_1_talk.webp";
+		}, 2400);
+		$("#voice").bind("ended", function() {
+			anubis.src = "resources/webp/ch04/anubis_1.webp";
+			setTimeout(next, 1000)
+		});
+	};
+	
+	function next() { $("form").submit(); }
+</script>

@@ -45,7 +45,7 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_victim2.webp'/>">
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_6_in.webp'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_talk.webp'/>">
 	
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_11.png'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_9.png'/>">
