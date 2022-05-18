@@ -20,7 +20,7 @@
 	</div>
 	<!-- Character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_4.webp'/>">
-	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_3.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_3_talk.webp'/>">
 	<img class="character" src="<c:url value='/resources/character/ch04/4_11.png'/>">
 	
 	<img class="motion" src="<c:url value='/resources/webp/ch04/servant_4_1.webp'/>">

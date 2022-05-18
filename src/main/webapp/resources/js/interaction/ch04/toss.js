@@ -20,10 +20,28 @@ var victim2 = document.querySelector('#interact .victim2');
 var num = 0;
 
 function init_toss() {
-	if($("input[name=index]").val() == "2" || $("input[name=index]").val() == "4")
+	if($("input[name=index]").val() == "2" || $("input[name=index]").val() == "4") {
 		servant8.src = "resources/webp/ch04/servant_8_talk.webp";
-	if($("input[name=index]").val() == "3" || $("input[name=index]").val() == "5")
+		$("#voice").bind("ended", function() {
+			servant8.src = "resources/webp/ch04/servant_8_nothing.webp";
+		});
+	}
+		
+	if($("input[name=index]").val() == "3" || $("input[name=index]").val() == "5") {
 		servant7.src = "resources/webp/ch04/servant_7_talk.webp";
+		$("#voice").bind("ended", function() {
+			servant7.src = "resources/webp/ch04/servant_7_nothing.webp";
+		});
+	}
+	
+	if($("input[name=scene]").val() == "19") {
+		var osiris = document.querySelector('.osiris');
+		osiris.src = "resources/webp/ch04/osiris_talk.webp"
+		$("#voice").bind("ended", function() {
+			osiris.src = "resources/webp/ch04/osiris.webp";
+		});
+	}
+		
 		
 	if($("input[name=index]").val() == "1") { // 맨 처음
 		item1.style.animation = "3s appear";
@@ -59,6 +77,14 @@ function init_toss() {
 			$("form").submit();
 		});
 		
+		var nextButton = document.querySelector('#nextButton');
+		nextButton.style.display = "block";
+		if($("input[name=scene]").val() == "19") {
+			nextButton.style.position = "absolute";
+			nextButton.style.paddingTop = "68px";
+			nextButton.style.paddingLeft = "470px";
+		}
+	
 		$("input[name=index]").val("5");
 	}
 	

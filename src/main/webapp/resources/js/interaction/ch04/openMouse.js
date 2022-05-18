@@ -110,9 +110,8 @@ function next() {
 	$("form").submit();
 }
 
-setTimeout(changeWebp, 3000);
-
-
-function changeWebp() {
-	Anubis.src = "resources/webp/ch04/anubis_3_talk.webp";
-}
+var anubis = document.querySelector('#anubis');
+				
+$("#voice").bind("ended", function() {
+	if(flag == 0) anubis.src =  "resources/webp/ch04/anubis_3.webp";
+});

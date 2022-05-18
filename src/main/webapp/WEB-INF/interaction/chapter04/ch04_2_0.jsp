@@ -27,7 +27,7 @@
 	<!-- object -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_in.webp'/>">
 	<img class="character">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_talk.webp'/>">
 	
 	<img class="animal" src="<c:url value='/resources/webp/ch04/animal_1.webp'/>">
 </div>
@@ -38,4 +38,9 @@
 	setTimeout(function() {
 		servant.src = "resources/webp/ch04/servant_5_knife.webp";
 	}, 5350);
+	
+	var anubis = document.querySelector('#anubis');
+	$("#voice").bind("ended", function() {
+		anubis.src =  "resources/webp/ch04/anubis_1.webp";
+	});
 </script>

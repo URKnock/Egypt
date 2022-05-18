@@ -114,8 +114,12 @@ form {
 #nextButton {
 	width: 25px;
 	height: 21px;
-	padding-top: 30;
+	padding-top: 32px;
 	padding-left: 10px;
+	display: none;
+}
+
+#loading {
 	display: none;
 }
 /*

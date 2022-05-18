@@ -11,7 +11,7 @@
 <script defer src="<c:url value='/resources/js/interaction/ch04/toss.js'/>" type="text/javascript"></script>
 <script>
 	var body = document.querySelector('body');
-	body.onload = function() { init_toss(); setSound(); };
+	body.onload = function() { setSound(); init_toss();  };
 </script>
 
 <div id="interact">

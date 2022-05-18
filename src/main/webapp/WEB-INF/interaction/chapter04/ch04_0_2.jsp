@@ -9,9 +9,14 @@
 <script>
 	var body = document.querySelector('body');
 	body.onload = function() { 
-		console.log("motion time~") setSound();
-		extButton = document.querySelector('#nextButton');
-		nextButton.style.display = "none";
+		var anubis = document.querySelector('#anubis');
+		
+		$("#voice").bind("ended", function() {
+			anubis.src = "resources/webp/ch04/anubis_2.webp";
+		});
+		setSound();
+		//nextButton = document.querySelector('#nextButton');
+		//nextButton.style.display = "none";
 	};
 </script>
 
@@ -30,7 +35,7 @@
 	<img id="active" onclick="tap_motion(this, 1)" class="pontiff" src="<c:url value='/resources/webp/ch04/servant_2.webp'/>">
 	<img class="pontiff" src="<c:url value='/resources/webp/ch04/servant_3.webp'/>">
 	
-	<img class="character" id="anubis" src="<c:url value='/resources/webp/ch04/anubis_2.webp'/>">
+	<img class="character" id="anubis" src="<c:url value='/resources/webp/ch04/anubis_2_talk.webp'/>">
 	<img class="character" src="<c:url value='/resources/character/ch04/4_4.png'/>">
 	
 	<!-- object -->
