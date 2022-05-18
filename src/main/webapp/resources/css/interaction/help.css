@@ -51,7 +51,7 @@
 }
 #help input {
 	font-family: 'Minguk-Bold';
-	font-size: 20pt;
+	font-size: 18pt;
 	color: #A8A19E;
 	background: transparent;
 	border: none;
@@ -63,6 +63,8 @@
 	margin: 15px;
 	margin-left: 50px;
 	padding: 15px;
+	padding-left: 25px;
+	padding-top: 14px;
 }
 #help_content {
 	display: flex;

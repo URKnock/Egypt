@@ -93,7 +93,7 @@ function setHelp() {
 	var containOffset = $("#help_container").offset();
 	$("#help_close").css({
 		left: containOffset.left + (1502 * w) - $("#help_close").width() - 50,
-		top: containOffset.top + 30
+		top: containOffset.top + 55
 	});
 	$("#help_close").on("click", function() {
 		$("#help").fadeOut();
