@@ -9,7 +9,7 @@
 	<img class="background" src="<c:url value='/resources/background/ch07/7_2_2.png'/>">
 	<img class="background" src="<c:url value='/resources/background/ch07/7_2_3.png'/>">
 	
-	<img class="bgObj" src="<c:url value='/resources/background/ch07/7_2_4.png'/>">
+	<img class="balance" src="<c:url value='/resources/object/ch07/balance_after.png'/>">
 
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch07/men.webp'/>">
@@ -23,6 +23,7 @@
 
 <c:if test="${index eq 1 || index eq 2}">
 	<script>
+		// 아누비스 말함
 		var anubis = document.querySelector('#anubis');
 		anubis.src = "resources/webp/ch07/anubis2_talk.webp";
 		
@@ -30,6 +31,18 @@
 			anubis.src =  "resources/webp/ch07/anubis2.webp";
 		});
 	</script>
+	<c:if test="${index eq 2}">
+		<script>
+			var body = document.querySelector('body');
+			body.onload = function() { 
+				init();
+				var next = document.querySelector('#nextButton');
+				next.style.position = "absolute";
+				next.style.top = "48%";
+				next.style.left = "770px";
+			}
+		</script>
+	</c:if>
 </c:if>
 <c:if test="${index eq 3}">
 	<script>
