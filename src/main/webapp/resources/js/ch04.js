@@ -11,12 +11,10 @@ function init() {
 		$("form").submit();
 	});
 	
-	var nextButton = document.querySelector('#nextButton');
-	nextButton.style.display = "block";
-	
 	setSomething();
 	
-	
+	var nextButton = document.querySelector('#nextButton');
+	nextButton.style.display = "block";
 };
 
 $(document).ready(function() {

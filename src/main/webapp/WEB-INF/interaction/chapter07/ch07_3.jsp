@@ -21,3 +21,32 @@
 	<img class="character" src="<c:url value='/resources/character/ch07/6_20.png'/>">
 	<img class="character" src="<c:url value='/resources/character/ch07/6_21.png'/>">
 </div>
+
+<c:if test="${scene eq 11 && index eq 0}">
+	<script> 
+		var body = document.querySelector('body');
+		body.onload = function() { setSomething(); } 
+	</script>
+</c:if>
+<c:if test="${scene eq 12 && index eq 0}">
+	<script> 
+		var body = document.querySelector('body');
+		body.onload = function() { init();
+			var next = document.querySelector('#nextButton');
+			next.style.position = "absolute";
+			next.style.top = "48%";
+			next.style.left = "735px";
+		} 
+	</script>
+</c:if>
+<c:if test="${scene eq 13 && index eq 0}">
+	<script> 
+		var body = document.querySelector('body');
+		body.onload = function() { init();
+			var next = document.querySelector('#nextButton');
+			next.style.position = "absolute";
+			next.style.top = "48%";
+			next.style.left = "857px";
+		} 
+	</script>
+</c:if>

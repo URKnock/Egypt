@@ -7,6 +7,6 @@
 	body.onload = function() { init_toss(); setSomething(); };
 </script>
 
-<img class="item" id="active"  src="<c:url value='/resources/character/ch07/6_6.png'/>">
+<img class="item" id="active"  src="<c:url value='/resources/object/ch07/heart.png'/>">
 <div class="spot"></div>
 <div class="circle"></div>

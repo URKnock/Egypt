@@ -20,8 +20,9 @@
 		$("#voice").bind("ended", function() {
 			if(obj[1].src != webp[1] && obj[1].src != png[1])
 				obj[1].src =  "resources/webp/ch07/anubis.webp";
-
 		});
+		
+		obj[0].src = webp[0]; obj[4].src = webp[4];
 	};
 </script>
 
@@ -35,8 +36,8 @@
 		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower2.webp'/>">
 		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower3.webp'/>">
 		<img id="active" onclick="tap_info(this, 6)" class="bgObj" src="<c:url value='/resources/webp/ch07/45god.webp'/>">
-		<img id="active" onclick="tap_info(this, 0)" class="bgObj" src="<c:url value='/resources/webp/ch07/balance.webp'/>">
-		<img id="active" onclick="tap_info(this, 4)" class="bgObj" src="<c:url value='/resources/webp/ch07/feather.webp'/>">
+		<img id="active" onclick="tap_info(this, 0)" class="bgObj">
+		<img id="active" onclick="tap_info(this, 4)" class="bgObj">
 	</div>
 	
 	<!-- character -->
