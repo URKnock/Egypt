@@ -15,6 +15,8 @@ function init() {
 	nextButton.style.display = "block";
 	
 	setSomething();
+	
+	
 };
 
 $(document).ready(function() {
