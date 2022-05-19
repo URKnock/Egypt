@@ -33,7 +33,7 @@
 	
 	body.onload = function() { 
 		init();
-		setSound();
+		setSomething();
 		body.addEventListener('mousemove', follow_mouse);
 		
 		var anubis = document.querySelector('#anubis');

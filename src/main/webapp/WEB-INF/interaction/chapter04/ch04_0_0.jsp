@@ -35,7 +35,7 @@
 		
 		if(${scene} == 3) {
 			anubis.src = "resources/webp/ch04/anubis_2_motion.webp";
-			setSound();
+			setSomething();
 		}
 		else init();
 		

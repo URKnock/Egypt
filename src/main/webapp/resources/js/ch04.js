@@ -11,10 +11,10 @@ function init() {
 		$("form").submit();
 	});
 	
-	setSound();
-	
 	var nextButton = document.querySelector('#nextButton');
 	nextButton.style.display = "block";
+	
+	setSomething();
 };
 
 $(document).ready(function() {
@@ -35,14 +35,25 @@ $(document).ready(function() {
 	}
 	
 	effect = document.getElementsByTagName('audio')[2];
+	
+	
 });
 
 function home() {
 	location.href = "chapter02";
 }
 function setting() {
-	//$("#setting").css("display", "flex");
+	$("#setting").css("display", "flex");
 }
 function help() {
-	//$("#help").css("display", "flex");
+	$("#help").css("display", "flex");
+}
+
+function setSomething() {
+	setSound();
+	setSetting();
+	setHelp();
+	
+	$("#setting").hide();
+	$("#help").hide();
 }

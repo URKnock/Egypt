@@ -26,7 +26,7 @@
 	var body = document.querySelector('body');
 	var god = document.querySelector('.god');
 	body.onload = function() { 
-		console.log("부정고백 time~"); setSound(); 
+		console.log("부정고백 time~"); setSomething();
 		$("#voice").bind("ended", function() {
 			god.src =  "resources/webp/ch07/42_${questN}.webp";
 		});

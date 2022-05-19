@@ -19,7 +19,7 @@
 <script>
 	var body = document.querySelector('body');
 	body.onload = function() { 
-			setSound();
+			setSomething();
 			var knife = document.querySelector('#interact .knife');
 			knife.onclick = function() { $("form").submit(); };
 			
