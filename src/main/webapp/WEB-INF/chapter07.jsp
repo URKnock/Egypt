@@ -56,7 +56,7 @@
 		<div id="scene">
 			<div id="title">
 				<div>${dialogue.name}</div>
-				<c:if test="${dialogue.nickname ne '없음'}">
+				<c:if test="${dialogue.nickname ne '없음' && dialogue.nickname ne '' }">
 					<div>${dialogue.nickname}</div>
 				</c:if>
 			</div>
