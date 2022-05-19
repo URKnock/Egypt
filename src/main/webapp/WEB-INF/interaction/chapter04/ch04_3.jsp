@@ -40,5 +40,5 @@
 <script src="<c:url value='/resources/js/interaction/ch04/toss.js'/>" type="text/javascript"></script>
 <script>
 	var body = document.querySelector('body');
-	body.onload = function() { setSound(); init_toss(); };
+	body.onload = function() { setSomething(); init_toss(); };
 </script>

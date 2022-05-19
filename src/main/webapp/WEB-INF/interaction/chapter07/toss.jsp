@@ -4,7 +4,7 @@
 <script defer src="<c:url value='/resources/js/interaction/ch07/toss.js'/>" type="text/javascript"></script>
 <script defer>
 	var body = document.querySelector('body');
-	body.onload = function() { init_toss(); setSound(); };
+	body.onload = function() { init_toss(); setSomething(); };
 </script>
 
 <img class="item" id="active"  src="<c:url value='/resources/character/ch07/6_6.png'/>">

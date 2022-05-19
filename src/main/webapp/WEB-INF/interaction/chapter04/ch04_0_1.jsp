@@ -22,7 +22,7 @@
 			anubis.attr("src", "resources/webp/ch04/anubis_2.webp");
 			setTimeout(function() { $("form").submit(); }, 2000);
 		});
-		setSound(); 
+		setSomething(); 
 	};
 </script>
 

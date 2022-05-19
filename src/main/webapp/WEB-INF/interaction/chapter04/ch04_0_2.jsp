@@ -13,7 +13,7 @@
 		$("#voice").bind("ended", function() {
 			anubis.src = "resources/webp/ch04/anubis_2.webp";
 		});
-		setSound();
+		setSomething();
 		//nextButton = document.querySelector('#nextButton');
 		//nextButton.style.display = "none";
 	};

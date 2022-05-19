@@ -62,7 +62,7 @@
 					$("input[name=scene]").val("6");
 					$("input[name=index]").val("0");
 					init();
-					setSound();
+					setSomething();
 				}
 			</script>
 		</c:when>
@@ -70,7 +70,7 @@
 			<script defer>
 			var body = document.querySelector('body');
 			body.onload = function() {
-				setSound();
+				setSomething();
 				$("form").submit();
 			}
 			</script>

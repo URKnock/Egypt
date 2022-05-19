@@ -8,11 +8,10 @@
 	<link href="<c:url value='/resources/css/ch04.css'/>" rel="stylesheet" type="text/css"/>
 	<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 	<script defer src="<c:url value='/resources/js/ch04.js'/>" type="text/javascript"></script>
-	
+	<script src="<c:url value='/resources/js/sound.js'/>"></script>
 	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 	<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 	
-	<script src="<c:url value='/resources/js/sound.js'/>"></script>
 	<script>
 		function effSoundPlay( soundName ) {
 			effect.src = "resources/bgm/ch04/effect/"+soundName+".mp3";

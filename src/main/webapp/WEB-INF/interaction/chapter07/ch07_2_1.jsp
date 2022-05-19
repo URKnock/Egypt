@@ -21,7 +21,7 @@
 			<script defer>
 				var body = document.querySelector('body');
 				body.onload = function() {
-					setSound();
+					setSomething();
 					$("form").submit();
 				}
 			</script>
@@ -46,7 +46,7 @@
 					$("#dialogue").click(function() {
 						location.href = '/chapter10';
 					});
-					setSound();
+					setSomething();
 				}
 				// 저물 모션 넣기
 				</script>
