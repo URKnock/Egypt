@@ -994,6 +994,13 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
+	"content":"사자의 심장은 깃털보다 무겁다.",
+	"chapter":10, "scene":0, "flag":0,
+	"image":"UI/Dialogue/Anubis.png",
+	"choice":"없음"
+},
+{
+	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"사자여, 무척이나 실망했다.<br/><span>심장을 암무트에게 바치도록 해라.</span>",
 	"chapter":10, "scene":0, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
