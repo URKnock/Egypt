@@ -986,13 +986,6 @@
 	"choice":"없음"
 },
 {
-	"name":"아누비스", "nickname":"죽음을 심판하는 신",
-	"content":"사자의 심장은 깃털보다 무겁다.",
-	"chapter":10, "scene":0, "flag":0,
-	"image":"UI/Dialogue/Anubis.png",
-	"choice":"없음"
-},
-{
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"사자의 심장은 깃털보다 무겁다.",
 	"chapter":10, "scene":0, "flag":0,
