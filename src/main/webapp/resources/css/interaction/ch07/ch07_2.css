@@ -22,12 +22,12 @@
 }
 
 /* 배경 오트젝트 */
-#interact .bgObj {
+#interact .balance {
 	z-index: 2;
 	bottom: 28.05%;
 }
-#interact .bgobj:nth-of-type(3) {
-	height: 49.81%;
+#interact .balance:nth-of-type(3) {
+	height: 50.64%;
 	left: 50%; transform: translate(-50%, 0);
 }
 
@@ -54,9 +54,9 @@
 }
 
 #interact .item {
-	left: 25vh;
-	height: 7%;
-	bottom: 55%;
+	left: 26.5vh;
+	height: 06.11%;
+	bottom: 56%;
 	z-index: 3;
 }
 

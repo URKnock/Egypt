@@ -28,15 +28,23 @@
 </div>
 
 <script>
-	if(${scene} == 3) {
-		var body = document.querySelector('body');
-		body.onload = function() { console.log("Selection time~"); };
-		
+	var body = document.querySelector('body');
+	
+	body.onload = function() { 
 		var anubis = document.querySelector('#anubis');
-		anubis.src = "resources/webp/ch04/anubis_2_motion.webp";
+		
+		if(${scene} == 3) {
+			anubis.src = "resources/webp/ch04/anubis_2_motion.webp";
+			setSomething();
+		}
+		else init();
 		
 		setTimeout(function() {
-			anubis.src = "resources/webp/ch04/anubis_2.webp";
+			anubis.src = "resources/webp/ch04/anubis_2_talk.webp";
 		}, 2400);
-	}
+		
+		$("#voice").bind("ended", function() {
+			anubis.src =  "resources/webp/ch04/anubis_2.webp";
+		});
+	};
 </script>

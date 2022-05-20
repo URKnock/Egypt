@@ -34,7 +34,6 @@ function init() {
 	} else if(chapter == 7) {
 		$("#character").css({"left":990*w, "top":120*h});
 	}
-	
 	preload(lists);
 }
 

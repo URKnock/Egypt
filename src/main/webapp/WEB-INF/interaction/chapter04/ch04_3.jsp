@@ -7,12 +7,6 @@
 		transform: translate(-5vh, 0);
 	}
 </style>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script defer src="<c:url value='/resources/js/interaction/ch04/toss.js'/>" type="text/javascript"></script>
-<script>
-	var body = document.querySelector('body');
-	body.onload = function() { init_toss(); setSound(); };
-</script>
 
 <div id="interact">
 	<!-- background -->
@@ -42,3 +36,9 @@
 	<img class="victim1" src="<c:url value='/resources/object/ch04/4_4_16.png'/>">
 	<img class="victim2" src="<c:url value='/resources/object/ch04/4_4_7.png'/>">
 </div>
+
+<script src="<c:url value='/resources/js/interaction/ch04/toss.js'/>" type="text/javascript"></script>
+<script>
+	var body = document.querySelector('body');
+	body.onload = function() { setSomething(); init_toss(); };
+</script>

@@ -7,21 +7,29 @@
 
 
 <script defer src="<c:url value='/resources/js/interaction/ch07/question.js'/>" type="text/javascript"></script>
-<script>
-	var body = document.querySelector('body');
-	body.onload = function() { console.log("부정고백 time~"); setSound(); };
-</script>
 
 <div id="interact">
 	<!-- background -->
-	<img class="background" src="<c:url value='/resources/background/ch07/7_2_2.png'/>">
+	<img class="background" src="<c:url value='/resources/background/ch07/7_1_2.jpg'/>">
 	
 	<div class="bg">
-		<img class="bgObj" src="<c:url value='/resources/background/ch07/7_0_3.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch07/7_2_1.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch07/7_2_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch07/7_1_4.png'/>">
 	</div>
 	
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch07/men.webp'/>">
-	<img class="god" src="<c:url value='/resources/webp/ch07/42_${questN}.webp'/>">
+	<img class="god" src="<c:url value='/resources/webp/ch07/42_${questN}_talk.webp'/>">
 </div>
+
+<script>
+	var body = document.querySelector('body');
+	var god = document.querySelector('.god');
+	body.onload = function() { 
+		console.log("부정고백 time~"); setSomething();
+		$("#voice").bind("ended", function() {
+			god.src =  "resources/webp/ch07/42_${questN}.webp";
+		});
+	};
+</script>

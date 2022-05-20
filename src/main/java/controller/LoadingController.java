@@ -68,5 +68,4 @@ public class LoadingController implements Controller {
 		request.setAttribute("js", js);
     	return url;
     }
-
 }

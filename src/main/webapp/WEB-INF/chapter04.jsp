@@ -6,15 +6,24 @@
 	<title>사자의 서</title>
 	
 	<link href="<c:url value='/resources/css/ch04.css'/>" rel="stylesheet" type="text/css"/>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 	<script defer src="<c:url value='/resources/js/ch04.js'/>" type="text/javascript"></script>
-	
+	<script src="<c:url value='/resources/js/sound.js'/>"></script>
 	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 	<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 	
-	<script src="<c:url value='/resources/js/sound.js'/>"></script>
+	<script>
+		function effSoundPlay( soundName ) {
+			effect.src = "resources/bgm/ch04/effect/"+soundName+".mp3";
+			effect.play();
+		}
+	</script>
+	
 </head>
 <body onload="init();">
+<audio id="bgm" preload="auto" src='<c:url value="/resources/bgm/4_openmouth.mp3"/>' loop="true" autobuffer></audio>
+<audio id="voice" preload="auto" src='<c:url value="/resources/bgm/ch04/4_${scene}_${index}_${flag}.mp3"/>'></audio>
+<audio id="effect" preload="auto" src=""></audio>
 <div id="view">
 <div id="wrap">
 	<div id="background">
@@ -26,16 +35,16 @@
 		</c:if>
 	</div>
 	
-	<div id="menu" class="${page}">
-		<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-		<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-		<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+	<div id="menu">
+		<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+		<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+		<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 	</div>
 </div>
 </div>
+<jsp:include page="interaction/help.jsp"/>
 <jsp:include page="interaction/setting.jsp"/>
-<jsp:include page="interaction/info_window.jsp"/>
 <form method="post" action="<c:url value='/chapter04'/>">
 	<div id="order"></div>
 	<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
@@ -44,7 +53,7 @@
 		<div id="scene">
 			<div id="title">
 				<div>${dialogue.name}</div>
-				<c:if test="${dialogue.nickname ne '없음'}">
+				<c:if test="${dialogue.nickname ne '없음' && dialogue.nickname ne '' }">
 					<div>${dialogue.nickname}</div>
 				</c:if>
 			</div>
@@ -66,14 +75,10 @@
 	</div>
 	<div id="blur"></div>
 	<div id="loading"></div>
-	<audio id="bgm" preload="auto" src='<c:url value="/resources/bgm/4_openmouth.mp3"/>' loop="true" autobuffer></audio>
-	<audio id="voice" preload="auto" src='<c:url value="/resources/bgm/ch04/4_${scene}_${index}_${flag}.mp3"/>'></audio>
-	<audio id="effect" preload="auto" src=""></audio>
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>
 	<input name="choice" type="hidden" value="${choice}"/>
-	
 </form>
 </body>
 </html>

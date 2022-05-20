@@ -26,7 +26,7 @@
 }
 #setting_container > div {
 	font-family: 'Minguk-Bold';
-	font-size: 32px;
+	font-size: 32pt;
 	color: #554740;
 }
 .audioSlider {
@@ -68,11 +68,16 @@
 	display: flex;
 	color: #554740;
 }
-#setting_container > div:nth-child(1) {
+#setting_title {
 	display: flex;
 	align-content: center;
 	color: #554740;
 	margin: 30px;
+}
+#setting_title img {
+	width: 37px;
+	height: 39px;
+	align-self: center;
 }
 #setting_container > div:nth-child(2) {
 	display: flex;

@@ -20,10 +20,28 @@ var victim2 = document.querySelector('#interact .victim2');
 var num = 0;
 
 function init_toss() {
-	if($("input[name=index]").val() == "2" || $("input[name=index]").val() == "4")
+	if($("input[name=index]").val() == "2" || $("input[name=index]").val() == "4") {
 		servant8.src = "resources/webp/ch04/servant_8_talk.webp";
-	if($("input[name=index]").val() == "3" || $("input[name=index]").val() == "5")
+		$("#voice").bind("ended", function() {
+			servant8.src = "resources/webp/ch04/servant_8_nothing.webp";
+		});
+	}
+		
+	if($("input[name=index]").val() == "3" || $("input[name=index]").val() == "5") {
 		servant7.src = "resources/webp/ch04/servant_7_talk.webp";
+		$("#voice").bind("ended", function() {
+			servant7.src = "resources/webp/ch04/servant_7_nothing.webp";
+		});
+	}
+	
+	if($("input[name=scene]").val() == "19") {
+		var osiris = document.querySelector('.osiris');
+		osiris.src = "resources/webp/ch04/osiris_talk.webp";
+		$("#voice").bind("ended", function() {
+			osiris.src = "resources/webp/ch04/osiris.webp";
+		});
+	}
+		
 		
 	if($("input[name=index]").val() == "1") { // 맨 처음
 		item1.style.animation = "3s appear";
@@ -41,17 +59,17 @@ function init_toss() {
 		}, 3150);
 	}
 	else if($("input[name=index]").val() == "2") {
-		effSoundPlay( "Dish" );
+		//effSoundPlay( "Dish" );
 		victim1.style.display = "block";
 		item2.style.display = "block";
 	}
 	else if($("input[name=index]").val() == "3") {
-		effSoundPlay( "Dish" );
+		//effSoundPlay( "Dish" );
 		victim2.style.display = "block";
 		item1.style.display = "block";
 	}
 	else {
-		effSoundPlay( "Dish" );
+		//effSoundPlay( "Dish" );
 		victim1.style.display = "block";
 		victim2.style.display = "block";
 		
@@ -59,12 +77,18 @@ function init_toss() {
 			$("form").submit();
 		});
 		
+		var nextButton = document.querySelector('#nextButton');
+		nextButton.style.display = "block";
+		if($("input[name=scene]").val() == "19") {
+			nextButton.style.position = "absolute";
+			nextButton.style.paddingTop = "68px";
+			nextButton.style.paddingLeft = "470px";
+		}
+	
 		$("input[name=index]").val("5");
 	}
 	
-	
-	
-	item1.onclick = function() {
+	item1.onmousedown = function() {
 		if(!isDragging) {
 			isDragging = true;
 			item = item1;
@@ -79,7 +103,7 @@ function init_toss() {
 			spot.style.cursor = "none";
 		}
 	}
-	item2.onclick = function() {
+	item2.onmousedown = function() {
 		if(!isDragging) {
 			isDragging = true;
 			item = item2;
@@ -92,12 +116,23 @@ function init_toss() {
 			spot.style.cursor = "none";
 			
 			circle.style.display = "block";
-			circle.style.transform = "translate(-20vh, 0)"
-			spot.style.transform = "translate(-18vh, 0)"
+			circle.style.transform = "translate(-20vh, 0)";
+			spot.style.transform = "translate(-18vh, 0)";
 		}
-		
 	}
-	spot.onclick = function() {
+	body.onmouseup = function() {
+		if(isDragging == true) {
+			isDragging = false;
+			reset();
+			
+			circle.style.display = "none";
+			item.style.cursor = "auto";
+			spot.style.cursor = "auto";
+			circle.style.transform = "";
+			spot.style.transform = "";
+		}
+	}
+	spot.onmouseup = function() {
 		if(isDragging == true) {
 			if($("input[name=index]").val() == "1") $("input[name=index]").val(num);
 			else if($("input[name=index]").val() == "2") $("input[name=index]").val("4");
@@ -116,8 +151,8 @@ function follow_mouse( event ) {
 }
 
 function reset() {
-	item.x = xStart;
-	item.y = yStart;
+	item.style.left = xStart;
+	item.style.top = yStart;
 	
 	body.removeEventListener("mousemove", follow_mouse);
 }

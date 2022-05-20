@@ -17,14 +17,7 @@ img {
 	-webkit-user-drag: none;
 }
 body {
-	font-family: 'Minguk-Regular';
-	background: black;
-	
-	-webkit-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;
 	user-select:none;
-	overflow: hidden;
 }
 
 #view {
@@ -114,9 +107,22 @@ form {
 #nextButton {
 	width: 25px;
 	height: 21px;
-	padding-top: 30;
+	padding-top: 32px;
 	padding-left: 10px;
 	display: none;
+}
+
+#loading {
+	display: none;
+}
+
+#setting_container {
+	width: 110.64vh;
+	height: 60.64vh;
+}
+#setting_close {
+	left: 137.63vh;
+	top: 22.45vh
 }
 /*
 #menu {

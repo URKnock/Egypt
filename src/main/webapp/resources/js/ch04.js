@@ -11,14 +11,10 @@ function init() {
 		$("form").submit();
 	});
 	
-	setSound();
+	setSomething();
 	
 	var nextButton = document.querySelector('#nextButton');
 	nextButton.style.display = "block";
-	
-	//var effect = document.getElementsByTagName('audio')[2];
-	//effect.src = "resources/bgm/ch04/effect/cow.mp3";
-	//effect.play();
 };
 
 $(document).ready(function() {
@@ -34,15 +30,30 @@ $(document).ready(function() {
 	
 	scene = $("input[name='scene']").val();
 	if(scene == 1) {
+		$("#loading").style.display = block;
 		$("#loading").fadeOut(2000);
-	} else {
-		$("#loading").hide();
 	}
 	
 	effect = document.getElementsByTagName('audio')[2];
+	
+	
 });
 
-function effSoundPlay( soundName ) {
-	effect.src = "resources/bgm/ch04/effect/"+soundName+".mp3";
-	effect.play();
+function home() {
+	location.href = "chapter02";
+}
+function setting() {
+	$("#setting").css("display", "flex");
+}
+function help() {
+	$("#help").css("display", "flex");
+}
+
+function setSomething() {
+	setSound();
+	setSetting();
+	setHelp();
+	
+	$("#setting").hide();
+	$("#help").hide();
 }

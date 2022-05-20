@@ -21,7 +21,7 @@
 <script defer>
 	effectName = "cut1";
 	var body = document.querySelector('body');
-	body.onload = function() { init_item(); setSound();};
+	body.onload = function() { init_item(); setSomething();};
 </script>
 
 <div id="interact">
@@ -44,7 +44,7 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_victim2.webp'/>">
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_6_victim1.webp'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_talk.webp'/>">
 	
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_15.png'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_13.png'/>">

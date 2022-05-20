@@ -14,12 +14,11 @@
 	}
 </style>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/kill.js'/>" type="text/javascript"></script>
 <script defer>
 	effectName = "antelope";
 	var body = document.querySelector('body');
-	body.onload = function() { init_kill(); setSound();};
+	body.onload = function() { init_kill(); setSomething();};
 </script>
 
 <div id="interact">
@@ -42,7 +41,7 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_victim2.webp'/>">
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_6_victim1.webp'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_talk.webp'/>">
 	
 	<img class="animal" id="active" src="<c:url value='/resources/webp/ch04/animal_3.webp'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_13.png'/>">

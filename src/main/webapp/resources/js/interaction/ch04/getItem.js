@@ -44,8 +44,8 @@ function init_item() {
 }
 
 function follow_mouse( event ) {
-	const x = event.clientX - (knife.clientWidth*1.05);
-	const y = event.clientY - (knife.clientHeight*0.1);
+	const x = event.clientX - (knife.clientWidth*0.1);
+	const y = event.clientY - (knife.clientHeight*1.1);
 		
 	knife.style.left = x + 'px';
 	knife.style.top = y + 'px';
@@ -54,3 +54,8 @@ function follow_mouse( event ) {
 function next() {
 	$("form").submit();
 }
+
+var anubis = document.querySelector('#anubis');
+$("#voice").bind("ended", function() {
+	anubis.src =  "resources/webp/ch04/anubis_1.webp";
+});

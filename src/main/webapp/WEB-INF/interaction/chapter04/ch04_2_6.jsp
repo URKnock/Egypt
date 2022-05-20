@@ -14,12 +14,11 @@
 	}
 </style>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/kill.js'/>" type="text/javascript"></script>
 <script defer>
 	effectName = "duck";
 	var body = document.querySelector('body');
-	body.onload = function() { init_kill(); setSound();};
+	body.onload = function() { init_kill(); ssetSomething();};
 </script>
 
 <div id="interact">
@@ -42,7 +41,7 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_victim2.webp'/>">
 	<img class="character">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_talk.webp'/>">
 	
 	<!-- animal -->
 	<img class="animal" id="active" src="<c:url value='/resources/webp/ch04/animal_2.webp'/>">
