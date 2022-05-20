@@ -6,6 +6,8 @@ w = $("#background").width() / 1920;
 h = $("#background").height() / 1080;
 x = $("#background").width() / 2.0;
 
+setSomething();
+
 function init() {
 	$("#dialogue").click(function() {
 		$("form").submit();

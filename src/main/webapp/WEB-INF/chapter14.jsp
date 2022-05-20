@@ -27,7 +27,7 @@
 			<img class="background" src="<c:url value='/resources/background/ch07/7_2_2.png'/>">
 			<img class="background" src="<c:url value='/resources/background/ch07/7_2_3.png'/>">
 			
-			<img class="bgObj" src="<c:url value='/resources/background/ch07/7_2_4.png'/>"> <!-- 저울 원본 -->
+			<img class="balance" src="<c:url value='/resources/background/ch07/7_2_4.png'/>"> <!-- 저울 원본 -->
 		
 			<!-- character -->
 			<img class="character" src="<c:url value='/resources/webp/ch07/men.webp'/>">
