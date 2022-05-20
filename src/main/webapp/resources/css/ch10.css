@@ -10,18 +10,69 @@
 	transform: scale(1.0);
 }
 
-#background {
-	width:100%;
-	height:100%;
-	background: no-repeat url("../background/ch07/7_2_2.png") center center;
-    background-size: 100% 100%;
-}
-#background > img {
-	width:initial;
-	height:initial;
-	position:absolute;
+#interact .bgObj:nth-of-type(8) { /*½ÉÀå*/
+	z-index: 10;
+	bottom: 33%; left: 51%; transform: translate(-30vh, 0);
 }
 
-#human {
-	transform: scaleX(-1)
+#interact .bgObj:nth-of-type(9) { /*Àú¿ï Èæ¹é ´ëÃ¼*/
+	height: 49.81%;
+	left: 50%; transform: translate(-50%, 0);
+}
+
+#interact .background:nth-of-type(11) { /*ºÓÀº ¾ó·è*/
+	height: 120%;
+	width: 100%;
+	bottom: 100%; 
+}
+
+#interact .background:nth-of-type(12) { /*ÆÄ¶õ ¾ó·è*/
+	height: 120%;
+	width: 100%;
+	bottom: 100%; 
+}
+
+.fade-in {
+  animation: fadein 2.0s;
+  -webkit-animation: fadein 2.0s; /* Safari and Chrome */
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadein { 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+  animation: fadeout 2.0s;
+  -webkit-animation: fadeout 2.0s; /* Safari and Chrome */
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeout { 
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.flow {
+  animation: flow 4.0s;
+  -webkit-animation: flow 4.0s; /* Safari and Chrome */
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes flow { 
+    from {
+        bottom: 100%;
+    }
+    to {
+        bottom: -17%; 
+    }
 }

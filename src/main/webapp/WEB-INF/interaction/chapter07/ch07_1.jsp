@@ -42,7 +42,7 @@
 			System.out.println(score);
 			System.out.println(ans);
 			if(score >= 9) session.setAttribute("result", "chapter08");
-			else if(score >= 5) session.setAttribute("result", "chapter13");
+			else if(score >= 5) session.setAttribute("result", "chapter12");
 			else session.setAttribute("result", "chapter11");
 		}
 		
