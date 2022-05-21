@@ -1,7 +1,7 @@
 var count = 0;
 var w, h, x, y;
-var first = new Audio('/D/resources/bgm/ch09/9_5_1_0.wav');
-var second = new Audio('/D/resources/bgm/ch09/9_5_2_0.wav');
+var first = new Audio('/resources/bgm/ch09/9_5_1_0.wav');
+var second = new Audio('/resources/bgm/ch09/9_5_2_0.wav');
 function interaction() { }; 
 function init() {
 	setSound(); 
@@ -72,7 +72,7 @@ function init() {
 
 
 	$("#boat_1").click(function() {
-		 object("#boat_1", 40);
+		 object("#boat_1", 41);
 		count++;
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 
