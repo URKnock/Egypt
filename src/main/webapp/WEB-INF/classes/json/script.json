@@ -18,7 +18,7 @@
 	"content":"나를 도울 준비가 되었는가?",
 	"chapter":3, "scene":1, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"더 둘러보고 싶습니다"
 	}
@@ -116,7 +116,7 @@
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
-	"content":"이제 심장만 남은 너의 '사'가 썩지 않도록 바싹 말릴 순서이다.<br/><span>소다석을 부어 방부 처리를 하여라.</span>",
+	"content":"이제 심장만 남은 너의 육체가 썩지 않도록 바싹 말릴 순서다.<br/><span>소다석을 부어 방부 처리를 하여라.</span>",
 	"chapter":3, "scene":11, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
@@ -196,7 +196,7 @@
 	"content":"의식을 진행할 준비가 되었는가?",
 	"chapter":4, "scene":1, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"더 둘러보고 싶습니다"
 	}
@@ -343,87 +343,145 @@
 }, 
 {
     "name":"사자", "nickname":"없음",
-    "content":"여기가 어디지…",
+    "content":"여기가 어디지……",
     "chapter":5, "scene":0, "flag":0,
-    "image":"UI/Dialogue/5_0_1",
+    "image":"UI/Dialogue/player.png",
     "choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"나는 태양의 신 라. <br/>사자여, 사후세계로 떠날 준비가 되면 나에게 말을 걸어<br/>태양선에 승선하도록 하거라.",
     "chapter":5, "scene":1, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
+	"image":"UI/Dialogue/ra.png",
+	"choice":"없음"
+},
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"나는 태양의 신 라. <br/>사자여, 사후세계로 떠날 준비가 되면 나에게 말을 걸어<br/>태양선에 승선하도록 하거라.",
+    "chapter":5, "scene":2, "flag":0,
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"탑승했는가? 이제 출발하겠다.",
-    "chapter":5, "scene":2, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
+    "chapter":5, "scene":3, "flag":0,
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
-    "content":"길을 조심하거라. <br/>이 밑에서 종종 무시무시한 괴물들이 나타나 방해를 하고는 한다.",
-     "chapter":5, "scene":3, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
+    "content":"길을 조심하거라. 이 밑에서 종종 무시무시한 괴물들이 나타나 방해를 하고는 한다.",
+     "chapter":5, "scene":4, "flag":0,
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
+
 {
     "name":"라", "nickname":"태양의 신",
-    "content":"이런! 말하기도 무섭게 악어가 우리를 향해 닥쳐오는군. <br/>사자여, <span>이 창을 이용하여 네 마리의 방해짐승을 없애 주겠나?</span>",
-    "chapter":5, "scene":4, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
+    "content":"악어공격씬",
+     "chapter":5, "scene":5, "flag":0,
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"이런! 말하기도 무섭게 악어가 우리를 향해 닥쳐오는군. <br/>이 창을 이용하여 네 마리의 방해짐승을 없애 주겠나?",
+    "chapter":5, "scene":6, "flag":0,
+	"image":"UI/Dialogue/ra.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"악어",
+    "chapter":5, "scene":7, "flag":0,
+	"image":"UI/Dialogue/ra.png",
+	"choice":"없음"
+},
+
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"벌레",
+    "chapter":5, "scene":8, "flag":0,
+	"image":"UI/Dialogue/ra.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"풍뎅이",
+    "chapter":5, "scene":9, "flag":0,
+	"image":"UI/Dialogue/ra.png",
+	"choice":"없음"
+},
+
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"뱀",
+    "chapter":5, "scene":10, "flag":0,
+	"image":"UI/Dialogue/ra.png",
+	"choice":"없음"
+},
+
+
 {
   "name":"라", "nickname":"태양의 신",
     "content":"대단하군. 방해물을 모두 퇴치하다니 수고 많았다, 사자여.",
-     "chapter":5, "scene":5, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
+     "chapter":5, "scene":11, "flag":0,
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"이제 한 관문만 더 통과하면 오시리스 법정 안으로 들어갈 수 있다.",
-     "chapter":5, "scene":5, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
+     "chapter":5, "scene":12, "flag":0,
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"그럼, 행운을 빌겠네.",
-     "chapter":5, "scene":5, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
+     "chapter":5, "scene":13, "flag":0,
+	"image":"UI/Dialogue/ra.png",
+	"choice":"없음"
+},
+{
+    "name":"라", "nickname":"태양의 신",
+    "content":"관문신정보창",
+     "chapter":5, "scene":14, "flag":0,
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"사자여, 오시리스 법정 안으로 들어가고 싶은가? <br/>그렇다면 이 관문을 통과하거라. <br/>통과하지 못한다면 엄청난 일이 벌어질 지어니.",
-    "chapter":5, "scene":6, "flag":0,
-	"image":"UI/Dialogue/5_30_1.png",
+    "chapter":5, "scene":15, "flag":0,
+	"image":"UI/Dialogue/gateway_god1.png",
 	"choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
-    "content":"<span>우리가 말하는 안내인, 문지기, 그리고 전령의 이름을 기억하거라.</span>",
-    "chapter":5, "scene":7, "flag":0,
-	"image":"UI/Dialogue/5_30_2.png",
+    "content":"우리가 말하는 안내인, 문지기, 그리고 전령의 이름을 기억하거라.",
+    "chapter":5, "scene":16, "flag":0,
+	"image":"UI/Dialogue/gateway_god2.png",
 	"choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"안내인의 이름은 <span>‘우넴하우우엔투페휘’</span>, <br/>문지기의 이름은 <span>‘세레셔’</span>, <br/>전령의 이름은 <span>‘아아’.</span>",
-    "chapter":5, "scene":8, "flag":0,
-	"image":"UI/Dialogue/5_30_3.png",
+    "content":"안내인의 이름은 ‘우넴하우우엔투페휘’, <br/>문지기의 이름은 ‘세레셔’, <br/>전령의 이름은 ‘아아’.",
+    "chapter":5, "scene":17, "flag":0,
+	"image":"UI/Dialogue/gateway_god3.png",
 	"choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"기억했는가 사자여, 안내인의 이름은?",
-    "chapter":5, "scene":9, "flag":0,
-	"image":"UI/Dialogue/5_30_1.png","choice":{
-        "image":"UI/Dialogue/5_30_4",
+    "chapter":5, "scene":18, "flag":0,
+	"image":"UI/Dialogue/gateway_god1.png","choice":{
+        "image":"UI/Dialogue/player_answer.png",
         "0":"우넴하우우엔투페휘",
         "1":"우루호루페휘",
         "2":"우넴하우에엔투페휘"
@@ -432,30 +490,30 @@
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"안내인의 이름은 <br/>‘우넴하우우엔투페휘’. <br/>정답이다.",
-    "chapter":5, "scene":9, "flag":0,
-	"image":"UI/Dialogue/5_30_1.png",
+    "chapter":5, "scene":18, "flag":0,
+	"image":"UI/Dialogue/gateway_god1.png",
         "choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"안내인의 이름은 <br/>‘우넴하우우엔투페휘’. <br/>오답이다.",
-    "chapter":5, "scene":9, "flag":1,
-	"image":"UI/Dialogue/5_30_1.png",
+    "chapter":5, "scene":18, "flag":1,
+	"image":"UI/Dialogue/gateway_god1.png",
         "choice":"없음"
 },
 {
     "name":"첫 번째 신", "nickname":"없음",
     "content":"안내인의 이름은 <br/>‘우넴하우우엔투페휘’. <br/>오답이다.",
-    "chapter":5, "scene":9, "flag":2,
-	"image":"UI/Dialogue/5_30_1.png",
+    "chapter":5, "scene":18, "flag":2,
+	"image":"UI/Dialogue/gateway_god1.png",
         "choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
     "content":"기억했는가 사자여, 문지기의 이름은?",
-    "chapter":5, "scene":10, "flag":0,
-	"image":"UI/Dialogue/5_30_2.png","choice":{
-        "image":"UI/Dialogue/5_30_4",
+    "chapter":5, "scene":19, "flag":0,
+	"image":"UI/Dialogue/gateway_god2.png","choice":{
+        "image":"UI/Dialogue/player_answer.png",
         "0":"세래셔",
         "1":"세레셔",
         "2":"사레셔"
@@ -464,30 +522,30 @@
 {
     "name":"두 번째 신", "nickname":"없음",
     "content":"문지기의 이름은 <br/>‘세레셔’. <br/>오답이다.",
-    "chapter":5, "scene":10, "flag":0,
-	"image":"UI/Dialogue/5_30_2.png",
+    "chapter":5, "scene":19, "flag":0,
+	"image":"UI/Dialogue/gateway_god2.png",
         "choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
     "content":"문지기의 이름은 <br/>‘세레셔’. <br/>정답이다.",
-    "chapter":5, "scene":10, "flag":1,
-	"image":"UI/Dialogue/5_30_2.png",
+    "chapter":5, "scene":19, "flag":1,
+	"image":"UI/Dialogue/gateway_god2.png",
         "choice":"없음"
 },
 {
     "name":"두 번째 신", "nickname":"없음",
     "content":"문지기의 이름은 <br/>‘세레셔’. <br/>오답이다.",
-    "chapter":5, "scene":10, "flag":2,
-	"image":"UI/Dialogue/5_30_2.png",
+    "chapter":5, "scene":19, "flag":2,
+	"image":"UI/Dialogue/gateway_god2.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"기억했는가 사자여, 정령의 이름은?",
-"chapter":5, "scene":11, "flag":0,
-	"image":"UI/Dialogue/5_30_3.png","choice":{
-        "image":"UI/Dialogue/5_30_4",
+"chapter":5, "scene":20, "flag":0,
+	"image":"UI/Dialogue/gateway_god3.png","choice":{
+        "image":"UI/Dialogue/player_answer.png",
         "0":"아이",
         "1":"아아",
         "2":"아야"
@@ -495,58 +553,61 @@
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"정령의 이름은 <br/>‘아아’. <br/>오답이다.",
-    "chapter":5, "scene":11, "flag":0,
-	"image":"UI/Dialogue/5_30_3.png",
+    "content":"문지기의 이름은 <br/>‘아아’. <br/>오답이다.",
+    "chapter":5, "scene":20, "flag":0,
+	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"정령의 이름은 <br/>‘아아’. <br/>정답이다.",
-    "chapter":5, "scene":11, "flag":1,
-	"image":"UI/Dialogue/5_30_3.png",
+    "content":"문지기의 이름은 <br/>‘아아’. <br/>정답이다.",
+    "chapter":5, "scene":20, "flag":1,
+	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"정령의 이름은 <br/>‘아아’. <br/>오답이다.",
-     "chapter":5, "scene":11, "flag":2,
-	"image":"UI/Dialogue/5_30_3.png",
+    "content":"문지기의 이름은 <br/>‘아아’. <br/>오답이다.",
+     "chapter":5, "scene":20, "flag":2,
+	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"
 },
+
  {
     "name":"세 번째 신", "nickname":"없음",
     "content":"모두 옳은 답을 하였구나. <br/>훌륭하군. <br/>통과하여도 좋다.",
-    "chapter":5, "scene":12, "flag":0,
-	"image":"UI/Dialogue/5_30_3.png",
+    "chapter":5, "scene":21, "flag":0,
+	"image":"UI/Dialogue/gateway_god3.png",
     "choice":"없음"
 },
+
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"다음에는 더 잘할 수 있기를 바란다. <br/>통과하거라.",
-    "chapter":5, "scene":12, "flag":0,
-	"image":"UI/Dialogue/5_30_3.png",
+    "chapter":5, "scene":21, "flag":1,
+	"image":"UI/Dialogue/gateway_god3.png",
     "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
     "content":"분발해야한다. <br/>이번만 통과를 허가한다.",
-    "chapter":5, "scene":12, "flag":0,
-	"image":"UI/Dialogue/5_30_3.png",
+    "chapter":5, "scene":21, "flag":2,
+	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"
 },
+
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"어찌 기억해내지 못하는 것인가, 사자여? <br/>이런 식이라면 법정으로 들여보내줄 수 없다! <br/>악마들이여, 사자를 데려가거라!",
-    "chapter":5, "scene":12, "flag":0,
-	"image":"UI/Dialogue/5_30_3.png",
+    "content":"어찌 기억해내지 못하는 것인가, 사자여? <br>이런 식이라면 법정으로 들여보내줄 수 없다! <br/>악마들이여, 사자를 데려가거라!",
+    "chapter":5, "scene":21, "flag":3,
+	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"나는 동쪽 하늘로 올라가 다시 태양을 띄울지니, 사자는 아누비스의 안내에 따라가거라.",
     "chapter":6, "scene":0, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
 {
@@ -568,7 +629,7 @@
 	"content":"부정 고백을 시행 할 준비가 되었는가?",
 	"chapter":7, "scene":1, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"더 둘러보고 싶습니다"
 	}
@@ -592,7 +653,7 @@
 	"content":"<span>첫번째. 나는 도둑질을 하지 않았습니다.</span>",
 	"chapter":7, "scene":3, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -603,7 +664,7 @@
 	"content":"<span>두번째. 나는 거짓말을 하지 않았습니다.</span>",
 	"chapter":7, "scene":4, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -614,7 +675,7 @@
 	"content":"<span>세번쨰. 나는 음식을 낭비하지 않았습니다.</span>",
 	"chapter":7, "scene":5, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -625,7 +686,7 @@
 	"content":"<span>네번째. 나는 저주를 하지 않았습니다.</span>",
 	"chapter":7, "scene":6, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -636,7 +697,7 @@
 	"content":"<span>다섯번째. 나는 타인을 울리지 않았습니다.</span>",
 	"chapter":7, "scene":7, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -647,7 +708,7 @@
 	"content":"<span>여섯번째. 나는 타인에게 폭력을 가하지 않았습니다.</span>",
 	"chapter":7, "scene":8, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -658,7 +719,7 @@
 	"content":"<span>일곱번째. 나는 사기를 치지 않았습니다.</span>",
 	"chapter":7, "scene":9, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -669,7 +730,7 @@
 	"content":"<span>여덟번째. 나는 남의 말을 엿듣지 않았습니다.</span>",
 	"chapter":7, "scene":10, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -680,7 +741,7 @@
 	"content":"<span>아홉번째. 나는 정당한 이유없이 화를 내지 않았습니다.</span>",
 	"chapter":7, "scene":11, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -691,7 +752,7 @@
 	"content":"<span>열번째. 나는 남을 비방하지 않았습니다.</span>",
 	"chapter":7, "scene":12, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오",
         "2":"잘 모르겠습니다."
@@ -716,7 +777,7 @@
 	"content":"그럼 두 번째 관문을 시작하겠다.<br/>'심장의 무게 달기' 의식을 알고 있는가?",
 	"chapter":7, "scene":16, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"아니오"
     }
@@ -760,35 +821,35 @@
 	"name":"사자", "nickname":"",
 	"content":"나는 말이나 행동으로 다른 사람을 해치지 않았습니다.",
 	"chapter":7, "scene":22, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 {
 	"name":"사자", "nickname":"",
 	"content":"나는 신과 인간의 재물에 정직하게 대했습니다.",
 	"chapter":7, "scene":23, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 {
 	"name":"사자", "nickname":"",
 	"content":"나는 신에 대한 불경죄를 범하지 않았습니다.",
 	"chapter":7, "scene":24, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 {
 	"name":"호루스", "nickname":"고백을 유도하는 신",
 	"content":"이제 영원의 군주를 만나, 사자의 청렴함을 입증할지어다.",
 	"chapter":7, "scene":25, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 {
 	"name":"호루스", "nickname":"고백을 유도하는 신",
 	"content":"사자여, 오시리스에게 청렴함을 밝힐 준비가 되었다면,<br/>나에게 말을 걸거라.",
 	"chapter":7, "scene":26, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 {
@@ -796,7 +857,7 @@
 	"content":"오시리스에게 결백을 주장할 준비가 되었는가?",
 	"chapter":7, "scene":27, "flag":0,
 	"image":"UI/Dialogue/Anubis.png", "choice":{
-		"image":"UI/Dialogue/Player.png",
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"더 둘러보고 싶습니다"
     }
@@ -812,28 +873,28 @@
 	"name":"사자", "nickname":"",
 	"content":"오, 아멘테트의 군주여, 나는 당신 곁에 섰습니다.",
 	"chapter":7, "scene":29, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 {
 	"name":"사자", "nickname":"",
 	"content":"나에게는 어떤 죄도 없습니다.",
 	"chapter":7, "scene":30, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 {
 	"name":"사자", "nickname":"",
 	"content":"나는 거짓말을 하지 않았으며 허위의 심장도 가지지 않았습니다.",
 	"chapter":7, "scene":31, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 {
 	"name":"사자", "nickname":"",
 	"content":"나는 진실만 말하고, 진실한 행동을 취했습니다.",
 	"chapter":7, "scene":32, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 {
@@ -847,7 +908,7 @@
 	"name":"오시리스", "nickname":"죽음을 수호하는 신",
 	"content":"그것이 진정 사실이구나.<br/>그대는 아크를 받고 천국에서 영생의 삶을 누리거라.",
 	"chapter":7, "scene":34, "flag":0,
-	"image":"UI/Dialogue/Player.png",
+	"image":"UI/Dialogue/player_answer.png",
 	"choice":"없음"
 },
 
@@ -855,50 +916,50 @@
     "name":"라", "nickname":"태양의 신",
     "content":"사자여, 결백을 증명했구나. <br/>태양선에 승선하여 항해하자.",
     "chapter":8, "scene":0, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png",
+	"image":"UI/Dialogue/ra.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"태양선이 이곳 지하세계를 통과할 때마다 악의 신 ‘아펩’이 나타난다. <br/>그가 나타나기 때문에 태양은 가려지고 매일 밤이 찾아오지.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":1, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"천국을 향한 마지막 관문이다. <span>아펩과 최선을 다하여 승부하거라.</span><br/>아펩을 무찌르면 다시 태양이 떠오를 것이다.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":2, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"훌륭하다, 아펩을 무찔렀구나.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":3, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"덕분에 태양이 다시 떠오르는구나. <br/>이제 정말 천국에 거의 도착했다. 수고많았다, 사자여.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":4, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
     "name":"라", "nickname":"태양의 신",
     "content":"자, 이곳이 천국이다. <br/>이곳에서 영생을 누리도록 하라.",
-    "chapter":8, "scene":0, "flag":0,
+    "chapter":8, "scene":5, "flag":0,
 	"image":"UI/Dialogue/9_6_1.png",
 	"choice":"없음"
 },
 {
 	"name":"라", "nickname":"태양의 신",
 	"content":"천국을 누리던 사자여, 생전의 사람들을 만나러 배에 승선할 것인가?",
-	"chapter":9, "scene":6, "flag":0,
-	"image":"UI/Dialogue/9_6_1.png", "choice":{
-		"image":"UI/Dialogue/Ra.png",
+	"chapter":9, "scene":0, "flag":0,
+	"image":"UI/Dialogue/ra.png", "choice":{
+		"image":"UI/Dialogue/player_answer.png",
 		"0":"네",
 		"1":"더 둘러보고 싶습니다"
     }
@@ -906,35 +967,43 @@
 {
 	"name":"라", "nickname":"태양의 신",
     "content":"잘 다녀오거라 사자여, 평안한 안식이 되기를 바란다.",
-	"chapter":9, "scene":6, "flag":0,
-	"image":"UI/Dialogue/Ra.png",
+	"chapter":9, "scene":1, "flag":0,
+	"image":"UI/Dialogue/ra.png",
+	"choice":"없음"
+},
+
+{
+	"name":"아누비스", "nickname":"죽음을 인도하는 신",
+	"content":"사자의 심장은 깃털보다 무겁다.",
+	"chapter":10, "scene":0, "flag":0,
+	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"아누비스", "nickname":"죽음을 인도하는 신",
 	"content":"사자여, 무척이나 실망했다.<br/><span>심장을 암무트에게 바치도록 해라.</span>",
-	"chapter":14, "scene":0, "flag":0,
+	"chapter":10, "scene":0, "flag":0,
 	"image":"UI/Dialogue/Anubis.png",
 	"choice":"없음"
 },
 {
 	"name":"암무트", "nickname":"식인 괴수",
     "content":"생명이 없는 지옥, 파괴의 땅에 온 것을 환영한다, 사자여.",
-	"chapter":11, "scene":1, "flag":0,
+	"chapter":11, "scene":0, "flag":0,
 	"image":"UI/Dialogue/Ammut.png",
 	"choice":"없음"
 },
 {
 	"name":"악마", "nickname":"악의 신",
     "content":"청렴하지 못한 자, 참혹한 고통을 느낄 지어다.",
-	"chapter":11, "scene":2, "flag":0,
+	"chapter":11, "scene":1, "flag":0,
 	"image":"UI/Dialogue/Devil.png",
 	"choice":"없음"
 },
 {
 	"name":"악마", "nickname":"악의 신",
     "content":"사자는 영원히 파괴의 땅에서 도망치지 못할 것이다.",
-	"chapter":11, "scene":3, "flag":0,
+	"chapter":11, "scene":2, "flag":0,
 	"image":"UI/Dialogue/Devil.png",
 	"choice":"없음"
 },

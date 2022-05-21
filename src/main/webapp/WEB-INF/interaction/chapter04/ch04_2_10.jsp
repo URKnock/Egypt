@@ -9,18 +9,19 @@
 	
 	#line { height: 8%; bottom: 43%; left: 50%; transform: translate(-19vh, 0); }
 	
-	.item { height: 32.31%; bottom: 69%; left: 16vh; }
+	.item { height: 32.31%; bottom: 66%; left: 16vh; }
 	@keyframes getItem {
 	    from { bottom: 50%; left: 37%; }
-	    to { bottom: 69%; left: 16vh; }
+	    to { bottom: 66%; left: 16vh; }
 	}
 </style>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/getItem.js'/>" type="text/javascript"></script>
 <script defer>
+	effectName = "cut1";
 	var body = document.querySelector('body');
-	body.onload = function() { init_item(); };
+	body.onload = function() { init_item(); setSomething();};
 </script>
 
 <div id="interact">
@@ -43,7 +44,7 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_victim2.webp'/>">
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_6_victim1.webp'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_talk.webp'/>">
 	
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_15.png'/>">
 	<img class="animal" src="<c:url value='/resources/object/ch04/4_4_13.png'/>">

@@ -2,7 +2,8 @@ function interaction() {
 	resize("#scroll");
 	centerX("#scroll");
 	var sl = $('#scroll').offset().left;
-	$("#scroll").css("top", 112*h);
+	$("#scroll").css("top", 0);
+	$("#scroll").animate({top: 112*h}, 500);
 	var scrollY = $("#scroll").height() / 2 + 112*h;
 
 	for(var i = 1; i < 4; i++) {
@@ -47,7 +48,10 @@ function enterElement(elem) {
 		$("#" + elem.id).on("click", function() {
 			$("#" + elem.id).removeClass("select");
 			var arrIndex = parseInt(elem.id.slice(-1));
-			object(elem.id, (8 + arrIndex), arrIndex);
+			if(arrIndex != 3)
+				object(elem.id, (8 + arrIndex), arrIndex);
+			else
+				object(elem.id, 8, arrIndex);
 			if(clicked.indexOf(arrIndex) != -1) {
 				clicked.splice(clicked.indexOf(arrIndex), 1);
 			}

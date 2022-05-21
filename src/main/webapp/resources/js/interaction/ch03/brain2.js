@@ -1,6 +1,7 @@
 function interaction() {
 	x = $("#background").width() / 2.0;
 	y = $("#background").height() / 2.0 + 100;
+	$("#effect").attr("src", "/resources/bgm/ch03/brain1.mp3");
 	
 	resizeWH("#brain", 1714, 678);
 	$("#brain").css("left", 0);
@@ -29,12 +30,18 @@ function clickBrain( event ) {
 		$("#brain").removeClass("pikachu");
 		$("#brain").removeClass("select");
 		$("#brain").on("load", function() {
+			effect();
 			setTimeout(function() { lock = 0 }, 350);
 			if(idx >= 3) {
+				$("#effect").attr("src", "/resources/bgm/ch03/brain2.mp3");
 				$("#brain").width(1526*w);
 				$("#brain").height(1080*h);
 				$("#brain").css("bottom", 0);
-				setTimeout(function() { $("form").submit(); }, 5000);
+				setTimeout(function() {
+					Effect_status = false;
+					effect();
+					setTimeout(function() { $("form").submit(); }, 5000);
+				}, 2000);
 			}
 		});
 		$("#brain").attr("src", brains[idx]);

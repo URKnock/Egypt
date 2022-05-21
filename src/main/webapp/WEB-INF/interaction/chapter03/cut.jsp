@@ -5,9 +5,9 @@
 <img src="<c:url value='/resources/character/ch03/3_2.png'/>" id="human" class="human"/>
 <img src="<c:url value='/resources/object/ch03/knife.png'/>" id="knife"/>
 <img src="<c:url value='/resources/object/ch03/knife.png'/>" id="knifeToClick"/>
-<img src="<c:url value='/resources/character/ch03/paper_1.webp'/>" id="servant">
-<img src="../resources/object/ch03/paper.png" id="scroll"/>
+<img src="<c:url value='/resources/character/ch03/servant_dish_knife.webp'/>" id="servant">
+<img src="../resources/object/ch03/dish.png" id="scroll"/>
 <img src="../resources/object/ch03/none.png" id="paper">
-<hr class="blinking" id="dragLine"></hr>
+<img src="../resources/object/ch03/arrow_3.png" class="blinking" id="dragLine">
 <div id="dragDest" class="dest droppable blinking"></div>
 <script src="<c:url value='/resources/js/interaction/ch03/cut.js'/>"></script>

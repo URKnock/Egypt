@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<script src="<c:url value='/resources/js/jquery-ui-1.13.1/jquery-ui.min.js'/>"></script>
+<script src="<c:url value='/resources/js/jquery/jquery-ui.min.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/setting.js'/>" type="text/javascript"></script>
-<link rel="stylesheet" href="<c:url value='/resources/js/jquery-ui-1.13.1/jquery-ui.min.css'/>">
+<link rel="stylesheet" href="<c:url value='/resources/js/jquery/jquery-ui.min.css'/>">
 <link rel="stylesheet" href="<c:url value='/resources/css/interaction/setting.css'/>">
 
 <div id="setting">
 <div id="setting_container">
-	<div>
+	<div id="setting_title">
 		<img src="<c:url value='/resources/UI/Menu/setting_1.png'/>"/>
 		환경설정
 	</div>
@@ -19,7 +19,10 @@
 				<img src="<c:url value='/resources/UI/Menu/setting_2.png'/>"/>
 			</div>
 			<img src="<c:url value='/resources/UI/Menu/setting_3.png'/>"/>
-			<div class="audioSlider"></div>
+			<div class="audioSlider">
+				<img class="up" src="<c:url value='/resources/UI/Menu/up.png'/>"/>
+				<img class="down" src="<c:url value='/resources/UI/Menu/down.png'/>"/>
+			</div>
 			<img src="<c:url value='/resources/UI/Menu/setting_4.png'/>"/>
 		</div>
 		<div class="audioSetting">
@@ -28,7 +31,10 @@
 				<img src="<c:url value='/resources/UI/Menu/setting_2.png'/>"/>
 			</div>
 			<img src="<c:url value='/resources/UI/Menu/setting_3.png'/>"/>
-			<div class="audioSlider"></div>
+			<div class="audioSlider">
+				<img class="up" src="<c:url value='/resources/UI/Menu/up.png'/>"/>
+				<img class="down" src="<c:url value='/resources/UI/Menu/down.png'/>"/>
+			</div>
 			<img src="<c:url value='/resources/UI/Menu/setting_4.png'/>"/>
 		</div>
 		<div class="audioSetting">
@@ -37,7 +43,10 @@
 				<img src="<c:url value='/resources/UI/Menu/setting_2.png'/>"/>
 			</div>
 			<img src="<c:url value='/resources/UI/Menu/setting_3.png'/>"/>
-			<div class="audioSlider"></div>
+			<div class="audioSlider">
+				<img class="up" src="<c:url value='/resources/UI/Menu/up.png'/>"/>
+				<img class="down" src="<c:url value='/resources/UI/Menu/down.png'/>"/>
+			</div>
 			<img src="<c:url value='/resources/UI/Menu/setting_4.png'/>"/>
 		</div>
 		<input type="button" value="저장하기"/>

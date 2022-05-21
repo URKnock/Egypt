@@ -46,27 +46,17 @@
 #bg .bgObj:nth-of-type(5){
 	bottom: 32%;
 	left: 11%;
-	height: 42.87%;
+	height: 62.68%;
 }
 #bg .bgObj:nth-of-type(6){
 	bottom: 31.7%;
 	left: 20%;
-	height: 33.33%;
+	height: 52.03%;
 }
 #bg .bgObj:nth-of-type(7){
 	bottom: 28.5%;
 	left: 50%; transform: translate(-20vh, 0);
 	height: 11.11%;
-}
-#bg .bgObj:nth-of-type(8){
-	bottom: 73%;
-	left: 11%;
-	height: 22.3%;
-}
-#bg .bgObj:nth-of-type(9){
-	bottom: 63%;
-	left: 20%;
-	height: 22.03%;
 }
 
 #interact .osiris {
@@ -82,17 +72,12 @@
 }
 #interact .character:nth-of-type(3) { 	
 	height: 38.3%;
-	left: 30vh;
+	left: 40vh;
 }
-#interact .character:nth-of-type(4) { 	
+#interact .character:nth-of-type(4) { 
+	bottom: 28%;
 	height: 49.25%;
-	left: 5vh; 
-}
-
-#interact .item {
-	bottom: 53%;
-	z-index: 3;
-	animation: 3s appear;
+	left: 10vh; 
 }
 
 #interact .spot {
@@ -120,12 +105,17 @@
 }
 
 .victim1 {
+	display: none;
 	height: 21%;
 	bottom: 39%; left: 50%; transform: translate(-6vh, 0);
 	z-index: 2;
 }
 .victim2 {
+	display: none;
 	height: 11%;
 	bottom: 39%; left: 50%; transform: translate(-24vh, 0);
 	z-index: 2;
 }
+
+#interact .item1 { z-index: 2; display: none; height: 23.98%; left: 22vh; bottom: 53.5%;}
+#interact .item2 { z-index: 2; display: none; height: 13.24%; left: 49vh; bottom: 53.5%;}

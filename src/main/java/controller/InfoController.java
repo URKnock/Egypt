@@ -57,7 +57,7 @@ public class InfoController implements Controller{
 		session.setAttribute("info37", json.get(37));
 		session.setAttribute("info38", json.get(38));
 		session.setAttribute("info39", json.get(39));
-		session.setAttribute("info40", json.get(40));
+		//session.setAttribute("info40", json.get(40));
 		saved.add(json.get(18));
 		saved.add(json.get(19));
 		return this.url;

@@ -13,8 +13,10 @@
 /* 배경 */
 #interact .background {
 	width: 100%;
-	height: 100%;
 	z-index: 1;
+}
+#interact .background:nth-of-type(1) {
+	height: 72.03%;
 }
 #interact .background:nth-of-type(2) {
 	top: 71.95%;
@@ -22,25 +24,44 @@
 }
 
 /* 배경 오트젝트 */
-#interact .bgObj {
+#interact .bg {
+	height: 100vh;
+	width: 100vw;
+}
+#interact .bg .bgObj {
 	z-index: 2;
 }
-#interact .bgobj:nth-of-type(3) {
-	height: 07.22%;
-	width: 81.35%;
+#interact .bg .bgobj:nth-of-type(1) {
+	height: 06.29%;
 	bottom: 28%;
 	left: 8.5%;
 }
-#interact .bgobj:nth-of-type(4) {
-	height: 12%;
+#interact .bg .bgobj:nth-of-type(2) {
+	height: 07.22%;
+	bottom: 28%;
+	left: 27%;
+}
+#interact .bg .bgobj:nth-of-type(3) {
+	height: 05.74%;
+	bottom: 28%;
+	right: 10%;
+}
+#interact .bg .bgobj:nth-of-type(4) {
+	height: 12.5%;
 	width: 53.38%;
-	top: 10%;
+	top: 9.5%;
 	left: 38%;
 }
-#interact .bgobj:nth-of-type(5) {
-	height: 36.66%;
+#interact .bg .bgobj:nth-of-type(5) {
+	height: 37.40%;
 	bottom: 28%;
-	left: 20%;
+	left: 30vh;
+}
+#interact .bg .bgobj:nth-of-type(6) {
+	height: 06.85%;
+	bottom: 35.5%;
+	left: 73vh;
+	z-index: 4;
 }
 
 /* 캐릭터들 */
@@ -48,38 +69,23 @@
 	bottom: 27.5%;
 	z-index: 3;
 }
-#interact .character:nth-of-type(6) {
+#interact .character:nth-of-type(3) {
 	height: 39.90%;
 	left: 8%;
 }
-#interact .character:nth-of-type(7) {
-	height: 43.70%;
+#interact .character:nth-of-type(4) {
+	height: 46.48%;
 	right: 42%;
 }
-#interact .character:nth-of-type(8) {
+#interact .character:nth-of-type(5) {
 	height: 48.51%;
-	right: 29%;
+	right: 28.5%;
 }
-#interact .character:nth-of-type(9) {
-	height: 39.81%;
-	right: 18%;
+#interact .character:nth-of-type(6) {
+	height: 40%;
+	right: 17%;
 }
-#interact .character:nth-of-type(10) {
-	height: 22.12%;
+#interact .character:nth-of-type(7) {
+	height: 23.98%;
 	right: 1%;
-}
-
-#interact .guide {
-	position: absolute;
-	width: 50%;
-	height: 7.5%;
-	background: ivory;
-	line-height: 275%;
-	font-size: 1.5vw;
-	top: 5%;
-	left: 50%;
-	
-	transform: translate(-50%, 0%);
-	
-	z-index: 100;
 }

@@ -4,12 +4,12 @@
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_2.css'/>" rel="stylesheet" type="text/css"/>
 <style>
 	.knife {
+		height: 07.12%;
 		left: 32vh;
-		bottom: 70%;
-		transform: scaleX(-1);
+		bottom: 67%;
 	}
 	#active:hover{
-		transform: scale(1.1) scaleX(-1);
+		transform: scale(1.1);
 	}
 	#interact .animal {
 		height: 31.11%;
@@ -19,8 +19,14 @@
 <script>
 	var body = document.querySelector('body');
 	body.onload = function() { 
+			setSomething();
 			var knife = document.querySelector('#interact .knife');
 			knife.onclick = function() { $("form").submit(); };
+			
+			var anubis = document.querySelector('#anubis');
+			$("#voice").bind("ended", function() {
+				anubis.src = "resources/webp/ch04/anubis_1.webp";
+			});
 		};
 </script>
 
@@ -44,10 +50,10 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5.webp'/>">
 	<img class="character">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_talk.webp'/>">
 
 	<!-- object -->
 	<img class="animal" src="<c:url value='/resources/webp/ch04/animal_1.webp'/>">
 	
-	<img class="knife" id="active" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">
+	<img class="knife" id="active" src="<c:url value='/resources/webp/ch04/knife.webp'/>">
 </div>

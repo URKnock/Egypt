@@ -4,11 +4,19 @@
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_0.css'/>" rel="stylesheet" type="text/css"/>
 <link href="<c:url value='/resources/css/interaction/ch04/ch04_0_2.css'/>" rel="stylesheet" type="text/css"/>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script defer src="<c:url value='/resources/js/interaction/ch04/effect.js'/>" type="text/javascript"></script>
 <script>
 	var body = document.querySelector('body');
-	body.onload = function() { console.log("motion time~") };
+	body.onload = function() { 
+		var anubis = document.querySelector('#anubis');
+		
+		$("#voice").bind("ended", function() {
+			anubis.src = "resources/webp/ch04/anubis_2.webp";
+		});
+		setSomething();
+		//nextButton = document.querySelector('#nextButton');
+		//nextButton.style.display = "none";
+	};
 </script>
 
 <div id="interact">
@@ -26,7 +34,7 @@
 	<img id="active" onclick="tap_motion(this, 1)" class="pontiff" src="<c:url value='/resources/webp/ch04/servant_2.webp'/>">
 	<img class="pontiff" src="<c:url value='/resources/webp/ch04/servant_3.webp'/>">
 	
-	<img class="character" id="anubis" src="<c:url value='/resources/webp/ch04/anubis_2.webp'/>">
+	<img class="character" id="anubis" src="<c:url value='/resources/webp/ch04/anubis_2_talk.webp'/>">
 	<img class="character" src="<c:url value='/resources/character/ch04/4_4.png'/>">
 	
 	<!-- object -->
@@ -34,7 +42,7 @@
 	<img class="object" src="<c:url value='/resources/object/ch04/4_1_2.png'/>">
 	<img class="object" src="<c:url value='/resources/object/ch04/4_1_3.png'/>">
 	
-	<img class="effect1" src="<c:url value='/resources/object/ch04/4_2_1.png'/>">
-	<img class="effect2" src="<c:url value='/resources/object/ch04/4_2_2.png'/>">
+	<img class="effect1" src="<c:url value='/resources/webp/ch04/effect2.webp'/>">
+	<img class="effect2" src="<c:url value='/resources/webp/ch04/effect1.webp'/>">
 	<img class="effect3" src="<c:url value='/resources/object/ch04/4_2_3.png'/>">
 </div>

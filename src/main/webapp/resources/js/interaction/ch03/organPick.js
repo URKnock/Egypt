@@ -3,6 +3,15 @@ function interaction() {
 	var hTC = $("#human").offset().top + ($("#human").height() / 2);
 	var hRC = hLC + ($("#human").width() / 3);
 	
+	$("#effect").attr("src", "/resources/bgm/ch03/viscera.mp3");
+	if(flag == 1) {
+		$("#effect").attr("src", "/resources/bgm/ch03/heart.mp3");
+		effect();
+		setTimeout(function() {
+			$("#effect").attr("src", "/resources/bgm/ch03/viscera.mp3");
+		}, 2000);
+	}
+	
 	resize("#human_cover");
 	center("#human_cover");
 	$("#human_cover").fadeOut(3000);
@@ -39,18 +48,15 @@ function interaction() {
 			$(this).fadeOut(1000);
 			entered.push(organId);
 			checkElement();
+			effect();
 		});
 	}
-	$('#organ1').off("click").on("click", function() {
+	$('#organ1').off("click").on("click", function() {			
 		$('input[name=choice]').val(1);
 		$('form').submit();
 	});
 	$('#organ1').css("right", oRC + $("#organ2").height() / 2);
 	$('#organ3').css("top", $('#organ2').offset().top);
-	
-	resize('#servant');
-	$('#servant').css("bottom", 300*h);
-	$('#servant').css("left", 0);
 
 	var entered = [];
 	function checkElement() {

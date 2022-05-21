@@ -3,46 +3,53 @@
 
 <link href="<c:url value='/resources/css/interaction/ch07/ch07_0.css'/>" rel="stylesheet" type="text/css"/>
 
-<style>
-	#active {
-		filter: drop-shadow(0px 0px 0.5vw yellow);
-	}
-	#active:hover {
-		transform: scale(1.1);
-	}
-	#active:active {
-		transform: scale(1.0);
-	}
-</style>
-
 <script> 
 	var chapter = 7;
 	var info_total = 6;
 </script>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script defer src="<c:url value='/resources/js/interaction/ch07/info_tap.js'/>" type="text/javascript"></script>
+<c:if test="${scene eq 2}">
+	<script> 
+		info_total = 0;
+	</script>
+</c:if>
+<script defer src="<c:url value='/resources/js/interaction/ch07/info_tap_0.js'/>" type="text/javascript"></script>
 <script>
 	var body = document.querySelector('body');
-	body.onload = function() { console.log("info time~"); };
+	body.onload = function() { 
+		console.log("info time~"); setSomething();
+		$("#voice").bind("ended", function() {
+			if(obj[1].src != webp[1] && obj[1].src != png[1])
+				obj[1].src =  "resources/webp/ch07/anubis.webp";
+		});
+		
+		obj[0].src = webp[0]; obj[4].src = webp[4];
+	};
 </script>
-
 
 <div id="interact">
 	<!-- background -->
-	<img class="background" src="<c:url value='/resources/background/ch07/7_0_2.png'/>">
+	<img class="background" src="<c:url value='/resources/background/ch07/7_0_2.jpg'/>">
 	<img class="background" src="<c:url value='/resources/background/ch07/7_0_3.png'/>">
 	
-	<img class="bgObj" src="<c:url value='/resources/background/ch07/7_0_4.png'/>">
-	<img id="active" onclick="tap_info(this, 6)" class="bgObj" src="<c:url value='/resources/background/ch07/7_0_5.png'/>">
-	<img id="active" onclick="tap_info(this, 0)" class="bgObj" src="<c:url value='/resources/background/ch07/7_0_6.png'/>">
-
+	<div class="bg">
+		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower1.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower2.webp'/>">
+		<img class="bgObj" src="<c:url value='/resources/webp/ch07/flower3.webp'/>">
+		<img id="active" onclick="tap_info(this, 6)" class="bgObj" src="<c:url value='/resources/webp/ch07/45god.webp'/>">
+		<img id="active" onclick="tap_info(this, 0)" class="bgObj">
+		<img id="active" onclick="tap_info(this, 4)" class="bgObj">
+	</div>
+	
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/character/ch07/6_1.png'/>">
-	<img id="active" onclick="tap_info(this, 1)" class="character" src="<c:url value='/resources/character/ch07/6_3.png'/>">
-	<img id="active" onclick="tap_info(this, 2)" class="character" src="<c:url value='/resources/character/ch07/6_18.png'/>">
-	<img id="active" onclick="tap_info(this, 3)"class="character" src="<c:url value='/resources/character/ch07/6_5.png'/>">
-	<img id="active" onclick="tap_info(this, 5)" class="character" src="<c:url value='/resources/character/ch07/6_6.png'/>">
+	<img id="active" onclick="tap_info(this, 1)" class="character" src="<c:url value='/resources/webp/ch07/anubis_talk.webp'/>">
+	<img id="active" onclick="tap_info(this, 2)" class="character" src="<c:url value='/resources/webp/ch07/horus.webp'/>">
+	<img id="active" onclick="tap_info(this, 3)"class="character" src="<c:url value='/resources/webp/ch07/thoth.webp'/>">
+	<img id="active" onclick="tap_info(this, 5)" class="character" src="<c:url value='/resources/webp/ch07/ammut.webp'/>">
 
-	<div class="guide" align="center">마우스를 클릭하여 주변을 둘러보세요</div>
+	<div class="guide">
+		<img src="<c:url value='/resources/UI/Info/guide.png'/>">
+		<div>마우스를 클릭하여 주변을 둘러보세요.</div>
+	</div>
 	<jsp:include page="../info_window.jsp"/>
 </div>

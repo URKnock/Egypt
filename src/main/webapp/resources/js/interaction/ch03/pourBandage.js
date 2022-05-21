@@ -6,11 +6,7 @@ function interaction() {
 	resize("#human_cover");
 	center("#human_cover");
 	$("#human_cover").hide();
-	
-	resize("#scroll");
-	centerX("#scroll");
-	$("#scroll").css("top", 112*h);
-	$("#scroll").attr("src", "/resources/object/ch03/paper_open.webp");
+	$("#effect").attr("src", "/resources/bgm/ch03/needle.mp3");
 	
 	var canvas1 = document.getElementById("canvas1");
 	var canvas2 = document.getElementById("canvas2");
@@ -50,6 +46,7 @@ function interaction() {
 			x:event.pageX - offsets.left,
 			y:event.pageY - offsets.top
 		}
+		effect();
 	
 		if(!clicked) {
 			clicked = true;
@@ -125,21 +122,22 @@ function interaction() {
 	}
 	
 	var bandage = document.getElementById("bandage");
-	var scrollY = $("#scroll").height() / 2 + 112*h;
-	resize('#bandageToClick');
-	$('#bandageToClick').css("top", scrollY - ($('#bandageToClick').height() / 2));
-	$('#bandageToClick').css("left", x - ($('#bandageToClick').width() / 2));
-	$("#bandageToClick").addClass("select");
-	$('#bandageToClick').on("click", function() {
+	resizeWH('#servant', 1341, 776);
+	$('#servant').css("bottom", 300*h);
+	$('#servant').css("left", 0);
+	$('#servant').addClass("select");
+	setTimeout(function() { $('#servant').attr("src", "/resources/character/ch03/servant_dish_bandage_idle.webp"); }, 3500);
+	
+	$('#servant').on("click", function() {
 		$(holes).each(function(index){
 			$(holes[index]).fadeIn(1000);
 		});
-		$('#scroll').on("load", function() {
-			$('#scroll').fadeOut("1000");
+		$('#servant').on("load", function() {
+			$('#servant').css("z-index", "1");
+			$('#servant').removeClass("select");
+			setTimeout(function() { $('#servant').delay(2000).hide(); }, 2000);
 		});
-		$('#scroll').attr("src", "/resources/object/ch03/paper_close.webp");
-		$('#bandageToClick').removeClass("select");
-		$('#bandageToClick').hide();
+		$('#servant').attr("src", "/resources/character/ch03/servant_dish_back.webp");
 		$('#bandage').show();
 		$('#bandage').css("z-index", "5");
 		$('#bandage').css("transform", "rotate(45deg)");
@@ -147,7 +145,7 @@ function interaction() {
 		bandage.isHeld = true;
 		document.addEventListener('mousemove', followMouse);
 	});
-	$('#bandageToClick').hide().fadeIn(1100).addClass("select");
+	$('#servant').hide().fadeIn(1100).addClass("select");
 	
 	function followMouse( event ) {
 		if(bandage.isHeld) {

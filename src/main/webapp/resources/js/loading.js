@@ -32,9 +32,14 @@ function init() {
 	} else if(chapter == 6) {
 		$("#character").css({"left":860*w, "top":210*h});
 	} else if(chapter == 7) {
-		$("#character").css({"left":990*w, "top":120*h});
+		$("#character").css({"left":860*w, "top":120*h});
+	} else if(chapter == 10) {
+		$("#character").css({"left":812*w, "top":105*h});
+	} else if(chapter == 11) {
+		$("#character").css({"left":724*w, "top":105*h});
+	} else if(chapter == 12) {
+		$("#character").css({"left":972*w, "top":143*h});
 	}
-	
 	preload(lists);
 }
 

@@ -2,6 +2,7 @@ function interaction() {
 	resize("#human_cover");
 	center("#human_cover");
 	$("#human_cover").fadeOut(3000);
+	$("#effect").attr("src", "/resources/bgm/ch03/lid.mp3");
 	
 	var organName = '#organ1';
 	resize(organName);
@@ -18,10 +19,6 @@ function interaction() {
 		$(organName).css("left", $("#human").offset().left + $("#human").width() / 4 * (i - 2));
 		dragElement(document.getElementById('organDiv' + i), organName);
 	}
-	
-	resize('#servant');
-	$('#servant').css("bottom", 300*h);
-	$('#servant').css("left", 0);
 
 	let cd = null;
 	var Element = null;
@@ -38,6 +35,7 @@ function interaction() {
 		console.log("enter: " + elem.id + ", " + entered);
 		cd.isOverlaped = false;
 		var id = elem.id.substring(0, 3);
+		effect();
 		if(!lock1 && $.inArray(cd.id, organed) == -1 && $.inArray(id, entered) == -1) {
 			lock1 = true;
 			$('#' + id + "_1").removeClass("head-leave");

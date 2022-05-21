@@ -7,6 +7,7 @@ $(document).ready(function(){
 	o_select = "0";
 	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
+	Effect = document.getElementById("effect");
 	
 	$(".close").off("click").on("click", function() { 
 		hide_info();
@@ -23,6 +24,9 @@ $(document).ready(function(){
 	});
 
 	if((scene == 1 && index == 0) || (scene == 2 && flag == 1)) {
+		$("#order").css("display", "flex");
+		$("#order").text("마우스로 클릭하여 주변을 둘러보세요.");
+		$("#effect").attr("src", "/resources/bgm/ch03/lid.mp3");
  		if(scene == 2 && flag == 1) {
  			clicked = [0, 1, 2, 3, 4, 5, 6];
  			$("#background > img:nth-child(4)").addClass("select");
@@ -49,10 +53,10 @@ $(document).ready(function(){
 		for(var i = 1; i < 5; i++) {
 			$("#ca" + i).addClass("pikachu");
 		}
-		$("#ca1").on("click", function() { object("#ca1", 2, 1) });
-		$("#ca2").on("click", function() { object("#ca2", 3, 2) });
-		$("#ca3").on("click", function() { object("#ca3", 0, 3) });
-		$("#ca4").on("click", function() { object("#ca4", 1, 4) });
+		$("#ca1").on("click", function() { object("#ca1", 2, 1); effect(); });
+		$("#ca2").on("click", function() { object("#ca2", 3, 2); effect(); });
+		$("#ca3").on("click", function() { object("#ca3", 0, 3); effect(); });
+		$("#ca4").on("click", function() { object("#ca4", 1, 4); effect(); });
  	} else if(scene == 7 && index == 1) {
  		$("input[name='index']").val(0);
  	} else if(scene == 14) {
@@ -86,6 +90,9 @@ $(document).ready(function(){
 	$("#menu img:nth-child(3)").on("click", function() {
 		$("#setting").css("display", "flex");
 	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
 });
 
 function init() {	
@@ -96,7 +103,10 @@ function init() {
 	
 	setDialogueSize();
 	setSetting();
+	setHelp();
+	
 	$("#setting").hide();
+	$("#help").hide();
 	
 	resize("#human");
 	center("#human");
@@ -140,7 +150,11 @@ function init() {
 			setTimeout(function() { $("form").submit(); }, 2000);
 		}
 	});
-	$("#loading").hide();
+	if(scene == 0) {
+		$("#loading").fadeOut(2000);
+	} else {
+		$("#loading").hide();
+	}
 }
 
 function object(select, index, arrIndex) {
@@ -233,7 +247,7 @@ function center(element) {
 	centerY(element);
 }
 function centerX(element) {
-	if(cenX.includes(element)) {
+	if(cenX.includes(element) || cenY.includes(element)) {
 		$(element).css("left", x - ($(element).width() / 2) - 10*w);
 	} else {
 		$(element).css("left", x - ($(element).width() / 2));
@@ -250,6 +264,16 @@ function centerY(element) {
 function resizeWH(element, ew, eh) {
 	$(element).width(ew * w);
 	$(element).height(eh * h);
+}
+
+var Effect;
+var Effect_status = false;
+function effect() {
+	if(Effect_status) {
+		Effect.pause();
+		Effect.currentTime = 0;
+	} else { Effect_status = true; }
+	Effect.play();
 }
 
 function interaction() {};

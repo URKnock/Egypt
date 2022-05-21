@@ -14,13 +14,41 @@
 		95% { bottom: 35.9%; }
 		100% { bottom: 36%; }
 	}
+	#nextButton {
+		position: absolute;
+		padding-top: 67px;
+		padding-left: 200px;
+	}
+	
+	form {
+		cursor: default !important;
+	}
 </style>
 
 <script defer src="<c:url value='/resources/js/interaction/ch04/getItem.js'/>" type="text/javascript"></script>
 <script defer>
 	var body = document.querySelector('body');
 	body.style.cursor = "none";
-	body.onload = function() { setTimeout(next, 1500); };
+	var knife = document.querySelector('.knife');
+	
+	body.onload = function() { 
+		init();
+		setSomething();
+		body.addEventListener('mousemove', follow_mouse);
+		
+		var anubis = document.querySelector('#anubis');
+		$("#voice").bind("ended", function() {
+			anubis.src = "resources/webp/ch04/anubis_1.webp";
+		});
+	};
+
+	function follow_mouse( event ) {
+		const x = event.clientX - (knife.clientWidth*0.1);
+		const y = event.clientY - (knife.clientHeight*1.1);
+			
+		knife.style.left = x + 'px';
+		knife.style.top = y + 'px';
+	}
 </script>
 
 <div id="interact">
@@ -43,8 +71,21 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_victim2.webp'/>">
 	<img class="character">
-	<img class="character" src="<c:url value='/resources/webp/ch04/anubis_1.webp'/>">
+	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_talk.webp'/>">
 	
 	<img class="animal" src="<c:url value='/resources/webp/ch04/animal_2.webp'/>">
 	<img class="knife" src="<c:url value='/resources/object/ch04/4_4_1.png'/>">
 </div>
+
+<script defer>
+	var knife = document.querySelector('.knife');
+	body.addEventListener('mousemove', follow_mouse);
+	
+	function follow_mouse( event ) {
+		const x = event.clientX - (knife.clientWidth*0.1);
+		const y = event.clientY - (knife.clientHeight*1.1);
+			
+		knife.style.left = x + 'px';
+		knife.style.top = y + 'px';
+	}
+</script>

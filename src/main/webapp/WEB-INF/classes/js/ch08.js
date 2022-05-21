@@ -48,47 +48,56 @@ function init() {
 		$("#la2").delay(3000).animate({right: "74%"}, 1000);
 		$("#boat").delay(3000).animate({right: "55.4%"}, 1000);
 		$("#paper").delay(2500).animate({opacity: "100%"}, 500);
+		$("#paperImg").delay(2500).animate({opacity: "100%"}, 500);
 		
 		var count = 0;
 		
 		$("#snakeAppear").delay(4000).animate({opacity: "100%"}).delay(4660).fadeOut();
 		$("#snake1").delay(9000).animate({opacity: "100%"});
-		//여기 다시 해야함.
-		//$("#userArm").delay(9000).animate({opacity: "100%"}, 500);
+		$('#user').delay(1000).animate({opacity: "0%"});
+		$("#userArm1").delay(5000).animate({opacity: "100%"}).delay(600).animate({opacity: "0%"});
+		$("#userArm2").delay(6200).animate({opacity: "100%"}).delay(2200).animate({opacity: "0%"});
+		$("#userArm3").delay(8800).animate({opacity: "100%"});
 		$("#back").delay(9000).animate({opacity: "100%"}, 500);
 		$("#target1").delay(9000).animate({opacity: "100%"}, 500);
 		setTimeout(function(){$("input[name=flag]").val('true')},9500); 
+		
+		$('#spearTarget').delay(8800).fadeIn();
 	
         $("#wrapper").click(function (e) {
 			if ($("input[name=flag]").val() == 'true') {
-				var panel_y = $("#wrapper").offset().top;
-				var select_y = e.clientY - panel_y -10;
-				$("#spear").css({top: select_y});
+				var spear_target = $('#spearTarget').offset().top;
+				
+				$("#spear").css({top: spear_target});
 				$("#spear").clearQueue().stop().animate({opacity: "100%"}, 500).animate({opacity: "0%"}, 1000);
 				
-				if (count == 0 && select_y > $("#target1").offset().top - 30 && select_y < $("#target1").offset().top + 30) {
+				if (count == 0 && spear_target > $("#target1").offset().top - 30 && spear_target < $("#target1").offset().top + 30) {
 					$("#snake1").css("opacity", "0");
 					$("#snake3").delay(100).animate({opacity: "100%"});
 					$("#target1").css("opacity", "0");
-					$("#target2").delay(200).animate({opacity: "100%"});
+					$("#target2").delay(100).fadeIn();
 					count = 1;
 				}
-				else if(count == 1 && select_y > $("#target2").offset().top - 30 && select_y < $("#target2").offset().top + 30) {
+				else if(count == 1 && spear_target > $("#target2").offset().top - 50 && spear_target < $("#target2").offset().top + 50) {
+					
 					count = 2;
 				}
 			}
-				console.log(select_y)
 			/* 창 던지기가 끝나면 */
 			if (count == 2) {
+				$('#spearTarget').css("display", "none");
 				$("#snake3").css("opacity", "0");
-				$("#userArm").css("opacity", "0");
+				$("#userArm3").css("opacity", "0");
+				$("#userArm4").css("opacity", "100%");
+				$("#userArm4").delay(3100).animate({opacity: "0%"});
+				$("#user").delay(3100).animate({opacity: "100%"}).animate({right: "40%"}, 2000);
 				$("#back").css("opacity", "0");
 				$("#paper").css("opacity", "0");
+				$("#paperImg").css("opacity", "0");
 				$("#snakeDead").delay(100).animate({opacity: "100%"}).delay(3500).animate({opacity: "0%"}, 100);
 				
 				$("#rock").delay(3500).stop().animate({left: '-148%'}, 8000);
 				
-				$("#user").delay(3500).animate({right: "40%"}, 2000);
 				$("#la2").delay(3500).animate({right: "49%"}, 2000);
 				$("#boat").delay(3500).animate({right: "30.4%"}, 2000);
 				
@@ -100,6 +109,7 @@ function init() {
         })
 	}
 	else if(scene == 4) {
+		$("#dialogue").on("click", function() { $("form").submit(); });	
 		setting2();
 		
 		$(".background2").fadeOut(2000);
@@ -107,6 +117,16 @@ function init() {
 		
 		$("#water1").fadeIn(2000);
 		$("#water2").fadeOut(2000);
+	}
+	else if(scene == 5) {
+		setting();
+		
+		$(".background2").hide();
+		$(".background3").css("opacity", "100%");
+		
+		$("#user").css("right", "40%").css("bottom", "34.4%");
+		$("#la2").css("opacity", "100%").css("right", "49%");
+		$("#boat").css("right", "30.4%");
 		
 		$("#dialogue").on("click", function() { 
 			setTimeout("$('form').submit()", 4000);
@@ -126,7 +146,7 @@ function init() {
 			$("#flower").animate({right: "6.5%"}, 4000);
 		});
 	}
-	else if(scene == 5) {
+	else if(scene == 6) {
 		setting();
 		
 		$(".background2").hide();
