@@ -8,13 +8,14 @@ function init() {
 	var effect = document.getElementById("effect");
 	effect.pause();
 	effect.currentTime = 0;
-	
+
+/*	
 	function audio() {
 		document.getElementById("bgm").play();
 		document.removeEventListener("mouseover", audio);		
 	}
 	document.addEventListener("mouseover", audio);
-	
+*/	
 	
 	$(window).resize(function() {
 		location.reload(true);
@@ -53,7 +54,6 @@ function init() {
 		}, 1000);
 	});
 	preload([
-		"../resources/background/ch00/0_1.png",
 		"../resources/background/ch00/0_2.png",
 		"../resources/background/ch00/0_3.png",
 		"../resources/background/ch00/0_4.png",

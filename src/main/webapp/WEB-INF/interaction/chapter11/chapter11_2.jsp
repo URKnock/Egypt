@@ -6,7 +6,7 @@
 <title>사자의 서</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch11.css'/>"/>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 <script src="<c:url value='/resources/js/ch11_2.js'/>"></script>
 <script src="<c:url value='/resources/js/sound_bgmonly.js'/>"></script>
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
