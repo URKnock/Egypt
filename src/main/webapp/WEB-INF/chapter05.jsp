@@ -11,6 +11,7 @@
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/ch05.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
+<script src="/resources/js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
 </head>
 <body onload="init(); interaction();">
 
@@ -74,11 +75,15 @@
    </c:if>
 </div>
 <div id="blur"></div>
-
+<div id="loading"></div>
+<script src="<c:url value='/resources/js/sound.js'/>"></script>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
+<input name="flag" type="hidden" value="${flag}"/>
 </form>
 <jsp:include page="interaction/info_window.jsp"/>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/water_wave.mp3'/>"></audio>
+<audio id="voice" preload="auto" src="/resources/bgm/ch05/5_${scene}_${index}_${flag}.mp3"></audio>
 <div class="guide" align="center">마우스로 클릭하여 주변을 둘러보세요.</div>
 </body>
 </html>

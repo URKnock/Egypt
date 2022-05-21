@@ -15,7 +15,7 @@ function init() {
 	flag = $("input[name='flag']").val();
 	choice = $("input[name='choice']").val();
 	
-	$("button").on("click", function() {
+	$("button").on("click", function() {	
 		//console.log($(this).val());
 		if($(this).val() == 0) {
 			$("#content").val(1);

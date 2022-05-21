@@ -1,9 +1,8 @@
 function interaction() {
-	w = $("body").width() / 1920;
-	h = $("body").height() / 1080;
-	x = $("body").width() / 2.0;
+	var first = new Audio('resources/bgm/ch05/5_3_1_0.mp3');
 
 	setDialogueSize();
+	setSound();
 	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	$(".mainC").css({opacity: "1"});
@@ -11,25 +10,10 @@ function interaction() {
 	$(".saja").animate({left: "30%"}, 2000);
 	
 	$("form").hide().delay(2200).fadeIn(1000);
-	
-	if(scene == 6) {
+
+	if(scene == 5) {
 		setTimeout(function() {
-		$(".crocs4").attr("src", 
-		"/D/resources/object/ch05/악어인트로_시작오.webp");
-		}, 4400);
-	setTimeout(function() {
-		$(".crocs3").attr("src", 
-		"/D/resources/object/ch05/악어인트로_시작왼.webp");
-		}, 4400);	
-	setTimeout(function() {
-		$(".crocs2").attr("src", 
-		"/D/resources/object/ch05/악어인트로_시작오.webp");
-		}, 4400);		
-	setTimeout(function() {
-		$(".crocs1").attr("src", 
-		"/D/resources/object/ch05/악어인트로_시작왼.webp");
-		}, 4400);	
-		
-	setTimeout(function() {$('form').submit() }, 6400);	
+		first.play(); }, 3100);
+
 	}	
 }

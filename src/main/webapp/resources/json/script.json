@@ -553,21 +553,21 @@
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"문지기의 이름은 <br/>‘아아’. <br/>오답이다.",
+    "content":"정령의 이름은 <br/>‘아아’. <br/>오답이다.",
     "chapter":5, "scene":20, "flag":0,
 	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"문지기의 이름은 <br/>‘아아’. <br/>정답이다.",
+    "content":"정령의 이름은 <br/>‘아아’. <br/>정답이다.",
     "chapter":5, "scene":20, "flag":1,
 	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"문지기의 이름은 <br/>‘아아’. <br/>오답이다.",
+    "content":"정령의 이름은 <br/>‘아아’. <br/>오답이다.",
      "chapter":5, "scene":20, "flag":2,
 	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"

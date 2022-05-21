@@ -9,8 +9,7 @@
 </div>
 <div id="characters">
 	<div id="character">
-		<img class="mainC_s" src="<c:url value='/resources/character/ch05/la_b.png'/>">
-		<img class=	"saja" src="<c:url value='/resources/character/ch05/5_2.png'/>">
+		<img class="chs" src="<c:url value='/resources/character/ch05/쫄아배통.webp'/>">
 	</div>
 </div>
 <div id="crocs">
@@ -19,3 +18,6 @@
 	<img class="crocs3" src="<c:url value='/resources/object/ch05/none.png'/>">
 	<img class="crocs4" src="<c:url value='/resources/object/ch05/none.png'/>">
 </div>
+<script src="<c:url value='/resources/js/sound.js'/>"></script>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/duat_wind.mp3'/>"></audio>
+<audio id="voice" preload="auto" src="/resources/bgm/ch05/5_${scene}_${index}_${flag}.mp3"></audio>
