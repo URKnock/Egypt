@@ -11,8 +11,10 @@
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/ch05.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
+<script src="/resources/js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
 </head>
 <body onload="init(); interaction();">
+
 <div id="background">
 	<div id="menu">
 		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
@@ -20,6 +22,7 @@
 		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
 		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>	
 	</div>
+	<div id=ew">
 	<div id="earth">
 	<img id="earth" src="<c:url value='/resources/background/ch05/5_1.png'/>">
 	</div>
@@ -28,8 +31,9 @@
 		<img id="water2" src="<c:url value='/resources/background/ch05/5_3.png'/>">
 		<img id="water3" src="<c:url value='/resources/background/ch05/5_2.png'/>">
 	</div>
+	</div>
 	<div id="chs">
-	<img id="user1" src="<c:url value='/resources/character/ch05/5_2.png'/>">
+	<img id="saja" src="<c:url value='/resources/character/ch05/두리번사자(112).webp'/>">
 	<img id="user2" src="<c:url value='/resources/character/ch05/5_1.png'/>">
 	<img id="nol" src="<c:url value='/resources/object/ch05/nol.png'/>">
 	</div>
@@ -71,11 +75,15 @@
    </c:if>
 </div>
 <div id="blur"></div>
-
+<div id="loading"></div>
+<script src="<c:url value='/resources/js/sound.js'/>"></script>
 <input name="scene" type="hidden" value="${scene}"/>
 <input name="index" type="hidden" value="${index}"/>
+<input name="flag" type="hidden" value="${flag}"/>
 </form>
 <jsp:include page="interaction/info_window.jsp"/>
+<audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/water_wave.mp3'/>"></audio>
+<audio id="voice" preload="auto" src="/resources/bgm/ch05/5_${scene}_${index}_${flag}.mp3"></audio>
 <div class="guide" align="center">마우스로 클릭하여 주변을 둘러보세요.</div>
 </body>
 </html>

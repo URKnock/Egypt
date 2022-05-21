@@ -1,10 +1,12 @@
 var count = 0;
 
 function interaction() {
+	setSound();
 	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	
-	if(scene == 5) { /*이런 말하기도 무섭게*/
+	if(scene == 5) { 
+		//first.play();
 		$("form").hide().delay(2200).fadeIn(1000);
 		
 		$("form").hide().fadeIn(1800).fadeOut(2000);

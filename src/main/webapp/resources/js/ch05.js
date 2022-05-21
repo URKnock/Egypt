@@ -3,31 +3,32 @@ var which;
 var count = 0;
 var w, h, x, y;
 var scene, index, flag;
+var first = new Audio('resources/bgm/ch05/5_2_0_0.mp3');
+var second = new Audio('resources/bgm/ch05/5_2_1_0.mp3');
 
 function init() {
-	w = $("body").width() / 1920;
-	h = $("body").height() / 1080;
-	x = $("body").width() / 2.0;
-
+	
+	$("#loading").hide() ;
+	setSound(); 
 	setDialogueSize();
+	
 	scene = $("input[name='scene']").val();
 
 	 if(scene == 1) { /* 여기가 어디여.. 씬0 */
 		$("#boat").css({right: "-200%"}, 6000);
 		$("#la").css({right: "-200%"}, 6000);
-		$("form").hide().delay(2000).fadeIn(1000); 
-		$("#user2").animate({left: "11%"}, 600);
-		$("#user1").animate({left: "11%"}, 600)
-		.animate({opacity: "0"}, 500);
-		$("#user2").delay(20).animate({opacity: "100%"}, 500)
-		.animate({opacity: "0"}, 500);
-		$("#user1").delay(20).animate({opacity: "100%"}, 500);
+		$("form").hide().delay(3000).fadeIn(1000); 
+		setTimeout(function() {
+		$("#saja").attr("src", 
+		"/D/resources/character/ch05/놀란사자(67).webp");
+		}, 5000); 
+
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
 	else if(scene == 2) { /* 난태양의신라.  씬1 */
-		$("#user1").css({left: "11%"});
-		$("#nol").delay(1000).css({opacity: "100%"}, 1000).
-		animate({opacity: "0"}, 1000);
+		first.play();
+		$("#saja").attr("src", 
+		"/D/resources/character/ch05/숨셔사자(65).webp");
 		$("form").hide().delay(6000).fadeIn(1000);	
 		$("#boat").delay(500).animate({right: "5%"}, 6000);
 		$("#la").delay(500).animate({right: "36%"}, 6000);
@@ -35,7 +36,8 @@ function init() {
 } 
 	
 	 else if(scene == 3) { /* 두아트 정보창 */
-		$("#user1").css({left: "11%"});
+		$("#saja").attr("src", 
+		"/D/resources/character/ch05/숨셔사자(65).webp");
 		$(".guide")
 		.animate({opacity: "100%"}, 500)
 		.animate({opacity: "0%"}, 3000);
@@ -57,11 +59,6 @@ function init() {
 			$("#la").addClass("pikachu");
 			$("#la").addClass("select");
 					
-			$("#la").on("click", function() {
-				$("#user1").animate({top:300, left:900}, 2000);
-				$("body").fadeOut(2000);
-				setTimeout("$('form').submit()", 2000);
-					});	
 				}		 
 			});
 		$("#earth").on("click", function() {
@@ -71,15 +68,17 @@ function init() {
 			console.log(count);
 					if(count >= 2) {
 			$("#la").addClass("pikachu");
-			$("#la").addClass("select");
+			$("#la").addClass("select2");
 			$("#la").on("click", function() {
-				$("#user1").animate({top:300, left:900}, 2000);
-				$("body").fadeOut(2000);
+				$("#saja").css({left: "12.6%"});
+				$("#saja").attr("src", 
+				"/D/resources/character/ch05/두리번사자(112).webp");
+				$("#loading").fadeIn(2300);
 				setTimeout("$('form').submit()", 2000);
 				});
 	
 			} 
-				//objectSubmit("#earth", 2);
+				
 				});
 					
 		} 
@@ -90,18 +89,15 @@ function init() {
 			}*/
 			
 		else if(scene == 4) { //탑승했는가? 출발하겠다
-		$("#user1").css({opacity: "0"});
-		$("#la_b2").css({opacity: "1"});
-		$("#la_b2").css({opacity: "1"});
+		second.play();
+		$("#saja").css({opacity: "0"});
 		$("body").delay(2000).fadeIn(2000);		
-	    $("form").delay(2000).fadeIn(1000).fadeOut(2000); 
+	    $("form").delay(2000).fadeIn(1000).fadeOut(3000); 
 		/*$("#user1").css({top:300, left:900});*/
 		$("#earth").delay(2000).animate({left: "-50%"}, 5000);
 	    $("#la_b2").css({right: "15%", top: "14%"}).delay(2000).animate({right: "-60%"}, 5000)
-	
-		/*.animate({top:"30%"}, 500).animate({top:"55%"}, 500) 
-		.delay(30).animate({right: "-30%", top: "-70%"}, 4000);*/
-		setTimeout(function() { $("form").submit(); }, 8000); 
+
+		setTimeout(function() { $("form").submit(); }, 9000); 
 		}
 			
 	$("#dialogue").click(function() {
@@ -137,8 +133,5 @@ $("#dialogue").delay(4000).on("click", function() {
 		
 }*/
 
-function submit() {
-	setTimeout("$('form').submit()", 2000);
-}
 }
 function interaction() {}; 
