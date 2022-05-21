@@ -30,17 +30,21 @@
 		<img id="banner" src="<c:url value='/resources/object/ch02/0_5.png'/>"/>
 	</div>
 	<audio id="bgm" preload="auto" src="/resources/bgm/ch02/2_home.mp3" loop="true" autobuffer></audio>
+	<audio id="voice" src=""></audio>
+	<audio id="effect" src=""></audio>
 	
 	<div id="menu">
 		<div>
 			<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-			<a href="/shabti/shabti_main.jsp" target="_blank"><img src="<c:url value='/resources/UI/Menu/2.png'/>"/><!-- 접속 코드 추가하기 --></a>
+			<img src="<c:url value='/resources/UI/Menu/2.png'/>"/><!-- 접속 코드 추가하기 -->
 			<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
 			<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 		</div>
 	</div>
 	
+	<jsp:include page="interaction/help.jsp"/>
 	<jsp:include page="interaction/setting.jsp"/>
+	
 	<c:choose>
 		<c:when test="${chapter eq '1'}">
 			<script>
