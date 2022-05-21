@@ -14,7 +14,7 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch07/men.webp'/>">
 	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch07/anubis2_talk.webp'/>">
-	<img class="character" src="<c:url value='/resources/character/ch07/6_5.png'/>">
+	<img class="character" src="<c:url value='/resources/webp/ch07/thoth2.webp'/>">
 	<img class="character" src="<c:url value='/resources/webp/ch07/ammut.webp'/>">
 	<c:if test="${scene eq 6 and index eq 1}">
 		<script defer>
