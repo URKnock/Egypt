@@ -4,17 +4,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>사자의 서</title>
-	<link href="<c:url value='/resources/css/ch04.css'/>" rel="stylesheet" type="text/css"/>
+	
 	<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 	<script defer src="<c:url value='/resources/js/ch04.js'/>" type="text/javascript"></script>
 	<script defer src="<c:url value='/resources/js/ch10.js'/>" type="text/javascript"></script>
-	<link href="<c:url value='/resources/css/interaction/ch07/ch07_2.css'/>" rel="stylesheet" type="text/css"/>
-	<link href="<c:url value='/resources/css/ch10.css'/>" rel="stylesheet" type="text/css"/>
 	
+	<link href="<c:url value='/resources/css/ch04.css'/>" rel="stylesheet" type="text/css"/>
+	<link href="<c:url value='/resources/css/ch10.css'/>" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
+	
 	<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 	<script src="<c:url value='/resources/js/sound.js'/>"></script>
 </head>
+
 <body>
 <audio id="bgm" preload="auto" src="<c:url value='/resources/bgm/6_7_courtroom.mp3'/>" loop="true" autobuffer></audio>
 <audio id="voice" preload="auto" src="<c:url value='/resources/bgm/ch10/10_${scene}_${index}_${flag}.mp3'/>"></audio>
@@ -27,24 +29,25 @@
 			<img class="background" src="<c:url value='/resources/background/ch07/7_2_2.png'/>">
 			<img class="background" src="<c:url value='/resources/background/ch07/7_2_3.png'/>">
 			
-			<img class="balance" src="<c:url value='/resources/background/ch07/7_2_4.png'/>"> <!-- 저울 원본 -->
+			<img class="balance" id="oldScale" src="<c:url value='/resources/object/ch10/10_11.png'/>">
 		
 			<!-- character -->
-			<img class="character" src="<c:url value='/resources/webp/ch07/men.webp'/>">
-			<img class="character" src="<c:url value='/resources/webp/ch07/anubis2.webp'/>">
-			<img class="character" src="<c:url value='/resources/webp/ch07/thoth.webp'/>">
-			<img class="character" src="<c:url value='/resources/webp/ch07/ammut.webp'/>">
+			<img class="character" id="human" src="<c:url value='/resources/character/ch10/사자기본.webp'/>">
+			<img class="character" src="<c:url value='/resources/webp/ch07/anubis2_talk.webp'/>">
+			<img class="character" id="thoth" src="<c:url value='/resources/character/ch10/토트기본.webp'/>">
+			<img class="character" id="ammut" src="<c:url value='/resources/webp/ch07/ammut.webp'/>">
 			
 			<!-- new obj -->
 			<img class="bgObj" id="heart" style="opacity: 0;" src="<c:url value='/resources/object/ch10/10_4.png'/>">
-			<img class="bgObj" id="newScale" style="opacity: 0;" src="<c:url value='/resources/object/ch10/저울2.png'/>">
+			<img class="balance" id="newScale" style="opacity: 0;" src="<c:url value='/resources/object/ch10/저울2.png'/>">
 			
 			<!-- new background -->
 			<img class="background" id="newBg" style="opacity: 0;" src="<c:url value='/resources/background/ch10/10_2.png'/>">
-			<img class="background" id="redInk" src="<c:url value='/resources/background/ch10/10_9_2.png'/>">
-			<img class="background" id="blueInk" src="<c:url value='/resources/background/ch10/10_10_2.png'/>">
+			<img class="background" id="ink" src="<c:url value='/resources/background/ch10/10_9_2.png'/>">
 			<img class="background" id="pillar" style="opacity: 0;" src="<c:url value='/resources/background/ch10/10_1.png'/>">
-			
+			<c:if test="${scene eq 1 and index eq 0}">
+				<jsp:include page="interaction/chapter07/toss_ammut.jsp"/>
+			</c:if>
 		</div>
 	</div>
 	<div id="menu">
@@ -117,22 +120,7 @@
 		if(scene == 1 && index == 0) {
 			$("#loading").hide();
 			imageReload();
+			soundReload();
 		}
-		//모든 대화를 마치고 심장까지 먹힌 후에 실행되는 스크립트 
-		
-// 		console.log(nextChapter);
-// 		$("#dialogue").click(function() {
-// 			var link = ""
-// 			if(nextChapter != "null") {
-// 				//location.href = '/' + nextChapter;
-// 				link = '/' + nextChapter;
-// 			}
-// 			else {
-// 				//location.href = '/chapter11';
-// 				link = '/chapter11'
-// 			}
-// 			console.log(link);
-// 		});
-		
 	}
 </script>

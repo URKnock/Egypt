@@ -1,3 +1,15 @@
+@charset "UTF-8";
+
+#interact {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#interact img {
+	position: absolute;
+}
+
 .select {
 	filter: drop-shadow(0px 0px 0.5vw #FFAB00);
 }
@@ -10,23 +22,61 @@
 	transform: scale(1.0);
 }
 
-#interact .bgObj:nth-of-type(8) { /*½ÉÀå*/
-	z-index: 10;
-	bottom: 33%; left: 51%; transform: translate(-30vh, 0);
+/* ë°°ê²½ */
+#interact .background {
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+#interact .background:nth-of-type(2) {
+	top: 71.95%;
+	height: 28.05%;
 }
 
-#interact .bgObj:nth-of-type(9) { /*Àú¿ï Èæ¹é ´ëÃ¼*/
-	height: 49.81%;
+/* ë°°ê²½ ì˜¤íŠ¸ì íŠ¸ */
+#interact .balance {
+	z-index: 2;
+	bottom: 28.05%;
+}
+#interact .balance:nth-of-type(3) { /*ì €ìš¸ ì›ë³¸*/
+	height: 50.64%;
 	left: 50%; transform: translate(-50%, 0);
 }
 
-#interact .background:nth-of-type(11) { /*ºÓÀº ¾ó·è*/
-	height: 120%;
-	width: 100%;
-	bottom: 100%; 
+/* ìºë¦­í„° */
+#interact .character {
+	bottom: 27.05%;
+	z-index: 3;
+}
+#interact .character:nth-of-type(4) { /*ì‚¬ì*/
+	height: 84%;
+	left: -1vh; bottom: 14.7%;
+}
+#interact .character:nth-of-type(5) { /*ì•„ëˆ„ë¹„ìŠ¤*/
+	height: 35.92%;
+	left: 50%; transform: translate(-50%, 0);
+}
+#interact .character:nth-of-type(6) { /*í† íŠ¸*/
+	height: 44.81%;
+	right: 5%;
+}
+#interact .character:nth-of-type(7) { /*ì•”ë¬´íŠ¸*/
+	height: 27.12%;
+	right: 25vh;
 }
 
-#interact .background:nth-of-type(12) { /*ÆÄ¶õ ¾ó·è*/
+#interact .bgObj:nth-of-type(8) { /*ì‹¬ì¥*/
+	z-index: 10;
+	bottom: 32%; left: 49.5%; transform: scale(0.9) translate(-31vh, 0);
+}
+
+#interact .balance:nth-of-type(9) { /*ì €ìš¸ í‘ë°± ëŒ€ì²´*/
+	height: 50.64%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#interact .background:nth-of-type(11) { /*ë¶‰ì€ ì–¼ë£©*/
 	height: 120%;
 	width: 100%;
 	bottom: 100%; 
@@ -48,8 +98,8 @@
 }
 
 .fade-out {
-  animation: fadeout 2.0s;
-  -webkit-animation: fadeout 2.0s; /* Safari and Chrome */
+  animation: fadeout 1.5s;
+  -webkit-animation: fadeout 1.5s; /* Safari and Chrome */
   animation-fill-mode: forwards;
 }
 
@@ -75,4 +125,33 @@
     to {
         bottom: -17%; 
     }
+}
+
+#interact .item { /* ì¬ì •ì˜ */
+	z-index: 10;
+	bottom: 32%; left: 49.5%; transform: scale(0.9) translate(-31vh, 0);
+}
+
+#interact .spot {
+	position: absolute;
+	width: 15vh; height: 15vh;
+	bottom: 43%; right: 9vh; transform: translate(-33.5vh, 0);
+	
+	border-radius: 50%;
+	background-color: black;
+	opacity: 0;
+	
+	z-index: 5;
+}
+#interact .circle {
+	display: none;
+	position: absolute;
+	width: 10vh; height: 10vh;
+	bottom: 45%; right: 14vh; transform: translate(-31vh, 0);
+	
+	border-radius: 50%;
+	background-color: white;
+	opacity: 0.6;
+	
+	z-index: 5;
 }
