@@ -18,7 +18,7 @@
 <script defer>
 	effectName = "duck";
 	var body = document.querySelector('body');
-	body.onload = function() { init_kill(); setSound();};
+	body.onload = function() { init_kill(); ssetSomething();};
 </script>
 
 <div id="interact">

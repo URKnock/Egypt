@@ -7,10 +7,11 @@
 <link href="<c:url value='/resources/css/interaction/ch07/ch07_1.css'/>" rel="stylesheet" type="text/css"/>  
 <div id="interact">
 	<!-- background -->
-	<img class="background" src="<c:url value='/resources/background/ch07/7_2_2.png'/>">
+	<img class="background" src="<c:url value='/resources/background/ch07/7_1_2.jpg'/>">
 	
 	<div class="bg">
-		<img class="bgObj" src="<c:url value='/resources/background/ch07/7_0_3.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch07/7_2_1.png'/>">
+		<img class="bgObj" src="<c:url value='/resources/background/ch07/7_2_3.png'/>">
 		<img class="bgObj" src="<c:url value='/resources/background/ch07/7_1_4.png'/>">
 	</div>
 	
@@ -24,6 +25,14 @@
 				$("#voice").bind("ended", function() {
 					god.src =  "resources/webp/ch07/42_1.webp";
 				});
+				var body = document.querySelector('body');
+				body.onload = function() {
+					var next = document.querySelector('#nextButton');
+					next.style.position = "absolute";
+					next.style.top = "48%";
+					next.style.left = "655px";
+					init();
+				}
 			</script>
 		</c:when>
 		<c:otherwise>
@@ -33,6 +42,15 @@
 				$("#voice").bind("ended", function() {
 					god.src =  "resources/webp/ch07/42_10.webp";
 				});
+				var body = document.querySelector('body');
+				body.onload = function() {
+					init();
+					var next = document.querySelector('#nextButton');
+					next.style.position = "absolute";
+					next.style.top = "48%";
+					next.style.left = "980px";
+					init();
+				}
 			</script>
 		</c:otherwise>
 	</c:choose>	
@@ -49,7 +67,7 @@
 			System.out.println(score);
 			System.out.println(ans);
 			if(score >= 9) session.setAttribute("result", "chapter08");
-			else if(score >= 5) session.setAttribute("result", "chapter13");
+			else if(score >= 5) session.setAttribute("result", "chapter12");
 			else session.setAttribute("result", "chapter11");
 		}
 		
@@ -62,7 +80,11 @@
 					$("input[name=scene]").val("6");
 					$("input[name=index]").val("0");
 					init();
-					setSound();
+					
+					var next = document.querySelector('#nextButton');
+					next.style.position = "absolute";
+					next.style.top = "48%";
+					next.style.left = "980px";
 				}
 			</script>
 		</c:when>
@@ -70,7 +92,7 @@
 			<script defer>
 			var body = document.querySelector('body');
 			body.onload = function() {
-				setSound();
+				setSomething();
 				$("form").submit();
 			}
 			</script>

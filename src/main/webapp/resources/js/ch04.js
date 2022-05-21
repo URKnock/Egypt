@@ -6,12 +6,14 @@ w = $("#background").width() / 1920;
 h = $("#background").height() / 1080;
 x = $("#background").width() / 2.0;
 
+setSomething();
+
 function init() {
 	$("#dialogue").click(function() {
 		$("form").submit();
 	});
 	
-	setSound();
+	setSomething();
 	
 	var nextButton = document.querySelector('#nextButton');
 	nextButton.style.display = "block";
@@ -35,14 +37,25 @@ $(document).ready(function() {
 	}
 	
 	effect = document.getElementsByTagName('audio')[2];
+	
+	
 });
 
 function home() {
 	location.href = "chapter02";
 }
 function setting() {
-	//$("#setting").css("display", "flex");
+	$("#setting").css("display", "flex");
 }
 function help() {
-	//$("#help").css("display", "flex");
+	$("#help").css("display", "flex");
+}
+
+function setSomething() {
+	setSound();
+	setSetting();
+	setHelp();
+	
+	$("#setting").hide();
+	$("#help").hide();
 }

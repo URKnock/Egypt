@@ -29,7 +29,7 @@
 	var body = document.querySelector('body');
 	var anubis = document.querySelector('#interact .character:nth-of-type(4)');
 	body.onload = function() { 
-		console.log("아아"); setSound(); 
+		console.log("아아"); setSomething(); 
 		$("#voice").bind("ended", function() {
 			anubis.src =  "resources/webp/ch07/anubis.webp";
 		});

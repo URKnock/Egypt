@@ -17,7 +17,7 @@
 <script>
 	var body = document.querySelector('body');
 	body.onload = function() { 
-		console.log("info time~"); setSound(); 
+		console.log("info time~"); setSomething();
 //		$("#voice").bind("ended", function() {
 //			if(obj[1].src != webp[1] && obj[1].src != png[1])
 //				obj[1].src =  "resources/webp/ch07/anubis.webp";

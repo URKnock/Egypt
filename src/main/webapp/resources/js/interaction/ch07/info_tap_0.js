@@ -66,20 +66,25 @@ function tap_info(e, i) {
 	else visited = true;
 	
 	e.id = 'visited';
-	if(i == 1) {
-		show_info(i);
-	}
-	else {
-		pause();
 	
-		e.src = motion[i];
-		
-		const bg = document.querySelector(".info_back");
-		bg.style.display = "block";
-		bg.style.opacity = "0"
-		
-		setTimeout(function() { show_info(i); }, 3000);
-	}
+	pause();
+
+	e.src = motion[i];
+	
+	const bg = document.querySelector(".info_back");
+	bg.style.display = "block";
+	bg.style.opacity = "0"
+	
+	var time;
+	if(i == 0) time = 2300;
+	else if(i == 1) time = 0;
+	else if(i == 2) time = 1050;
+	else if(i == 3) time = 3600;
+	else if(i == 4) time = 1750;
+	else if(i == 5) time = 2450;
+	else if(i == 6) time = 2150;
+	
+	setTimeout(function() { show_info(i); }, time);
 	
 	if(visited == false) {
 		info_total--;

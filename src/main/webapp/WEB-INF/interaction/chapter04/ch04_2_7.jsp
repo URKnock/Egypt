@@ -21,7 +21,7 @@
 <script defer>
 	effectName = "cut1";
 	var body = document.querySelector('body');
-	body.onload = function() { init_item(); setSound();};
+	body.onload = function() { init_item(); setSomething();};
 </script>
 
 <div id="interact">

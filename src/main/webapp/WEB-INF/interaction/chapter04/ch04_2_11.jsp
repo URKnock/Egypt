@@ -31,7 +31,7 @@
 	var anubis = document.querySelector('#anubis');
 	
 	body.onload = function() { 
-		setSound(); 
+		setSomething();
 		setTimeout(function(){
 			anubis.src = "resources/webp/ch04/anubis_1_talk.webp";
 		}, 2400);

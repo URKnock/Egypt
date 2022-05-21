@@ -22,7 +22,7 @@
 <script>
 	effectName = "cow";
 	var body = document.querySelector('body');
-	body.onload = function() { init_kill(); setSound();};
+	body.onload = function() { init_kill(); setSomething();};
 </script>
 
 <div id="interact">

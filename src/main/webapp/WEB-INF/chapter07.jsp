@@ -56,13 +56,13 @@
 		<div id="scene">
 			<div id="title">
 				<div>${dialogue.name}</div>
-				<c:if test="${dialogue.nickname ne '없음'}">
+				<c:if test="${dialogue.nickname ne '없음' && dialogue.nickname ne '' }">
 					<div>${dialogue.nickname}</div>
 				</c:if>
 			</div>
 			<div id="content">
 				<p>${dialogue.content}</p>
-				<img />
+				<img id="nextButton" src='<c:url value="/resources/UI/Dialogue/next_triangle.png"/>'>
 			</div>
 		</div>
 		<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
