@@ -21,12 +21,17 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/webp/ch07/men.webp'/>">
 	<img class="god" src="<c:url value='/resources/webp/ch07/42_${questN}_talk.webp'/>">
+	
+	<!-- 영상 -->
+	<video src="<c:url value='/resources/webp/ch07/fault_${questN}.mp4'/>" loop autoplay muted></video>
 </div>
 
 <script>
 	var body = document.querySelector('body');
 	var god = document.querySelector('.god');
+	var video = document.querySelector('#interact video');
 	body.onload = function() { 
+		video.style.height = "62.5vh";
 		console.log("부정고백 time~"); setSomething();
 		$("#voice").bind("ended", function() {
 			god.src =  "resources/webp/ch07/42_${questN}.webp";

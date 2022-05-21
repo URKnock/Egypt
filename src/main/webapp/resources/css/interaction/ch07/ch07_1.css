@@ -10,6 +10,14 @@
 	position: absolute;
 }
 
+#interact video {
+	z-index: 1;
+	left: 50%;
+	top: 10%;
+	position: absolute;
+	transform: translate(-50%, 0);
+}
+
 /* 배경 */
 #interact .background {
 	width: 100%;
