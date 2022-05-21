@@ -20,7 +20,7 @@ function init() {
 		$("form").hide().delay(3000).fadeIn(1000); 
 		setTimeout(function() {
 		$("#saja").attr("src", 
-		"/D/resources/character/ch05/놀란사자(67).webp");
+		"/resources/character/ch05/놀란사자(67).webp");
 		}, 5000); 
 
 		$("#dialogue").on("click", function() { $("form").submit(); });	
@@ -28,7 +28,7 @@ function init() {
 	else if(scene == 2) { /* 난태양의신라.  씬1 */
 		first.play();
 		$("#saja").attr("src", 
-		"/D/resources/character/ch05/숨셔사자(65).webp");
+		"/resources/character/ch05/숨셔사자(65).webp");
 		$("form").hide().delay(6000).fadeIn(1000);	
 		$("#boat").delay(500).animate({right: "5%"}, 6000);
 		$("#la").delay(500).animate({right: "36%"}, 6000);
@@ -37,7 +37,7 @@ function init() {
 	
 	 else if(scene == 3) { /* 두아트 정보창 */
 		$("#saja").attr("src", 
-		"/D/resources/character/ch05/숨셔사자(65).webp");
+		"/resources/character/ch05/숨셔사자(65).webp");
 		$(".guide")
 		.animate({opacity: "100%"}, 500)
 		.animate({opacity: "0%"}, 3000);
@@ -72,7 +72,7 @@ function init() {
 			$("#la").on("click", function() {
 				$("#saja").css({left: "12.6%"});
 				$("#saja").attr("src", 
-				"/D/resources/character/ch05/두리번사자(112).webp");
+				"/resources/character/ch05/두리번사자(112).webp");
 				$("#loading").fadeIn(2300);
 				setTimeout("$('form').submit()", 2000);
 				});
@@ -134,4 +134,4 @@ $("#dialogue").delay(4000).on("click", function() {
 }*/
 
 }
-function interaction() {}; 
+function interaction() {};

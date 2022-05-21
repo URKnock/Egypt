@@ -22,11 +22,11 @@ function interaction() {
 			$(".saja").delay(5000).css({left:"-8%"});
 			$(".saja").clearQueue().stop();
 			$(".saja").attr("src", 
-			"/D/resources/character/ch05/반짝사자(12).webp");
+			"/resources/character/ch05/반짝사자(12).webp");
 		}, 3300);
 			setTimeout(function() {
 			$(".saja").attr("src", 
-			"/D/resources/character/ch05/숨셔창사자(38).webp");
+			"/resources/character/ch05/숨셔창사자(38).webp");
 		}, 3800);
 		//$(".saja").delay(3300).animate({opacity: "100%"});
 		
@@ -42,54 +42,54 @@ function interaction() {
 		$(".saja").delay(5000).css({left:"-20%"});	
 
 		$(".saja").attr("src", 
-		"/D/resources/character/ch05/창든사자(위)_1처음우.webp");
+		"/resources/character/ch05/창든사자(위)_1처음우.webp");
 		}, 5000); 
 		$(".mandara1").delay(5000).animate({opacity: "100%"}, 1000);
 		setTimeout(function() {
 		$(".saja").attr("src", 
-		"/D/resources/character/ch05/창든사자(위)_2대기우.webp");
+		"/resources/character/ch05/창든사자(위)_2대기우.webp");
 		}, 6700); 		
 		//악어 튀어나오고
 		 setTimeout(function() {
 			console.log("셋탐 호출");
 			$(".crocsi4").attr("src", 
-			"/D/resources/object/ch05/악어_시작오.webp");
+			"/resources/object/ch05/악어_시작오.webp");
 		}, 6900); 
 		
 		setTimeout(function() {
 			console.log("셋탐 호출2");
 			$(".crocsi4").attr("src", 
-			"/D/resources/object/ch05/악어_진행오.webp");
+			"/resources/object/ch05/악어_진행오.webp");
 		}, 8400); 
 		
 		setTimeout(function() {
 			$(".crocsi3").attr("src", 
-			"/D/resources/object/ch05/악어_시작왼.webp");		
+			"/resources/object/ch05/악어_시작왼.webp");		
 		}, 6400);
 		
 		setTimeout(function() {
 			$(".crocsi3").attr("src", 
-			"/D/resources/object/ch05/악어_진행왼.webp");		
+			"/resources/object/ch05/악어_진행왼.webp");		
 		}, 7900);
 
 		setTimeout(function() {
 			$(".crocsi2").attr("src", 
-			"/D/resources/object/ch05/악어_시작오.webp");					
+			"/resources/object/ch05/악어_시작오.webp");					
 		}, 5000); 	
 		
 		setTimeout(function() {
 			$(".crocsi2").attr("src", 
-			"/D/resources/object/ch05/악어_진행오.webp");
+			"/resources/object/ch05/악어_진행오.webp");
 		}, 6500); 		
 			
 		setTimeout(function() {
 			$(".crocsi1").attr("src", 
-			"/D/resources/object/ch05/악어_시작왼.webp");
+			"/resources/object/ch05/악어_시작왼.webp");
 		}, 4900);
 		
  		setTimeout(function() {
 			$(".crocsi1").attr("src", 
-			"/D/resources/object/ch05/악어_진행왼.webp");
+			"/resources/object/ch05/악어_진행왼.webp");
 		}, 6400); 
 		
 
@@ -97,18 +97,18 @@ function interaction() {
 			$(".crocsi1").one("click", function() {
 			effect.play();
 			$(".spearno").attr("src", 
-			"/D/resources/object/ch05/창날리기_좌상(24).webp");
+			"/resources/object/ch05/창날리기_좌상(24).webp");
 			console.log(count); 
 			$(".saja").attr("src", 
-			"/D/resources/character/ch05/창든사자(위)_3쏴.webp").stop();
+			"/resources/character/ch05/창든사자(위)_3쏴.webp").stop();
 			//다시 원상태
 			setTimeout(function() {$(".saja").attr("src", 
-			"/D/resources/character/ch05/창든사자(위)_2대기.webp").stop(); }, 2000);
+			"/resources/character/ch05/창든사자(위)_2대기.webp").stop(); }, 2000);
 			$(".crocsi1").attr("src", 
-			"/D/resources/object/ch05/악어_죽음왼.webp");
+			"/resources/object/ch05/악어_죽음왼.webp");
 			mandara();
 /*			$(".m1").attr("src", 
-			"/D/resources/object/ch05/악어만다라1.webp");*/
+			"/resources/object/ch05/악어만다라1.webp");*/
 			isclicked();
 			$(".crocsi1").fadeOut(2000);
 			if(count == 8) {
@@ -123,17 +123,17 @@ function interaction() {
 			$(".crocsi2").one("click", function() {	
 				effect.play();
 			$(".spearno2").attr("src", 
-			"/D/resources/object/ch05/창날리기_우상(24).webp");						
+			"/resources/object/ch05/창날리기_우상(24).webp");						
 			$(".saja").attr("src", 
-			"/D/resources/character/ch05/창든사자(위)_3쏴우.webp").stop();	
+			"/resources/character/ch05/창든사자(위)_3쏴우.webp").stop();	
 			//다시 원상태
 			setTimeout(function() {$(".saja").attr("src", 
-			"/D/resources/character/ch05/창든사자(위)_2대기우.webp").stop(); }, 2000);			
+			"/resources/character/ch05/창든사자(위)_2대기우.webp").stop(); }, 2000);			
 			console.log(count); 
 			$(".crocsi2").attr("src", 
-			"/D/resources/object/ch05/악어_죽음오.webp");
+			"/resources/object/ch05/악어_죽음오.webp");
 /*			$(".m1").attr("src", 
-			"/D/resources/object/ch05/악어만다라2.webp");*/
+			"/resources/object/ch05/악어만다라2.webp");*/
 			mandara();
 			isclicked();
 			$(".crocsi2").fadeOut(2000);
@@ -152,14 +152,14 @@ function interaction() {
 				effect.play();
 				console.log(count);
 			$(".spearno3").attr("src", 
-			"/D/resources/object/ch05/창날리기_좌하1(23).webp");
+			"/resources/object/ch05/창날리기_좌하1(23).webp");
 			$(".saja").attr("src", 
-			"/D/resources/character/ch05/창든사자(하1)_3쏴.webp").stop();	
+			"/resources/character/ch05/창든사자(하1)_3쏴.webp").stop();	
 			//다시 원상태
 			setTimeout(function() {$(".saja").attr("src", 
-			"/D/resources/character/ch05/창든사자(하1)_2대기.webp").stop(); }, 2000);						
+			"/resources/character/ch05/창든사자(하1)_2대기.webp").stop(); }, 2000);						
 			$(".crocsi3").attr("src", 
-			"/D/resources/object/ch05/악어_죽음왼.webp");
+			"/resources/object/ch05/악어_죽음왼.webp");
 			mandara();
 			isclicked();
 			$(".crocsi3").fadeOut(2000);
@@ -173,15 +173,15 @@ function interaction() {
 			$(".crocsi4").one("click", function() { 
 				effect.play();
 			$(".spearno4").attr("src", 
-			"/D/resources/object/ch05/창날리기_우하1(23).webp");	
+			"/resources/object/ch05/창날리기_우하1(23).webp");	
 				console.log(count);
 			$(".saja").attr("src", 
-			"/D/resources/character/ch05/창든사자(하1)_3쏴우.webp").stop();					
+			"/resources/character/ch05/창든사자(하1)_3쏴우.webp").stop();					
 			//원상태로 돌아오는 setTime함수넣기.
 			setTimeout(function() {$(".saja").attr("src", 
-			"/D/resources/character/ch05/창든사자(하1)_2대기우.webp").stop(); }, 2000);
+			"/resources/character/ch05/창든사자(하1)_2대기우.webp").stop(); }, 2000);
 			$(".crocsi4").attr("src", 
-			"/D/resources/object/ch05/악어_죽음오.webp");
+			"/resources/object/ch05/악어_죽음오.webp");
 			mandara();
 			isclicked();
 			$(".crocsi4").fadeOut(2000);
@@ -199,19 +199,19 @@ function interaction() {
 		function mandara() {
 			if(count == 1) {
 			$(".m1").attr("src", 
-			"/D/resources/object/ch05/악어만다라1.webp");				
+			"/resources/object/ch05/악어만다라1.webp");				
 			}
 			else if(count == 3){
 			$(".m1").attr("src", 
-			"/D/resources/object/ch05/악어만다라2.webp");	
+			"/resources/object/ch05/악어만다라2.webp");	
 			}
 			else if(count == 5){
 			$(".m1").attr("src", 
-			"/D/resources/object/ch05/악어만다라3.webp");	
+			"/resources/object/ch05/악어만다라3.webp");	
 			}
 			else if(count == 7){
 			$(".m1").attr("src", 
-			"/D/resources/object/ch05/악어만다라4.webp");	
+			"/resources/object/ch05/악어만다라4.webp");	
 			}
 			}
 }
