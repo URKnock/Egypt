@@ -7,10 +7,11 @@
 
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch11.css'/>"/>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 <script src="<c:url value='/resources/js/ch11.js'/>"></script>
 <script src="<c:url value='/resources/js/sound_bgmonly.js'/>"></script>
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
+
 </head>
 <body onload="init(); interaction();">
 	<div id="background">
@@ -60,7 +61,7 @@
 			</c:if>
 		</div>
 		<div id="blur"></div>
-		<audio id="bgm" preload="auto" src="/resources/bgm/ch11/11_bgm.mp3" loop="true" autobuffer></audio>
+		<audio id="bgm" preload="auto" src="/resources/bgm/11_landofdestruction.mp3" loop="true" autobuffer></audio>
 	<input name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>
