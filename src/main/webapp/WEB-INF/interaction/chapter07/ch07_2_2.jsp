@@ -48,10 +48,7 @@
 		var body = document.querySelector('body');
 		body.onload = function() { 
 			init();
-			var next = document.querySelector('#nextButton');
-			next.style.position = "absolute";
-			next.style.top = "48%";
-			next.style.left = "770px";
+			setNextButton(44, 640);
 		}
 	</script>
 </c:if>
