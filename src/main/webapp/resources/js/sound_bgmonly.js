@@ -1,5 +1,6 @@
-function setSound() {	
-	var song = document.getElementsByTagName('audio')[0];
+function setSound(i) {	
+	var song = document.getElementsByTagName('audio')[i];
+	var voice = document.getElementsByTagName('audio')[1];
 	var played = false;
 	var tillPlayed = getCookie('timePlayed');
 	function update()
