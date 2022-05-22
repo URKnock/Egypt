@@ -1,7 +1,13 @@
 function init() {
+	setSound();
 	scene = $("input[name='scene']").val();
 	
 	if(scene == 1) {
+		$("#voice").trigger("play");
+		setTimeout(function () {
+		  $("#effect1").trigger("play");
+		}, 3000);
+		
 		$("#content").hide().fadeIn(2000);
 		$("#user").animate({right: "54%"}, 2100).animate({right: "34%", bottom: "36%"}, 700).animate({right: "11%", bottom: "34.4%"}, 600).animate({rotate: '10deg'}, 500).animate({rotate: '0deg'}, 500);
 		$("#boat").delay(3300).animate({rotate: '10deg'}, 600).animate({rotate: '0deg'}, 500);
@@ -11,6 +17,7 @@ function init() {
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
 	else if(scene == 2) {
+		$("#voice").trigger("play");
 		$("#user").css("right", "11%").css("bottom", "34.4%");
 		$("#la1").hide();
 		$("#la2").css("opacity", "100%");
@@ -40,9 +47,18 @@ function init() {
 	else if(scene == 3) {
 		setting2();
 		
+		$("#voice").trigger("play");
+		$("#bgm").animate({volume: 0}, 4000);
+		setTimeout(function () {
+			$("#bgm").trigger("pause");
+		}, 4000);
+		setTimeout(function () {
+			$("#bgm1").trigger("play");
+		}, 3000);
+		
 		$("form").delay(2000).fadeOut(1000);
 		
-		$("#rock").animate({left: '0%'}, 4000).animate({left: '-148%'}, 95000);
+		$("#rock").animate({left: '0%'}, 7000).animate({left: '-148%'}, 95000);
 
 		$("#user").delay(3000).animate({right: "65%"}, 1000); 
 		$("#la2").delay(3000).animate({right: "74%"}, 1000);
@@ -67,24 +83,55 @@ function init() {
         $("#wrapper").click(function (e) {
 			if ($("input[name=flag]").val() == 'true') {
 				var spear_target = $('#spearTarget').offset().top;
-				
+				$("#effect5").trigger("play");
 				$("#spear").css({top: spear_target});
 				$("#spear").clearQueue().stop().animate({opacity: "100%"}, 500).animate({opacity: "0%"}, 1000);
 				
 				if (count == 0 && spear_target > $("#target1").offset().top - 30 && spear_target < $("#target1").offset().top + 30) {
-					$("#snake1").css("opacity", "0");
-					$("#snake3").delay(100).animate({opacity: "100%"});
-					$("#target1").css("opacity", "0");
-					$("#target2").delay(100).fadeIn();
+					//1
+					$("#snake1").fadeOut();
+					$("#target1").fadeOut();
+					$("#back").fadeOut();
+					
+					$("#blood1").css({top: spear_target});
+					$("#blood1").fadeIn();
+					$("#blood1").delay(300).fadeOut();
+					
+					//2
+					setTimeout(function () {
+						$("#effect2").trigger("play");
+					}, 100);
+					$("#snakeAttack").delay(100).animate({opacity: "100%"});
+					$("#boatShake").delay(450).fadeIn();
+					$("#userArm3").delay(450).animate({opacity: "0%"});
+					$("#la2").delay(450).animate({opacity: "0%"});
+					$("#boat").delay(450).animate({opacity: "0%"});
+					
+					//3
+					$("#snakeAttack").delay(600).animate({opacity: "0%"});
+					$("#boatShake").delay(550).fadeOut();
+					$("#userArm3").delay(750).animate({opacity: "100%"});
+					$("#la2").delay(750).animate({opacity: "100%"});
+					$("#boat").delay(750).animate({opacity: "100%"});
+					$("#back").delay(750).fadeIn();
+					$("#snake3").delay(1200).animate({opacity: "100%"});
+					$("#target2").delay(1200).fadeIn();
 					count = 1;
 				}
 				else if(count == 1 && spear_target > $("#target2").offset().top - 50 && spear_target < $("#target2").offset().top + 50) {
+					$("#blood2").css({top: spear_target});
+					$("#blood2").fadeIn();
+					$("#blood2").delay(300).fadeOut();
 					
 					count = 2;
 				}
 			}
 			/* 창 던지기가 끝나면 */
 			if (count == 2) {
+				setTimeout(function () {
+					$("#effect3").trigger("play");
+				}, 100);
+				
 				$('#spearTarget').css("display", "none");
 				$("#snake3").css("opacity", "0");
 				$("#userArm3").css("opacity", "0");
@@ -101,14 +148,20 @@ function init() {
 				$("#la2").delay(3500).animate({right: "49%"}, 2000);
 				$("#boat").delay(3500).animate({right: "30.4%"}, 2000);
 				
-				$("form").delay(3500).fadeIn(1000);
-				$("#con").text('훌륭하다. 아펩을 무찔렀구나.');
 				count = 0;
 				setTimeout("$('form').submit()", 11500);
 			}
         })
 	}
 	else if(scene == 4) {
+		$("#bgm").animate({volume: 0}, 4000);
+		setTimeout(function () {
+			$("#bgm").trigger("pause");
+		}, 4000);
+		setTimeout(function () {
+			$("#bgm1").trigger("play");
+		}, 3000);
+		$("#voice").trigger("play");
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 		setting2();
 		
@@ -119,6 +172,9 @@ function init() {
 		$("#water2").fadeOut(2000);
 	}
 	else if(scene == 5) {
+		$("#voice").trigger("play");
+		$("#effect3").trigger("pause");
+		$("#effect4").trigger("play");
 		setting();
 		
 		$(".background2").hide();
@@ -147,6 +203,7 @@ function init() {
 		});
 	}
 	else if(scene == 6) {
+		$("#voice").trigger("play");
 		setting();
 		
 		$(".background2").hide();

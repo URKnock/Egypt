@@ -1,1 +1,1 @@
-<% response.sendRedirect(request.getContextPath() + "/intro");%>
+<% response.sendRedirect(request.getContextPath() + "/chapter08");%>
