@@ -1,10 +1,12 @@
 var count = 0;
 
 function interaction() {
+	setSound();
 	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
 	
-	if(scene == 5) { /*이런 말하기도 무섭게*/
+	if(scene == 5) { 
+		//first.play();
 		$("form").hide().delay(2200).fadeIn(1000);
 		
 		$("form").hide().fadeIn(1800).fadeOut(2000);
@@ -18,7 +20,7 @@ function interaction() {
 		$(".saja").delay(3000).animate({opacity: "0%"});
 			setTimeout(function() {
 			$(".saja").attr("src", 
-			"/D/resources/character/ch05/하얀사자.png");
+			"/resources/character/ch05/하얀사자.png");
 		}, 3100);
 		$(".guide").delay(4000).animate({opacity: "100%"}, 500).delay(2000).animate({opacity: "0%"}, 500);
 		
@@ -26,50 +28,50 @@ function interaction() {
 		 setTimeout(function() {
 			console.log("셋탐 호출");
 			$(".crocsi4").attr("src", 
-			"/D/resources/object/ch05/악어_시작오.webp");
+			"/resources/object/ch05/악어_시작오.webp");
 		}, 6900); 
 		
 		setTimeout(function() {
 			console.log("셋탐 호출2");
 			$(".crocsi4").attr("src", 
-			"/D/resources/object/ch05/악어_진행오.webp");
+			"/resources/object/ch05/악어_진행오.webp");
 		}, 8400); 
 		
 		setTimeout(function() {
 			$(".crocsi3").attr("src", 
-			"/D/resources/object/ch05/악어_시작왼.webp");		
+			"/resources/object/ch05/악어_시작왼.webp");		
 		}, 6400);
 		
 		setTimeout(function() {
 			$(".crocsi3").attr("src", 
-			"/D/resources/object/ch05/악어_진행왼.webp");		
+			"/resources/object/ch05/악어_진행왼.webp");		
 		}, 7900);
 
 		setTimeout(function() {
 			$(".crocsi2").attr("src", 
-			"/D/resources/object/ch05/악어_시작오.webp");					
+			"/resources/object/ch05/악어_시작오.webp");					
 		}, 5000); 	
 		
 		setTimeout(function() {
 			$(".crocsi2").attr("src", 
-			"/D/resources/object/ch05/악어_진행오.webp");
+			"/resources/object/ch05/악어_진행오.webp");
 		}, 6500); 		
 			
 		setTimeout(function() {
 			$(".crocsi1").attr("src", 
-			"/D/resources/object/ch05/악어_시작왼.webp");
+			"/resources/object/ch05/악어_시작왼.webp");
 		}, 4900);
 		
  		setTimeout(function() {
 			$(".crocsi1").attr("src", 
-			"/D/resources/object/ch05/악어_진행왼.webp");
+			"/resources/object/ch05/악어_진행왼.webp");
 		}, 6400); 
 		
 		$(".crocsi1").on("load", function() {
 			$(".crocsi1").on("click", function() {
 				$(".crocsi1").off("click");
 				console.log(count); 
-				$(".crocsi1").attr("src", "/D/resources/object/ch05/악어_죽음왼.webp");
+				$(".crocsi1").attr("src", "/resources/object/ch05/악어_죽음왼.webp");
 				isclicked();
 				$(".crocsi1").fadeOut(2000);
 				if(count == 8) {
@@ -82,7 +84,7 @@ function interaction() {
 			$(".crocsi2").on("click", function() {
 				$(".crocsi2").off("click");
 				console.log(count);
-				$(".crocsi2").attr("src", "/D/resources/object/ch05/악어_죽음오.webp");
+				$(".crocsi2").attr("src", "/resources/object/ch05/악어_죽음오.webp");
 				isclicked();
 				$(".crocsi2").fadeOut(2000);
 				if(count == 8) {
@@ -95,7 +97,7 @@ function interaction() {
 			$(".crocsi3").on("click", function() {
 				$(".crocsi3").off("click");
 				console.log(count); 
-				$(".crocsi3").attr("src", "/D/resources/object/ch05/악어_죽음왼.webp");
+				$(".crocsi3").attr("src", "/resources/object/ch05/악어_죽음왼.webp");
 				isclicked();
 				$(".crocsi3").fadeOut(2000);
 				if(count == 8) {
@@ -108,7 +110,7 @@ function interaction() {
 			$(".crocsi4").on("click", function() {
 				$(".crocsi4").off("click");
 				console.log(count);
-				$(".crocsi4").attr("src", "/D/resources/object/ch05/악어_죽음오.webp");
+				$(".crocsi4").attr("src", "/resources/object/ch05/악어_죽음오.webp");
 				isclicked();
 				$(".crocsi4").fadeOut(2000);
 				if(count == 8) {
@@ -120,7 +122,7 @@ function interaction() {
 		/* 악어 추가되면 if count == 4로 바꾸기 
 		$(".crocsi2").on("click", function() { 
 			$(".crocsi2").attr("src", 
-			"/D/resources/object/ch05/악어_죽음오.webp");
+			"/resources/object/ch05/악어_죽음오.webp");
 			isclicked();
 			if(count == 3) {
 				setTimeout("$('form').submit()", 3000);
@@ -128,7 +130,7 @@ function interaction() {
 			 });
 		$(".crocsi3").on("click", function() { 
 			$(".crocsi3").attr("src", 
-			"/D/resources/object/ch05/악어_죽음오.webp");
+			"/resources/object/ch05/악어_죽음오.webp");
 			isclicked();
 			if(count == 3) {
 				setTimeout("$('form').submit()", 3000);
@@ -136,7 +138,7 @@ function interaction() {
 			 });
 		$(".crocsi4").on("click", function() { 
 			$(".crocsi4").attr("src", 
-			"/D/resources/object/ch05/악어_죽음오.webp");
+			"/resources/object/ch05/악어_죽음오.webp");
 			//$(".crocsi4").fadeOut(1500);
 			isclicked();
 			if(count == 3) {

@@ -14,7 +14,11 @@ body {
     -o-background-size: cover;
     background-size: cover;  
 }
-
+@keyframes rotate_image{ 
+	100% { 
+	transform: rotate(360deg);
+		 } 
+	 }
 
 
 .mainC {
@@ -35,9 +39,18 @@ body {
 	transform: translate(70%,-50%);
 }
 
+.mandara1 {
+	z-index: 98;
+	opacity:1;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+
+}
+
 
 .spear {
-	z-index:3;
+	z-index:5;
 	opacity: 0;
 	position: absolute;
 	width: 50px;

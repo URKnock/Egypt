@@ -54,6 +54,15 @@ $(document).ready(function() {
 		setTimeout(function() { $('#' + chapName).removeClass("island-shake"); }, 500);
 	});
 
+	$("#menu img:nth-child(2)").on("click", function() {
+		alert("현재 홈 화면에 있습니다.");
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
 });
 
 function init() { //화면 초기화
@@ -63,6 +72,12 @@ function init() { //화면 초기화
 	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
+
+	setSetting();
+	setHelp();
+	
+	$("#setting").hide();
+	$("#help").hide();
 
 	var bg1 = $("#background > img:nth-child(1)"); //섬 5번
 	bg1.width(bg1.prop("naturalWidth") * w);

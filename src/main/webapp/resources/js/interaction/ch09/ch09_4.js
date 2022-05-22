@@ -29,24 +29,24 @@ function init() {
 }
 			
 	$("#c3").click(function() {
-		var audio = new Audio('/D/resources/bgm/ch09/splash.mp3');
+		var audio = new Audio('/resources/bgm/ch09/splash.mp3');
 		//audio.play();
 				setTimeout(function() {
 					audio.play();
 				}, 940);
 		$("#c1").attr("src", 
-			"/D/resources/character/ch09/천국 사자 박수.webp");
+			"/resources/character/ch09/천국 사자 박수.webp");
 		$("#c3").attr("src", 
-			"/D/resources/character/ch09/2층 왜가리2.webp");
+			"/resources/character/ch09/2층 왜가리2.webp");
 		setTimeout(function() {
 					object("#c3", 37);
 				}, 3800);
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 
 		$("#c1").attr("src", 
-			"/D/resources/character/ch09/천국 사자 기본.webp");
+			"/resources/character/ch09/천국 사자 기본.webp");
 		$("#c3").attr("src", 
-			"/D/resources/character/ch09/2층 왜가리1.webp");
+			"/resources/character/ch09/2층 왜가리1.webp");
 		 }	
  		});					
 

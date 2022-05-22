@@ -4,7 +4,49 @@ body {
   	overflow-y: hidden;
   	overflow-x: hidden; 
 }
-
+@keyframes rotate_image{ 
+	100% { 
+	transform: rotate(360deg);
+		 } 
+	 }
+@keyframes rotate_image2{ 
+	100% { 
+	transform: rotate(360deg);
+		 } 
+	 }
+.m1 {
+	z-index: 1;
+	position: absolute;
+  	top: 3%; right: 24.2%;
+ 	animation: rotate_image 6s ease;
+	
+	opacity:1;
+} 
+.m2 {
+	position: absolute;
+	top: 3%; right: 24.2%;
+}
+.mandara1 {
+	z-index: 1;
+	opacity:1;
+	width: 100px;
+	position: absolute;
+ 	top: 42.7%;
+	right: 46.2%;
+    animation:rotate_image 6s ease ;
+    
+	
+}
+.mandara2 {
+	z-index: 1;
+	opacity:1;
+	width:500px;
+	position: absolute;
+ 	top: 24.5%; right: 36%;
+	animation:rotate_image2 6s ease; transform-origin: 50% 50%;
+     transform-origin: 50% 50%;
+	
+}
 #background {
 	width:100%;
 	height:100%;
@@ -52,7 +94,7 @@ body {
 .bug1 {
 	z-index:3;
 	opacity:1;
-	width:600px;
+	width:550px;
 	transform: scaleY(-1); 
 	position: absolute; 
 	left: 30;
@@ -61,7 +103,7 @@ body {
 .bug2 {
 	z-index:3;
 	opacity:1;
-	width:600px;
+	width:550px;
     position: absolute;
     transform: scaleY(-1); 
  	top: 50%; 	
@@ -71,7 +113,7 @@ body {
 .bug3 {
 	z-index:3;
 	opacity:1;
-	width:600px;
+	width:550px;
     position: absolute;
     bottom: 60;
     left: 30;	
@@ -79,7 +121,7 @@ body {
 .bug4 {
 	z-index:3;
 	opacity:1;
-	width:600px;
+	width:550px;
     position: absolute;
 	bottom: 60;
     right: 30;

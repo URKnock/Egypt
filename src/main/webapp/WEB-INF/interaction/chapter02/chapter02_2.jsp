@@ -30,7 +30,9 @@
 		<img id="banner" src="<c:url value='/resources/object/ch02/0_6.png'/>"/>
 	</div>
 	<audio id="bgm" preload="auto" src="/resources/bgm/ch02/2_home.mp3" loop="true" autobuffer></audio>
-	
+	<audio id="voice" src=""></audio>
+	<audio id="effect" src=""></audio>
+
 	<div id="menu">
 		<div>
 			<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
@@ -40,7 +42,9 @@
 		</div>
 	</div>
 	
+	<jsp:include page="../help.jsp"/>
 	<jsp:include page="../setting.jsp"/>
+	
 	<c:choose>
 		<c:when test="${chapter eq '1'}">
 			<script>
