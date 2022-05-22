@@ -28,10 +28,7 @@
 				});
 				var body = document.querySelector('body');
 				body.onload = function() {
-					var next = document.querySelector('#nextButton');
-					next.style.position = "absolute";
-					next.style.top = "48%";
-					next.style.left = "655px";
+					setNextButton(44, 565);
 					
 					bgm.src = "resources/bgm/8_falseconfession.mp3";
 					init();
@@ -50,10 +47,7 @@
 				var body = document.querySelector('body');
 				body.onload = function() {
 					init();
-					var next = document.querySelector('#nextButton');
-					next.style.position = "absolute";
-					next.style.top = "48%";
-					next.style.left = "980px";
+					setNextButton(44, 880);
 					bgm.src = "resources/bgm/8_falseconfession.mp3";
 					init();
 				}
@@ -89,10 +83,7 @@
 					bgm.src = "resources/bgm/8_falseconfession.mp3";
 					init();
 					
-					var next = document.querySelector('#nextButton');
-					next.style.position = "absolute";
-					next.style.top = "48%";
-					next.style.left = "980px";
+					setNextButton(44, 880);
 				}
 			</script>
 		</c:when>

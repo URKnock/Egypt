@@ -32,10 +32,7 @@
 	<script> 
 		var body = document.querySelector('body');
 		body.onload = function() { init();
-			var next = document.querySelector('#nextButton');
-			next.style.position = "absolute";
-			next.style.top = "48%";
-			next.style.left = "735px";
+			setNextButton(44, 606);
 		} 
 	</script>
 </c:if>
@@ -43,10 +40,7 @@
 	<script> 
 		var body = document.querySelector('body');
 		body.onload = function() { init();
-			var next = document.querySelector('#nextButton');
-			next.style.position = "absolute";
-			next.style.top = "48%";
-			next.style.left = "857px";
+			setNextButton(44, 710);
 		} 
 	</script>
 </c:if>
