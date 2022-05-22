@@ -22,6 +22,7 @@
 			<img class="god" src="<c:url value='/resources/webp/ch07/42_1_talk.webp'/>">
 			<script defer>
 				var god = document.querySelector('.god');
+				var bgm = document.querySelector('#bgm');
 				$("#voice").bind("ended", function() {
 					god.src =  "resources/webp/ch07/42_1.webp";
 				});
@@ -31,6 +32,8 @@
 					next.style.position = "absolute";
 					next.style.top = "48%";
 					next.style.left = "655px";
+					
+					bgm.src = "resources/bgm/8_falseconfession.mp3";
 					init();
 				}
 			</script>
@@ -39,6 +42,8 @@
 			<img class="god" src="<c:url value='/resources/webp/ch07/42_10_talk.webp'/>">
 			<script defer>
 				var god = document.querySelector('.god');
+				var bgm = document.querySelector('#bgm');
+				
 				$("#voice").bind("ended", function() {
 					god.src =  "resources/webp/ch07/42_10.webp";
 				});
@@ -49,6 +54,7 @@
 					next.style.position = "absolute";
 					next.style.top = "48%";
 					next.style.left = "980px";
+					bgm.src = "resources/bgm/8_falseconfession.mp3";
 					init();
 				}
 			</script>
@@ -76,9 +82,11 @@
 		<c:when test="${result eq 'chapter08'}">
 			<script defer>
 				var body = document.querySelector('body');
+				var bgm = document.querySelector('#bgm');
 				body.onload = function() {
 					$("input[name=scene]").val("6");
 					$("input[name=index]").val("0");
+					bgm.src = "resources/bgm/8_falseconfession.mp3";
 					init();
 					
 					var next = document.querySelector('#nextButton');
