@@ -39,10 +39,7 @@
 				var body = document.querySelector('body');
 				body.onload = function() {
 					init();
-					var next = document.querySelector('#nextButton');
-					next.style.position = "absolute";
-					next.style.top = "59%";
-					next.style.left = "1335px";
+					setNextButton(76, 1205);
 				}
 			</script>
 		</c:if>
@@ -60,10 +57,7 @@
 				var body = document.querySelector('body');
 				body.onload = function() { 
 					init();
-					var next = document.querySelector('#nextButton');
-					next.style.position = "absolute";
-					next.style.top = "48%";
-					next.style.left = "620px";
+					setNextButton(44, 490);
 				}
 				</script>
 			</c:when>
@@ -80,11 +74,7 @@
 						location.href = 'chapter10';
 					});
 					setSomething();
-					var next = document.querySelector('#nextButton');
-					next.style.display = "block";
-					next.style.position = "absolute";
-					next.style.top = "48%";
-					next.style.left = "620px";
+					setNextButton(44, 490);
 				}
 				</script>
 			</c:otherwise>
