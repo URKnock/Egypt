@@ -1,7 +1,15 @@
 function init() {
+	setSound();
 	
 	scene = $("input[name='scene']").val();
-	if(scene == 1) {
+	index = $("input[name='index']").val();
+	flag = $("input[name='flag']").val();
+	
+	if(scene == 1) {	
+		setTimeout(function () {
+		  $("#voice").trigger("play");
+		}, 9000);
+		
 		$("form").hide().delay(8000).fadeIn(1000);
 		
 		$("#boat").css("right", "100%" );
@@ -17,7 +25,11 @@ function init() {
 		
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
-	else if(scene == 2) {
+	else if(scene == 2) {	
+		setTimeout(function () {
+		  $("#voice").trigger("play");
+		}, 9000);
+		
 		$("#boat").css("right", "35%" );
 		$("#boat").animate({left: "100%"}, 4000);
 		
