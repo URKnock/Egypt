@@ -54,13 +54,13 @@
 }
 #interact .bg .bgobj:nth-of-type(5) {
 	height: 37.40%;
-	bottom: 28%;
+	bottom: 27.5%;
 	left: 30vh;
 }
 #interact .bg .bgobj:nth-of-type(6) {
-	height: 06.85%;
-	bottom: 35.5%;
-	left: 73vh;
+	height: 09.72%;
+	bottom: 34.5%;
+	left: 71.7vh;
 	z-index: 4;
 }
 
