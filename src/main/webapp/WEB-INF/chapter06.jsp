@@ -4,15 +4,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>사자의 서</title>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue2.css'/>"/> 
 	<link href="<c:url value='/resources/css/ch06.css'/>" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 	<script src="<c:url value='/resources/js/ch06.js'/>"></script>
+	<script src="<c:url value='/resources/js/sound.js'/>"></script>
 	<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 	
-	<script> $(function(){ init(); }); </script>
 </head>
-<body>
+<body onload="init();">
+	<audio id="bgm" preload="auto" src='<c:url value="/resources/bgm/6_7_courtroom.mp3"/>' loop="true" autobuffer></audio>
+	<audio id="effect" preload="auto" src='<c:url value="/resources/bgm/ch06/water_wave.mp3"/>' loop="true" autobuffer></audio>
+	<audio id="voice" preload="auto" src='<c:url value="/resources/bgm/ch06/6_${scene}_${index}_${flag}.mp3"/>'></audio>
+	
 	<div id="wrapper">
 		<img class="background" src="<c:url value='/resources/background/ch06/6_0_2.png'/>">
 		<img class="background" src="<c:url value='/resources/background/ch06/6_0_8.png'/>">
@@ -36,12 +40,13 @@
 	
 	<div id="view">	
 		<div id="menu">
-			<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-			<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-			<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-			<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+			<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+			<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+			<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+			<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 		</div>
-	
+		<jsp:include page="interaction/help.jsp"/>
+		<jsp:include page="interaction/setting.jsp"/>
 		<form method="post" action="<c:url value='/chapter06'/>">
 			<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 			<div id="dialogue">
@@ -69,8 +74,6 @@
 					</div>
 				</c:if>
 			</div>
-			<audio id="bgm" preload="auto" src="/resources/bgm/ch06/bgm.mp3" loop="true" autobuffer></audio>
-			<audio id="voice" preload="auto" src="/resources/bgm/ch06/6_${scene}_${index}_${flag}.wav"></audio>
 			<input name="scene" type="hidden" value="${scene}"/>
 			<input name="index" type="hidden" value="${index}"/>
 			<input name="flag" 	type="hidden" value="${flag}"/>

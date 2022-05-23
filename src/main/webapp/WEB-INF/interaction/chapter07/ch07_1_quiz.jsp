@@ -30,9 +30,12 @@
 	var body = document.querySelector('body');
 	var god = document.querySelector('.god');
 	var video = document.querySelector('#interact video');
+	var bgm = document.querySelector('#bgm');
 	body.onload = function() { 
 		video.style.height = "62.5vh";
-		console.log("부정고백 time~"); setSomething();
+		console.log("부정고백 time~"); 
+		bgm.src = "resources/bgm/8_falseconfession.mp3";
+		setSomething();
 		$("#voice").bind("ended", function() {
 			god.src =  "resources/webp/ch07/42_${questN}.webp";
 		});
