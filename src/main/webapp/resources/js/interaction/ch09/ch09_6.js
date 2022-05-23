@@ -72,7 +72,7 @@ function init() {
 
 
 	$("#boat_1").click(function() {
-		 object("#boat_1", 41);
+		 object("#boat_1", 39);
 		count++;
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 

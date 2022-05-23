@@ -14,7 +14,7 @@ function interaction() {
 		$("#keepers").click(function() {
 			$("#keepers").removeClass("select");
 			$("#keepers").removeClass("pikachu");
-			object("#keepers", 20);
+			object("#keepers", 19);
 			document.querySelector('.close').onclick = function() { 
 				hide_info();
 				setTimeout("$('form').submit()", 1000);

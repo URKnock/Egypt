@@ -16,7 +16,7 @@ function init() {
 		$("#keepers").attr("src", 
 		"/resources/character/ch09/1층 관문신2.webp");
 		setTimeout(function() {
-					object("#c3", 33);
+					object("#c3", 32);
 				}, 3300);
 		document.querySelector('.close').onclick 
 		= function() { hide_info();

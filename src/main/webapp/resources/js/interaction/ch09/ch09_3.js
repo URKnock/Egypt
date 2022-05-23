@@ -35,7 +35,7 @@ function init() {
 		$("#c4").attr("src", 
 			"/resources/character/ch09/2층 카무트2.webp");
 		setTimeout(function() {
-					object("#c4", 35);
+					object("#c4", 34);
 					//object("#c2", 34);
 				}, 3800);	
 		document.querySelector('.close').onclick 
@@ -60,7 +60,7 @@ function init() {
 		$("#cow2").attr("src", 
 		"/resources/character/ch09/2층 소2.webp");
 		setTimeout(function() {
-					object("#c3", 36);
+					object("#c3", 35);
 				}, 2000);
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 

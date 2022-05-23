@@ -109,16 +109,15 @@ img {
 	z-index: 4;
 	width: 500px;
 	left: 2%;
-	top: 12%; 
+	top: 16%; 
 }
-#user2 {
+
+#gogo {
 	opacity:0;
+	z-index: 0;
+	top: -9%;
+	left: 35%;
 	position: absolute;
-	z-index: 4;
-	width: 10vw;
-	height: 38vh;
-	left: 6%;
-	top: 21%; 
 }
 
 #earth {
@@ -129,12 +128,11 @@ img {
 	top: 19.7%; 
 }
 #la {
-	z-index: 6;
-	height: 500px;
-	transform: scaleX(-1); 
+	z-index: 4;
+	width: 550px;
 	position: absolute;
-	right: -20%;
-	top: 19%;
+	right: -150%;
+	top: 12%;
 }
 #boat {
 	z-index: 5;

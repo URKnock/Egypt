@@ -2,15 +2,25 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="<c:url value='/resources/css/interaction/ch05/DuatGameStart.css'/>" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
+<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/ch05/DuatGameStart.js'/>"></script>
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <div id="background">
 </div>
 <body onload="init(); interaction();">
+<div id="menu">
+		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>	
+</div>
 <div id="characters">
 	<div id="character">
-		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b.png'/>">
-		<img class=	"saja" src="<c:url value='/resources/character/ch05/5_2.png'/>">
+<%-- 		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b.png'/>">
+		<img class=	"saja" src="<c:url value='/resources/character/ch05/5_2.png'/>"> --%>
+	<img class="boatmove" src="<c:url value='/resources/character/ch05/3601080(32).webp'/>">	
+	<img class="boatmove2" src="<c:url value='/resources/background/ch05/im.png'/>">
 	</div>
 </div>
 <div id="crocs">

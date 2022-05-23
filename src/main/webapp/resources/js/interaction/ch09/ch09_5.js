@@ -38,7 +38,7 @@ function init() {
 		"/resources/character/ch09/2층 소2.webp");	
 			
 		setTimeout(function() {
-					object("#c22", 39);
+					object("#c22", 38);
 					//object("#c2", 34);
 				}, 2700);	
 		document.querySelector('.close').onclick 
