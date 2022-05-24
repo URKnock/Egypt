@@ -67,13 +67,13 @@ $(document).ready(function() {
 
 function init() { //화면 초기화
 	scene = $("input[name='scene']").val();
-	setSound();
 
 	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
 
 	setSetting();
+	setSound(0);
 	setHelp();
 	
 	$("#setting").hide();
@@ -149,26 +149,6 @@ function init() { //화면 초기화
 	banner.height(banner.prop("naturalHeight") * w);
 	banner.css("left", 50 * w);
 	banner.css("bottom", $("#menu").css("bottom"));
-}
-
-function object(select, index, arrIndex) { //정보창을 보여주고 셀렉트 클래스를 제거한다.
-	show_info(index);
-	if (arguments.length == 3) {
-		o_select = select;
-		o_index = arrIndex;
-		if (clicked.indexOf(arrIndex) != -1) {
-			clicked.splice(clicked.indexOf(arrIndex), 1);
-			$(select).removeClass("select");
-		}
-	} else {
-		o_select = "0";
-		$(select).removeClass("select");
-	}
-}
-
-function objectSubmit(select) {
-	$(select).removeClass("select"); //노란색 shadow 제거(select class 제거)
-	$("form").submit(); //폼을 통해 지금까지의 경과 전송
 }
 
 function center(element) { //중앙으로 정렬
