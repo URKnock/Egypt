@@ -29,11 +29,13 @@
 		<img id="pillar" src="<c:url value='/resources/background/ch06/6_0_6.png'/>">
 		<img id="ground" src="<c:url value='/resources/background/ch06/6_0_7.png'/>">
 		
-		<img id="anubis" src="<c:url value='/resources/character/ch06/anubis2.gif'/>">
-		<img id="anubis2" src="<c:url value='/resources/character/ch06/anubis3.gif'/>">
+		<img id="anubis" src="<c:url value='/resources/character/ch06/anubis2.webp'/>">
+		<img id="anubis2" src="<c:url value='/resources/character/ch06/anubis3.webp'/>">
+		<img id="anubis3" src="<c:url value='/resources/character/ch06/아누비스 걷기(48).webp'/>">
 		<img id="la" src="<c:url value='/resources/character/ch06/9_3.png'/>">
 		<img id="user" src="<c:url value='/resources/character/ch06/6_1.png'/>">
 		<img id="user2" src="<c:url value='/resources/character/ch06/6_1.png'/>">
+		<img id="user3" src="<c:url value='/resources/character/ch06/6_1.webp'/>">
 		
 		<img id="boat" src="<c:url value='/resources/object/ch06/boat.png'/>">
 	</div>
