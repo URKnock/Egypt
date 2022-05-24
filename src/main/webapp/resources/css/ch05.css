@@ -129,10 +129,10 @@ img {
 }
 #la {
 	z-index: 4;
-	width: 550px;
+	
 	position: absolute;
 	right: -150%;
-	top: 12%;
+	top: 3.4%;
 }
 #boat {
 	z-index: 5;

@@ -36,7 +36,7 @@
 	<img id="saja" src="<c:url value='/resources/character/ch05/두리번사자(112).webp'/>">
 	</div>
 	<div id="LawBoat">
-	<img id="la" src="<c:url value='/resources/character/ch05/숨셔라(33).webp'/>">
+	<img id="la" src="<c:url value='/resources/character/ch05/도입숨셔라(33).webp'/>">
 	<img id="boat" src="<c:url value='/resources/object/ch05/배.png'/>">
 	<img id="gogo" src="<c:url value='/resources/character/ch05/두아트_출발(182).webp'/>">
 	</div>

@@ -78,8 +78,9 @@ function interaction() {
 		
 	////////////////////////////////////
 		
-	$(".ant1").on("load", function() {
+	$(".ant1").on("load", function() {		
 			$(".ant1").one("click", function() {
+			count++;	
 			$(".s1").css({'zIndex': 5});
 			$(".s1").attr("src", 
 			"/resources/object/ch05/창날리기_좌하1(23).webp");
@@ -94,7 +95,7 @@ function interaction() {
 			$(".ant1").attr("src", 
 			"/resources/object/ch05/개미_죽음왼.webp").fadeOut(2000);
 			
-			count++;
+			
 			mandara();
 			$(".ant1").fadeOut(2000);
 			if(count == 8) {
@@ -103,8 +104,9 @@ function interaction() {
 			
 			 });
 		});	
-	$(".ant2").on("load", function() {
+	$(".ant2").on("load", function() {	
 			$(".ant2").one("click", function() {
+			count++;	
 			$(".s2").css({'zIndex': 5});
 			$(".s2").attr("src", 
 			"/resources/object/ch05/창날리기_우하2(17).webp");
@@ -120,7 +122,6 @@ function interaction() {
 			$(".ant2").attr("src", 
 			"/resources/object/ch05/개미_죽음왼.webp");
 			mandara();
-			count++;
 			$(".ant2").fadeOut(2000);
 		
 			if(count == 8) {
@@ -131,6 +132,7 @@ function interaction() {
 		});	
 	$(".ant3").on("load", function() {
 			$(".ant3").one("click", function() {
+			count++;
 			$(".s3").css({'zIndex': 5});
 			$(".s3").attr("src", 
 			"/resources/object/ch05/창날리기_우하2(17)2.webp");
@@ -145,7 +147,6 @@ function interaction() {
 			$(".ant3").attr("src", 
 			"/resources/object/ch05/개미_죽음왼.webp");
 			mandara();
-			count++;
 			$(".ant3").fadeOut(2000);
 		
 			if(count == 8) {
@@ -156,7 +157,7 @@ function interaction() {
 		});		
 	$(".ant4").on("load", function() {
 			$(".ant4").one("click", function() {
-			$(".ant4").one("click", function() {
+			count++;	
 			$(".s4").css({'zIndex': 5});
 			$(".s4").attr("src", 
 			"/resources/object/ch05/창날리기_우하1(23).webp");	
@@ -171,14 +172,12 @@ function interaction() {
 			$(".ant4").attr("src", 
 			"/resources/object/ch05/개미_죽음오.webp");
 			mandara();
-			count++;
 			$(".ant4").fadeOut(2000);		
 			if(count == 8) {
 				setTimeout("$('form').submit()", 3600);
 				}
 			
 			 });
-		});	
 		});	
 		function mandara() {
 			if(count == 1) {
