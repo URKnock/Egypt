@@ -5,10 +5,12 @@ var thr = new Audio('resources/bgm/ch05/5_5_3_0.mp3');
 function interaction() { 
 	$("#background").children().hide();
 	scene = $("input[name='scene']").val();
-	
+	$(".saja").css({left:"23%"});
 	//$("#background").children().hide();
 	//$("form").hide();
 	if(scene == 12) {
+		$("#loading").hide();
+		$(".saja").css({left:"23%"});
 		fir.play();
 		$(".m1").fadeOut(3500);
 		$(".m2").fadeOut(3500);
@@ -21,6 +23,7 @@ function interaction() {
 		
 	}
 	if(scene == 13) {
+		$(".saja").css({left:"23%"});
 		sec.play();
 	$(".m1").css({opacity: 0});
 		$(".m2").css({opacity: 0});
@@ -34,6 +37,7 @@ function interaction() {
 		
 	}
 	if(scene == 14) {
+		$(".saja").css({left:"23%"});
 		thr.play();
 		$(".m1").css({opacity: 0});
 		$(".m2").css({opacity: 0});
@@ -50,6 +54,9 @@ function interaction() {
 		$(".mandara2").animate({right: "120%"}, 6000);
 		$(".s1").animate({left: "-120%"}, 6000);*/
 		$(".keepers").animate({left: "90%"}, 6000);
+		
+		$("#dialogue").on("click", function() { $("#loading").fadeIn(2300); });	
+		
 		
 	}
 }

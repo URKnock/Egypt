@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch05.css'/>"/> 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="resources/js/jquery/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/ch05.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
@@ -34,12 +34,11 @@
 	</div>
 	<div id="chs">
 	<img id="saja" src="<c:url value='/resources/character/ch05/두리번사자(112).webp'/>">
-	<img id="user2" src="<c:url value='/resources/character/ch05/5_1.png'/>">
-	<img id="nol" src="<c:url value='/resources/object/ch05/nol.png'/>">
 	</div>
 	<div id="LawBoat">
-	<img id="la" src="<c:url value='/resources/character/ch05/라_발잘림.png'/>">
+	<img id="la" src="<c:url value='/resources/character/ch05/도입숨셔라(33).webp'/>">
 	<img id="boat" src="<c:url value='/resources/object/ch05/배.png'/>">
+	<img id="gogo" src="<c:url value='/resources/character/ch05/두아트_출발(182).webp'/>">
 	</div>
 </div>
 <div id="page">
@@ -83,7 +82,7 @@
 </form>
 <jsp:include page="interaction/info_window.jsp"/>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/water_wave.mp3'/>"></audio>
-<audio id="voice" preload="auto" src="/resources/bgm/ch05/5_${scene}_${index}_${flag}.mp3"></audio>
+<audio id="voice" preload="auto" src="/resources/bgm/ch05/dumm.mp3"></audio>
 <div class="guide" align="center">마우스로 클릭하여 주변을 둘러보세요.</div>
 </body>
 </html>

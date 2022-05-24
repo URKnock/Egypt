@@ -37,6 +37,26 @@ body {
     
 	
 }
+.spearno {
+	z-index: 10;
+	position: absolute;  
+	top: 20%; left: 10%;  
+}
+.spearno2 {
+	z-index: 10;
+	position: absolute;  
+	top: 15%; left: 60%;  
+}
+.spearno3 {
+	z-index: 10;
+	position: absolute;  
+	top: 50%; left: 10%;  
+}
+.spearno4 {
+	z-index: 10;
+	position: absolute;  
+	top: 50%; left: 60%;  
+}
 .mandara2 {
 	z-index: 1;
 	opacity:1;
@@ -59,20 +79,26 @@ body {
 
 
 
-.mainC {
+.boat {
 	opacity:1;
+    position: absolute;    
 	z-index:2;
-    position: absolute;
- 	top: 50%; left: -28%;
+ 	top: 50.5%; left: -25.5%;
  	transform: translate(70%,-50%);
+}
+
+.la {
+	position: absolute;
+	z-index:1;
+	top: 10.6%; left: 41.5%;
+	transform: scaleX(-1);	
 
  	
 }
 .saja {
-	position: absolute;
+position: absolute;
 	z-index:1;
-	top: 50%; left: 30%;
-	transform: translate(70%,-50%);
+	top: 12%; left: 23%;
 }
 
 .guide3 {

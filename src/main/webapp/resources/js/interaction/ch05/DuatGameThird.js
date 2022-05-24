@@ -3,13 +3,15 @@ var effect = new Audio('resources/bgm/ch05/crush.mp3');
 function interaction() { 	
 	$("#background").children().hide();
 	$("form").hide();
-	
+	$(".saja").css({left:"-8%"});
 	//마우스로 클릭하여 안내문
 	$(".guide3").delay(500).animate({opacity: "100%"}, 500)
 	.delay(1200).animate({opacity: "0%"}, 500);
-	$(".saja").css({left:"-8%"});
-			setTimeout(function() {
-		$(".saja").delay(5000).css({left:"-20%"});	
+	$(".saja").css({left:"23%"});
+	//사자대기중	
+		setTimeout(function() {
+		$(".saja").css({top:"2.5%"});	
+		$(".saja").css({left:"16%"});
 		$(".saja").attr("src", 
 		"/resources/character/ch05/창든사자(위)_1처음우.webp");
 		}, 3000); 
@@ -53,6 +55,8 @@ function interaction() {
 				
 	$(".bug1").one("click", function() {
 			effect.play();
+			$(".spearno").attr("src", 
+			"/resources/object/ch05/창날리기_좌상(24).webp");
 			count++;
 			console.log(count);
 			mandara();
@@ -70,6 +74,8 @@ function interaction() {
 	$(".bug2").one("click", function() {
 			effect.play();
 			count++;
+			$(".spearno2").attr("src", 
+			"/resources/object/ch05/창날리기_우상(24).webp");
 			mandara();
 			$(".saja").attr("src", 
 			"/resources/character/ch05/창든사자(위)_3쏴우.webp").stop();	
@@ -86,6 +92,8 @@ function interaction() {
 	$(".bug3").one("click", function() {
 			effect.play();
 			count++;
+			$(".spearno3").attr("src", 
+			"/resources/object/ch05/창날리기_좌하1(23).webp");
 			mandara();
 			$(".saja").attr("src", 
 			"/resources/character/ch05/창든사자(하1)_3쏴.webp").stop();	
@@ -102,6 +110,8 @@ function interaction() {
 	$(".bug4").one("click", function() {
 			effect.play();
 			count++;
+			$(".spearno4").attr("src", 
+			"/resources/object/ch05/창날리기_우하1(23).webp");	
 			mandara();
 			$(".saja").attr("src", 
 			"/resources/character/ch05/창든사자(하1)_3쏴우.webp").stop();					

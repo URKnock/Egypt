@@ -4,7 +4,18 @@ body {
   	overflow-y: hidden;
   	overflow-x: hidden; 
 }
-
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daehan-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 #background {
 	width:100%;
 	height:100%;
@@ -40,13 +51,7 @@ body {
 	opacity:1;
 	
 }
-.mainC {
-	opacity:1;
-    position: absolute;    
-	z-index:2;
- 	top: 50%; left: -28%;
- 	transform: translate(70%,-50%);
-}
+
 
 .spearno {
 	z-index: 10;
@@ -76,21 +81,25 @@ body {
  	transform: translate(50%,-50%);
 	
 }
-.mainC_s {
-	opacity:0;
+
+.boat {
+	opacity:1;
+    position: absolute;    
 	z-index:2;
-    position: absolute;
-    width: 1200px;
-	height: 500px;
- 	top: 50%; left: -28%;
+ 	top: 50.5%; left: -25.5%;
  	transform: translate(70%,-50%);
 }
-
 .saja {
 	position: absolute;
 	z-index:1;
-	top: 50%; left: 30%;
-	transform: translate(70%,-50%);
+	top: 12%; left: 23%;
+	
+}
+.la{
+	position: absolute;
+	z-index:1;
+	top: 10.6%; left: 41.5%;
+	transform: scaleX(-1);	
 }
 .mainC_k {
 	opacity:0;
@@ -169,7 +178,7 @@ body {
     left: 0;	
 }
 .crocsi4 {
-	opacity:1;
+	opacity:3;
 	width: 920px;
     position: absolute;
 	bottom: 0;

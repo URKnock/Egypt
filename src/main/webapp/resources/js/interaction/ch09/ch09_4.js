@@ -39,7 +39,7 @@ function init() {
 		$("#c3").attr("src", 
 			"/resources/character/ch09/2층 왜가리2.webp");
 		setTimeout(function() {
-					object("#c3", 37);
+					object("#c3", 36);
 				}, 3800);
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 
@@ -54,7 +54,7 @@ function init() {
 	
 			
 	$("#c4").click(function() {
-		object("#c4", 38);
+		object("#c4", 37);
 	});
 	
 		

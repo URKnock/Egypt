@@ -7,7 +7,7 @@ function interaction() {
 		.animate({opacity: "0%"}, 3000);*/
 		$("#background").children().hide();
 		$("form").hide();
-		$(".saja").css({left:"30%"});
+		//$(".saja").css({left:"30%"});
 	
 
 	
@@ -19,12 +19,14 @@ function interaction() {
 		
 		//$(".saja").delay(3200).animate({opacity: "0%"});
 			setTimeout(function() {
-			$(".saja").delay(5000).css({left:"-8%"});
+			//$(".saja").delay(5000).css({left:"-8%"});
 			$(".saja").clearQueue().stop();
+
 			$(".saja").attr("src", 
 			"/resources/character/ch05/반짝사자(12).webp");
 		}, 3300);
 			setTimeout(function() {
+
 			$(".saja").attr("src", 
 			"/resources/character/ch05/숨셔창사자(38).webp");
 		}, 3800);
@@ -39,8 +41,9 @@ function interaction() {
 		
 		//사자 대기중으로 바뀜
 		setTimeout(function() {
-		$(".saja").delay(5000).css({left:"-20%"});	
-
+		$(".saja").delay(5000).css({top:"2.5%"});	
+		$(".saja").delay(5000).css({left:"16%"});
+		
 		$(".saja").attr("src", 
 		"/resources/character/ch05/창든사자(위)_1처음우.webp");
 		}, 5000); 
