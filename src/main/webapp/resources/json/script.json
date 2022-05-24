@@ -1024,21 +1024,21 @@
 	"name":"단지 정령", "nickname":"악의 신",
 	"content":"사후세계를 준비하지 않은 자들은 단지 속에서 고통의 시간을 몸소 느껴야한다.",
 	"chapter":12, "scene":0, "flag":0,
-	"image":"UI/Dialogue/Anubis.png",
+	"image":"UI/Dialogue/chaos_river_devil1.png",
 	"choice":"없음"
 },	
 {
 	"name":"아누비스 동상", "nickname":"악의 신",
 	"content":"몸 쉴 곳 조차 준비하지 않았다면 이 곳을 하염없이 떠돌게 될 것이다.",
 	"chapter":12, "scene":0, "flag":0,
-	"image":"UI/Dialogue/Anubis.png",
+	"image":"UI/Dialogue/Anubis_statue.png",
 	"choice":"없음"
 },	
 {
 	"name":"단지 정령", "nickname":"악의 신",
 	"content":"최후의 순간은 결국 내 모습과 같아질지어다.",
 	"chapter":12, "scene":0, "flag":0,
-	"image":"UI/Dialogue/Anubis.png",
+	"image":"UI/Dialogue/chaos_river_devil2.png",
 	"choice":"없음"
 },	
 {
