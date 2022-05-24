@@ -1,9 +1,13 @@
-function init() {
-	setSound();
-	
+function init() {	
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
+	
+	if(scene == 0) {
+		$("#loading").fadeOut(2000);
+	} else {
+		$("#loading").hide();
+	}
 	
 	if(scene == 1) {	
 		setTimeout(function () {
@@ -65,4 +69,23 @@ function init() {
 			$("#user3").animate({left: "100%"}, 4000);
 			});	
 	}
+	
+	setSound();
 }
+
+function home() {
+	location.href = "chapter02";
+}
+/*
+function setting() {
+	$("#setting").css("display", "flex");
+}
+function setSomething() {
+	setSound();
+	setSetting();
+	setHelp();
+	
+	$("#setting").css('display', 'hide');
+	$("#help").hide();
+}
+*/
