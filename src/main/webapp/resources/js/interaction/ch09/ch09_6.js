@@ -8,7 +8,15 @@ function init() {
 	w = $("body").width() / 1920;
 	h = $("body").height() / 1080;
 	x = $("body").width() / 2.0;
-	
+		$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
 	setDialogueSize();
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();

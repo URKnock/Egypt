@@ -29,56 +29,59 @@
 		<img id="pillar" src="<c:url value='/resources/background/ch06/6_0_6.png'/>">
 		<img id="ground" src="<c:url value='/resources/background/ch06/6_0_7.png'/>">
 		
-		<img id="anubis" src="<c:url value='/resources/character/ch06/anubis2.gif'/>">
-		<img id="anubis2" src="<c:url value='/resources/character/ch06/anubis3.gif'/>">
+		<img id="anubis" src="<c:url value='/resources/character/ch06/anubis2.webp'/>">
+		<img id="anubis2" src="<c:url value='/resources/character/ch06/anubis3.webp'/>">
+		<img id="anubis3" src="<c:url value='/resources/character/ch06/아누비스 걷기(48).webp'/>">
 		<img id="la" src="<c:url value='/resources/character/ch06/9_3.png'/>">
 		<img id="user" src="<c:url value='/resources/character/ch06/6_1.png'/>">
 		<img id="user2" src="<c:url value='/resources/character/ch06/6_1.png'/>">
+		<img id="user3" src="<c:url value='/resources/character/ch06/6_1.webp'/>">
 		
 		<img id="boat" src="<c:url value='/resources/object/ch06/boat.png'/>">
 	</div>
 	
 	<div id="view">	
 		<div id="menu">
-			<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-			<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-			<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-			<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+			<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+			<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+			<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+			<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 		</div>
-		<jsp:include page="interaction/help.jsp"/>
-		<jsp:include page="interaction/setting.jsp"/>
-		<form method="post" action="<c:url value='/chapter06'/>">
-			<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
-			<div id="dialogue">
-				<img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
-				<div id="scene">
-					<div id="title">
-						<div>${dialogue.name}</div>
-						<c:if test="${dialogue.nickname ne '없음'}">
-							<div>${dialogue.nickname}</div>
-						</c:if>
-					</div>
-					<div id="content">
-						<p>${dialogue.content}</p>
-						<img />
-					</div>
-				</div>
-				<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
-					<div id="choice">
-						<div>
-							<c:forEach var="c" items="${dialogue.choice}">
-								<button name="choice" type="submit" value="${c.id}">${c.content}</button>
-							</c:forEach>
-						</div>
-						<img src='<c:url value="${dialogue.player}"/>'/>
-					</div>
-				</c:if>
-			</div>
-			<input name="scene" type="hidden" value="${scene}"/>
-			<input name="index" type="hidden" value="${index}"/>
-			<input name="flag" 	type="hidden" value="${flag}"/>
-			<input name="choice" type="hidden" value="${choice}"/>
-		</form>
 	</div>
+	<jsp:include page="interaction/help.jsp"/>
+	<jsp:include page="interaction/setting.jsp"/>
+	<form method="post" action="<c:url value='/chapter06'/>">
+		<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
+		<div id="dialogue">
+			<img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
+			<div id="scene">
+				<div id="title">
+					<div>${dialogue.name}</div>
+					<c:if test="${dialogue.nickname ne '없음'}">
+						<div>${dialogue.nickname}</div>
+					</c:if>
+				</div>
+				<div id="content">
+					<p>${dialogue.content}</p>
+					<img />
+				</div>
+			</div>
+			<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
+				<div id="choice">
+					<div>
+						<c:forEach var="c" items="${dialogue.choice}">
+							<button name="choice" type="submit" value="${c.id}">${c.content}</button>
+						</c:forEach>
+					</div>
+					<img src='<c:url value="${dialogue.player}"/>'/>
+				</div>
+			</c:if>
+		</div>
+		<div id="loading"></div>
+		<input name="scene" type="hidden" value="${scene}"/>
+		<input name="index" type="hidden" value="${index}"/>
+		<input name="flag" 	type="hidden" value="${flag}"/>
+		<input name="choice" type="hidden" value="${choice}"/>
+	</form>
 </body>
 </html>

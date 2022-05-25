@@ -10,6 +10,7 @@
 <script src="<c:url value='/resources/js/interaction/ch09/ch09_6.js'/>"></script> 
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 </head>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <body onload="init(); interaction();">
 <jsp:include page="../info_window.jsp"/>
 <div id="background">

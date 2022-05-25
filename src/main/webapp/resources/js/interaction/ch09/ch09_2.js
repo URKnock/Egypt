@@ -9,7 +9,10 @@ function init() {
 				objectSubmit("#b1");
 			});
 			
-			
+		$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+		
 	/*스르륵*/
 	$("body").css("display", "none");
 	$("body").fadeIn(500);

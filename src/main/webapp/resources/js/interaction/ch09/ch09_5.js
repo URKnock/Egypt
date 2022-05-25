@@ -11,7 +11,15 @@ function init() {
 				objectSubmit("#c2");
 			});
 			
-			
+		$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});		
 	/*스르륵*/
 	$("body").css("display", "none");
 	$("body").fadeIn(500);

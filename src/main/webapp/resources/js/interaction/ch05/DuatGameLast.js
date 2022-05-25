@@ -3,7 +3,9 @@ var snake2 = 0;
 var cnt = 0;
 var effect = new Audio('resources/bgm/ch05/crush.mp3');
 function interaction() {	
-	
+			$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
 	$("#background").children().hide();
 	$("form").hide();
 	$(".saja").css({left:"-8%"});

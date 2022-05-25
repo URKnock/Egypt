@@ -42,7 +42,16 @@ $(document).ready(function() {
 		var sound = new Audio("/resources/bgm/ch02/click.mp3");
 		sound.play();
 		var chapName = $(this).attr("id");
-		var chapNum = Number(chapName[4]) + 2;
+		var chapNum = Number(chapName[4]) + 2; //5챕터(천국)에만 해당
+		if (Number(chapName[4]) == 7) {
+			chapNum = 11;
+		}
+		else if (Number(chapName[4]) == 8) {
+			chapNum = 12;
+		}
+		else if (Number(chapName[4]) == 6) {
+			chapNum = 13;
+		}
 		setTimeout(function() { $(location).attr("href", "/load?chapter=" + chapNum); }, 700);
 	});
 
@@ -67,13 +76,13 @@ $(document).ready(function() {
 
 function init() { //화면 초기화
 	scene = $("input[name='scene']").val();
-	setSound();
 
 	w = $("#background").width() / 1920;
 	h = $("#background").height() / 1080;
 	x = $("#background").width() / 2.0;
 
 	setSetting();
+	setSound(0);
 	setHelp();
 	
 	$("#setting").hide();
@@ -83,7 +92,6 @@ function init() { //화면 초기화
 	bg1.width(bg1.prop("naturalWidth") * w);
 	bg1.height(bg1.prop("naturalHeight") * w);
 	bg1.css("left", x - (bg1.width() / 2.0) - 720 * w);
-	//bg1.css("bottom", $("#background").height() / 2.0 - 75 * w);
 
 	var bg2 = $("#background > img:nth-child(2)"); //섬 2번
 	bg2.width(bg2.prop("naturalWidth") * w);
@@ -94,7 +102,6 @@ function init() { //화면 초기화
 	bg3.width(bg3.prop("naturalWidth") * w);
 	bg3.height(bg3.prop("naturalHeight") * w);
 	bg3.css("left", x - (bg1.width() / 2.0) + 90 * w);
-	//bg3.css("bottom", $("#background").height() / 2.0 + 500 * w);
 
 	var bg4 = $("#background > img:nth-child(4)"); //섬 4번
 	bg4.width(bg4.prop("naturalWidth") * w);
@@ -151,26 +158,6 @@ function init() { //화면 초기화
 	banner.height(banner.prop("naturalHeight") * w);
 	banner.css("left", 50 * w);
 	banner.css("bottom", $("#menu").css("bottom"));
-}
-
-function object(select, index, arrIndex) { //정보창을 보여주고 셀렉트 클래스를 제거한다.
-	show_info(index);
-	if (arguments.length == 3) {
-		o_select = select;
-		o_index = arrIndex;
-		if (clicked.indexOf(arrIndex) != -1) {
-			clicked.splice(clicked.indexOf(arrIndex), 1);
-			$(select).removeClass("select");
-		}
-	} else {
-		o_select = "0";
-		$(select).removeClass("select");
-	}
-}
-
-function objectSubmit(select) {
-	$(select).removeClass("select"); //노란색 shadow 제거(select class 제거)
-	$("form").submit(); //폼을 통해 지금까지의 경과 전송
 }
 
 function center(element) { //중앙으로 정렬

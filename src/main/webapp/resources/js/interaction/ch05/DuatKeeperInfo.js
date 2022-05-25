@@ -1,4 +1,7 @@
 function interaction() {
+			$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
 	$("#background").children().hide();
 	$("form").hide();
 	$(".guide")

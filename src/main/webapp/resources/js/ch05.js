@@ -5,12 +5,35 @@ var w, h, x, y;
 var scene, index, flag;
 var first = new Audio('resources/bgm/ch05/5_2_0_0.mp3');
 var second = new Audio('resources/bgm/ch05/5_2_1_0.mp3');
+function setSomething() {
+	setSound();
+	setSetting();
+	setHelp();
+	
+	$("#setting").css('display', 'hide');
+	$("#help").hide();
+}
+function home() {
+	location.href = "/chapter02";
+}
+
 
 function init() {
+
+/*	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});*/
 	
 	$("#loading").hide() ;
 	setSound(); 
 	setDialogueSize();
+	//setSomething();
 	
 	scene = $("input[name='scene']").val();
 

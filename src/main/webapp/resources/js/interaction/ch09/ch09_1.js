@@ -7,7 +7,9 @@ function init() {
 			$("#c3").on("click", function() {
 				objectSubmit("#c3");
 			});
-			
+		$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});	
 	$("#c3").click(function() {
 		$("#c2").attr("src", 
 		"/resources/character/ch09/1층 공물 노예2.webp");

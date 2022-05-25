@@ -20,6 +20,9 @@ var v22_0_2 = new Audio('resources/bgm/ch05/5_12_3_0.mp3');
 var v22_0_3 = new Audio('resources/bgm/ch05/5_12_4_0.mp3');
 
 function interaction() { 
+			$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();

@@ -21,7 +21,9 @@ function interaction() {
 			$(".saja").attr("src", 
 			"/resources/character/ch05/창든사자(하2)_2대기우.webp");
 		}, 5000); 
-		
+				$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
 		
 		
 	//1개미

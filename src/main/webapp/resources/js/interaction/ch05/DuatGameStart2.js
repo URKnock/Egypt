@@ -1,6 +1,9 @@
 var count = 0;
 
 function interaction() {
+			$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
 	setSound();
 	$("#background").children().hide();
 	scene = $("input[name='scene']").val();

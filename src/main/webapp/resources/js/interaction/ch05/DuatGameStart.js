@@ -1,7 +1,9 @@
 function interaction() {
 	var first = new Audio('resources/bgm/ch05/5_3_1_0.mp3');
 
-	
+			$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
 	setDialogueSize();
 	setSound();
 	

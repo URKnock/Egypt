@@ -2,6 +2,12 @@ function init() {
 	setSound();
 	scene = $("input[name='scene']").val();
 	
+	if(scene == 0) {
+		$("#loading").fadeOut(2000);
+	} else {
+		$("#loading").hide();
+	}
+	
 	if(scene == 1) {
 		$("#voice").trigger("play");
 		setTimeout(function () {
