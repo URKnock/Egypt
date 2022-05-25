@@ -15,6 +15,7 @@ function init() {
 	scene = $("input[name='scene']").val();
 
 	 if(scene == 1) { /* 여기가 어디여.. 씬0 */
+		$("#gogoboat").animate({left: "150%"}, 15000);
 		$("#boat").css({right: "-200%"});
 		$("#la").css({right: "-200%"});
 		$("form").hide().delay(3000).fadeIn(1000); 
@@ -26,6 +27,7 @@ function init() {
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
 	else if(scene == 2) { /* 난태양의신라.  씬1 */
+		$("#gogoboat").css({opacity:0});
 		$("#boat").css({right: "-100%"});
 		$("#la").css({right: "-80%"});
 		$("#saja").attr("src", 
@@ -39,6 +41,9 @@ function init() {
 } 
 	
 	 else if(scene == 3) { /* 두아트 정보창 */
+		$("#order").css("display", "flex");
+		$("#order").text("마우스로 클릭하여 주변을 둘러보세요.");
+		$("#gogoboat").css({opacity:0});
 		$("#saja").attr("src", 
 		"/resources/character/ch05/숨셔사자(65).webp");
 		$(".guide")
@@ -92,12 +97,14 @@ function init() {
 			}*/
 			
 		else if(scene == 4) { //탑승했는가? 출발하겠다
+		$("#gogoboat").css({opacity:0});
 		second.play();
 		$("#gogo").css({opacity: "1"});
 		$("#gogo").css({'zIndex': 5});
 		$("#saja").css({opacity: "0"});
 		$("body").delay(2000).fadeIn(2000);		
-	    $("form").delay(3000).fadeIn(1000).fadeOut(2000); 
+		$("#con").delay(3000).fadeOut(2000);
+	   // $("form").delay(3000).fadeIn(1000).fadeOut(2000); 
 		/*$("#user1").css({top:300, left:900});*/
 		$("#earth").delay(2000).animate({left: "-50%"}, 5000);
 		$("#gogo").animate({left: "37.5%"}, 3500);

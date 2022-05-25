@@ -42,6 +42,7 @@
 	<img class="crocsi3" src="<c:url value='/resources/object/ch05/none.png'/>">
 	<img class="crocsi4" src="<c:url value='/resources/object/ch05/none.png'/>">
 </div>
+<div id="order"></div>
 <script src="<c:url value='/resources/js/sound.js'/>"></script>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/5_duat_set.mp3'/>"></audio>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/duat_wind.mp3'/>"></audio>

@@ -8,8 +8,8 @@ function interaction() {
 	$("form").hide();
 	$(".saja").css({left:"-8%"});
 	//마우스로 클릭하여 안내문
-	$(".guide2").delay(500).animate({opacity: "100%"}, 500)
-	.delay(1200).animate({opacity: "0%"}, 500);
+	$("#order").css("display", "flex");
+	$("#order").text("마우스로 클릭하여 뱀을 처치해주세요.");
 	$(".saja").css({left:"23%"});
 	setTimeout(function() {
 	$(".saja").delay(5000).css({top:"2.5%"});	
@@ -51,7 +51,7 @@ function interaction() {
 			"/resources/object/ch05/창날리기_좌중(23).webp");
 			console.log(snake1);
 			$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(위)_3쏴.webp").stop();
+			"/resources/character/ch05/창든사자(위)_3쏴.webp").clearQueue().stop();
 			//다시 원상태
 			setTimeout(function() {$(".saja").attr("src", 
 			"/resources/character/ch05/창든사자(위)_2대기.webp").clearQueue().stop(); }, 2000);
@@ -77,7 +77,7 @@ function interaction() {
 			"/resources/object/ch05/창날리기_우중(23).webp");			
 			console.log(snake2);
 			$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(위)_3쏴우.webp").stop();
+			"/resources/character/ch05/창든사자(위)_3쏴우.webp").clearQueue().stop();
 			//다시 원상태
 			setTimeout(function() {$(".saja").attr("src", 
 			"/resources/character/ch05/창든사자(위)_2대기우.webp").clearQueue().stop(); }, 2000);

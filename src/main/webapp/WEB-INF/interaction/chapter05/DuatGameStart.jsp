@@ -2,10 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="<c:url value='/resources/css/interaction/ch05/DuatGameStart.css'/>" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
-<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/ch05/DuatGameStart.js'/>"></script>
-<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <div id="background">
 </div>
 <body onload="init(); interaction();">
@@ -17,10 +15,9 @@
 </div>
 <div id="characters">
 	<div id="character">
-<%-- 		<img class="mainC" src="<c:url value='/resources/character/ch05/la_b.png'/>">
-		<img class=	"saja" src="<c:url value='/resources/character/ch05/5_2.png'/>"> --%>
-	<img class="boatmove" src="<c:url value='/resources/character/ch05/3601080(32).webp'/>">	
-	<img class="boatmove2" src="<c:url value='/resources/background/ch05/im.png'/>">
+		<img class="boat" src="<c:url value='/resources/object/ch05/배.png'/>">	
+		<img class=	"saja" src="<c:url value='/resources/character/ch05/숨숴사자_좌(71).webp'/>">
+		<img class=	"la" src="<c:url value='/resources/character/ch05/숨셔라(33).webp'/>">
 	</div>
 </div>
 <div id="crocs">

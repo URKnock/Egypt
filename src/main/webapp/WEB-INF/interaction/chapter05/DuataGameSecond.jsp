@@ -35,7 +35,7 @@
 	<img class="s3" src="<c:url value='/resources/object/ch05/im.png'/>">
 	<img class="s4" src="<c:url value='/resources/object/ch05/im.png'/>">
 </div>
-<div class="guide2" align="center">마우스로 클릭하여 벌레를 처치해주세요.</div>
+<div id="order"></div>
 <script src="<c:url value='/resources/js/sound.js'/>"></script>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/5_duat_set.mp3'/>"></audio>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/duat_wind.mp3'/>"></audio>

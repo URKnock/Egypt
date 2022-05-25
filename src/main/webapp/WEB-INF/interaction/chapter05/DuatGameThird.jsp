@@ -33,7 +33,7 @@
 	<img class="spearno3" src="<c:url value='/resources/background/ch05/창투명배경1.png'/>">
 	<img class="spearno4" src="<c:url value='/resources/background/ch05/창투명배경1.png'/>">
 </div>
-<div class="guide3" align="center">마우스로 클릭하여 풍뎅이를 처치해주세요.</div>
+<div id="order"></div>
 <script src="<c:url value='/resources/js/sound.js'/>"></script>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/5_duat_set.mp3'/>"></audio>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/duat_wind.mp3'/>"></audio>

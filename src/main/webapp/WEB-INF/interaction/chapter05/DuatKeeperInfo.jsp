@@ -21,7 +21,7 @@
 		<img class="mainC_s" src="<c:url value='/resources/character/ch05/관문사자라배(60).webp'/>">		
 	</div>
 </div>
-<div class="guide" align="center">마우스로 클릭하여 주위를 둘러보세요.</div>
+<div id="order"></div>
 <script src="<c:url value='/resources/js/sound.js'/>"></script>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/5_duat_gateway.mp3'/>"></audio>
 <audio id="voice" preload="auto" src="/resources/bgm/ch05/5_${scene}_${index}_${flag}.mp3"></audio>

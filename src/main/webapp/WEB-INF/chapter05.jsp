@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch05.css'/>"/> 
-<script src="resources/js/jquery/jquery-3.6.0.js"></script>
+<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/ch05.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
@@ -39,6 +39,7 @@
 	<img id="la" src="<c:url value='/resources/character/ch05/도입숨셔라(33).webp'/>">
 	<img id="boat" src="<c:url value='/resources/object/ch05/배.png'/>">
 	<img id="gogo" src="<c:url value='/resources/character/ch05/두아트_출발(182).webp'/>">
+	<img id="gogoboat" src="<c:url value='/resources/character/ch05/두아트_배경배(96).webp'/>">
 	</div>
 </div>
 <div id="page">
@@ -58,7 +59,7 @@
          </c:if>
       </div>
       <div id="content">
-         <p>${dialogue.content}</p>
+         <p id='con'>${dialogue.content}</p>
          <img />
       </div>
    </div>
@@ -83,6 +84,6 @@
 <jsp:include page="interaction/info_window.jsp"/>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/water_wave.mp3'/>"></audio>
 <audio id="voice" preload="auto" src="/resources/bgm/ch05/dumm.mp3"></audio>
-<div class="guide" align="center">마우스로 클릭하여 주변을 둘러보세요.</div>
+<div id="order"></div>
 </body>
 </html>

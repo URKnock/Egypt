@@ -5,8 +5,10 @@ function interaction() {
 	$("form").hide();
 	$(".saja").css({left:"-8%"});
 	//마우스로 클릭하여 안내문
-	$(".guide2").delay(500).animate({opacity: "100%"}, 500)
-	.delay(2000).animate({opacity: "0%"}, 500);
+	$("#order").css("display", "flex");
+	$("#order").text("마우스로 클릭하여 벌레를 처치해주세요.");
+	//$(".guide2").delay(500).animate({opacity: "100%"}, 500)
+	//.delay(2000).animate({opacity: "0%"}, 500);
 	$(".saja").css({left:"23%"});
 	//사자 대기중
 		setTimeout(function() {
@@ -83,14 +85,14 @@ function interaction() {
 			count++;	
 			$(".s1").css({'zIndex': 5});
 			$(".s1").attr("src", 
-			"/resources/object/ch05/창날리기_좌하1(23).webp");
+			"/resources/object/ch05/창날리기_좌하1(23).webp").clearQueue().stop();
 			effect.play();
 			console.log(count); 
 			$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(하2)_3쏴.webp").stop();	
+			"/resources/character/ch05/창든사자(하2)_3쏴.webp").clearQueue().stop();
 			//다시 원상태
 			setTimeout(function() {$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(중)_2대기.webp").stop(); }, 2550);
+			"/resources/character/ch05/창든사자(중)_2대기.webp").clearQueue().stop(); }, 2550);
 			$(".ant1").css({left:"3%"});
 			$(".ant1").attr("src", 
 			"/resources/object/ch05/개미_죽음왼.webp").fadeOut(2000);
@@ -109,14 +111,14 @@ function interaction() {
 			count++;	
 			$(".s2").css({'zIndex': 5});
 			$(".s2").attr("src", 
-			"/resources/object/ch05/창날리기_우하2(17).webp");
+			"/resources/object/ch05/창날리기_우하2(17).webp").clearQueue().stop();
 			effect.play();
 			console.log(count); 
 			$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(하2)_3쏴.webp").stop();	
+			"/resources/character/ch05/창든사자(하2)_3쏴.webp").clearQueue().stop();
 			//다시 원상태
 			setTimeout(function() {$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(중)_2대기.webp").stop(); }, 2550);
+			"/resources/character/ch05/창든사자(중)_2대기.webp").clearQueue().stop(); }, 2550);
 			$(".ant2").css({top:"46%"});
 			$(".ant2").css({left:"20%"});
 			$(".ant2").attr("src", 
@@ -135,14 +137,14 @@ function interaction() {
 			count++;
 			$(".s3").css({'zIndex': 5});
 			$(".s3").attr("src", 
-			"/resources/object/ch05/창날리기_우하2(17)2.webp");
+			"/resources/object/ch05/창날리기_우하2(17)2.webp").clearQueue().stop();
 			effect.play();
 			console.log(count); 
 			$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(하2)_3쏴우.webp").stop();	
+			"/resources/character/ch05/창든사자(하2)_3쏴우.webp").clearQueue().stop();
 			//다시 원상태
 			setTimeout(function() {$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(하1)_2대기우.webp").stop(); }, 1700);
+			"/resources/character/ch05/창든사자(하1)_2대기우.webp").clearQueue().stop(); }, 1700);
 			$(".ant3").css({left:"35%"});
 			$(".ant3").attr("src", 
 			"/resources/object/ch05/개미_죽음왼.webp");
@@ -160,14 +162,14 @@ function interaction() {
 			count++;	
 			$(".s4").css({'zIndex': 5});
 			$(".s4").attr("src", 
-			"/resources/object/ch05/창날리기_우하1(23).webp");	
+			"/resources/object/ch05/창날리기_우하1(23).webp").clearQueue().stop();	
 			effect.play();
 			console.log(count); 
 			$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(하1)_3쏴우.webp").stop();	
+			"/resources/character/ch05/창든사자(하1)_3쏴우.webp").clearQueue().stop();	
 			//다시 원상태
 			setTimeout(function() {$(".saja").attr("src", 
-			"/resources/character/ch05/창든사자(위)_2대기우.webp").stop(); }, 2400);			
+			"/resources/character/ch05/창든사자(위)_2대기우.webp").clearQueue().stop(); }, 2400);			
 			$(".ant4").css({left:"46%"});
 			$(".ant4").attr("src", 
 			"/resources/object/ch05/개미_죽음오.webp");
