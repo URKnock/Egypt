@@ -1,20 +1,24 @@
 var w, h, x, y;
 var scene, index, flag;
 
-var Effect;
+var Effect, boilLoop, fireLoop;
 var Effect_status = false;
 
-function effect() {
+function effect(thisEffect) {
 	if (Effect_status) {
-		Effect.pause();
-		Effect.currentTime = 0;
+		thisEffect.pause();
+		thisEffect.currentTime = 0;
 	} else { Effect_status = true; }
-	Effect.play();
+	thisEffect.play();
 }
 
 $(document).ready(function() {
 
 	Effect = document.getElementById("effect");
+	boilLoop = document.getElementById("boilLoop");
+	fireLoop = document.getElementById("fireLoop");
+	
+	effect(boilLoop); effect(fireLoop);
 
 	$(window).resize(function() {
 		location.reload(true);
@@ -36,7 +40,7 @@ $(document).ready(function() {
 
 		$("#ammut").on("click", function() {
 			$("#ammut").attr("src", '/resources/character/ch11/1층_암무트3.webp');
-			setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch10/ammut1.mp3'); effect(); }, 500);
+			setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch10/ammut1.mp3'); effect(Effect); }, 500);
 			setTimeout(function() { $("#ammut").attr("src", '/resources/character/ch11/1층_암무트1.webp'); }, 2000);
 			setTimeout(function() { $("#dialogue_bg").fadeIn(500); $("#dialogue").fadeIn(500); $("#blur").fadeIn(500); sound.currentTime = 0; sound.play(); }, 2500);
 			setTimeout(function() { $("#ammut").attr("src", '/resources/character/ch11/1층_암무트2.webp'); }, 2550);
@@ -76,7 +80,7 @@ function init() { //화면 초기화
 	x = $("#background").width() / 2.0;
 
 	setDialogueSize();
-	setSound(0); //setSound(1); setSound(2);
+	setSound(0);
 	setSomething();
 
 	var bg1 = $("#monkeys"); //원숭이 탕
