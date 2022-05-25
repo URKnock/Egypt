@@ -1,20 +1,23 @@
 var w, h, x, y;
 var scene, index, flag;
 
-var Effect;
+var Effect, waveLoop;
 var Effect_status = false;
 
-function effect() {
+function effect(thisEffect) {
 	if (Effect_status) {
-		Effect.pause();
-		Effect.currentTime = 0;
+		thisEffect.pause();
+		thisEffect.currentTime = 0;
 	} else { Effect_status = true; }
-	Effect.play();
+	thisEffect.play();
 }
 
 $(document).ready(function() {
 
 	Effect = document.getElementById("effect");
+	waveLoop = document.getElementById("waveLoop");
+	
+	effect(waveLoop);
 
 	$(window).resize(function() {
 		location.reload(true);

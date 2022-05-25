@@ -16,6 +16,7 @@
 	<audio id="bgm" preload="auto" src="/resources/bgm/12_riverofchaos.mp3" loop="true" autobuffer></audio>
 	<audio id="voice" src="<c:url value='/resources/bgm/ch12/12_${scene}_${index}_${flag}.mp3'/>"></audio>
 	<audio id="effect" preload="auto" src=""></audio>
+	<audio id="waveLoop" preload="auto" src="/resources/bgm/ch11/wave.mp3" loop="true" autobuffer></audio>
 	<div id="view">
 		<div id="wrap">
 			<div id="background">

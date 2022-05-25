@@ -4,7 +4,7 @@
 <script defer src="<c:url value='../../resources/js/ch11_3.js'/>" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/ch11/ch11_2.css'/>"/>
 
-<audio preload="auto" src="/resources/bgm/ch11/wave.mp3" loop="true" autobuffer></audio>
+<audio id="waveLoop" preload="auto" src="/resources/bgm/ch11/wave.mp3" loop="true" autobuffer></audio>
 
 <div id="interact" onload="init();">
 	<img id="arrow_pre" onClick="location.href='../chapter11part2'" class="pikachu" src="<c:url value='/resources/object/ch11/arrow_pre.png'/>"/>

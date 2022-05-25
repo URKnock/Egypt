@@ -1,20 +1,24 @@
 var w, h, x, y;
 var scene, index, flag;
 
-var Effect;
+var Effect, waveLoop, fireLoop;
 var Effect_status = false;
 
-function effect() {
-   if(Effect_status) {
-      Effect.pause();
-      Effect.currentTime = 0;
-   } else { Effect_status = true; }
-   Effect.play();
+function effect(thisEffect) {
+	if (Effect_status) {
+		thisEffect.pause();
+		thisEffect.currentTime = 0;
+	} else { Effect_status = true; }
+	thisEffect.play();
 }
 
 $(document).ready(function(){
 	
 	Effect = document.getElementById("effect");
+	waveLoop = document.getElementById("waveLoop");
+	fireLoop = document.getElementById("fireLoop");
+	
+	effect(waveLoop); effect(fireLoop);
 	
 	$(window).resize(function() { 
 		location.reload(true);
@@ -37,7 +41,7 @@ $(document).ready(function(){
 		$("#devil").on("click", function() {
 			$("#pot_dead").attr("src", '/resources/object/ch11/2층_항아리사자2.webp');
 			setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/2층_악마3.webp'); }, 2000);
-			setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch11/hit.mp3'); effect(); }, 2400);
+			setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch11/hit.mp3'); effect(Effect); }, 2400);
 			setTimeout(function() { $("#human").attr("src", '/resources/character/ch11/사자_놀람.webp'); }, 2600);
 			setTimeout(function() { $("#devil").attr("src", '/resources/character/ch11/2층_악마1.webp'); }, 3800);
 			setTimeout(function() { $("#pot_dead").attr("src", '/resources/object/ch11/2층_항아리사자1.webp'); }, 4000);
@@ -80,7 +84,7 @@ function init() { //화면 초기화
 	x = $("#background").width() / 2.0;
 	
 	setDialogueSize();
-	setSound(0); //setSound(1); setSound(2);
+	setSound(0);
 	setSomething();
 
 	var bg1 = $("#platform"); //2층 단상

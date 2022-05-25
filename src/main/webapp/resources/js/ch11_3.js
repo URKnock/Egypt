@@ -1,20 +1,23 @@
 var w, h, x, y;
 var scene, index, flag;
 
-var Effect;
+var Effect, waveLoop;
 var Effect_status = false;
 
-function effect() {
-   if(Effect_status) {
-      Effect.pause();
-      Effect.currentTime = 0;
-   } else { Effect_status = true; }
-   Effect.play();
+function effect(thisEffect) {
+	if (Effect_status) {
+		thisEffect.pause();
+		thisEffect.currentTime = 0;
+	} else { Effect_status = true; }
+	thisEffect.play();
 }
 
 $(document).ready(function(){
 	
 	Effect = document.getElementById("effect");
+	waveLoop = document.getElementById("waveLoop");
+	
+	effect(waveLoop);
 	
 	$(window).resize(function() {
 		location.reload(true);
@@ -45,7 +48,7 @@ $(document).ready(function(){
 		$("#devil2").on("click", function() {
 				$("#devil2").attr("src", '/resources/character/ch11/3층_악마3.webp');
 				setTimeout(function() { $("#human").attr("src", '/resources/character/ch11/사자_눈물.webp'); }, 1000);
-				setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch11/splash.mp3'); effect(); }, 1300);
+				setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch11/splash.mp3'); effect(Effect); }, 1300);
 				setTimeout(function() { $("#devil2").attr("src", '/resources/character/ch11/3층_악마1.webp'); }, 2000);
 				setTimeout(function() { $("#dialogue_bg").fadeIn(500); $("#dialogue").fadeIn(500); $("#blur").fadeIn(500); sound.currentTime=0; sound.play();}, 2500);
 				setTimeout(function() { $("#devil2").attr("src", '/resources/character/ch11/3층_악마2.webp'); }, 3000);

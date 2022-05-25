@@ -1,20 +1,23 @@
 var w, h, x, y;
 var scene, index, flag;
 
-var Effect;
+var Effect, waveLoop;
 var Effect_status = false;
 
-function effect() {
+function effect(thisEffect) {
 	if (Effect_status) {
-		Effect.pause();
-		Effect.currentTime = 0;
+		thisEffect.pause();
+		thisEffect.currentTime = 0;
 	} else { Effect_status = true; }
-	Effect.play();
+	thisEffect.play();
 }
 
 $(document).ready(function() {
 
 	Effect = document.getElementById("effect");
+	waveLoop = document.getElementById("waveLoop");
+	
+	effect(waveLoop);
 
 	$(window).resize(function() {
 		location.reload(true);
@@ -49,8 +52,8 @@ $(document).ready(function() {
 			
 			//사자 놀람
 			$("#human").attr("src", '/resources/character/ch11/사자_놀람.webp');
-			$("#effect").attr("src", '/resources/bgm/ch12/steel_barred_up.mp3'); effect();
-			setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch12/steel_barred_down.mp3'); effect(); }, 1200); 
+			$("#effect").attr("src", '/resources/bgm/ch12/steel_barred_up.mp3'); effect(Effect);
+			setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch12/steel_barred_down.mp3'); effect(Effect); }, 1200); 
 			
 			setTimeout(function() { $("#human").attr("src", '/resources/character/ch11/사자.webp');  }, 1800);
 			setTimeout(function() { $("#anubis").attr("src", '/resources/background/ch12/아누비스동상(76).webp'); }, 1800); 
