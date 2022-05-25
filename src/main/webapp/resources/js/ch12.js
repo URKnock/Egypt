@@ -1,20 +1,23 @@
 var w, h, x, y;
 var scene, index, flag;
 
-var Effect;
+var Effect, waveLoop;
 var Effect_status = false;
 
-function effect() {
+function effect(thisEffect) {
 	if (Effect_status) {
-		Effect.pause();
-		Effect.currentTime = 0;
+		thisEffect.pause();
+		thisEffect.currentTime = 0;
 	} else { Effect_status = true; }
-	Effect.play();
+	thisEffect.play();
 }
 
 $(document).ready(function() {
 
 	Effect = document.getElementById("effect");
+	waveLoop = document.getElementById("waveLoop");
+	
+	effect(waveLoop);
 
 	$(window).resize(function() {
 		location.reload(true);
@@ -43,7 +46,7 @@ $(document).ready(function() {
 	        imgSrc = $("#spirit_pot").attr('src')+'?'+d.getTime(); //랜덤 값 부착(캐싱 방지)
 	        $("#spirit_pot").attr('src', imgSrc); //이미지 소스 교체
 	        $("#spirit_pot").css('display', 'block');
-			setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch12/man_scream.mp3'); effect(); }, 400); 
+			setTimeout(function() { $("#effect").attr("src", '/resources/bgm/ch12/man_scream.mp3'); effect(Effect); }, 400); 
 			$("#human").attr("src", '/resources/character/ch11/사자_놀람.webp');
 			
 			setTimeout(function() { $("#human").attr("src", '/resources/character/ch11/사자.webp');  }, 1800);

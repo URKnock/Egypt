@@ -1045,21 +1045,21 @@
 	"name":"악마", "nickname":"악의 신",
 	"content":"당나귀가 되어 영원히 고통받는 지옥에 온 걸 환영한다.",
 	"chapter":13, "scene":0, "flag":0,
-	"image":"UI/Dialogue/Anubis.png",
+	"image":"UI/Dialogue/donkey_devil1.png",
 	"choice":"없음"
 },	
 {
 	"name":"악마", "nickname":"악의 신",
 	"content":"지혜롭지 못한 자, 영원히 고통받을 것이다.",
-	"chapter":13, "scene":1, "flag":1,
-	"image":"UI/Dialogue/Anubis.png",
+	"chapter":13, "scene":1, "flag":0,
+	"image":"UI/Dialogue/donkey_devil3.png",
 	"choice":"없음"
 },
 {
 	"name":"악마", "nickname":"악의 신",
 	"content":"사자는 이 악몽에서 벗어날 수 없을 것이다.",
 	"chapter":13, "scene":2, "flag":0,
-	"image":"UI/Dialogue/Anubis.png",
+	"image":"UI/Dialogue/donkey_devil2.png",
 	"choice":"없음"
 }
 ] 

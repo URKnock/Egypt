@@ -4,8 +4,8 @@
 <script defer src="<c:url value='../../resources/js/ch11_2.js'/>" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/ch11/ch11_2.css'/>"/>
 
-<audio preload="auto" src="/resources/bgm/ch11/wave_boil.mp3" loop="true" autobuffer></audio>
-<audio preload="auto" src="/resources/bgm/ch11/fire.mp3" loop="true" autobuffer></audio>
+<audio id="waveLoop" preload="auto" src="/resources/bgm/ch11/wave_boil.mp3" loop="true" autobuffer></audio>
+<audio id="fireLoop" preload="auto" src="/resources/bgm/ch11/fire.mp3" loop="true" autobuffer></audio>
 
 <div id="interact" onload="init();">
 	<img id="platform" src="<c:url value='/resources/object/ch11/2층_단상.png'/>"/>

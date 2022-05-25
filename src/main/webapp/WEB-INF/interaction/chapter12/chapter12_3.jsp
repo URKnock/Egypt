@@ -4,8 +4,6 @@
 <script defer src="<c:url value='../../resources/js/interaction/ch12/ch12_3.js'/>" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/ch12/ch12_3.css'/>"/>
 
-<!-- <audio preload="auto" src="/resources/bgm/ch11/boil.mp3" loop="true" autobuffer></audio> -->
-
 <div id="interact" onload="init();">
 	<img id="arrow_pre" style="z-index: 10;" class="pikachu" 
 		onClick="location.href='../chapter12part2'" src="<c:url value='/resources/object/ch11/arrow_pre.png'/>"/>

@@ -4,8 +4,8 @@
 <script defer src="<c:url value='../../resources/js/ch11.js'/>" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/ch11/ch11_1.css'/>"/>
 
-<audio preload="auto" src="/resources/bgm/ch11/boil.mp3" loop="true" autobuffer></audio>
-<audio preload="auto" src="/resources/bgm/ch11/fire.mp3" loop="true" autobuffer></audio>
+<audio id="boilLoop" preload="auto" src="/resources/bgm/ch11/boil.mp3" loop="true" autobuffer></audio>
+<audio id="fireLoop" preload="auto" src="/resources/bgm/ch11/fire.mp3" loop="true" autobuffer></audio>
 
 <div id="interact" onload="init();">
 	<img id="arrow" style="z-index: 10;" class="pikachu"
