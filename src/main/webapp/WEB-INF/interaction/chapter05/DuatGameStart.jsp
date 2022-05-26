@@ -7,12 +7,7 @@
 <div id="background">
 </div>
 <body onload="init(); interaction();">
-<div id="menu">
-		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>	
-</div>
+
 <div id="characters">
 	<div id="character">
 		<img class="boat" src="<c:url value='/resources/object/ch05/배.png'/>">	

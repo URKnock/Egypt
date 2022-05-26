@@ -23,6 +23,7 @@
 			<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>" /> 
 			<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>" />
 		</div>
+
 <div id="background">
 	<div id="ew">
 	<div id="earth">
@@ -42,6 +43,14 @@
 	<img id="boat" src="<c:url value='/resources/object/ch05/배.png'/>">
 	<img id="gogo" src="<c:url value='/resources/character/ch05/두아트_출발(182).webp'/>">
 	<img id="gogoboat" src="<c:url value='/resources/character/ch05/두아트_배경배(96).webp'/>">
+	</div>
+</div>
+<div id="menu">
+	<div>
+		<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+		<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 	</div>
 </div>
 <div id="page">
@@ -76,6 +85,7 @@
       </div>
    </c:if>
 </div>
+
 <div id="blur"></div>
 <div id="loading"></div>
 <script src="<c:url value='/resources/js/sound.js'/>"></script>
