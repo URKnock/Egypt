@@ -100,6 +100,7 @@
 	
 	<jsp:include page="interaction/help.jsp"/>
 	<jsp:include page="interaction/setting.jsp"/>
+	<jsp:include page="interaction/shabti_new.jsp"/>
 	
 	<div id="view">	
 		<div id="menu">

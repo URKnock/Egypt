@@ -16,8 +16,9 @@
 <body onload="init(); interaction();">
 	<jsp:include page="interaction/help.jsp"/>
 	<jsp:include page="interaction/setting.jsp"/>
+	<jsp:include page="interaction/shabti_new.jsp"/>
 		<div id="menu">
-			<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>" />
+			<img onclick="shabti()" src="<c:url value='/resources/UI/Menu/1.png'/>" />
 			<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>" />
 			<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>" /> 
 			<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>" />
@@ -84,7 +85,8 @@
 </form>
 <jsp:include page="interaction/info_window.jsp"/>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/water_wave.mp3'/>"></audio>
-<audio id="voice" preload="auto" src="/resources/bgm/ch05/dumm.mp3"></audio>
+<audio id="voice" preload="auto" src=""></audio>
+<audio id="effect" preload="auto" src=""></audio>
 <div id="order"></div>
 </body>
 </html>

@@ -73,12 +73,18 @@ function help() {
 	$("#help").css("display", "flex");
 }
 
+function shabti() {
+	$("#shabti").css("display", "flex");
+}
+
 function setSomething() {
 	setSetting();
 	setHelp();
+	setShabti();
 
 	$("#setting").hide();
 	$("#help").hide();
+	$("#shabti").hide();
 }
 
 function init() { //화면 초기화

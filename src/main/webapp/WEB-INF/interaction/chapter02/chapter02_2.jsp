@@ -46,6 +46,7 @@
 	
 	<jsp:include page="../help.jsp"/>
 	<jsp:include page="../setting.jsp"/>
+	<jsp:include page="../shabti_new.jsp"/>
 	
 	<c:choose>
 		<c:when test="${chapter eq '1'}">

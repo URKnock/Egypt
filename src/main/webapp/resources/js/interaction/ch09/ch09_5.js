@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
 	$("#menu img:nth-child(2)").on("click", function() {
 		location.href="/chapter02";
 	});
@@ -10,7 +13,7 @@ $(document).ready(function() {
 	});
 });
 
-function init() {	
+function init() {
 	w = $("#mp4").width() / 1920;
 	h = $("#mp4").height() / 1080;
 	x = $("#mp4").width() / 2.0;
@@ -18,9 +21,11 @@ function init() {
 	setSetting();
 	setHelp();
  	setSound();
-	
+ 	setShabti();
+ 	
 	$("#setting").hide();
 	$("#help").hide();
+	$("#shabti").hide();
 	
 /*	$("video").height("100%");	
 	$("video").width("100%");*/		

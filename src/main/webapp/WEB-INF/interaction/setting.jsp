@@ -15,7 +15,7 @@
 	<div>
 		<div class="audioSetting">
 			<div>
-				◆ 배경음악
+				배경음악
 				<img src="<c:url value='/resources/UI/Menu/setting_2.png'/>"/>
 			</div>
 			<img src="<c:url value='/resources/UI/Menu/setting_3.png'/>"/>
@@ -27,7 +27,7 @@
 		</div>
 		<div class="audioSetting">
 			<div>
-				◆ 효과음
+				효과음
 				<img src="<c:url value='/resources/UI/Menu/setting_2.png'/>"/>
 			</div>
 			<img src="<c:url value='/resources/UI/Menu/setting_3.png'/>"/>
@@ -39,7 +39,7 @@
 		</div>
 		<div class="audioSetting">
 			<div>
-				◆ 나레이션
+				나레이션
 				<img src="<c:url value='/resources/UI/Menu/setting_2.png'/>"/>
 			</div>
 			<img src="<c:url value='/resources/UI/Menu/setting_3.png'/>"/>
@@ -51,6 +51,6 @@
 		</div>
 		<input type="button" value="저장하기"/>
 	</div>
-	<img id="setting_close" src="<c:url value='/resources/UI/Shabti/3.png'/>"/>
+	<img id="setting_close" src="<c:url value='/resources/UI/Help/2.png'/>"/>
 </div>
 </div>

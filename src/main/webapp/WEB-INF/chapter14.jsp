@@ -51,7 +51,7 @@
 		</div>
 	</div>
 	<div id="menu">
-		<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img onclick="shabti()" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
 		<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
 		<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
 		<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
@@ -60,6 +60,7 @@
 </div>
 <jsp:include page="interaction/help.jsp"/>
 <jsp:include page="interaction/setting.jsp"/>
+<jsp:include page="interaction/shabti_new.jsp"/>
 
 <jsp:include page="interaction/info_window.jsp"/>
 <form method="post" action="<c:url value='/chapter10'/>">
