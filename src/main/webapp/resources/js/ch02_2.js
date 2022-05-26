@@ -43,6 +43,13 @@ $(document).ready(function() {
 		sound.play();
 		var chapName = $(this).attr("id");
 		var chapNum = Number(chapName[4]) + 3; //chapNum 수정해야 함 => 엔딩 파트는 섬 순서랑 챕터 번호가 일치하지 않음
+		if(Number(chapName[4]) == 6) {
+			chapNum = 13
+		} else if(Number(chapName[4]) == 7) {
+			chapNum = 11
+		} else if(Number(chapName[4]) == 8) {
+			chapNum = 12
+		}
 		setTimeout(function() { $(location).attr("href", "/load?chapter=" + chapNum); }, 700);
 	});
 

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: knock
 Build-Jdk: 15.0.2
 Created-By: Maven Integration for Eclipse
 
-=======
-Manifest-Version: 1.0
-Built-By: yujin
-Build-Jdk: 17
-Created-By: Maven Integration for Eclipse
-
->>>>>>> f04bbc21ca38b8b86dceb3196e6901da35227396
