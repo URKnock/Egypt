@@ -49,7 +49,7 @@
 	</c:if>
 	<c:if test="${scene eq 7 and index eq 0}">
 		<c:choose>
-			<c:when test="${result eq 'chapter08'}">
+			<c:when test="${result eq 'load?chapter=8'}">
 				<script defer>
 				var balance = document.querySelector('#interact .balance');
 				balance.src = "resources/webp/ch07/balance_put01.webp";

@@ -66,14 +66,14 @@
 			}
 			System.out.println(score);
 			System.out.println(ans);
-			if(score >= 9) session.setAttribute("result", "chapter08");
-			else if(score >= 5) session.setAttribute("result", "chapter12");
-			else session.setAttribute("result", "chapter11");
+			if(score >= 9) session.setAttribute("result", "load?chapter=8");
+			else if(score >= 5) session.setAttribute("result", "load?chapter=12");
+			else session.setAttribute("result", "load?chapter=11");
 		}
 		
 	%>
 	<c:choose>
-		<c:when test="${result eq 'chapter08'}">
+		<c:when test="${result eq 'load?chapter=8'}">
 			<script defer>
 				var body = document.querySelector('body');
 				var bgm = document.querySelector('#bgm');
