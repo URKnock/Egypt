@@ -48,6 +48,10 @@
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/heaven.mp3'/>"></audio>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/pond.mp3'/>"></audio>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/bird.mp3'/>"></audio>
+<audio id="voice" preload="auto" src=""></audio>
+<audio id="effect" preload="auto" src=""></audio>
+<jsp:include page="interaction/help.jsp"/>
+<jsp:include page="interaction/setting.jsp"/>
 <jsp:include page="interaction/info_window.jsp"/>
 <div id="page">
 	<c:if test="${page ne null}">

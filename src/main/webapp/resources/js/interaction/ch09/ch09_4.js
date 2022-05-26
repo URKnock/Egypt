@@ -1,5 +1,27 @@
-function init() {	
-	setSound(); 
+$(document).ready(function() {
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
+});
+
+function init() {
+	w = $("#mp4").width() / 1920;
+	h = $("#mp4").height() / 1080;
+	x = $("#mp4").width() / 2.0;
+	
+	setSetting();
+	setHelp();
+ 	setSound();
+	
+	$("#setting").hide();
+	$("#help").hide();
+
 /*	$("video").height("100%");	
 	$("video").width("100%");	*/
 	$("#background > img:nth-child(4)").addClass("select");

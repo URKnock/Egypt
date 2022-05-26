@@ -52,6 +52,10 @@
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/pond.mp3'/>"></audio>
 <audio id="grass" src="<c:url value='/resources/bgm/ch09/grass.mp3'/>"></audio>
 <audio id="cow" src="<c:url value='/resources/bgm/ch09/cow.mp3'/>"></audio>
+<audio id="voice" preload="auto" src=""></audio>
+<audio id="effect" preload="auto" src=""></audio>
 </body>
+<jsp:include page="../help.jsp"/>
+<jsp:include page="../setting.jsp"/>
 <jsp:include page="../info_window.jsp"/>
 </html>
