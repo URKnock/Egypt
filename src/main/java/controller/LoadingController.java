@@ -26,8 +26,8 @@ public class LoadingController implements Controller {
     		chapter = Integer.parseInt(request.getParameter("chapter")); 
     	}
     	
-    	if(chapter == 8) {
-    		return "redirect:/chapter08";
+    	if(chapter == 7) {
+    		return "redirect:/chapter07";
     	} else if(chapter == 9) {
     		return "redirect:/chapter09";
     	}
