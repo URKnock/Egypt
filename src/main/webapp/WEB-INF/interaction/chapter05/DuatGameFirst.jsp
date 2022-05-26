@@ -5,12 +5,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <img class="mandara1" src="<c:url value='/resources/object/ch05/pattern_0.png'/>">
-<div id="menu">
-		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>	
-</div>
+
 <div id ="spears">
 	<img class="spearno" src="<c:url value='/resources/background/ch05/창투명배경1.png'/>">
 	<img class="spearno2" src="<c:url value='/resources/background/ch05/창투명배경1.png'/>">

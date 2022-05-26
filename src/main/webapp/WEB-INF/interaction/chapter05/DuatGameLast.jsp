@@ -9,12 +9,7 @@
 <img class="m1" src="<c:url value='/resources/object/ch05/pattern2_벌레.png'/>">
 <img class="m2" src="<c:url value='/resources/object/ch05/pattern3_풍뎅이.png'/>">	
 <%-- <img class="mandaras" src="<c:url value='/resources/object/ch05/수정완료전체패턴.png'/>"> --%>
-<div id="menu">
-		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>	
-</div>
+
 <div id="spears">
 	<img class="spearno" src="<c:url value='/resources/background/ch05/창투명배경1.png'/>">
 	<img class="spearno2" src="<c:url value='/resources/background/ch05/창투명배경1.png'/>">
