@@ -17,11 +17,13 @@
 	<jsp:include page="interaction/help.jsp"/>
 	<jsp:include page="interaction/setting.jsp"/>
 		<div id="menu">
-			<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>" />
-			<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>" />
-			<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>" /> 
-			<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>" />
-		</div>
+	<div>
+		<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+		<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+		<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+	</div>
+</div>
 <div id="background">
 	<div id="ew">
 	<div id="earth">

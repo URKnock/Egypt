@@ -20,7 +20,7 @@ function home() {
 
 function init() {
 
-/*	$("#menu img:nth-child(2)").on("click", function() {
+	$("#menu img:nth-child(2)").on("click", function() {
 		location.href="/chapter02";
 	});
 	$("#menu img:nth-child(3)").on("click", function() {
@@ -28,7 +28,7 @@ function init() {
 	});
 	$("#menu img:nth-child(4)").on("click", function() {
 		$("#help").css("display", "flex");
-	});*/
+	});
 	
 	$("#loading").hide() ;
 	setSound(); 
