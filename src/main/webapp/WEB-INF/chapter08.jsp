@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<title>사자의 서</title>
 	<link href="<c:url value='/resources/css/ch08.css'/>" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue2.css'/>"/>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
+<%-- 	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue2.css'/>"/> --%>
 	<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 	<script src="<c:url value='/resources/js/jquery-animate-css-rotate-scale.js'/>"></script>
 	<script src="<c:url value='/resources/js/sound.js'/>"></script>
@@ -97,12 +98,15 @@
 		<img id="flower" src="<c:url value='/resources/background/ch08/8_3_1.png'/>">
 	</div>
 	
+	<jsp:include page="interaction/help.jsp"/>
+	<jsp:include page="interaction/setting.jsp"/>
+	
 	<div id="view">	
 		<div id="menu">
-			<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-			<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-			<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-			<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+			<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+			<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+			<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+			<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 		</div>
 	
 		<form method="post" action="<c:url value='/chapter08'/>">

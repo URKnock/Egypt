@@ -85,3 +85,14 @@
 	</form>
 </body>
 </html>
+
+<c:if test="${scene eq 2 and index eq 0}">
+	<c:set var="scene" value="0"/>
+	<c:set var="index" value="0"/>
+	<script>
+	
+	$("#dialogue").click(function() {
+		setTimeout(function() { location.href = 'chapter07'; }, 2000);
+	});
+	</script>
+</c:if>

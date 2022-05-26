@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>사자의 서</title>
 <link href="<c:url value='/resources/css/interaction/ch09/ch09_6.css'/>" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/interaction/ch09/ch09_6.js'/>"></script> 
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
@@ -44,6 +44,8 @@
 
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/heaven.mp3'/>"></audio>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch09/pond.mp3'/>"></audio>
+<audio id="voice" preload="auto" src=""></audio>
+<audio id="effect" preload="auto" src=""></audio>
 <img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
 <div id="dialogue">
    <img id="dialogue_img" src='<c:url value="${dialogue.image}"/>'/>
@@ -70,12 +72,14 @@
       </div>
    </c:if>
 </div>
+<jsp:include page="../help.jsp"/>
+<jsp:include page="../setting.jsp"/>
 <div id="blur"></div>
 	<input id ="sn" name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>
 	<input name="flag" 	type="hidden" value="${flag}"/>
 	<input name="choice" type="hidden" value="${choice}"/>
- <audio id="first" src="<c:url value='/resources/bgm/ch09/9_5_1_0.wav'/>"></audio>
+<audio id="first" src="<c:url value='/resources/bgm/ch09/9_5_1_0.wav'/>"></audio>
 <audio id="second" src="<c:url value='/resources/bgm/ch09/9_5_2_0.wav'/>"></audio> 
 </body>
 </html>

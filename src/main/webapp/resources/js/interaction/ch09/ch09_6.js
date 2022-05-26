@@ -1,14 +1,5 @@
-var count = 0;
-var w, h, x, y;
-var first = new Audio('/resources/bgm/ch09/9_5_1_0.wav');
-var second = new Audio('/resources/bgm/ch09/9_5_2_0.wav');
-function interaction() { }; 
-function init() {
-	setSound(); 
-	w = $("body").width() / 1920;
-	h = $("body").height() / 1080;
-	x = $("body").width() / 2.0;
-		$("#menu img:nth-child(2)").on("click", function() {
+$(document).ready(function() {
+	$("#menu img:nth-child(2)").on("click", function() {
 		location.href="/chapter02";
 	});
 	$("#menu img:nth-child(3)").on("click", function() {
@@ -17,7 +8,26 @@ function init() {
 	$("#menu img:nth-child(4)").on("click", function() {
 		$("#help").css("display", "flex");
 	});
+});
+
+var count = 0;
+var w, h, x, y;
+var first = new Audio('/resources/bgm/ch09/9_5_1_0.wav');
+var second = new Audio('/resources/bgm/ch09/9_5_2_0.wav');
+function interaction() { }; 
+function init() {
+	w = $("body").width() / 1920;
+	h = $("body").height() / 1080;
+	x = $("body").width() / 2.0;
+	
 	setDialogueSize();
+	setSetting();
+	setHelp();
+ 	setSound();
+	
+	$("#setting").hide();
+	$("#help").hide();
+	
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
