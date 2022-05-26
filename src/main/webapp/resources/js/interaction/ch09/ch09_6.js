@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
 	$("#menu img:nth-child(2)").on("click", function() {
 		location.href="/chapter02";
 	});
@@ -24,9 +27,11 @@ function init() {
 	setSetting();
 	setHelp();
  	setSound();
+ 	setShabti();
 	
 	$("#setting").hide();
 	$("#help").hide();
+	$("#shabti").hide();
 	
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();

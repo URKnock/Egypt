@@ -84,6 +84,9 @@ $(document).ready(function(){
 			});	
 			break;
 	}
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
 	$("#menu img:nth-child(2)").on("click", function() {
 		location.href="/chapter02";
 	});
@@ -104,9 +107,11 @@ function init() {
 	setDialogueSize();
 	setSetting();
 	setHelp();
+	setShabti();
 	
 	$("#setting").hide();
 	$("#help").hide();
+	$("#shabti").hide();
 	
 	resize("#human");
 	center("#human");
