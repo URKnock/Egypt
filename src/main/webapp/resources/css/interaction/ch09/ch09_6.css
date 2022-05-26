@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Minguk-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
     font-weight: normal;
@@ -9,13 +9,13 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
-body {
+} */
+/* body {
 	font-family: 'Minguk-Regular';
 	overflow: hidden;
   	overflow-y: hidden;
   	overflow-x: hidden;
-}
+} */
 
 #mp4 {
 	object-fit: cover;	
