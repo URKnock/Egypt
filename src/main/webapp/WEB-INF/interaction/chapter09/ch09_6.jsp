@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>사자의 서</title>
 <link href="<c:url value='/resources/css/interaction/ch09/ch09_6.css'/>" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="<c:url value='/resources/js/interaction/ch09/ch09_6.js'/>"></script> 
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
