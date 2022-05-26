@@ -5,7 +5,11 @@ var w, h, x, y;
 var scene, index, flag;
 var first = new Audio('resources/bgm/ch05/5_2_0_0.mp3');
 var second = new Audio('resources/bgm/ch05/5_2_1_0.mp3');
+
 $(document).ready(function() {
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
 	$("#menu img:nth-child(2)").on("click", function() {
 		location.href="/chapter02";
 	});
@@ -17,22 +21,31 @@ $(document).ready(function() {
 	});
 });
 
-
-function init() {
-	w = $("#background").width() / 1920;
-	h = $("#background").height() / 1080;
-	x = $("#background").width() / 2.0;
+function setSomething() {
+	setSound();
 	setSetting();
 	setHelp();
- 	setSound();
+	setShabti();
+	
 	$("#setting").hide();
 	$("#help").hide();
+	$("#shabti").hide();
+}
+
+function home() {
+	location.href = "/chapter02";
+}
+
+function init() {
+	
+	w = $("body").width() / 1920;
+	h = $("body").height() / 1080;
+	x = $("body").width() / 2.0;
+	
 	$("#loading").hide();
 	
-	setSound(); 
 	setDialogueSize();
-	
-	//setSomething();
+	setSomething();
 	
 	scene = $("input[name='scene']").val();
 

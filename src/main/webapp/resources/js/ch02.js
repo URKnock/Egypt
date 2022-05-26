@@ -63,6 +63,9 @@ $(document).ready(function() {
 		setTimeout(function() { $('#' + chapName).removeClass("island-shake"); }, 500);
 	});
 
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
 	$("#menu img:nth-child(2)").on("click", function() {
 		alert("현재 홈 화면에 있습니다.");
 	});
@@ -84,9 +87,11 @@ function init() { //화면 초기화
 	setSetting();
 	setSound(0);
 	setHelp();
+	setShabti();
 	
 	$("#setting").hide();
 	$("#help").hide();
+	$("#shabti").hide();
 
 	var bg1 = $("#background > img:nth-child(1)"); //섬 1번
 	bg1.width(bg1.prop("naturalWidth") * w);

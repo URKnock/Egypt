@@ -50,14 +50,19 @@ function setting() {
 function help() {
 	$("#help").css("display", "flex");
 }
+function shabti() {
+	$("#shabti").css("display", "flex");
+}
 
 function setSomething() {
 	setSound();
 	setSetting();
 	setHelp();
+	setShabti();
 	
 	$("#setting").hide();
 	$("#help").hide();
+	$("#shabti").hide();
 }
 
 function setNextButton(t, l) {

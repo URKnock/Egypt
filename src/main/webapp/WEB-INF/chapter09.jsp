@@ -53,6 +53,7 @@
 <jsp:include page="interaction/help.jsp"/>
 <jsp:include page="interaction/setting.jsp"/>
 <jsp:include page="interaction/info_window.jsp"/>
+<jsp:include page="interaction/shabti_new.jsp"/>
 <div id="page">
 	<c:if test="${page ne null}">
 		<jsp:include page="./interaction/chapter09/${page}"/>
