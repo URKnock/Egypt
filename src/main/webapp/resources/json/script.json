@@ -478,14 +478,14 @@
 },
 {
     "name":"두 번째 신", "nickname":"없음",
-    "content":"<span>우리가 말하는 안내인, 문지기, 그리고 전령의 이름을 기억하거라.</span>",
+    "content":"<span>우리가 말하는 안내인, 문지기, 그리고 정령의 이름을 기억하거라.</span>",
     "chapter":5, "scene":16, "flag":0,
 	"image":"UI/Dialogue/gateway_god2.png",
 	"choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"안내인의 이름은 <span>‘우넴하우우엔투페휘’</span>, <br/>문지기의 이름은 <span>‘세레셔’</span>, <br/>전령의 이름은 <span>‘아아’</span>.",
+    "content":"안내인의 이름은 <span>‘우넴하우우엔투페휘’</span>, <br/>문지기의 이름은 <span>‘세레셔’</span>, <br/>정령의 이름은 <span>‘아아’</span>.",
     "chapter":5, "scene":17, "flag":0,
 	"image":"UI/Dialogue/gateway_god3.png",
 	"choice":"없음"
@@ -556,7 +556,7 @@
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"기억했는가 사자여, 전령의 이름은?",
+    "content":"기억했는가 사자여, 정령의 이름은?",
 "chapter":5, "scene":20, "flag":0,
 	"image":"UI/Dialogue/gateway_god3.png","choice":{
         "image":"UI/Dialogue/player_answer.png",
@@ -567,21 +567,21 @@
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"전령의 이름은 <br/>‘아아’. <br/>오답이다.",
+    "content":"정령의 이름은 <br/>‘아아’. <br/>오답이다.",
     "chapter":5, "scene":20, "flag":0,
 	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"전령의 이름은 <br/>‘아아’. <br/>정답이다.",
+    "content":"정령의 이름은 <br/>‘아아’. <br/>정답이다.",
     "chapter":5, "scene":20, "flag":1,
 	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"
 },
 {
     "name":"세 번째 신", "nickname":"없음",
-    "content":"전령의 이름은 <br/>‘아아’. <br/>오답이다.",
+    "content":"정령의 이름은 <br/>‘아아’. <br/>오답이다.",
      "chapter":5, "scene":20, "flag":2,
 	"image":"UI/Dialogue/gateway_god3.png",
         "choice":"없음"

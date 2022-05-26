@@ -43,7 +43,10 @@ function init() {
 			
 			second.play();				
 			$("#con").text('잘 다녀오거라 사자여, 평안한 안식이 되기를 바란다.');
+			setTimeout(function() {
+			location.href="/chapter02"; }, 6500);
 		}
+		
 		if($(this).val() == 1) {
 		$("#dialogue_bg").hide();
 		$("#dialogue").hide();

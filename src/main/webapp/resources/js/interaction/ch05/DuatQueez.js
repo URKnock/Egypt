@@ -171,7 +171,9 @@ function interaction() {
 		$("#keeper3").css({top:"10.2%"});
 		$("#keeper3").attr("src", "/resources/character/ch05/소말해.webp");
 		v22_0_0.play();
-		
+		$("#dialogue").on("click", function() {
+		location.href="/chapter06";
+	});
 	}
 	if(scene == 22 && index == 0 && flag == 1) { //다음엔더
 		$("#keeper3").css({width:"364px"});
@@ -179,7 +181,9 @@ function interaction() {
 		$("#keeper3").css({top:"10.2%"});
 		$("#keeper3").attr("src", "/resources/character/ch05/소말해.webp");
 		v22_0_1.play();
-		
+		$("#dialogue").on("click", function() {
+		location.href="/chapter06";
+	});
 	}
 	if(scene == 22 && index == 0 && flag == 2) { //분발
 		$("#keeper3").css({width:"364px"});
@@ -187,7 +191,9 @@ function interaction() {
 		$("#keeper3").css({top:"10.2%"});
 		$("#keeper3").attr("src", "/resources/character/ch05/소말해.webp");
 		v22_0_2.play();
-		
+		$("#dialogue").on("click", function() {
+		location.href="/chapter06";
+	});
 	}
 	if(scene == 22 && index == 0 && flag == 3) { //끌고가
 		$("#keeper3").css({width:"364px"});
@@ -195,6 +201,9 @@ function interaction() {
 		$("#keeper3").css({top:"10.2%"});
 		$("#keeper3").attr("src", "/resources/character/ch05/소말해.webp");
 		v22_0_3.play();
+		$("#dialogue").on("click", function() {
+		location.href="/chapter13";
+	});
 		
 	}
 						
