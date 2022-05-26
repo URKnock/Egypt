@@ -43,9 +43,10 @@
 		
 		<img id="boat" src="<c:url value='/resources/object/ch08/8_2_1.png'/>">
 		
-		<img id="la1" src="<c:url value='/resources/character/ch08/9_2.png'/>">
-		<img id="la2" src="<c:url value='/resources/character/ch08/9_2.png'/>">
-		<img id="user" src="<c:url value='/resources/character/ch08/5_4.png'/>">
+		<img id="la1" src="<c:url value='/resources/character/ch08/라 말함.webp'/>">
+		<img id="la2" src="<c:url value='/resources/character/ch08/라.webp'/>">
+		<img id="user" src="<c:url value='/resources/character/ch08/0기본.webp'/>">
+		<img id="userWalk" src="<c:url value='/resources/character/ch08/1걷기.webp'/>">
 		
 		<!-- 8-2 -->
 		<img class="background2" src="<c:url value='/resources/background/ch08/8_2_6.png'/>">
@@ -146,3 +147,13 @@
 	</div>
 </body>
 </html>
+<c:if test="${scene eq 6 and index eq 0}">
+	<c:set var="scene" value="0"/>
+	<c:set var="index" value="0"/>
+	<script>
+	
+	$("#dialogue").click(function() {
+		setTimeout(function() { location.href = 'chapter09'; }, 2000);
+	});
+	</script>
+</c:if>

@@ -169,32 +169,43 @@ img {
 
 #user {
 	position: absolute; 
-	width: 10.1vw;
-	height: 40.5vh;
-	bottom: 41.3%;
-	right: 100%;
+	width: 23vw;
+	height: 46vh;
+	bottom: 32%;
+	right: 5.5%;
 	z-index: 11;
+}
+
+#userWalk {
+	position: absolute; 
+	width: 24vw;
+	height: 45vh;
+	bottom: 39.4%;
+	right: 80%;
+	z-index: 11;
+	
+	opacity: 0;
 }
 
 #la1 {
 	position: absolute; 
-	width: 10.2vw;
-	height: 42.5vh;
-	bottom: 34.4%;
-	right: 22.5%;
+	width: 24vw;
+	height: 45vh;
+	bottom: 32.4%;
+	right: 17%;
 	z-index: 12;
+	transform: rotateY(180deg);
 }
 
 #la2 {
 	position: absolute; 
-	width: 10.2vw;
-	height: 42.5vh;
-	bottom: 34.4%;
-	right: 20%;
+	width: 24vw;
+	height: 45vh;
+	bottom: 32%;
+	right: 17%;
 	z-index: 12;
 	
 	opacity: 0;
-	transform: rotateY(180deg);
 }
 
 #boat {
@@ -351,6 +362,8 @@ img {
 	right: 51.4%;
     
     opacity: 0;
+    
+    z-index: 12;
 }
 
 #userArm4 {
@@ -379,7 +392,7 @@ img {
 	position: absolute; 
 	width: 20vw;
 	height: 46vh;
-	z-index: 20;
+	z-index: 11;
 	bottom: 40%;
     left: 35%;
      
@@ -454,6 +467,8 @@ img {
  	height: 20vh;
     
     display: none;
+    
+    z-index: 11;
  }
  
   #blood2 {
@@ -464,6 +479,8 @@ img {
  	height: 20vh;
     
     display: none;
+    
+    z-index: 11;
  }
  
  @keyframes move { 

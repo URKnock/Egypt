@@ -36,17 +36,20 @@ function init() {
 		  $("#effect1").trigger("play");
 		}, 3000);
 		
+		$("#user").css("opacity", "0%");
+		$("#userWalk").css("opacity", "100%");
 		$("#content").hide().fadeIn(2000);
-		$("#user").animate({right: "54%"}, 2100).animate({right: "34%", bottom: "36%"}, 700).animate({right: "11%", bottom: "34.4%"}, 600).animate({rotate: '10deg'}, 500).animate({rotate: '0deg'}, 500);
-		$("#boat").delay(3300).animate({rotate: '10deg'}, 600).animate({rotate: '0deg'}, 500);
-		$("#la1").delay(3300).animate({rotate: '10deg'}, 600).animate({rotate: '0deg'}, 500).animate({opacity: "0"});
-		$("#la2").delay(4400).animate({opacity: "100%"});
+		$("#userWalk").animate({right: "46%"}, 3000).animate({right: "28%", bottom: "34%"}, 1000).animate({right: "4%", bottom: "32%"}, 1000).animate({opacity: '0%'}, 100)
+		$("#user").delay(5000).animate({opacity: '100%'}, 100).animate({rotate: '10deg'}, 500).animate({rotate: '0deg'}, 500);
+		$("#boat").delay(5000).animate({rotate: '10deg'}, 600).animate({rotate: '0deg'}, 500);
+		$("#la1").delay(5000).animate({rotate: '10deg'}, 600).animate({rotate: '0deg'}, 500).animate({opacity: "0"});
+		$("#la2").delay(6100).animate({opacity: "100%"});
 		
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
 	else if(scene == 2) {
 		$("#voice").trigger("play");
-		$("#user").css("right", "11%").css("bottom", "34.4%");
+		$("#user").css("right", "5.5%").css("bottom", "32%");
 		$("#la1").hide();
 		$("#la2").css("opacity", "100%");
 		$("#deco1").animate({left: "-100%"}, 4000);
@@ -59,8 +62,8 @@ function init() {
 		$("#stairs").animate({left: "-100%"}, 4000);
 		$("#content").hide().delay(2000).fadeIn(1000);
 		
-		$("#user").animate({right: "40%"}, 3000);
-		$("#la2").animate({right: "49%"}, 3000);
+		$("#user").animate({right: "34.5%"}, 3000);
+		$("#la2").animate({right: "46%"}, 3000);
 		$("#boat").animate({right: "30.4%"}, 3000);
 		
 		$(".background1").delay(3000).fadeOut(3000);
@@ -88,8 +91,8 @@ function init() {
 		
 		$("#rock").animate({left: '0%'}, 7000).animate({left: '-148%'}, 95000);
 
-		$("#user").delay(3000).animate({right: "65%"}, 1000); 
-		$("#la2").delay(3000).animate({right: "74%"}, 1000);
+		$("#user").delay(3000).animate({right: "59.5%"}, 1000); 
+		$("#la2").delay(3000).animate({right: "71%"}, 1000);
 		$("#boat").delay(3000).animate({right: "55.4%"}, 1000);
 		$("#paper").delay(2500).animate({opacity: "100%"}, 500);
 		$("#paperImg").delay(2500).animate({opacity: "100%"}, 500);
@@ -147,47 +150,45 @@ function init() {
 					count = 1;
 				}
 				else if(count == 1 && spear_target > $("#target2").offset().top - 50 && spear_target < $("#target2").offset().top + 50) {
+					$("#boatShake").hide();
 					$("#blood2").css({top: spear_target});
 					$("#blood2").fadeIn();
 					$("#blood2").delay(300).fadeOut();
 					
 					count = 2;
+					
+					setTimeout(function () {
+						$("#effect3").trigger("play");
+					}, 100);
+					
+					$('#spearTarget').hide();
+					$("#snake3").hide();
+					$("#userArm3").hide();
+					$("#userArm4").css("opacity", "100%");
+					$("#userArm4").delay(3100).animate({opacity: "0%"});
+					$("#user").delay(3100).animate({opacity: "100%"}).animate({right: "34.5%"}, 2000);
+					$("#back").hide();
+					$("#paper").hide();
+					$("#paperImg").hide();
+					$("#snakeDead").delay(100).animate({opacity: "100%"}).delay(3500).animate({opacity: "0%"}, 100);
+					
+					$("#rock").delay(3500).stop().animate({left: '-148%'}, 8000);
+					
+					$("#la2").delay(3500).animate({right: "46%"}, 2000);
+					$("#boat").delay(3500).animate({right: "30.4%"}, 2000);
+					
+					setTimeout("$('form').submit()", 11500);
 				}
-			}
-			/* 창 던지기가 끝나면 */
-			if (count == 2) {
-				setTimeout(function () {
-					$("#effect3").trigger("play");
-				}, 100);
-				
-				$('#spearTarget').css("display", "none");
-				$("#snake3").css("opacity", "0");
-				$("#userArm3").css("opacity", "0");
-				$("#userArm4").css("opacity", "100%");
-				$("#userArm4").delay(3100).animate({opacity: "0%"});
-				$("#user").delay(3100).animate({opacity: "100%"}).animate({right: "40%"}, 2000);
-				$("#back").css("opacity", "0");
-				$("#paper").css("opacity", "0");
-				$("#paperImg").css("opacity", "0");
-				$("#snakeDead").delay(100).animate({opacity: "100%"}).delay(3500).animate({opacity: "0%"}, 100);
-				
-				$("#rock").delay(3500).stop().animate({left: '-148%'}, 8000);
-				
-				$("#la2").delay(3500).animate({right: "49%"}, 2000);
-				$("#boat").delay(3500).animate({right: "30.4%"}, 2000);
-				
-				count = 0;
-				setTimeout("$('form').submit()", 11500);
 			}
         })
 	}
 	else if(scene == 4) {
-		$("#bgm").animate({volume: 0}, 4000);
+		$("#bgm1").animate({volume: 0}, 4000);
 		setTimeout(function () {
-			$("#bgm").trigger("pause");
+			$("#bgm1").trigger("pause");
 		}, 4000);
 		setTimeout(function () {
-			$("#bgm1").trigger("play");
+			$("#bgm").trigger("play");
 		}, 3000);
 		$("#voice").trigger("play");
 		$("#dialogue").on("click", function() { $("form").submit(); });	
@@ -208,16 +209,16 @@ function init() {
 		$(".background2").hide();
 		$(".background3").css("opacity", "100%");
 		
-		$("#user").css("right", "40%").css("bottom", "34.4%");
-		$("#la2").css("opacity", "100%").css("right", "49%");
+		$("#user").css("right", "34.5%").css("bottom", "32%");
+		$("#la2").css("opacity", "100%").css("right", "46%");
 		$("#boat").css("right", "30.4%");
 		
 		$("#dialogue").on("click", function() { 
 			setTimeout("$('form').submit()", 4000);
 			
 			$("form").fadeOut(1000);
-			$("#user").animate({right: "65%"}, 4000);
-			$("#la2").animate({right: "74%"}, 4000);
+			$("#user").animate({right: "59.5%"}, 4000);
+			$("#la2").animate({right: "71%"}, 4000);
 			$("#boat").animate({right: "55.4%"}, 4000);
 			
 			$("#tree").animate({right: "44%"}, 4000);
@@ -237,8 +238,8 @@ function init() {
 		$(".background2").hide();
 		$(".background3").css("opacity", "100%");
 		
-		$("#user").css("right", "65%").css("bottom", "34.4%");
-		$("#la2").css("opacity", "100%").css("right", "74%");
+		$("#user").css("right", "59.5%").css("bottom", "32%");
+		$("#la2").css("opacity", "100%").css("right", "71%");
 		$("#boat").css("right", "55.4%");
 	
 		$("#tree").css("right", "44%");
@@ -249,9 +250,6 @@ function init() {
 		$("#deco2").css("right", "43.2%");
 		$("#grass5").css("right", "13.2%");
 		$("#flower").css("right", "6.5%");
-		
-		$("#user").delay(1000).animate({right: "47%"}, 1000);
-		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
 }
 
@@ -270,8 +268,8 @@ function setting() {
 function setting2() {
 	setting();
 	
-	$("#user").css("right", "40%").css("bottom", "34.4%");
-	$("#la2").css("opacity", "100%").css("right", "49%");
+	$("#user").css("right", "34.5%").css("bottom", "32%");
+	$("#la2").css("opacity", "100%").css("right", "46%");
 	$("#boat").css("right", "30.4%");
 	
 	$(".background1").hide();

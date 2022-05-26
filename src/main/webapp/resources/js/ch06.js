@@ -93,8 +93,6 @@ function init() {
 			$("#user3").animate({left: "100%"}, 4000);
 			});	
 	}
-	
-	setSound();
 }
 
 function home() {
