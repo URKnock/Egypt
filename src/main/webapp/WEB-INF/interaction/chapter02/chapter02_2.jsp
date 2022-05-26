@@ -16,9 +16,9 @@
 <body onload="init(); interaction();">
 	<div id="background">
 		<img id="chap5" class="chapters pikachu island-move island-unlocked" src="<c:url value='/resources/object/ch02/5_1.png'/>"/>
-		<img id="chap6" class="chapters pikachu island-move island-locked" src="<c:url value='/resources/object/ch02/6_1.png'/>"/>
-		<img id="chap7" class="chapters pikachu island-move island-locked" src="<c:url value='/resources/object/ch02/7_1.png'/>"/>
-		<img id="chap8" class="chapters pikachu island-move island-locked" src="<c:url value='/resources/object/ch02/8_1.png'/>"/>
+		<img id="chap6" class="chapters pikachu island-move island-unlocked" src="<c:url value='/resources/object/ch02/6_1.png'/>"/>
+		<img id="chap7" class="chapters pikachu island-move island-unlocked" src="<c:url value='/resources/object/ch02/7_1.png'/>"/>
+		<img id="chap8" class="chapters pikachu island-move island-unlocked" src="<c:url value='/resources/object/ch02/8_1.png'/>"/>
 		
 		<img id="chap5view" class="chapViews" src="<c:url value='/resources/object/ch02/5_3.png'/>"/>
 		<img id="chap6view" class="chapViews" src="<c:url value='/resources/object/ch02/6_3.png'/>"/>
