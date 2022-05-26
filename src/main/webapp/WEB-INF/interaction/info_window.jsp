@@ -3,7 +3,11 @@
 
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>" type="text/javascript"></script>
 <link rel="stylesheet" href="<c:url value='/resources/css/interaction/info_window.css'/>">
-
+<style>
+	span {
+		color: red;
+	}
+</style>
 <div class="info_back"></div>
 <div id="window">
 	<img src="<c:url value='/resources/UI/Info/info_back.png'/>"/>
