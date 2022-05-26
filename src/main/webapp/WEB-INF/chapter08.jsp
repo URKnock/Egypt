@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<title>사자의 서</title>
 	<link href="<c:url value='/resources/css/ch08.css'/>" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue2.css'/>"/>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
+<%-- 	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue2.css'/>"/> --%>
 	<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 	<script src="<c:url value='/resources/js/jquery-animate-css-rotate-scale.js'/>"></script>
 	<script src="<c:url value='/resources/js/sound.js'/>"></script>
