@@ -31,7 +31,7 @@ function init() {
 		$("#character").css({"left":680*w, "top":170*h});
 	} else if(chapter == 6) {
 		$("#character").css({"left":860*w, "top":210*h});
-	} else if(chapter == 7) {
+	} else if(chapter == 8) {
 		$("#character").css({"left":860*w, "top":120*h});
 	} else if(chapter == 13) {
 		$("#character").css({"left":812*w, "top":105*h});

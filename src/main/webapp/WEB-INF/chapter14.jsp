@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<audio id="bgm" preload="auto" src="<c:url value='/resources/bgm/6_7_courtroom.mp3'/>" loop="true" autobuffer></audio>
+<audio id="bgm" preload="auto" src="<c:url value='/resources/bgm/8_falseconfession.mp3'/>" loop="true" autobuffer></audio>
 <audio id="voice" preload="auto" src="<c:url value='/resources/bgm/ch10/10_${scene}_${index}_${flag}.mp3'/>"></audio>
 <audio id="effect" preload="auto" src=""></audio>
 <div id="view">
