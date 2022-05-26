@@ -1,0 +1,122 @@
+#interact > img {
+	position: absolute;
+}
+
+#human {
+	bottom: 13%;
+	left: 35vh;
+}
+
+#wall {
+	top: 6.5%;
+}
+
+#ground {
+	bottom: 0%;
+}
+
+#ceiling {
+	top: 5%;
+}
+
+/* 기둥 배치 */
+
+#pillar1 {
+	top: 9%;
+	left: 1vh;
+}
+
+#pillar2 {
+	top: 9%;
+	left: 72vh;
+}
+
+#pillar3 {
+	top: 9%;
+	right: 24vh;
+}
+
+#blood {
+	bottom: -0.6%;
+	right: 33vh;
+}
+
+/* 거미줄 배치 */
+
+#web1 {
+	top: 10%;
+}
+
+#web2 {
+	top: 9%;
+	left: 18vh;
+}
+
+#web3 {
+	top: 9%;
+	left: 69vh;
+}
+
+#web4 {
+	top: 9%;
+	right: 68vh;
+}
+
+#web5 {
+	bottom: -0.5%;
+	left: 4vh;
+}
+
+#web6 {
+	bottom: 14%;
+	left: 20vh;
+}
+
+#web7 {
+	bottom: -1.5%;
+	left: 75vh;
+}
+
+#web8 {
+	bottom: -1.5%;
+	right: 50vh;
+}
+
+/* 잘린 목 배치 */
+
+#head1 {
+	top: 9%;
+	left: 33vh;
+}
+
+#head2 {
+	top: 9%;
+	left: 55vh;
+}
+
+#head3 {
+	top: 9%;
+	right: 63vh;
+}
+
+#head4 {
+	top: 9%;
+	right: 49vh;
+}
+
+#head5 {
+	top: 9%;
+	right: 5vh;
+}
+
+/* 캐릭터 배치 */
+
+#donkey {
+	bottom: 13%;
+	right: 45vh;
+}
+
+#devil {
+	bottom: 13%;
+	right: 28vh;
+}

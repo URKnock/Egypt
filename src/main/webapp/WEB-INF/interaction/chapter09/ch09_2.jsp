@@ -6,6 +6,7 @@
 <title>사자의 서</title>
 <link href="<c:url value='/resources/css/interaction/ch09/ch09_2.css'/>" rel="stylesheet" type="text/css"/>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <script src="<c:url value='/resources/js/interaction/ch09/ch09_2.js'/>"></script> 
 <script> $(function(){ init(); }); </script>
 </head>

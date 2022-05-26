@@ -15,6 +15,15 @@ function init() {
 			$("#c4").on("click", function() {
 				objectSubmit("#c4");
 			});
+				$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
 	/*스르륵*/		
 	$("body").css("display", "none");
 	$("body").fadeIn(500);
@@ -39,7 +48,7 @@ function init() {
 		$("#c3").attr("src", 
 			"/resources/character/ch09/2층 왜가리2.webp");
 		setTimeout(function() {
-					object("#c3", 37);
+					object("#c3", 36);
 				}, 3800);
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 
@@ -54,7 +63,7 @@ function init() {
 	
 			
 	$("#c4").click(function() {
-		object("#c4", 38);
+		object("#c4", 37);
 	});
 	
 		

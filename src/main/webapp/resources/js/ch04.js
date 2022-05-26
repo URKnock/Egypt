@@ -59,3 +59,11 @@ function setSomething() {
 	$("#setting").hide();
 	$("#help").hide();
 }
+
+function setNextButton(t, l) {
+	var nextButton = document.querySelector('#nextButton');
+	nextButton.style.display = "block";
+	nextButton.style.position = "absolute";
+	nextButton.style.top = $("#title").height() + t;
+	nextButton.style.left = $("#dialogue_img").width() + l;
+}

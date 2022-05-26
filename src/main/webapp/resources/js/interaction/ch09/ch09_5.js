@@ -11,7 +11,15 @@ function init() {
 				objectSubmit("#c2");
 			});
 			
-			
+		$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});		
 	/*스르륵*/
 	$("body").css("display", "none");
 	$("body").fadeIn(500);
@@ -38,7 +46,7 @@ function init() {
 		"/resources/character/ch09/2층 소2.webp");	
 			
 		setTimeout(function() {
-					object("#c22", 39);
+					object("#c22", 38);
 					//object("#c2", 34);
 				}, 2700);	
 		document.querySelector('.close').onclick 

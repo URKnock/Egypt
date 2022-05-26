@@ -3,4 +3,7 @@ function interaction() {
 	setSound();
 	$("#background").children().hide();
 	first.play();
+			$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
 }

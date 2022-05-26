@@ -1,0 +1,129 @@
+#interact > img {
+	position: absolute;
+}
+
+/* 강물 */
+
+@keyframes scroll{
+  from {
+    transform:translateX(-100%);
+    -webkit-transform:translateX(-100%);
+  }
+  to{
+    transform:translateX(0%);
+    -webkit-transform:translateX(0%);
+  }
+}
+
+@keyframes reverse-scroll{
+  from {
+    transform:translateX(0%);
+    -webkit-transform:translateX(0%);
+  }
+  to{
+    transform:translateX(100%);
+    -webkit-transform:translateX(100%);
+  }
+}
+
+/* 단지를 진 사람들 이동 */
+
+@keyframes move1{
+  from {
+    transform:translateX(380%);
+    -webkit-transform:translateX(380%);
+  }
+  to{
+    transform:translateX(-420%);
+    -webkit-transform:translateX(-420%);
+  }
+}
+
+@keyframes move2{
+  from {
+    transform:translateX(530%);
+    -webkit-transform:translateX(530%);
+  }
+  to{
+    transform:translateX(-270%);
+    -webkit-transform:translateX(-270%);
+  }
+}
+
+@keyframes move3{
+  from {
+    transform:translateX(600%);
+    -webkit-transform:translateX(600%);
+  }
+  to{
+    transform:translateX(-200%);
+    -webkit-transform:translateX(-200%);
+  }
+}
+
+@keyframes move4{
+  from {
+    transform:translateX(750%);
+    -webkit-transform:translateX(750%);
+  }
+  to{
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%);
+  }
+}
+
+#sinner1 {
+	animation: move1 40s linear infinite;
+}
+
+#sinner2 {
+	animation: move2 40s linear infinite;
+}
+
+#sinner3 {
+	animation: move3 40s linear infinite;
+}
+
+#sinner4 {
+	animation: move4 40s linear infinite;
+}
+
+#human {
+	bottom: 13%;
+}
+
+#pillar {
+	top: 3%;
+}
+
+#ground {
+	bottom: 0%;
+}
+
+#river {
+	width:100% !important;
+	bottom: 0%;
+	
+	animation: scroll 80s linear infinite;
+}
+
+#river2 {
+	width:100% !important;
+	bottom: 0%;
+	
+	animation: reverse-scroll 80s linear infinite;
+}
+
+#anubis {
+	right: 19vh;
+	bottom: 0%;
+}
+
+#jail {
+	left: 19vh;
+	top: 12.5%;
+}
+
+.sinner {
+	bottom: 11%;
+}

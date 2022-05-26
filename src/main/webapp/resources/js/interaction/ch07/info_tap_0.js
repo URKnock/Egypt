@@ -48,10 +48,8 @@ function pause(index) {
 	for(var i = 0; i < 8; i++) {
 		if(i != index) obj[i].src = png[i];
 	}
-	if(index == 0) obj[4].style.display = "none";
 }
 function play() {
-	if(obj[4].style.display == "none") obj[4].style.display = "block";
 	for(var i = 0; i < 8; i++) {
 		obj[i].src = webp[i];
 	}
@@ -70,6 +68,7 @@ function tap_info(e, i) {
 	pause();
 
 	e.src = motion[i];
+	if(i == 0) obj[4].src = "resources/webp/ch07/feather_motion2.webp";
 	
 	const bg = document.querySelector(".info_back");
 	bg.style.display = "block";

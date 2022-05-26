@@ -9,7 +9,10 @@ function init() {
 				objectSubmit("#b1");
 			});
 			
-			
+		$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+		
 	/*스르륵*/
 	$("body").css("display", "none");
 	$("body").fadeIn(500);
@@ -31,8 +34,8 @@ function init() {
 		$("#c2").attr("src", 
 		"/resources/character/ch09/1층 매사자2.webp");
 		setTimeout(function() {
-					object("#b1", 34);
-					object("#c2", 34);
+					object("#b1", 33);
+					object("#c2", 33);
 				}, 5200);
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 

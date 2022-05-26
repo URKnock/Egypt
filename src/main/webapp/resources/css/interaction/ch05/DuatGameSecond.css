@@ -17,17 +17,6 @@ body {
 
 .bae {
 	opacity:1;
-	z-index:2;
-    position: absolute;
- 	top: 50%; left: -28%;
- 	transform: translate(70%,-50%);
-
- 	
-}
-
-
-.mainC {
-	opacity:1;
 	z-index:3;
     position: absolute;
  	top: 50%; left: -28%;
@@ -35,11 +24,26 @@ body {
 
  	
 }
-.saja {
+.boat {
+	opacity:1;
+    position: absolute;    
+	z-index:3;
+ 	top: 50.5%; left: -25.5%;
+ 	transform: translate(70%,-50%);
+}
+
+.la {
 	position: absolute;
 	z-index:2;
-	top: 50%; left: 30%;
-	transform: translate(70%,-50%);
+	top: 10.6%; left: 41.5%;
+	transform: scaleX(-1);	
+
+ 	
+}
+.saja {
+position: absolute;
+	z-index:1;
+	top: 12%; left: 23%;
 }
 
 @keyframes rotate_image{ 
@@ -124,9 +128,49 @@ body {
 	z-index:5;
     position: absolute;
     transform: scaleX(-1); 
-	top: 50%;
-    left: 61%;
+	top: 45%;
+    left: 57%;
 }
 
-
-
+.s1 {
+	z-index:4;
+	 position: absolute;
+	 top: 40%;
+	 left: 20%;
+}
+.s2 {
+	z-index:4;
+	 position: absolute;
+	 top: 25%;
+	 left: 25%;
+}
+.s3 {
+	z-index:4;
+	 position: absolute;
+	 top: 15%;
+	 left: 29%;
+}
+.s4 {
+	z-index:4;
+	 position: absolute;
+	 top: 15%;
+	 left: 35%;
+}
+#order {
+	position: absolute;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Minguk-Bold';
+	font-size: 24px;
+	color: black;
+	min-width: 776px;
+	top: 50px;
+	left: 572px;
+	height: 88px;
+	background: no-repeat url("../../../UI/order.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

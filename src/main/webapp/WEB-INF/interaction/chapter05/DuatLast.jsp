@@ -2,6 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="<c:url value='/resources/css/interaction/ch05/DuatLast.css'/>" rel="stylesheet" type="text/css"/>
 <script src="<c:url value='/resources/js/interaction/ch05/DuatLast.js'/>"></script>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
+<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <img class="mandaras" src="<c:url value='/resources/object/ch05/수정완료전체패턴.png'/>">
 <img class="mandara1" src="<c:url value='/resources/object/ch05/pattern_0.png'/>">
 <img class="mandara2" src="<c:url value='/resources/object/ch05/pattern1_악어.png'/>">
@@ -10,17 +12,25 @@
 <div id="snakemandara">
 <img class="s1" src="<c:url value='/resources/object/ch05/pattern4_뱀.png'/>">
 </div>
+<div id="menu">
+		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>	
+</div>
 <div id="keeper">
 	<div id="keeper">
-	<img class="keepers" src="<c:url value='/resources/character/ch05/단상.png'/>"/>
+		<img class="keepers" src="<c:url value='/resources/character/ch05/단상.png'/>"/>
 	</div>
 </div>
 <div id="characters">
 	<div id="character">
-		<img class="mainC_s" src="<c:url value='/resources/character/ch05/la_b.png'/>">
-		<img class="saja" src="<c:url value='/resources/character/ch05/창든멈춘사자.png'/>">		
+		<img class="boat" src="<c:url value='/resources/object/ch05/배.png'/>">	
+		<img class=	"la" src="<c:url value='/resources/character/ch05/숨셔라(33).webp'/>">	
+		<img class="saja" src="<c:url value='/resources/character/ch05/숨셔창사자(38).webp'/>">		
 	</div>
 </div>
+
 <script src="<c:url value='/resources/js/sound.js'/>"></script>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/5_duat_gateway.mp3'/>"></audio>
 <audio id="voice" preload="auto" src="/resources/bgm/ch05/5_${scene}_${index}_${flag}.mp3"></audio>

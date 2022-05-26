@@ -7,22 +7,23 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/interaction/info_window.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch05.css'/>"/> 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 <script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/ch05.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 <script src="/resources/js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
 </head>
 <body onload="init(); interaction();">
-
+	<jsp:include page="interaction/help.jsp"/>
+	<jsp:include page="interaction/setting.jsp"/>
+		<div id="menu">
+			<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>" />
+			<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>" />
+			<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>" /> 
+			<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>" />
+		</div>
 <div id="background">
-	<div id="menu">
-		<img id="menu1" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-		<img id="menu2" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-		<img id="menu3" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-		<img id="menu4" src="<c:url value='/resources/UI/Menu/4.png'/>"/>	
-	</div>
-	<div id=ew">
+	<div id="ew">
 	<div id="earth">
 	<img id="earth" src="<c:url value='/resources/background/ch05/5_1.png'/>">
 	</div>
@@ -34,12 +35,12 @@
 	</div>
 	<div id="chs">
 	<img id="saja" src="<c:url value='/resources/character/ch05/두리번사자(112).webp'/>">
-	<img id="user2" src="<c:url value='/resources/character/ch05/5_1.png'/>">
-	<img id="nol" src="<c:url value='/resources/object/ch05/nol.png'/>">
 	</div>
 	<div id="LawBoat">
-	<img id="la" src="<c:url value='/resources/character/ch05/라_발잘림.png'/>">
+	<img id="la" src="<c:url value='/resources/character/ch05/도입숨셔라(33).webp'/>">
 	<img id="boat" src="<c:url value='/resources/object/ch05/배.png'/>">
+	<img id="gogo" src="<c:url value='/resources/character/ch05/두아트_출발(182).webp'/>">
+	<img id="gogoboat" src="<c:url value='/resources/character/ch05/두아트_배경배(96).webp'/>">
 	</div>
 </div>
 <div id="page">
@@ -59,7 +60,7 @@
          </c:if>
       </div>
       <div id="content">
-         <p>${dialogue.content}</p>
+         <p id='con'>${dialogue.content}</p>
          <img />
       </div>
    </div>
@@ -83,7 +84,7 @@
 </form>
 <jsp:include page="interaction/info_window.jsp"/>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/water_wave.mp3'/>"></audio>
-<audio id="voice" preload="auto" src="/resources/bgm/ch05/5_${scene}_${index}_${flag}.mp3"></audio>
-<div class="guide" align="center">마우스로 클릭하여 주변을 둘러보세요.</div>
+<audio id="voice" preload="auto" src="/resources/bgm/ch05/dumm.mp3"></audio>
+<div id="order"></div>
 </body>
 </html>

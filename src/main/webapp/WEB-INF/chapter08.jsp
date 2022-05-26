@@ -5,14 +5,24 @@
 	<meta charset="UTF-8">
 	<title>사자의 서</title>
 	<link href="<c:url value='/resources/css/ch08.css'/>" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-	<script src="/resources/js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue2.css'/>"/>
+	<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
+	<script src="<c:url value='/resources/js/jquery-animate-css-rotate-scale.js'/>"></script>
+	<script src="<c:url value='/resources/js/sound.js'/>"></script>
 	<script src="<c:url value='/resources/js/ch08.js'/>"></script>	
 	<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 	
-	<script> $(function(){ init(); }); </script>
 </head>
+<body onload="init();">
+	<audio id="bgm" preload="auto" src='<c:url value="/resources/bgm/ch08/mainBGM.mp3"/>' onloadstart="this.volume=0.5" loop="true" autobuffer ></audio>
+	<audio id="effect" preload="auto" src=''></audio>
+	<audio id="voice" preload="auto" src='<c:url value="/resources/bgm/ch08/8_${scene}_${index}_${flag}.mp3"/>'></audio>
+	<audio id="bgm1" preload="auto" src='<c:url value="/resources/bgm/ch08/fight.mp3"/>' onloadstart="this.volume=0.5" loop="true" autobuffer></audio>
+	<audio id="effect1" preload="auto" src='<c:url value="/resources/bgm/ch08/water1.mp3"/>'></audio>
+	<audio id="effect2" preload="auto" src='<c:url value="/resources/bgm/ch08/water2.mp3"/>'></audio>
+	<audio id="effect3" preload="auto" src='<c:url value="/resources/bgm/ch08/water3.mp3"/>'></audio>
+	<audio id="effect4" preload="auto" src='<c:url value="/resources/bgm/ch08/heaven.mp3"/>' loop="true" autobuffer></audio>	
+	<audio id="effect5" preload="auto" src='<c:url value="/resources/bgm/ch08/lance.mp3"/>'></audio>
 	<div id="wrapper">
 		<!-- 8-1 -->
 		<img class="background1" src="<c:url value='/resources/background/ch08/8_1_10.png'/>">
@@ -50,18 +60,24 @@
 		<div id='target1'></div>
 		<div id='target2'></div>
 		<input type='hidden' name='flag' value='false'>
-		<div id='paper'><p>마우스를 클릭해 머리에 창을 던져 아펩을 처치하세요.</p></div>
+		<img id='paper' src="<c:url value='/resources/object/ch08/paper.png'/>">
+		
+		<img id="blood1" src="<c:url value='/resources/object/ch08/아펩피1.png'/>">
+		<img id="blood2" src="<c:url value='/resources/object/ch08/아펩피2.png'/>">
+		
 		<img id="snakeAppear" src="<c:url value='/resources/object/ch08/01_뱀등장.webp'/>">
 		<img id="snake1" src="<c:url value='/resources/object/ch08/02+1_뱀움직임.webp'/>">
 		<img id="snake2" src="<c:url value='/resources/object/ch08/03+2.webp'/>">
 		<img id="snake3" src="<c:url value='/resources/object/ch08/04.webp'/>">
 		<img id="snakeDead" src="<c:url value='/resources/object/ch08/05_마지막맞고죽음.webp'/>">
+		<img id="snakeAttack" src="<c:url value='/resources/object/ch08/뱀공격.webp'/>">
 		
 		<img id="userArm1" src="<c:url value='/resources/character/ch08/1창던질준비.webp'/>">
 		<img id="userArm2" src="<c:url value='/resources/character/ch08/2팔움직임.webp'/>">
 		<img id="userArm3" src="<c:url value='/resources/character/ch08/3팔움직임.webp'/>">
-		
 		<img id="userArm4" src="<c:url value='/resources/character/ch08/5팔내리기.webp'/>">
+		
+		<img id="boatShake" src="<c:url value='/resources/character/ch08/뱀맞고.webp'/>">
 
     	<div id="panel">
 			<img id="spear" src="<c:url value='/resources/object/ch08/spear.png'/>">
@@ -83,10 +99,10 @@
 	
 	<div id="view">	
 		<div id="menu">
-			<img src="<c:url value='/resources/UI/Menu/1.png'/>"/>
-			<img src="<c:url value='/resources/UI/Menu/2.png'/>"/>
-			<img src="<c:url value='/resources/UI/Menu/3.png'/>"/>
-			<img src="<c:url value='/resources/UI/Menu/4.png'/>"/>
+			<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+			<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
+			<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
+			<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
 		</div>
 	
 		<form method="post" action="<c:url value='/chapter08'/>">
@@ -116,8 +132,7 @@
 					</div>
 				</c:if>
 			</div>
-			<audio id="bgm" preload="auto" src="/resources/bgm/ch08/bgm.mp3" loop="true" autobuffer></audio>
-			<audio id="voice" preload="auto" src="/resources/bgm/ch08/8_${scene}_${index}_${flag}.wav"></audio>
+			<div id="loading"></div>
 			<input name="scene" type="hidden" value="${scene}"/>
 			<input name="index" type="hidden" value="${index}"/>
 			<input name="flag" 	type="hidden" value="${flag}"/>

@@ -13,7 +13,15 @@ function init() {
 			$("#c3").on("click", function() {
 				objectSubmit("#c3");
 			});
-
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
 	/*스르륵*/
 	$("body").css("display", "none");
 	$("body").fadeIn(500);
@@ -35,7 +43,7 @@ function init() {
 		$("#c4").attr("src", 
 			"/resources/character/ch09/2층 카무트2.webp");
 		setTimeout(function() {
-					object("#c4", 35);
+					object("#c4", 34);
 					//object("#c2", 34);
 				}, 3800);	
 		document.querySelector('.close').onclick 
@@ -60,7 +68,7 @@ function init() {
 		$("#cow2").attr("src", 
 		"/resources/character/ch09/2층 소2.webp");
 		setTimeout(function() {
-					object("#c3", 36);
+					object("#c3", 35);
 				}, 2000);
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 

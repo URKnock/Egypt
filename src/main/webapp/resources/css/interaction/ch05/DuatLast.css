@@ -27,16 +27,22 @@ body {
 	position: absolute;
 	top: -11.6%;
 	left: 17.6%;
+	 animation: rotate_image 160s linear
+     infinite;transform-origin: 50% 50%;
 }
 .m1 {
 	z-index: 1;
 	position: absolute;
   	top: 3%; right: 24.2%;
 	opacity:1;
+		 animation: rotate_image 160s linear
+     infinite;transform-origin: 50% 50%;
 } 
 .m2 {
 	position: absolute;
 	top: 3%; right: 24.2%;
+		 animation: rotate_image 160s linear
+     infinite;transform-origin: 50% 50%;
 
 }
 .mandara1 {
@@ -46,6 +52,8 @@ body {
 	position: absolute;
  	top: 42.7%;
 	right: 46.2%;
+		 animation: rotate_image 160s linear
+     infinite;transform-origin: 50% 50%;
 
 	
 }
@@ -55,6 +63,8 @@ body {
 	width:500px;
 	position: absolute;
  	top: 24.5%; right: 36%;
+ 		 animation: rotate_image 160s linear
+     infinite;transform-origin: 50% 50%;
 
 }
 
@@ -62,30 +72,38 @@ body {
 	position: absolute;
 	top: -11.6%;
 	left: 17.6%;
+		 animation: rotate_image 160s linear
+     infinite;transform-origin: 50% 50%;
 
 }
 
 .keepers {
 	z-index: 4;
 	position: absolute;
-	width: 2000px;
+	width: 2200px;
 	top: 3%; left: 150%;
 }
 
-.mainC_s {
-	z-index: 4;
+.boat {
 	opacity:1;
-    position: absolute;
- 	top: 50%; left: -28%;
+    position: absolute;    
+	z-index:2;
+ 	top: 50.5%; left: -25.5%;
  	transform: translate(70%,-50%);
+}
+
+.la {
+	position: absolute;
+	z-index:1;
+	top: 10.6%; left: 41.5%;
+	transform: scaleX(-1);	
 
  	
 }
 .saja {
-	z-index:3;
 	position: absolute;
-	top: 50%; left: 30%;
-	transform: translate(70%,-50%);
+	z-index:1;
+	top: 12%; left: 23%;
 
  	
 }

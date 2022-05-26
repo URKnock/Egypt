@@ -1,0 +1,110 @@
+#interact > img {
+	position: absolute;
+}
+
+#human {
+	bottom: 13%;
+	left: 33vh;
+}
+
+#wall {
+	top: 6.5%;
+}
+
+#ground {
+	bottom: 0%;
+}
+
+#ceiling {
+	top: 5%;
+}
+
+#spike {
+	bottom: 0%;
+	left: 38%;
+}
+
+#fire {
+	bottom: 0%;
+	left: 33%;
+}
+
+/* 캐릭터 */
+
+#devil {
+	bottom: 13.8%;
+	right: 15%;
+}
+
+#rope {
+	top: 0%;
+	right: 85.5vh;
+}
+
+#donkey {
+	top: 16%;
+	right: 50vh;
+}
+
+/* 잘린 목 */
+
+#head2 {
+	top: 9%;
+	left: -2vh;
+}
+
+#head3 {
+	top: 9%;
+	left: 10vh;
+}
+
+#head1 {
+	top: 9%;
+	left: 34vh;
+}
+
+#web1 {
+	bottom: 0%;
+	left: 20vh;
+}
+
+#web2 {
+	bottom: 0%;
+	right: 0vh;
+}
+
+.drop {
+  animation: drop 1.5s;
+  -webkit-animation: drop 1.5s; /* Safari and Chrome */
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes drop { 
+    from {
+        transform:translateY(0%);
+    	-webkit-transform:translateY(0%);
+    }
+    to {
+        transform:translateY(150%);
+    	-webkit-transform:translateY(150%);
+    }
+}
+
+.fade-out {
+  animation: fadeout 0.5s;
+  -webkit-animation: fadeout 0.5s; /* Safari and Chrome */
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeout { 
+    from {
+        opacity: 1;
+        transform:translateY(150%);
+    	-webkit-transform:translateY(150%);
+    }
+    to {
+        opacity: 0;
+        transform:translateY(150%);
+    	-webkit-transform:translateY(150%);
+    }
+}

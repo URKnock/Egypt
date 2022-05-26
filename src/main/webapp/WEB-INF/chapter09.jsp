@@ -4,8 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <title>사자의 서</title>
+<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <link href="<c:url value='/resources/css/ch09.css'/>" rel="stylesheet" type="text/css"/>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/ch09/ch09_1.js'/>"></script>
 <script> $(function(){ init(); }); </script> 
 </head>

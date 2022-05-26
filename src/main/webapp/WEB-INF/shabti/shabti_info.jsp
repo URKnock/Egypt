@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/owl.theme.default.css">
-<link rel="stylesheet" href = "css/shabti_info.css">
+<link rel="stylesheet" href = "css/ui_info.css">
 
 <script src="<c:url value="./js/jquery-3.6.0.min.js" />"></script> 
 <script src="./js/owl.carousel.min.js"></script>
 <script src="./js/owl.autoplay.js"></script>
 <script src="./js/owl.navigation.js"></script>
-<script type="text/javascript" src= "./js/shabti.js?ver=1"></script>
-<script type="text/javascript" src= "./js/shabti_info.js?ver=1"></script>
+<script type="text/javascript" src= "./js/ui.js?ver=1"></script>
+<script type="text/javascript" src= "./js/ui_info.js?ver=1"></script>
 
 <div id="window">
 	<h3 class="name">

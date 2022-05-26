@@ -132,6 +132,16 @@ img {
 	opacity: 0;
 }
 
+#anubis3 {
+	position: absolute; 
+	width: 12vw;
+	height: 42vh;
+	right: 30%;
+	top: 16.5%;
+	z-index: 9;
+	opacity: 0;
+}
+
 #user {
 	position: absolute; 
 	width: 10vw;
@@ -147,6 +157,16 @@ img {
 	top: 16.5%;
 	z-index: 10;
 	transform: rotateY(180deg);
+	opacity: 0;
+}
+
+#user3 {
+	position: absolute; 
+	width: 11.5vw;
+	height: 44vh;
+	right: 58%;
+	top: 23%;
+	z-index: 10;
 	opacity: 0;
 }
 
