@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<script>bgm.src = "resources/bgm/8_falseconfession.mp3";</script>
 <link href="<c:url value='/resources/css/interaction/ch07/ch07_3.css'/>" rel="stylesheet" type="text/css"/>
 
 <div id="interact">

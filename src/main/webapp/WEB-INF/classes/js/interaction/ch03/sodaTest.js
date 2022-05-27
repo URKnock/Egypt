@@ -7,6 +7,7 @@ function interaction() {
 	
 	resizeCenter("#human_soda");
 	resizeCenter("#human_cover");
+	$("#effect").attr("src", "/resources/bgm/ch03/soda1.mp3");
 
 	function human_rescale() {
 		var arr = ["#human", "#human_soda", "#human_band", "#human_cover"];
@@ -76,6 +77,7 @@ function interaction() {
 			x:event.pageX - offsets.left,
 			y:event.pageY - offsets.top
 		}
+		effect();
 	
 		if(!clicked) {
 			clicked = true;
@@ -199,6 +201,7 @@ function interaction() {
 		$('#human_soda').attr("src", "/resources/object/ch03/soda_3.png");
 		$('#human_band').attr("src", "/resources/object/ch03/bandage_3.png");
 		$('#niddleToClick').fadeIn("slow", function() {
+			$("#effect").attr("src", "/resources/bgm/ch03/needle.mp3");
 			$('#niddleToClick').addClass("select");
 			$('#niddleToClick').on("click", function() {
 				$('#niddleToClick').removeClass("select");
@@ -299,12 +302,14 @@ function enterElement() {
 	if(!isEntering) {
 		isEntering = true;
 		enterCnt++;
+		effect();
 		if(onUsing == "pot") {
 			$('#human_soda').attr("src", "/resources/object/ch03/soda_" + enterCnt + ".png");
 			if(enterCnt >= 3) {
 				enterCnt == 0;
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();
+				$("#effect").attr("src", "/resources/bgm/ch03/dressing.mp3");
 				$('#bandageToClick').addClass("select");
 				$('#bandageToClick').on("click", function() {
 					$('#bandageToClick').removeClass("select");
@@ -324,6 +329,7 @@ function enterElement() {
 			if(enterCnt >= 6) {
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();
+				$("#effect").attr("src", "/resources/bgm/ch03/needle.mp3");
 				$('#niddleToClick').addClass("select");
 				$('#niddleToClick').on("click", function() {
 					$('#niddleToClick').removeClass("select");

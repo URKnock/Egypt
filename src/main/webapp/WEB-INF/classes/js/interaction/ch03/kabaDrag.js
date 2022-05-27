@@ -24,7 +24,7 @@ function interaction() {
 				$('#ka').addClass("select");
 				$('#ka').addClass("pikachu");
  			}, 200);
-			$('#ka').on("click", function(){ object("#ka", 7); });	
+			$('#ka').on("click", function(){ object("#ka", 6); });	
 		});
 	}
 	if(scene == 4) {		
@@ -53,7 +53,7 @@ function interaction() {
  			}, 100);
 			$('#ba').on("click", function(){
 				$('#ba').animate({top : -300}, 500);
-				object("#ba", 8);
+				object("#ba", 7);
 			});	
 		});
 	}

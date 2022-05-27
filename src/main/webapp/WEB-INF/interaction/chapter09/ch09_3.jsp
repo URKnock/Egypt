@@ -58,4 +58,5 @@
 <jsp:include page="../help.jsp"/>
 <jsp:include page="../setting.jsp"/>
 <jsp:include page="../info_window.jsp"/>
+<jsp:include page="../shabti_new.jsp"/>
 </html>

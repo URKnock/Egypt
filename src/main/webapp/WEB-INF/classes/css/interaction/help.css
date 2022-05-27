@@ -1,0 +1,88 @@
+#help {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0; left: 0;
+	font-family: 'Daehan-Bold';
+	font-size: 30pt;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9000;
+}
+#help_title {
+	align-items: center;
+	margin: 50px;
+	padding-top: 25px;
+}
+#help_title img {
+	margin-left: 10px;
+	margin-right: 20px;
+	width: 38px;
+	height: 38px;
+}
+
+#help_container {
+	align-items: flex-end;
+	flex-direction: column;
+	background: no-repeat url("/resources/UI/Menu/bg_help.png");
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#help_container > div {
+	display: flex;
+	height: 100%;
+}
+#help_container > div > div, #help_title {
+	font-family: 'Minguk-Bold';
+	font-size: 30pt;
+	display: flex;
+	align-content: center;
+	color: #554740;
+	margin: 30px;
+}
+#help_nav {
+	display: flex;
+	flex-direction: column;
+}
+#help input {
+	font-family: 'Minguk-Bold';
+	font-size: 18pt;
+	color: #A8A19E;
+	background: transparent;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	width: 233px;
+	height: 64px;
+	text-align: left;
+	margin: 15px;
+	margin-left: 50px;
+	padding: 15px;
+	padding-left: 25px;
+	padding-top: 14px;
+}
+#help_content {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;	
+}
+.help_arrow {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	margin: 50px;
+}
+.help_hover {
+	color: #4F1B00 !important;
+	background: url("/resources/UI/Help/11.png") !important;
+}
+#help_close {
+	position: absolute;
+}

@@ -48,11 +48,11 @@ function imageReload() { //화면 재구성
 		$("#thoth").attr("src", '/resources/character/ch10/토트손내림기본.webp'); 
 	}, 2500);
 
-	if (nextChapter == "chapter12") {
+	if (nextChapter == "load?chapter=12") {
 		$("#ink").attr("src", '/resources/background/ch10/10_10_2.png');
 		$("#ink").addClass('flow');
 	}
-	else if (nextChapter == "chapter11") { $("#ink").addClass('flow'); }
+	else if (nextChapter == "load?chapter=11") { $("#ink").addClass('flow'); }
 }
 
 function soundReload() { //소리 재설정

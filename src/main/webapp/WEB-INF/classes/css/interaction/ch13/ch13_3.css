@@ -1,0 +1,99 @@
+#interact > img {
+	position: absolute;
+}
+
+#human {
+	bottom: 13%;
+	left: 33vh;
+}
+
+#tree {
+	bottom: 28%;
+	left: 19vh;
+}
+
+#wall {
+	top: 6.5%;
+}
+
+#ground {
+	bottom: 0%;
+}
+
+#ceiling {
+	top: 5%;
+	right: 0vh;
+}
+
+#horus {
+	top: 16%;
+	right: 35vh;
+}
+
+
+/* 기둥 배치 */
+
+#pillar1 {
+	top: 9%;
+	left: 63vh;
+}
+
+#pillar2 {
+	top: 9%;
+	right: 6vh;
+}
+
+#blood1 {
+	bottom: -0.6%;
+	left: 37vh;
+}
+
+#blood2 {
+	bottom: -0.7%;
+	right: 25vh;
+}
+
+#web1 {
+	bottom: 1%;
+	left: 23vh;
+}
+
+#web2 {
+	bottom: 0%;
+	right: 0vh;
+}
+
+/* 당나귀창 배치 */
+
+#spear1 {
+	bottom: 13%;
+	left: 8vh;
+}
+
+#spear2 {
+	bottom: 13%;
+	left: 10vh;
+}
+
+/* 당나귀화 사자 */
+#donkey1 {
+	bottom: 13%;
+	left: 85vh;
+}
+
+#donkey2 {
+	bottom: 13%;
+	left: 115vh;
+}
+
+
+#donkey3 {
+	bottom: 13%;
+	left: 145vh;
+}
+
+#devil {
+	bottom: 13%;
+	left: 58vh;
+}
+

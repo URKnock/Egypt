@@ -65,6 +65,7 @@ $(document).ready(function(){
 	switch(scene) {
 		case '1':
 			if(index != 0) {
+				$("#content img").attr("src", "/resources/UI/Dialogue/next_triangle.png");
 				$("#dialogue").on("click", function() {
 					$("form").submit();
 				});
@@ -79,11 +80,15 @@ $(document).ready(function(){
 			break;
 		case '0':
 		case '18':
+			$("#content img").attr("src", "/resources/UI/Dialogue/next_triangle.png");
 			$("#dialogue").on("click", function() {
 				$("form").submit();
 			});	
 			break;
 	}
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
 	$("#menu img:nth-child(2)").on("click", function() {
 		location.href="/chapter02";
 	});
@@ -104,9 +109,11 @@ function init() {
 	setDialogueSize();
 	setSetting();
 	setHelp();
+	setShabti();
 	
 	$("#setting").hide();
 	$("#help").hide();
+	$("#shabti").hide();
 	
 	resize("#human");
 	center("#human");

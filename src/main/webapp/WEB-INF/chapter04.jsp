@@ -36,7 +36,7 @@
 	</div>
 	
 	<div id="menu">
-		<img onclick="" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
+		<img onclick="shabti()" src="<c:url value='/resources/UI/Menu/1.png'/>"/>
 		<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>"/>
 		<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>"/>
 		<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>"/>
@@ -45,6 +45,7 @@
 </div>
 <jsp:include page="interaction/help.jsp"/>
 <jsp:include page="interaction/setting.jsp"/>
+<jsp:include page="interaction/shabti_new.jsp"/>
 <form method="post" action="<c:url value='/chapter04'/>">
 	<div id="order"></div>
 	<img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>

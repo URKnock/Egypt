@@ -74,6 +74,7 @@
 </div>
 <jsp:include page="../help.jsp"/>
 <jsp:include page="../setting.jsp"/>
+<jsp:include page="../shabti_new.jsp"/>
 <div id="blur"></div>
 	<input id ="sn" name="scene" type="hidden" value="${scene}"/>
 	<input name="index" type="hidden" value="${index}"/>

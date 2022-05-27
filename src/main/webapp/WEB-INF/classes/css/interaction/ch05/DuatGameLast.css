@@ -4,7 +4,11 @@ body {
   	overflow-y: hidden;
   	overflow-x: hidden; 
 }
-
+@keyframes rotate_image{ 
+	100% { 
+	transform: rotate(360deg);
+		 } 
+	 }
 #background {
 	width:100%;
 	height:100%;
@@ -14,33 +18,91 @@ body {
     -o-background-size: cover;
     background-size: cover;  
 }
-
-
-
-.mainC_s {
-	opacity:1;
-    position: absolute;
- 	top: 50%; left: -28%;
- 	transform: translate(70%,-50%);
-
- 	
-}
-.mainC_k {
-	opacity:0;
-    position: absolute;
- 	top: 50%; left: -28%;
- 	transform: translate(70%,-50%);
-
- 	
-}
-.spear {
-	opacity: 0;
+.m1 {
+	z-index: 1;
 	position: absolute;
-	width: 50px;
-	height: 340px;
-	left: 53%;
-	top: 30%; 
+  	top: 3%; right: 24.2%;
+ 	animation: rotate_image 4s ease;
+	opacity:1;
+} 
+.mandara2 {
+	z-index: 1;
+	opacity:1;
+	width:500px;
+	position: absolute;
+ 	top: 24.5%; right: 36%;
+	animation:rotate_image 4s ease; transform-origin: 50% 50%;
+	
 }
+.m2 {
+	position: absolute;
+	top: 3%; right: 24.2%;
+	animation:rotate_image 4s ease; transform-origin: 50% 50%;
+}
+.mandara1 {
+	z-index: 1;
+	opacity:1;
+	width: 100px;
+	position: absolute;
+ 	top: 42.7%;
+	right: 46.2%;
+    
+	
+}
+.mandaras {
+	z-index: 1;
+	opacity: 0.6;
+	position: absolute;
+	top: -11%;
+	left: 17.5%;
+
+}
+.spearno {
+	position: absolute;
+	top: 50%; left: 20%;
+}
+.spearno2 {
+	position: absolute;
+	top: 50%; left: 45%;
+}
+.s1 {
+	position: absolute;
+	top: -11%; left: 17%;
+}
+.s2 {
+	position: absolute;
+	top: -11%; right: 16.4%;
+}
+.s3 {
+	position: absolute;
+	top: 48%; left: 17%;
+}
+.s4 {
+	position: absolute;
+	top: 48%; right: 16.2%;
+}
+.saja {
+position: absolute;
+	z-index:1;
+	top: 12%; left: 23%;
+}
+.boat {
+	opacity:1;
+    position: absolute;    
+	z-index:2;
+ 	top: 50.5%; left: -25.5%;
+ 	transform: translate(70%,-50%);
+}
+
+.la {
+	position: absolute;
+	z-index:1;
+	top: 10.6%; left: 41.5%;
+	transform: scaleX(-1);	
+
+ 	
+}
+
 
 .guide2 {
 	opacity:0;
@@ -59,20 +121,53 @@ body {
 }
 
 .snake1 {
-	opacity:1;
-	transform: scaleY(-1); 
+	z-index:6;
+	opacity:0;
 	position: absolute; 
-	left: 0;
-	top: 0;	
+	top: 20%; 
+	left: -5%;	
 }
 .snake2 {
+	z-index:6;
 	opacity:1;
+	transform: scaleX(-1);
     position: absolute;
-    transform: scaleY(-1); 
- 	top: 50%; 	
- 	right: 0;
-	top: 0;	
+    right: -12%; 
+ 	top: 20%; 	
+	
+}
+.snake1_1 {
+	z-index:5;
+	opacity:1;
+	position: absolute; 
+	top: 20%; 
+	left: -13%;	
+}
+.snake2_1 {
+	z-index:5;
+	opacity:1;
+	transform: scaleX(-1);
+    position: absolute;
+    right: -9%; 
+ 	top: 20%; 	
+	
 }
 
-
-
+#order {
+	position: absolute;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Minguk-Bold';
+	font-size: 24px;
+	color: black;
+	min-width: 776px;
+	top: 50px;
+	left: 572px;
+	height: 88px;
+	background: no-repeat url("../../../UI/order.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

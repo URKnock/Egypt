@@ -70,6 +70,10 @@ body {
 	margin: auto 90px auto 100px;
 	padding-left: 50px;
 }
+#content img {
+	width: 25px;
+	height: 21px;
+}
 #content span {
 	font-family: 'Minguk-Bold';
 	color: red;

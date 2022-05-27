@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
 	$("#menu img:nth-child(2)").on("click", function() {
 		location.href="/chapter02";
 	});
@@ -23,9 +26,11 @@ function init() {
 	setSetting();
 	setHelp();
 	setSound();
+	setShabti();
 	
 	$("#setting").hide();
 	$("#help").hide();
+	$("#shabti").hide();
 	
 	if(scene == 0) {
 		$("#loading").fadeOut(2000);
@@ -93,8 +98,6 @@ function init() {
 			$("#user3").animate({left: "100%"}, 4000);
 			});	
 	}
-	
-	setSound();
 }
 
 function home() {

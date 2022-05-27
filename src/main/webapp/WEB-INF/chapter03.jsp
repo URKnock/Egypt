@@ -20,9 +20,6 @@
 		<c:when test="${flag ne 0 && scene ne 2}">
 			<img src="<c:url value='/resources/character/ch03/anubis_angry.webp'/>"/>
 		</c:when>
-		<c:when test="${scene eq 1}">
-			<img src="<c:url value='/resources/character/ch03/anubis_close.webp'/>"/>
-		</c:when>
 		<c:otherwise>
 			<img src="<c:url value='/resources/character/ch03/anubis_open.webp'/>"/>
 		</c:otherwise>
@@ -54,6 +51,7 @@
 <jsp:include page="interaction/help.jsp"/>
 <jsp:include page="interaction/setting.jsp"/>
 <jsp:include page="interaction/info_window.jsp"/>
+<jsp:include page="interaction/shabti_new.jsp"/>
 <form method="post" action="<c:url value='/chapter03'/>">
 <div id="order"></div>
 <img id="dialogue_bg" src='<c:url value="/resources/UI/Dialogue/0.png"/>'/>
@@ -68,7 +66,6 @@
 		</div>
 		<div id="content">
 			<p>${dialogue.content}</p>
-			<img />
 		</div>
 	</div>
 	<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">

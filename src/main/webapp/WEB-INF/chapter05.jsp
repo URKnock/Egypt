@@ -8,14 +8,15 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch05.css'/>"/> 
 <script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
-<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/ch05.js'/>"></script>
+<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 <script src="/resources/js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
 </head>
 <body onload="init(); interaction();">
 	<jsp:include page="interaction/help.jsp"/>
 	<jsp:include page="interaction/setting.jsp"/>
+	<jsp:include page="interaction/shabti_new.jsp"/>
 
 <div id="background">
 	<div id="ew">
@@ -88,7 +89,7 @@
 </form>
 <jsp:include page="interaction/info_window.jsp"/>
 <audio id="bgm" preload="auto" loop="true" autobuffer src="<c:url value='/resources/bgm/ch05/water_wave.mp3'/>"></audio>
-<audio id="voice" preload="auto" src="/resources/bgm/ch05/dumm.mp3"></audio>
+<audio id="voice" preload="auto" src=""></audio>
 <audio id="effect" preload="auto" src=""></audio>
 <div id="order"></div>
 </body>

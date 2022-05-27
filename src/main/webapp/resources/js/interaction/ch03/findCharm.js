@@ -43,10 +43,6 @@ function enterElement(elem) {
 		setTimeout(function() {
 			$("#" + elem.id).removeClass("grayContrast");
 			$("#" + elem.id).removeClass("originContrast");
-			$("#" + elem.id).addClass("select");
-		}, 600);
-		$("#" + elem.id).on("click", function() {
-			$("#" + elem.id).removeClass("select");
 			var arrIndex = parseInt(elem.id.slice(-1));
 			if(arrIndex != 3)
 				object(elem.id, (8 + arrIndex), arrIndex);
@@ -55,7 +51,7 @@ function enterElement(elem) {
 			if(clicked.indexOf(arrIndex) != -1) {
 				clicked.splice(clicked.indexOf(arrIndex), 1);
 			}
-		});
+		}, 600);
 		entered.push(elem.id);
 	}
 }

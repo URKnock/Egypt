@@ -19,29 +19,36 @@
 
 /* 캐릭터들 */
 #interact .character {
-	height: 89.07%;
-	bottom: 0%;
-	
 	z-index: 2;
 }
 #interact .character:nth-of-type(2) {
-	height: 90%;
-	
-	top: 37%;
-	left: -2.5%;
+	height: 111.29%;
+	bottom: -46%;
+	left: -40vh;
 }
 #interact .character:nth-of-type(3) {
-	right: 3%;
+	height: 100%;
+	bottom: 0%;
+	right: -1.5%;
 }
 #interact .character:nth-of-type(4) {
-	right: 30%;
+	height: 100%;
+	bottom: -5%;
+	right: 35%;
 }
 
 /* peseshkaf */
+#interact .object{
+	bottom: 37%;
+	left: 38vh;
+	transform: translate(-50%, 0%);
+
+	z-index: 3;
+}
 
 .tool {
 	position: fixed;
-	height: 21.01%;
+	height: 32.03%;
 	
 	top: 45%;
 	left: 22%;
@@ -52,14 +59,14 @@
 #spots {
 	position: absolute;
 	z-index: 5;
-	right: 30%;
-	top: 30%;
+	right: 35%;
+	top: 25%;
 }
 .circle {
 	/*cursor: pointer;*/
 	position: absolute;
-	width: 6vh;
-	height: 6vh;
+	width: 7vh;
+	height: 7vh;
 	border-radius: 50%;
 	background-color: #ffffff;
 	opacity: 0.5;
