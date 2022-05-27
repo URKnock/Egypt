@@ -8,8 +8,8 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch05.css'/>"/> 
 <script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
-<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/ch05.js'/>"></script>
+<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 <script src="/resources/js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
 </head>
