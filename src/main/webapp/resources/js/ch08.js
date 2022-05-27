@@ -25,6 +25,9 @@ function init() {
 	setSound(); 
 	setShabti();
 	
+	var nextButton = document.querySelector('#nextButton');
+	nextButton.style.display = "block";
+	
 	$("#setting").hide();
 	$("#help").hide();
 	$("#shabti").hide();

@@ -124,7 +124,7 @@
 					</div>
 					<div id="content">
 						<p id='con'>${dialogue.content}</p>
-						<img />
+						<img id="nextButton" src='<c:url value="/resources/UI/Dialogue/next_triangle.png"/>'>
 					</div>
 				</div>
 				<c:if test="${dialogue.choice ne null and dialogue.choice ne '-1'}">
