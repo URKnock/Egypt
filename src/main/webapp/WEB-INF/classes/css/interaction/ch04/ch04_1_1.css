@@ -4,24 +4,17 @@
 	animation: obj 1s;
 }
 #interact .object{
-	height: 23.61%;
-	top: 38%;
-	left: 58vh;
-	transform: translate(-50%, 0%);
-	
-	animation: obj 1s;
+	display: block;
+	height: 28%;
+	bottom: 37.18%;
 	z-index: 2;
-}
-@keyframes obj {
-	0% { top: 100%; }
-	100% { top: 38%; }
 }
 
 /* peseshkaf */
 
 .tool {
 	width: auto !important;
-	height: 21.01%;
+	height: 26.75%;
 	
 	top: 45%;
 	left: 22%;
@@ -31,7 +24,7 @@
 
 .oil {
 	position: absolute;
-	height: 3vh;
+	height: 4vh;
 	width: auto !important;
 	opacity: 0;
 	

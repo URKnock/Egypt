@@ -1,0 +1,25 @@
+.island-move:nth-child(1){
+	animation: move-low 3s infinite alternate; 
+	-webkit-animation: move-low 3s infinite alternate; 
+	animation-fill-mode: forwards;
+}
+.island-move:nth-child(4) {
+	animation: move-high 3s infinite alternate;
+	-webkit-animation: move-high 3s infinite alternate; 
+	animation-fill-mode: forwards;
+}
+.island-move:nth-child(10) {
+	animation: move-bottom 3s infinite alternate; 
+	-webkit-animation: move-bottom 3s infinite alternate; 
+	animation-fill-mode: forwards;
+}
+.island-move:nth-child(11) {
+	animation: move-semi-low 3s infinite alternate; 
+	-webkit-animation: move-semi-low 3s infinite alternate; 
+	animation-fill-mode: forwards;
+}
+.island-move:nth-child(12) {
+	animation: move-low 3s infinite alternate; 
+	-webkit-animation: move-low 3s infinite alternate; 
+	animation-fill-mode: forwards;
+}

@@ -15,25 +15,77 @@ body {
     background-size: cover;  
 }
 
-
-
-.mainC {
+.bae {
 	opacity:1;
-	z-index:2;
+	z-index:3;
     position: absolute;
  	top: 50%; left: -28%;
  	transform: translate(70%,-50%);
 
  	
 }
-.saja {
-	position: absolute;
-	z-index:1;
-	top: 50%; left: 30%;
-	transform: translate(70%,-50%);
+.boat {
+	opacity:1;
+    position: absolute;    
+	z-index:3;
+ 	top: 50.5%; left: -25.5%;
+ 	transform: translate(70%,-50%);
 }
 
+.la {
+	position: absolute;
+	z-index:2;
+	top: 10.6%; left: 41.5%;
+	transform: scaleX(-1);	
 
+ 	
+}
+.saja {
+position: absolute;
+	z-index:1;
+	top: 12%; left: 23%;
+}
+
+@keyframes rotate_image{ 
+	100% { 
+	transform: rotate(360deg);
+		 } 
+	 }
+@keyframes rotate_image_2{ 
+	100% { 
+	transform: rotate(-360deg);
+		 } 
+	 }	
+
+		 
+.m1 {
+	z-index: 1;
+	position: absolute;
+  	top: 47.5%; right: 49.6%;
+ 	transform: translate(50%,-50%);
+	opacity:1;
+} 
+.mandara1 {
+	z-index: 1;
+	opacity:1;
+	width: 100px;
+	position: absolute;
+ 	top: 42.7%;
+	right: 46.2%;
+    animation: rotate_image 5s ease;
+    transform-origin: 50% 50%;
+	
+}
+.mandara2 {
+	z-index: 1;
+	opacity:1;
+	width: 500px;
+	position: absolute;
+ 	top: 24.5%; right: 36%;
+	 animation: rotate_image_2 5s ease;
+     transform-origin: 50% 50%;
+	
+}
 .guide2 {
 	opacity:0;
 	position: absolute;
@@ -52,33 +104,73 @@ body {
 
 .ant1 {
 	opacity:1;
-	z-index:2;
+	z-index:5;
 	position: absolute; 
-	left: -11%;
-	top: 60%;	
+	left: -15%;
+	top: 50%;	
 }
 .ant2 {
 	opacity:1;
-	z-index:2;
+	z-index:5;
     position: absolute;
- 	top: 50%; 	
- 	left: 21%;
+ 	top: 47%; 	
+ 	left: 25%;
 }
 .ant3 {
 	opacity:1;
-	z-index:2;
+	z-index:5;
 	position: absolute;
-    top: 30%;
-    left: 40%;	
+    top: 50%;
+    left: 47%;	
 }
 .ant4 {
 	opacity:1;
-	z-index:2;
+	z-index:5;
     position: absolute;
     transform: scaleX(-1); 
-	top: 26%;
-    left: 60%;
+	top: 45%;
+    left: 57%;
 }
 
-
-
+.s1 {
+	z-index:4;
+	 position: absolute;
+	 top: 40%;
+	 left: 20%;
+}
+.s2 {
+	z-index:4;
+	 position: absolute;
+	 top: 25%;
+	 left: 25%;
+}
+.s3 {
+	z-index:4;
+	 position: absolute;
+	 top: 15%;
+	 left: 29%;
+}
+.s4 {
+	z-index:4;
+	 position: absolute;
+	 top: 15%;
+	 left: 35%;
+}
+#order {
+	position: absolute;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Minguk-Bold';
+	font-size: 24px;
+	color: black;
+	min-width: 776px;
+	top: 50px;
+	left: 572px;
+	height: 88px;
+	background: no-repeat url("../../../UI/order.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

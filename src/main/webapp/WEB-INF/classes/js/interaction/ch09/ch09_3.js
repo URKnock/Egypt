@@ -1,5 +1,32 @@
-function init() {	
-	setSound(); 
+$(document).ready(function() {
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
+});
+
+function init() {
+	w = $("#mp4").width() / 1920;
+	h = $("#mp4").height() / 1080;
+	x = $("#mp4").width() / 2.0;
+	
+	setSetting();
+	setHelp();
+ 	setSound();
+ 	setShabti();
+ 	
+	$("#setting").hide();
+	$("#help").hide();
+	$("#shabti").hide();
+
 	$("#background > img:nth-child(4)").addClass("select");
 			$("#next").addClass("pikachu");
 			$("#pre").addClass("pikachu");
@@ -13,7 +40,15 @@ function init() {
 			$("#c3").on("click", function() {
 				objectSubmit("#c3");
 			});
-
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
 	/*스르륵*/
 	$("body").css("display", "none");
 	$("body").fadeIn(500);
@@ -28,22 +63,22 @@ function init() {
 		window.location = linkLocation;
 }
 	$("#c4").click(function() {
-		var audio = new Audio('/D/resources/bgm/ch09/grass.mp3');
+		var audio = new Audio('/resources/bgm/ch09/grass.mp3');
 		audio.play();
 		$("#c2").attr("src", 
-			"/D/resources/character/ch09/2층 카무트 노예2.webp");	
+			"/resources/character/ch09/2층 카무트 노예2.webp");	
 		$("#c4").attr("src", 
-			"/D/resources/character/ch09/2층 카무트2.webp");
+			"/resources/character/ch09/2층 카무트2.webp");
 		setTimeout(function() {
-					object("#c4", 35);
+					object("#c4", 34);
 					//object("#c2", 34);
 				}, 3800);	
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 
 		$("#c4").attr("src", 
-			"/D/resources/character/ch09/2층 카무트1.webp");
+			"/resources/character/ch09/2층 카무트1.webp");
 		$("#c2").attr("src", 
-		"/D/resources/character/ch09/2층 카무트 노예1.webp");
+		"/resources/character/ch09/2층 카무트 노예1.webp");
 		 }					
  		});
 	
@@ -51,25 +86,25 @@ function init() {
 		
 			
 	$("#c3").click(function() {
-		var cow = new Audio('/D/resources/bgm/ch09/cow.mp3');
+		var cow = new Audio('/resources/bgm/ch09/cow.mp3');
 		cow.play();
 		$("#c3").attr("src", 
-		"/D/resources/character/ch09/2층 탈곡2.webp");
+		"/resources/character/ch09/2층 탈곡2.webp");
 		$("#cow1").attr("src", 
-		"/D/resources/character/ch09/2층 소2.webp");
+		"/resources/character/ch09/2층 소2.webp");
 		$("#cow2").attr("src", 
-		"/D/resources/character/ch09/2층 소2.webp");
+		"/resources/character/ch09/2층 소2.webp");
 		setTimeout(function() {
-					object("#c3", 36);
+					object("#c3", 35);
 				}, 2000);
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 
 		$("#c3").attr("src", 
-			"/D/resources/character/ch09/2층 탈곡1.webp");
+			"/resources/character/ch09/2층 탈곡1.webp");
 		$("#cow1").attr("src", 
-		"/D/resources/character/ch09/2층 소1.webp");
+		"/resources/character/ch09/2층 소1.webp");
 		$("#cow2").attr("src", 
-		"/D/resources/character/ch09/2층 소1.webp");			 
+		"/resources/character/ch09/2층 소1.webp");			 
 	}
 		
 	});

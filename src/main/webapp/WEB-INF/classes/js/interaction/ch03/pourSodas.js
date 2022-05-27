@@ -5,6 +5,7 @@ function interaction() {
 	$('#dragSpot').hide();
 	$("#background").css("background", "no-repeat url(/resources/background/ch03/3_5.png) center top");
 	$('#background').children().hide();
+	$("#effect").attr("src", "/resources/bgm/ch03/soda2.mp3");
 
 	var arr = ["#hum", "#soda_head", "#soda_body", "#soda_bottom", "#soda_leg", "#soda_over"]
 	arr.forEach (function (item, idx) {
@@ -43,7 +44,8 @@ function interaction() {
 		$('#pot').css("left", dragLeft - $("#pot").width());
 		$('#dragSpot').show();
 		$('#dragSpot').css("top", 500*h-55);
-		$('#dragSpot').css("left", dragLeft + $('#dragLine').width());		
+		$('#dragSpot').css("left", dragLeft + $('#dragLine').width());	
+		effect();	
 	});
 	$('#potToClick').hide();
 	

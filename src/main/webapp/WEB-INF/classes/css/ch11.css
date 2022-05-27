@@ -9,14 +9,65 @@
 .pikachu:active {
 	transform: scale(1.0);
 }
-/*
-.pikachu-pre:hover {
-	transform: matrix(-1, 0, 0, 1.1, 0, 0);
-	transform-origin: bottom center;
+
+img {
+	-webkit-user-drag: none;
 }
-.pikachu-pre:active {
-	transform: matrix(-1, 0, 0, 1.0, 0, 0);
-}*/
+body {
+	user-select:none;
+}
+
+#view {
+	width: 100vw;
+	height: 100vh !important;
+	
+	/*display: flex;*/
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	font-size: 2vh;
+}
+
+#warning {
+	position: absolute;
+	display: none;
+	
+	width: 100%; height: 100%;
+	top: 0; left: 0;
+	
+	background-color: black;
+	opacity: 0.7;
+	z-index: 1000;
+
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#warning div{
+	color: white;
+	font-size: 5vh;
+	text-align: center;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+/* #loading { */
+/* 	display: none; */
+/* } */
+
+#setting_container {
+	width: 110.64vh;
+	height: 60.64vh;
+}
+#setting_close {
+	left: 137.63vh;
+	top: 22.45vh
+}
 
 #background {
 	width:100%;
@@ -24,17 +75,18 @@
 	background: no-repeat url("../background/ch11/ch11_bg_1.png") center center;
     background-size: 100% 100%;
 }
-#background > img {
-	width:initial;
-	height:initial;
-	position:absolute;
-}
 
 #human {
-	transform: scaleX(-1)
+	transform: scaleX(-1);
+	left: 16vh;
 }
 
-/*
+#arrow {
+	right: 4vh;
+	bottom: 50%;
+}
+
 #arrow_pre {
-	transform: matrix(-1, 0, 0, 1.1, 0, 0);
-}*/
+	left: 4vh;
+	bottom: 50%;
+}

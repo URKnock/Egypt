@@ -1,29 +1,57 @@
+$(document).ready(function() {
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
+});
+
 var count = 0;
 var w, h, x, y;
+var first = new Audio('/resources/bgm/ch09/9_5_1_0.wav');
+var second = new Audio('/resources/bgm/ch09/9_5_2_0.wav');
 function interaction() { }; 
 function init() {
-	setSound(); 
 	w = $("body").width() / 1920;
 	h = $("body").height() / 1080;
 	x = $("body").width() / 2.0;
 	
 	setDialogueSize();
+	setSetting();
+	setHelp();
+ 	setSound();
+ 	setShabti();
+	
+	$("#setting").hide();
+	$("#help").hide();
+	$("#shabti").hide();
+	
 	scene = $("input[name='scene']").val();
 	index = $("input[name='index']").val();
 	flag = $("input[name='flag']").val();
 	choice = $("input[name='choice']").val();
 	
-	$("button").on("click", function() {
+	$("button").on("click", function() {	
 		//console.log($(this).val());
 		if($(this).val() == 0) {
 			$("#content").val(1);
 			console.log(scene);
 			console.log($("#content").val());
 			$("#choice").hide();
-			var second = new Audio('/D/resources/bgm/ch09/9_5_2_0.wav');
+			
 			second.play();				
 			$("#con").text('잘 다녀오거라 사자여, 평안한 안식이 되기를 바란다.');
+			setTimeout(function() {
+			location.href="/chapter02"; }, 6500);
 		}
+		
 		if($(this).val() == 1) {
 		$("#dialogue_bg").hide();
 		$("#dialogue").hide();
@@ -70,7 +98,7 @@ function init() {
 
 
 	$("#boat_1").click(function() {
-		 object("#boat_1", 40);
+		 object("#boat_1", 39);
 		count++;
 		document.querySelector('.close').onclick 
 		= function() { hide_info(); 
@@ -78,9 +106,11 @@ function init() {
 			$("#c2").addClass("select2");
 		}
 	$("#c2").click(function() {
-		var first = new Audio('/D/resources/bgm/ch09/9_5_1_0.wav');
 		first.play();	
-	
+		if($("button").on("click", function() {
+			first.pause();
+			first.currentTime = 0;
+			}));
 		$("#c2").removeClass("select2");
 		$("#dialogue_bg").show();
 		$("#dialogue").show();

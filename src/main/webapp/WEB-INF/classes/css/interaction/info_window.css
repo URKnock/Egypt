@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daehan-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .info_back {
 	display: none;
 	position: absolute;
@@ -12,67 +25,94 @@
 	display: none;
 	position: absolute;
 
-	background: ivory;
-	width: 70vh;
-	height: 35%;
+	width: 100vw;
+	height: 100vh;
 	
+	top: 0%;
+	left: 0%;
+	
+	z-index: 1000;
+	font-weight: bold;
+}
+#window>img {
+	position: absolute;
+	width: auto;
+	height: 100vh;
 	left: 50%;
 	top: 50%;
-	
-	transform: translate(-50%, -85%);
-	z-index: 1000;
+	transform: translate(-50%, -50%);
 }
 
 #window .infoImg {
 	position: absolute;
-	width: 22vh;
-	height: 22vh;
+	width: 28vh;
+	height: 28vh;
 	
-	background-position: center center;
-	background-attachment: scale-down;
-	
-	left: 5%;
+	left: 50%;
 	top: 50%;
 	
-	transform: translate(0%, -50%);
-	
-	background: blanchedalmond;
+	transform: translate(-125%, -50%);
+}
+#window .infoImg>img {
+	width: 100%;
+	height: 100%;
 }
 #window .infoText {
 	position: absolute;
 	
-	width: 55%;
+	width: 40vh;
 	
-	left: 40%;
+	left: 50%;
 	top: 50%;
 	
-	transform: translate(0%, -50%);
-	
-	border: 1px soild blue;
+	transform: translate(-10%, -50%);
 }
-#window .infoText .name{
+#window .infoText .top{
+	display: flex;
+	width: 100%;
+}
+#window .infoText .top .name{
 	font-family: 'Daehan-Regular';
-	font-size: 3vh;
-	text-align: left;
-}
-#window .infoText .content{
-	margin-top: 10%;
-	
-	font-size: 2vh;
-	text-align: left;
+	font-size: 2.77vh;
 	font-weight: bold;
+}
+#window .infoText .tag{
+	position: relative;
+	margin: 0.5vh;
+	margin-left: 2vh;
+	width: 9.39vh;
+	height: 2.31vh;
+}
+#window .infoText .tag>img{
+	height: 2.31vh;
+	width: auto;
+	opacity: 0.5;
+}
+#window .infoText .tag>div{
+	position: absolute;
+	width: 15vh;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.85vh;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+#window .infoText .content{
+	margin-top: 5%;
+	
+	font-size: 2.22vh;
 }
 
 #window .close {
 	position: absolute;
-	font-size: 4vh;
 	
-	right: 1vh;
-	top: 0.5vh;
+	left: 50%;
+	top: 50%;
 	
 	width: 5vh;
 	height: 5vh;
-	
-	text-align: center;
-	color: burlywood;
+	transform: translate(660%, -350%);
 }

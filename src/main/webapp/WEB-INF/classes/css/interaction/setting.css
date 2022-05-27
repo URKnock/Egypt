@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Minguk-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minguk-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Daehan-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Daehan-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #setting {
 	display: none;
 	align-items: center;
@@ -26,7 +47,7 @@
 }
 #setting_container > div {
 	font-family: 'Minguk-Bold';
-	font-size: 32px;
+	font-size: 32pt;
 	color: #554740;
 }
 .audioSlider {
@@ -68,11 +89,16 @@
 	display: flex;
 	color: #554740;
 }
-#setting_container > div:nth-child(1) {
+#setting_title {
 	display: flex;
 	align-content: center;
 	color: #554740;
 	margin: 30px;
+}
+#setting_title img {
+	width: 37px;
+	height: 39px;
+	align-self: center;
 }
 #setting_container > div:nth-child(2) {
 	display: flex;
