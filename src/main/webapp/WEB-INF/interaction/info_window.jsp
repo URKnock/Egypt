@@ -7,6 +7,9 @@
 	span {
 		color: red;
 	}
+	#window .infoText .tag>img{
+		opacity: 1;
+	}
 </style>
 <div class="info_back"></div>
 <div id="window">
