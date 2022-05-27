@@ -15,6 +15,8 @@ function interaction() {
 		centerX(item);
 		$(item).css("bottom", 317*h);
 	});
+	resize("#shine");
+	centerX("#shine");
 	$("#soda_over").css("bottom", 334*h);
 	$("#effect").attr("src", "/resources/bgm/ch03/kettle.mp3");
 
@@ -112,7 +114,7 @@ function checkWipeCount() {
 		$('#linen').css("left", x + 80*w - ($('#linen').width() / 2));
 		$('#arrowLine').fadeOut(500);
 		$('.soda').fadeOut(1000);
-		$('#shine').fadeIn(1000);
+		$('#shine').delay(500).fadeIn(1000);
 		effect();
 		setTimeout(function() { 
 			$("form").submit();
