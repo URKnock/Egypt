@@ -21,23 +21,27 @@
 	</div>
 	
 	<!-- character -->
-	<img class="character" src="<c:url value='/resources/webp/ch04/servant_5_out.webp'/>">
-	<img class="character" src="<c:url value='/resources/webp/ch04/servant_6_out.webp'/>">
+	<img id="servant1" class="character" src="<c:url value='/resources/webp/ch04/servant_5_victim2.webp'/>">
+	<img id="servant2" class="character" src="<c:url value='/resources/webp/ch04/servant_6_victim2.webp'/>">
 	<img id="anubis" class="character" src="<c:url value='/resources/webp/ch04/anubis_1_motion.webp'/>">
 </div>
 
 <script defer>
 	var body = document.querySelector('body');
 	var anubis = document.querySelector('#anubis');
+	var servant1 = document.querySelector('#servant1');
+	var servant2 = document.querySelector('#servant2');
 	
 	body.onload = function() { 
 		setSomething();
 		setTimeout(function(){
 			anubis.src = "resources/webp/ch04/anubis_1_talk.webp";
+			servant1.src = "resources/webp/ch04/servant_5_out.webp";
+			servant2.src = "resources/webp/ch04/servant_6_out.webp";
 		}, 2400);
 		$("#voice").bind("ended", function() {
 			anubis.src = "resources/webp/ch04/anubis_1.webp";
-			setTimeout(next, 100)
+			setTimeout(next, 500);
 		});
 	};
 	
