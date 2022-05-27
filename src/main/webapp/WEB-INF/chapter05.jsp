@@ -8,8 +8,8 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/dialogue.css'/>"/> 
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ch05.css'/>"/> 
 <script src="<c:url value='/resources/js/jquery/jquery-3.6.0.min.js'/>"></script>
-<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/ch05.js'/>"></script>
+<script src="<c:url value='/resources/js/dialogue.js'/>"></script>
 <script src="<c:url value='/resources/js/interaction/info_window.js'/>"></script>
 <script src="/resources/js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
 </head>
@@ -17,12 +17,6 @@
 	<jsp:include page="interaction/help.jsp"/>
 	<jsp:include page="interaction/setting.jsp"/>
 	<jsp:include page="interaction/shabti_new.jsp"/>
-		<div id="menu">
-			<img onclick="shabti()" src="<c:url value='/resources/UI/Menu/1.png'/>" />
-			<img onclick="home()" src="<c:url value='/resources/UI/Menu/2.png'/>" />
-			<img onclick="setting()" src="<c:url value='/resources/UI/Menu/3.png'/>" /> 
-			<img onclick="help()" src="<c:url value='/resources/UI/Menu/4.png'/>" />
-		</div>
 
 <div id="background">
 	<div id="ew">

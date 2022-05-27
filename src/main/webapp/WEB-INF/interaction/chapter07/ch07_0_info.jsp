@@ -43,8 +43,8 @@
 	<!-- character -->
 	<img class="character" src="<c:url value='/resources/character/ch07/6_1.png'/>">
 	<img id="active" onclick="tap_info(this, 1)" class="character" src="<c:url value='/resources/webp/ch07/anubis_talk.webp'/>">
-	<img id="active" onclick="tap_info(this, 2)" class="character" src="<c:url value='/resources/webp/ch07/horus.webp'/>">
-	<img id="active" onclick="tap_info(this, 3)"class="character" src="<c:url value='/resources/webp/ch07/thoth.webp'/>">
+	<img id="active" onclick="tap_info(this, 3)" class="character" src="<c:url value='/resources/webp/ch07/horus.webp'/>">
+	<img id="active" onclick="tap_info(this, 2)"class="character" src="<c:url value='/resources/webp/ch07/thoth.webp'/>">
 	<img id="active" onclick="tap_info(this, 5)" class="character" src="<c:url value='/resources/webp/ch07/ammut.webp'/>">
 
 	<div class="guide">
