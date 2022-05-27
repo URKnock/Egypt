@@ -58,7 +58,8 @@ public class ChapterController implements Controller {
 
 		if(json.getData().size() == s) {
 			session.setAttribute("chapter", chapter - 1);
-			return "/chapter02.jsp";
+			response.sendRedirect("/chapter02");
+			return null;
 		}
 		
 		String choice = "-1";
