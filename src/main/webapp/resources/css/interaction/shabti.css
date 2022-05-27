@@ -12,6 +12,7 @@
 	z-index: 9000;
 }
 #shabti_title {
+	font-family: 'Daehan-Bold' !important; 
 	align-items: center;
 	margin: 50px;
 	padding-top: 25px;
