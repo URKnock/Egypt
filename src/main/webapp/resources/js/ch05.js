@@ -72,10 +72,14 @@ function init() {
 		$("#la").animate({right: "30%"}, 6800);
 		setTimeout(function() {
 		first.play();
+		$("#nextButton").css({"padding-top":"64px"});
+		$("#nextButton").css({"padding-left":"12px"});
 		}, 7400); 
 } 
 	
 	 else if(scene == 3) { /* 두아트 정보창 */
+		$("#nextButton").css({"padding-top":"64px"});
+		$("#nextButton").css({"padding-left":"12px"});
 		$("#order").css("display", "flex");
 		$("#order").text("마우스로 클릭하여 주변을 둘러보세요.");
 		$("#gogoboat").css({opacity:0});
