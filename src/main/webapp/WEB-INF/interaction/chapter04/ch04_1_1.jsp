@@ -40,7 +40,7 @@
 	var servant = document.querySelector('#servant');
 	var active = document.querySelector('#active');
 	body.onload = function() { 
-		setTimeout(init_pese, 3000); setSomething();
+		init_pese(); setSomething();
 		servant.src = "resources/webp/ch04/servant_4.webp";
 		active.src = "resources/webp/ch04/bottle.webp";
 	};

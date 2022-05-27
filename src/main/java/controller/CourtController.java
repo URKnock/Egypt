@@ -59,7 +59,7 @@ public class CourtController implements Controller {
 
 		if(json.getData().size() == s && chapter != 14) {
 			session.setAttribute("chapter", chapter - 1);
-			return "/chapter02.jsp";
+			return "/chapter02";
 		}
 		String choice = "-1";
 		Dialogue dialogue = null;
