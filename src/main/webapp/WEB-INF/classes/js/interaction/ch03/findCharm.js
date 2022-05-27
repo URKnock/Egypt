@@ -48,7 +48,10 @@ function enterElement(elem) {
 		$("#" + elem.id).on("click", function() {
 			$("#" + elem.id).removeClass("select");
 			var arrIndex = parseInt(elem.id.slice(-1));
-			object(elem.id, (8 + arrIndex), arrIndex);
+			if(arrIndex != 3)
+				object(elem.id, (8 + arrIndex), arrIndex);
+			else
+				object(elem.id, 8, arrIndex);
 			if(clicked.indexOf(arrIndex) != -1) {
 				clicked.splice(clicked.indexOf(arrIndex), 1);
 			}

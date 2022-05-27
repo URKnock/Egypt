@@ -25,21 +25,16 @@ body {
 }
 
 
-.mainC_s {
+.chs {
 	opacity:1;
 	z-index:2;
     position: absolute;
- 	top: 50%; left: -28%;
- 	transform: translate(70%,-50%);
+  	top: 54.8%; right: 51%;
+ 	transform: translate(50%,-50%);
 	
 }
 
-.saja {
-	position: absolute;
-	z-index:1;
-	top: 50%; left: 30%;
-	transform: translate(70%,-50%);
-}
+
 
 .crocs1 {
 	z-index:3;

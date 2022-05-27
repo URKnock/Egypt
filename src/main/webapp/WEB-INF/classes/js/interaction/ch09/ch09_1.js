@@ -1,5 +1,32 @@
+$(document).ready(function() {
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
+});
+
 function init() {
-	setSound(); 
+	w = $("#mp4").width() / 1920;
+	h = $("#mp4").height() / 1080;
+	x = $("#mp4").width() / 2.0;
+	
+	setSetting();
+	setHelp();
+ 	setSound();
+ 	setShabti();
+ 	
+	$("#setting").hide();
+	$("#help").hide();
+	$("#shabti").hide();
+
 	$("#background > img:nth-child(4)").addClass("select");
 			$("#c3").addClass("select");
 			$("#c3").addClass("pikachu");
@@ -7,48 +34,50 @@ function init() {
 			$("#c3").on("click", function() {
 				objectSubmit("#c3");
 			});
-			
+		$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});	
 	$("#c3").click(function() {
 		$("#c2").attr("src", 
-		"/D/resources/character/ch09/1층 공물 노예2.webp");
+		"/resources/character/ch09/1층 공물 노예2.webp");
 		$("#c3").attr("src", 
-		"/D/resources/character/ch09/1층 공물2.webp");
+		"/resources/character/ch09/1층 공물2.webp");
 		$("#keepers").attr("src", 
-		"/D/resources/character/ch09/1층 관문신2.webp");
+		"/resources/character/ch09/1층 관문신2.webp");
 		setTimeout(function() {
-					object("#c3", 33);
+					object("#c3", 32);
 				}, 3300);
 		document.querySelector('.close').onclick 
 		= function() { hide_info();
 		$("#c2").attr("src", 
-		"/D/resources/character/ch09/1층 공물 노예1.webp");
+		"/resources/character/ch09/1층 공물 노예1.webp");
 		 $("#c3").attr("src", 
-		"/D/resources/character/ch09/1층 공물1.webp");
+		"/resources/character/ch09/1층 공물1.webp");
 		$("#keepers").attr("src", 
-		"/D/resources/character/ch09/1층 관문신1.webp"); }		
+		"/resources/character/ch09/1층 관문신1.webp"); }		
 
 		
 /*		 $(".modal").fadeIn();
 			$(".modal_content").click(function(){
     		$(".modal").fadeOut();
 			$("#c2").attr("src", 
-			"/D/resources/Character/ch09/1층 공물 노예2.webp");
+			"/resources/Character/ch09/1층 공물 노예2.webp");
 			$("#c3").attr("src", 
-			"/D/resources/Character/ch09/1층 공물2.webp");
+			"/resources/Character/ch09/1층 공물2.webp");
 			$("#keepers").attr("src", 
-			"/D/resources/Character/ch09/1층 관문신2.webp");
+			"/resources/Character/ch09/1층 관문신2.webp");
 			//원상태로 돌아감
 			setTimeout(function() { 
 			$("#c2").attr("src", 
-			"/D/resources/Character/ch09/1층 공물 노예1.webp");	
+			"/resources/Character/ch09/1층 공물 노예1.webp");	
 			}, 3900);
 			setTimeout(function() { 
 			$("#c3").attr("src", 
-			"/D/resources/Character/ch09/1층 공물1.webp");		
+			"/resources/Character/ch09/1층 공물1.webp");		
 			}, 3000);
 			setTimeout(function() { 
 			$("#keepers").attr("src", 
-			"/D/resources/Character/ch09/1층 관문신1.webp");		
+			"/resources/Character/ch09/1층 관문신1.webp");		
 			}, 1650);
  	});	*/
 		 

@@ -1,7 +1,48 @@
-function init() {
-	
+$(document).ready(function() {
+	$("#menu img:nth-child(1)").on("click", function() {
+		$("#shabti").css("display", "flex");
+	});
+	$("#menu img:nth-child(2)").on("click", function() {
+		location.href="/chapter02";
+	});
+	$("#menu img:nth-child(3)").on("click", function() {
+		$("#setting").css("display", "flex");
+	});
+	$("#menu img:nth-child(4)").on("click", function() {
+		$("#help").css("display", "flex");
+	});
+});
+
+function init() {	
 	scene = $("input[name='scene']").val();
-	if(scene == 1) {
+	index = $("input[name='index']").val();
+	flag = $("input[name='flag']").val();
+	
+	w = $(".background").width() / 1920;
+	h = $(".background").height() / 1080;
+	x = $(".background").width() / 2.0;
+	
+	setDialogueSize();
+	setSetting();
+	setHelp();
+	setSound();
+	setShabti();
+	
+	$("#setting").hide();
+	$("#help").hide();
+	$("#shabti").hide();
+	
+	if(scene == 0) {
+		$("#loading").fadeOut(2000);
+	} else {
+		$("#loading").hide();
+	}
+	
+	if(scene == 1) {	
+		setTimeout(function () {
+		  $("#voice").trigger("play");
+		}, 9000);
+		
 		$("form").hide().delay(8000).fadeIn(1000);
 		
 		$("#boat").css("right", "100%" );
@@ -11,13 +52,18 @@ function init() {
 		$("#la").animate({right: "45%"}, 4000);
 		
 		$("#user").css("right", "124%").css("top", "25%");
-		$("#user").animate({right: "59%"}, 4000).animate({right: "14%", top: "16.5%"}, 4000).animate({opacity: "0"});
+		$("#user").animate({right: "59%"}, 4000).animate({opacity: "0"}, 100);
+		$("#user3").delay(3900).animate({opacity: "100%"}).animate({right: "14%", top: "15%"}, 3700).animate({opacity: "0"}, 300);
 		
 		$("#user2").delay(8000).animate({opacity: "100%"});
 		
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
-	else if(scene == 2) {
+	else if(scene == 2) {	
+		setTimeout(function () {
+		  $("#voice").trigger("play");
+		}, 9000);
+		
 		$("#boat").css("right", "35%" );
 		$("#boat").animate({left: "100%"}, 4000);
 		
@@ -44,10 +90,29 @@ function init() {
 		
 		$("#dialogue").delay(4000).on("click", function() { 
 			setTimeout("$('form').submit()", 4000);
-			$("#anubis").css("opacity", "100%").css({'transform':'rotateY('+180+'deg)'});
+			$("#anubis3").css("opacity", "100%");
 			$("#anubis2").css("opacity", "0%");
-			$("#anubis").animate({left: "116%"}, 4000);
-			$("#user").animate({left: "100%"}, 4000);
+			$("#anubis3").animate({left: "116%"}, 4000);
+			$("#user").css("opacity", "0");
+			$("#user3").css("right", "50%").css("top", "14.5%").css("opacity", "100%");
+			$("#user3").animate({left: "100%"}, 4000);
 			});	
 	}
 }
+
+function home() {
+	location.href = "chapter02";
+}
+/*
+function setting() {
+	$("#setting").css("display", "flex");
+}
+function setSomething() {
+	setSound();
+	setSetting();
+	setHelp();
+	
+	$("#setting").css('display', 'hide');
+	$("#help").hide();
+}
+*/
