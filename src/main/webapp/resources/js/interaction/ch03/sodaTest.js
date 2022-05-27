@@ -7,7 +7,6 @@ function interaction() {
 	
 	resizeCenter("#human_soda");
 	resizeCenter("#human_cover");
-	$("#effect").attr("src", "/resources/bgm/ch03/soda1.mp3");
 
 	function human_rescale() {
 		var arr = ["#human", "#human_soda", "#human_band", "#human_cover"];
@@ -167,6 +166,7 @@ function interaction() {
 	$('#potToClick').css("top", $("#scroll").height() - $('#potToClick').height() - 27*h);
 	$('#potToClick').css("left", x - $("#scroll").width() / 4 - ($('#potToClick').width() / 2));
 	$('#potToClick').on("click", function() {
+		$("#effect").attr("src", "/resources/bgm/ch03/soda1.mp3");
 		var sLeft = $('#background').width() / 2 - $('#pot').width() / 2;
 		$('#potToClick').removeClass("select");
 		$('#potToClick').hide();
