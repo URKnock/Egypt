@@ -3,7 +3,7 @@ $(document).ready(function() {
 		$("#shabti").css("display", "flex");
 	});
 	$("#menu img:nth-child(2)").on("click", function() {
-		location.href=" ";
+		location.href="/chapter02";
 	});
 	$("#menu img:nth-child(3)").on("click", function() {
 		$("#setting").css("display", "flex");
