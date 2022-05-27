@@ -304,7 +304,9 @@ function enterElement() {
 		enterCnt++;
 		effect();
 		if(onUsing == "pot") {
-			$('#human_soda').attr("src", "/resources/object/ch03/soda_" + enterCnt + ".png");
+			if(enterCnt <= 3) {
+				$('#human_soda').attr("src", "/resources/object/ch03/soda_" + enterCnt + ".png");
+			}
 			if(enterCnt >= 3) {
 				enterCnt == 0;
 				$("#" + onUsing).off("mousedown");
@@ -325,7 +327,9 @@ function enterElement() {
 				});
 			}
 		} else if(onUsing == "bandage") {
-			$('#human_band').attr("src", "/resources/object/ch03/bandage_" + (enterCnt - 3) + ".png");
+			if(enterCnt <= 6) {
+				$('#human_band').attr("src", "/resources/object/ch03/bandage_" + (enterCnt - 3) + ".png");
+			}
 			if(enterCnt >= 6) {
 				$("#" + onUsing).off("mousedown");
 				$("#" + onUsing).hide();

@@ -65,6 +65,7 @@ $(document).ready(function(){
 	switch(scene) {
 		case '1':
 			if(index != 0) {
+				$("#content img").attr("src", "/resources/UI/Dialogue/next_triangle.png");
 				$("#dialogue").on("click", function() {
 					$("form").submit();
 				});
@@ -79,6 +80,7 @@ $(document).ready(function(){
 			break;
 		case '0':
 		case '18':
+			$("#content img").attr("src", "/resources/UI/Dialogue/next_triangle.png");
 			$("#dialogue").on("click", function() {
 				$("form").submit();
 			});	

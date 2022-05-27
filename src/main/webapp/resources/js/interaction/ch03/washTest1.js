@@ -157,8 +157,9 @@ function checkWipeCount() {
 	} else if(wipeCount == 300) {
 		$('#linen').css("top", $("#scroll").height() - $('#linen').height() - 27*h);
 		$('#linen').css("left", x + 80*w - ($('#linen').width() / 2));
+		$('#arrowLine').fadeOut(500);
 		$('.dirt').fadeOut(1000);
-		$('#shine').fadeIn(1000);
+		$('#shine').delay(500).fadeIn(1000);
 		effect();
 		setTimeout(function() { 
 			$("form").submit();
