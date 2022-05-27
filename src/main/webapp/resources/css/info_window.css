@@ -86,7 +86,7 @@
 #window .infoText .tag>img{
 	height: 2.31vh;
 	width: auto;
-	opacity: 0.5;
+	opacity: 1;
 }
 #window .infoText .tag>div{
 	position: absolute;
