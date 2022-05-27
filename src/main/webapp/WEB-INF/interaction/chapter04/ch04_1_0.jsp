@@ -23,9 +23,9 @@
 	<img id="active" onclick="tap_tool(this)" class="object">
 	
 	<div id="spots">
-		<div id="spot" class="circle" style="top: -2vh; right: 17vh;"></div>
-		<div id="spot" class="circle" style="top: 2vh; right: 21vh;"></div>
-		<div id="spot" class="circle" style="top: 5vh; right: 19vh;"></div>
+		<div id="spot" class="circle" style="top: 2vh; right: 19vh;"></div>
+		<div id="spot" class="circle" style="top: 7vh; right: 24vh;"></div>
+		<div id="spot" class="circle" style="top: 10vh; right: 22vh;"></div>
 	</div>
 	
 	<img class="tool" src="<c:url value='/resources/object/ch04/4_3_1.png'/>"/>

@@ -48,11 +48,17 @@ function pause(index) {
 	for(var i = 0; i < 8; i++) {
 		if(i != index) obj[i].src = png[i];
 	}
+	obj[4].style.height = "06.85%";
+	obj[4].style.left = "72.5vh";
+	obj[4].style.bottom = "35%";
 }
 function play() {
 	for(var i = 0; i < 8; i++) {
 		obj[i].src = webp[i];
 	}
+	obj[4].style.height = "09.72%";
+	obj[4].style.left = "71.7vh";
+	obj[4].style.bottom = "34%";
 }
 function info_close() {
 	play();
