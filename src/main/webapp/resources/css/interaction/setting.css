@@ -90,6 +90,7 @@
 	color: #554740;
 }
 #setting_title {
+	font-family: 'Daehan-Bold' !important; 
 	display: flex;
 	align-content: center;
 	color: #554740;
