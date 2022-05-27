@@ -3,7 +3,7 @@ $(document).ready(function() {
 		$("#shabti").css("display", "flex");
 	});
 	$("#menu img:nth-child(2)").on("click", function() {
-		location.href="/chapter02";
+		location.href=" ";
 	});
 	$("#menu img:nth-child(3)").on("click", function() {
 		$("#setting").css("display", "flex");
@@ -44,7 +44,6 @@ function init() {
 		$("#user").css("opacity", "0%");
 		$("#la1").css("transform", "rotateY(180deg)");
 		$("#userWalk").css("opacity", "100%");
-		$("#content").hide().fadeIn(2000);
 		$("#userWalk").animate({right: "46%"}, 3000).animate({right: "28%", bottom: "34%"}, 1000).animate({right: "4%", bottom: "32%"}, 1000).animate({opacity: '0%'}, 100)
 		$("#user").delay(5000).animate({opacity: '100%'}, 100).animate({rotate: '10deg'}, 500).animate({rotate: '0deg'}, 500);
 		$("#boat").delay(5000).animate({rotate: '10deg'}, 600).animate({rotate: '0deg'}, 500);
@@ -64,7 +63,6 @@ function init() {
 		$("#altar").animate({left: "-100%"}, 4000);
 		$("#pillars1").animate({left: "-100%"}, 4000);
 		$("#stairs").animate({left: "-100%"}, 4000);
-		$("#content").hide().delay(2000).fadeIn(1000);
 		
 		$("#user").animate({right: "34.5%"}, 3000);
 		$("#la1").animate({right: "46%"}, 3000);
@@ -90,7 +88,6 @@ function init() {
 		$("#stairs").hide();
 				
 		$("#user").css("right", "34.5%").css("bottom", "32%");
-		$("#la2").css("opacity", "100%").css("right", "46%");
 		$("#boat").css("right", "30.4%");
 		
 		$(".background1").hide();
@@ -99,9 +96,6 @@ function init() {
 			
 		$("#water1").hide();
 		$("#water2").css("opacity", "100%");
-		
-			
-		$("#la1").hide();
 		
 		$("#voice").trigger("play");
 		$("#bgm").animate({volume: 0}, 4000);
@@ -117,7 +111,10 @@ function init() {
 		$("#rock").animate({left: '0%'}, 7000).animate({left: '-148%'}, 95000);
 
 		$("#user").delay(3000).animate({right: "59.5%"}, 1000); 
-		$("#la2").delay(3000).animate({right: "71%"}, 1000);
+		$("#la2").css("right", "71%");
+		$("#la1").css("right", "46%");
+		$("#la2").delay(10000).animate({opacity: "100%"});
+		$("#la1").delay(3000).animate({right: "71%"}, 1000).delay(6000).animate({opacity: "0%"});
 		$("#boat").delay(3000).animate({right: "55.4%"}, 1000);
 		$("#paper").delay(2500).animate({opacity: "100%"}, 500);
 		$("#paperImg").delay(2500).animate({opacity: "100%"}, 500);
