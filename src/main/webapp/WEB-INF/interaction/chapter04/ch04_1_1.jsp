@@ -20,15 +20,15 @@
 	<img id="active" onclick="tap_tool(this)" class="object">
 	
 	<div id="spots">
-		<div id="spot" class="circle" style="top: -1vh; right: 17vh;"></div>
-		<div id="spot" class="circle" style="top: 2vh; right: 16vh;"></div>
-		<div id="spot" class="circle" style="top: 5vh; right: 20vh;"></div>
+		<div id="spot" class="circle" style="top: 2vh; right: 19vh;"></div>
+		<div id="spot" class="circle" style="top: 7vh; right: 18vh;"></div>
+		<div id="spot" class="circle" style="top: 10vh; right: 22vh;"></div>
 		<img id="oil01" class="oil" src="<c:url value='/resources/object/ch04/4_3_5.png'/>"
-			style="top: -1vh; right: 19vh;">
+			style="top: 1vh; right: 21vh;">
 		<img id="oil02" class="oil" src="<c:url value='/resources/object/ch04/4_3_5.png'/>"
-			style="top: 2vh; right: 18vh;">
+			style="top: 5vh; right: 20vh;">
 		<img id="oil03" class="oil" src="<c:url value='/resources/object/ch04/4_3_5.png'/>"
-			style="top: 5vh; right: 22vh;">
+			style="top: 8vh; right: 25vh;">
 	</div>
 	
 	<img class="tool" src="<c:url value='/resources/object/ch04/4_3_3.png'/>"/>
