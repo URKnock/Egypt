@@ -39,7 +39,7 @@ function init() {
 		$("#voice").trigger("play");
 		setTimeout(function () {
 		  $("#effect1").trigger("play");
-		}, 3000);
+		}, 5100);
 		
 		$("#user").css("opacity", "0%");
 		$("#la1").css("transform", "rotateY(180deg)");
