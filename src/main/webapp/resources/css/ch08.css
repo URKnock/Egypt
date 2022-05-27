@@ -507,9 +507,9 @@ img {
 #grass4 {
 	position: absolute; 
 	width: 28.4vw;
-	height: 35.4vh;
+	height: 68vh;
 	z-index: 2;
-	bottom: 35%;
+	bottom: 32%;
     right: -100%;
     
     opacity: 80%;
