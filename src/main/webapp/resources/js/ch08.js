@@ -56,6 +56,7 @@ function init() {
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
 	else if(scene == 2) {
+		$("#nextButton").css('margin-left', '-85px');
 		$("#voice").trigger("play");
 		$("#user").css("right", "5.5%").css("bottom", "32%");
 		$("#deco1").animate({left: "-100%"}, 4000);
@@ -81,6 +82,7 @@ function init() {
 		$("#dialogue").on("click", function() { $("form").submit(); });	
 	}
 	else if(scene == 3) {
+		$("#nextButton").css('margin-left', '-195px');
 		$("#deco1").hide();
 		$("#grass1").hide();
 		$("#grass2").hide();
@@ -208,6 +210,7 @@ function init() {
         })
 	}
 	else if(scene == 4) {
+		$("#nextButton").css('padding-top', '32px');
 		$("#bgm1").animate({volume: 0}, 4000);
 		setTimeout(function () {
 			$("#bgm1").trigger("pause");

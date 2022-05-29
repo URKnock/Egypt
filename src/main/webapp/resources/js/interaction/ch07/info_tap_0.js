@@ -48,9 +48,11 @@ function pause(index) {
 	for(var i = 0; i < 8; i++) {
 		if(i != index) obj[i].src = png[i];
 	}
-	obj[4].style.height = "06.85%";
-	obj[4].style.left = "72.5vh";
-	obj[4].style.bottom = "35%";
+	if(index != 0 && index != 4) {
+		obj[4].style.height = "06.85%";
+		obj[4].style.left = "72.5vh";
+		obj[4].style.bottom = "35.5%";
+	}
 }
 function play() {
 	for(var i = 0; i < 8; i++) {
@@ -71,7 +73,7 @@ function tap_info(e, i) {
 	
 	e.id = 'visited';
 	
-	pause();
+	pause(i);
 
 	e.src = motion[i];
 	if(i == 0) obj[4].src = "resources/webp/ch07/feather_motion2.webp";

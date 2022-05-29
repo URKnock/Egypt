@@ -17,7 +17,7 @@ img {
 #nextButton {
 	width: 25px;
 	height: 21px;
-	padding-top: 32px;
+	padding-top: 65px;
 	padding-left: 10px;
 	display: none;
 }
@@ -342,7 +342,7 @@ img {
 #userArm1 {
 	position: absolute; 
 	width: 31vw;
-	height: 60.1vh;
+	height: 60.5vh;
 	bottom: 26.3%;
 	right: 52%;
     
@@ -352,7 +352,7 @@ img {
 #userArm2 {
 	position: absolute; 
 	width: 31vw;
-	height: 60.1vh;
+	height: 60.5vh;
 	bottom: 26.3%;
 	right: 52%;
     
@@ -362,7 +362,7 @@ img {
 #userArm3 {
 	position: absolute; 
 	width: 31vw;
-	height: 60.1vh;
+	height: 60.5vh;
 	bottom: 26.3%;
 	right: 52%;
     
@@ -374,7 +374,7 @@ img {
 #userArm4 {
 	position: absolute; 
 	width: 31vw;
-	height: 60.1vh;
+	height: 60.5vh;
 	bottom: 26.3%;
 	right: 52%;
     
